@@ -8,29 +8,24 @@ format:
 
 ## Contact Information
 
-| Item              | Information                              |
-|-------------------|------------------------------------------|
-| Instructors:      | Prof. Josh Brake, Prof. Tina Smilkstein  |
-| Lab Assistant(s): | TBD                                      |
-| Web page:         | <http://pages.hmc.edu/brake/class/e155/> |
-| Lab Checkoff Sheet:| [Sheet Link]({{< var checkoff-gsheet-url >}}) |
-| Email list:       | eng-155 \[at\] g.hmc.edu                 |
-| Discord Server:   | See email for invite                     |
+| Item                | Information                                   |
+|---------------------|-----------------------------------------------|
+| Instructors:        | Prof. Josh Brake                              |
+| Lab Assistant(s):   | TBD                                           |
+| Web page:           | \<{{< var website-url >}}\>                   |
+| Lab Checkoff Sheet: | [Sheet Link]({{< var checkoff-gsheet-url >}}) |
+| Email list:         | eng-155 \[at\] g.hmc.edu                      |
+| Discord Server:     | See email for invite                          |
 
 Be sure to join the class Discord and check it regularly as it will be the main source of course-related communication for this semester.
 
 ## Course Meeting Schedule
 
-+---------------+-----------------------------------------------------------------+
-| **Name**      | **Info**                                                        |
-+===============+=================================================================+
-| Lecture       | TR 1:15 - 2:30 pm                                               |
-+---------------+-----------------------------------------------------------------+
-| Lab Checkoff  | TR afternoons by signup in the Digital Lab (PA B183)            |
-+---------------+-----------------------------------------------------------------+
-| Office Hours  | Prof. Brake: Monday 1:10-2:00 p (Digital Lab) & by appointment\ |
-|               | Prof. Smilkstein: TBD                                           |
-+---------------+-----------------------------------------------------------------+
+| **Name**     | **Info**                                             |
+|--------------|------------------------------------------------------|
+| Lecture      | TR 1:15 - 2:30 pm                                    |
+| Lab Checkoff | TR afternoons by signup in the Digital Lab (PA B183) |
+| Office Hours | Prof. Brake: Monday 1:10-2:00 p (Digital Lab)        |
 
 You will be working on labs on your own time and it is not required that you attend the entire scheduled lab period. Instead, sign up for a time to get your lab checked off. Please sign up for a time during your lab section. If you are unable to find a spot that works for you, see if you can swap with one of your classmates. If you are still having trouble finding a time that works for you, reach out and let me know.
 
@@ -62,8 +57,6 @@ In broad strokes, MicroPs can be divided into two halves. The first half of the 
 
 ## Teaching Philosophy
 
-### Prof. Brake
-
 The ultimate goal for this course is to help you to master the material and become skilled embedded systems developers who understand how to build a system from a set of requirements and specifications and to verify that the system meets those specifications.
 
 Here are a few of the main pedagogical concepts that you can expect to see in this course.
@@ -75,23 +68,24 @@ Here are a few of the main pedagogical concepts that you can expect to see in th
 -   **Interleaving** -- The scheduling of the material is arranged in such a way that you will return to many similar concepts throughout the semester with some time in between. The goal of this is to have you return to familiar concepts after some time away so that you reinforce the material after working on something else. This has been shown to improve long-term retention of the material (see *Small Teaching* by James Lang if you are curious in learning more).
 
 ## Schedule
-| Week  | Tuesday's Class                             | Thursday's Class                       | Due                                  |
-|:----------------:|-------------------|------------------|------------------|
-| 8/27  | Intro & Analog Behavior of Digital Systems  | Combinational and Sequential Logic     | (Lab Demos)                          |
-|  9/3  | Verilog Coding                              | Synchronous Design                     | Lab 1 - Development Board Assembly   |
-| 9/10  | FPGA Documentation                          | Architecture & Assembly Review         | Lab 2 - Muxed 7-Segment Display      |
-| 9/17  | Assembly Programming                        | C Programming on an MCU                | Lab 3 - Keypad                       |
-| 9/24  | Clock Configuration                         | Timers                                 | Lab 4 - ARM Assembly Sort            |
-| 10/1  | Serial Interfaces Overview & SPI            | UART and the IoT                       | Lab 5 - Digital Audio                |
-| 10/8  | PCB Design                                  | Advanced Encryption Standard (AES)     | Lab 6 - SPI & The Internet of Things |
-| 10/15 | **Happy Fall Break! No class**              | Project Kickoff                        |                                      |
-| 10/22 | Graphics and Displays                       | Motors and Speakers                    | Lab 7 - AES & Project Proposal       |
-| 10/29 | Interrupts Pt. 1                            | Interrupts Pt. 2                       | Proposal Debriefs                    |
-| 11/5  | Presentations                               | Presentations                          |                                      |
-| 11/12 | The Fast Fourier Transform (FFT)            | Project Status Report and Demo         | Project Status Reports & Demo        |
-| 11/19 | Emerging Topics in Embedded Systems         | **Happy Thanksgiving! No class**       |                                      |
-| 11/26 | Introduction to Real Time Operating Systems | Direct Memory Access                   |                                      |
-| 12/3  | TBD                                         | Interview Questions & Life Beyond Mudd | Project Checkoffs, Report, Demo Day  |
+
+| Week \# | Monday Date | Tuesday's Class                             | Thursday's Class                       | Due                                  |
+|:-------------:|:-------------:|---------------|---------------|---------------|
+|    1    |    8/26     | Intro & Analog Behavior of Digital Systems  | Combinational and Sequential Logic     | (Lab Demos)                          |
+|    2    |     9/2     | Verilog Coding                              | Synchronous Design                     | Lab 1 - Development Board Assembly   |
+|    3    |     9/9     | FPGA Documentation                          | Architecture & Assembly Review         | Lab 2 - Muxed 7-Segment Display      |
+|    4    |    9/16     | Assembly Programming                        | C Programming on an MCU                | Lab 3 - Keypad                       |
+|    5    |    9/23     | Clock Configuration                         | Timers                                 | Lab 4 - ARM Assembly Sort            |
+|    6    |    9/30     | Serial Interfaces Overview & SPI            | UART and the IoT                       | Lab 5 - Digital Audio                |
+|    7    |    10/7     | PCB Design                                  | Advanced Encryption Standard (AES)     | Lab 6 - SPI & The Internet of Things |
+|    8    |    10/14    | **Happy Fall Break! No class**              | Project Kickoff                        |                                      |
+|    9    |    10/21    | Graphics and Displays                       | Motors and Speakers                    | Lab 7 - AES & Project Proposal       |
+|   10    |    10/28    | Interrupts Pt. 1                            | Interrupts Pt. 2                       | Proposal Debriefs                    |
+|   11    |    11/4     | Presentations                               | Presentations                          |                                      |
+|   12    |    11/11    | The Fast Fourier Transform (FFT)            | Project Status Report and Demo         | Project Status Reports & Demo        |
+|   13    |    11/18    | Emerging Topics in Embedded Systems         | **Happy Thanksgiving! No class**       |                                      |
+|   14    |    11/25    | Introduction to Real Time Operating Systems | Direct Memory Access                   |                                      |
+|   15    |    12/2     | TBD                                         | Interview Questions & Life Beyond Mudd | Project Checkoffs, Report, Demo Day  |
 
 ## Recommended Texts
 
@@ -107,11 +101,7 @@ The grade you earn in the class will be determined based the number of deliverab
 2.  Project
 3.  In-class participation.
 
-Each assignment will contain a list of specifications (or specs) for two levels of completeness: proficiency and excellence.
-The list of specifications are designed to be aligned with the learning goals for the assignment. 
-The proficiency specifications will indicate the level of completeness that demonstrates that you have achieved a level of comfort with the material in the assignment such that you would be able to implement the learning outcomes in a different setting. 
-Excellence specs are above and beyond proficiency specs. 
-Meeting the excellence specs for an assignment indicates that you have not only achieved the basic level of expected knowledge of the material, but have truly understood and are able to apply the techniques with deftness.
+Each assignment will contain a list of specifications (or specs) for two levels of completeness: proficiency and excellence. The list of specifications are designed to be aligned with the learning goals for the assignment. The proficiency specifications will indicate the level of completeness that demonstrates that you have achieved a level of comfort with the material in the assignment such that you would be able to implement the learning outcomes in a different setting. Excellence specs are above and beyond proficiency specs. Meeting the excellence specs for an assignment indicates that you have not only achieved the basic level of expected knowledge of the material, but have truly understood and are able to apply the techniques with deftness.
 
 The table below describes the levels that you need to meet in each bundle (i.e., column) in order to earn the grade in the respective row. To earn the grade in a given row, you must meet **all** the criteria in that row. In other words, to get a B, you must complete the following:
 
@@ -123,24 +113,12 @@ The table below describes the levels that you need to meet in each bundle (i.e.,
 | F     | P $\lt$ 5              | P $\lt$ 4              |
 | D     | P $\geq$ 5, E $\geq$ 1 | P $\geq$ 4             |
 | C     | P $\geq$ 6, E $\geq$ 2 | P $\geq$ 4, E $\geq$ 2 |
-| B     | P = 7, E $\geq$ 4      | P = 5, E $\geq$ 3      |
-| A     | P = 7, E $\geq$ 5      | P = 5, E $\geq$ 4      |
+| B     | P = 7, E $\geq$ 5      | P = 5, E $\geq$ 3      |
+| A     | P = 7, E = 7           | P = 5, E = 5           |
 
 Performance on the labs and project is weighted equally. +/- grades will be assigned for situations in which your performance falls between the conditions for each row.
 
 In-class participation is also an important part of practicing and learning this material and can help to boost your grade in the class by up to half a letter grade (e.g., from a B- to a B or B+ to an A-). As one example, if you meet the requirements for an A in the labs bundle but the requirements for a B in the project bundle, you can expect to earn either a B+ or A-. In these situations, your in-class participation is a contributing factor to split the difference between the - of the higher tier and the + of the lower tier.
-
-### Tokens
-
-In general, each deliverable must be submitted before it's due date. However, you will have several tokens which will allow you to exercise an option for an extension on an assignment or revisit a previous assignment to raise it from it's initially submitted level to a higher level of specifications.
-
-#### Extension token (quantity: 1)
-
-This token may be used for a one-week extension on any lab with no penalty. For example, you could choose to use this token to submit your lab 3 at the same time as lab 4.
-
-#### Retry tokens (quantity: 2)
-
-You may use these tokens to revise a previously submitted assignment to try to meet a higher level of specifications. These tokens may always be used to attempt to upgrade an assignment from proficiency to excellence specs. In general, they **may not** be used to reassess an assignment which did not meet proficiency specs when it was originally due. The instructors reserve the right to waive this policy at their discretion (e.g., to allow a lab which nearly meets proficiency specs by the due date to be reassessed).
 
 ## Course Policies
 
