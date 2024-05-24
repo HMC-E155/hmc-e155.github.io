@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -227,15 +261,15 @@ window.Quarto = {
   <li><a href="#course-meeting-schedule" id="toc-course-meeting-schedule" class="nav-link" data-scroll-target="#course-meeting-schedule">Course Meeting Schedule</a></li>
   <li><a href="#communication-policy" id="toc-communication-policy" class="nav-link" data-scroll-target="#communication-policy">Communication Policy</a></li>
   <li><a href="#course-learning-objectives" id="toc-course-learning-objectives" class="nav-link" data-scroll-target="#course-learning-objectives">Course Learning Objectives</a></li>
-  <li><a href="#teaching-philosophy" id="toc-teaching-philosophy" class="nav-link" data-scroll-target="#teaching-philosophy">Teaching Philosophy</a>
-  <ul class="collapse">
-  <li><a href="#prof.-brake" id="toc-prof.-brake" class="nav-link" data-scroll-target="#prof.-brake">Prof.&nbsp;Brake</a></li>
-  </ul></li>
+  <li><a href="#teaching-philosophy" id="toc-teaching-philosophy" class="nav-link" data-scroll-target="#teaching-philosophy">Teaching Philosophy</a></li>
   <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
   <li><a href="#recommended-texts" id="toc-recommended-texts" class="nav-link" data-scroll-target="#recommended-texts">Recommended Texts</a></li>
-  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a>
+  <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
+  <li><a href="#submitting-work" id="toc-submitting-work" class="nav-link" data-scroll-target="#submitting-work">Submitting Work</a>
   <ul class="collapse">
-  <li><a href="#tokens" id="toc-tokens" class="nav-link" data-scroll-target="#tokens">Tokens</a></li>
+  <li><a href="#deadlines" id="toc-deadlines" class="nav-link" data-scroll-target="#deadlines">Deadlines</a></li>
+  <li><a href="#git-for-source-code" id="toc-git-for-source-code" class="nav-link" data-scroll-target="#git-for-source-code">Git for Source Code</a></li>
+  <li><a href="#quarto-for-writeups" id="toc-quarto-for-writeups" class="nav-link" data-scroll-target="#quarto-for-writeups">Quarto for Writeups</a></li>
   </ul></li>
   <li><a href="#course-policies" id="toc-course-policies" class="nav-link" data-scroll-target="#course-policies">Course Policies</a>
   <ul class="collapse">
@@ -287,7 +321,7 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td>Instructors:</td>
-<td>Prof.&nbsp;Josh Brake, Prof.&nbsp;Tina Smilkstein</td>
+<td>Prof.&nbsp;Josh Brake</td>
 </tr>
 <tr class="even">
 <td>Lab Assistant(s):</td>
@@ -295,11 +329,11 @@ window.Quarto = {
 </tr>
 <tr class="odd">
 <td>Web page:</td>
-<td><a href="http://pages.hmc.edu/brake/class/e155/" class="uri">http://pages.hmc.edu/brake/class/e155/</a></td>
+<td><a href="https://hmc-e155.github.io/E155-web/">https://hmc-e155.github.io/E155-web/</a></td>
 </tr>
 <tr class="even">
 <td>Lab Checkoff Sheet:</td>
-<td><a href="?var:checkoff-gsheet-url">Sheet Link</a></td>
+<td><a href="https://docs.google.com/spreadsheets/d/1a3AYsH6h4MXBBWj8NsZqYXHCqkDg1v4uRdfXhTSOc34/edit">Sheet Link</a></td>
 </tr>
 <tr class="odd">
 <td>Email list:</td>
@@ -316,10 +350,6 @@ window.Quarto = {
 <section id="course-meeting-schedule" class="level2">
 <h2 class="anchored" data-anchor-id="course-meeting-schedule">Course Meeting Schedule</h2>
 <table class="table">
-<colgroup>
-<col style="width: 19%">
-<col style="width: 80%">
-</colgroup>
 <thead>
 <tr class="header">
 <th><strong>Name</strong></th>
@@ -337,8 +367,7 @@ window.Quarto = {
 </tr>
 <tr class="odd">
 <td>Office Hours</td>
-<td>Prof.&nbsp;Brake: Monday 1:10-2:00 p (Digital Lab) &amp; by appointment<br>
-Prof.&nbsp;Smilkstein: TBD</td>
+<td>Prof.&nbsp;Brake: Monday 1:10-2:00 p (Digital Lab)</td>
 </tr>
 </tbody>
 </table>
@@ -371,8 +400,6 @@ Prof.&nbsp;Smilkstein: TBD</td>
 </section>
 <section id="teaching-philosophy" class="level2">
 <h2 class="anchored" data-anchor-id="teaching-philosophy">Teaching Philosophy</h2>
-<section id="prof.-brake" class="level3">
-<h3 class="anchored" data-anchor-id="prof.-brake">Prof.&nbsp;Brake</h3>
 <p>The ultimate goal for this course is to help you to master the material and become skilled embedded systems developers who understand how to build a system from a set of requirements and specifications and to verify that the system meets those specifications.</p>
 <p>Here are a few of the main pedagogical concepts that you can expect to see in this course.</p>
 <ul>
@@ -383,19 +410,20 @@ Prof.&nbsp;Smilkstein: TBD</td>
 <li><strong>Interleaving</strong> – The scheduling of the material is arranged in such a way that you will return to many similar concepts throughout the semester with some time in between. The goal of this is to have you return to familiar concepts after some time away so that you reinforce the material after working on something else. This has been shown to improve long-term retention of the material (see <em>Small Teaching</em> by James Lang if you are curious in learning more).</li>
 </ul>
 </section>
-</section>
 <section id="schedule" class="level2">
 <h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
 <table class="table">
 <colgroup>
-<col style="width: 24%">
-<col style="width: 26%">
-<col style="width: 24%">
-<col style="width: 24%">
+<col style="width: 10%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
+<col style="width: 22%">
 </colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: center;">Week</th>
+<th style="text-align: center;">Monday Date</th>
 <th>Tuesday’s Class</th>
 <th>Thursday’s Class</th>
 <th>Due</th>
@@ -403,91 +431,106 @@ Prof.&nbsp;Smilkstein: TBD</td>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">8/27</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">8/26</td>
 <td>Intro &amp; Analog Behavior of Digital Systems</td>
 <td>Combinational and Sequential Logic</td>
 <td>(Lab Demos)</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">9/3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">9/2</td>
 <td>Verilog Coding</td>
 <td>Synchronous Design</td>
 <td>Lab 1 - Development Board Assembly</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">9/10</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">9/9</td>
 <td>FPGA Documentation</td>
 <td>Architecture &amp; Assembly Review</td>
 <td>Lab 2 - Muxed 7-Segment Display</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">9/17</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">9/16</td>
 <td>Assembly Programming</td>
 <td>C Programming on an MCU</td>
 <td>Lab 3 - Keypad</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">9/24</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">9/23</td>
 <td>Clock Configuration</td>
 <td>Timers</td>
 <td>Lab 4 - ARM Assembly Sort</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">10/1</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">9/30</td>
 <td>Serial Interfaces Overview &amp; SPI</td>
 <td>UART and the IoT</td>
 <td>Lab 5 - Digital Audio</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">10/8</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">10/7</td>
 <td>PCB Design</td>
 <td>Advanced Encryption Standard (AES)</td>
 <td>Lab 6 - SPI &amp; The Internet of Things</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">10/15</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10/14</td>
 <td><strong>Happy Fall Break! No class</strong></td>
 <td>Project Kickoff</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">10/22</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">10/21</td>
 <td>Graphics and Displays</td>
 <td>Motors and Speakers</td>
 <td>Lab 7 - AES &amp; Project Proposal</td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">10/29</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10/28</td>
 <td>Interrupts Pt. 1</td>
 <td>Interrupts Pt. 2</td>
 <td>Proposal Debriefs</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">11/5</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">11/4</td>
 <td>Presentations</td>
 <td>Presentations</td>
 <td></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">11/12</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">11/11</td>
 <td>The Fast Fourier Transform (FFT)</td>
 <td>Project Status Report and Demo</td>
 <td>Project Status Reports &amp; Demo</td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">11/19</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">11/18</td>
 <td>Emerging Topics in Embedded Systems</td>
 <td><strong>Happy Thanksgiving! No class</strong></td>
 <td></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;">11/26</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">11/25</td>
 <td>Introduction to Real Time Operating Systems</td>
 <td>Direct Memory Access</td>
 <td></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;">12/3</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">12/2</td>
 <td>TBD</td>
 <td>Interview Questions &amp; Life Beyond Mudd</td>
 <td>Project Checkoffs, Report, Demo Day</td>
@@ -511,8 +554,8 @@ Prof.&nbsp;Smilkstein: TBD</td>
 <p>Each assignment will contain a list of specifications (or specs) for two levels of completeness: proficiency and excellence. The list of specifications are designed to be aligned with the learning goals for the assignment. The proficiency specifications will indicate the level of completeness that demonstrates that you have achieved a level of comfort with the material in the assignment such that you would be able to implement the learning outcomes in a different setting. Excellence specs are above and beyond proficiency specs. Meeting the excellence specs for an assignment indicates that you have not only achieved the basic level of expected knowledge of the material, but have truly understood and are able to apply the techniques with deftness.</p>
 <p>The table below describes the levels that you need to meet in each bundle (i.e., column) in order to earn the grade in the respective row. To earn the grade in a given row, you must meet <strong>all</strong> the criteria in that row. In other words, to get a B, you must complete the following:</p>
 <ul>
-<li>All 7 labs to the proficiency specs and 4 of those labs must meet the excellence specs.</li>
-<li>All 5 project elements must meet proficiency specs and 3 of them must meet the excellence specs.</li>
+<li>All 7 labs to the proficiency specs and 5 of those labs must meet the excellence specs.</li>
+<li>All 5 project elements must meet proficiency specs and 4 of them must meet the excellence specs.</li>
 </ul>
 <table class="table">
 <thead>
@@ -540,29 +583,38 @@ Prof.&nbsp;Smilkstein: TBD</td>
 </tr>
 <tr class="even">
 <td>B</td>
-<td>P = 7, E <span class="math inline">\(\geq\)</span> 4</td>
+<td>P = 7, E <span class="math inline">\(\geq\)</span> 5</td>
 <td>P = 5, E <span class="math inline">\(\geq\)</span> 3</td>
 </tr>
 <tr class="odd">
 <td>A</td>
-<td>P = 7, E <span class="math inline">\(\geq\)</span> 5</td>
-<td>P = 5, E <span class="math inline">\(\geq\)</span> 4</td>
+<td>P = 7, E = 7</td>
+<td>P = 5, E = 5</td>
 </tr>
 </tbody>
 </table>
 <p>Performance on the labs and project is weighted equally. +/- grades will be assigned for situations in which your performance falls between the conditions for each row.</p>
 <p>In-class participation is also an important part of practicing and learning this material and can help to boost your grade in the class by up to half a letter grade (e.g., from a B- to a B or B+ to an A-). As one example, if you meet the requirements for an A in the labs bundle but the requirements for a B in the project bundle, you can expect to earn either a B+ or A-. In these situations, your in-class participation is a contributing factor to split the difference between the - of the higher tier and the + of the lower tier.</p>
-<section id="tokens" class="level3">
-<h3 class="anchored" data-anchor-id="tokens">Tokens</h3>
-<p>In general, each deliverable must be submitted before it’s due date. However, you will have several tokens which will allow you to exercise an option for an extension on an assignment or revisit a previous assignment to raise it from it’s initially submitted level to a higher level of specifications.</p>
-<section id="extension-token-quantity-1" class="level4">
-<h4 class="anchored" data-anchor-id="extension-token-quantity-1">Extension token (quantity: 1)</h4>
-<p>This token may be used for a one-week extension on any lab with no penalty. For example, you could choose to use this token to submit your lab 3 at the same time as lab 4.</p>
 </section>
-<section id="retry-tokens-quantity-2" class="level4">
-<h4 class="anchored" data-anchor-id="retry-tokens-quantity-2">Retry tokens (quantity: 2)</h4>
-<p>You may use these tokens to revise a previously submitted assignment to try to meet a higher level of specifications. These tokens may always be used to attempt to upgrade an assignment from proficiency to excellence specs. In general, they <strong>may not</strong> be used to reassess an assignment which did not meet proficiency specs when it was originally due. The instructors reserve the right to waive this policy at their discretion (e.g., to allow a lab which nearly meets proficiency specs by the due date to be reassessed).</p>
+<section id="submitting-work" class="level2">
+<h2 class="anchored" data-anchor-id="submitting-work">Submitting Work</h2>
+<section id="deadlines" class="level3">
+<h3 class="anchored" data-anchor-id="deadlines">Deadlines</h3>
+<p>MicroPs is structured around seven Labs (aka mini design projects) completed weekly for the first half of the semester followed by an independent final project completed in pairs. Each week, you will complete the lab, writeup a short memo detailing your design, and meet with the instructor to demonstrate the functionality of your design. You must submit your work on Canvas before your scheduled checkoff time.</p>
 </section>
+<section id="git-for-source-code" class="level3">
+<h3 class="anchored" data-anchor-id="git-for-source-code">Git for Source Code</h3>
+<p>In addition to the technical learning goals of this class, this class will also give you opportunities to develop good development and documentation processes. In support of this goal, all source code for labs and the project should be managed using version control. In this class, we will use git.</p>
+<p>Managing your code in version control is an important skill for anyone who writes software to learn. There is an initial learning curve to get familiar with the basics, but once you get the hang of it you will never want to go back. In the project the project phase of the course you will also see how valuable a tool like git is for collaborating together on code.</p>
+<p>You should create a new repository for each lab and each repository should be organized with a clear and clean folder structure. The following structure is a good starting point.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>\hdl\</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>\src\</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>README.md</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="quarto-for-writeups" class="level3">
+<h3 class="anchored" data-anchor-id="quarto-for-writeups">Quarto for Writeups</h3>
+<p>In addition to using git to manage your code, all lab writeups in this class will submitted as Quarto documents. <a href="https://quarto.org/">Quarto</a> is an open-source technical publishing system which enables you to easily create beautifully formatted documents by writing in Markdown. You will write your lab memos as Quarto documents which will be rendered and published to a website hosted on Github pages. We’ll be using just the most basic functionality in this class, but by the end of this class you will have a website portfolio showing all the work that you have done in MicroPs in a format that is easy to share with your friends, family, and perhaps most importantly, your future employers.</p>
+<p>Unless otherwise specified, all assignments should be posted on your Quarto website. We’ll track submissions using Canvas, but those submissions will normally just be a link to the relevant page on your website.</p>
 </section>
 </section>
 <section id="course-policies" class="level2">
@@ -590,8 +642,8 @@ Prof.&nbsp;Smilkstein: TBD</td>
 </section>
 <section id="lab-kit" class="level2">
 <h2 class="anchored" data-anchor-id="lab-kit">Lab Kit</h2>
-<p>While there is not a textbook to purchase, you will need to buy a lab kit. The fee is $75 in Claremont Cash, and should be paid by filling out the Google Form (<a href="https://docs.google.com/forms/d/e/1FAIpQLSfkSvr7ZvA5IB_2lIqxKDtYl-Hh2quc9mfJ8w6jdqEOeKgECw/viewform">link</a>) which authorizes Sydney Torrey in the Engineering office to charge your Claremont Cash account. Once you have paid for your kit via the form, see Sam Abdelmuati in the stockroom to pick up your kit. If you cook your board this semester, you can buy and rebuild a replacement, but ask the instructor for help troubleshooting first. You’ll also check out a large breadboard from the stockroom, and will need to return it at the end of the semester.</p>
-<p>The kit fee can be waived in cases of financial hardship. To request a waiver fill out the form here (<a href="https://docs.google.com/forms/d/e/1FAIpQLScutHRsoCUwPymkoE0FGqPE0Zn2hGHWejtTKPlSqVMBmSgW7w/viewform">link</a>). Course instructors will not know about waiver requests.</p>
+<p>While there is not a textbook to purchase, you will need to buy a lab kit. The fee is $75 in Claremont Cash, and should be paid by filling out the Google Form (<a href="">link</a>) which authorizes Sydney Torrey in the Engineering office to charge your Claremont Cash account. Once you have paid for your kit via the form, see Sam Abdelmuati in the stockroom to pick up your kit. If you cook your board this semester, you can buy and rebuild a replacement, but ask the instructor for help troubleshooting first. You’ll also check out a large breadboard from the stockroom, and will need to return it at the end of the semester.</p>
+<p>The kit fee can be waived in cases of financial hardship. To request a waiver fill out the form here (<a href="">link</a>). Course instructors will not know about waiver requests.</p>
 </section>
 <section id="lab-access" class="level2">
 <h2 class="anchored" data-anchor-id="lab-access">Lab Access</h2>
@@ -718,7 +770,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/HMC-E155\.github\.io\/E155-website\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

@@ -212,7 +212,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>A Google Sheet for scheduling lab checkoffs can be found <a href="https://docs.google.com/spreadsheets/d/1D7ckcsHCVwZDFX300yzsb8h9y5S_OwNFIz_oqSTYYFk/edit#gid=2147081132">here</a>. (g.hmc credentials required)</p>
+<p>A Google Sheet for scheduling lab checkoffs can be found <a href="https://docs.google.com/spreadsheets/d/1a3AYsH6h4MXBBWj8NsZqYXHCqkDg1v4uRdfXhTSOc34/edit">here</a>. (g.hmc credentials required)</p>
 <p>Any code for the labs may be found on the <a href="https://github.com/HMC-E155/HMC-E155">E155 course Github repository</a>.</p>
 <ul>
 <li><a href="../lab/lab1">Lab 1 - Board Assembly and Testing</a></li>
@@ -312,7 +312,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/HMC-E155\.github\.io\/E155-website\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

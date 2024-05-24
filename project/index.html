@@ -224,7 +224,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="final-project-information" class="level2">
 <h2 class="anchored" data-anchor-id="final-project-information">Final Project Information</h2>
 <p>The requirements for the final project can be found <a href="../project/final-project-requirements.html">here</a>.</p>
-<p>Checkoffs for the proposal debrief, midpoint demo, and final checkoff can be scheduled on the Google Sheet found <a href="https://docs.google.com/spreadsheets/d/1SbsM9vaSh7fzlfkCBb76WswAc5MTn983dgc4VRS6FvU/edit?ouid=100910508618635337843&amp;usp=sheets_home&amp;ths=true">here</a>. You should sign up for a slot as a team, not as individuals.</p>
+<p>Checkoffs for the proposal debrief, midpoint demo, and final checkoff can be scheduled on the Google Sheet found <a href="https://docs.google.com/spreadsheets/d/1ObKjoMLlqkOyTx3sLxtue_MXEkAbANRMD2gXVvQqGVo/edit">here</a>. You should sign up for a slot as a team, not as individuals.</p>
 <p>All submissions for the project are as a team and should be submitted on Canvas as group submissions.</p>
 </section>
 <section id="specs" class="level2">
@@ -347,7 +347,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/HMC-E155\.github\.io\/E155-website\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
