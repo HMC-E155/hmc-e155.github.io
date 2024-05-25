@@ -1,0 +1,20 @@
+---
+title: Fall 2022
+subtitle: E155 MicroPs Final Projects 
+format:
+  html: default
+---
+
+|                               |                                       |                                                                                                                        |
+|---------------|---------------|-----------------------------------|
+| **Title**                     | **Team Members**                      | **Website URL**                                                                                                        |
+| Robotic Slide Whistle         | Declan O'Neill, Kip Macsai-Goren      | <https://doneill890.github.io/slide-whistle/>                                                                          |
+| Auto Audio Harmonizer         | Brian Simpkins, Kevin Kim             | <https://briansimpkins.github.io/E155_Final/>                                                                          |
+| Analog Signal Display (Scope) | Tristan Huang, Alexa Wright           | <https://thuang8.github.io/E155_FA22_Final_Project_TH_AW/>                                                             |
+| Guarded Safe                  | Limnanthes Serafini, Noah Limpert     | <https://magpyed.github.io/E155-FA22-Final-Project/>                                                                   |
+| RFID Doorbell                 | Joseph Zales, Ava Fascetti            | <https://joseph-q-zales.github.io/HMC-MicroPs-Final-Portfolio/>                                                        |
+| Pinball Machine               | Alessandro Maiuolo, Cristian Gonzalez | [https://cristiango23.github.io/E155-FA22-Final-Project/](https://cristiango23.github.io/E155-FA22-Final-Project/doc/) |
+| Random Clock                  | Ruth Mueller, Kevin Wan               | [https://koooo-142857.github.io/E155_Random_Clock/](https://koooo-142857.github.io/E155_Random_Clock/design/)          |
+| Pet Autofeeder                | Cedar Turek, Manuel Mendoza Manriquez | <https://cturek.github.io/E155-Autofeeder/>                                                                            |
+| Self-balancing Robot          | Tanvika Dasari, Eric Chen             | <https://tanvikad.github.io/balance-robot/>                                                                            |
+| Crane Game                    | Miles Cook, Penny Hernandez           | <https://mcook26.github.io/Crane-Game/>                                                                                |

@@ -24,7 +24,8 @@ While these rubrics are a good reference, they are subject to changes.
 
 
 ## Final Projects from Previous Years of E155
-* [Fall 2022 Project Reports](http://pages.hmc.edu/brake/class/e155/fa22/project)
+* [Fall 2023 Project Reports](./reports/2023/)
+* [Fall 2022 Project Reports](./reports/2022/)
 * [Fall 2019 Project Reports](http://pages.hmc.edu/harris/class/e155/projects19/index.html)
 * [Fall 2017 Project Reports](http://pages.hmc.edu/harris/class/e155/projects17/index.html)
 * [Fall 2016 Project Reports](http://pages.hmc.edu/harris/class/e155/projects16/index.html)

@@ -1,0 +1,19 @@
+---
+title: Fall 2023
+subtitle: E155 MicroPs Final Projects 
+format:
+  html: default
+---
+
+|                     |                                             |                                                               |
+|-----------------|-----------------|--------------------------------------|
+| **Title**           | **Team Members**                            | **Website URL**                                               |
+| Rhythm Game         | Julia Du, Allison Tsai                      | <https://julia-du.github.io/Rhythm-Game/>                     |
+| Iron Man Helmet     | James Woo, Kaito Robson                     | <https://jwoo-20.github.io/E155-Final-Project-Website/>       |
+| Split-Flap Display  | Nithya Yeluri, Javier Perez, Dimitri Avila  | <https://nyeluri53.github.io/E155-Final-Project-Website/>     |
+| Camera              | Kavi Dey, Henry Merrilees, Neil Chulani     | <https://kavidey.github.io/NeoObscura/>                       |
+| Snake on VGA        | Diego Hererra Vicioso, Kate Lucio           | <https://dherreravicioso.github.io/e155snakevga/>             |
+| Digital synthesizer | Kevin Box, Eli Rejito                       | <https://erejto.github.io/FPGA-Synth-project-portfolio/>      |
+| Volumetric display  | Rafael Burger, Tjaard Van Loben Sels        | <https://rafael-burger.github.io/E155-Final-Project-Website/> |
+| Maze Game           | Lawrence Nelson, Cecilia Li, Martin Susanto | <https://martin5009.github.io/amazing_game/design/>           |
+
