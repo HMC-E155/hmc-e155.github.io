@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -265,12 +231,6 @@ window.Quarto = {
   <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
   <li><a href="#recommended-texts" id="toc-recommended-texts" class="nav-link" data-scroll-target="#recommended-texts">Recommended Texts</a></li>
   <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
-  <li><a href="#submitting-work" id="toc-submitting-work" class="nav-link" data-scroll-target="#submitting-work">Submitting Work</a>
-  <ul class="collapse">
-  <li><a href="#deadlines" id="toc-deadlines" class="nav-link" data-scroll-target="#deadlines">Deadlines</a></li>
-  <li><a href="#git-for-source-code" id="toc-git-for-source-code" class="nav-link" data-scroll-target="#git-for-source-code">Git for Source Code</a></li>
-  <li><a href="#quarto-for-writeups" id="toc-quarto-for-writeups" class="nav-link" data-scroll-target="#quarto-for-writeups">Quarto for Writeups</a></li>
-  </ul></li>
   <li><a href="#course-policies" id="toc-course-policies" class="nav-link" data-scroll-target="#course-policies">Course Policies</a>
   <ul class="collapse">
   <li><a href="#ai-policy" id="toc-ai-policy" class="nav-link" data-scroll-target="#ai-policy">AI Policy</a></li>
@@ -329,11 +289,11 @@ window.Quarto = {
 </tr>
 <tr class="odd">
 <td>Web page:</td>
-<td><a href="https://hmc-e155.github.io/E155-web/">https://hmc-e155.github.io/E155-web/</a></td>
+<td>&lt;https://hmc-e155.github.io/E155-web/&gt;</td>
 </tr>
 <tr class="even">
 <td>Lab Checkoff Sheet:</td>
-<td><a href="https://docs.google.com/spreadsheets/d/1a3AYsH6h4MXBBWj8NsZqYXHCqkDg1v4uRdfXhTSOc34/edit">Sheet Link</a></td>
+<td><a href="?var:checkoff-gsheet-url">Sheet Link</a></td>
 </tr>
 <tr class="odd">
 <td>Email list:</td>
@@ -414,15 +374,15 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
 <table class="table">
 <colgroup>
-<col style="width: 10%">
-<col style="width: 22%">
-<col style="width: 22%">
-<col style="width: 22%">
-<col style="width: 22%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: center;">Week</th>
+<th style="text-align: center;">Week #</th>
 <th style="text-align: center;">Monday Date</th>
 <th>Tuesday’s Class</th>
 <th>Thursday’s Class</th>
@@ -554,8 +514,8 @@ window.Quarto = {
 <p>Each assignment will contain a list of specifications (or specs) for two levels of completeness: proficiency and excellence. The list of specifications are designed to be aligned with the learning goals for the assignment. The proficiency specifications will indicate the level of completeness that demonstrates that you have achieved a level of comfort with the material in the assignment such that you would be able to implement the learning outcomes in a different setting. Excellence specs are above and beyond proficiency specs. Meeting the excellence specs for an assignment indicates that you have not only achieved the basic level of expected knowledge of the material, but have truly understood and are able to apply the techniques with deftness.</p>
 <p>The table below describes the levels that you need to meet in each bundle (i.e., column) in order to earn the grade in the respective row. To earn the grade in a given row, you must meet <strong>all</strong> the criteria in that row. In other words, to get a B, you must complete the following:</p>
 <ul>
-<li>All 7 labs to the proficiency specs and 5 of those labs must meet the excellence specs.</li>
-<li>All 5 project elements must meet proficiency specs and 4 of them must meet the excellence specs.</li>
+<li>All 7 labs to the proficiency specs and 4 of those labs must meet the excellence specs.</li>
+<li>All 5 project elements must meet proficiency specs and 3 of them must meet the excellence specs.</li>
 </ul>
 <table class="table">
 <thead>
@@ -596,27 +556,6 @@ window.Quarto = {
 <p>Performance on the labs and project is weighted equally. +/- grades will be assigned for situations in which your performance falls between the conditions for each row.</p>
 <p>In-class participation is also an important part of practicing and learning this material and can help to boost your grade in the class by up to half a letter grade (e.g., from a B- to a B or B+ to an A-). As one example, if you meet the requirements for an A in the labs bundle but the requirements for a B in the project bundle, you can expect to earn either a B+ or A-. In these situations, your in-class participation is a contributing factor to split the difference between the - of the higher tier and the + of the lower tier.</p>
 </section>
-<section id="submitting-work" class="level2">
-<h2 class="anchored" data-anchor-id="submitting-work">Submitting Work</h2>
-<section id="deadlines" class="level3">
-<h3 class="anchored" data-anchor-id="deadlines">Deadlines</h3>
-<p>MicroPs is structured around seven Labs (aka mini design projects) completed weekly for the first half of the semester followed by an independent final project completed in pairs. Each week, you will complete the lab, writeup a short memo detailing your design, and meet with the instructor to demonstrate the functionality of your design. You must submit your work on Canvas before your scheduled checkoff time.</p>
-</section>
-<section id="git-for-source-code" class="level3">
-<h3 class="anchored" data-anchor-id="git-for-source-code">Git for Source Code</h3>
-<p>In addition to the technical learning goals of this class, this class will also give you opportunities to develop good development and documentation processes. In support of this goal, all source code for labs and the project should be managed using version control. In this class, we will use git.</p>
-<p>Managing your code in version control is an important skill for anyone who writes software to learn. There is an initial learning curve to get familiar with the basics, but once you get the hang of it you will never want to go back. In the project the project phase of the course you will also see how valuable a tool like git is for collaborating together on code.</p>
-<p>You should create a new repository for each lab and each repository should be organized with a clear and clean folder structure. The following structure is a good starting point.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>\hdl\</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>\src\</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>README.md</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="quarto-for-writeups" class="level3">
-<h3 class="anchored" data-anchor-id="quarto-for-writeups">Quarto for Writeups</h3>
-<p>In addition to using git to manage your code, all lab writeups in this class will submitted as Quarto documents. <a href="https://quarto.org/">Quarto</a> is an open-source technical publishing system which enables you to easily create beautifully formatted documents by writing in Markdown. You will write your lab memos as Quarto documents which will be rendered and published to a website hosted on Github pages. We’ll be using just the most basic functionality in this class, but by the end of this class you will have a website portfolio showing all the work that you have done in MicroPs in a format that is easy to share with your friends, family, and perhaps most importantly, your future employers.</p>
-<p>Unless otherwise specified, all assignments should be posted on your Quarto website. We’ll track submissions using Canvas, but those submissions will normally just be a link to the relevant page on your website.</p>
-</section>
-</section>
 <section id="course-policies" class="level2">
 <h2 class="anchored" data-anchor-id="course-policies">Course Policies</h2>
 <section id="ai-policy" class="level3">
@@ -642,8 +581,8 @@ window.Quarto = {
 </section>
 <section id="lab-kit" class="level2">
 <h2 class="anchored" data-anchor-id="lab-kit">Lab Kit</h2>
-<p>While there is not a textbook to purchase, you will need to buy a lab kit. The fee is $75 in Claremont Cash, and should be paid by filling out the Google Form (<a href="">link</a>) which authorizes Sydney Torrey in the Engineering office to charge your Claremont Cash account. Once you have paid for your kit via the form, see Sam Abdelmuati in the stockroom to pick up your kit. If you cook your board this semester, you can buy and rebuild a replacement, but ask the instructor for help troubleshooting first. You’ll also check out a large breadboard from the stockroom, and will need to return it at the end of the semester.</p>
-<p>The kit fee can be waived in cases of financial hardship. To request a waiver fill out the form here (<a href="">link</a>). Course instructors will not know about waiver requests.</p>
+<p>While there is not a textbook to purchase, you will need to buy a lab kit. The fee is $75 in Claremont Cash, and should be paid by filling out the Google Form (<a href="https://docs.google.com/forms/d/e/1FAIpQLSfkSvr7ZvA5IB_2lIqxKDtYl-Hh2quc9mfJ8w6jdqEOeKgECw/viewform">link</a>) which authorizes Sydney Torrey in the Engineering office to charge your Claremont Cash account. Once you have paid for your kit via the form, see Sam Abdelmuati in the stockroom to pick up your kit. If you cook your board this semester, you can buy and rebuild a replacement, but ask the instructor for help troubleshooting first. You’ll also check out a large breadboard from the stockroom, and will need to return it at the end of the semester.</p>
+<p>The kit fee can be waived in cases of financial hardship. To request a waiver fill out the form here (<a href="https://docs.google.com/forms/d/e/1FAIpQLScutHRsoCUwPymkoE0FGqPE0Zn2hGHWejtTKPlSqVMBmSgW7w/viewform">link</a>). Course instructors will not know about waiver requests.</p>
 </section>
 <section id="lab-access" class="level2">
 <h2 class="anchored" data-anchor-id="lab-access">Lab Access</h2>
