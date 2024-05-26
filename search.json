@@ -77,6 +77,13 @@
     "text": "Appendix B: ST-LINK to J-Link Firmware Upgrade\nYour STM32 Nucleo boards come with an on-board debugger ST-LINK debugger. This debugger is not compatible out of the box with the SEGGER tools and the firmware needs to be updated to connect to SEGGER Embedded Studio. The boards in your kits should have already been updated so that they are ready to go, but if for some reason your computer is not recognizing the board, you may need to download and perform the firmware upgrade yourself. Instructions on how to do so can be found here. Note that this upgrade process can only be completed on Windows."
   },
   {
+    "objectID": "project/reports/2023/index.html",
+    "href": "project/reports/2023/index.html",
+    "title": "Fall 2023",
+    "section": "",
+    "text": "Title\nTeam Members\nWebsite URL\n\n\nRhythm Game\nJulia Du, Allison Tsai\nhttps://julia-du.github.io/Rhythm-Game/\n\n\nIron Man Helmet\nJames Woo, Kaito Robson\nhttps://jwoo-20.github.io/E155-Final-Project-Website/\n\n\nSplit-Flap Display\nNithya Yeluri, Javier Perez, Dimitri Avila\nhttps://nyeluri53.github.io/E155-Final-Project-Website/\n\n\nCamera\nKavi Dey, Henry Merrilees, Neil Chulani\nhttps://kavidey.github.io/NeoObscura/\n\n\nSnake on VGA\nDiego Hererra Vicioso, Kate Lucio\nhttps://dherreravicioso.github.io/e155snakevga/\n\n\nDigital synthesizer\nKevin Box, Eli Rejito\nhttps://erejto.github.io/FPGA-Synth-project-portfolio/\n\n\nVolumetric display\nRafael Burger, Tjaard Van Loben Sels\nhttps://rafael-burger.github.io/E155-Final-Project-Website/\n\n\nMaze Game\nLawrence Nelson, Cecilia Li, Martin Susanto\nhttps://martin5009.github.io/amazing_game/design/"
+  },
+  {
     "objectID": "project/storytelling-worksheet.html",
     "href": "project/storytelling-worksheet.html",
     "title": "Storytelling Worksheet",
@@ -1236,7 +1243,7 @@
     "href": "project/index.html#final-projects-from-previous-years-of-e155",
     "title": "Project",
     "section": "Final Projects from Previous Years of E155",
-    "text": "Final Projects from Previous Years of E155\n\nFall 2022 Project Reports\nFall 2019 Project Reports\nFall 2017 Project Reports\nFall 2016 Project Reports\nFall 2009 Project Reports\nFall 2006 Project Reports\nFall 2003 Project Reports\nFall 2002 Project Reports\nFall 2000 Project Reports\nFall 1999 Project Reports"
+    "text": "Final Projects from Previous Years of E155\n\nFall 2023 Project Reports\nFall 2022 Project Reports\nFall 2019 Project Reports\nFall 2017 Project Reports\nFall 2016 Project Reports\nFall 2009 Project Reports\nFall 2006 Project Reports\nFall 2003 Project Reports\nFall 2002 Project Reports\nFall 2000 Project Reports\nFall 1999 Project Reports"
   },
   {
     "objectID": "project/index.html#vendors",
@@ -1244,6 +1251,13 @@
     "title": "Project",
     "section": "Vendors",
     "text": "Vendors\n\nSparkFun\nAdafruit\nDigikey\nMouser"
+  },
+  {
+    "objectID": "project/reports/2022/index.html",
+    "href": "project/reports/2022/index.html",
+    "title": "Fall 2022",
+    "section": "",
+    "text": "Title\nTeam Members\nWebsite URL\n\n\nRobotic Slide Whistle\nDeclan O’Neill, Kip Macsai-Goren\nhttps://doneill890.github.io/slide-whistle/\n\n\nAuto Audio Harmonizer\nBrian Simpkins, Kevin Kim\nhttps://briansimpkins.github.io/E155_Final/\n\n\nAnalog Signal Display (Scope)\nTristan Huang, Alexa Wright\nhttps://thuang8.github.io/E155_FA22_Final_Project_TH_AW/\n\n\nGuarded Safe\nLimnanthes Serafini, Noah Limpert\nhttps://magpyed.github.io/E155-FA22-Final-Project/\n\n\nRFID Doorbell\nJoseph Zales, Ava Fascetti\nhttps://joseph-q-zales.github.io/HMC-MicroPs-Final-Portfolio/\n\n\nPinball Machine\nAlessandro Maiuolo, Cristian Gonzalez\nhttps://cristiango23.github.io/E155-FA22-Final-Project/\n\n\nRandom Clock\nRuth Mueller, Kevin Wan\nhttps://koooo-142857.github.io/E155_Random_Clock/\n\n\nPet Autofeeder\nCedar Turek, Manuel Mendoza Manriquez\nhttps://cturek.github.io/E155-Autofeeder/\n\n\nSelf-balancing Robot\nTanvika Dasari, Eric Chen\nhttps://tanvikad.github.io/balance-robot/\n\n\nCrane Game\nMiles Cook, Penny Hernandez\nhttps://mcook26.github.io/Crane-Game/"
   },
   {
     "objectID": "project/final-project-requirements.html",
