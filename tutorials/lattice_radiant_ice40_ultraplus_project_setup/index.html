@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.53">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>HMC E155 - Lattice Radiant iCE40 UltraPlus Project Setup</title>
+<title>Lattice Radiant iCE40 UltraPlus Project Setup – HMC E155</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Labs</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
@@ -150,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Tutorials</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
@@ -178,7 +178,8 @@ ul.task-list li input[type="checkbox"] {
   </li>
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/HMC-E155/hmc-e155" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -232,7 +233,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Open Lattice Radiant. If you are prompted for a license file, navigate to it. See the Radiant install instructions if needed.</p>
 <p>Create a new project and name it “iCE40_demo”. Select the project location in the directory you wish. <strong>Make sure that the path does not include spaces since this often leads to errors later in the synthesis process.</strong> You do not need to add any existing HDL files to the project.</p>
 <p>In the “Select Device” menu, select the <code>iCE40UP5K</code> and the <code>SG48</code> package. On the next page, select <code>Lattice LSE</code> as the synthesis tool.</p>
-<div id="fig-new-project-device" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-new-project-device" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-new-project-device-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/new_project_setup.png" class="img-fluid figure-img">
@@ -246,7 +247,7 @@ Figure&nbsp;1: New project setup.
 <section id="project-implementation" class="level1">
 <h1>Project Implementation</h1>
 <p>After the new project wizard completes, you will be presented with the following default screen.</p>
-<div id="fig-project-summary" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-project-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-project-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/project_summary.png" class="img-fluid figure-img">
@@ -257,7 +258,7 @@ Figure&nbsp;2: New project summary.
 </figure>
 </div>
 <p>Navigate to <code>File &gt; New &gt; New File</code> and select <code>SystemVerilog Files</code> in the New File selection window. Name your file <code>top</code> and click <code>New</code> to create the file.</p>
-<div id="fig-create-file" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-create-file" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-create-file-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/create_file.png" class="img-fluid figure-img">
@@ -297,7 +298,7 @@ Figure&nbsp;3: Create new file.
 endmodule</code></pre>
 <p>Note that we configure our reset to be active low (reset when 0 or connected to ground) since we have internal pullup resistors which make it easy to pull the pin high but not internal pulldown resistors.</p>
 <p>In this design we use the HSOSC module which is the high-speed oscillator available on the iCE40UP5K chip. The HSOSC module is a Verilog library that is provided with the iCE40 device support package in Radiant. You can find more information about the oscillator under <code>Help &gt; Lattice Radiant Software Help &gt; Reference Guides &gt; FPGA Libraries Reference Guide &gt; Primitive Library - iCE40UP (iCE40 UltraPlus)</code>. Here, as an example of how to infer a modules with parameters in Verilog, we instantiate it with the optional parameter <code>CLKHF_DIV</code> which sets the output frequency to 24 MHz.</p>
-<div id="fig-hsosc" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-hsosc" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hsosc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/HSOSC.png" class="img-fluid figure-img">
@@ -311,7 +312,7 @@ Figure&nbsp;4: High-speed oscillator block diagram.
 <h2 class="anchored" data-anchor-id="netlist-analyzer">Netlist Analyzer</h2>
 <p>After synthesizing your design, it is worth taking a look at the Netlist Analyzer. This tool provides a block diagram view of the design. This is a helpful tool to make sure that the Verilog you wrote is implying the hardware that you intend. <strong>Remember that as a digital designer you should always think about the underlying hardware and simply write the Verilog idioms to imply it.</strong> Approach HDL like a traditional programming language at your peril!</p>
 <p>If we look at the Netlist Analyzer (found under “Tools &gt; Netlist Analyzer” or the green and black icon in the toolbar), we will open a window which shows a block diagram. We see that we have implied an adder, a mux to control the value to the registers, the HSOSC module, and a 25-bit-wide register.</p>
-<div id="fig-netlist-analyzer" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-netlist-analyzer" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-netlist-analyzer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/netlist_analyzer.png" class="img-fluid figure-img">
@@ -325,7 +326,7 @@ Figure&nbsp;5: Netlist analyzer window.
 <section id="resource-usage" class="level2">
 <h2 class="anchored" data-anchor-id="resource-usage">Resource Usage</h2>
 <p>There is also some useful information in the Reports tab under Project Summary in the Resource Usage section. In particular, this section will show us the number of registers, look-up tables, IO buffers, and embedded RAM blocks (EBRs) that we have implied in our design. For this design, we have 25 registers for storing the current count. An additional 3 logic cells are needed for their LUT4s to provide the additional logic (adder, mux, inverter).</p>
-<div id="fig-resource-usage" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-resource-usage" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-resource-usage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/reports.png" class="img-fluid figure-img">
@@ -340,7 +341,7 @@ Figure&nbsp;6: Resource usage report.
 <h2 class="anchored" data-anchor-id="device-assignment-device-constraint-editor">Device Assignment: Device Constraint Editor</h2>
 <p>When you first synthesize the design, the inputs and outputs of your top-level module will be randomly assigned to I/O pins. Next, you need to set the pin assignments to route the signals to the I/O pins that you desire.</p>
 <p>Open the Device Constraint Editor and find the signal name and assign it to your desired pin. In this example, we will route the “led” output to GPIO 42. Select the table entry in the “Pin” column associated with the LED signal and enter “42”. You will notice that the currently routed pin is labeled in parentheses, 36 in this example. To update the design to route to our desired GPIO pin, we need to resynthesize the design. Click the green play button again to run the toolchain. When you do this for the first time, you will be asked to save a .pdc (pin device constraint) file. Name and save the file. After synthesis completes, open the Device Constraint Editor and confirm that the desired and routed pins match. In this case you should see “42(42)” in the table entry corresponding to the led output.</p>
-<div id="fig-pinout" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-pinout" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pinout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/pinout.png" class="img-fluid figure-img">
@@ -372,7 +373,7 @@ Figure&nbsp;7: Pinout diagram.
 </ul></li>
 </ul>
 <p>After configuration, the block diagram should look like this.</p>
-<div id="fig-flash-programming" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-flash-programming" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-flash-programming-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/programming.png" class="img-fluid figure-img">
@@ -388,7 +389,7 @@ Figure&nbsp;8: Flash programming setup.
 </section>
 <section id="testing-in-hardware" class="level1">
 <h1>Testing in Hardware</h1>
-<div id="fig-led-blink" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<div id="fig-led-blink" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-led-blink-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/blink_led_schematic.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%">
@@ -439,18 +440,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -482,15 +472,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/HMC-E155\.github\.io\/E155-web\/");
+      var filterRegex = new RegExp("https:\/\/HMC-E155\.github\.io\/hmc-e155\.github\.io\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

@@ -1,1 +1,1 @@
-Sitemap: https://HMC-E155.github.io/E155-web/sitemap.xml
+Sitemap: https://HMC-E155.github.io/hmc-e155.github.io/sitemap.xml

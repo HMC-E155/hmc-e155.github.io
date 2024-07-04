@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.5.53">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>HMC E155 - ModelSim Simulation Tutorial</title>
+<title>ModelSim Simulation Tutorial – HMC E155</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-labs" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Labs</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
@@ -150,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Tutorials</span>
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
@@ -178,7 +178,8 @@ ul.task-list li input[type="checkbox"] {
   </li>
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/HMC-E155/hmc-e155" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -233,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
 <h1>Simple Simulations by Forcing Signals</h1>
 <p>If you have a simple design and want to quickly test it out to see that it is working, you can use the force function in the ModelSim command window to apply test inputs and measure the outputs.</p>
 <p>We will use a full adder circuit as a demonstration.</p>
-<div id="fig-full-adder-schematic" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-full-adder-schematic" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-full-adder-schematic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/full-adder-schematic.png" class="img-fluid figure-img">
@@ -244,7 +245,7 @@ Figure&nbsp;1: Full adder schematic.
 </figure>
 </div>
 <p>To code up the full adder, first, open ModelSim and create a new ModelSim project titled <code>ModelSim_Tutorial</code> and save it in a location where the path name has no spaces. Then create a new file named <code>fulladder.sv</code>, making sure the file type is SystemVerilog. You should now have a blank file. Add the Verilog code below to create a structural Verilog model of the full adder circuit show above.</p>
-<div id="fig-new-project" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-new-project" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/modelsim-create-project.png" class="img-fluid figure-img">
@@ -278,7 +279,7 @@ module fulladder(
 endmodule</code></pre>
 <p>Next, we will simulate the file. First, compile your file via the Compile menu. Then, start the simulation using “Simulate &gt; Start Simulation…”. You will see the GUI change and open up the Objects and Wave panes. You can always toggle windows on or off as desired using the View toolbar menu.</p>
 <p>Next, add the selected symbols by selecting them in the Objects pane and adding them to the Wave pane either by using the right-click menu or dragging them. Next, to run the simulation, we need to initialize the input values which are floating (HiZ) to begin. We can do this by typing the command <code>force &lt;Signal Name&gt; &lt;Signal Value&gt;</code> in the Transcript pane. Force <code>A</code>, <code>B</code>, and <code>Cin</code> to some desired values of your choosing and then run the simulation for 10 time units by typing <code>run 10</code>. When you run the simulation, you will see the waves window advance the appropriate number of time points, displaying the values of the signals.</p>
-<div id="fig-sim-waves-force" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-sim-waves-force" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-sim-waves-force-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/modelsim-sim-waves.png" class="img-fluid figure-img">
@@ -403,7 +404,7 @@ endmodule</code></pre>
 <p>In many instances we want to leverage the iCE40 Technology Library. However, when we go to simulate these designs, we need to make sure to include the appropriate libraries so that ModelSim can find the correct design units when it goes to do the simulation.</p>
 <p>When you install Lattice Radiant with ModelSim Lattice FPGA Edition, it comes with a set of installed libraries. For our purposes, we are most interested in the iCE40UP library and will need to include this in our simulation.</p>
 <p>To do this, start the simulation by clicking Simulate &gt; Start Simulation. Then navigate to the Libraries tab and add iCE40UP to the Search Libraries window using the “Add…” button.</p>
-<div id="fig-ice40-tech-library" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-ice40-tech-library" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ice40-tech-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/ice40-tech-library.png" class="img-fluid figure-img">
@@ -413,7 +414,7 @@ Figure&nbsp;4: ice40 Technology Library.
 </figcaption>
 </figure>
 </div>
-<div id="fig-ice40-tech-library" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-ice40-tech-library" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ice40-tech-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/ice40-add-library.png" class="img-fluid figure-img">
@@ -423,7 +424,7 @@ Figure&nbsp;5: Add ice40 Technology Library.
 </figcaption>
 </figure>
 </div>
-<div id="fig-ice40-start-sim" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-ice40-start-sim" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ice40-start-sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/modelsim-start-sim-module.png" class="img-fluid figure-img">
@@ -434,7 +435,7 @@ Figure&nbsp;6: Start sim with loaded library.
 </figure>
 </div>
 <p>Then navigate to the “Design” tab, select the <code>top</code> module and then click OK. Your simulation should now start and open up the Wave window.</p>
-<div id="fig-ice40-tech-library" class="quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-ice40-tech-library" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ice40-tech-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/modelsim-start-sim-module.png" class="img-fluid figure-img">
@@ -485,18 +486,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -528,15 +518,37 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/HMC-E155\.github\.io\/E155-web\/");
+      var filterRegex = new RegExp("https:\/\/HMC-E155\.github\.io\/hmc-e155\.github\.io\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
