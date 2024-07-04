@@ -1,4 +1,6 @@
-# Lab 1: FPGA and MCU Setup and Testing
+---
+title: 'Lab 1: FPGA and MCU Setup and Testing'
+---
 
 ## Introduction
 
