@@ -7,6 +7,9 @@ project:
 website:
   title: "HMC E155"
   navbar:
+    tools:
+      - icon: github
+        href: https://github.com/HMC-E155/hmc-e155
     left:
       - href: index.qmd
         text: Home

@@ -12,8 +12,8 @@ format:
 |---------------------|-----------------------------------------------|
 | Instructors:        | Prof. Josh Brake                              |
 | Lab Assistant(s):   | TBD                                           |
-| Web page:           | \<{{< var website-url >}}\>                   |
-| Lab Checkoff Sheet: | [Sheet Link]({{< var checkoff-gsheet-url >}}) |
+| Web page:           | [{{< var website-url >}}]({{< var website-url >}})                       |
+| Lab Checkoff Sheet: | [Sheet Link]({{< var lab-checkoff-gsheet-url >}}) |
 | Email list:         | eng-155 \[at\] g.hmc.edu                      |
 | Discord Server:     | See email for invite                          |
 
