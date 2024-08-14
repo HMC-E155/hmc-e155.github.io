@@ -1,5 +1,11 @@
 ---
 title: 'Lab 3: Keypad Scanner'
+format:
+  html:
+    other-links:
+      - text: "Specifications"
+        href: ./specs.html
+        icon: file-earmark-check
 ---
 
 ## Introduction
@@ -22,10 +28,17 @@ Design and construct a circuit on your FPGA to read a 4-by-4 matrix keypad. Disp
 
 Each key press should be recorded exactly once, at the time the key is pressed, no matter how long or short a time the user holds the key down. If additional keys are pressed while still holding down the first key, these inputs should be ignored. The seven-segment displays should not flicker and should be the same brightness regardless of how many segments are displayed.
 
+### Lab-specific Specifications
 
-<a href="./specs.qmd" target="blank">Open specifications in new tab.</a>
+<details>
+{{< include ../specs/lab3-specs.qmd >}} 
+</details>
 
-{{< include ./specs.qmd >}}
+### General Specifications
+
+<details>
+{{< include  ../specs/general-lab-specs.qmd >}} 
+</details>
 
 ## Discussion
 

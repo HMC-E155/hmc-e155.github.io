@@ -2,7 +2,21 @@
 title: 'Lab 7: The Advanced Encryption Standard'
 vars:
   aes-standard-pdf-url: /assets/doc/NIST.FIPS.197-upd1.pdf
+format:
+  html:
+    other-links:
+      - text: "Specifications"
+        href: ./specs.html
+        icon: file-earmark-check
+      - text: "AES Standard: NIST FIPS 197"
+        href: /assets/doc/NIST.FIPS.197-upd1.pdf
+        icon: file-earmark-pdf
+      - text: "Starter Code"
+        href: https://github.com/HMC-E155/hmc-e155//tree/main/lab/lab07
+        icon: code-square
 ---
+
+
 
 ## Learning Objectives
 
@@ -22,10 +36,17 @@ Send a plaintext message and key from a micro- processor to the accelerator and 
 
 ## Resources
 
-- [AES Standard: NIST FIPS 197]({{< meta vars.aes-standard-pdf-url >}})
-- [Starter Code from GitHub Repo]({{< var github-url >}}/tree/main/lab/lab07)
+### Lab-specific Specifications
 
-{{< include ./specs.qmd >}}
+<details>
+{{< include ../specs/lab7-specs.qmd >}} 
+</details>
+
+### General Specifications
+
+<details>
+{{< include  ../specs/general-lab-specs.qmd >}} 
+</details>
 
 <a href="./specs.qmd" target="blank">Open specifications in new tab.</a>
 

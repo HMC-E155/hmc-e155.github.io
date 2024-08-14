@@ -1,5 +1,14 @@
 ---
 title: 'Lab 5: Digital Audio'
+format:
+  html:
+    other-links:
+      - text: "Specifications"
+        href: ./specs.html
+        icon: file-earmark-check
+    code-links:
+      - text: "Starter Code"
+        href: https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab05
 ---
 
 
@@ -13,7 +22,6 @@ By the end of this lab you will have...
 
 - Built a circuit to enable an I/O pin from your MCU to drive a speaker
 - Implemented the timer functionality available on the MCU by reading the datasheet and writing your own library in C from scratch
-
 
 ## Requirements
 
@@ -31,11 +39,17 @@ In particular, this means that you are not allowed to use the CMSIS headers for 
 
 - [Starter Code from GitHub Repo]({{< var github-url >}}/tree/main/lab/lab05)
 
+### Lab-specific Specifications
 
-{{< include ./specs.qmd >}}
+<details>
+{{< include ../specs/lab5-specs.qmd >}} 
+</details>
 
-<a href="./specs.qmd" target="blank">Open specifications in new tab.</a>
+### General Specifications
 
+<details>
+{{< include  ../specs/general-lab-specs.qmd >}} 
+</details>
 
 
 ## Discussion

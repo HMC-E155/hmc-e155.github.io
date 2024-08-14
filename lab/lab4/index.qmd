@@ -1,5 +1,11 @@
 ---
 title: 'Lab 4: ARM Assembly Sort'
+format:
+  html:
+    other-links:
+      - text: "Specifications"
+        href: ./specs.html
+        icon: file-earmark-check
 ---
 
 
@@ -24,9 +30,17 @@ Write an ARM assembly-language program to sort an array of 12 signed bytes on yo
 
 - [Starter Code from GitHub Repo]({{< var github-url >}}/tree/main/lab/lab04)
 
-{{< include ./specs.qmd >}}
+### Lab-specific Specifications
 
-<a href="./specs.qmd" target="blank">Open specifications in new tab.</a>
+<details>
+{{< include ../specs/lab4-specs.qmd >}} 
+</details>
+
+### General Specifications
+
+<details>
+{{< include  ../specs/general-lab-specs.qmd >}} 
+</details>
 
 
 ## Instructions

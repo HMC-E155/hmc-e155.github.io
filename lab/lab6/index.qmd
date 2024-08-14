@@ -2,6 +2,12 @@
 title: 'Lab 6: The Internet of Things and Serial Peripheral Interface'
 vars:
   ds1722-datasheet-url: /assets/doc/ds1722.pdf
+format:
+  html:
+    other-links:
+      - text: "Specifications"
+        href: ./specs.html
+        icon: file-earmark-check
 ---
 
 ## Learning Objectives
@@ -38,7 +44,17 @@ See the provided example device drivers on the course GitHub repository for an e
 - [DS1722 Datasheet]({{< meta vars.ds1722-datasheet-url >}})
 - [Starter Code from GitHub Repo]({{< var github-url >}}/tree/main/lab/lab07)
 
-{{< include ./specs.qmd >}}
+### Lab-specific Specifications
+
+<details>
+{{< include ../specs/lab6-specs.qmd >}} 
+</details>
+
+### General Specifications
+
+<details>
+{{< include  ../specs/general-lab-specs.qmd >}} 
+</details>
 
 <a href="./specs.qmd" target="blank">Open specifications in new tab.</a>
 

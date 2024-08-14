@@ -1,5 +1,16 @@
 ---
 title: 'Lab 1: FPGA and MCU Setup and Testing'
+format:
+  html:
+    other-links:
+      - text: "Specifications"
+        href: ./specs.html
+        icon: file-earmark-check
+    code-links:
+      - text: "Starter Code"
+        href: https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab01
+        icon: code-square
+        format:
 ---
 
 ## Introduction
@@ -23,11 +34,17 @@ Follow the steps in this guide to test your FPGA and MCU boards. Write some Veri
 
 ## Resources
 
-- [Starter Code from GitHub Repo]({{< var github-url >}}/tree/main/lab/lab01)
+### Lab-specific Specifications
 
-{{< include ./specs.qmd >}}
+<details>
+{{< include ../specs/lab1-specs.qmd >}} 
+</details>
 
-<a href="./specs.qmd" target="blank">Open specifications in new tab.</a>
+### General Specifications
+
+<details>
+{{< include  ../specs/general-lab-specs.qmd >}} 
+</details>
 
 ## Before You Start
 
@@ -186,7 +203,6 @@ Congratulations, you are now finished assembling your board and ready to test it
 ![](images/board_assembled.jpg)
 
 Fully assembled development board.
-
 :::
 
 
@@ -236,10 +252,10 @@ Now it’s your turn to take the wheel and create your own design and dust off y
 
 | Signal  Name | Signal Type | Description |
 |--------------|-------------|-------------|
-| `clk`     | input| 48 MHz clock on FPGA
-| `s[3:0]`  | input| the four DIP switches (on the board, SW6)
-| `led[2:0]`| output| 3 LEDs (you may use the on-board LEDs)
-| `seg[6:0]`| output| the segments of a common-anode 7-segment display
+| `clk`     | input| 48 MHz clock on FPGA |
+| `s[3:0]`  | input| the four DIP switches (on the board, SW6) |
+| `led[2:0]`| output| 3 LEDs (you may use the on-board LEDs) |
+| `seg[6:0]`| output| the segments of a common-anode 7-segment display |
 
 The following tables define the relationship of the LEDs to the switches and clock.
 
@@ -345,11 +361,11 @@ Next, assign pins to relate the signal names in your Verilog code to physical pi
 
 
 ::: {#fig-pin-radiant-assignment}
-![Radiant pin assignments](images/radiant_pin_assignments.png)
+
+![](images/radiant_pin_assignments.png)
 
 Radiant pin assignments.
 :::
-
 
 The FPGA pinouts are shown in the Board Schematic. Most of the user input/output (I/O) pins are tapped out to the headers and labeled on the board silk screen. Some have special functions; for example, FPGA pin P42 is connected to LED D6.
 
