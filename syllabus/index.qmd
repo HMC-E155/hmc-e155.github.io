@@ -8,14 +8,14 @@ format:
 
 ## Contact Information
 
-| Item                | Information                                   |
-|---------------------|-----------------------------------------------|
-| Instructors:        | Prof. Josh Brake                              |
-| Lab Assistant(s):   | TBD                                           |
-| Web page:           | [{{< var website-url >}}]({{< var website-url >}})                       |
-| Lab Checkoff Sheet: | [Sheet Link]({{< var lab-checkoff-gsheet-url >}}) |
-| Email list:         | eng-155 \[at\] g.hmc.edu                      |
-| Discord Server:     | See email for invite                          |
+| Item                | Information                                        |
+|---------------------|----------------------------------------------------|
+| Instructors:        | Prof. Josh Brake                                   |
+| Lab Assistant(s):   | Kavi Dey, Neil Chulani, Henry Merilees             |
+| Web page:           | [{{< var website-url >}}]({{< var website-url >}}) |
+| Lab Checkoff Sheet: | [Sheet Link]({{< var lab-checkoff-gsheet-url >}})  |
+| Email list:         | eng-155 \[at\] g.hmc.edu                           |
+| Discord Server:     | See email for invite                               |
 
 Be sure to join the class Discord and check it regularly as it will be the main source of course-related communication for this semester.
 
@@ -29,7 +29,7 @@ Be sure to join the class Discord and check it regularly as it will be the main 
 
 You will be working on labs on your own time and it is not required that you attend the entire scheduled lab period. Instead, sign up for a time to get your lab checked off. Please sign up for a time during your lab section. If you are unable to find a spot that works for you, see if you can swap with one of your classmates. If you are still having trouble finding a time that works for you, reach out and let me know.
 
-"Office hours" is code for "come hang out." You are encouraged to attend office hours to ask questions, get help with your labs, talk about careers and graduate school, or chat about something on your mind (whether it is related to this class, academics, or anything else). In addition to things related to Engineering, embedded systems, digital electronics, and microcontrollers, a short (but not comprehensive!) list of things I enjoy talking about are sports (MLB: NY Mets; NFL: Tennessee Titans), running/biking/hiking, life design, time management, or books/essays I'm reading. I am available more often than not, so try dropping me a line via Slack or email if you are having a problem with your lab or want to set up a time. You may also contact the lab assistant(s) for questions when I am not available.
+"Office hours" is code for "come hang out." You are encouraged to attend office hours to ask questions, get help with your labs, talk about careers and graduate school, or chat about something on your mind (whether it is related to this class, academics, or anything else). In addition to things related to Engineering, embedded systems, digital electronics, and microcontrollers, a short (but not comprehensive!) list of things I enjoy talking about are sports (MLB: NY Mets; NFL: Tennessee Titans), running/biking/hiking, life design, time management, or books/essays I'm reading. I am available more often than not, so try dropping me a line via Discord or email if you are having a problem with your lab or want to set up a time. You may also contact the lab assistant(s) for questions when I am not available.
 
 ## Communication Policy
 
@@ -69,23 +69,23 @@ Here are a few of the main pedagogical concepts that you can expect to see in th
 
 ## Schedule
 
-| Week \# | Monday Date | Tuesday's Class                             | Thursday's Class                       | Due                                  |
-|:-------------:|:-------------:|---------------|---------------|---------------|
-|    1    |    8/26     | Intro & Analog Behavior of Digital Systems  | Combinational and Sequential Logic     | (Lab Demos)                          |
-|    2    |     9/2     | Verilog Coding                              | Synchronous Design                     | Lab 1 - Development Board Assembly   |
-|    3    |     9/9     | FPGA Documentation                          | Architecture & Assembly Review         | Lab 2 - Muxed 7-Segment Display      |
-|    4    |    9/16     | Assembly Programming                        | C Programming on an MCU                | Lab 3 - Keypad                       |
-|    5    |    9/23     | Clock Configuration                         | Timers                                 | Lab 4 - ARM Assembly Sort            |
-|    6    |    9/30     | Serial Interfaces Overview & SPI            | UART and the IoT                       | Lab 5 - Digital Audio                |
-|    7    |    10/7     | PCB Design                                  | Advanced Encryption Standard (AES)     | Lab 6 - SPI & The Internet of Things |
-|    8    |    10/14    | **Happy Fall Break! No class**              | Project Kickoff                        |                                      |
-|    9    |    10/21    | Graphics and Displays                       | Motors and Speakers                    | Lab 7 - AES & Project Proposal       |
-|   10    |    10/28    | Interrupts Pt. 1                            | Interrupts Pt. 2                       | Proposal Debriefs                    |
-|   11    |    11/4     | Presentations                               | Presentations                          |                                      |
-|   12    |    11/11    | The Fast Fourier Transform (FFT)            | Project Status Report and Demo         | Project Status Reports & Demo        |
-|   13    |    11/18    | Emerging Topics in Embedded Systems         | **Happy Thanksgiving! No class**       |                                      |
-|   14    |    11/25    | Introduction to Real Time Operating Systems | Direct Memory Access                   |                                      |
-|   15    |    12/2     | TBD                                         | Interview Questions & Life Beyond Mudd | Project Checkoffs, Report, Demo Day  |
+| Week \# | Monday Date | Tuesday's Class | Thursday's Class | Due |
+|:----:|:------:|:------------:|:--------------:|:------------:|
+| 1 | 8/26 | Intro & Analog Behavior of Digital Systems | Combinational and Sequential Logic | (Lab Demos) |
+| 2 | 9/2 | Verilog Coding | Synchronous Design | [Lab 1 - Development Board Assembly](/lab/lab1/) |
+| 3 | 9/9 | FPGA Documentation | Architecture & Assembly Review | [Lab 2 - Muxed 7-Segment Display](/lab/lab2/) |
+| 4 | 9/16 | C Programming on an MCU | C Programming on an MCU | [Lab 3 - Keypad](/lab/lab3/) |
+| 5 | 9/23 | Clock Configuration | Timers | [Lab 4 - ARM Assembly Sort](/lab/lab4/) |
+| 6 | 9/30 | TBD | TBD |  |
+| 7 | 10/7 | Serial Interfaces Overview & SPI | UART and the IoT | [Lab 5 - Digital Audio](/lab/lab5/) |
+| 8 | 10/14 | **Happy Fall Break! No class** | Advanced Encryption Standard (AES) & Project Kickoff |  |
+| 9 | 10/21 | Graphics and Displays | Motors and Speakers | [Lab 6 - SPI & The Internet of Things](/lab/lab6/) |
+| 10 | 10/28 | Interrupts Pt. 1 | Interrupts Pt. 2 | [Lab 7 - AES](/lab/lab7/) & Project Proposal |
+| 11 | 11/4 | Presentations | Presentations | Proposal Debriefs |
+| 12 | 11/11 | The Fast Fourier Transform (FFT) | Project Status Report and Demo | Project Status Reports & Demo |
+| 13 | 11/18 | Emerging Topics in Embedded Systems | **Happy Thanksgiving! No class** |  |
+| 14 | 11/25 | Introduction to Real Time Operating Systems | Direct Memory Access |  |
+| 15 | 12/2 | TBD | Interview Questions & Life Beyond Mudd | Project Checkoffs, Report, Demo Day |
 
 ## Recommended Texts
 
