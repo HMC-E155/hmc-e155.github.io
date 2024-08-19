@@ -233,7 +233,7 @@ Before connecting your MCU and FPGA boards, check the voltage regulators are on 
 
 To test the boards, you will upload a simple design to the FPGA which toggles an LED on and off and some code on the MCU to read in the toggling GPIO pin and echo is back to the FPGA. This will ensure that the board is working properly and that you have good communication between the two devices.
 
-To familiarize yourself with how to program the FPGA using Lattice Radiant, see the [Lattice Radiant iCE40 UltraPlus Project Setup](/tutorials/lattice_radiant_installation/) tutorial. 
+To familiarize yourself with how to program the FPGA using Lattice Radiant, see the [Lattice Radiant iCE40 UltraPlus Project Setup](/tutorials/lattice-radiant-installation/) tutorial. 
 This tutorial has information about how to create a project in Radiant and how to synthesize and upload designs to your FPGA board. 
 
 After working through the tutorial, download the Radiant project file `fpga_dev_board_test.zip` under the Lab 1 subfolder from [the course GitHub]({{< var github-url >}}) (the link on the course website lab page) and use it to program your FPGA. This design toggles pin P25 at about 1 Hz. 

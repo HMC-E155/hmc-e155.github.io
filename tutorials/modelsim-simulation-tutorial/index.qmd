@@ -204,11 +204,14 @@ The test vector file is a plaintext file with a single test vector on each line.
 
 # Libraries
 
-In many instances we want to leverage the iCE40 Technology Library. However, when we go to simulate these designs, we need to make sure to include the appropriate libraries so that ModelSim can find the correct design units when it goes to do the simulation.
+In many instances we want to leverage the iCE40 Technology Library.
+However, when we go to simulate these designs, we need to make sure to include the appropriate libraries so that ModelSim can find the correct design units when it goes to do the simulation.
 
-When you install Lattice Radiant with ModelSim Lattice FPGA Edition, it comes with a set of installed libraries. For our purposes, we are most interested in the iCE40UP library and will need to include this in our simulation.
+When you install Lattice Radiant with ModelSim Lattice FPGA Edition, it comes with a set of installed libraries.
+For our purposes, we are most interested in the iCE40UP library and will need to include this in our simulation.
 
-To do this, start the simulation by clicking Simulate > Start Simulation. Then navigate to the Libraries tab and add iCE40UP to the Search Libraries window using the “Add…” button.
+To do this, start the simulation by clicking Simulate > Start Simulation.
+Then navigate to the Libraries tab and add iCE40UP to the Search Libraries window using the “Add…” button.
 
 
 ::: {#fig-ice40-tech-library}

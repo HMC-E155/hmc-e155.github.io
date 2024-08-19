@@ -1,0 +1,32 @@
+---
+title: 'How to Build a Quarto Portfolio'
+---
+
+## Installing Quarto
+
+The first step to building your site is to download and install Quarto on your machine.
+Go to the Quarto website and download the most recent version of the Quarto CLI [here](https://quarto.org/docs/get-started/).
+
+You'll also need to decide what tool you'll like to use to write your Quarto code.
+There are lots of options here, but this tutorial will focus on Visual Studio Code.
+If you don't have VS Code installed, install it by downloading the latest version [here](https://code.visualstudio.com/).
+Then follow the instructions [here](https://quarto.org/docs/get-started/hello/vscode.html) to set it up by installing the [Quarto VS Code Extension](https://marketplace.visualstudio.com/items?itemName=quarto.quarto).
+While you are there, read the full page to understand the basic workflow of using Quarto with VS Code.
+
+## The Quarto Workflow
+
+Write, preview, render, publish
+
+## Creating Your Quarto Project
+
+## Hello Quarto
+
+## Organizing Your Site
+
+## Documenting Your Work With Git
+
+If you haven't yet set up Git on your machine, see the [Git Tutorial](/tutorials/git-setup/).
+
+
+
+## Publishing

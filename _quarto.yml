@@ -46,13 +46,13 @@ website:
         - text: Video Tutorials
           href: tutorials/video-tutorials/
         - text: Lattice Radiant Installation
-          href: tutorials/lattice_radiant_installation/
+          href: tutorials/lattice-radiant-installation/
         - text: ice40 Project Setup
-          href: tutorials/lattice_radiant_ice40_ultraplus_project_setup/
+          href: tutorials/lattice-radiant-ice40-ultraplus-project-setup/
         - text: ModelSim Tutorial
-          href: tutorials/modelsim_simulation_tutorial/
+          href: tutorials/modelsim-simulation-tutorial/
         - text: SEGGER Embedded Studio Tutorial
-          href: tutorials/segger_embedded_studio_setup
+          href: tutorials/segger-embedded-studio-setup
 
 format:
   html:
