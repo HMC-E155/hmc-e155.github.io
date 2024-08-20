@@ -1,7 +1,9 @@
 ---
 title: Course Syllabus
 format: 
-  html: default 
+  html:
+    html-table-processing: none
+  pdf: default
 ---
 
 # Microprocessor-based Systems (E155)
@@ -110,7 +112,7 @@ The table below describes the levels that you need to meet in each bundle (i.e.,
 
 | Grade | Labs                   | Project                |
 |-------|------------------------|------------------------|
-| F     | P $\lt$ 5              | P $\lt$ 4              |
+| F     | P < 5               | P < 4              |
 | D     | P $\geq$ 5, E $\geq$ 1 | P $\geq$ 4             |
 | C     | P $\geq$ 6, E $\geq$ 2 | P $\geq$ 4, E $\geq$ 2 |
 | B     | P = 7, E $\geq$ 5      | P = 5, E $\geq$ 3      |
