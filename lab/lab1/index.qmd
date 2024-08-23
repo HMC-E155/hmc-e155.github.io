@@ -431,3 +431,6 @@ The UP5K has built in hardware for pulse-width modulation of the LED. To find de
 
 [^1]:
      In order for the NUCLEO board to be compatible with SEGGER, it is necessary to reflash the ST-LINK programmer with SEGGER J-Link firmware to convert it to a J-Link. This has been already taken care of on the board in your kit, but if you want to use another STM32 board with SEGGER you’ll need to follow the instructions [here](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/) to do this yourself.
+
+
+{{< include /resources/github-issue-footer.qmd >}}

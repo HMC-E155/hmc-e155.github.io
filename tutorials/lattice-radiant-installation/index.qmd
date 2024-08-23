@@ -85,3 +85,5 @@ FlexNet License Finder dialog.
 You can also check the license paths afterwards by using the License Debug Tool under the Help menu.
 
 ![](images/radiant-license-file-during-install.png)
+
+{{< include /resources/github-issue-footer.qmd >}}

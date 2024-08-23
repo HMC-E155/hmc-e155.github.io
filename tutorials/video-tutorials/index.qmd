@@ -20,3 +20,4 @@ https://www.loom.com/embed/c27d30aba2f147a1ae01e26391e328f0?sid=017f1c0f-ff7d-4e
 <div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="
 https://www.loom.com/embed/44838b3b8f49473ba348165aaab2e4f5?sid=f02a578e-5515-4ce4-9e01-e1ba1c754371" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
+{{< include /resources/github-issue-footer.qmd >}}

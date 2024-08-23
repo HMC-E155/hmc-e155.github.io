@@ -70,3 +70,5 @@ When you are done, have your lab checked off by the instructor. You should thoro
 ## Hints
 
 Look at your RTL schematic in your synthesis tool (`Tools -> Netlist Analyzer`). Understand why your code produces the hardware you see. Be sure your combinational logic doesn’t have any registers. Be sure your logic has no latches or tristate buffers. The oscilloscope is handy for tracking down timing problems.
+
+{{< include /resources/github-issue-footer.qmd >}}

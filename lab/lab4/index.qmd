@@ -87,3 +87,5 @@ To test your code, try various cases with the array in the `.byte...` line under
 * A listing of the test cases you used and the output of the tests. Be sure your tests would convince a skeptic that your algorithm works.
 * For your lab checkoff, please have your lab set up and connected to a running debugger session so that the instructor may provide a test case for your code.
 * How many hours did you spend on this lab?
+
+{{< include /resources/github-issue-footer.qmd >}}

@@ -120,3 +120,5 @@ Before you create your project, you will need to download a few support packages
 
 Your STM32 Nucleo boards come with an on-board debugger ST-LINK debugger. This debugger is not compatible out of the box with the SEGGER tools and the firmware needs to be updated to connect to SEGGER Embedded Studio. The boards in your kits should have already been updated so that they are ready to go, but if for some reason your computer is not recognizing the board, you may need to download and perform the firmware upgrade yourself. 
 Instructions on how to do so can be found [here](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/). Note that this upgrade process can only be completed on Windows.
+
+{{< include /resources/github-issue-footer.qmd >}}

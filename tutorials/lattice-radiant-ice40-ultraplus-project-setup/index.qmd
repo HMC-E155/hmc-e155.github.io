@@ -183,3 +183,5 @@ After the programming finishes, you should see a message that the programming op
 If you are using the E155 development board, you should see the onboard LED connected to P42 blinking.
 If you would like to test the hardware separately with just the UPduino you can unplug the USB from your board and connect your UPduino board to a breadboard, wiring up an LED in series with a current limiting resistor (typically a value between 330 Ω and 1kΩ is a good choice).
 Then, reconnect your board to power via USB or using the +5V input on the board from a DC power supply.
+
+{{< include /resources/github-issue-footer.qmd >}}

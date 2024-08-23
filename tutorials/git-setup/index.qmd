@@ -160,4 +160,4 @@ You can read the page [here](https://docs.github.com/en/pull-requests/collaborat
 It is pretty straightforward either from Github Desktop or the web interface.
 
 
-{{< include /github-issue-footer.qmd >}}
+{{< include /resources/github-issue-footer.qmd >}}
