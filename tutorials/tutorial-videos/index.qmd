@@ -1,5 +1,5 @@
 ---
-title: Video Tutorials
+title: Tutorial Videos
 ---
 
 ## Monitoring Memory-mapped Registers in SEGGER Embedded Studio

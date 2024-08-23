@@ -43,8 +43,12 @@ website:
         href: resources/
       - text: Tutorials
         menu:
-        - text: Video Tutorials
-          href: tutorials/video-tutorials/
+        - text: Tutorial Videos
+          href: tutorials/tutorials-videos/
+        - text: Git Setup
+          href: tutorials/git-setup/
+        - text: Quarto Portfolio Setup
+          href: tutorials/quarto-portfolio-setup/
         - text: Lattice Radiant Installation
           href: tutorials/lattice-radiant-installation/
         - text: ice40 Project Setup
