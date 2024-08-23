@@ -1,3 +1,163 @@
 ---
 title: 'Git Setup'
 ---
+
+## Introduction
+
+The goal of this tutorial is to teach you how to use Git.
+There are tons of great tutorials on Git on the web, but I've linked one short, 15-minute video that will teach you the basics.
+
+After you watch the video, complete the first four levels in the Introduction Sequence at [Learn Git Branching](https://learngitbranching.js.org/).
+
+1. Introduction to Git Commits
+2. Branching in Git
+3. Merging in Git
+4. Rebase Introduction
+
+You can also find a few written resources in the [Resources](#resources) section below along with a few [E155-specific tips](#e155-specific-advice). 
+
+## Tutorial Video
+
+Watch the 15-minute video below for a quick tour of the basics of Git.
+
+{{< video https://www.youtube.com/watch?v=USjZcfj8yxE >}}
+
+## Resources
+
+### Downloads
+
+- [Git](https://git-scm.com/downloads)
+- [GitHub Desktop](https://desktop.github.com/download/)
+
+### Tutorials
+
+- [Introduction to Git](https://videotutorials.notion.site/Introduction-to-Git-ac396a0697704709a12b6a0e545db049): Companion notes to the [video](#tutorial-video) linked above.
+- [Pro Git Book](https://git-scm.com/book/en/v2): An excellent resources to learn about the inner workings of Git.
+- [Learn Git Branching](https://learngitbranching.js.org/): A highly-recommended game-like tutorial to help you get comfortable with branching.
+
+## Using Git
+
+There are a variety of ways that you can interact with Git and you are welcome to use whatever interface is most comfortable for you.
+I typically recommend (and use) Github Desktop for most of my work and drop into the command line interface (CLI) when I need to do something a bit more complicated.
+VS Code also has built-in Git support if you'd like to use it, although I find it a bit less intuitive than the Github Desktop GUI.
+
+## E155-specific Advice
+
+We'll be leaning on Git heavily throughout E155.
+You'll be required to use it to manage all the source code you write this semester and it will also be the foundation for your portfolio website.
+Despite the steep initial learning curve and some occasional bumps along the way, Git is relatively simple to use once you get into the flow.
+After you get over the learning curve, you'll wonder how you ever coded anything beyond the simplest project without using version control.
+
+Here are a few general guidelines that you should follow when using Git throughout the semester.
+
+### Create a new Git repository for each project or lab you are working on.
+
+This helps to keep things clean and organized.
+
+### Branch frequently.
+
+Getting comfortable branching frequently will be a huge help as you work.
+Once you get past the most trivial designs, it is unbelievably easy to get tangled up in your own edits.
+This can cost you a lot of time!
+
+Once you create the initial commit of the template code or project, create a branch to start working on your other edits.
+This will allow you to easily jump back and forth between various features you're developing and also allow you to return to a working stable version of your code without losing anything.
+
+The poor person's solution is to comment out chunks of code to toggle between different versions but this *will* come back to bite you.
+Use branches instead!
+
+### When you make a mistake, don't freak out.
+
+You will make mistakes, especially as you are getting familiar with Git.
+When that happens, don't fret.
+Be aware when your actions might result in permanent loss of files and don't hesitate to ask an instructor, grutor, or knowledgeable peer for help.
+
+## A Library of Some Common Git Commands
+
+### Basic Git Commands
+
+As you use Git, the commands below are some of the most common that you'll encounter.
+
+#### Commit
+
+Committing creates a new checkpoint and takes a snapshot of the current state of your repository.
+
+#### Undo Last Commit
+
+If you make a mistake in your most recent commit, you can easily undo it.
+This is completed using the `Undo Commit` option in Github Desktop or by running `git reset HEAD~1` which will move the branch pointer to one commit behind the current tip of the branch (i.e., the `HEAD`)
+
+#### Amend Last Commit
+
+If you want to undo a commit but you've already pushed to the remote, you won't see the option to undo your last commit in Github Desktop.
+Instead, you'll need to select `Amend Commit`.
+This will allow you to add additional changes to the previous commit and/or update the commit message.
+Once you complete the amend, the commit will include all the operations.
+
+After you amend a commit that's already been pushed to a remote, you'll need to do a force push.
+This will force the commit history on the remote to match the local commit history and is needed since the commit on your local machine no longer matches the one on the remote.
+
+It's relatively painless to do this sort of commit wrangling when you are working alone on a repository, but it gets more complicated if you are collaborating with someone else because modifying the commit history will directly impact their downstream changes.
+
+#### Push
+
+The Git push command send your local copy of the git repository to the remote server (e.g., on Github).
+Once you finish working on your changes locally, you'll want to push them to the remote so that you can pull them down on another computer (e.g., if you are writing code on your personal computer but then want to download and continue editing the code on the computers in the lab).
+
+#### Fetch/Pull
+
+The Git fetch command is the opposite of Git push.
+It downloads the current state of the repository to your local machine.
+Once you download it you can choose to combine those changes with your local branch using a merge or rebase.
+
+Git pull combines the fetch and merge/rebase operations and is what you'll use in most cases.
+
+#### Stash
+
+If you have uncommitted changes in your working directory and want to merge changes or switch branches, you'll need to either commit the changes or stash them.
+Stashing changes allows you to set the changes aside without committing them if you still are not at the point you want to commit yet.
+
+Github Desktop or the Git command line interface will throw an error if you try to checkout a different branch without committing or stashing any changes in your working directory.
+
+### More Advanced Git Commands
+
+As you work longer with Git you'll also get familiar with some more advanced Git operations listed below.
+
+#### Branching
+
+Branches are one of the most powerful features in Git.
+You should branch early and often.
+
+As a starting point, read and adopt the [GitHub flow](https://docs.github.com/en/get-started/using-github/github-flow) workflow.
+
+In short, the Github flow includes the following steps:
+
+1. Create a branch
+2. Make changes
+3. Create a pull request
+4. Address review comments
+5. Merge your pull request
+6. Delete your branch
+
+Even if you are only working on a project by yourself, I still recommend getting in the habit of creating pull requests to be able to easily track the more significant developments in your project.
+
+#### Merge and Rebase
+
+When you finish working on a branch, you'll need to combine your work with the existing commit history on `main`.
+To combine the two commit trajectories, you'll need to choose to either merge or rebase your work.
+
+Executing a merge in Git creates a new special commit with two parent commits.
+Rebasing will allow you to interactively apply all the changes from the commits that have occurred in `main` onto your branch.
+Therefore, when you merge your branch it will look as if your work was built linearly on top of `main` instead of separating and merging back in.
+It is often cleanest to rebase before merging so that you maintain a linear commit history (i.e., no merge commits).
+
+Rebasing and merging is one of the more challenging Git operations to visualize and the tutorial at [Learn Git Branching](https://learngitbranching.js.org/) is very helpful to see what's going on!
+
+#### Pull Request
+
+A pull request is a mechanism to ask collaborators for feedback before merging your work into the main branch.
+You can read the page [here](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request?tool=webui) which has information on how to create a pull request.
+It is pretty straightforward either from Github Desktop or the web interface.
+
+
+{{< include /github-issue-footer.qmd >}}
