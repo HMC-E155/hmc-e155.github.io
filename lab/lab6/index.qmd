@@ -126,3 +126,5 @@ When you are done, have your lab checked off by the instructor. You should thoro
 - A screen capture (exported from the scope, not a photo captured using a camera) of an example SPI transaction captured on the oscilloscope/logic analyzer.
 - Your source code.
 - How many hours did you spend on the lab? This will not count toward your grade.
+
+{{< include /resources/github-issue-footer.qmd >}}

@@ -1,0 +1,29 @@
+---
+title: How to Create a Github Issue
+---
+
+## Introduction
+Github issues are an excellent feature to create a suggestion for a correction or to make a suggestion for a feature request.
+
+## Creating an Issue
+
+To create a Github issue, navigate to the Github repository.
+
+### General Issue
+
+If you need to create a general issue, navigate to the Issues tab and follow the instructions.
+Do your best to give the issue a descriptive title and succinctly explain the feedback in the description.
+You should also give the issue an appropriate label.
+
+### Specific Issue
+
+If you are raising an issue about a specific line of code in the code base, you should reference it in your issue.
+The easiest way to do this is to navigate to the specific source code file in the repository and click on the line number.
+This will give you a button with three dots.
+If you click the button, a menu will open with options including the ability to copy a permalink to that line or to directly create a new issue referencing that line.
+
+::: {#fig-creating-github-issue}
+![](images/creating-issue-specific-line.png)
+
+Creating an issue from a specific line of code.
+:::

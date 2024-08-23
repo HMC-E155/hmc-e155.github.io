@@ -249,3 +249,5 @@ Start sim of `top` module.
 
 
 Note that you can also achieve the steps above by running `vsim work.top -L iCE40UP` in the command window.
+
+{{< include /resources/github-issue-footer.qmd >}}

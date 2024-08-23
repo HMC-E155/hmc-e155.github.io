@@ -124,3 +124,5 @@ When you are done, have your lab checked off by the instructor. You should thoro
 ## Credits
 
 This lab was originally developed in 2015 by Alex Alves ’16, redesigned for the μMudd Mark 5.1 in 2019 by Caleb Norfleet ’21, and redesigned for the μMudd MkVI in Fall 2021 by Prof. Josh Brake.
+
+{{< include /resources/github-issue-footer.qmd >}}

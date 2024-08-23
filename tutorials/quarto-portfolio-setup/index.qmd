@@ -344,6 +344,4 @@ If you don't, when you run `git reset --hard` you'll discard all your changes!
 Congratulations!
 You now have your portfolio website for E155 set up and published to the web.
 
-::: {.callout-note title="Suggest Feedback!"}
-If you caught any typos or have any suggestions for this page, please open an issue on the [Github repository](https://github.com/HMC-E155/hmc-e155.github.io/).
-:::
+{{< include /resources/github-issue-footer.qmd >}}

@@ -28,7 +28,6 @@ Watch the 15-minute video below for a quick tour of the basics of Git.
 
 - [Git](https://git-scm.com/downloads)
 - [GitHub Desktop](https://desktop.github.com/download/)
-
 ### Tutorials
 
 - [Introduction to Git](https://videotutorials.notion.site/Introduction-to-Git-ac396a0697704709a12b6a0e545db049): Companion notes to the [video](#tutorial-video) linked above.
@@ -160,4 +159,4 @@ You can read the page [here](https://docs.github.com/en/pull-requests/collaborat
 It is pretty straightforward either from Github Desktop or the web interface.
 
 
-{{< include /github-issue-footer.qmd >}}
+{{< include /resources/github-issue-footer.qmd >}}
