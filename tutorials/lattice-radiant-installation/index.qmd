@@ -56,7 +56,7 @@ This license is designed to be run on a single computer.
 
 To download the license you will need to find your Host Network Interface Card (NIC) address. To find the NIC address, follow the steps below.
 
-For Windows, from an MS-DOS window (command prompt), use the ipconfig /all command
+For Windows, from an MS-DOS window (command prompt), use the `ipconfig /all` command
 
 For Linux, from the command prompt, use the `ifconfig -a` command
 
