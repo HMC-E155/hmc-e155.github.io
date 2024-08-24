@@ -1,13 +1,18 @@
 ---
 title: 'Lab 6: The Internet of Things and Serial Peripheral Interface'
-vars:
-  ds1722-datasheet-url: /assets/doc/ds1722.pdf
 format:
   html:
     other-links:
       - text: "Specifications"
         href: ./specs.html
         icon: file-earmark-check
+      - text: DS1722 Datasheet
+        href: /assets/doc/ds1722.pdf
+        icon: file-earmark-pdf
+    code-links:
+      - text: Starter Code
+        href: https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab06
+        icon: github
 ---
 
 ## Learning Objectives
@@ -38,25 +43,6 @@ See the provided example device drivers on the course GitHub repository for an e
 ::: {.hint-box}
 **Note:** There are only a limited number of ESP8266 boards and DS1722 SPI temperature sensors available for this lab. Please do not remove these devices from the digital lab so that everyone can access these shared resources.
 :::
-
-## Resources
-
-- [DS1722 Datasheet]({{< meta vars.ds1722-datasheet-url >}})
-- [Starter Code from GitHub Repo]({{< var github-url >}}/tree/main/lab/lab07)
-
-### Lab-specific Specifications
-
-<details>
-{{< include ../specs/lab6-specs.qmd >}} 
-</details>
-
-### General Specifications
-
-<details>
-{{< include  ../specs/general-lab-specs.qmd >}} 
-</details>
-
-<a href="./specs.qmd" target="blank">Open specifications in new tab.</a>
 
 ## ESP8266 Web Server
 

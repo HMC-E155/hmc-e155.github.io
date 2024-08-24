@@ -11,9 +11,10 @@ format:
       - text: "AES Standard: NIST FIPS 197"
         href: /assets/doc/NIST.FIPS.197-upd1.pdf
         icon: file-earmark-pdf
+    code-links:
       - text: "Starter Code"
         href: https://github.com/HMC-E155/hmc-e155//tree/main/lab/lab07
-        icon: code-square
+        icon: github
 ---
 
 
@@ -34,27 +35,9 @@ By the end of this lab you will have...
 Construct a hardware accelerator to perform 128-bit AES encryption.
 Send a plaintext message and key from a micro- processor to the accelerator and verify that the cyphertext received back is correct. Display the SPI communication on the logic analyzer.
 
-## Resources
-
-### Lab-specific Specifications
-
-<details>
-{{< include ../specs/lab7-specs.qmd >}} 
-</details>
-
-### General Specifications
-
-<details>
-{{< include  ../specs/general-lab-specs.qmd >}} 
-</details>
-
-<a href="./specs.qmd" target="blank">Open specifications in new tab.</a>
-
 ## The Advanced Encryption Standard
 
 The Advanced Encryption Standard is described in an unusually succinct and clear standard. Reading the standard carefully will save you time. See Appendix A-1 for an example of the key expansion during each round and Appendix B for an example of the intermediate results during each round.
-
-A PDF of the standard can be found [here]({{< meta vars.aes-standard-pdf-url >}}).
 
 ### Implementation
 
@@ -101,17 +84,6 @@ Get your design working in simulation first. When debugging, find the first plac
 If the design works in simulation but not on hardware, it is often a wiring error or a discrepancy between how you timed your control signals and what the C code expects. Make sure you’ve read the provided code carefully and are producing signals at the right times. Check that your FPGA and microcontroller are expecting the same polarity and phase for your SPI clock signal. Use the many channels of the logic analyzer to view all of the relevant signals at once and check them against your expectations. If you have a hard bug, it’s helpful to tap out intermediate signals, such as the state of a FSM, onto FPGA pins so you can watch them on the logic analyzer.
 
 Have fun! This is a sophisticated system and you should feel proud when you have built and debugged it!
-
-
-## What to Turn In
-
-When you are done, have your lab checked off by the instructor. You should thoroughly understand how it works and what would happen if any changes were made. Turn in your lab writeup including the following information:
-
-* Schematics of the breadboarded circuit.
-* A screen capture (exported from the scope, not a photo captured using a camera) of an example SPI transaction captured on the oscilloscope/logic analyzer.
-* Your source code.
-* How many hours did you spend on the lab? This will not count toward your grade.
-
 
 ## Credits
 
