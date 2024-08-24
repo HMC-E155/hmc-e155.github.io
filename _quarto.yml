@@ -6,6 +6,7 @@ project:
 
 website:
   title: "HMC E155"
+  favicon: /assets/img/microps-logo.png
   navbar:
     tools:
       - icon: github
