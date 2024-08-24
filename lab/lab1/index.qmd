@@ -9,8 +9,7 @@ format:
     code-links:
       - text: "Starter Code"
         href: https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab01
-        icon: code-square
-        format:
+        icon: github
 ---
 
 ## Introduction
@@ -104,7 +103,7 @@ The FPGA is programmed using the onboard programmer via the synthesis tool Latti
 More details will be provided later in this lab writeup.
 
 
-##  E155 FA22 Development Board
+##  E155 Development Board
 
 In this lab you will assemble a custom printed circuit board which hosts the MCU and FPGA boards. 
 The board has several features that will be convenient for developing embedded systems such as:
@@ -128,12 +127,12 @@ The board has several main sections that you should make yourself aware of. They
 - **Configuration Jumpers**: The configuration jumpers on the board allow you several options to set the power and signal connections for the MCU and FPGA.
 J2, J3, and J4 control the mikroBUS reset signal and the power for the FPGA and MCU boards respectively. The mikroBUS reset signal can also be connected to MCU pin PA12 to enable the MCU to reset the connected peripheral via software.
 The configuration jumper J5 is a 2x8 header with MCU pins on the left hand side and FPGA pins on the right hand side.
-Note that on the 2023 version of the board, J5 has been replaced with an 8-pin DIP switch with the reference designator SW7.
+Note that on version v4 of the board, J5 has been replaced with an 8-pin DIP switch with the reference designator SW7.
 The functionality however, remains the same as the jumper.
 By attaching a jumper between the pins in the same row, the MCU pin on the left side of the jumper can be directly routed to the FPGA pin on the right hand side via traces on the PCB. 
 This allows for convenient and high-fidelity interfaces between the MCU and the FPGA without the need for external wires.
 - **Ribbon Cable Connector**: The ribbon cable connector is used to route a subset of the MCU and FPGA pins out to a cable which connects to the breadboard adapter board.
-- **MCU, FPGA, and Slide Buttons: **The push and slide buttons on the board are routed to pins on the MCU and FPGA in order to provide on-board options to toggle GPIO pins on the respective devices. Note that all of these buttons are configured as active low (i.e., closing the switch connects the pin of the device to ground) without any hardware pullup resistors. In order to use them, you must configure the internal pullup resistors on the MCU or FPGA in order to avoid floating logic levels.
+- **MCU, FPGA, and Slide Buttons:** The push and slide buttons on the board are routed to pins on the MCU and FPGA in order to provide on-board options to toggle GPIO pins on the respective devices. Note that all of these buttons are configured as active low (i.e., closing the switch connects the pin of the device to ground) without any hardware pullup resistors. In order to use them, you must configure the internal pullup resistors on the MCU or FPGA in order to avoid floating logic levels.
 
 
 ## Assembling the Board
@@ -246,7 +245,7 @@ After working through the tutorial, download the SES solution folder from the co
 Now, in addition to LED D3 (PA9/P25) blinking, you should see LED D2 (PA10/P23) and LED D7 (P38) blinking as well.
 
 
-# FPGA Design
+## FPGA Design
 
 Now it’s your turn to take the wheel and create your own design and dust off your digital design chops! Your goal is to write some Verilog modules to further test the hardware on your board and operate a 7-segment display. The system should have the following inputs and outputs:
 
@@ -393,30 +392,9 @@ Launch Tools → Netlist Analyzer and examine the RTL schematic of your design. 
 
 Look at the Reports tab. In the Project Summary under Resource Usage you should see a total number of registers and pins that match your expectations. Under Analysis & Synthesis, you can see how the logic blocks and registers are broken down in each module. Under Fitter, the Pin-Out File should match the pin assignments you intended.
 
-
-## What to Turn In
-
-For this lab and all subsequent ones you will turn in a lab report. The report should not exceed one page of text, plus schematics, code, and anything else appropriate, such as diagrams, simulation results, or calculations. The report typically has the following sections:
-
-* **Introduction**: Briefly explain what was done.
-* **Design and Testing Methodology**: Explain how you approached the design of this assignment from both a software and a hardware standpoint (as appropriate). Include how you tested your design. These tests should convince the reader that the requirements of the assignment have been met.
-* **Technical Documentation**: Include your Verilog code and schematics of your circuits.
-    * Quality and clarity of your code is important. Make sure it is adequately commented. Succinct code using standard idioms is best.
-    * Schematics of your breadboarded circuits should be sufficient for another engineer to understand and reconstruct the circuit on the breadboard. Always use standard symbols for standard components such as resistors, switches, transistors, diodes, etc. Give the component name or part number such that the reader could order parts and replicate your circuit, or look up components in a datasheet where necessary. The reader shouldn’t have to open you HDL synthesis program to relate your Verilog code to the schematic, and shouldn’t need to refer to a data sheet to wire external components or understand what the connections are. Don’t assume that the reader has memorized the pinouts of any chips. Therefore, you’ll need to label both the pin number and pin name for each pin you use from the FPGA board or other component (e.g., 7-segment display). There is no need to draw any of the circuitry on the board; just refer to it by the pins number and name.
-* **Results and Discussion**: Did you accomplish all of the prescribed tasks? If not, what are the shortcomings? How might you address them given more time? As appropriate, how did the design perform (ex. How fast/accurate/reliable was it?). Is there anything you would do differently if you were to redo the lab? Is there anything else interesting worth mentioning?
-* **Conclusions**: Briefly summarize what was done and how it performed.
-* How many hours did you spend working on the lab? Any comments, suggestions, or complaints about the assignment? This will not count toward your grade, but will help refine the lab for the future.
-
-The report does not need to be long but should be complete. Some individual questions may not apply to this particular lab but are listed to give you a general idea of what is desired. Future reports will follow a similar format and the questions may be more applicable in these instances.
-
-Have your lab checked off by the instructor. You will need to demonstrate that the board and 7-segment display operate correctly. You will also be asked a question about some part of the lab or your board. You should be thoroughly familiar with all of the lab and the components of your board to be able to answer the question. The oral exam is typically in the form of a “Fault-Tolerance Question.” What would happen if a particular wire is broken or a pin is shorted to Vcc or GND? Be prepared for any other questions about your lab, however.
-
-
 ## FAQ and Hints
 
-If some of you are seeing issues with specific pins on your FPGA there could be a few different reasons and corre- sponding steps to take to troubleshoot.
-
-
+If some of you are seeing issues with specific pins on your FPGA there could be a few different reasons and corresponding steps to take to troubleshoot.
 
 * You could have an electrical short which is causing some pins to be electrically connected that should not due to solder bridges. Double check to make sure that the pins are isolated and not connected together by checking the resistance between the pins with a multimeter.
 * You are trying to use a pin that is shared between the FPGA and the MCU and the MCU is not leaving that pin floating or it is driving it as an output. You can get around this by wiping the code on the MCU by uploading a file with a blank main function.
