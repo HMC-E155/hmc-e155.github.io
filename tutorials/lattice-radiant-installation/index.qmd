@@ -11,9 +11,8 @@ Lattice Radiant is the synthesis tool provided by Lattice Semiconductor for targ
 
 Download the software installer from Lattice’s website for your operating system from this link [Lattice Radiant Software](https://www.latticesemi.com/LatticeRadiant). 
 (Windows and Linux only. 
-You will need to use virtualization to use Radiant on Mac.)
-The current version as of this writing is 2023.1.
-You will need to create an account to access the download.
+You will need to use virtualization to use Radiant on Mac.).
+You will also need to create an account to access the download.
 
 ## Working with the UPduino v3.1 on macOS
 
@@ -35,10 +34,18 @@ After installation, to program our UPduino v3.1 board, use the command:
 openFPGALoader -b ice40_generic -c ft232  -f <path_to_.bin_file>
 ```
 
+## Installing FTDI Drivers
+
+To program the UPduino on Windows, you'll need to install FTDI drivers if they're not already installed.
+To do so, go to the [Virtual COM Port (VCP) drivers page](https://ftdichip.com/drivers/vcp-drivers/) and download the appropriate drivers for your system.
+
+::: {.callout-note title="Correct VCP Drivers for M-series Macs"}
+For M-series Macs virtualizing Windows, you will need to download the files for an ARM architecture since your installation of Windows is likely using the native ARM architecture instead of virtualizing an x64 instruction set.
+:::
 
 ## Installation
 
-As part of the installation, make sure to select the iCE40 UltraPlus family device support package along with the Programmer and Mentor ModelSim Lattice Edition. After this menu, click through to finish the installation process.
+As part of the installation, make sure to select the iCE40 UltraPlus family device support package along with the Programmer and Mentor QuestaSim Lattice Edition. After this menu, click through to finish the installation process.
 
 
 ::: {#fig-radiant-install-options}
@@ -72,9 +79,17 @@ You do not need to select any of the optional Radiant Free IP.
 Then click the “Generate License” button.
 
 After receiving the license file (`license.dat`), follow the instructions in the email about how to install the license.
-You should have to place it in the location specified in the email (C:\licenses\FlexLM on Windows), select this license location in the FlexNet License Finder window, and set the LM_LICENSE_FILE environment variable to the path of your license file ([instructions](https://geekflare.com/system-environment-variables-in-windows/)). 
-This should ensure that both Radiant and ModelSim are properly licensed.
+You must:
+1. Copy the `license.dat` file to the location specified in the email (`<sw_install>\license\license.dat` on Windows). `<sw_install>` is probably `C:\lscc\radiant\2024.1` or similar if you installed it in the default location). When you open Radiant for the first time, you'll probably be prompted to select this license location in the FlexNet License Finder window.
+2.  Create a new `LATTICE_LICENSE_FILE` system environment variable pointing to the path of your license file `<sw_install>\license\license.dat` ([instructions](https://geekflare.com/system-environment-variables-in-windows/)).
+3.  Create a new `LM_LICENSE_FILE` system environment variable pointing to the path of your license file.
 
+::: {.callout-warning title="QuestaSim Licensing"}
+Although the step to create the `LM_LICENSE_FILE` isn't listed in the installation instructions in the email, it seems to be required to successfully license QuestaSim.
+The instructions to create this variable are listed in the [Licensing User Guide for Windows](https://www.latticesemi.com/view_document?document_id=54008).
+:::
+
+This should ensure that both Radiant and QuestaSim are properly licensed and the files are correctly linked.
 
 ::: {#fig-license-finder}
 ![](images/license_finder.png){width=50%}
