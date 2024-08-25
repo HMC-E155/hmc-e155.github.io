@@ -1,14 +1,20 @@
 ---
-title: 'ModelSim Simulation Tutorial'
+title: 'QuestaSim/ModelSim Simulation Tutorial'
 ---
 
+::: {.callout-warning title="QuestaSim is ModelSim"}
+Modelsim was renamed to Questasim as part of Mentor Graphics’ (now Siemens EDA) strategy to unify and rebrand their simulation tools under the "Questa" umbrella.
+Across the web and on this website you may see references to both QuestaSim and ModelSim, but both names refer to the same software tool.
+:::
 
-# Introduction
 
-To verify that designs are working, it is useful to simulate them using ModelSim. This document will provide a quick demo of how to perform a simulation in ModelSim and how to include iCE40UP library files in the simulation.
+## Introduction
+
+To verify that designs are working, it is useful to simulate them using ModelSim.
+This document will provide a quick demo of how to perform a simulation in ModelSim and how to include iCE40UP library files in the simulation.
 
 
-# Simple Simulations by Forcing Signals
+## Simple Simulations by Forcing Signals
 
 If you have a simple design and want to quickly test it out to see that it is working, you can use the force function in the ModelSim command window to apply test inputs and measure the outputs.
 
@@ -16,7 +22,7 @@ We will use a full adder circuit as a demonstration.
 
 
 ::: {#fig-full-adder-schematic}
-![](images/full-adder-schematic.png)
+![](images/full-adder-schematic.png){width=50%}
 
 Full adder schematic.
 
@@ -27,7 +33,7 @@ To code up the full adder, first, open ModelSim and create a new ModelSim projec
 
 
 ::: {#fig-new-project}
-![](images/modelsim-create-project.png)
+![](images/modelsim-create-project.png){width=50%}
 
 Create new project.
 :::
@@ -77,7 +83,7 @@ Running simulation by forcing signals.
 Fill out a truth table for a full adder by evaluating the circuit schematic shown above for all combinations of A, B, and Cin and verify a few values by forcing them to get the hang of it.
 
 
-# Testbench Simulation
+## Testbench Simulation
 
 After testing about only two different inputs by manually forcing values you are probably already frustrated with the tediousness of running a simulation this way. Luckily, there is a much more efficient way to run simulations using testbenches.
 
@@ -90,18 +96,18 @@ In this example we will create a testbench with automatic checking against a tes
 A testbench is composed of the following elements:
 
 
-* Create and initialize the signals for the inputs, outputs, and internal signals of your modules.
-* Instantiate the device under test (DUT)
-* Generate a simulated clock signal. Even if your module is purely combinational, you will need this clock signal to control when the input test vectors are applied and the outputs checked.
-* Load the test vectors and initialize the signals for the simulation (e.g., pulsing the reset line)
-* Apply the inputs and check the resulting outputs using the test vectors. One simple way to do this is to apply the test vector on the rising edge of the clock and then check the outputs against the expect outputs on the negative edge of the clock.
+- Create and initialize the signals for the inputs, outputs, and internal signals of your modules.
+- Instantiate the device under test (DUT)
+- Generate a simulated clock signal. Even if your module is purely combinational, you will need this clock signal to control when the input test vectors are applied and the outputs checked.
+- Load the test vectors and initialize the signals for the simulation (e.g., pulsing the reset line)
+- Apply the inputs and check the resulting outputs using the test vectors. One simple way to do this is to apply the test vector on the rising edge of the clock and then check the outputs against the expect outputs on the negative edge of the clock.
 
 Every HDL module that you write should have a testbench to accompany it. While this will cost you some time up front, it will save you loads of time and potential head injuries from banging your head against the wall wondering why your circuit is not working as you expect.
 
 
-## Creating the Testbench
+### Creating the Testbench
 
-Next, we will create the testbench. Create a new SystemVerilog file “fulladder_tb.sv” and add it to your project. Then, type the following code into the testbench.
+Next, we will create the testbench. Create a new SystemVerilog file `fulladder_tb.sv` and add it to your project. Then, type the following code into the testbench.
 
 
 ```
@@ -175,7 +181,7 @@ endmodule
 **Note**: Functions preceded by a dollar sign (e.g., `$readmemb`, `$display`, `$finish`, etc.) are system functions.
 :::
 
-## The Testvector (.tv) File
+### The Testvector (.tv) File
 
 The test vector file is a plaintext file with a single test vector on each line. Typically these are organized in the format &lt;inputs>_&lt;expected_outputs> (underscores are ignored but help to provide visual organization) but the specific format is up to you. You just need to make sure to assign the bits properly in your testbench module.
 
@@ -200,9 +206,26 @@ The test vector file is a plaintext file with a single test vector on each line.
 111_11
 ```
 
+### Preventing Optimization
+
+When we simulate a testbench, we need to disable some of the default optimization.
+If you don't, QuestaSim will eliminate many of your testbench signals because they are not directly linked to inputs or outputs of the modules.
+
+To prevent optimization, change the optimization settings when you click the `Start Simulation` option from the `Simulate` menu.
+Click `Optimization Settings` and then select the option to "Apply full visibility to all modules (full debug mode)".
+
+::: {#fig-optimization-settings layout-ncol=2}
+
+![](images/questasim-optimization-1.png)
+
+![](images/questasim-optimization-2.png)
+
+QuestaSim optimization settings for preserving testbench signals.
+:::
 
 
-# Libraries
+
+## Libraries
 
 In many instances we want to leverage the iCE40 Technology Library.
 However, when we go to simulate these designs, we need to make sure to include the appropriate libraries so that ModelSim can find the correct design units when it goes to do the simulation.
@@ -215,7 +238,7 @@ Then navigate to the Libraries tab and add iCE40UP to the Search Libraries windo
 
 
 ::: {#fig-ice40-tech-library}
-![](images/ice40-tech-library.png)
+![](images/ice40-tech-library.png){width=50%}
 
 ice40 Technology Library.
 :::
@@ -223,14 +246,14 @@ ice40 Technology Library.
 
 
 ::: {#fig-ice40-tech-library}
-![](images/ice40-add-library.png)
+![](images/ice40-add-library.png){width=50%}
 
 Add ice40 Technology Library.
 :::
 
 
 ::: {#fig-ice40-start-sim}
-![](images/modelsim-start-sim-module.png)
+![](images/modelsim-start-sim-module.png){width=50%}
 
 Start sim with loaded library.
 :::
@@ -241,11 +264,10 @@ Your simulation should now start and open up the Wave window.
 
 
 ::: {#fig-ice40-tech-library}
-![](images/modelsim-start-sim-module.png)
+![](images/modelsim-start-sim-module.png){width=50%}
 
 Start sim of `top` module.
 :::
-
 
 
 Note that you can also achieve the steps above by running `vsim work.top -L iCE40UP` in the command window.

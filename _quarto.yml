@@ -54,7 +54,7 @@ website:
           href: tutorials/lattice-radiant-installation/
         - text: ice40 Project Setup
           href: tutorials/lattice-radiant-ice40-ultraplus-project-setup/
-        - text: ModelSim Tutorial
+        - text: QuestaSim/ModelSim Tutorial
           href: tutorials/modelsim-simulation-tutorial/
         - text: SEGGER Embedded Studio Tutorial
           href: tutorials/segger-embedded-studio-setup
