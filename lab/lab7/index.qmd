@@ -2,7 +2,22 @@
 title: 'Lab 7: The Advanced Encryption Standard'
 vars:
   aes-standard-pdf-url: /assets/doc/NIST.FIPS.197-upd1.pdf
+format:
+  html:
+    other-links:
+      - text: "Specifications"
+        href: ./specs.html
+        icon: file-earmark-check
+      - text: "AES Standard: NIST FIPS 197"
+        href: /assets/doc/NIST.FIPS.197-upd1.pdf
+        icon: file-earmark-pdf
+    code-links:
+      - text: "Starter Code"
+        href: https://github.com/HMC-E155/hmc-e155//tree/main/lab/lab07
+        icon: github
 ---
+
+
 
 ## Learning Objectives
 
@@ -20,20 +35,9 @@ By the end of this lab you will have...
 Construct a hardware accelerator to perform 128-bit AES encryption.
 Send a plaintext message and key from a micro- processor to the accelerator and verify that the cyphertext received back is correct. Display the SPI communication on the logic analyzer.
 
-## Resources
-
-- [AES Standard: NIST FIPS 197]({{< meta vars.aes-standard-pdf-url >}})
-- [Starter Code from GitHub Repo]({{< var github-url >}}/tree/main/lab/lab07)
-
-{{< include ./specs.qmd >}}
-
-<a href="./specs.qmd" target="blank">Open specifications in new tab.</a>
-
 ## The Advanced Encryption Standard
 
 The Advanced Encryption Standard is described in an unusually succinct and clear standard. Reading the standard carefully will save you time. See Appendix A-1 for an example of the key expansion during each round and Appendix B for an example of the intermediate results during each round.
-
-A PDF of the standard can be found [here]({{< meta vars.aes-standard-pdf-url >}}).
 
 ### Implementation
 
@@ -81,17 +85,8 @@ If the design works in simulation but not on hardware, it is often a wiring erro
 
 Have fun! This is a sophisticated system and you should feel proud when you have built and debugged it!
 
-
-## What to Turn In
-
-When you are done, have your lab checked off by the instructor. You should thoroughly understand how it works and what would happen if any changes were made. Turn in your lab writeup including the following information:
-
-* Schematics of the breadboarded circuit.
-* A screen capture (exported from the scope, not a photo captured using a camera) of an example SPI transaction captured on the oscilloscope/logic analyzer.
-* Your source code.
-* How many hours did you spend on the lab? This will not count toward your grade.
-
-
 ## Credits
 
 This lab was original developed in 2015 by Ben Chasnov ’16, redesigned for the μMudd Mark 5.1 in 2019 by Caleb Norfleet ’21, and revamped for the μMudd Mark 6 in 2021 by Prof. Josh Brake.
+
+{{< include /resources/github-issue-footer.qmd >}}

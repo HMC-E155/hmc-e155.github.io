@@ -1,0 +1,39 @@
+---
+format:
+  html: default
+---
+
+## Quarto Portfolio Specs
+
+### Overall Site
+
+- [ ] Matches required folder structure
+- [ ] Navbar has links to Home, Labs, and Blog pages.
+- [ ] Simple folder structure with no extraneous pages (e.g., delete the `about.qmd` page that was created by default and will be unused)
+- [ ] `.gitignore` file with appropriate entries to prevent Quarto render files from being committed to version control (e.g., ignore `.quarto/` and `_site`).
+
+### Home Page
+
+- [ ] Contains headshot
+- [ ] Contains short bio
+- [ ] Contains link to other web presence (LinkedIn and Github at minimum)
+
+### Labs Page
+
+- [ ] Is linked in the navbar
+- [ ] Contains a list of the labs for the semester along with titles (e.g., Lab 1: FPGA and MCU Setup and Testing) as `h2` headings (i.e., put a `##` in front of the text in your `.qmd` file)
+
+### Resources Page
+
+- [ ] Is linked in the navbar
+- [ ] Contains link to the course website
+
+### Blog Page
+
+- [ ] Is linked in the navbar
+- [ ] Contains initial learning goals post (autopopulated from file in `posts/` folder)
+
+### Misc
+
+- [ ] Site is published either to Quarto Hub (recommended) or Github Pages
+- [ ] Site is checked into version control and pushed to repository on Github
