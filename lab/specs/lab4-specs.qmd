@@ -1,11 +1,17 @@
 #### Proficiency
 
-- [ ] Assembly program correctly sorts an array of signed bytes.
-- [ ] Brief description of sort algorithm implemented.
-- [ ] SEGGER Embedded Studio debugger used to demonstrate that the test array was sorted properly.
-- [ ] Assembly code includes line-by-line comments
-- [ ] Code is running on MCU connected to SEGGER Embedded Studio for instructor to verify operation with a test case of their choosing.
+- [ ] Design plays *Für Elise* from provided starter code
+- [ ] Note durations match the durations specified in the starter code for *Für Elise* (i.e., the tune plays at the correct tempo)
+- [ ] Individual pitches are accurate to within 1% across the frequency range (of 220-1000 Hz) (calculations should be provided in the report to verify this)
+- [ ] All rests (pauses with no sound) are played properly
+- [ ] Code uses `#define` macros for memory-mapped registers
 
 #### Excellence
 
-- [ ] Report identifies all possible edge cases for sorting **and** presents testing results to verify that the design performs correctly for all the edge cases you've identified. You can demonstrate this by showing screenshots of the intial (`src`) and final (`dst`) arrays in the watch window or memory viewer.
+- [ ] Report contains accurate calculations for **minimum duration** supported
+- [ ] Report contains accurate calculations for **maximum duration** supported
+- [ ] Report contains accurate calculations for **minimum frequency** supported
+- [ ] Report contains accurate calculations for **maximum frequency** supported
+- [ ] Report provides documentation and calculations to show that the durations and pitches are correct based on the timer configuration.
+- [ ] Design contains potentiometer to control the output volume.
+- [ ] Design plays an extra composition of your choice. You need not compose the tune from scratch, it is acceptable to transpose an existing tune.

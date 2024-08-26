@@ -6,6 +6,7 @@ project:
 
 website:
   title: "HMC E155"
+  favicon: /assets/img/microps-logo.png
   navbar:
     tools:
       - icon: github
@@ -43,16 +44,20 @@ website:
         href: resources/
       - text: Tutorials
         menu:
-        - text: Video Tutorials
-          href: tutorials/video-tutorials/
+        - text: Tutorial Videos
+          href: tutorials/tutorials-videos/
+        - text: Git Setup
+          href: tutorials/git-setup/
+        - text: Quarto Portfolio Setup
+          href: tutorials/quarto-portfolio-setup/
         - text: Lattice Radiant Installation
-          href: tutorials/lattice_radiant_installation/
+          href: tutorials/lattice-radiant-installation/
         - text: ice40 Project Setup
-          href: tutorials/lattice_radiant_ice40_ultraplus_project_setup/
-        - text: ModelSim Tutorial
-          href: tutorials/modelsim_simulation_tutorial/
+          href: tutorials/lattice-radiant-ice40-ultraplus-project-setup/
+        - text: QuestaSim/ModelSim Tutorial
+          href: tutorials/modelsim-simulation-tutorial/
         - text: SEGGER Embedded Studio Tutorial
-          href: tutorials/segger_embedded_studio_setup
+          href: tutorials/segger-embedded-studio-setup
 
 format:
   html:

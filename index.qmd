@@ -1,5 +1,5 @@
 ---
-title: "E155 FA23"
+title: "E155"
 ---
 
 ![](assets/img/microps-logo.png){fig-align='center' width=25%}
