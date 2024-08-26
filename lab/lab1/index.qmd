@@ -6,6 +6,15 @@ format:
       - text: "Specifications"
         href: ./specs.html
         icon: file-earmark-check
+      - text: "AI Prototype"
+        href: ./ai-prototype.html
+        icon: robot
+      - text: "iCE40 UltraPlus Family Data Sheet"
+        href: ./
+      - text: "Lattice Radiant Tutorial"
+        href: ./
+      - text: "Interactive Dev Board BOM"
+        href: ./
     code-links:
       - text: "Starter Code"
         href: https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab01
@@ -20,30 +29,15 @@ In this lab you will familiarize yourself with the microcontroller unit (MCU) an
 
 By the end of this lab you will have...
 
-* Assembled your development board for the class and tested out your MCU and FPGA boards.
-* Written a Verilog module to control LEDs and a 7-segment display.
-* Programmed the FPGA with Verilog code.
-* Gained confidence in building, assembling, testing, and debugging circuits.
-* Interfaced a 7-segment display to the board.
+- Assembled your development board for the class and tested out your MCU and FPGA boards.
+- Written a Verilog module to control LEDs and a 7-segment display.
+- Programmed the FPGA with Verilog code.
+- Gained confidence in building, assembling, testing, and debugging circuits.
+- Interfaced a 7-segment display to the board.
 
 ## Requirements
 
 Follow the steps in this guide to test your FPGA and MCU boards. Write some Verilog code to exercise the FPGA using the switches, LEDs, and a 7-segment display to ensure your board is operational. Simulate and synthesize your code, then upload it to the flash memory and re-test the board. Hook up a 7-segment display and demonstrate that it works.
-
-
-## Resources
-
-### Lab-specific Specifications
-
-<details>
-{{< include ../specs/lab1-specs.qmd >}} 
-</details>
-
-### General Specifications
-
-<details>
-{{< include  ../specs/general-lab-specs.qmd >}} 
-</details>
 
 ## Before You Start
 
@@ -57,7 +51,6 @@ In the 1980’s and 1990’s, digital design projects were built from a truckloa
 ## Nucleo-L432KC Development Board
 
 The Nucleo-L432KC development board provides a convenient platform to test and develop embedded systems applications. The board is focused around an STM32L432KC MCU and provides voltage regulators to provide power to the chip, various breakout headers which allow access to the pins of the microcontroller chip, a reset button and user input button, configuration jumpers, and an embedded ST-LINK programmer/debugger.
-
 
 ### Programming
 
@@ -222,9 +215,10 @@ To power through VIN, apply a voltage to the power screw terminal between VIN an
 
 It is also possible to power the board via a USB connection to either the MCU or FPGA board. Each board has an onboard voltage regulator to create a stabilized +5 V output on the boards respective +5 V pins. Assuming J3 and J4 are shorted, this +5 V output from whichever board is connected to USB power is fed back to the +5 V line (which is also the output of the +5 V regulator) and thus powers the other components connected to that net.
 
-::: {.hint-box}
-**Testing Voltage Regulators**:
+::: {.callout-tip title="Testing Voltage Regulators"}
+
 Before connecting your MCU and FPGA boards, check the voltage regulators are on correctly by connecting to a lab DC power supply using the screw terminals and using a multimeter to confirm that the +3.3 V rail is +3.3 V and the +5 V rail is +5 V. If you read +5 V on the +3.3 V or vice versa, you have installed the regulators in the wrong place and need to swap them. If you read a low voltage (less than ~0.1 V), you likely have a bad solder joint on the back pad of the respective regulator and need to reflow the solder joint to make a better connection.
+
 :::
 
 
@@ -235,12 +229,12 @@ To test the boards, you will upload a simple design to the FPGA which toggles an
 To familiarize yourself with how to program the FPGA using Lattice Radiant, see the [Lattice Radiant iCE40 UltraPlus Project Setup](/tutorials/lattice-radiant-installation/) tutorial. 
 This tutorial has information about how to create a project in Radiant and how to synthesize and upload designs to your FPGA board. 
 
-After working through the tutorial, download the Radiant project file `fpga_dev_board_test.zip` under the Lab 1 subfolder from [the course GitHub]({{< var github-url >}}) (the link on the course website lab page) and use it to program your FPGA. This design toggles pin P25 at about 1 Hz. 
+After working through the tutorial, download the Radiant project file `fpga_dev_board_test.zip` under the Lab 1 subfolder from [the course GitHub]({{< var github-url >}}) and use it to program your FPGA. This design toggles pin P25 at about 1 Hz. 
 If you have the switch properly set on SW7, P25 is connected to PA9 and so you will see LED D3 blinking.
 
-After programming your FPGA, the next step is to upload the code to the MCU that will read the value of the toggled LED from the FPGA and echo it back on another pin. See the tutorial titled “Segger Embedded Studio Setup” to familiarize yourself with the process of installing and setting up SEGGER Embedded Studio (SES) for ARM. If you are using a lab computer, SES is already installed. Make sure that you use the ARM version of the program. The lab computers may also have other versions installed.
+After programming your FPGA, the next step is to upload the code to the MCU that will read the value of the toggled LED from the FPGA and echo it back on another pin. See the tutorial titled “Segger Embedded Studio Setup” to familiarize yourself with the process of installing and setting up SEGGER Embedded Studio (SES). If you are using a lab computer, SES is already installed. The lab computers may also have other versions installed.
 
-After working through the tutorial, download the SES solution folder from the course GitHub titled “mcu_dev_board_test.zip”. Then, double click on the .emProject file or use the File → Open Solution option in SES to open the solution. This project contains a simple program that monitors the status of PA9 (which is connected to P25 through the appropriate jumper on J5. Make sure you have the jumper attached to connect PA9 to P25). Build and download the project to your MCU.
+After working through the tutorial, download the SES solution folder from the course GitHub titled `mcu_dev_board_test.zip`. Then, double click on the `.emProject` file or use the `File → Open Solution` option in SES to open the solution. This project contains a simple program that monitors the status of PA9 (which is connected to P25 through the appropriate jumper on J5. Make sure you have the jumper attached to connect PA9 to P25). Build and download the project to your MCU.
 
 Now, in addition to LED D3 (PA9/P25) blinking, you should see LED D2 (PA10/P23) and LED D7 (P38) blinking as well.
 
@@ -282,8 +276,7 @@ The following tables define the relationship of the LEDs to the switches and clo
 | Blink at 2.4 Hz|
 :::
 
-::: {.hint-box}
-**Clock Generation**
+::: {.callout-tip title="Clock Generation"}
 To generate the clock for your design, use the onboard high-speed oscillator.
 This is the same strategy as in the FPGA testing source code you downloaded earlier to test the board.
 If you look at that Verilog code, you'll notice an instantiated module called HSOSC (for High-Speed OSCillator).
@@ -313,7 +306,7 @@ Seven-segment display pin map
 
 Launch Lattice Radiant and start the New Project Wizard from the File or startup menu. Setup a new project for the UP5K chip following the instructions in the Lattice Radiant Tutorial on the E155 website.
 
-Choose File → New and create a SystemVerilog HDL file.
+Choose `File → New` and create a SystemVerilog HDL file.
 Save the file as `lab1_xx.sv` in your project directory and check the box to add the file to the current project. Create modules to perform the functions described above. The 7-segment display decoder should be combinational logic. 
 Use a reasonable amount of hierarchy. Name the top-level module `lab1_xx`.
 The 7-segment display code, for example, will be reused in future labs, so it should be a module of its own (for the sake of reusability you may want to put this in a separate SystemVerilog file but this is not required). 
@@ -324,16 +317,16 @@ Every module should begin with a comment section that includes your name and ema
 
 The next step is to simulate your logic with ModelSim. Open ModelSim from Radiant from the Tools menu or the icon in the toolbar. The ModelSim window will open. Get in the habit of watching the transcript window to look for errors and to familiarize yourself with what a good run looks like. If you see errors, close ModelSim, correct your Verilog code in Radiant, and reopen ModelSim. You can also edit the file directly in ModelSim and recompile there without going through the entire synthesis pipeline in Radiant.
 
-::: {.hint-box}
-
-**Note: **
+::: {.callout-note}
 Some of your designs may include modules from the iCE40 Technology Library (e.g., the HSOSC module we are using to generate our clock signal).
 If you try to simulate a design including one of these modules, you need to be sure to include the library.
 When you simulate a design that includes a module from the iCE40 Technology Library, make sure that you include the library by adding under the Libraries tab of the Start Simulation window as shown below.
+You can also use the `-L` flag in the command line to `vsim`.
 :::
 
 #### Starting Simulation
-In ModelSim, simulate your module by choosing `Simulate → Start Simulation...`. Click on the + symbol next to the work library and select your code (`lab1_xx`).
+
+In QuestaSim/ModelSim, simulate your module by choosing `Simulate → Start Simulation...`. Click on the + symbol next to the work library and select your code (`lab1_xx`).
 
 If the wave pane isn’t open, open it by choosing View → Wave. View all of the inputs and outputs of your design by selecting them in the Objects window and dragging them to the Waves window. In a more complicated design, you may wish to examine internal signals as well.
 
@@ -350,8 +343,11 @@ run 100
 ...
 ```
 
+::: {.callout-tip title="Watch Out for Optimization"}
+If you're not seeing all the signals in your design, it's possible that QuestaSim optimized them away. To configure the optimization settings, see the relevant section in the [QuestaSim/ModelSim tutorial](/tutorials/modelsim-simulation-tutorial/#preventing-optimization).
+:::
 
-You should see the led and seg outputs displaying appropriate values. Check the outputs against your expectations. If you find any discrepancies, fix the code and resimulate. A helpful shortcut to avoid restarting ModelSim is that you can edit the module by finding it under “work” in the library pane, right clicking, and choosing Edit. Make your fixes, then right click again and choose “Recompile.” Then type “restart -f” in the transcript window to restart simulation without having to set up the waveforms window again. When you return to Radiant, you’ll find your corrected code.
+You should see the `led` and `seg` outputs displaying appropriate values. Check the outputs against your expectations. If you find any discrepancies, fix the code and resimulate. A helpful shortcut to avoid restarting ModelSim is that you can edit the module by finding it under “work” in the library pane, right clicking, and choosing Edit. Make your fixes, then right click again and choose `Recompile`. Then type `restart -f` in the transcript window to restart simulation without having to set up the waveforms window again. When you return to Radiant, you’ll find your corrected code.
 
 
 ### Pin Assignment
@@ -370,7 +366,7 @@ The FPGA pinouts are shown in the Board Schematic. Most of the user input/output
 
 The pin numbers for the LEDs and switches are marked on the board’s silkscreen. For the outputs for the 7-segment display, you may select any I/O pins you’d like. Do make sure that these pins are not being used for other purposes.
 
-The Device Constraint Editor is also the place where you can configure the pullup resistors for the I/O pins. To do this, examine the PULLMODE column for any input pins. In your design, this will be the pins connected to s[3:0]. These should be configured with pull-up resistors to avoid invalid logic levels (the exact value is not very important. A value between 10k and 100k is generally sufficient).
+The Device Constraint Editor is also the place where you can configure the pullup resistors for the I/O pins. To do this, examine the `PULLMODE` column for any input pins. In your design, this will be the pins connected to `s[3:0]`. These should be configured with pull-up resistors to avoid invalid logic levels (the exact value is not very important. A value between 10k and 100k is generally sufficient).
 
 
 ### Seven Segment Display Circuit
@@ -386,26 +382,21 @@ Be sure to turn power off before wiring circuits on your board. You can choose e
 
 ### Generating the FPGA Configuration Files
 
-Now you will synthesize your HDL into a programming file to be transferred onto the FPGA. This outputs a binary file (.bin) in your project directory that can be used to program the FPGA directly over JTAG using the onboard USB programmer. Be sure your SystemVerilog files are saved, and click the green “Play” triangle to start the synthesis process. To help sort the many messages that the compilation process generates, click a tab under the Message area to see only that type of message. If compilation is successful but generates warnings, check the Warning and Error tabs for errors relevant to your design. Warnings about incomplete I/O assignments may be ignored if you have in fact assigned all relevant I/O pins.
+Now you will synthesize your HDL into a programming file to be transferred onto the FPGA. This outputs a binary file (`.bin`) in your project directory that can be used to program the FPGA directly over JTAG using the onboard USB programmer. Be sure your SystemVerilog files are saved, and click the green “Play” triangle to start the synthesis process. To help sort the many messages that the compilation process generates, click a tab under the Message area to see only that type of message. If compilation is successful but generates warnings, check the Warning and Error tabs for errors relevant to your design. Warnings about incomplete I/O assignments may be ignored if you have in fact assigned all relevant I/O pins.
 
-Launch Tools → Netlist Analyzer and examine the RTL schematic of your design. This shows the logic synthesized from your Verilog design. Ensure the hardware matches your expectations.
+`Launch Tools → Netlist Analyzer` and examine the RTL schematic of your design. This shows the logic synthesized from your Verilog design. Ensure the hardware matches your expectations.
 
 Look at the Reports tab. In the Project Summary under Resource Usage you should see a total number of registers and pins that match your expectations. Under Analysis & Synthesis, you can see how the logic blocks and registers are broken down in each module. Under Fitter, the Pin-Out File should match the pin assignments you intended.
 
-## FAQ and Hints
+::: {.callout-tip title="Troubleshooting Tips"}
 
 If some of you are seeing issues with specific pins on your FPGA there could be a few different reasons and corresponding steps to take to troubleshoot.
 
-* You could have an electrical short which is causing some pins to be electrically connected that should not due to solder bridges. Double check to make sure that the pins are isolated and not connected together by checking the resistance between the pins with a multimeter.
-* You are trying to use a pin that is shared between the FPGA and the MCU and the MCU is not leaving that pin floating or it is driving it as an output. You can get around this by wiping the code on the MCU by uploading a file with a blank main function.
-* You should also read through the Nucleo board documentation to see what pins have special functions that are used by default by the MCU. Hint: You likely want to stay away from using the pins that the MCU uses for serial communication by default.
+- You could have an electrical short which is causing some pins to be electrically connected that should not due to solder bridges. Double check to make sure that the pins are isolated and not connected together by checking the resistance between the pins with a multimeter.
+- You are trying to use a pin that is shared between the FPGA and the MCU and the MCU is not leaving that pin floating or it is driving it as an output. You can get around this by wiping the code on the MCU by uploading a file with a blank main function.
+- You should also read through the Nucleo board documentation to see what pins have special functions that are used by default by the MCU. Hint: You likely want to stay away from using the pins that the MCU uses for serial communication by default.
 
-
-## Always Very Curious…
-
-If you finish the lab and are interested in exploring some additional functionality of your FPGA, consider trying to write HDL to control the RGB LEDs on board the UPduino. Note that this is **NOT** a required part of the lab and not for credit. It is purely an exercise if you have interest!
-
-The UP5K has built in hardware for pulse-width modulation of the LED. To find details on how to use this IP, use the “Lattice Radiant Software Help” guide that is accessible from the Help menu in Radiant. In the window that opens, navigate to the section “Reference Guides > FPGA Libraries Reference Guide > Miscellaneous.” You can also find information about this and other hardware primitives available on the FPGA in the “iCE40 Technology Library” PDF available on the course website. However, note that (annoyingly!) the naming for the modules in this document is for the iCEcube2 software and _the syntax has changed_ for Radiant. You can see the note “Migrating iCEcube2 iCE40 UltraPlus Designs to Lattice Radiant 2.0 Software” for more details.
+:::
 
 [^1]:
      In order for the NUCLEO board to be compatible with SEGGER, it is necessary to reflash the ST-LINK programmer with SEGGER J-Link firmware to convert it to a J-Link. This has been already taken care of on the board in your kit, but if you want to use another STM32 board with SEGGER you’ll need to follow the instructions [here](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/) to do this yourself.
