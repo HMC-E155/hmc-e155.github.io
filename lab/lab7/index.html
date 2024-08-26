@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.53">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../..//assets/img/microps-logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -155,23 +156,31 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
         <li>
-    <a class="dropdown-item" href="../../tutorials/video-tutorials/">
- <span class="dropdown-text">Video Tutorials</span></a>
+    <a class="dropdown-item" href="../../tutorials/tutorials-videos/">
+ <span class="dropdown-text">Tutorial Videos</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/lattice_radiant_installation/">
+    <a class="dropdown-item" href="../../tutorials/git-setup/">
+ <span class="dropdown-text">Git Setup</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tutorials/quarto-portfolio-setup/">
+ <span class="dropdown-text">Quarto Portfolio Setup</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tutorials/lattice-radiant-installation/">
  <span class="dropdown-text">Lattice Radiant Installation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/lattice_radiant_ice40_ultraplus_project_setup/">
+    <a class="dropdown-item" href="../../tutorials/lattice-radiant-ice40-ultraplus-project-setup/">
  <span class="dropdown-text">ice40 Project Setup</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/modelsim_simulation_tutorial/">
- <span class="dropdown-text">ModelSim Tutorial</span></a>
+    <a class="dropdown-item" href="../../tutorials/modelsim-simulation-tutorial/">
+ <span class="dropdown-text">QuestaSim/ModelSim Tutorial</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/segger_embedded_studio_setup">
+    <a class="dropdown-item" href="../../tutorials/segger-embedded-studio-setup">
  <span class="dropdown-text">SEGGER Embedded Studio Tutorial</span></a>
   </li>  
     </ul>
@@ -195,12 +204,6 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link active" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
-  <li><a href="#lab-7-specifications" id="toc-lab-7-specifications" class="nav-link" data-scroll-target="#lab-7-specifications">Lab 7 Specifications</a>
-  <ul class="collapse">
-  <li><a href="#lab-specific-specifications" id="toc-lab-specific-specifications" class="nav-link" data-scroll-target="#lab-specific-specifications">Lab-specific Specifications</a></li>
-  <li><a href="#general-specifications" id="toc-general-specifications" class="nav-link" data-scroll-target="#general-specifications">General Specifications</a></li>
-  </ul></li>
   <li><a href="#the-advanced-encryption-standard" id="toc-the-advanced-encryption-standard" class="nav-link" data-scroll-target="#the-advanced-encryption-standard">The Advanced Encryption Standard</a>
   <ul class="collapse">
   <li><a href="#implementation" id="toc-implementation" class="nav-link" data-scroll-target="#implementation">Implementation</a></li>
@@ -210,10 +213,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#start-by-thoroughly-understanding-the-specification" id="toc-start-by-thoroughly-understanding-the-specification" class="nav-link" data-scroll-target="#start-by-thoroughly-understanding-the-specification">Start by thoroughly understanding the specification</a></li>
   <li><a href="#watch-for-warnings-in-synthesis-and-simulation-and-correct-these-before-moving-ahead." id="toc-watch-for-warnings-in-synthesis-and-simulation-and-correct-these-before-moving-ahead." class="nav-link" data-scroll-target="#watch-for-warnings-in-synthesis-and-simulation-and-correct-these-before-moving-ahead.">Watch for warnings in synthesis and simulation, and correct these before moving ahead.</a></li>
   </ul></li>
-  <li><a href="#what-to-turn-in" id="toc-what-to-turn-in" class="nav-link" data-scroll-target="#what-to-turn-in">What to Turn In</a></li>
   <li><a href="#credits" id="toc-credits" class="nav-link" data-scroll-target="#credits">Credits</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="./specs.html"><i class="bi bi-file-earmark-check"></i>Specifications</a></li><li><a href="/assets/doc/NIST.FIPS.197-upd1.pdf"><i class="bi bi-file-earmark-pdf"></i>AES Standard: NIST FIPS 197</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://github.com/HMC-E155/hmc-e155//tree/main/lab/lab07"><i class="bi bi-github"></i>Starter Code</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -252,113 +254,9 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
 <p>Construct a hardware accelerator to perform 128-bit AES encryption. Send a plaintext message and key from a micro- processor to the accelerator and verify that the cyphertext received back is correct. Display the SPI communication on the logic analyzer.</p>
 </section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<ul>
-<li><a href="../../assets/doc/NIST.FIPS.197-upd1.pdf">AES Standard: NIST FIPS 197</a></li>
-<li><a href="https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab07">Starter Code from GitHub Repo</a></li>
-</ul>
-</section>
-<section id="lab-7-specifications" class="level2">
-<h2 class="anchored" data-anchor-id="lab-7-specifications">Lab 7 Specifications</h2>
-<section id="lab-specific-specifications" class="level3">
-<h3 class="anchored" data-anchor-id="lab-specific-specifications">Lab-specific Specifications</h3>
-<details>
-<section id="proficiency" class="level4">
-<h4 class="anchored" data-anchor-id="proficiency">Proficiency</h4>
-<ul class="task-list">
-<li><label><input type="checkbox">AES core simulation testbench passes</label></li>
-<li><label><input type="checkbox">AES SPI simulation testbench passes</label></li>
-</ul>
-</section>
-<section id="excellence" class="level4">
-<h4 class="anchored" data-anchor-id="excellence">Excellence</h4>
-<ul class="task-list">
-<li><label><input type="checkbox">Design fits on FPGA hardware</label></li>
-<li><label><input type="checkbox">SPI communication is displayed on logic analyzer</label></li>
-<li><label><input type="checkbox">System fully operational (sends data from MCU to FPGA and FPGA sends the correct data back again).</label></li>
-</ul>
-</section></details>
-<div style="page-break-after: always;"></div>
-</section>
-</section>
-<section id="general-specifications" class="level3">
-<h3 class="anchored" data-anchor-id="general-specifications">General Specifications</h3>
-<details>
-<section id="proficiency-1" class="level4">
-<h4 class="anchored" data-anchor-id="proficiency-1">Proficiency</h4>
-<section id="general-schematic-specifications" class="level5">
-<h5 class="anchored" data-anchor-id="general-schematic-specifications">General Schematic Specifications</h5>
-<ul class="task-list">
-<li><label><input type="checkbox">All pin names labeled</label></li>
-<li><label><input type="checkbox">All pin numbers labeled</label></li>
-<li><label><input type="checkbox">Crossing wires clearly identified as junction or unconnected</label></li>
-<li><label><input type="checkbox">Neat layout (e.g., clear organization and spacing)</label></li>
-<li><label><input type="checkbox">All parts labeled with part number</label></li>
-<li><label><input type="checkbox">All component values present</label></li>
-</ul>
-<p><strong>Block Diagram</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Block diagram present with one block per SystemVerilog module</label></li>
-<li><label><input type="checkbox">Each block includes all input and output signals</label></li>
-</ul>
-<p><strong>HDL &amp; Code Specifications</strong></p>
-<p><em>General Formatting</em></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Descriptive filename (e.g., <code>lab2_jb.sv</code>)</label></li>
-<li><label><input type="checkbox">Descriptive variable names</label></li>
-<li><label><input type="checkbox">Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase ))</label></li>
-<li><label><input type="checkbox">Descriptive and clear function/module names</label></li>
-</ul>
-<p><em>Comments</em></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Comments to indicate the purpose of each function/module</label></li>
-</ul>
-<p><strong>Lab Writeup/Summary</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Brief (e.g., 3-5 sentence) description of the main goals of the assignment and what was done.</label></li>
-<li><label><input type="checkbox">Explanation of design approach. How did you go about designing and implementing the design?</label></li>
-<li><label><input type="checkbox">Explanation of testing approach. How did you verify your design was behaving as expected?</label></li>
-<li><label><input type="checkbox">Statement of whether the design meets all the requirements. If not, list the shortcomings.</label></li>
-<li><label><input type="checkbox">Number of hours spent working on the lab are included.</label></li>
-<li><label><input type="checkbox">Writeup contains minimal spelling or grammar issues and any errors do not significantly detract from clarity of the writeup.</label></li>
-<li><label><input type="checkbox">(Optional) List commments or suggestions on what was particularly good about the assignment or what you think needs to change in future versions.</label></li>
-</ul>
-</section>
-</section>
-<section id="excellence-1" class="level4">
-<h4 class="anchored" data-anchor-id="excellence-1">Excellence</h4>
-<p><strong>General Schematic Specifications </strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Standard symbols used for all components where applicable</label></li>
-<li><label><input type="checkbox">Signals “flow” from left to right where possible (e.g., inputs on left hand side, outputs on right hand side)</label></li>
-<li><label><input type="checkbox">Title block with author name, title, and date</label></li>
-</ul>
-<p><strong>HDL &amp; Code Specifications</strong></p>
-<p><em>General Formatting</em></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Name, email, and date at the top of every file</label></li>
-<li><label><input type="checkbox">Comment at the top of each source code file to describe what is in it</label></li>
-<li><label><input type="checkbox">Clear and organized hierarchy (e.g., deliniation between top level modules and submodules)</label></li>
-</ul>
-<p><em>Testbenches</em></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Testbenches written for each individual module to demonstrate proper operation</label></li>
-<li><label><input type="checkbox">Testbench output included in the report</label></li>
-</ul>
-<p><strong>Lab Writeup/Summary</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Writeup is free of spelling and grammar issues</label></li>
-</ul>
-</section></details>
-<p><a href="../../lab/lab7/specs.html" target="blank">Open specifications in new tab.</a></p>
-</section>
-
-
 <section id="the-advanced-encryption-standard" class="level2">
 <h2 class="anchored" data-anchor-id="the-advanced-encryption-standard">The Advanced Encryption Standard</h2>
 <p>The Advanced Encryption Standard is described in an unusually succinct and clear standard. Reading the standard carefully will save you time. See Appendix A-1 for an example of the key expansion during each round and Appendix B for an example of the intermediate results during each round.</p>
-<p>A PDF of the standard can be found <a href="../../assets/doc/NIST.FIPS.197-upd1.pdf">here</a>.</p>
 <section id="implementation" class="level3">
 <h3 class="anchored" data-anchor-id="implementation">Implementation</h3>
 <p>Download the starter source code and libraries from the course website. The provided MCU libraries (included in the lib subdirectory of the project) support a number of peripherals on the MCU so that you can directly use them and do not need to write them yourself.</p>
@@ -383,19 +281,22 @@ ul.task-list li input[type="checkbox"] {
 <p>Have fun! This is a sophisticated system and you should feel proud when you have built and debugged it!</p>
 </section>
 </section>
-<section id="what-to-turn-in" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-turn-in">What to Turn In</h2>
-<p>When you are done, have your lab checked off by the instructor. You should thoroughly understand how it works and what would happen if any changes were made. Turn in your lab writeup including the following information:</p>
-<ul>
-<li>Schematics of the breadboarded circuit.</li>
-<li>A screen capture (exported from the scope, not a photo captured using a camera) of an example SPI transaction captured on the oscilloscope/logic analyzer.</li>
-<li>Your source code.</li>
-<li>How many hours did you spend on the lab? This will not count toward your grade.</li>
-</ul>
-</section>
 <section id="credits" class="level2">
 <h2 class="anchored" data-anchor-id="credits">Credits</h2>
 <p>This lab was original developed in 2015 by Ben Chasnov ’16, redesigned for the μMudd Mark 5.1 in 2019 by Caleb Norfleet ’21, and revamped for the μMudd Mark 6 in 2021 by Prof.&nbsp;Josh Brake.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Suggest Feedback!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Suggest Feedback!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you caught any typos or have any suggestions for this page, please open an issue on the <a href="https://github.com/HMC-E155/hmc-e155.github.io/">website Github repository</a>. Click the link <a href="../../resources/how-to-create-a-github-issue.html">here</a> for instructions on how to create an issue.</p>
+</div>
+</div>
 
 
 </section>

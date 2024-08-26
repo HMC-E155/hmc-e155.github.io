@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.53">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../..//assets/img/microps-logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -66,35 +67,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -184,23 +156,31 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
         <li>
-    <a class="dropdown-item" href="../../tutorials/video-tutorials/">
- <span class="dropdown-text">Video Tutorials</span></a>
+    <a class="dropdown-item" href="../../tutorials/tutorials-videos/">
+ <span class="dropdown-text">Tutorial Videos</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/lattice_radiant_installation/">
+    <a class="dropdown-item" href="../../tutorials/git-setup/">
+ <span class="dropdown-text">Git Setup</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tutorials/quarto-portfolio-setup/">
+ <span class="dropdown-text">Quarto Portfolio Setup</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tutorials/lattice-radiant-installation/">
  <span class="dropdown-text">Lattice Radiant Installation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/lattice_radiant_ice40_ultraplus_project_setup/">
+    <a class="dropdown-item" href="../../tutorials/lattice-radiant-ice40-ultraplus-project-setup/">
  <span class="dropdown-text">ice40 Project Setup</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/modelsim_simulation_tutorial/">
- <span class="dropdown-text">ModelSim Tutorial</span></a>
+    <a class="dropdown-item" href="../../tutorials/modelsim-simulation-tutorial/">
+ <span class="dropdown-text">QuestaSim/ModelSim Tutorial</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/segger_embedded_studio_setup">
+    <a class="dropdown-item" href="../../tutorials/segger-embedded-studio-setup">
  <span class="dropdown-text">SEGGER Embedded Studio Tutorial</span></a>
   </li>  
     </ul>
@@ -225,16 +205,10 @@ window.Quarto = {
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
-  <li><a href="#lab-3-specifications" id="toc-lab-3-specifications" class="nav-link" data-scroll-target="#lab-3-specifications">Lab 3 Specifications</a>
-  <ul class="collapse">
-  <li><a href="#lab-specific-specifications" id="toc-lab-specific-specifications" class="nav-link" data-scroll-target="#lab-specific-specifications">Lab-specific Specifications</a></li>
-  <li><a href="#general-specifications" id="toc-general-specifications" class="nav-link" data-scroll-target="#general-specifications">General Specifications</a></li>
-  </ul></li>
   <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
-  <li><a href="#what-to-turn-in" id="toc-what-to-turn-in" class="nav-link" data-scroll-target="#what-to-turn-in">What to Turn In</a></li>
   <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="./specs.html"><i class="bi bi-file-earmark-check"></i>Specifications</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -275,113 +249,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
 <p>Design and construct a circuit on your FPGA to read a 4-by-4 matrix keypad. Display the last two hexadecimal digits pressed on your dual seven-segment display, with the most recent entry appearing at the right. The keypad and your display should be in the same orientation.</p>
 <p>Each key press should be recorded exactly once, at the time the key is pressed, no matter how long or short a time the user holds the key down. If additional keys are pressed while still holding down the first key, these inputs should be ignored. The seven-segment displays should not flicker and should be the same brightness regardless of how many segments are displayed.</p>
-<p><a href="../../lab/lab3/specs.html" target="blank">Open specifications in new tab.</a></p>
 </section>
-<section id="lab-3-specifications" class="level2">
-<h2 class="anchored" data-anchor-id="lab-3-specifications">Lab 3 Specifications</h2>
-<section id="lab-specific-specifications" class="level3">
-<h3 class="anchored" data-anchor-id="lab-specific-specifications">Lab-specific Specifications</h3>
-<details>
-<section id="proficiency" class="level4">
-<h4 class="anchored" data-anchor-id="proficiency">Proficiency</h4>
-<ul class="task-list">
-<li><label><input type="checkbox">Circuit correctly reads inputs from <span class="math inline">\(4 \times 4\)</span> keypad.</label></li>
-<li><label><input type="checkbox">Dual seven-segment display shows the last two hexadecimal digits pressed.</label></li>
-<li><label><input type="checkbox">Most recent numeric entry is shown on the right.</label></li>
-<li><label><input type="checkbox">Design does not lock up when multiple buttons are pressed at once. (i.e., it just holds the current values on the display and functions properly again when the buttons are released.)</label></li>
-<li><label><input type="checkbox">Design only registers first button press if additional buttons are pressed down while holding down one button.</label></li>
-<li><label><input type="checkbox">Each button press registered only once (e.g., no switch bouncing)</label></li>
-<li><label><input type="checkbox">Seven segment displays are same brightness regardless of how many segments are illuminated.</label></li>
-<li><label><input type="checkbox">Design has no latches.</label></li>
-<li><label><input type="checkbox">Design has no tristate buffers.</label></li>
-<li><label><input type="checkbox">Report includes state transition diagram illustrating the operation of the system.</label></li>
-</ul>
-</section>
-<section id="excellence" class="level4">
-<h4 class="anchored" data-anchor-id="excellence">Excellence</h4>
-<ul class="task-list">
-<li><label><input type="checkbox">Design uses synchronizers on asynchronous inputs to mitigate metastability.</label></li>
-<li><label><input type="checkbox">Keypad and seven-segment display are aligned in the same orientation (i.e., the top of the numbers on both are facing the same direction).</label></li>
-<li><label><input type="checkbox">State transition diagram is completely specified (i.e., all transitions between states are specified, output conditions specified in each state)</label></li>
-<li><label><input type="checkbox">Report includes state transition table to document the nextstate and output values for each state based on the current state and inputs.</label></li>
-<li><label><input type="checkbox">Report explains tradeoffs between the chosen design decisions and alternatives (e.g., why did you select a certain switch debouncing strategy and what are the tradeoffs between your chosen method and others?).</label></li>
-</ul>
-</section></details>
-<div style="page-break-after: always;"></div>
-</section>
-</section>
-<section id="general-specifications" class="level3">
-<h3 class="anchored" data-anchor-id="general-specifications">General Specifications</h3>
-<details>
-<section id="proficiency-1" class="level4">
-<h4 class="anchored" data-anchor-id="proficiency-1">Proficiency</h4>
-<section id="general-schematic-specifications" class="level5">
-<h5 class="anchored" data-anchor-id="general-schematic-specifications">General Schematic Specifications</h5>
-<ul class="task-list">
-<li><label><input type="checkbox">All pin names labeled</label></li>
-<li><label><input type="checkbox">All pin numbers labeled</label></li>
-<li><label><input type="checkbox">Crossing wires clearly identified as junction or unconnected</label></li>
-<li><label><input type="checkbox">Neat layout (e.g., clear organization and spacing)</label></li>
-<li><label><input type="checkbox">All parts labeled with part number</label></li>
-<li><label><input type="checkbox">All component values present</label></li>
-</ul>
-<p><strong>Block Diagram</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Block diagram present with one block per SystemVerilog module</label></li>
-<li><label><input type="checkbox">Each block includes all input and output signals</label></li>
-</ul>
-<p><strong>HDL &amp; Code Specifications</strong></p>
-<p><em>General Formatting</em></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Descriptive filename (e.g., <code>lab2_jb.sv</code>)</label></li>
-<li><label><input type="checkbox">Descriptive variable names</label></li>
-<li><label><input type="checkbox">Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase ))</label></li>
-<li><label><input type="checkbox">Descriptive and clear function/module names</label></li>
-</ul>
-<p><em>Comments</em></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Comments to indicate the purpose of each function/module</label></li>
-</ul>
-<p><strong>Lab Writeup/Summary</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Brief (e.g., 3-5 sentence) description of the main goals of the assignment and what was done.</label></li>
-<li><label><input type="checkbox">Explanation of design approach. How did you go about designing and implementing the design?</label></li>
-<li><label><input type="checkbox">Explanation of testing approach. How did you verify your design was behaving as expected?</label></li>
-<li><label><input type="checkbox">Statement of whether the design meets all the requirements. If not, list the shortcomings.</label></li>
-<li><label><input type="checkbox">Number of hours spent working on the lab are included.</label></li>
-<li><label><input type="checkbox">Writeup contains minimal spelling or grammar issues and any errors do not significantly detract from clarity of the writeup.</label></li>
-<li><label><input type="checkbox">(Optional) List commments or suggestions on what was particularly good about the assignment or what you think needs to change in future versions.</label></li>
-</ul>
-</section>
-</section>
-<section id="excellence-1" class="level4">
-<h4 class="anchored" data-anchor-id="excellence-1">Excellence</h4>
-<p><strong>General Schematic Specifications </strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Standard symbols used for all components where applicable</label></li>
-<li><label><input type="checkbox">Signals “flow” from left to right where possible (e.g., inputs on left hand side, outputs on right hand side)</label></li>
-<li><label><input type="checkbox">Title block with author name, title, and date</label></li>
-</ul>
-<p><strong>HDL &amp; Code Specifications</strong></p>
-<p><em>General Formatting</em></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Name, email, and date at the top of every file</label></li>
-<li><label><input type="checkbox">Comment at the top of each source code file to describe what is in it</label></li>
-<li><label><input type="checkbox">Clear and organized hierarchy (e.g., deliniation between top level modules and submodules)</label></li>
-</ul>
-<p><em>Testbenches</em></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Testbenches written for each individual module to demonstrate proper operation</label></li>
-<li><label><input type="checkbox">Testbench output included in the report</label></li>
-</ul>
-<p><strong>Lab Writeup/Summary</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Writeup is free of spelling and grammar issues</label></li>
-</ul>
-</section></details>
-</section>
-
-
 <section id="discussion" class="level2">
 <h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
 <p>A matrix keypad has four rows and four columns, connected to 8 pins, as shown below for two different models. When you press a key, the corresponding row and column are connected. Check this with a multimeter to confirm your pinout.</p>
@@ -398,19 +266,22 @@ Figure&nbsp;1: Pinout of keypads.
 <p>Mechanical switches are prone to a phenomenon called switch bounce, where the switch makes and breaks its connection repeatedly on a time scale of microseconds to a few milliseconds. You should design your system in such a way that a single keypress registers only once even if there is some momentary bounce.</p>
 <p>This is a thinking person’s lab. If you thoroughly understand the problem and design a simple scanner circuit, you can complete the lab fairly efficiently. If you go by trial and error, you may find yourself in lab indefinitely. You will need to generate rather complex stimuli to simulate your keypad scanner. Many students have been tempted to skip simulating and debug on the real hardware. Almost all have regretted it. Similarly, some students have been lured down the path of asynchronous design, at their peril.</p>
 </section>
-<section id="what-to-turn-in" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-turn-in">What to Turn In</h2>
-<p>When you are done, have your lab checked off by the instructor. You should thoroughly understand how it works and what would happen if any changes were made. Turn in your lab writeup including the following information:</p>
-<ul>
-<li>Schematics of the breadboarded circuit.</li>
-<li>Your Verilog code and simulation results.</li>
-<li>A complete state transition diagram which illustrates the states of your system and the transitions between states. Remember that the transitions from each state should be completely described – in other words, the transitions should cover all possible combinations of the potential inputs.</li>
-<li>How many hours did you spend on the lab? This will not count toward your grade.</li>
-</ul>
-</section>
 <section id="hints" class="level2">
 <h2 class="anchored" data-anchor-id="hints">Hints</h2>
 <p>Look at your RTL schematic in your synthesis tool (<code>Tools -&gt; Netlist Analyzer</code>). Understand why your code produces the hardware you see. Be sure your combinational logic doesn’t have any registers. Be sure your logic has no latches or tristate buffers. The oscilloscope is handy for tracking down timing problems.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Suggest Feedback!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Suggest Feedback!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you caught any typos or have any suggestions for this page, please open an issue on the <a href="https://github.com/HMC-E155/hmc-e155.github.io/">website Github repository</a>. Click the link <a href="../../resources/how-to-create-a-github-issue.html">here</a> for instructions on how to create an issue.</p>
+</div>
+</div>
 
 
 </section>

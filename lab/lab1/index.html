@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.53">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -30,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
+<link href="../..//assets/img/microps-logo.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -155,23 +156,31 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
         <li>
-    <a class="dropdown-item" href="../../tutorials/video-tutorials/">
- <span class="dropdown-text">Video Tutorials</span></a>
+    <a class="dropdown-item" href="../../tutorials/tutorials-videos/">
+ <span class="dropdown-text">Tutorial Videos</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/lattice_radiant_installation/">
+    <a class="dropdown-item" href="../../tutorials/git-setup/">
+ <span class="dropdown-text">Git Setup</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tutorials/quarto-portfolio-setup/">
+ <span class="dropdown-text">Quarto Portfolio Setup</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../tutorials/lattice-radiant-installation/">
  <span class="dropdown-text">Lattice Radiant Installation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/lattice_radiant_ice40_ultraplus_project_setup/">
+    <a class="dropdown-item" href="../../tutorials/lattice-radiant-ice40-ultraplus-project-setup/">
  <span class="dropdown-text">ice40 Project Setup</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/modelsim_simulation_tutorial/">
- <span class="dropdown-text">ModelSim Tutorial</span></a>
+    <a class="dropdown-item" href="../../tutorials/modelsim-simulation-tutorial/">
+ <span class="dropdown-text">QuestaSim/ModelSim Tutorial</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../tutorials/segger_embedded_studio_setup">
+    <a class="dropdown-item" href="../../tutorials/segger-embedded-studio-setup">
  <span class="dropdown-text">SEGGER Embedded Studio Tutorial</span></a>
   </li>  
     </ul>
@@ -196,12 +205,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
-  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a></li>
-  <li><a href="#lab-1-specifications" id="toc-lab-1-specifications" class="nav-link" data-scroll-target="#lab-1-specifications">Lab 1 Specifications</a>
-  <ul class="collapse">
-  <li><a href="#lab-specific-specifications" id="toc-lab-specific-specifications" class="nav-link" data-scroll-target="#lab-specific-specifications">Lab-specific Specifications</a></li>
-  <li><a href="#general-specifications" id="toc-general-specifications" class="nav-link" data-scroll-target="#general-specifications">General Specifications</a></li>
-  </ul></li>
   <li><a href="#before-you-start" id="toc-before-you-start" class="nav-link" data-scroll-target="#before-you-start">Before You Start</a></li>
   <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
   <li><a href="#nucleo-l432kc-development-board" id="toc-nucleo-l432kc-development-board" class="nav-link" data-scroll-target="#nucleo-l432kc-development-board">Nucleo-L432KC Development Board</a>
@@ -212,7 +215,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#digital-design-synthesis-and-programming" id="toc-digital-design-synthesis-and-programming" class="nav-link" data-scroll-target="#digital-design-synthesis-and-programming">Digital Design Synthesis and Programming</a></li>
   </ul></li>
-  <li><a href="#e155-fa22-development-board" id="toc-e155-fa22-development-board" class="nav-link" data-scroll-target="#e155-fa22-development-board">E155 FA22 Development Board</a></li>
+  <li><a href="#e155-development-board" id="toc-e155-development-board" class="nav-link" data-scroll-target="#e155-development-board">E155 Development Board</a></li>
   <li><a href="#assembling-the-board" id="toc-assembling-the-board" class="nav-link" data-scroll-target="#assembling-the-board">Assembling the Board</a></li>
   <li><a href="#assembly-tips" id="toc-assembly-tips" class="nav-link" data-scroll-target="#assembly-tips">Assembly Tips</a></li>
   <li><a href="#suggested-soldering-order" id="toc-suggested-soldering-order" class="nav-link" data-scroll-target="#suggested-soldering-order">Suggested Soldering Order</a></li>
@@ -229,12 +232,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#pin-assignment" id="toc-pin-assignment" class="nav-link" data-scroll-target="#pin-assignment">Pin Assignment</a></li>
   <li><a href="#seven-segment-display-circuit" id="toc-seven-segment-display-circuit" class="nav-link" data-scroll-target="#seven-segment-display-circuit">Seven Segment Display Circuit</a></li>
   <li><a href="#generating-the-fpga-configuration-files" id="toc-generating-the-fpga-configuration-files" class="nav-link" data-scroll-target="#generating-the-fpga-configuration-files">Generating the FPGA Configuration Files</a></li>
-  <li><a href="#what-to-turn-in" id="toc-what-to-turn-in" class="nav-link" data-scroll-target="#what-to-turn-in">What to Turn In</a></li>
-  <li><a href="#faq-and-hints" id="toc-faq-and-hints" class="nav-link" data-scroll-target="#faq-and-hints">FAQ and Hints</a></li>
-  <li><a href="#always-very-curious" id="toc-always-very-curious" class="nav-link" data-scroll-target="#always-very-curious">Always Very Curious…</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="./specs.html"><i class="bi bi-file-earmark-check"></i>Specifications</a></li><li><a href="./ai-prototype.html"><i class="bi bi-robot"></i>AI Prototype</a></li><li><a href="./"><i class="bi bi-link-45deg"></i>iCE40 UltraPlus Family Data Sheet</a></li><li><a href="./"><i class="bi bi-link-45deg"></i>Lattice Radiant Tutorial</a></li><li><a href="./"><i class="bi bi-link-45deg"></i>Interactive Dev Board BOM</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab01"><i class="bi bi-github"></i>Starter Code</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -277,113 +277,6 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
 <p>Follow the steps in this guide to test your FPGA and MCU boards. Write some Verilog code to exercise the FPGA using the switches, LEDs, and a 7-segment display to ensure your board is operational. Simulate and synthesize your code, then upload it to the flash memory and re-test the board. Hook up a 7-segment display and demonstrate that it works.</p>
 </section>
-<section id="resources" class="level2">
-<h2 class="anchored" data-anchor-id="resources">Resources</h2>
-<ul>
-<li><a href="https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab01">Starter Code from GitHub Repo</a></li>
-</ul>
-</section>
-<section id="lab-1-specifications" class="level2">
-<h2 class="anchored" data-anchor-id="lab-1-specifications">Lab 1 Specifications</h2>
-<section id="lab-specific-specifications" class="level3">
-<h3 class="anchored" data-anchor-id="lab-specific-specifications">Lab-specific Specifications</h3>
-<details>
-<section id="proficiency" class="level4">
-<h4 class="anchored" data-anchor-id="proficiency">Proficiency</h4>
-<ul class="task-list">
-<li><label><input type="checkbox">Development board is fully assembled (e.g., all parts soldered)</label></li>
-<li><label><input type="checkbox">Verilog module to control LEDs and a 7-segment display written</label></li>
-<li><label><input type="checkbox">FPGA programmed with Verilog code.</label></li>
-<li><label><input type="checkbox">7-segment display can display all sixteen hexadecimal digits from <code>0x0</code> through <code>0xF</code></label></li>
-<li><label><input type="checkbox">All digits are unique (e.g., <code>0x6</code> and <code>0xb</code> are different shapes)</label></li>
-<li><label><input type="checkbox">DIP switches to control the display are arranged so that each adjacent switch controls the next bit. (e.g., the switch for bit 0 is next to the switch for bit 1, which is next to the switch for bit 2, etc.)</label></li>
-<li><label><input type="checkbox">LEDs display the specified logic operations properly.</label></li>
-</ul>
-</section>
-<section id="excellence" class="level4">
-<h4 class="anchored" data-anchor-id="excellence">Excellence</h4>
-<ul class="task-list">
-<li><label><input type="checkbox">Calculations provided to demonstrate that the current draw for each segment in the seven-segment display is within recommended operating conditions.</label></li>
-<li><label><input type="checkbox">ModelSim simulation (either manually force or automatic testbench) to demonstrate that the design is working properly.</label></li>
-<li><label><input type="checkbox">All digits are equally bright, regardless of the number of segments illuminated.</label></li>
-</ul>
-</section></details>
-<div style="page-break-after: always;"></div>
-</section>
-</section>
-<section id="general-specifications" class="level3">
-<h3 class="anchored" data-anchor-id="general-specifications">General Specifications</h3>
-<details>
-<section id="proficiency-1" class="level4">
-<h4 class="anchored" data-anchor-id="proficiency-1">Proficiency</h4>
-<section id="general-schematic-specifications" class="level5">
-<h5 class="anchored" data-anchor-id="general-schematic-specifications">General Schematic Specifications</h5>
-<ul class="task-list">
-<li><label><input type="checkbox">All pin names labeled</label></li>
-<li><label><input type="checkbox">All pin numbers labeled</label></li>
-<li><label><input type="checkbox">Crossing wires clearly identified as junction or unconnected</label></li>
-<li><label><input type="checkbox">Neat layout (e.g., clear organization and spacing)</label></li>
-<li><label><input type="checkbox">All parts labeled with part number</label></li>
-<li><label><input type="checkbox">All component values present</label></li>
-</ul>
-<p><strong>Block Diagram</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Block diagram present with one block per SystemVerilog module</label></li>
-<li><label><input type="checkbox">Each block includes all input and output signals</label></li>
-</ul>
-<p><strong>HDL &amp; Code Specifications</strong></p>
-<p><em>General Formatting</em></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Descriptive filename (e.g., <code>lab2_jb.sv</code>)</label></li>
-<li><label><input type="checkbox">Descriptive variable names</label></li>
-<li><label><input type="checkbox">Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase ))</label></li>
-<li><label><input type="checkbox">Descriptive and clear function/module names</label></li>
-</ul>
-<p><em>Comments</em></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Comments to indicate the purpose of each function/module</label></li>
-</ul>
-<p><strong>Lab Writeup/Summary</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Brief (e.g., 3-5 sentence) description of the main goals of the assignment and what was done.</label></li>
-<li><label><input type="checkbox">Explanation of design approach. How did you go about designing and implementing the design?</label></li>
-<li><label><input type="checkbox">Explanation of testing approach. How did you verify your design was behaving as expected?</label></li>
-<li><label><input type="checkbox">Statement of whether the design meets all the requirements. If not, list the shortcomings.</label></li>
-<li><label><input type="checkbox">Number of hours spent working on the lab are included.</label></li>
-<li><label><input type="checkbox">Writeup contains minimal spelling or grammar issues and any errors do not significantly detract from clarity of the writeup.</label></li>
-<li><label><input type="checkbox">(Optional) List commments or suggestions on what was particularly good about the assignment or what you think needs to change in future versions.</label></li>
-</ul>
-</section>
-</section>
-<section id="excellence-1" class="level4">
-<h4 class="anchored" data-anchor-id="excellence-1">Excellence</h4>
-<p><strong>General Schematic Specifications </strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Standard symbols used for all components where applicable</label></li>
-<li><label><input type="checkbox">Signals “flow” from left to right where possible (e.g., inputs on left hand side, outputs on right hand side)</label></li>
-<li><label><input type="checkbox">Title block with author name, title, and date</label></li>
-</ul>
-<p><strong>HDL &amp; Code Specifications</strong></p>
-<p><em>General Formatting</em></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Name, email, and date at the top of every file</label></li>
-<li><label><input type="checkbox">Comment at the top of each source code file to describe what is in it</label></li>
-<li><label><input type="checkbox">Clear and organized hierarchy (e.g., deliniation between top level modules and submodules)</label></li>
-</ul>
-<p><em>Testbenches</em></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Testbenches written for each individual module to demonstrate proper operation</label></li>
-<li><label><input type="checkbox">Testbench output included in the report</label></li>
-</ul>
-<p><strong>Lab Writeup/Summary</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Writeup is free of spelling and grammar issues</label></li>
-</ul>
-</section></details>
-<p><a href="../../lab/lab1/specs.html" target="blank">Open specifications in new tab.</a></p>
-</section>
-
-
 <section id="before-you-start" class="level2">
 <h2 class="anchored" data-anchor-id="before-you-start">Before You Start</h2>
 <p>Before you start working on this lab, you should familiarize yourself with the documentation for both the UPduino v3.1 and Nucleo-L432KC boards. The website has links for the UPduino v3.1 User Guide and the Nucleo-L432KC User Manuals on the Resources tab. These two documents contain information that will be helpful for answering questions that you may have during the course of this lab.</p>
@@ -442,8 +335,8 @@ Figure&nbsp;3: ice40 Resource Table.
 <p>More details will be provided later in this lab writeup.</p>
 </section>
 </section>
-<section id="e155-fa22-development-board" class="level2">
-<h2 class="anchored" data-anchor-id="e155-fa22-development-board">E155 FA22 Development Board</h2>
+<section id="e155-development-board" class="level2">
+<h2 class="anchored" data-anchor-id="e155-development-board">E155 Development Board</h2>
 <p>In this lab you will assemble a custom printed circuit board which hosts the MCU and FPGA boards. The board has several features that will be convenient for developing embedded systems such as:</p>
 <ul>
 <li>Pins which can be directly routed from the MCU to the FPGA via the board</li>
@@ -466,9 +359,9 @@ Figure&nbsp;4: Annotated sections of the development board.
 <li><strong>Voltage Regulators and Power Terminal</strong>: A +5 V (NCP1117DT50RKG) and +3.3 V (NCP1117DT33T5G) low-dropout (LDO) voltage regulator which is used to regulate the input provided via the power terminal on VIN. Make sure to check with the schematic to ensure that you put the regulators in their proper places. See <a href="#powering-the-board">Powering the Board</a> for more details.</li>
 <li><strong>FPGA, MCU, mikroBUS, and PMOD sockets: </strong>These sockets are populated with female headers for the MCU, FPGA, and other extension sockets to be plugged into.</li>
 <li><strong>Reset Push Buttons: </strong>The reset pushbuttons are connected to the reset inputs on the MCU and FPGA respectively. The MCU reset button will cause the code to begin execution from the first instruction. The FPGA reset button causes the FPGA to reconfigure itself from the on-board RAM which stores the configuration file for the design you have uploaded.</li>
-<li><strong>Configuration Jumpers</strong>: The configuration jumpers on the board allow you several options to set the power and signal connections for the MCU and FPGA. J2, J3, and J4 control the mikroBUS reset signal and the power for the FPGA and MCU boards respectively. The mikroBUS reset signal can also be connected to MCU pin PA12 to enable the MCU to reset the connected peripheral via software. The configuration jumper J5 is a 2x8 header with MCU pins on the left hand side and FPGA pins on the right hand side. Note that on the 2023 version of the board, J5 has been replaced with an 8-pin DIP switch with the reference designator SW7. The functionality however, remains the same as the jumper. By attaching a jumper between the pins in the same row, the MCU pin on the left side of the jumper can be directly routed to the FPGA pin on the right hand side via traces on the PCB. This allows for convenient and high-fidelity interfaces between the MCU and the FPGA without the need for external wires.</li>
+<li><strong>Configuration Jumpers</strong>: The configuration jumpers on the board allow you several options to set the power and signal connections for the MCU and FPGA. J2, J3, and J4 control the mikroBUS reset signal and the power for the FPGA and MCU boards respectively. The mikroBUS reset signal can also be connected to MCU pin PA12 to enable the MCU to reset the connected peripheral via software. The configuration jumper J5 is a 2x8 header with MCU pins on the left hand side and FPGA pins on the right hand side. Note that on version v4 of the board, J5 has been replaced with an 8-pin DIP switch with the reference designator SW7. The functionality however, remains the same as the jumper. By attaching a jumper between the pins in the same row, the MCU pin on the left side of the jumper can be directly routed to the FPGA pin on the right hand side via traces on the PCB. This allows for convenient and high-fidelity interfaces between the MCU and the FPGA without the need for external wires.</li>
 <li><strong>Ribbon Cable Connector</strong>: The ribbon cable connector is used to route a subset of the MCU and FPGA pins out to a cable which connects to the breadboard adapter board.</li>
-<li><strong>MCU, FPGA, and Slide Buttons: </strong>The push and slide buttons on the board are routed to pins on the MCU and FPGA in order to provide on-board options to toggle GPIO pins on the respective devices. Note that all of these buttons are configured as active low (i.e., closing the switch connects the pin of the device to ground) without any hardware pullup resistors. In order to use them, you must configure the internal pullup resistors on the MCU or FPGA in order to avoid floating logic levels.</li>
+<li><strong>MCU, FPGA, and Slide Buttons:</strong> The push and slide buttons on the board are routed to pins on the MCU and FPGA in order to provide on-board options to toggle GPIO pins on the respective devices. Note that all of these buttons are configured as active low (i.e., closing the switch connects the pin of the device to ground) without any hardware pullup resistors. In order to use them, you must configure the internal pullup resistors on the MCU or FPGA in order to avoid floating logic levels.</li>
 </ul>
 </section>
 <section id="assembling-the-board" class="level2">
@@ -592,22 +485,32 @@ Figure&nbsp;8: Fully assembled development board.
 <section id="powering-via-usb" class="level3">
 <h3 class="anchored" data-anchor-id="powering-via-usb">Powering via USB</h3>
 <p>It is also possible to power the board via a USB connection to either the MCU or FPGA board. Each board has an onboard voltage regulator to create a stabilized +5 V output on the boards respective +5 V pins. Assuming J3 and J4 are shorted, this +5 V output from whichever board is connected to USB power is fed back to the +5 V line (which is also the output of the +5 V regulator) and thus powers the other components connected to that net.</p>
-<div class="hint-box">
-<p><strong>Testing Voltage Regulators</strong>: Before connecting your MCU and FPGA boards, check the voltage regulators are on correctly by connecting to a lab DC power supply using the screw terminals and using a multimeter to confirm that the +3.3 V rail is +3.3 V and the +5 V rail is +5 V. If you read +5 V on the +3.3 V or vice versa, you have installed the regulators in the wrong place and need to swap them. If you read a low voltage (less than ~0.1 V), you likely have a bad solder joint on the back pad of the respective regulator and need to reflow the solder joint to make a better connection.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Testing Voltage Regulators">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Testing Voltage Regulators
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before connecting your MCU and FPGA boards, check the voltage regulators are on correctly by connecting to a lab DC power supply using the screw terminals and using a multimeter to confirm that the +3.3 V rail is +3.3 V and the +5 V rail is +5 V. If you read +5 V on the +3.3 V or vice versa, you have installed the regulators in the wrong place and need to swap them. If you read a low voltage (less than ~0.1 V), you likely have a bad solder joint on the back pad of the respective regulator and need to reflow the solder joint to make a better connection.</p>
+</div>
 </div>
 </section>
 </section>
 <section id="testing-the-boards" class="level2">
 <h2 class="anchored" data-anchor-id="testing-the-boards">Testing the Boards</h2>
 <p>To test the boards, you will upload a simple design to the FPGA which toggles an LED on and off and some code on the MCU to read in the toggling GPIO pin and echo is back to the FPGA. This will ensure that the board is working properly and that you have good communication between the two devices.</p>
-<p>To familiarize yourself with how to program the FPGA using Lattice Radiant, see the <a href="../../tutorials/lattice_radiant_installation/">Lattice Radiant iCE40 UltraPlus Project Setup</a> tutorial. This tutorial has information about how to create a project in Radiant and how to synthesize and upload designs to your FPGA board.</p>
-<p>After working through the tutorial, download the Radiant project file <code>fpga_dev_board_test.zip</code> under the Lab 1 subfolder from <a href="https://github.com/HMC-E155/hmc-e155">the course GitHub</a> (the link on the course website lab page) and use it to program your FPGA. This design toggles pin P25 at about 1 Hz. If you have the switch properly set on SW7, P25 is connected to PA9 and so you will see LED D3 blinking.</p>
-<p>After programming your FPGA, the next step is to upload the code to the MCU that will read the value of the toggled LED from the FPGA and echo it back on another pin. See the tutorial titled “Segger Embedded Studio Setup” to familiarize yourself with the process of installing and setting up SEGGER Embedded Studio (SES) for ARM. If you are using a lab computer, SES is already installed. Make sure that you use the ARM version of the program. The lab computers may also have other versions installed.</p>
-<p>After working through the tutorial, download the SES solution folder from the course GitHub titled “mcu_dev_board_test.zip”. Then, double click on the .emProject file or use the File → Open Solution option in SES to open the solution. This project contains a simple program that monitors the status of PA9 (which is connected to P25 through the appropriate jumper on J5. Make sure you have the jumper attached to connect PA9 to P25). Build and download the project to your MCU.</p>
+<p>To familiarize yourself with how to program the FPGA using Lattice Radiant, see the <a href="../../tutorials/lattice-radiant-installation/">Lattice Radiant iCE40 UltraPlus Project Setup</a> tutorial. This tutorial has information about how to create a project in Radiant and how to synthesize and upload designs to your FPGA board.</p>
+<p>After working through the tutorial, download the Radiant project file <code>fpga_dev_board_test.zip</code> under the Lab 1 subfolder from <a href="https://github.com/HMC-E155/hmc-e155">the course GitHub</a> and use it to program your FPGA. This design toggles pin P25 at about 1 Hz. If you have the switch properly set on SW7, P25 is connected to PA9 and so you will see LED D3 blinking.</p>
+<p>After programming your FPGA, the next step is to upload the code to the MCU that will read the value of the toggled LED from the FPGA and echo it back on another pin. See the tutorial titled “Segger Embedded Studio Setup” to familiarize yourself with the process of installing and setting up SEGGER Embedded Studio (SES). If you are using a lab computer, SES is already installed. The lab computers may also have other versions installed.</p>
+<p>After working through the tutorial, download the SES solution folder from the course GitHub titled <code>mcu_dev_board_test.zip</code>. Then, double click on the <code>.emProject</code> file or use the <code>File → Open Solution</code> option in SES to open the solution. This project contains a simple program that monitors the status of PA9 (which is connected to P25 through the appropriate jumper on J5. Make sure you have the jumper attached to connect PA9 to P25). Build and download the project to your MCU.</p>
 <p>Now, in addition to LED D3 (PA9/P25) blinking, you should see LED D2 (PA10/P23) and LED D7 (P38) blinking as well.</p>
 </section>
-<section id="fpga-design" class="level1">
-<h1>FPGA Design</h1>
+<section id="fpga-design" class="level2">
+<h2 class="anchored" data-anchor-id="fpga-design">FPGA Design</h2>
 <p>Now it’s your turn to take the wheel and create your own design and dust off your digital design chops! Your goal is to write some Verilog modules to further test the hardware on your board and operate a 7-segment display. The system should have the following inputs and outputs:</p>
 <table class="caption-top table">
 <thead>
@@ -721,8 +624,18 @@ Figure&nbsp;8: Fully assembled development board.
 </tbody>
 </table>
 </div>
-<div class="hint-box">
-<p><strong>Clock Generation</strong> To generate the clock for your design, use the onboard high-speed oscillator. This is the same strategy as in the FPGA testing source code you downloaded earlier to test the board. If you look at that Verilog code, you’ll notice an instantiated module called HSOSC (for High-Speed OSCillator). This module is part of the iCE40 Technology Library (see the iCE40 Technology Library document linked on the course website) and is a built-in module included with Lattice Radiant designed for controlling the internal oscillator on the iCE40 chip. You can simply copy the line from the testing program and use it in your project.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Clock Generation">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Clock Generation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To generate the clock for your design, use the onboard high-speed oscillator. This is the same strategy as in the FPGA testing source code you downloaded earlier to test the board. If you look at that Verilog code, you’ll notice an instantiated module called HSOSC (for High-Speed OSCillator). This module is part of the iCE40 Technology Library (see the iCE40 Technology Library document linked on the course website) and is a built-in module included with Lattice Radiant designed for controlling the internal oscillator on the iCE40 chip. You can simply copy the line from the testing program and use it in your project.</p>
+</div>
 </div>
 <section id="design-and-synthesis-in-radiant" class="level3">
 <h3 class="anchored" data-anchor-id="design-and-synthesis-in-radiant">Design and Synthesis in Radiant</h3>
@@ -743,17 +656,27 @@ Figure&nbsp;9: Seven-segment display pin map
 </figure>
 </div>
 <p>Launch Lattice Radiant and start the New Project Wizard from the File or startup menu. Setup a new project for the UP5K chip following the instructions in the Lattice Radiant Tutorial on the E155 website.</p>
-<p>Choose File → New and create a SystemVerilog HDL file. Save the file as <code>lab1_xx.sv</code> in your project directory and check the box to add the file to the current project. Create modules to perform the functions described above. The 7-segment display decoder should be combinational logic. Use a reasonable amount of hierarchy. Name the top-level module <code>lab1_xx</code>. The 7-segment display code, for example, will be reused in future labs, so it should be a module of its own (for the sake of reusability you may want to put this in a separate SystemVerilog file but this is not required). Every module should begin with a comment section that includes your name and email address, the date of creation, and a brief summary of its purpose, so that somebody else can understand what the module does and get a hold of you if they need help with it. Comment the modules as appropriate.</p>
+<p>Choose <code>File → New</code> and create a SystemVerilog HDL file. Save the file as <code>lab1_xx.sv</code> in your project directory and check the box to add the file to the current project. Create modules to perform the functions described above. The 7-segment display decoder should be combinational logic. Use a reasonable amount of hierarchy. Name the top-level module <code>lab1_xx</code>. The 7-segment display code, for example, will be reused in future labs, so it should be a module of its own (for the sake of reusability you may want to put this in a separate SystemVerilog file but this is not required). Every module should begin with a comment section that includes your name and email address, the date of creation, and a brief summary of its purpose, so that somebody else can understand what the module does and get a hold of you if they need help with it. Comment the modules as appropriate.</p>
 </section>
 <section id="logic-simulation-in-modelsim" class="level3">
 <h3 class="anchored" data-anchor-id="logic-simulation-in-modelsim">Logic Simulation in ModelSim</h3>
 <p>The next step is to simulate your logic with ModelSim. Open ModelSim from Radiant from the Tools menu or the icon in the toolbar. The ModelSim window will open. Get in the habit of watching the transcript window to look for errors and to familiarize yourself with what a good run looks like. If you see errors, close ModelSim, correct your Verilog code in Radiant, and reopen ModelSim. You can also edit the file directly in ModelSim and recompile there without going through the entire synthesis pipeline in Radiant.</p>
-<div class="hint-box">
-<p><strong>Note: </strong> Some of your designs may include modules from the iCE40 Technology Library (e.g., the HSOSC module we are using to generate our clock signal). If you try to simulate a design including one of these modules, you need to be sure to include the library. When you simulate a design that includes a module from the iCE40 Technology Library, make sure that you include the library by adding under the Libraries tab of the Start Simulation window as shown below.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Some of your designs may include modules from the iCE40 Technology Library (e.g., the HSOSC module we are using to generate our clock signal). If you try to simulate a design including one of these modules, you need to be sure to include the library. When you simulate a design that includes a module from the iCE40 Technology Library, make sure that you include the library by adding under the Libraries tab of the Start Simulation window as shown below. You can also use the <code>-L</code> flag in the command line to <code>vsim</code>.</p>
+</div>
 </div>
 <section id="starting-simulation" class="level4">
 <h4 class="anchored" data-anchor-id="starting-simulation">Starting Simulation</h4>
-<p>In ModelSim, simulate your module by choosing <code>Simulate → Start Simulation...</code>. Click on the + symbol next to the work library and select your code (<code>lab1_xx</code>).</p>
+<p>In QuestaSim/ModelSim, simulate your module by choosing <code>Simulate → Start Simulation...</code>. Click on the + symbol next to the work library and select your code (<code>lab1_xx</code>).</p>
 <p>If the wave pane isn’t open, open it by choosing View → Wave. View all of the inputs and outputs of your design by selecting them in the Objects window and dragging them to the Waves window. In a more complicated design, you may wish to examine internal signals as well.</p>
 <p>Manually test your design by forcing the inputs to specific values and then advancing the simulation using “run.” In the transcript window, type:</p>
 <pre><code>force s 0000
@@ -763,7 +686,20 @@ run 100
 force s 0010
 run 100
 ...</code></pre>
-<p>You should see the led and seg outputs displaying appropriate values. Check the outputs against your expectations. If you find any discrepancies, fix the code and resimulate. A helpful shortcut to avoid restarting ModelSim is that you can edit the module by finding it under “work” in the library pane, right clicking, and choosing Edit. Make your fixes, then right click again and choose “Recompile.” Then type “restart -f” in the transcript window to restart simulation without having to set up the waveforms window again. When you return to Radiant, you’ll find your corrected code.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Watch Out for Optimization">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Watch Out for Optimization
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you’re not seeing all the signals in your design, it’s possible that QuestaSim optimized them away. To configure the optimization settings, see the relevant section in the <a href="../../tutorials/modelsim-simulation-tutorial/#preventing-optimization">QuestaSim/ModelSim tutorial</a>.</p>
+</div>
+</div>
+<p>You should see the <code>led</code> and <code>seg</code> outputs displaying appropriate values. Check the outputs against your expectations. If you find any discrepancies, fix the code and resimulate. A helpful shortcut to avoid restarting ModelSim is that you can edit the module by finding it under “work” in the library pane, right clicking, and choosing Edit. Make your fixes, then right click again and choose <code>Recompile</code>. Then type <code>restart -f</code> in the transcript window to restart simulation without having to set up the waveforms window again. When you return to Radiant, you’ll find your corrected code.</p>
 </section>
 </section>
 <section id="pin-assignment" class="level3">
@@ -772,12 +708,7 @@ run 100
 <div id="fig-pin-radiant-assignment" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pin-radiant-assignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/radiant_pin_assignments.png" class="img-fluid figure-img"></p>
-<figcaption>Radiant pin assignments</figcaption>
-</figure>
-</div>
+<img src="images/radiant_pin_assignments.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pin-radiant-assignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;10: Radiant pin assignments.
@@ -786,7 +717,7 @@ Figure&nbsp;10: Radiant pin assignments.
 </div>
 <p>The FPGA pinouts are shown in the Board Schematic. Most of the user input/output (I/O) pins are tapped out to the headers and labeled on the board silk screen. Some have special functions; for example, FPGA pin P42 is connected to LED D6.</p>
 <p>The pin numbers for the LEDs and switches are marked on the board’s silkscreen. For the outputs for the 7-segment display, you may select any I/O pins you’d like. Do make sure that these pins are not being used for other purposes.</p>
-<p>The Device Constraint Editor is also the place where you can configure the pullup resistors for the I/O pins. To do this, examine the PULLMODE column for any input pins. In your design, this will be the pins connected to s[3:0]. These should be configured with pull-up resistors to avoid invalid logic levels (the exact value is not very important. A value between 10k and 100k is generally sufficient).</p>
+<p>The Device Constraint Editor is also the place where you can configure the pullup resistors for the I/O pins. To do this, examine the <code>PULLMODE</code> column for any input pins. In your design, this will be the pins connected to <code>s[3:0]</code>. These should be configured with pull-up resistors to avoid invalid logic levels (the exact value is not very important. A value between 10k and 100k is generally sufficient).</p>
 </section>
 <section id="seven-segment-display-circuit" class="level3">
 <h3 class="anchored" data-anchor-id="seven-segment-display-circuit">Seven Segment Display Circuit</h3>
@@ -797,41 +728,40 @@ Figure&nbsp;10: Radiant pin assignments.
 </section>
 <section id="generating-the-fpga-configuration-files" class="level3">
 <h3 class="anchored" data-anchor-id="generating-the-fpga-configuration-files">Generating the FPGA Configuration Files</h3>
-<p>Now you will synthesize your HDL into a programming file to be transferred onto the FPGA. This outputs a binary file (.bin) in your project directory that can be used to program the FPGA directly over JTAG using the onboard USB programmer. Be sure your SystemVerilog files are saved, and click the green “Play” triangle to start the synthesis process. To help sort the many messages that the compilation process generates, click a tab under the Message area to see only that type of message. If compilation is successful but generates warnings, check the Warning and Error tabs for errors relevant to your design. Warnings about incomplete I/O assignments may be ignored if you have in fact assigned all relevant I/O pins.</p>
-<p>Launch Tools → Netlist Analyzer and examine the RTL schematic of your design. This shows the logic synthesized from your Verilog design. Ensure the hardware matches your expectations.</p>
+<p>Now you will synthesize your HDL into a programming file to be transferred onto the FPGA. This outputs a binary file (<code>.bin</code>) in your project directory that can be used to program the FPGA directly over JTAG using the onboard USB programmer. Be sure your SystemVerilog files are saved, and click the green “Play” triangle to start the synthesis process. To help sort the many messages that the compilation process generates, click a tab under the Message area to see only that type of message. If compilation is successful but generates warnings, check the Warning and Error tabs for errors relevant to your design. Warnings about incomplete I/O assignments may be ignored if you have in fact assigned all relevant I/O pins.</p>
+<p><code>Launch Tools → Netlist Analyzer</code> and examine the RTL schematic of your design. This shows the logic synthesized from your Verilog design. Ensure the hardware matches your expectations.</p>
 <p>Look at the Reports tab. In the Project Summary under Resource Usage you should see a total number of registers and pins that match your expectations. Under Analysis &amp; Synthesis, you can see how the logic blocks and registers are broken down in each module. Under Fitter, the Pin-Out File should match the pin assignments you intended.</p>
-</section>
-<section id="what-to-turn-in" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-turn-in">What to Turn In</h2>
-<p>For this lab and all subsequent ones you will turn in a lab report. The report should not exceed one page of text, plus schematics, code, and anything else appropriate, such as diagrams, simulation results, or calculations. The report typically has the following sections:</p>
-<ul>
-<li><strong>Introduction</strong>: Briefly explain what was done.</li>
-<li><strong>Design and Testing Methodology</strong>: Explain how you approached the design of this assignment from both a software and a hardware standpoint (as appropriate). Include how you tested your design. These tests should convince the reader that the requirements of the assignment have been met.</li>
-<li><strong>Technical Documentation</strong>: Include your Verilog code and schematics of your circuits.
-<ul>
-<li>Quality and clarity of your code is important. Make sure it is adequately commented. Succinct code using standard idioms is best.</li>
-<li>Schematics of your breadboarded circuits should be sufficient for another engineer to understand and reconstruct the circuit on the breadboard. Always use standard symbols for standard components such as resistors, switches, transistors, diodes, etc. Give the component name or part number such that the reader could order parts and replicate your circuit, or look up components in a datasheet where necessary. The reader shouldn’t have to open you HDL synthesis program to relate your Verilog code to the schematic, and shouldn’t need to refer to a data sheet to wire external components or understand what the connections are. Don’t assume that the reader has memorized the pinouts of any chips. Therefore, you’ll need to label both the pin number and pin name for each pin you use from the FPGA board or other component (e.g., 7-segment display). There is no need to draw any of the circuitry on the board; just refer to it by the pins number and name.</li>
-</ul></li>
-<li><strong>Results and Discussion</strong>: Did you accomplish all of the prescribed tasks? If not, what are the shortcomings? How might you address them given more time? As appropriate, how did the design perform (ex. How fast/accurate/reliable was it?). Is there anything you would do differently if you were to redo the lab? Is there anything else interesting worth mentioning?</li>
-<li><strong>Conclusions</strong>: Briefly summarize what was done and how it performed.</li>
-<li>How many hours did you spend working on the lab? Any comments, suggestions, or complaints about the assignment? This will not count toward your grade, but will help refine the lab for the future.</li>
-</ul>
-<p>The report does not need to be long but should be complete. Some individual questions may not apply to this particular lab but are listed to give you a general idea of what is desired. Future reports will follow a similar format and the questions may be more applicable in these instances.</p>
-<p>Have your lab checked off by the instructor. You will need to demonstrate that the board and 7-segment display operate correctly. You will also be asked a question about some part of the lab or your board. You should be thoroughly familiar with all of the lab and the components of your board to be able to answer the question. The oral exam is typically in the form of a “Fault-Tolerance Question.” What would happen if a particular wire is broken or a pin is shorted to Vcc or GND? Be prepared for any other questions about your lab, however.</p>
-</section>
-<section id="faq-and-hints" class="level2">
-<h2 class="anchored" data-anchor-id="faq-and-hints">FAQ and Hints</h2>
-<p>If some of you are seeing issues with specific pins on your FPGA there could be a few different reasons and corre- sponding steps to take to troubleshoot.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Troubleshooting Tips">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Troubleshooting Tips
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If some of you are seeing issues with specific pins on your FPGA there could be a few different reasons and corresponding steps to take to troubleshoot.</p>
 <ul>
 <li>You could have an electrical short which is causing some pins to be electrically connected that should not due to solder bridges. Double check to make sure that the pins are isolated and not connected together by checking the resistance between the pins with a multimeter.</li>
 <li>You are trying to use a pin that is shared between the FPGA and the MCU and the MCU is not leaving that pin floating or it is driving it as an output. You can get around this by wiping the code on the MCU by uploading a file with a blank main function.</li>
 <li>You should also read through the Nucleo board documentation to see what pins have special functions that are used by default by the MCU. Hint: You likely want to stay away from using the pins that the MCU uses for serial communication by default.</li>
 </ul>
-</section>
-<section id="always-very-curious" class="level2">
-<h2 class="anchored" data-anchor-id="always-very-curious">Always Very Curious…</h2>
-<p>If you finish the lab and are interested in exploring some additional functionality of your FPGA, consider trying to write HDL to control the RGB LEDs on board the UPduino. Note that this is <strong>NOT</strong> a required part of the lab and not for credit. It is purely an exercise if you have interest!</p>
-<p>The UP5K has built in hardware for pulse-width modulation of the LED. To find details on how to use this IP, use the “Lattice Radiant Software Help” guide that is accessible from the Help menu in Radiant. In the window that opens, navigate to the section “Reference Guides &gt; FPGA Libraries Reference Guide &gt; Miscellaneous.” You can also find information about this and other hardware primitives available on the FPGA in the “iCE40 Technology Library” PDF available on the course website. However, note that (annoyingly!) the naming for the modules in this document is for the iCEcube2 software and <em>the syntax has changed</em> for Radiant. You can see the note “Migrating iCEcube2 iCE40 UltraPlus Designs to Lattice Radiant 2.0 Software” for more details.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Suggest Feedback!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Suggest Feedback!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you caught any typos or have any suggestions for this page, please open an issue on the <a href="https://github.com/HMC-E155/hmc-e155.github.io/">website Github repository</a>. Click the link <a href="../../resources/how-to-create-a-github-issue.html">here</a> for instructions on how to create an issue.</p>
+</div>
+</div>
 
 
 </section>
