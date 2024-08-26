@@ -339,6 +339,10 @@ Before you follow the instructions make sure you've got all your changes committ
 If you don't, when you run `git reset --hard` you'll discard all your changes!
 :::
 
+Here is a short Loom video to walk you through the process of publishing your Quarto portfolio as a Github Pages site.
+
+<div style="position: relative; padding-bottom: 64.63195691202873%; height: 0;"><iframe src="https://www.loom.com/embed/371bd4ce873c418b8bb346665068893b?sid=31ee6605-66b7-42c7-8edd-bff2cfe53af6" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 ## Wrapup
 
 Congratulations!
