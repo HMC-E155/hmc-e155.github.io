@@ -10,11 +10,13 @@ format:
         href: ./ai-prototype.html
         icon: robot
       - text: "iCE40 UltraPlus Family Data Sheet"
-        href: ./
-      - text: "Lattice Radiant Tutorial"
-        href: ./
+        href: /assets/doc/FPGA-DS-02008-2-0-iCE40-UltraPlus-Family-Data-Sheet.pdf
+      - text: "Lattice Radiant Installation Tutorial"
+        href: /tutorials/lattice-radiant-installation/
+      - text: "Lattice Radiant iCE40 Project Setup"
+        href: /tutorials/lattice-radiant-ice40-ultraplus-project-setup
       - text: "Interactive Dev Board BOM"
-        href: ./
+        href: /assets/doc/E155_v4_Dev_Board_BOM.html
     code-links:
       - text: "Starter Code"
         href: https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab01
