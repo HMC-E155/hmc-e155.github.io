@@ -142,7 +142,7 @@ Please note that I do not always respond immediately to messages. In particular 
 
 That said, I do my best to do meet the following:
 
--   Messages sent on a weekday other than Friday (Monday-Thursday) before 4:00 pm PT will get a response the same day.
+-   Messages sent on a weekday other than Friday (i.e., Monday-Thursday) before 4:00 pm PT will get a response the same day.
 -   Messages sent after 4:00 pm PT Sunday-Wednesday will get a response the next day.
 -   Messages sent after 4:00 pm PT on Fridays or on the weekend will get a response the following Monday.
 
@@ -190,12 +190,12 @@ In MicroPs this fall we will adopt the following policies for generative AI use:
 You **should**:
 
 - **Use AI on the AI prototypes throughout the course.** Each lab this fall will include a section describing a generative AI experiment. For the tasks in these sections you are required to leverage generative AI. As you embrace AI, I would encourage you to reflect on your experience using it and on its impact on your skill development. Your reflections on these AI experiments each week are a great topic to discuss in your weekly reflections.
-- Use spellchecking tools to help you write more effectively.
 
-You may **not**:
+You should **not**:
 
 - **Use generative AI to directly generate any code on the main lab design challenges.** Learning how to write Verilog and C code is a core learning objective in this class. The best way to learn how to evaluate the quality of LLM-generated code is by first writing a large quantity of it for yourself.
-- **Use generative AI to generate any of your technical documentation**. Thinking is writing, and learning how to articulate what you've done and what it means matters. Outsourcing this task to an LLM will not help you to better understand the work you are doing. As noted above, you may use spellcheckers, but you must not use tools which will rewrite sentences for you or generate text (e.g., Google's "Help Me Write" feature)
+- **Use generative AI to generate any of your technical documentation.** Thinking is writing, and learning how to articulate what you've done and what it means matters. Outsourcing this task to an LLM will not help you to better understand the work you are doing. As noted above, you may use spellcheckers, but you must not use tools which will rewrite sentences for you or generate text (e.g., Google's "Help Me Write" feature)
+
 :::
 
 Once the labs finish, we will revisit this policy for the project phase of the class to decide collectively how we may want to revise our approach to generative AI. The results of your weekly AI prototypes and reflections about them will provide a healthy foundation from which we can discuss!
