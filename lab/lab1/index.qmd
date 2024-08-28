@@ -10,11 +10,13 @@ format:
         href: ./ai-prototype.html
         icon: robot
       - text: "iCE40 UltraPlus Family Data Sheet"
-        href: ./
-      - text: "Lattice Radiant Tutorial"
-        href: ./
+        href: /assets/doc/FPGA-DS-02008-2-0-iCE40-UltraPlus-Family-Data-Sheet.pdf
+      - text: "Lattice Radiant Installation Tutorial"
+        href: /tutorials/lattice-radiant-installation/
+      - text: "Lattice Radiant iCE40 Project Setup"
+        href: /tutorials/lattice-radiant-ice40-ultraplus-project-setup
       - text: "Interactive Dev Board BOM"
-        href: ./
+        href: /assets/doc/E155_v4_Dev_Board_BOM.html
     code-links:
       - text: "Starter Code"
         href: https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab01
@@ -284,7 +286,70 @@ This module is part of the iCE40 Technology Library (see the iCE40 Technology Li
 You can simply copy the line from the testing program and use it in your project.
 :::
 
+### Create Your Git Repository
 
+The first step before you begin writing any code is to create a Git repository.
+Follow the following steps to get started with your project.
+
+1. Create a new folder for your project. Here is a suggested template folder structure to use. Add a few sentences to your README to describe the contents of the repository. For example, for this lab you might say something about holding code to verify that your FPGA and MCU are working properly.
+
+```markdown
+/
+├── fpga
+│   ├── src
+│   ├── sim
+│   ├── radiant_project
+│   ├── .gitignore
+├── mcu
+│   ├── src
+│   ├── segger_project
+│   ├── .gitignore
+├── README.md
+```
+
+
+2. Populate your .gitignore files. This file tells git which files and folders should not be tracked. It's best practice to ignore many of the miscellaneous configuration files that Radiant and SEGGER Embedded Studio generate. Sample .gitignore files are included below. Paste the contents of these files into the .gitignore files you created.
+
+> Sample Radiant .gitignore
+  ```
+  # Lattice Radiant files
+  *.html
+  impl*/
+  *.xml
+  .build_status
+  .run_manager.ini
+  .recovery
+  .spread_sheet.ini
+  .spreadsheet_view.ini
+  *.dir/
+  *.log
+  *.tcl
+  *.ccl
+  *.srp
+  *.dmp
+  ._Real_._Math_.vhd
+  ```
+
+> Sample SEGGER Embedded Studio .gitignore
+  ```
+  # Segger Embedded Studio
+  **/Output/
+  **/Debug/
+  *.emSession
+  *.jlink
+  ```
+
+3. Initialize your git repository using `git init`.
+4. Add the existing files in your folder using `git add .`. (Note: the `.` means to add all the contents of the current directory, so you'll need to make sure you're at the root).
+5. Make an initial commit with the folder structure above by typing `git commit -m "Initializing Lab 1 repository"`.
+6. Open the Github web interface and create a new repository on Github ([link](https://github.com/new)). Name your repository something descriptive like `e155-lab1`. Optionally add a short description.
+7. Link your local git repository to the new remote repository by adding a new remote. This will look something like `git remote set-url origin git@github.com:<username>/<repo>.git` where you'll need to replace `<username>` and `<repo>` with your specific information. For my example, this command is ``git remote set-url origin git@github.com:joshbrake/e155-lab1.git`
+8. Push your local commit to the remote using `git push origin main`. If git complains that it doesn't know what main is, then your branch might be named master. In this case, run `git branch -m master main` and run the push command again.
+9. Navigate to your repository page on Github and you should see your folder structure there.
+
+Here's a video walking through the steps above as well.
+
+<div style="position: relative; padding-bottom: 64.63195691202873%; height: 0;"><iframe src="https://www.loom.com/embed/ee828a5b3c024653a9c210d2451a7251?sid=844f2d0e-c6b0-47ef-aacd-5e7cb4b36aab" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### Design and Synthesis in Radiant
 
@@ -293,8 +358,6 @@ Be sure each digit can be distinguished from other digits (e.g., b and 8 should 
 Remember that you will be using a common anode display. The anode (positive terminal) of all of the LEDs is tied to 3.3 V through a single (“common”) pin.
 Each segment’s cathode (negative terminal) is connected to a pin.
 Therefore, you will need 7 separate control signals. Remember that a logic 0 applied to the cathode will turn on the segment. The segments are defined as shown below. Let `seg[0]` be A and `seg[6]` be G.
-
-
 
 ::: {#fig-seven-segment-map}
 
