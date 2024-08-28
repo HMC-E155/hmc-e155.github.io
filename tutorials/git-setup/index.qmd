@@ -42,7 +42,7 @@ There are a variety of ways that you can interact with Git and you are welcome t
 I typically recommend (and use) Github Desktop for most of my work and drop into the command line interface (CLI) when I need to do something a bit more complicated.
 VS Code also has built-in Git support if you'd like to use it, although I find it a bit less intuitive than the Github Desktop GUI.
 
-## E155-specific Advice
+## Git Advice
 
 We'll be leaning on Git heavily throughout E155.
 You'll be required to use it to manage all the source code you write this semester and it will also be the foundation for your portfolio website.
@@ -72,6 +72,23 @@ Use branches instead!
 You will make mistakes, especially as you are getting familiar with Git.
 When that happens, don't fret.
 Be aware when your actions might result in permanent loss of files and don't hesitate to ask an instructor, grutor, or knowledgeable peer for help.
+
+### Add a new git command to help you delete branches when you merge them
+
+It's good practice to delete head branches once you merge them. You can [configure your Github repository to do this automatically](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/configuring-pull-request-merges/managing-the-automatic-deletion-of-branches) on the remote when you merge a pull request, but this won't do anything to the branch on your local.
+
+One easy way to help you do this is to create a new git alias, `git gone`, that will look for local branches that no longer exist on the remote and automatically remove them for you.
+
+To do this, you can add the following line to the bottom of your `.gitconfig` file.
+Open your .gitconfig file (normally located at `~/.gitconfig`) and add the following lines at the bottom of the file.
+
+```
+[alias]
+  gone = ! "git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
+```
+
+This command will fetch your repository from the remote, check if there are any branches on your local that have been deleted from the remote, and then remove your local copies.
+It's a helpful one-liner to run after you merge a pull request on the remote to make sure that you keep your local repos clean.
 
 ## A Library of Some Common Git Commands
 
