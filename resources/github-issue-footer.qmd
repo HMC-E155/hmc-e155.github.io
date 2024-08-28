@@ -1,4 +1,6 @@
-::: {.callout-note title="Suggest Feedback!"}
-If you caught any typos or have any suggestions for this page, please open an issue on the [website Github repository]({{< var github-website-repo-url >}}).
+## Share Your Feedback
+
+::: {.callout-note title="Share Your Feedback!"}
+If you caught any typos or have any suggestions for this page, please open an issue on the [website Github repository](https://github.com/HMC-E155/hmc-e155.github.io/issues).
 Click the link [here](/resources/how-to-create-a-github-issue.qmd) for instructions on how to create an issue.
 :::
