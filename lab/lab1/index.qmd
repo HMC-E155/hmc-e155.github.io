@@ -228,7 +228,7 @@ Before connecting your MCU and FPGA boards, check the voltage regulators are on 
 
 To test the boards, you will upload a simple design to the FPGA which toggles an LED on and off and some code on the MCU to read in the toggling GPIO pin and echo is back to the FPGA. This will ensure that the board is working properly and that you have good communication between the two devices.
 
-To familiarize yourself with how to program the FPGA using Lattice Radiant, see the [Lattice Radiant iCE40 UltraPlus Project Setup](/tutorials/lattice-radiant-installation/) tutorial. 
+To familiarize yourself with how to program the FPGA using Lattice Radiant, see the [Lattice Radiant iCE40 UltraPlus Project Setup](/tutorials/lattice-radiant-ice40-ultraplus-project-setup/) tutorial. 
 This tutorial has information about how to create a project in Radiant and how to synthesize and upload designs to your FPGA board. 
 
 After working through the tutorial, download the Radiant project file `fpga_dev_board_test.zip` under the Lab 1 subfolder from [the course GitHub]({{< var github-url >}}) and use it to program your FPGA. This design toggles pin P25 at about 1 Hz. 
@@ -367,7 +367,7 @@ Seven-segment display pin map
 :::
 
 
-Launch Lattice Radiant and start the New Project Wizard from the File or startup menu. Setup a new project for the UP5K chip following the instructions in the Lattice Radiant Tutorial on the E155 website.
+Launch Lattice Radiant and start the New Project Wizard from the File or startup menu. Setup a new project for the UP5K chip following the instructions in the [Lattice Radiant Tutorial](/tutorials/lattice-radiant-ice40-ultraplus-project-setup/) on the E155 website.
 
 Choose `File → New` and create a SystemVerilog HDL file.
 Save the file as `lab1_xx.sv` in your project directory and check the box to add the file to the current project. Create modules to perform the functions described above. The 7-segment display decoder should be combinational logic. 

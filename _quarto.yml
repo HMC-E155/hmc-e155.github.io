@@ -11,6 +11,8 @@ website:
     tools:
       - icon: github
         href: https://github.com/HMC-E155/hmc-e155
+      - icon: send-exclamation
+        href: https://github.com/HMC-E155/hmc-e155.github.io/issues
     left:
       - href: index.qmd
         text: Home
