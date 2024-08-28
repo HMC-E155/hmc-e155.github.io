@@ -45,7 +45,7 @@ website:
       - text: Tutorials
         menu:
         - text: Tutorial Videos
-          href: tutorials/tutorials-videos/
+          href: tutorials/tutorial-videos/
         - text: Git Setup
           href: tutorials/git-setup/
         - text: Quarto Portfolio Setup
