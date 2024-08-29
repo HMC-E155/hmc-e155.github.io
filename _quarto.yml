@@ -3,6 +3,8 @@ project:
   preview:
     port: 4200
     browser: false
+  resources: 
+    - "*.html"
 
 website:
   title: "HMC E155"
