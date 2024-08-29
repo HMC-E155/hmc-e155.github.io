@@ -469,32 +469,158 @@
     "text": "E155 Development Board Schematic\nE155 Breadboard Adapter Schematic\nE155 Development Board BOM"
   },
   {
-    "objectID": "resources/index.html#open-source-toolchain-for-ice40",
-    "href": "resources/index.html#open-source-toolchain-for-ice40",
+    "objectID": "resources/index.html#e155-development-board",
+    "href": "resources/index.html#e155-development-board",
     "title": "Resources",
-    "section": "Open Source Toolchain for iCE40",
-    "text": "Open Source Toolchain for iCE40\n\napio\nProject IceStorm\nOSS CAD Suite\nShawn Hymel Introduction to FPGA YouTube Series"
+    "section": "",
+    "text": "E155 Development Board Schematic\nE155 Breadboard Adapter Schematic\nE155 Development Board BOM"
   },
   {
-    "objectID": "resources/index.html#past-versions-of-e155",
-    "href": "resources/index.html#past-versions-of-e155",
+    "objectID": "resources/index.html#nucleo-stm32-documentation",
+    "href": "resources/index.html#nucleo-stm32-documentation",
     "title": "Resources",
-    "section": "Past versions of E155",
-    "text": "Past versions of E155\n\nFA19\nFA20\nFA21\nFA22"
+    "section": "Nucleo & STM32 Documentation",
+    "text": "Nucleo & STM32 Documentation\n\nSTM32L432KC Datasheet\nSTM32L432KC Reference Manual\nSTM32L432KC Programming Manual\nSTM32 Nucleo-32 User Manual\nCortex-M4 Technical Reference Manual\nARMv7-M Architecture Reference Manual"
   },
   {
-    "objectID": "resources/github-issue-footer.html",
-    "href": "resources/github-issue-footer.html",
-    "title": "HMC E155",
-    "section": "",
-    "text": "Share Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
+    "objectID": "resources/index.html#upduino-v3.1-ice40-up5k-documentation",
+    "href": "resources/index.html#upduino-v3.1-ice40-up5k-documentation",
+    "title": "Resources",
+    "section": "UPduino v3.1 & iCE40 UP5K Documentation",
+    "text": "UPduino v3.1 & iCE40 UP5K Documentation\n\niCE40 UltraPlus Family Data Sheet\niCE40 Oscillator Usage Guide\niCE40 SPRAM Usage Guide\niCE40 Technology Library\n\nNote on translating from iCEcube2 naming to Radiant\n\nUPduino Documentation\n\nUPduino v3.1 Pinout\nUPduino v3.1 Schematic\n\n\n\nOpen Source Toolchain for iCE40\n\napio\nProject IceStorm\nOSS CAD Suite\nShawn Hymel Introduction to FPGA YouTube Series"
   },
   {
-    "objectID": "resources/github-issue-footer.html#share-your-feedback",
-    "href": "resources/github-issue-footer.html#share-your-feedback",
-    "title": "HMC E155",
+    "objectID": "resources/index.html#embedded-systems-related-newsletters",
+    "href": "resources/index.html#embedded-systems-related-newsletters",
+    "title": "Resources",
+    "section": "Embedded Systems Related Newsletters",
+    "text": "Embedded Systems Related Newsletters\n\nThe Embedded Muse\nEmbedded Systems Weekly"
+  },
+  {
+    "objectID": "resources/index.html#systemverilog-resources",
+    "href": "resources/index.html#systemverilog-resources",
+    "title": "Resources",
+    "section": "SystemVerilog Resources",
+    "text": "SystemVerilog Resources\n\nSynthesizing SystemVerilog: Busting the Myth that SystemVerilog is only for Verification\nIEEE Standard for SystemVerilog (IEEE Std 1800-2017)"
+  },
+  {
+    "objectID": "resources/index.html#c-programming",
+    "href": "resources/index.html#c-programming",
+    "title": "Resources",
+    "section": "C Programming",
+    "text": "C Programming\n\nAppendix C from Digital Design and Computer Architecture: ARM Edition"
+  },
+  {
+    "objectID": "resources/index.html#arm-assembly-quick-reference-cards",
+    "href": "resources/index.html#arm-assembly-quick-reference-cards",
+    "title": "Resources",
+    "section": "ARM Assembly Quick Reference Cards",
+    "text": "ARM Assembly Quick Reference Cards\n\nARM® and Thumb®-2 Instruction Set Quick Reference Card\nThumb® 16-bit Instruction Set Quick Reference Card"
+  },
+  {
+    "objectID": "resources/index.html#textbook-resources",
+    "href": "resources/index.html#textbook-resources",
+    "title": "Resources",
+    "section": "Textbook Resources",
+    "text": "Textbook Resources\n\nDDCA ARMed: Ch 9. I/O Systems"
+  },
+  {
+    "objectID": "resources/index.html#general-resources",
+    "href": "resources/index.html#general-resources",
+    "title": "Resources",
+    "section": "General Resources",
+    "text": "General Resources\n\nBlog Reflection Ideas\nAdafruit Guide to Excellent Soldering\nGuidelines for Drawing Schematics"
+  },
+  {
+    "objectID": "resources/index.html#part-datasheets",
+    "href": "resources/index.html#part-datasheets",
+    "title": "Resources",
+    "section": "Part Datasheets",
+    "text": "Part Datasheets\n\nUnderstanding and Interpreting Standard-Logic Data Sheets is a helpful Application Report from Texas Instruments which provides explanations about the information on a standard logic chip data sheet.\nLM386 Datasheet\n\nMCP4801 Datasheet\n2N3906 PNP Transistor Datasheet\nMAN6410 Common Anode Seven-segment Display Datasheet\nAdafruit 3x4 Keypad Pinout"
+  },
+  {
+    "objectID": "resources/index.html#helpful-web-links",
+    "href": "resources/index.html#helpful-web-links",
+    "title": "Resources",
+    "section": "Helpful Web Links",
+    "text": "Helpful Web Links\n\nPast versions of E155\n\nFA19\nFA20\nFA21\nFA22"
+  },
+  {
+    "objectID": "resources/index.html#textbook-links",
+    "href": "resources/index.html#textbook-links",
+    "title": "Resources",
+    "section": "Textbook Links",
+    "text": "Textbook Links\n\nDigital Design and Computer Architecture\nThe Definitive Guide to ARM® Cortex®-M3 and Cortex®-M4 Processors\nO’Reilly Safari Learning Platform: Academic edition\n\nExpert C Programming"
+  },
+  {
+    "objectID": "resources/index.html#vendors",
+    "href": "resources/index.html#vendors",
+    "title": "Resources",
+    "section": "Vendors",
+    "text": "Vendors\n\nSparkFun\nAdafruit\nDigikey\nMouser"
+  },
+  {
+    "objectID": "resources/blog-reflection-ideas.html",
+    "href": "resources/blog-reflection-ideas.html",
+    "title": "Blog Reflection Ideas",
     "section": "",
-    "text": "Share Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
+    "text": "The blog on your Quarto portfolio is a space for you to write weekly reflections on what you’re learning in MicroPs. The list below is a non-exhaustive list of ideas of things you could write about if you’re struggling to come up with ideas.\n\nWhat is something interesting you learned recently in lab or lecture?\nHow do you feel like the course is helping you to grow as a person? Reflect on the character traits you listed at the beginning of the course for ideas about specific areas of growth to reflect on.\nWhat did you think about a recent AI prototype? How did your use of AI shape your thinking about what role these tools might play in the future of digital hardware design?\nSearch the Internet for a recent article related to embedded systems. Reflect on those systems through the lens of what you’re learning in MicroPs.\nWhat are some ideas you’re thinking about exploring in your project and why?"
+  },
+  {
+    "objectID": "resources/hdl-coding-guidelines.html",
+    "href": "resources/hdl-coding-guidelines.html",
+    "title": "Best Practices for HDL Coding",
+    "section": "",
+    "text": "Writing HDL code seems similar to writing code that runs on a processor core in a programming language like C or Python. However, this impression is misleading and is the source of a great deal of confusion for many novice digital designers.\nThe number one, most important lesson you need to internalize before you write a line of HDL code is this: you absolutely, 100% must know what hardware you’re trying to imply before you write a line of code. If you just start writing code without having a clear idea of the hardware that you’re hoping to get at the end of the day (e.g., combinational logic blocks and flip-flops), you’re in for a world of hurt.\nThe tips and advice in this document are geared toward helping you become a knowledgeable digital designer."
+  },
+  {
+    "objectID": "resources/hdl-coding-guidelines.html#overview",
+    "href": "resources/hdl-coding-guidelines.html#overview",
+    "title": "Best Practices for HDL Coding",
+    "section": "",
+    "text": "Writing HDL code seems similar to writing code that runs on a processor core in a programming language like C or Python. However, this impression is misleading and is the source of a great deal of confusion for many novice digital designers.\nThe number one, most important lesson you need to internalize before you write a line of HDL code is this: you absolutely, 100% must know what hardware you’re trying to imply before you write a line of code. If you just start writing code without having a clear idea of the hardware that you’re hoping to get at the end of the day (e.g., combinational logic blocks and flip-flops), you’re in for a world of hurt.\nThe tips and advice in this document are geared toward helping you become a knowledgeable digital designer."
+  },
+  {
+    "objectID": "resources/hdl-coding-guidelines.html#before-writing-code",
+    "href": "resources/hdl-coding-guidelines.html#before-writing-code",
+    "title": "Best Practices for HDL Coding",
+    "section": "Before Writing Code",
+    "text": "Before Writing Code"
+  },
+  {
+    "objectID": "resources/hdl-coding-guidelines.html#while-you-are-coding-your-design",
+    "href": "resources/hdl-coding-guidelines.html#while-you-are-coding-your-design",
+    "title": "Best Practices for HDL Coding",
+    "section": "While you are coding your design",
+    "text": "While you are coding your design"
+  },
+  {
+    "objectID": "resources/hdl-coding-guidelines.html#conventions",
+    "href": "resources/hdl-coding-guidelines.html#conventions",
+    "title": "Best Practices for HDL Coding",
+    "section": "Conventions",
+    "text": "Conventions\n\nFile Names\n\n\nModule Names\n\n\nSignal Names\n\n\nConstants\n\n\nIndenting\n\n\nCommenting"
+  },
+  {
+    "objectID": "resources/hdl-coding-guidelines.html#assignment-statements",
+    "href": "resources/hdl-coding-guidelines.html#assignment-statements",
+    "title": "Best Practices for HDL Coding",
+    "section": "Assignment Statements",
+    "text": "Assignment Statements"
+  },
+  {
+    "objectID": "resources/hdl-coding-guidelines.html#general-systemverilog-coding-practices",
+    "href": "resources/hdl-coding-guidelines.html#general-systemverilog-coding-practices",
+    "title": "Best Practices for HDL Coding",
+    "section": "General SystemVerilog Coding Practices",
+    "text": "General SystemVerilog Coding Practices"
+  },
+  {
+    "objectID": "resources/hdl-coding-guidelines.html#resources-for-learning-more",
+    "href": "resources/hdl-coding-guidelines.html#resources-for-learning-more",
+    "title": "Best Practices for HDL Coding",
+    "section": "Resources for Learning More",
+    "text": "Resources for Learning More\n\nIEEE SystemVerilog Standards\nBest Practices for HDL Coding from Paul Hummel"
   },
   {
     "objectID": "syllabus/index.html",
@@ -557,7 +683,7 @@
     "href": "syllabus/index.html#grading",
     "title": "E155 Course Syllabus",
     "section": "Grading",
-    "text": "Grading\nThe grading for this class is based on a variation of specifications-grading and may be a bit different than what you have seen in other classes. The grade you earn in the class will be determined based the number of deliverables you successfully complete and the level of polish to which you complete them across three different bundles:\n\nLabs\nProject\nIn-class reflections\n\nEach assignment will contain a list of specifications (or specs) for two levels of completeness: proficiency and excellence. The list of specifications are designed to be aligned with the learning goals for the assignment. The proficiency specifications will indicate the level of completeness that demonstrates that you have achieved a level of comfort with the material in the assignment such that you would be able to implement the learning outcomes in a different setting. Excellence specs are above and beyond proficiency specs. Meeting the excellence specs for an assignment indicates that you have not only achieved the basic level of expected knowledge of the material, but have truly understood and are able to apply the techniques with deftness.\nThe table below describes the levels that you need to meet in each bundle (i.e., column) in order to earn the grade in the respective row. To earn the grade in a given row, you must meet all the criteria in that row. In other words, to get a B, you must complete the following:\n\nAll 7 labs to the proficiency specs and 5 of those labs must meet the excellence specs.\nAll 5 project elements must meet proficiency specs and 4 of them must meet the excellence specs.\n\n\n\n\nGrade\nLabs\nProject\n\n\n\n\nF\nP &lt; 5\nP &lt; 4\n\n\nD\nP \\(\\geq\\) 5, E \\(\\geq\\) 1\nP \\(\\geq\\) 4\n\n\nC\nP \\(\\geq\\) 6, E \\(\\geq\\) 2\nP \\(\\geq\\) 4, E \\(\\geq\\) 2\n\n\nB\nP = 7, E \\(\\geq\\) 5\nP = 5, E \\(\\geq\\) 4\n\n\nA\nP = 7, E = 7\nP = 5, E = 5\n\n\n\nPerformance on the labs and project is weighted equally. +/- grades will be assigned for situations in which your performance falls between the conditions for each row.\nIn addition to the labs and projects, you will also write short (2-3 paragraph) reflections each week as a way of helping you to catalog your growth in the class. These informal reflections are designed to be published as blog posts on your portfolio website and along with your in-class participation on short quizzes can help to boost your grade in the class by up to half a letter grade (e.g., from a B- to a B or B+ to an A-). As one example, if you meet the requirements for an A in the labs bundle but the requirements for a B in the project bundle, you can expect to earn either a B+ or A-. In these situations, your in-class participation is a contributing factor to split the difference between the - of the higher tier and the + of the lower tier."
+    "text": "Grading\nThe grading for this class is based on a variation of specifications-grading and may be a bit different than what you have seen in other classes. The grade you earn in the class will be determined based the number of deliverables you successfully complete and the level of polish to which you complete them across three different bundles:\n\nLabs\nProject\nIn-class reflections\n\nEach assignment will contain a list of specifications (or specs) for two levels of completeness: proficiency and excellence. The list of specifications are designed to be aligned with the learning goals for the assignment. The proficiency specifications will indicate the level of completeness that demonstrates that you have achieved a level of comfort with the material in the assignment such that you would be able to implement the learning outcomes in a different setting. Excellence specs are above and beyond proficiency specs. Meeting the excellence specs for an assignment indicates that you have not only achieved the basic level of expected knowledge of the material, but have truly understood and are able to apply the techniques with deftness.\nThe table below describes the levels that you need to meet in each bundle (i.e., column) in order to earn the grade in the respective row. To earn the grade in a given row, you must meet all the criteria in that row. In other words, to get a B, you must complete the following:\n\nAll 7 labs to the proficiency specs and 5 of those labs must meet the excellence specs.\nAll 5 project elements must meet proficiency specs and 4 of them must meet the excellence specs.\n\n\n\n\nGrade\nLabs\nProject\n\n\n\n\nF\nP &lt; 5\nP &lt; 4\n\n\nD\nP \\(\\geq\\) 5, E \\(\\geq\\) 1\nP \\(\\geq\\) 4\n\n\nC\nP \\(\\geq\\) 6, E \\(\\geq\\) 2\nP \\(\\geq\\) 4, E \\(\\geq\\) 2\n\n\nB\nP = 7, E \\(\\geq\\) 5\nP = 5, E \\(\\geq\\) 4\n\n\nA\nP = 7, E = 7\nP = 5, E = 5\n\n\n\nPerformance on the labs and project is weighted equally. +/- grades will be assigned for situations in which your performance falls between the conditions for each row.\nIn addition to the labs and projects, you will also write short (2-3 paragraph) reflections each week as a way of helping you to catalog your growth in the class. These informal reflections are designed to be published as blog posts on your portfolio website and along with your in-class participation on short quizzes can help to boost your grade in the class by up to half a letter grade (e.g., from a B- to a B or B+ to an A-). A list of some ideas for potential blog topics can be found here. As one example, if you meet the requirements for an A in the labs bundle but the requirements for a B in the project bundle, you can expect to earn either a B+ or A-. In these situations, your in-class participation is a contributing factor to split the difference between the - of the higher tier and the + of the lower tier."
   },
   {
     "objectID": "syllabus/index.html#course-policies-honor-code",
@@ -581,60 +707,18 @@
     "text": "Educational Accessibility\nHMC is committed to providing an inclusive learning environment and support for all students. Students with a disability (including mental health, chronic or temporary medical conditions) who may need some accommodation in order to fully participate in this class are encouraged to contact Educational Accessibility Services at ability@g.hmc.edu to request accommodations. Students from the other Claremont Colleges should contact their home college’s disability resources officer."
   },
   {
-    "objectID": "resources/hdl-coding-guidelines.html",
-    "href": "resources/hdl-coding-guidelines.html",
-    "title": "Best Practices for HDL Coding",
+    "objectID": "resources/github-issue-footer.html",
+    "href": "resources/github-issue-footer.html",
+    "title": "HMC E155",
     "section": "",
-    "text": "Writing HDL code seems similar to writing code that runs on a processor core in a programming language like C or Python. However, this impression is misleading and is the source of a great deal of confusion for many novice digital designers.\nThe number one, most important lesson you need to internalize before you write a line of HDL code is this: you absolutely, 100% must know what hardware you’re trying to imply before you write a line of code. If you just start writing code without having a clear idea of the hardware that you’re hoping to get at the end of the day (e.g., combinational logic blocks and flip-flops), you’re in for a world of hurt.\nThe tips and advice in this document are geared toward helping you become a knowledgeable digital designer."
+    "text": "Share Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
   },
   {
-    "objectID": "resources/hdl-coding-guidelines.html#overview",
-    "href": "resources/hdl-coding-guidelines.html#overview",
-    "title": "Best Practices for HDL Coding",
+    "objectID": "resources/github-issue-footer.html#share-your-feedback",
+    "href": "resources/github-issue-footer.html#share-your-feedback",
+    "title": "HMC E155",
     "section": "",
-    "text": "Writing HDL code seems similar to writing code that runs on a processor core in a programming language like C or Python. However, this impression is misleading and is the source of a great deal of confusion for many novice digital designers.\nThe number one, most important lesson you need to internalize before you write a line of HDL code is this: you absolutely, 100% must know what hardware you’re trying to imply before you write a line of code. If you just start writing code without having a clear idea of the hardware that you’re hoping to get at the end of the day (e.g., combinational logic blocks and flip-flops), you’re in for a world of hurt.\nThe tips and advice in this document are geared toward helping you become a knowledgeable digital designer."
-  },
-  {
-    "objectID": "resources/hdl-coding-guidelines.html#before-writing-code",
-    "href": "resources/hdl-coding-guidelines.html#before-writing-code",
-    "title": "Best Practices for HDL Coding",
-    "section": "Before Writing Code",
-    "text": "Before Writing Code"
-  },
-  {
-    "objectID": "resources/hdl-coding-guidelines.html#while-you-are-coding-your-design",
-    "href": "resources/hdl-coding-guidelines.html#while-you-are-coding-your-design",
-    "title": "Best Practices for HDL Coding",
-    "section": "While you are coding your design",
-    "text": "While you are coding your design"
-  },
-  {
-    "objectID": "resources/hdl-coding-guidelines.html#conventions",
-    "href": "resources/hdl-coding-guidelines.html#conventions",
-    "title": "Best Practices for HDL Coding",
-    "section": "Conventions",
-    "text": "Conventions\n\nFile Names\n\n\nModule Names\n\n\nSignal Names\n\n\nConstants\n\n\nIndenting\n\n\nCommenting"
-  },
-  {
-    "objectID": "resources/hdl-coding-guidelines.html#assignment-statements",
-    "href": "resources/hdl-coding-guidelines.html#assignment-statements",
-    "title": "Best Practices for HDL Coding",
-    "section": "Assignment Statements",
-    "text": "Assignment Statements"
-  },
-  {
-    "objectID": "resources/hdl-coding-guidelines.html#general-systemverilog-coding-practices",
-    "href": "resources/hdl-coding-guidelines.html#general-systemverilog-coding-practices",
-    "title": "Best Practices for HDL Coding",
-    "section": "General SystemVerilog Coding Practices",
-    "text": "General SystemVerilog Coding Practices"
-  },
-  {
-    "objectID": "resources/hdl-coding-guidelines.html#resources-for-learning-more",
-    "href": "resources/hdl-coding-guidelines.html#resources-for-learning-more",
-    "title": "Best Practices for HDL Coding",
-    "section": "Resources for Learning More",
-    "text": "Resources for Learning More\n\nIEEE SystemVerilog Standards\nBest Practices for HDL Coding from Paul Hummel"
+    "text": "Share Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
   },
   {
     "objectID": "resources/how-to-create-a-github-issue.html",
