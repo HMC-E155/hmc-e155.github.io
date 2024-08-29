@@ -74,8 +74,12 @@ This will render the files in your project and open a new browser window display
 
 If you do this with the default files we've created so far you'll see something that looks like this.
 
+::: {#fig-rendered-website-screenshot}
+
 ![](images/rendered-website-screenshot.png)
 
+Screenshot of initial rendered website.
+:::
 
 ### Making Your First Edit
 
