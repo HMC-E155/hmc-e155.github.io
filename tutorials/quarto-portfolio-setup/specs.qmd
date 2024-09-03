@@ -7,33 +7,19 @@ format:
 
 ### Overall Site
 
-- [ ] Matches required folder structure
-- [ ] Navbar has links to Home, Labs, and Blog pages.
-- [ ] Simple folder structure with no extraneous pages (e.g., delete the `about.qmd` page that was created by default and will be unused)
+- [ ] Matches required folder structure with no extraneous pages (e.g., delete the `about.qmd` page that was created by default and will be unused)
+- [ ] Navbar includes, at minimum, links to Home, Labs, Resources, and Blog pages. (Additional pages are fine.)
 - [ ] `.gitignore` file with appropriate entries to prevent Quarto render files from being committed to version control (e.g., ignore `.quarto/` and `_site`).
 
-### Home Page
+- [ ] Home page contains headshot
+- [ ] Home page contains short bio
+- [ ] Home page contains link to other web presence (LinkedIn and Github at minimum)
 
-- [ ] Contains headshot
-- [ ] Contains short bio
-- [ ] Contains link to other web presence (LinkedIn and Github at minimum)
-
-### Labs Page
-
-- [ ] Is linked in the navbar
-- [ ] Contains a list of the labs for the semester along with titles (e.g., Lab 1: FPGA and MCU Setup and Testing) as `h2` headings (i.e., put a `##` in front of the text in your `.qmd` file)
-
-### Resources Page
-
-- [ ] Is linked in the navbar
-- [ ] Contains link to the course website
-
-### Blog Page
-
-- [ ] Is linked in the navbar
-- [ ] Contains initial learning goals post (autopopulated from file in `posts/` folder)
+- [ ] Labs page contains a list of the labs for the semester along with titles (e.g., Lab 1: FPGA and MCU Setup and Testing) as `h2` headings (i.e., put a `##` in front of the text in your `.qmd` file)
+- [ ] Resources page contains link to the course website
+- [ ] Blog page contains an initial reflections post (topic is up to you, but you might consider sharing some of your goals for the semester in MicroPs) (autopopulated from file in `posts/` folder)
 
 ### Misc
 
-- [ ] Site is published either to Quarto Hub (recommended) or Github Pages
+- [ ] Site is published and live on the web
 - [ ] Site is checked into version control and pushed to repository on Github
