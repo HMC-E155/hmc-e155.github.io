@@ -6,8 +6,8 @@ See the list below for links to lecture slides and handouts. Slides and handouts
 
 * Lecture 1: Introduction and Analog Behavior of Digital Systems [[slides](./slides/lecture-01-slides.pdf)] [[handout](./slides/lecture-01-handout.pdf)]
 * Lecture 2: Combinational and Sequential Logic [[slides](./slides/lecture-02-slides.pdf)] [[handout](./slides/lecture-02-handout.pdf)]
-<!--* Lecture 3: Verilog [[slides](./slides/lecture-03-slides.pdf)] [[handout](./slides/lecture-03-handout.pdf)]
-* Lecture 4: Synchronous Design [[slides](./slides/lecture-04-slides.pdf)] [[handout](./slides/lecture-04-handout.pdf)]
+* Lecture 3: Verilog Review [[slides](./slides/lecture-03-slides.pdf)] [[handout](./slides/lecture-03-handout.pdf)]
+<!--* Lecture 4: Synchronous Design [[slides](./slides/lecture-04-slides.pdf)] [[handout](./slides/lecture-04-handout.pdf)]
 * Lecture 5: FPGA Documentation [[slides](./slides/lecture-05-slides.pdf)] [[handout](./slides/lecture-05-handout.pdf)]
 * Lecture 6: Introduction to the STM32 L432KC MCU [[slides](./slides/lecture-06-slides.pdf)] [[handout](./slides/lecture-06-handout.pdf)]
 * Lecture 7: ARM Assembly Programming [[slides](./slides/lecture-07-slides.pdf)] [[handout](./slides/lecture-07-handout.pdf)]
