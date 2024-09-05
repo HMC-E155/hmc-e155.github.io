@@ -2,9 +2,13 @@
 title: "Lab"
 ---
 
+## Lab Admin
+
 A Google Sheet for scheduling lab checkoffs can be found [here]({{< var lab-checkoff-gsheet-url >}}). (g.hmc credentials required)
 
 Any code for the labs may be found on the [E155 course Github repository]({{< var github-url >}}).
+
+## List of E155 Labs
 
 * [Lab 1 - Board Assembly and Testing](/lab/lab1)
 * [Lab 2 - Multiplexed 7-Segment Display](/lab/lab2)
@@ -15,3 +19,7 @@ Any code for the labs may be found on the [E155 course Github repository]({{< va
   * [DS1722 Datasheet](https://datasheets.maximintegrated.com/en/ds/DS1722.pdf)
   * [Serial Protocol Decoding on the RIGOL MSO1104z](/assets/lab/Serial Protocol Decoding on the RIGOL MSO1104z.pdf)
 * [Lab 7 - The Advanced Encryption Standard (AES)](/lab/lab7)
+
+## Lab Report Template
+
+You can find a template [here](./lab-report-template/lab-report-template.qmd) which provides a template for the content and format for the short reports which should accompany each of your labs.
