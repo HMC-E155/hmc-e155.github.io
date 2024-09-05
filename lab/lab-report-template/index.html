@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Resources – HMC E155</title>
+<title>Annotated Lab Report Template – HMC E155</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="..//assets/img/microps-logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../..//assets/img/microps-logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -77,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">HMC E155</span>
     </a>
   </div>
@@ -88,11 +117,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../syllabus/"> 
+    <a class="nav-link" href="../../syllabus/"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -101,57 +130,57 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
         <li>
-    <a class="dropdown-item" href="../lab/">
+    <a class="dropdown-item" href="../../lab/">
  <span class="dropdown-text">Labs Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/specs/">
+    <a class="dropdown-item" href="../../lab/specs/">
  <span class="dropdown-text">Lab Specs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab-report-template/">
+    <a class="dropdown-item" href="../../lab/lab-report-template/">
  <span class="dropdown-text">Lab Report Template</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab1/">
+    <a class="dropdown-item" href="../../lab/lab1/">
  <span class="dropdown-text">Lab 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab2/">
+    <a class="dropdown-item" href="../../lab/lab2/">
  <span class="dropdown-text">Lab 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab3/">
+    <a class="dropdown-item" href="../../lab/lab3/">
  <span class="dropdown-text">Lab 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab4/">
+    <a class="dropdown-item" href="../../lab/lab4/">
  <span class="dropdown-text">Lab 4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab5/">
+    <a class="dropdown-item" href="../../lab/lab5/">
  <span class="dropdown-text">Lab 5</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab6/">
+    <a class="dropdown-item" href="../../lab/lab6/">
  <span class="dropdown-text">Lab 6</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab7/">
+    <a class="dropdown-item" href="../../lab/lab7/">
  <span class="dropdown-text">Lab 7</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../lecture/"> 
+    <a class="nav-link" href="../../lecture/"> 
 <span class="menu-text">Lecture</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../project/"> 
+    <a class="nav-link" href="../../project/"> 
 <span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../resources/"> 
+    <a class="nav-link" href="../../resources/"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -160,31 +189,31 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
         <li>
-    <a class="dropdown-item" href="../tutorials/tutorial-videos/">
+    <a class="dropdown-item" href="../../tutorials/tutorial-videos/">
  <span class="dropdown-text">Tutorial Videos</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/git-setup/">
+    <a class="dropdown-item" href="../../tutorials/git-setup/">
  <span class="dropdown-text">Git Setup</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/quarto-portfolio-setup/">
+    <a class="dropdown-item" href="../../tutorials/quarto-portfolio-setup/">
  <span class="dropdown-text">Quarto Portfolio Setup</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/lattice-radiant-installation/">
+    <a class="dropdown-item" href="../../tutorials/lattice-radiant-installation/">
  <span class="dropdown-text">Lattice Radiant Installation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/lattice-radiant-ice40-ultraplus-project-setup/">
+    <a class="dropdown-item" href="../../tutorials/lattice-radiant-ice40-ultraplus-project-setup/">
  <span class="dropdown-text">ice40 Project Setup</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/modelsim-simulation-tutorial/">
+    <a class="dropdown-item" href="../../tutorials/modelsim-simulation-tutorial/">
  <span class="dropdown-text">QuestaSim/ModelSim Tutorial</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tutorials/segger-embedded-studio-setup">
+    <a class="dropdown-item" href="../../tutorials/segger-embedded-studio-setup">
  <span class="dropdown-text">SEGGER Embedded Studio Tutorial</span></a>
   </li>  
     </ul>
@@ -207,25 +236,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#e155-development-board" id="toc-e155-development-board" class="nav-link active" data-scroll-target="#e155-development-board">E155 Development Board</a></li>
-  <li><a href="#nucleo-stm32-documentation" id="toc-nucleo-stm32-documentation" class="nav-link" data-scroll-target="#nucleo-stm32-documentation">Nucleo &amp; STM32 Documentation</a></li>
-  <li><a href="#upduino-v3.1-ice40-up5k-documentation" id="toc-upduino-v3.1-ice40-up5k-documentation" class="nav-link" data-scroll-target="#upduino-v3.1-ice40-up5k-documentation">UPduino v3.1 &amp; iCE40 UP5K Documentation</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#design-and-testing-methodology" id="toc-design-and-testing-methodology" class="nav-link" data-scroll-target="#design-and-testing-methodology">Design and Testing Methodology</a></li>
+  <li><a href="#technical-documentation" id="toc-technical-documentation" class="nav-link" data-scroll-target="#technical-documentation">Technical Documentation:</a>
   <ul class="collapse">
-  <li><a href="#open-source-toolchain-for-ice40" id="toc-open-source-toolchain-for-ice40" class="nav-link" data-scroll-target="#open-source-toolchain-for-ice40">Open Source Toolchain for iCE40</a></li>
+  <li><a href="#block-diagram" id="toc-block-diagram" class="nav-link" data-scroll-target="#block-diagram">Block Diagram</a></li>
+  <li><a href="#schematic" id="toc-schematic" class="nav-link" data-scroll-target="#schematic">Schematic</a></li>
   </ul></li>
-  <li><a href="#embedded-systems-related-newsletters" id="toc-embedded-systems-related-newsletters" class="nav-link" data-scroll-target="#embedded-systems-related-newsletters">Embedded Systems Related Newsletters</a></li>
-  <li><a href="#systemverilog-resources" id="toc-systemverilog-resources" class="nav-link" data-scroll-target="#systemverilog-resources">SystemVerilog Resources</a></li>
-  <li><a href="#c-programming" id="toc-c-programming" class="nav-link" data-scroll-target="#c-programming">C Programming</a></li>
-  <li><a href="#arm-assembly-quick-reference-cards" id="toc-arm-assembly-quick-reference-cards" class="nav-link" data-scroll-target="#arm-assembly-quick-reference-cards">ARM Assembly Quick Reference Cards</a></li>
-  <li><a href="#textbook-resources" id="toc-textbook-resources" class="nav-link" data-scroll-target="#textbook-resources">Textbook Resources</a></li>
-  <li><a href="#general-resources" id="toc-general-resources" class="nav-link" data-scroll-target="#general-resources">General Resources</a></li>
-  <li><a href="#part-datasheets" id="toc-part-datasheets" class="nav-link" data-scroll-target="#part-datasheets">Part Datasheets</a></li>
-  <li><a href="#helpful-web-links" id="toc-helpful-web-links" class="nav-link" data-scroll-target="#helpful-web-links">Helpful Web Links</a>
+  <li><a href="#results-and-discussion" id="toc-results-and-discussion" class="nav-link" data-scroll-target="#results-and-discussion">Results and Discussion</a>
   <ul class="collapse">
-  <li><a href="#past-versions-of-e155" id="toc-past-versions-of-e155" class="nav-link" data-scroll-target="#past-versions-of-e155">Past versions of E155</a></li>
+  <li><a href="#testbench-simulation" id="toc-testbench-simulation" class="nav-link" data-scroll-target="#testbench-simulation">Testbench Simulation</a></li>
   </ul></li>
-  <li><a href="#textbook-links" id="toc-textbook-links" class="nav-link" data-scroll-target="#textbook-links">Textbook Links</a></li>
-  <li><a href="#vendors" id="toc-vendors" class="nav-link" data-scroll-target="#vendors">Vendors</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -234,7 +256,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Resources</h1>
+<h1 class="title">Annotated Lab Report Template</h1>
 </div>
 
 
@@ -251,135 +273,145 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="e155-development-board" class="level2">
-<h2 class="anchored" data-anchor-id="e155-development-board">E155 Development Board</h2>
-<ul>
-<li><a href="../assets/doc/E155 Development Board Schematic.pdf">E155 Development Board Schematic</a></li>
-<li><a href="../assets/doc/E155 Breadboard Adapter Schematic.pdf">E155 Breadboard Adapter Schematic</a></li>
-<li><a href="../assets/doc/E155_FA23_Dev_Board_BOM.html">E155 Development Board BOM</a></li>
-</ul>
+<div class="callout callout-style-default callout-tip callout-titled" title="Annotated Report Template">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Annotated Report Template
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The following is a template to clarify what should be part of the writeup you post for each lab you complete. It is a sample report written to explain a simple FPGA blink demo. Each section contains a brief explanation of the purpose of the section and the information that should be included in it.</p>
+</div>
+</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Introduction">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Introduction
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Briefly explain what was done.</p>
+</div>
+</div>
+<p>In this lab, a design was implemented on the FPGA to demonstrate the functionality of the on-board high-speed oscillator by blinking one of the on-board LEDs. The high speed oscillator was configured at a frequency of 24 MHz and divided down using a counter to achieve a blinking frequency of ~1.5 Hz.</p>
 </section>
-<section id="nucleo-stm32-documentation" class="level2">
-<h2 class="anchored" data-anchor-id="nucleo-stm32-documentation">Nucleo &amp; STM32 Documentation</h2>
-<ul>
-<li><a href="../assets/doc/ds11451-stm32l432kc.pdf">STM32L432KC Datasheet</a></li>
-<li><a href="../assets/doc/rm0394-stm32l41xxx42xxx43xxx44xxx45xxx46xxx-advanced-armbased-32bit-mcus-stmicroelectronics.pdf">STM32L432KC Reference Manual</a></li>
-<li><a href="../assets/doc/pm0214-stm32-cortexm4-mcus-and-mpus-programming-manual-stmicroelectronics.pdf">STM32L432KC Programming Manual</a></li>
-<li><a href="../assets/doc/um1956-stm32-nucleo32-boards-mb1180-stmicroelectronics.pdf">STM32 Nucleo-32 User Manual</a></li>
-<li><a href="../assets/doc/DDI0439B_cortex_m4_r0p0.pdf">Cortex-M4 Technical Reference Manual</a></li>
-<li><a href="../assets/doc/DDI0403E_B_armv7m_arm.pdf">ARMv7-M Architecture Reference Manual</a></li>
-</ul>
+<section id="design-and-testing-methodology" class="level2">
+<h2 class="anchored" data-anchor-id="design-and-testing-methodology">Design and Testing Methodology</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Design and Testing Methodology">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Design and Testing Methodology
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Explain how you approached the design of this assignment from both a software and a hardware standpoint (as appropriate). Include how you tested your design. These tests should convince the reader that the requirements of the assignment have been met.</p>
+</div>
+</div>
+<p>The on-board high-speed oscillator (<code>HSOSC</code>) from the iCE40 UltraPlus primitive library was used to generate a clock signal at 24 MHz. Then, a counter was used to divide the high frequency clock signal down so that the blinking frequency could be easily visualized using one of the on-board LEDs.</p>
+<p>The design was developed using a simple clock divider module which drives the external LED.</p>
 </section>
-<section id="upduino-v3.1-ice40-up5k-documentation" class="level2">
-<h2 class="anchored" data-anchor-id="upduino-v3.1-ice40-up5k-documentation">UPduino v3.1 &amp; iCE40 UP5K Documentation</h2>
-<ul>
-<li><a href="../assets/doc/FPGA-DS-02008-2-0-iCE40-UltraPlus-Family-Data-Sheet.pdf">iCE40 UltraPlus Family Data Sheet</a></li>
-<li><a href="../assets/doc/FPGA-TN-02008-1-7-iCE40-Oscillator-Usage-Guide.pdf">iCE40 Oscillator Usage Guide</a></li>
-<li><a href="../assets/doc/FPGA-TN-02022-1-3-iCE40-SPRAM-Usage-Guide.pdf">iCE40 SPRAM Usage Guide</a></li>
-<li><a href="../assets/doc/FPGA-TN-02026-3-2-iCE40-Technology-Library.pdf">iCE40 Technology Library</a>
-<ul>
-<li><a href="../assets/doc/Radiant20_migration_icecube2.pdf">Note on translating from iCEcube2 naming to Radiant</a></li>
-</ul></li>
-<li><a href="https://upduino.readthedocs.io/en/latest/index.html#">UPduino Documentation</a>
-<ul>
-<li><a href="https://upduino.readthedocs.io/en/latest/features/specs.html#upduino-pinout">UPduino v3.1 Pinout</a></li>
-<li><a href="../assets/doc/UPduino_v3.0.pdf">UPduino v3.1 Schematic</a></li>
-</ul></li>
-</ul>
-<section id="open-source-toolchain-for-ice40" class="level3">
-<h3 class="anchored" data-anchor-id="open-source-toolchain-for-ice40">Open Source Toolchain for iCE40</h3>
-<ul>
-<li><a href="https://apiodoc.readthedocs.io">apio</a></li>
-<li><a href="http://bygone.clairexen.net/icestorm/">Project IceStorm</a></li>
-<li><a href="https://github.com/YosysHQ">OSS CAD Suite</a></li>
-<li><a href="https://www.youtube.com/watch?v=lLg1AgA2Xoo&amp;list=PLEBQazB0HUyT1WmMONxRZn9NmQ_9CIKhb">Shawn Hymel Introduction to FPGA YouTube Series</a></li>
-</ul>
+<section id="technical-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="technical-documentation">Technical Documentation:</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Technical Documentation">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Technical Documentation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Include a link to a Git repository with your Verilog code, a block diagram of your design, and schematics of your circuits.</p>
+</div>
+</div>
+<p>The source code for the project can be found in the associated <a href="https://github.com/HMC-E155/fpga-blink-test-demo">Github repository</a>.</p>
+<section id="block-diagram" class="level3">
+<h3 class="anchored" data-anchor-id="block-diagram">Block Diagram</h3>
+<div id="fig-block-diagram" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-block-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/block-diagram.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-block-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Block diagram of the Verilog design.
+</figcaption>
+</figure>
+</div>
+<p>The block diagram in <a href="#fig-block-diagram" class="quarto-xref">Figure&nbsp;1</a> demonstrates the overall architecture of the design. The top-level module <code>top</code> includes two submodules: the high-speed oscillator block (<code>HSOSC</code>) and the clock divider module (<code>clk_divider</code>).</p>
 </section>
-</section>
-<section id="embedded-systems-related-newsletters" class="level2">
-<h2 class="anchored" data-anchor-id="embedded-systems-related-newsletters">Embedded Systems Related Newsletters</h2>
-<ul>
-<li><a href="http://www.ganssle.com/tem-subunsub.html">The Embedded Muse</a></li>
-<li><a href="https://embedsysweekly.com">Embedded Systems Weekly</a></li>
-</ul>
-</section>
-<section id="systemverilog-resources" class="level2">
-<h2 class="anchored" data-anchor-id="systemverilog-resources">SystemVerilog Resources</h2>
-<ul>
-<li><a href="https://sutherland-hdl.com/papers/2013-SNUG-SV_Synthesizable-SystemVerilog_paper.pdf">Synthesizing SystemVerilog: Busting the Myth that SystemVerilog is only for Verification</a></li>
-<li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&amp;arnumber=8299595">IEEE Standard for SystemVerilog (IEEE Std 1800-2017)</a></li>
-</ul>
-</section>
-<section id="c-programming" class="level2">
-<h2 class="anchored" data-anchor-id="c-programming">C Programming</h2>
-<ul>
-<li><a href="http://pages.hmc.edu/harris/class/e85/old/fall21/12_AppC_Online.pdf">Appendix C from Digital Design and Computer Architecture: ARM Edition</a></li>
-</ul>
-</section>
-<section id="arm-assembly-quick-reference-cards" class="level2">
-<h2 class="anchored" data-anchor-id="arm-assembly-quick-reference-cards">ARM Assembly Quick Reference Cards</h2>
-<ul>
-<li><a href="../assets/doc/QRC0001_UAL.pdf">ARM® and Thumb®-2 Instruction Set Quick Reference Card</a></li>
-<li><a href="../assets/doc/QRC0006_UAL16.pdf">Thumb® 16-bit Instruction Set Quick Reference Card</a></li>
-</ul>
-</section>
-<section id="textbook-resources" class="level2">
-<h2 class="anchored" data-anchor-id="textbook-resources">Textbook Resources</h2>
-<ul>
-<li><a href="http://pages.hmc.edu/harris/class/e155/09_Ch%2009_online.pdf">DDCA ARMed: Ch 9. I/O Systems</a></li>
-</ul>
-</section>
-<section id="general-resources" class="level2">
-<h2 class="anchored" data-anchor-id="general-resources">General Resources</h2>
-<ul>
-<li><a href="../resources/blog-reflection-ideas.html">Blog Reflection Ideas</a></li>
-<li><a href="https://learn.adafruit.com/adafruit-guide-excellent-soldering/common-problems">Adafruit Guide to Excellent Soldering</a></li>
-<li><a href="https://www.k-state.edu/edl/docs/pubs/technical-resources/Technote8.pdf">Guidelines for Drawing Schematics</a></li>
-</ul>
-</section>
-<section id="part-datasheets" class="level2">
-<h2 class="anchored" data-anchor-id="part-datasheets">Part Datasheets</h2>
-<ul>
-<li><a href="https://www.ti.com/lit/an/szza036c/szza036c.pdf">Understanding and Interpreting Standard-Logic Data Sheets</a> is a helpful Application Report from Texas Instruments which provides explanations about the information on a standard logic chip data sheet.</li>
-<li><a href="https://www.ti.com/lit/ds/symlink/lm386.pdf">LM386 Datasheet</a><br>
-</li>
-<li><a href="https://ww1.microchip.com/downloads/en/DeviceDoc/22244B.pdf">MCP4801 Datasheet</a></li>
-<li><a href="../assets/doc/2N3906-D.pdf">2N3906 PNP Transistor Datasheet</a></li>
-<li><a href="../assets/doc/MAN64x0 Series.pdf">MAN6410 Common Anode Seven-segment Display Datasheet</a></li>
-<li><a href="../assets/doc/Keypad_Pinout_Adafruit_3845.jpg">Adafruit 3x4 Keypad Pinout</a></li>
-</ul>
-</section>
-<section id="helpful-web-links" class="level2">
-<h2 class="anchored" data-anchor-id="helpful-web-links">Helpful Web Links</h2>
-<section id="past-versions-of-e155" class="level3">
-<h3 class="anchored" data-anchor-id="past-versions-of-e155">Past versions of E155</h3>
-<ul>
-<li><a href="http://pages.hmc.edu/harris/class/e155/">FA19</a></li>
-<li><a href="http://pages.hmc.edu/brake/class/e155/fa20">FA20</a></li>
-<li><a href="http://pages.hmc.edu/brake/class/e155/fa21">FA21</a></li>
-<li><a href="http://pages.hmc.edu/brake/class/e155/fa22">FA22</a></li>
-</ul>
+<section id="schematic" class="level3">
+<h3 class="anchored" data-anchor-id="schematic">Schematic</h3>
+<div id="fig-schematic" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-schematic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/schematic.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-schematic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Schematic of the physical circuit.
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-schematic" class="quarto-xref">Figure&nbsp;2</a> shows the physical layout of the design. An internal 100 k<span class="math inline">\(\Omega\)</span> pullup resistor was used to ensure the active low reset pin was not floating. The output LED was connected using a 1 k<span class="math inline">\(\Omega\)</span> current-limiting resistor to ensure the output current (~2.6 mA) did not exceed the maximum output current of the FPGA I/O pins.</p>
 </section>
 </section>
-<section id="textbook-links" class="level2">
-<h2 class="anchored" data-anchor-id="textbook-links">Textbook Links</h2>
-<ul>
-<li><a href="https://ccl.on.worldcat.org/oclc/900028206">Digital Design and Computer Architecture</a></li>
-<li><a href="https://ccl.on.worldcat.org/oclc/868231734">The Definitive Guide to ARM® Cortex®-M3 and Cortex®-M4 Processors</a></li>
-<li><a href="https://libguides.libraries.claremont.edu/662">O’Reilly Safari Learning Platform: Academic edition</a>
-<ul>
-<li><a href="https://learning.oreilly.com/library/view/expert-c-programming/0131774298/">Expert C Programming</a></li>
-</ul></li>
-</ul>
+<section id="results-and-discussion" class="level2">
+<h2 class="anchored" data-anchor-id="results-and-discussion">Results and Discussion</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Results and Discussion">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Results and Discussion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Did you accomplish all of the prescribed tasks? If not, what are the shortcomings? How might you address them given more time? As appropriate, how did the design perform (e.g., How fast/accurate/reliable was it?).</p>
+</div>
+</div>
+<section id="testbench-simulation" class="level3">
+<h3 class="anchored" data-anchor-id="testbench-simulation">Testbench Simulation</h3>
+<div id="fig-testbench" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-testbench-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/testbench-screenshot.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-testbench-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: A screenshot of a QuestaSim simulation demonstrating the blinking output signal. Note that the timescale for the clock divider was modified to divide by 4.
+</figcaption>
+</figure>
+</div>
+<p>The design met all intended design objectives. <a href="#fig-testbench" class="quarto-xref">Figure&nbsp;3</a> shows a screenshot of the QuestaSim simulation. If a more precise output frequency was desired, a more sophisticated counter could be developed. The current design only allows for the clock to be divided by powers of two.</p>
 </section>
-<section id="vendors" class="level2">
-<h2 class="anchored" data-anchor-id="vendors">Vendors</h2>
-<ul>
-<li><a href="http://www.sparkfun.com/">SparkFun</a></li>
-<li><a href="http://www.adafruit.com/">Adafruit</a></li>
-<li><a href="http://www.digikey.com/">Digikey</a></li>
-<li><a href="http://www.mouser.com/">Mouser</a></li>
-</ul>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Conclusion">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Conclusion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Briefly summarize what was done and how it performed. Also note how many hours you spent working on the lab.</p>
+</div>
+</div>
+<p>The design successfully blinked an external LED using the on-board high-speed oscillator. I spent a total of two hours working on this lab.</p>
 
 
 </section>
