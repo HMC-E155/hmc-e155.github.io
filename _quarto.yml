@@ -26,6 +26,8 @@ website:
           href: lab/
         - text: Lab Specs
           href: lab/specs/
+        - text: Lab Report Template
+          href: lab/lab-report-template/
         - text: Lab 1
           href: lab/lab1/
         - text: Lab 2

@@ -1,5 +1,8 @@
 ---
 title: Annotated Lab Report Template
+format:
+  html:
+    output-file: index.html
 ---
 
 ::: {.callout-tip title="Annotated Report Template"}
@@ -10,7 +13,7 @@ Each section contains a brief explanation of the purpose of the section and the 
 
 ## Introduction
 
-::: {.callout-note title="Introduction" collapse="true"}
+::: {.callout-note title="Introduction" }
 Briefly explain what was done.
 :::
 
@@ -19,7 +22,7 @@ The high speed oscillator was configured at a frequency of 24 MHz and divided do
 
 ## Design and Testing Methodology
 
-::: {.callout-note title="Design and Testing Methodology" collapse="true"}
+::: {.callout-note title="Design and Testing Methodology" }
 Explain how you approached the design of this assignment from both a software and a hardware standpoint (as appropriate). Include how you tested your design. These tests should convince the reader that the requirements of the assignment have been met.
 :::
 
@@ -30,11 +33,11 @@ The design was developed using a simple clock divider module which drives the ex
 
 ## Technical Documentation:
 
-::: {.callout-note title="Technical Documentation" collapse="true"}
+::: {.callout-note title="Technical Documentation" }
 Include a link to a Git repository with your Verilog code, a block diagram of your design, and schematics of your circuits.
 :::
 
-The source code for the project can be found in the associated Github repository.
+The source code for the project can be found in the associated [Github repository](https://github.com/HMC-E155/fpga-blink-test-demo).
 
 ### Block Diagram
 
@@ -60,7 +63,7 @@ The output LED was connected using a 1 k$\Omega$ current-limiting resistor to en
 
 ## Results and Discussion
 
-::: {.callout-note title="Results and Discussion" collapse="true"}
+::: {.callout-note title="Results and Discussion" }
 Did you accomplish all of the prescribed tasks? If not, what are the shortcomings? How might you address them given more time? As appropriate, how did the design perform (e.g., How fast/accurate/reliable was it?).
 :::
 
@@ -80,7 +83,7 @@ The current design only allows for the clock to be divided by powers of two.
 
 ## Conclusion
 
-::: {.callout-note title="Conclusion" collapse="true"}
+::: {.callout-note title="Conclusion" }
 Briefly summarize what was done and how it performed. Also note how many hours you spent working on the lab.
 :::
 
