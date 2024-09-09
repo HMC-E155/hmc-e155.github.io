@@ -61,3 +61,11 @@
 **Lab Writeup/Summary**
 
 - [ ] Writeup is free of spelling and grammar issues
+
+### Comments
+
+Add specific notes here about the assignment.
+
+<textarea style="width: 100%" id="comments" name="comments" rows="10" cols="10">
+
+</textarea>
