@@ -1397,7 +1397,7 @@
     "href": "lecture/index.html",
     "title": "Lecture",
     "section": "",
-    "text": "See the list below for links to lecture slides and handouts. Slides and handouts will normally be posted shortly before each class period.\n\nLecture 1: Introduction and Analog Behavior of Digital Systems [slides] [handout]\nLecture 2: Combinational and Sequential Logic [slides] [handout]\nLecture 3: Verilog Review [slides] [handout] Lecture 4: Synchronous Design [slides] [handout]"
+    "text": "See the list below for links to lecture slides and handouts. Slides and handouts will normally be posted shortly before each class period.\n\nLecture 1: Introduction and Analog Behavior of Digital Systems [slides] [handout]\nLecture 2: Combinational and Sequential Logic [slides] [handout]\nLecture 3: Verilog Review [slides] [handout] Lecture 4: Synchronous Design [slides] [handout]\nLecture 5: FPGA Documentation [slides] [handout]"
   },
   {
     "objectID": "project/specs/project-midpoint-specs.html",
