@@ -188,41 +188,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link" href="../../resources/"> 
 <span class="menu-text">Resources</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Tutorials</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
-        <li>
-    <a class="dropdown-item" href="../../tutorials/tutorial-videos/">
- <span class="dropdown-text">Tutorial Videos</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../tutorials/"> 
+<span class="menu-text">Tutorials</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/git-setup/">
- <span class="dropdown-text">Git Setup</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/quarto-portfolio-setup/">
- <span class="dropdown-text">Quarto Portfolio Setup</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/lattice-radiant-installation/">
- <span class="dropdown-text">Lattice Radiant Installation</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/lattice-radiant-ice40-ultraplus-project-setup/">
- <span class="dropdown-text">ice40 Project Setup</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/modelsim-simulation-tutorial/">
- <span class="dropdown-text">QuestaSim/ModelSim Tutorial</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/segger-embedded-studio-setup">
- <span class="dropdown-text">SEGGER Embedded Studio Tutorial</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -275,7 +244,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#share-your-feedback" id="toc-share-your-feedback" class="nav-link" data-scroll-target="#share-your-feedback">Share Your Feedback</a></li>
   </ul>
-<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="./specs.html"><i class="bi bi-file-earmark-check"></i>Specifications</a></li><li><a href="./ai-prototype.html"><i class="bi bi-robot"></i>AI Prototype</a></li><li><a href="/assets/doc/FPGA-DS-02008-2-0-iCE40-UltraPlus-Family-Data-Sheet.pdf"><i class="bi bi-link-45deg"></i>iCE40 UltraPlus Family Data Sheet</a></li><li><a href="/tutorials/lattice-radiant-installation/"><i class="bi bi-link-45deg"></i>Lattice Radiant Installation Tutorial</a></li><li><a href="/tutorials/lattice-radiant-ice40-ultraplus-project-setup"><i class="bi bi-link-45deg"></i>Lattice Radiant iCE40 Project Setup</a></li><li><a href="/assets/doc/E155_v4_Dev_Board_BOM.html"><i class="bi bi-link-45deg"></i>Interactive Dev Board BOM</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab01"><i class="bi bi-github"></i>Starter Code</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="./specs.html"><i class="bi bi-file-earmark-check"></i>Specifications</a></li><li><a href="./ai-prototype.html"><i class="bi bi-robot"></i>AI Prototype</a></li><li><a href="/assets/doc/FPGA-DS-02008-2-0-iCE40-UltraPlus-Family-Data-Sheet.pdf"><i class="bi bi-link-45deg"></i>iCE40 UltraPlus Family Data Sheet</a></li><li><a href="/tutorials/tutorial-posts/lattice-radiant-installation/"><i class="bi bi-link-45deg"></i>Lattice Radiant Installation Tutorial</a></li><li><a href="/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup"><i class="bi bi-link-45deg"></i>Lattice Radiant iCE40 Project Setup</a></li><li><a href="/assets/doc/E155_v4_Dev_Board_BOM.html"><i class="bi bi-link-45deg"></i>Interactive Dev Board BOM</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab01"><i class="bi bi-github"></i>Starter Code</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -544,7 +513,7 @@ Testing Voltage Regulators
 <section id="testing-the-boards" class="level2">
 <h2 class="anchored" data-anchor-id="testing-the-boards">Testing the Boards</h2>
 <p>To test the boards, you will upload a simple design to the FPGA which toggles an LED on and off and some code on the MCU to read in the toggling GPIO pin and echo is back to the FPGA. This will ensure that the board is working properly and that you have good communication between the two devices.</p>
-<p>To familiarize yourself with how to program the FPGA using Lattice Radiant, see the <a href="../../tutorials/lattice-radiant-ice40-ultraplus-project-setup/">Lattice Radiant iCE40 UltraPlus Project Setup</a> tutorial. This tutorial has information about how to create a project in Radiant and how to synthesize and upload designs to your FPGA board.</p>
+<p>To familiarize yourself with how to program the FPGA using Lattice Radiant, see the <a href="../../tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup">Lattice Radiant iCE40 UltraPlus Project Setup</a> tutorial. This tutorial has information about how to create a project in Radiant and how to synthesize and upload designs to your FPGA board.</p>
 <p>After working through the tutorial, download the Radiant project file <code>fpga_dev_board_test.zip</code> under the Lab 1 subfolder from <a href="https://github.com/HMC-E155/hmc-e155">the course GitHub</a> and use it to program your FPGA. This design toggles pin P25 at about 1 Hz. If you have the switch properly set on SW7, P25 is connected to PA9 and so you will see LED D3 blinking.</p>
 <p>After programming your FPGA, the next step is to upload the code to the MCU that will read the value of the toggled LED from the FPGA and echo it back on another pin. See the tutorial titled “Segger Embedded Studio Setup” to familiarize yourself with the process of installing and setting up SEGGER Embedded Studio (SES). If you are using a lab computer, SES is already installed. The lab computers may also have other versions installed.</p>
 <p>After working through the tutorial, download the SES solution folder from the course GitHub titled <code>mcu_dev_board_test.zip</code>. Then, double click on the <code>.emProject</code> file or use the <code>File → Open Solution</code> option in SES to open the solution. This project contains a simple program that monitors the status of PA9 (which is connected to P25 through the appropriate jumper on J5. Make sure you have the jumper attached to connect PA9 to P25). Build and download the project to your MCU.</p>
@@ -758,7 +727,7 @@ Figure&nbsp;9: Seven-segment display pin map
 </figcaption>
 </figure>
 </div>
-<p>Launch Lattice Radiant and start the New Project Wizard from the File or startup menu. Setup a new project for the UP5K chip following the instructions in the <a href="../../tutorials/lattice-radiant-ice40-ultraplus-project-setup/">Lattice Radiant Tutorial</a> on the E155 website.</p>
+<p>Launch Lattice Radiant and start the New Project Wizard from the File or startup menu. Setup a new project for the UP5K chip following the instructions in the <a href="../../tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup">Lattice Radiant Tutorial</a> on the E155 website.</p>
 <p>Choose <code>File → New</code> and create a SystemVerilog HDL file. Save the file as <code>lab1_xx.sv</code> in your project directory and check the box to add the file to the current project. Create modules to perform the functions described above. The 7-segment display decoder should be combinational logic. Use a reasonable amount of hierarchy. Name the top-level module <code>lab1_xx</code>. The 7-segment display code, for example, will be reused in future labs, so it should be a module of its own (for the sake of reusability you may want to put this in a separate SystemVerilog file but this is not required). Every module should begin with a comment section that includes your name and email address, the date of creation, and a brief summary of its purpose, so that somebody else can understand what the module does and get a hold of you if they need help with it. Comment the modules as appropriate.</p>
 </section>
 <section id="logic-simulation-in-modelsim" class="level3">
@@ -799,7 +768,7 @@ Watch Out for Optimization
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you’re not seeing all the signals in your design, it’s possible that QuestaSim optimized them away. To configure the optimization settings, see the relevant section in the <a href="../../tutorials/modelsim-simulation-tutorial/#preventing-optimization">QuestaSim/ModelSim tutorial</a>.</p>
+<p>If you’re not seeing all the signals in your design, it’s possible that QuestaSim optimized them away. To configure the optimization settings, see the relevant section in the <a href="../../tutorials/tutorial-posts/modelsim-simulation-tutorial#preventing-optimization">QuestaSim/ModelSim tutorial</a>.</p>
 </div>
 </div>
 <p>You should see the <code>led</code> and <code>seg</code> outputs displaying appropriate values. Check the outputs against your expectations. If you find any discrepancies, fix the code and resimulate. A helpful shortcut to avoid restarting ModelSim is that you can edit the module by finding it under “work” in the library pane, right clicking, and choosing Edit. Make your fixes, then right click again and choose <code>Recompile</code>. Then type <code>restart -f</code> in the transcript window to restart simulation without having to set up the waveforms window again. When you return to Radiant, you’ll find your corrected code.</p>

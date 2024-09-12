@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>QuestaSim/ModelSim Simulation Tutorial – HMC E155</title>
+<title>Lattice Radiant iCE40 UltraPlus Project Setup – HMC E155</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../..//assets/img/microps-logo.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../..//assets/img/microps-logo.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">HMC E155</span>
     </a>
   </div>
@@ -88,11 +88,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../syllabus/"> 
+    <a class="nav-link" href="../../../syllabus/"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -101,94 +101,63 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
         <li>
-    <a class="dropdown-item" href="../../lab/">
+    <a class="dropdown-item" href="../../../lab/">
  <span class="dropdown-text">Labs Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/specs/">
+    <a class="dropdown-item" href="../../../lab/specs/">
  <span class="dropdown-text">Lab Specs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab-report-template/">
+    <a class="dropdown-item" href="../../../lab/lab-report-template/">
  <span class="dropdown-text">Lab Report Template</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab1/">
+    <a class="dropdown-item" href="../../../lab/lab1/">
  <span class="dropdown-text">Lab 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab2/">
+    <a class="dropdown-item" href="../../../lab/lab2/">
  <span class="dropdown-text">Lab 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab3/">
+    <a class="dropdown-item" href="../../../lab/lab3/">
  <span class="dropdown-text">Lab 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab4/">
+    <a class="dropdown-item" href="../../../lab/lab4/">
  <span class="dropdown-text">Lab 4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab5/">
+    <a class="dropdown-item" href="../../../lab/lab5/">
  <span class="dropdown-text">Lab 5</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab6/">
+    <a class="dropdown-item" href="../../../lab/lab6/">
  <span class="dropdown-text">Lab 6</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab7/">
+    <a class="dropdown-item" href="../../../lab/lab7/">
  <span class="dropdown-text">Lab 7</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../lecture/"> 
+    <a class="nav-link" href="../../../lecture/"> 
 <span class="menu-text">Lecture</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../project/"> 
+    <a class="nav-link" href="../../../project/"> 
 <span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../resources/"> 
+    <a class="nav-link" href="../../../resources/"> 
 <span class="menu-text">Resources</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Tutorials</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
-        <li>
-    <a class="dropdown-item" href="../../tutorials/tutorial-videos/">
- <span class="dropdown-text">Tutorial Videos</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../tutorials/"> 
+<span class="menu-text">Tutorials</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/git-setup/">
- <span class="dropdown-text">Git Setup</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/quarto-portfolio-setup/">
- <span class="dropdown-text">Quarto Portfolio Setup</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/lattice-radiant-installation/">
- <span class="dropdown-text">Lattice Radiant Installation</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/lattice-radiant-ice40-ultraplus-project-setup/">
- <span class="dropdown-text">ice40 Project Setup</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/modelsim-simulation-tutorial/">
- <span class="dropdown-text">QuestaSim/ModelSim Tutorial</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/segger-embedded-studio-setup">
- <span class="dropdown-text">SEGGER Embedded Studio Tutorial</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -207,16 +176,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#simple-simulations-by-forcing-signals" id="toc-simple-simulations-by-forcing-signals" class="nav-link" data-scroll-target="#simple-simulations-by-forcing-signals">Simple Simulations by Forcing Signals</a></li>
-  <li><a href="#testbench-simulation" id="toc-testbench-simulation" class="nav-link" data-scroll-target="#testbench-simulation">Testbench Simulation</a>
+  <li><a href="#project-setup" id="toc-project-setup" class="nav-link active" data-scroll-target="#project-setup">Project Setup</a></li>
+  <li><a href="#project-implementation" id="toc-project-implementation" class="nav-link" data-scroll-target="#project-implementation">Project Implementation</a></li>
+  <li><a href="#implementing-the-design-in-systemverilog" id="toc-implementing-the-design-in-systemverilog" class="nav-link" data-scroll-target="#implementing-the-design-in-systemverilog">Implementing the Design in SystemVerilog</a>
   <ul class="collapse">
-  <li><a href="#creating-the-testbench" id="toc-creating-the-testbench" class="nav-link" data-scroll-target="#creating-the-testbench">Creating the Testbench</a></li>
-  <li><a href="#the-testvector-.tv-file" id="toc-the-testvector-.tv-file" class="nav-link" data-scroll-target="#the-testvector-.tv-file">The Testvector (.tv) File</a></li>
-  <li><a href="#preventing-optimization" id="toc-preventing-optimization" class="nav-link" data-scroll-target="#preventing-optimization">Preventing Optimization</a></li>
+  <li><a href="#netlist-analyzer" id="toc-netlist-analyzer" class="nav-link" data-scroll-target="#netlist-analyzer">Netlist Analyzer</a></li>
+  <li><a href="#resource-usage" id="toc-resource-usage" class="nav-link" data-scroll-target="#resource-usage">Resource Usage</a></li>
+  <li><a href="#device-assignment-device-constraint-editor" id="toc-device-assignment-device-constraint-editor" class="nav-link" data-scroll-target="#device-assignment-device-constraint-editor">Device Assignment: Device Constraint Editor</a></li>
+  <li><a href="#device-programming" id="toc-device-programming" class="nav-link" data-scroll-target="#device-programming">Device Programming</a></li>
   </ul></li>
-  <li><a href="#libraries" id="toc-libraries" class="nav-link" data-scroll-target="#libraries">Libraries</a></li>
+  <li><a href="#testing-in-hardware" id="toc-testing-in-hardware" class="nav-link" data-scroll-target="#testing-in-hardware">Testing in Hardware</a>
+  <ul class="collapse">
   <li><a href="#share-your-feedback" id="toc-share-your-feedback" class="nav-link" data-scroll-target="#share-your-feedback">Share Your Feedback</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -225,8 +197,11 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">QuestaSim/ModelSim Simulation Tutorial</h1>
-</div>
+<h1 class="title">Lattice Radiant iCE40 UltraPlus Project Setup</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">FPGA</div>
+  </div>
+  </div>
 
 
 
@@ -242,262 +217,178 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-warning callout-titled" title="QuestaSim is ModelSim">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="project-setup" class="level1">
+<h1>Project Setup</h1>
+<p>Open Lattice Radiant. If you are prompted for a license file, navigate to it. See the Radiant install instructions if needed.</p>
+<p>Create a new project and name it “iCE40_demo”. Select the project location in the directory you wish. <strong>Make sure that the path does not include spaces since this often leads to errors later in the synthesis process.</strong> You do not need to add any existing HDL files to the project.</p>
+<p>In the “Select Device” menu, select the <code>iCE40UP5K</code> and the <code>SG48</code> package. On the next page, select <code>Lattice LSE</code> as the synthesis tool.</p>
+<div id="fig-new-project-device" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-new-project-device-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/new_project_setup.png" class="img-fluid figure-img">
 </div>
-<div class="callout-title-container flex-fill">
-QuestaSim is ModelSim
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-project-device-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: New project setup.
+</figcaption>
+</figure>
 </div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Modelsim was renamed to Questasim as part of Mentor Graphics’ (now Siemens EDA) strategy to unify and rebrand their simulation tools under the “Questa” umbrella. Across the web and on this website you may see references to both QuestaSim and ModelSim, but both names refer to the same software tool.</p>
-</div>
-</div>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>To verify that designs are working, it is useful to simulate them using ModelSim. This document will provide a quick demo of how to perform a simulation in ModelSim and how to include iCE40UP library files in the simulation.</p>
 </section>
-<section id="simple-simulations-by-forcing-signals" class="level2">
-<h2 class="anchored" data-anchor-id="simple-simulations-by-forcing-signals">Simple Simulations by Forcing Signals</h2>
-<p>If you have a simple design and want to quickly test it out to see that it is working, you can use the force function in the ModelSim command window to apply test inputs and measure the outputs.</p>
-<p>We will use a full adder circuit as a demonstration.</p>
-<div id="fig-full-adder-schematic" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="project-implementation" class="level1">
+<h1>Project Implementation</h1>
+<p>After the new project wizard completes, you will be presented with the following default screen.</p>
+<div id="fig-project-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-full-adder-schematic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/full-adder-schematic.png" class="img-fluid figure-img" style="width:50.0%">
+<div aria-describedby="fig-project-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/project_summary.png" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-full-adder-schematic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Full adder schematic.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-project-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: New project summary.
 </figcaption>
 </figure>
 </div>
-<p>To code up the full adder, first, open ModelSim and create a new ModelSim project titled <code>ModelSim_Tutorial</code> and save it in a location where the path name has no spaces. Then create a new file named <code>fulladder.sv</code>, making sure the file type is SystemVerilog. You should now have a blank file. Add the Verilog code below to create a structural Verilog model of the full adder circuit show above.</p>
-<div id="fig-new-project" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p>Navigate to <code>File &gt; New &gt; New File</code> and select <code>SystemVerilog Files</code> in the New File selection window. Name your file <code>top</code> and click <code>New</code> to create the file.</p>
+<div id="fig-create-file" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/modelsim-create-project.png" class="img-fluid figure-img" style="width:50.0%">
+<div aria-describedby="fig-create-file-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/create_file.png" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Create new project.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-create-file-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Create new file.
 </figcaption>
 </figure>
 </div>
-<pre><code>// fulladder.sv
-// Structural Verilog full adder
-// 5/26/22
-// Josh Brake
-// jbrake@hmc.edu
-
-module fulladder(
- input   logic A, B, Cin,
- output  logic S, Cout
+</section>
+<section id="implementing-the-design-in-systemverilog" class="level1">
+<h1>Implementing the Design in SystemVerilog</h1>
+<p>In this demo we will write HDL to blink the onboard LED at ~1 Hz.</p>
+<p>To do this, we will use the on-board iCE40 high-frequency oscillator to generate the clock signal and build a simple counter which will toggle at the desired frequency.</p>
+<p>Save the file and click the green play button in the GUI to run the synthesis process.</p>
+<pre><code>module top(
+     input   logic reset,
+     output  logic led
 );
 
- logic n1, n2, n3;
-
- xor g1(n1, A, B);
- xor g2(S, n1, Cin);
-
- and g3(n2, n1, Cin);
- and g4(n3, A, B);
-
- or  g5(Cout, n2, n3);
-
-endmodule</code></pre>
-<p>Next, we will simulate the file. First, compile your file via the Compile menu. Then, start the simulation using “Simulate &gt; Start Simulation…”. You will see the GUI change and open up the Objects and Wave panes. You can always toggle windows on or off as desired using the View toolbar menu.</p>
-<p>Next, add the selected symbols by selecting them in the Objects pane and adding them to the Wave pane either by using the right-click menu or dragging them. Next, to run the simulation, we need to initialize the input values which are floating (HiZ) to begin. We can do this by typing the command <code>force &lt;Signal Name&gt; &lt;Signal Value&gt;</code> in the Transcript pane. Force <code>A</code>, <code>B</code>, and <code>Cin</code> to some desired values of your choosing and then run the simulation for 10 time units by typing <code>run 10</code>. When you run the simulation, you will see the waves window advance the appropriate number of time points, displaying the values of the signals.</p>
-<div id="fig-sim-waves-force" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-sim-waves-force-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/modelsim-sim-waves.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sim-waves-force-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Running simulation by forcing signals.
-</figcaption>
-</figure>
-</div>
-<p>Fill out a truth table for a full adder by evaluating the circuit schematic shown above for all combinations of A, B, and Cin and verify a few values by forcing them to get the hang of it.</p>
-</section>
-<section id="testbench-simulation" class="level2">
-<h2 class="anchored" data-anchor-id="testbench-simulation">Testbench Simulation</h2>
-<p>After testing about only two different inputs by manually forcing values you are probably already frustrated with the tediousness of running a simulation this way. Luckily, there is a much more efficient way to run simulations using testbenches.</p>
-<p>A testbench is a separate module which generates simulated inputs and enables the generated output signals to be traced versus time. You’ve likely seen testbenches before (e.g., in E85) but you may have never written one from scratch by yourself before. While this is a bit daunting at first, the basic architecture of a testbench is straightforward. Before you proceed, you should review the HDL testbench section in Digital Design and Computer Architecture (Section 4.9 in the ARM edition) which covers several different styles of testbenches.</p>
-<p>Note that testbenches include Verilog statements that are non-synthesizable (in other words, they cannot be mapped onto hardware). One example is the initial block, which runs only once at the start of a simulation. In this sense, testbenches use SystemVerilog a bit like a scripting language to enable designs to be easily tested and verified.</p>
-<p>In this example we will create a testbench with automatic checking against a test vector file. This is the most powerful type of testbench and will be a good foundation for all the testbenches you will write for this class.</p>
-<p>A testbench is composed of the following elements:</p>
-<ul>
-<li>Create and initialize the signals for the inputs, outputs, and internal signals of your modules.</li>
-<li>Instantiate the device under test (DUT)</li>
-<li>Generate a simulated clock signal. Even if your module is purely combinational, you will need this clock signal to control when the input test vectors are applied and the outputs checked.</li>
-<li>Load the test vectors and initialize the signals for the simulation (e.g., pulsing the reset line)</li>
-<li>Apply the inputs and check the resulting outputs using the test vectors. One simple way to do this is to apply the test vector on the rising edge of the clock and then check the outputs against the expect outputs on the negative edge of the clock.</li>
-</ul>
-<p>Every HDL module that you write should have a testbench to accompany it. While this will cost you some time up front, it will save you loads of time and potential head injuries from banging your head against the wall wondering why your circuit is not working as you expect.</p>
-<section id="creating-the-testbench" class="level3">
-<h3 class="anchored" data-anchor-id="creating-the-testbench">Creating the Testbench</h3>
-<p>Next, we will create the testbench. Create a new SystemVerilog file <code>fulladder_tb.sv</code> and add it to your project. Then, type the following code into the testbench.</p>
-<pre><code>`timescale 1ns/1ns
-`default_nettype none
-`define N_TV 8
-
-module fulladder_tb();
- // Set up test signals
- logic clk, reset;
- logic a, b, cin, s, cout, s_expected, cout_expected;
- logic [31:0] vectornum, errors;
- logic [10:0] testvectors[10000:0]; // Vectors of format s[3:0]_seg[6:0]
-
- // Instantiate the device under test
- fulladder dut(.A(a), .B(b), .Cin(cin), .S(s), .Cout(cout));
-
- // Generate clock signal with a period of 10 timesteps.
- always
-   begin
-     clk = 1; #5;
-     clk = 0; #5;
+   logic int_osc;
+   logic [24:0] counter;
+  
+   // Internal high-speed oscillator
+   HSOSC #(.CLKHF_DIV(2'b01)) 
+         hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
+  
+   // Counter
+   always_ff @(posedge int_osc) begin
+     if(reset == 0)  counter &lt;= 0;
+     else            counter &lt;= counter + 1;
    end
   
- // At the start of the simulation:
- //  - Load the testvectors
- //  - Pulse the reset line (if applicable)
- initial
-   begin
-     $readmemb("fulladder_testvectors.tv", testvectors, 0, `N_TV - 1);
-     vectornum = 0; errors = 0;
-     reset = 1; #27; reset = 0;
-   end
-  // Apply test vector on the rising edge of clk
- always @(posedge clk)
-   begin
-       #1; {a, b, cin, s_expected, cout_expected} = testvectors[vectornum];
-   end
-  initial
- begin
-   // Create dumpfile for signals
-   $dumpfile("fulladder_tb.vcd");
-   $dumpvars(0, fulladder_tb);
- end
-  // Check results on the falling edge of clk
- always @(negedge clk)
-   begin
-     if (~reset) // skip during reset
-       begin
-         if (cout != cout_expected || s != s_expected)
-           begin
-             $display("Error: inputs: a=%b, b=%b, cin=%b", a, b, cin);
-             $display(" outputs: s=%b (%b expected), cout=%b (%b expected)", s, s_expected, cout, cout_expected);
-             errors = errors + 1;
-           end
-
-      
-       vectornum = vectornum + 1;
-      
-       if (testvectors[vectornum] === 11'bx)
-         begin
-           $display("%d tests completed with %d errors.", vectornum, errors);
-           $finish;
-         end
-     end
-   end
+   // Assign LED output
+   assign led = counter[24];
+  
 endmodule</code></pre>
-<div class="hint-box">
-<p><strong>Note</strong>: Functions preceded by a dollar sign (e.g., <code>$readmemb</code>, <code>$display</code>, <code>$finish</code>, etc.) are system functions.</p>
-</div>
-</section>
-<section id="the-testvector-.tv-file" class="level3">
-<h3 class="anchored" data-anchor-id="the-testvector-.tv-file">The Testvector (.tv) File</h3>
-<p>The test vector file is a plaintext file with a single test vector on each line. Typically these are organized in the format &lt;inputs&gt;_&lt;expected_outputs&gt; (underscores are ignored but help to provide visual organization) but the specific format is up to you. You just need to make sure to assign the bits properly in your testbench module.</p>
-<pre><code>// fulladder_testvectors.tv
-// Josh Brake
-// jbrake@hmc.edu
-// 5/26/22
-//
-// 5-bit vectors in binary. 
-// underscore is ignored
-// // indicates comment
-// a b cin _ s cout
-000_00
-001_10
-010_10
-011_01
-100_10
-101_01
-110_01
-111_11</code></pre>
-</section>
-<section id="preventing-optimization" class="level3">
-<h3 class="anchored" data-anchor-id="preventing-optimization">Preventing Optimization</h3>
-<p>When we simulate a testbench, we need to disable some of the default optimization. If you don’t, QuestaSim will eliminate many of your testbench signals because they are not directly linked to inputs or outputs of the modules.</p>
-<p>To prevent optimization, change the optimization settings when you click the <code>Start Simulation</code> option from the <code>Simulate</code> menu. Click <code>Optimization Settings</code> and then select the option to “Apply full visibility to all modules (full debug mode)”.</p>
-<div id="fig-optimization-settings" class="quarto-layout-panel">
+<p>Note that we configure our reset to be active low (reset when 0 or connected to ground) since we have internal pullup resistors which make it easy to pull the pin high but not internal pulldown resistors.</p>
+<p>In this design we use the HSOSC module which is the high-speed oscillator available on the iCE40UP5K chip. The HSOSC module is a Verilog library that is provided with the iCE40 device support package in Radiant. You can find more information about the oscillator under <code>Help &gt; Lattice Radiant Software Help &gt; Reference Guides &gt; FPGA Libraries Reference Guide &gt; Primitive Library - iCE40UP (iCE40 UltraPlus)</code>. Here, as an example of how to infer a modules with parameters in Verilog, we instantiate it with the optional parameter <code>CLKHF_DIV</code> which sets the output frequency to 24 MHz.</p>
+<div id="fig-hsosc" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-optimization-settings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="images/questasim-optimization-1.png" class="img-fluid figure-img"></p>
+<div aria-describedby="fig-hsosc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/HSOSC.png" class="img-fluid figure-img">
 </div>
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
-<p><img src="images/questasim-optimization-2.png" class="img-fluid figure-img"></p>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hsosc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: High-speed oscillator block diagram.
+</figcaption>
+</figure>
 </div>
+<section id="netlist-analyzer" class="level2">
+<h2 class="anchored" data-anchor-id="netlist-analyzer">Netlist Analyzer</h2>
+<p>After synthesizing your design, it is worth taking a look at the Netlist Analyzer. This tool provides a block diagram view of the design. This is a helpful tool to make sure that the Verilog you wrote is implying the hardware that you intend. <strong>Remember that as a digital designer you should always think about the underlying hardware and simply write the Verilog idioms to imply it.</strong> Approach HDL like a traditional programming language at your peril!</p>
+<p>If we look at the Netlist Analyzer (found under “Tools &gt; Netlist Analyzer” or the green and black icon in the toolbar), we will open a window which shows a block diagram. We see that we have implied an adder, a mux to control the value to the registers, the HSOSC module, and a 25-bit-wide register.</p>
+<div id="fig-netlist-analyzer" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-netlist-analyzer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/netlist_analyzer.png" class="img-fluid figure-img">
 </div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-optimization-settings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: QuestaSim optimization settings for preserving testbench signals.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-netlist-analyzer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Netlist analyzer window.
 </figcaption>
 </figure>
 </div>
 </section>
+<section id="resource-usage" class="level2">
+<h2 class="anchored" data-anchor-id="resource-usage">Resource Usage</h2>
+<p>There is also some useful information in the Reports tab under Project Summary in the Resource Usage section. In particular, this section will show us the number of registers, look-up tables, IO buffers, and embedded RAM blocks (EBRs) that we have implied in our design. For this design, we have 25 registers for storing the current count. An additional 3 logic cells are needed for their LUT4s to provide the additional logic (adder, mux, inverter).</p>
+<div id="fig-resource-usage" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-resource-usage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/reports.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-resource-usage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Resource usage report.
+</figcaption>
+</figure>
+</div>
 </section>
-<section id="libraries" class="level2">
-<h2 class="anchored" data-anchor-id="libraries">Libraries</h2>
-<p>In many instances we want to leverage the iCE40 Technology Library. However, when we go to simulate these designs, we need to make sure to include the appropriate libraries so that ModelSim can find the correct design units when it goes to do the simulation.</p>
-<p>When you install Lattice Radiant with ModelSim Lattice FPGA Edition, it comes with a set of installed libraries. For our purposes, we are most interested in the iCE40UP library and will need to include this in our simulation.</p>
-<p>To do this, start the simulation by clicking Simulate &gt; Start Simulation. Then navigate to the Libraries tab and add iCE40UP to the Search Libraries window using the “Add…” button.</p>
-<div id="fig-ice40-tech-library" class="quarto-float quarto-figure quarto-figure-center anchored">
+<section id="device-assignment-device-constraint-editor" class="level2">
+<h2 class="anchored" data-anchor-id="device-assignment-device-constraint-editor">Device Assignment: Device Constraint Editor</h2>
+<p>When you first synthesize the design, the inputs and outputs of your top-level module will be randomly assigned to I/O pins. Next, you need to set the pin assignments to route the signals to the I/O pins that you desire.</p>
+<p>Open the Device Constraint Editor and find the signal name and assign it to your desired pin. In this example, we will route the “led” output to GPIO 42. Select the table entry in the “Pin” column associated with the LED signal and enter “42”. You will notice that the currently routed pin is labeled in parentheses, 36 in this example. To update the design to route to our desired GPIO pin, we need to resynthesize the design. Click the green play button again to run the toolchain. When you do this for the first time, you will be asked to save a <code>.pdc</code> (pin device constraint) file. Name and save the file. After synthesis completes, open the Device Constraint Editor and confirm that the desired and routed pins match. In this case you should see “42(42)” in the table entry corresponding to the led output.</p>
+<div id="fig-pinout" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ice40-tech-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/ice40-tech-library.png" class="img-fluid figure-img" style="width:50.0%">
+<div aria-describedby="fig-pinout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/pinout.png" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ice40-tech-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: ice40 Technology Library.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pinout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Pinout diagram.
 </figcaption>
 </figure>
 </div>
-<div id="fig-ice40-tech-library" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ice40-tech-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/ice40-add-library.png" class="img-fluid figure-img" style="width:50.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ice40-tech-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Add ice40 Technology Library.
-</figcaption>
-</figure>
-</div>
-<div id="fig-ice40-start-sim" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ice40-start-sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/modelsim-start-sim-module.png" class="img-fluid figure-img" style="width:50.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ice40-start-sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Start sim with loaded library.
-</figcaption>
-</figure>
-</div>
-<p>Then navigate to the “Design” tab, select the <code>top</code> module and then click OK. Your simulation should now start and open up the Wave window.</p>
-<div id="fig-ice40-tech-library" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ice40-tech-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/modelsim-start-sim-module.png" class="img-fluid figure-img" style="width:50.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ice40-tech-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: Start sim of <code>top</code> module.
-</figcaption>
-</figure>
-</div>
-<p>Note that you can also achieve the steps above by running <code>vsim work.top -L iCE40UP</code> in the command window.</p>
 </section>
+<section id="device-programming" class="level2">
+<h2 class="anchored" data-anchor-id="device-programming">Device Programming</h2>
+<p>To get our design working on our board, we need to program it to the flash memory onboard the UPduino board.</p>
+<p>Each time the FPGA powers up or resets, it reconfigures itself over a serial peripheral interface (SPI) connection from a binary (<code>.bin</code>) configuration file on a flash memory chip.</p>
+<p>To program the device, we need to set up the programmer to put the <code>.bin</code> file that is generated by our synthesis tool onto the flash chip.</p>
+<p>Click the button in the toolbar to open the programmer (the icon is the chip with a blue arrow pointing downward) or using the menu Tools &gt; Programmer.</p>
+<p>Connect your UPduino board to your computer and click the “Detect Cable” button in the “Cable Setup” sub-window on the right of the Programmer window. You should see a message noting that “INFO - Board with FTDI USB Host Chip detected.” in the output window. If the host chip is not detected, you may need to install FTDI drivers for the device.</p>
+<p>Next we need to correctly configure the programming toolchain to program our device. By default, the UPduino board only enables programming of the flash chip on board and not the onboard compressed random access memory (CRAM) of the FPGA itself. To do this, highlight the device in the list view and open the “Device Properties” window either by using the icon in the toolbar (chip with pencil on top) or by right-clicking on the entry in the table and selecting the “Device Properties” option.</p>
+<p>Change the default entries to the following selections:</p>
+<ul>
+<li>Set Target Memory to <code>External SPI Flash Memory</code></li>
+<li>Set operation to <code>Erase, Program, Verify</code></li>
+<li>Under SPI Flash Options set
+<ul>
+<li>Family: <code>SPI Serial Flash</code></li>
+<li>Vendor: <code>WinBond</code></li>
+<li>Device: <code>W25Q32JV</code></li>
+<li>Package: <code>208mil 8-pin SOIC</code></li>
+</ul></li>
+</ul>
+<p>After configuration, the block diagram should look like this.</p>
+<div id="fig-flash-programming" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-flash-programming-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/programming.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flash-programming-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Flash programming setup.
+</figcaption>
+</figure>
+</div>
+<p>After updating the configuration, you are ready to program the device. (Note: on your first run, you may get a firewall warning that a new program “cableserver” is being run and needs access. Allow access to the program.)</p>
+<p>You should see a series of outputs printing in the output window as the programmer cycles through the various pieces of the programming process (initialization, enabling, erasing, programming, verifying, etc.). After the programming finishes, you should see a message that the programming operation was successful.</p>
+</section>
+</section>
+<section id="testing-in-hardware" class="level1">
+<h1>Testing in Hardware</h1>
+<div id="fig-led-blink" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-led-blink-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/blink_led_schematic.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-led-blink-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Simple circuit to blink an LED.
+</figcaption>
+</figure>
+</div>
+<p>If you are using the E155 development board, you should see the onboard LED connected to P42 blinking. If you would like to test the hardware separately with just the UPduino you can unplug the USB from your board and connect your UPduino board to a breadboard, wiring up an LED in series with a current limiting resistor (typically a value between 330 Ω and 1kΩ is a good choice). Then, reconnect your board to power via USB or using the +5V input on the board from a DC power supply.</p>
 <section id="share-your-feedback" class="level2">
 <h2 class="anchored" data-anchor-id="share-your-feedback">Share Your Feedback</h2>
 <div class="callout callout-style-default callout-note callout-titled" title="Share Your Feedback!">
@@ -510,11 +401,12 @@ Share Your Feedback!
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you caught any typos or have any suggestions for this page, please open an issue on the <a href="https://github.com/HMC-E155/hmc-e155.github.io/issues">website Github repository</a>. Click the link <a href="../../resources/how-to-create-a-github-issue.html">here</a> for instructions on how to create an issue.</p>
+<p>If you caught any typos or have any suggestions for this page, please open an issue on the <a href="https://github.com/HMC-E155/hmc-e155.github.io/issues">website Github repository</a>. Click the link <a href="../../../resources/how-to-create-a-github-issue.html">here</a> for instructions on how to create an issue.</p>
 </div>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

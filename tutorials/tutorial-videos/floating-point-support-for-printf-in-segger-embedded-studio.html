@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lattice Radiant iCE40 UltraPlus Project Setup – HMC E155</title>
+<title>Floating Point Support for printf() in SEGGER Embedded Studio – HMC E155</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -154,41 +154,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../resources/"> 
 <span class="menu-text">Resources</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Tutorials</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
-        <li>
-    <a class="dropdown-item" href="../../tutorials/tutorial-videos/">
- <span class="dropdown-text">Tutorial Videos</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../tutorials/"> 
+<span class="menu-text">Tutorials</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/git-setup/">
- <span class="dropdown-text">Git Setup</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/quarto-portfolio-setup/">
- <span class="dropdown-text">Quarto Portfolio Setup</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/lattice-radiant-installation/">
- <span class="dropdown-text">Lattice Radiant Installation</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/lattice-radiant-ice40-ultraplus-project-setup/">
- <span class="dropdown-text">ice40 Project Setup</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/modelsim-simulation-tutorial/">
- <span class="dropdown-text">QuestaSim/ModelSim Tutorial</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/segger-embedded-studio-setup">
- <span class="dropdown-text">SEGGER Embedded Studio Tutorial</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -207,19 +176,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-setup" id="toc-project-setup" class="nav-link active" data-scroll-target="#project-setup">Project Setup</a></li>
-  <li><a href="#project-implementation" id="toc-project-implementation" class="nav-link" data-scroll-target="#project-implementation">Project Implementation</a></li>
-  <li><a href="#implementing-the-design-in-systemverilog" id="toc-implementing-the-design-in-systemverilog" class="nav-link" data-scroll-target="#implementing-the-design-in-systemverilog">Implementing the Design in SystemVerilog</a>
-  <ul class="collapse">
-  <li><a href="#netlist-analyzer" id="toc-netlist-analyzer" class="nav-link" data-scroll-target="#netlist-analyzer">Netlist Analyzer</a></li>
-  <li><a href="#resource-usage" id="toc-resource-usage" class="nav-link" data-scroll-target="#resource-usage">Resource Usage</a></li>
-  <li><a href="#device-assignment-device-constraint-editor" id="toc-device-assignment-device-constraint-editor" class="nav-link" data-scroll-target="#device-assignment-device-constraint-editor">Device Assignment: Device Constraint Editor</a></li>
-  <li><a href="#device-programming" id="toc-device-programming" class="nav-link" data-scroll-target="#device-programming">Device Programming</a></li>
-  </ul></li>
-  <li><a href="#testing-in-hardware" id="toc-testing-in-hardware" class="nav-link" data-scroll-target="#testing-in-hardware">Testing in Hardware</a>
-  <ul class="collapse">
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
   <li><a href="#share-your-feedback" id="toc-share-your-feedback" class="nav-link" data-scroll-target="#share-your-feedback">Share Your Feedback</a></li>
-  </ul></li>
   </ul>
 </nav>
     </div>
@@ -228,8 +186,13 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lattice Radiant iCE40 UltraPlus Project Setup</h1>
-</div>
+<h1 class="title">Floating Point Support for <code>printf()</code> in SEGGER Embedded Studio</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Video</div>
+    <div class="quarto-category">MCU</div>
+    <div class="quarto-category">SEGGER Embedded Studio</div>
+  </div>
+  </div>
 
 
 
@@ -245,178 +208,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="project-setup" class="level1">
-<h1>Project Setup</h1>
-<p>Open Lattice Radiant. If you are prompted for a license file, navigate to it. See the Radiant install instructions if needed.</p>
-<p>Create a new project and name it “iCE40_demo”. Select the project location in the directory you wish. <strong>Make sure that the path does not include spaces since this often leads to errors later in the synthesis process.</strong> You do not need to add any existing HDL files to the project.</p>
-<p>In the “Select Device” menu, select the <code>iCE40UP5K</code> and the <code>SG48</code> package. On the next page, select <code>Lattice LSE</code> as the synthesis tool.</p>
-<div id="fig-new-project-device" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-new-project-device-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/new_project_setup.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-project-device-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: New project setup.
-</figcaption>
-</figure>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>This tutorial demonstrates how to enable floating point support for <code>printf()</code> in SEGGER Embedded studio.</p>
+<div style="position: relative; padding-bottom: 62.5%; height: 0;">
+<iframe src="
+https://www.loom.com/embed/c27d30aba2f147a1ae01e26391e328f0?sid=017f1c0f-ff7d-4ea9-a99d-17ca72262646" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+</iframe>
 </div>
 </section>
-<section id="project-implementation" class="level1">
-<h1>Project Implementation</h1>
-<p>After the new project wizard completes, you will be presented with the following default screen.</p>
-<div id="fig-project-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-project-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/project_summary.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-project-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: New project summary.
-</figcaption>
-</figure>
-</div>
-<p>Navigate to <code>File &gt; New &gt; New File</code> and select <code>SystemVerilog Files</code> in the New File selection window. Name your file <code>top</code> and click <code>New</code> to create the file.</p>
-<div id="fig-create-file" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-create-file-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/create_file.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-create-file-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Create new file.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="implementing-the-design-in-systemverilog" class="level1">
-<h1>Implementing the Design in SystemVerilog</h1>
-<p>In this demo we will write HDL to blink the onboard LED at ~1 Hz.</p>
-<p>To do this, we will use the on-board iCE40 high-frequency oscillator to generate the clock signal and build a simple counter which will toggle at the desired frequency.</p>
-<p>Save the file and click the green play button in the GUI to run the synthesis process.</p>
-<pre><code>module top(
-     input   logic reset,
-     output  logic led
-);
-
-   logic int_osc;
-   logic [24:0] counter;
-  
-   // Internal high-speed oscillator
-   HSOSC #(.CLKHF_DIV(2'b01)) 
-         hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
-  
-   // Counter
-   always_ff @(posedge int_osc) begin
-     if(reset == 0)  counter &lt;= 0;
-     else            counter &lt;= counter + 1;
-   end
-  
-   // Assign LED output
-   assign led = counter[24];
-  
-endmodule</code></pre>
-<p>Note that we configure our reset to be active low (reset when 0 or connected to ground) since we have internal pullup resistors which make it easy to pull the pin high but not internal pulldown resistors.</p>
-<p>In this design we use the HSOSC module which is the high-speed oscillator available on the iCE40UP5K chip. The HSOSC module is a Verilog library that is provided with the iCE40 device support package in Radiant. You can find more information about the oscillator under <code>Help &gt; Lattice Radiant Software Help &gt; Reference Guides &gt; FPGA Libraries Reference Guide &gt; Primitive Library - iCE40UP (iCE40 UltraPlus)</code>. Here, as an example of how to infer a modules with parameters in Verilog, we instantiate it with the optional parameter <code>CLKHF_DIV</code> which sets the output frequency to 24 MHz.</p>
-<div id="fig-hsosc" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-hsosc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/HSOSC.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hsosc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: High-speed oscillator block diagram.
-</figcaption>
-</figure>
-</div>
-<section id="netlist-analyzer" class="level2">
-<h2 class="anchored" data-anchor-id="netlist-analyzer">Netlist Analyzer</h2>
-<p>After synthesizing your design, it is worth taking a look at the Netlist Analyzer. This tool provides a block diagram view of the design. This is a helpful tool to make sure that the Verilog you wrote is implying the hardware that you intend. <strong>Remember that as a digital designer you should always think about the underlying hardware and simply write the Verilog idioms to imply it.</strong> Approach HDL like a traditional programming language at your peril!</p>
-<p>If we look at the Netlist Analyzer (found under “Tools &gt; Netlist Analyzer” or the green and black icon in the toolbar), we will open a window which shows a block diagram. We see that we have implied an adder, a mux to control the value to the registers, the HSOSC module, and a 25-bit-wide register.</p>
-<div id="fig-netlist-analyzer" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-netlist-analyzer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/netlist_analyzer.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-netlist-analyzer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Netlist analyzer window.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="resource-usage" class="level2">
-<h2 class="anchored" data-anchor-id="resource-usage">Resource Usage</h2>
-<p>There is also some useful information in the Reports tab under Project Summary in the Resource Usage section. In particular, this section will show us the number of registers, look-up tables, IO buffers, and embedded RAM blocks (EBRs) that we have implied in our design. For this design, we have 25 registers for storing the current count. An additional 3 logic cells are needed for their LUT4s to provide the additional logic (adder, mux, inverter).</p>
-<div id="fig-resource-usage" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-resource-usage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/reports.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-resource-usage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Resource usage report.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="device-assignment-device-constraint-editor" class="level2">
-<h2 class="anchored" data-anchor-id="device-assignment-device-constraint-editor">Device Assignment: Device Constraint Editor</h2>
-<p>When you first synthesize the design, the inputs and outputs of your top-level module will be randomly assigned to I/O pins. Next, you need to set the pin assignments to route the signals to the I/O pins that you desire.</p>
-<p>Open the Device Constraint Editor and find the signal name and assign it to your desired pin. In this example, we will route the “led” output to GPIO 42. Select the table entry in the “Pin” column associated with the LED signal and enter “42”. You will notice that the currently routed pin is labeled in parentheses, 36 in this example. To update the design to route to our desired GPIO pin, we need to resynthesize the design. Click the green play button again to run the toolchain. When you do this for the first time, you will be asked to save a <code>.pdc</code> (pin device constraint) file. Name and save the file. After synthesis completes, open the Device Constraint Editor and confirm that the desired and routed pins match. In this case you should see “42(42)” in the table entry corresponding to the led output.</p>
-<div id="fig-pinout" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-pinout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/pinout.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pinout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Pinout diagram.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="device-programming" class="level2">
-<h2 class="anchored" data-anchor-id="device-programming">Device Programming</h2>
-<p>To get our design working on our board, we need to program it to the flash memory onboard the UPduino board.</p>
-<p>Each time the FPGA powers up or resets, it reconfigures itself over a serial peripheral interface (SPI) connection from a binary (<code>.bin</code>) configuration file on a flash memory chip.</p>
-<p>To program the device, we need to set up the programmer to put the <code>.bin</code> file that is generated by our synthesis tool onto the flash chip.</p>
-<p>Click the button in the toolbar to open the programmer (the icon is the chip with a blue arrow pointing downward) or using the menu Tools &gt; Programmer.</p>
-<p>Connect your UPduino board to your computer and click the “Detect Cable” button in the “Cable Setup” sub-window on the right of the Programmer window. You should see a message noting that “INFO - Board with FTDI USB Host Chip detected.” in the output window. If the host chip is not detected, you may need to install FTDI drivers for the device.</p>
-<p>Next we need to correctly configure the programming toolchain to program our device. By default, the UPduino board only enables programming of the flash chip on board and not the onboard compressed random access memory (CRAM) of the FPGA itself. To do this, highlight the device in the list view and open the “Device Properties” window either by using the icon in the toolbar (chip with pencil on top) or by right-clicking on the entry in the table and selecting the “Device Properties” option.</p>
-<p>Change the default entries to the following selections:</p>
-<ul>
-<li>Set Target Memory to <code>External SPI Flash Memory</code></li>
-<li>Set operation to <code>Erase, Program, Verify</code></li>
-<li>Under SPI Flash Options set
-<ul>
-<li>Family: <code>SPI Serial Flash</code></li>
-<li>Vendor: <code>WinBond</code></li>
-<li>Device: <code>W25Q32JV</code></li>
-<li>Package: <code>208mil 8-pin SOIC</code></li>
-</ul></li>
-</ul>
-<p>After configuration, the block diagram should look like this.</p>
-<div id="fig-flash-programming" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-flash-programming-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/programming.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flash-programming-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: Flash programming setup.
-</figcaption>
-</figure>
-</div>
-<p>After updating the configuration, you are ready to program the device. (Note: on your first run, you may get a firewall warning that a new program “cableserver” is being run and needs access. Allow access to the program.)</p>
-<p>You should see a series of outputs printing in the output window as the programmer cycles through the various pieces of the programming process (initialization, enabling, erasing, programming, verifying, etc.). After the programming finishes, you should see a message that the programming operation was successful.</p>
-</section>
-</section>
-<section id="testing-in-hardware" class="level1">
-<h1>Testing in Hardware</h1>
-<div id="fig-led-blink" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-led-blink-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/blink_led_schematic.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-led-blink-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9: Simple circuit to blink an LED.
-</figcaption>
-</figure>
-</div>
-<p>If you are using the E155 development board, you should see the onboard LED connected to P42 blinking. If you would like to test the hardware separately with just the UPduino you can unplug the USB from your board and connect your UPduino board to a breadboard, wiring up an LED in series with a current limiting resistor (typically a value between 330 Ω and 1kΩ is a good choice). Then, reconnect your board to power via USB or using the +5V input on the board from a DC power supply.</p>
 <section id="share-your-feedback" class="level2">
 <h2 class="anchored" data-anchor-id="share-your-feedback">Share Your Feedback</h2>
 <div class="callout callout-style-default callout-note callout-titled" title="Share Your Feedback!">
@@ -434,7 +234,6 @@ Share Your Feedback!
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

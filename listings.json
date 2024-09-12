@@ -1,0 +1,19 @@
+[
+  {
+    "listing": "/tutorials/index.html",
+    "items": [
+      "/tutorials/tutorial-videos/creating-and-initializing-your-git-repo.html",
+      "/tutorials/tutorial-videos/floating-point-support-for-printf-in-segger-embedded-studio.html",
+      "/tutorials/tutorial-posts/git-setup/index.html",
+      "/tutorials/tutorial-posts/quarto-portfolio-setup/index.html",
+      "/tutorials/tutorial-videos/lattice-lse-fsm-automatically-decode-unreachable-states.html",
+      "/tutorials/tutorial-posts/lattice-radiant-installation/index.html",
+      "/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html",
+      "/tutorials/tutorial-videos/monitoring-memory-mapped-registers-in-segger-embedded-studio.html",
+      "/tutorials/tutorial-videos/publishing-your-quarto-website-to-github-pages.html",
+      "/tutorials/tutorial-posts/modelsim-simulation-tutorial/index.html",
+      "/tutorials/tutorial-videos/rigol-mso1104-logic-analyzer-demo.html",
+      "/tutorials/tutorial-posts/segger-embedded-studio-setup/index.html"
+    ]
+  }
+]

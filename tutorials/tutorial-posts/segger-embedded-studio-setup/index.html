@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorial Videos – HMC E155</title>
+<title>SEGGER Embedded Studio Setup – HMC E155</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,25 +20,59 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../..//assets/img/microps-logo.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../..//assets/img/microps-logo.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -77,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">HMC E155</span>
     </a>
   </div>
@@ -88,11 +122,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../syllabus/"> 
+    <a class="nav-link" href="../../../syllabus/"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -101,94 +135,63 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
         <li>
-    <a class="dropdown-item" href="../../lab/">
+    <a class="dropdown-item" href="../../../lab/">
  <span class="dropdown-text">Labs Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/specs/">
+    <a class="dropdown-item" href="../../../lab/specs/">
  <span class="dropdown-text">Lab Specs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab-report-template/">
+    <a class="dropdown-item" href="../../../lab/lab-report-template/">
  <span class="dropdown-text">Lab Report Template</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab1/">
+    <a class="dropdown-item" href="../../../lab/lab1/">
  <span class="dropdown-text">Lab 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab2/">
+    <a class="dropdown-item" href="../../../lab/lab2/">
  <span class="dropdown-text">Lab 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab3/">
+    <a class="dropdown-item" href="../../../lab/lab3/">
  <span class="dropdown-text">Lab 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab4/">
+    <a class="dropdown-item" href="../../../lab/lab4/">
  <span class="dropdown-text">Lab 4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab5/">
+    <a class="dropdown-item" href="../../../lab/lab5/">
  <span class="dropdown-text">Lab 5</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab6/">
+    <a class="dropdown-item" href="../../../lab/lab6/">
  <span class="dropdown-text">Lab 6</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab7/">
+    <a class="dropdown-item" href="../../../lab/lab7/">
  <span class="dropdown-text">Lab 7</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../lecture/"> 
+    <a class="nav-link" href="../../../lecture/"> 
 <span class="menu-text">Lecture</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../project/"> 
+    <a class="nav-link" href="../../../project/"> 
 <span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../resources/"> 
+    <a class="nav-link" href="../../../resources/"> 
 <span class="menu-text">Resources</span></a>
   </li>  
-  <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tutorials" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Tutorials</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-tutorials">    
-        <li>
-    <a class="dropdown-item" href="../../tutorials/tutorial-videos/">
- <span class="dropdown-text">Tutorial Videos</span></a>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../tutorials/"> 
+<span class="menu-text">Tutorials</span></a>
   </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/git-setup/">
- <span class="dropdown-text">Git Setup</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/quarto-portfolio-setup/">
- <span class="dropdown-text">Quarto Portfolio Setup</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/lattice-radiant-installation/">
- <span class="dropdown-text">Lattice Radiant Installation</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/lattice-radiant-ice40-ultraplus-project-setup/">
- <span class="dropdown-text">ice40 Project Setup</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/modelsim-simulation-tutorial/">
- <span class="dropdown-text">QuestaSim/ModelSim Tutorial</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../tutorials/segger-embedded-studio-setup">
- <span class="dropdown-text">SEGGER Embedded Studio Tutorial</span></a>
-  </li>  
-    </ul>
-  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -207,12 +210,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#publishing-your-quarto-website-to-github-pages" id="toc-publishing-your-quarto-website-to-github-pages" class="nav-link active" data-scroll-target="#publishing-your-quarto-website-to-github-pages">Publishing Your Quarto Website to Github Pages</a></li>
-  <li><a href="#creating-and-initializing-your-git-repo" id="toc-creating-and-initializing-your-git-repo" class="nav-link" data-scroll-target="#creating-and-initializing-your-git-repo">Creating and Initializing Your Git Repo</a></li>
-  <li><a href="#monitoring-memory-mapped-registers-in-segger-embedded-studio" id="toc-monitoring-memory-mapped-registers-in-segger-embedded-studio" class="nav-link" data-scroll-target="#monitoring-memory-mapped-registers-in-segger-embedded-studio">Monitoring Memory-mapped Registers in SEGGER Embedded Studio</a></li>
-  <li><a href="#rigol-mso1104-logic-analyzer-demo" id="toc-rigol-mso1104-logic-analyzer-demo" class="nav-link" data-scroll-target="#rigol-mso1104-logic-analyzer-demo">RIGOL MSO1104 Logic Analyzer Demo</a></li>
-  <li><a href="#floating-point-support-for-printf-in-segger-embedded-studio" id="toc-floating-point-support-for-printf-in-segger-embedded-studio" class="nav-link" data-scroll-target="#floating-point-support-for-printf-in-segger-embedded-studio">Floating Point Support for <code>printf()</code> in SEGGER Embedded Studio</a></li>
-  <li><a href="#lattice-lse-fsm-automatically-decode-unreachable-states" id="toc-lattice-lse-fsm-automatically-decode-unreachable-states" class="nav-link" data-scroll-target="#lattice-lse-fsm-automatically-decode-unreachable-states">Lattice LSE FSM Automatically Decode Unreachable States</a></li>
+  <li><a href="#create-new-test-project" id="toc-create-new-test-project" class="nav-link active" data-scroll-target="#create-new-test-project">Create New Test Project</a></li>
+  <li><a href="#uploading-the-code" id="toc-uploading-the-code" class="nav-link" data-scroll-target="#uploading-the-code">Uploading the Code</a></li>
+  <li><a href="#appendix-a-install-segger-embedded-studio-and-support-packages" id="toc-appendix-a-install-segger-embedded-studio-and-support-packages" class="nav-link" data-scroll-target="#appendix-a-install-segger-embedded-studio-and-support-packages">Appendix A: Install SEGGER Embedded Studio and Support Packages</a></li>
+  <li><a href="#appendix-b-st-link-to-j-link-firmware-upgrade" id="toc-appendix-b-st-link-to-j-link-firmware-upgrade" class="nav-link" data-scroll-target="#appendix-b-st-link-to-j-link-firmware-upgrade">Appendix B: ST-LINK to J-Link Firmware Upgrade</a></li>
   <li><a href="#share-your-feedback" id="toc-share-your-feedback" class="nav-link" data-scroll-target="#share-your-feedback">Share Your Feedback</a></li>
   </ul>
 </nav>
@@ -222,8 +223,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorial Videos</h1>
-</div>
+<h1 class="title">SEGGER Embedded Studio Setup</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">MCU</div>
+    <div class="quarto-category">SEGGER Embedded Studio</div>
+  </div>
+  </div>
 
 
 
@@ -239,49 +244,120 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="publishing-your-quarto-website-to-github-pages" class="level2">
-<h2 class="anchored" data-anchor-id="publishing-your-quarto-website-to-github-pages">Publishing Your Quarto Website to Github Pages</h2>
-<div style="position: relative; padding-bottom: 64.63195691202873%; height: 0;">
-<iframe src="https://www.loom.com/embed/371bd4ce873c418b8bb346665068893b?sid=31ee6605-66b7-42c7-8edd-bff2cfe53af6" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-</iframe>
+<section id="create-new-test-project" class="level2">
+<h2 class="anchored" data-anchor-id="create-new-test-project">Create New Test Project</h2>
+<p>If you have not yet installed SEGGER Embedded Studio, first see and follow the instructions in <a href="#appendix-a-install-segger-embedded-studio-and-support-packages">Appendix A: Install SEGGER Embedded Studio &amp; Support Packages</a>.</p>
+<p>In this section we will use the SEGGER Embedded Studio to create, build, and upload a simple program to blink the LED on your board.</p>
+<p>SEGGER studio development projects are grouped into projects and solutions.</p>
+<ul>
+<li>A project contains and organizes everything you need to create a single application or a library.</li>
+<li>A solution is a collection of projects and configurations.</li>
+</ul>
+<p>In most cases, you will be designing a single application and the most straightforward organization is to have a single project within a solution.</p>
+<p>To start, create a new project by navigating to “File &gt; New Project”. Select create the project in a new solution.</p>
+<p>Scroll down and select “A C/C++ executable for STMicroelectronics STM32L4xx” and name the project “blink_demo.”</p>
+<div id="fig-new-project" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/project-template.png" class="img-fluid figure-img">
 </div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: New project template.
+</figcaption>
+</figure>
+</div>
+<p>Select the proper Target processor (STM32L432KCUx).</p>
+<div id="fig-target-processor" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-target-processor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="./images/new-project.png" class="img-fluid figure-img"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="./images/target-processor.png" class="img-fluid figure-img"></p>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-target-processor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Setting up the target processor.
+</figcaption>
+</figure>
+</div>
+<p>On the next page, leave all the options checked and allow both configurations on the next page. Click finish to close the wizard.</p>
+<div id="fig-project-config" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-project-config-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/project-files.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-project-config-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Project configuration.
+</figcaption>
+</figure>
+</div>
+<p>If you click the arrows to expand the tree of files in the project you will see a main.c file in the source directory and the supporting basic system files and device drivers.</p>
+<div id="fig-project-files" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-project-files-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./images/project-items.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-project-files-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Project files in default projects.
+</figcaption>
+</figure>
+</div>
+<p>Next, open up main.c and edit it to include the following code. This code toggles the GPIO pin PB3 on and off, blinking the on-board LED. A for loop that counts to a set value using a dummy variable serves to create a simple delay so that the LED blinks slow enough to easily see it.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">/*********************************************************************</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">*                    SEGGER Microcontroller GmbH                     *</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">*                        The Embedded Experts                        *</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">**********************************************************************</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">-------------------------- </span><span class="re">END</span><span class="co">-OF-HEADER -----------------------------</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">File    : main.c</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">Purpose : LED blink demo</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">*/</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stm32l432xx.h&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdint.h&gt;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">// Initialization code</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>RCC<span class="op">-&gt;</span>AHB2ENR <span class="op">|=</span> RCC_AHB2ENR_GPIOBEN<span class="op">;</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>GPIOB<span class="op">-&gt;</span>MODER <span class="op">|=</span> GPIO_MODER_MODE3_0<span class="op">;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>GPIOB<span class="op">-&gt;</span>MODER <span class="op">&amp;=</span> <span class="op">~</span>GPIO_MODER_MODE3_1<span class="op">;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span><span class="op">(</span><span class="dv">1</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a> <span class="cf">for</span><span class="op">(</span><span class="dt">volatile</span> <span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">20000</span><span class="op">;</span> i<span class="op">++);</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a> GPIOB<span class="op">-&gt;</span>ODR <span class="op">^=</span> <span class="op">(</span><span class="dv">1</span> <span class="op">&lt;&lt;</span> <span class="dv">3</span><span class="op">);</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a> <span class="op">}</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">/*************************** End of file ****************************/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>After writing the code, build it by running “Build blink_led” from the Build menu or by using the keyboard shortcut F7. If you get any error messages, use the information printed in the output window to locate the error (double clicking on the error message should bring you to the appropriate section of code) and correct the bug. Note that frequently the line previous to the line identified as containing the bug is where the actual problem lies. After successfully resolving any compilation errors you are ready to move on to uploading and debugging your code.</p>
 </section>
-<section id="creating-and-initializing-your-git-repo" class="level2">
-<h2 class="anchored" data-anchor-id="creating-and-initializing-your-git-repo">Creating and Initializing Your Git Repo</h2>
-<div style="position: relative; padding-bottom: 64.63195691202873%; height: 0;">
-<iframe src="https://www.loom.com/embed/ee828a5b3c024653a9c210d2451a7251?sid=844f2d0e-c6b0-47ef-aacd-5e7cb4b36aab" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-</iframe>
-</div>
+<section id="uploading-the-code" class="level2">
+<h2 class="anchored" data-anchor-id="uploading-the-code">Uploading the Code</h2>
+<p>To upload your compiled code, use the Target menu and select “Connect J-Link”. If you get any errors check that your board is properly connected. If you are still having issues, contact the instructor as you might need to upgrade the firmware on your board from ST-LINK to J-Link.</p>
+<p>After connecting the J-Link, download the compiled code to the board by selecting <code>Target &gt; Download blink_led</code> from the menu. If everything is working correctly, you should see a message in the Output window that the download was successful and the green user LED (LD3) on your Nucleo board should start blinking.</p>
+<p>Congratulations, you have successfully built your first project on your microcontroller!</p>
 </section>
-<section id="monitoring-memory-mapped-registers-in-segger-embedded-studio" class="level2">
-<h2 class="anchored" data-anchor-id="monitoring-memory-mapped-registers-in-segger-embedded-studio">Monitoring Memory-mapped Registers in SEGGER Embedded Studio</h2>
-<div style="position: relative; padding-bottom: 62.5%; height: 0;">
-<iframe src="https://www.loom.com/embed/3667f6829c2c4559ab14572cc7c35d67?sid=6bfa25fa-d966-4b42-a9d8-3c0a834404da" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-</iframe>
-</div>
+<section id="appendix-a-install-segger-embedded-studio-and-support-packages" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-a-install-segger-embedded-studio-and-support-packages">Appendix A: Install SEGGER Embedded Studio and Support Packages</h2>
+<p>Download <a href="https://www.segger.com/downloads/embedded-studio/">Segger Embedded Studio</a>. The current version as of this writing is 7.32. There are versions of the program available for Windows, Linux, and Mac. Make sure to choose the appropriate installer for your computer hardware. You may find the <a href="https://studio.segger.com/index.htm?https://studio.segger.com/ide_project_system_overview.htm">SEGGER Embedded Studio User Guide</a> helpful for answering questions about how to navigate the program.</p>
+<p>You will also need to download and install the J-Link Drivers for your operating system from <a href="https://www.segger.com/downloads/jlink/">here</a>.</p>
+<p>Before you create your project, you will need to download a few support packages for the CPU on our board. Download the following support packages in SEGGER Embedded Studio (tick the option in package manager gear icon in top right to show all downloaded packages, not just those that aren’t installed yet)</p>
+<ul>
+<li>STM32L4xx CPU Support Package</li>
+<li>CMSIS 5 CMSIS-CORE Support Package</li>
+<li>CMSIS 5 Documentation Package</li>
+</ul>
 </section>
-<section id="rigol-mso1104-logic-analyzer-demo" class="level2">
-<h2 class="anchored" data-anchor-id="rigol-mso1104-logic-analyzer-demo">RIGOL MSO1104 Logic Analyzer Demo</h2>
-<div style="position: relative; padding-bottom: 62.5%; height: 0;">
-<iframe src="https://www.loom.com/embed/520a97c65cd04ae7ac5893041e3de3a4?sid=a8c5361d-79ca-4f1b-b88f-21839df50973" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-</iframe>
-</div>
-</section>
-<section id="floating-point-support-for-printf-in-segger-embedded-studio" class="level2">
-<h2 class="anchored" data-anchor-id="floating-point-support-for-printf-in-segger-embedded-studio">Floating Point Support for <code>printf()</code> in SEGGER Embedded Studio</h2>
-<div style="position: relative; padding-bottom: 62.5%; height: 0;">
-<iframe src="
-https://www.loom.com/embed/c27d30aba2f147a1ae01e26391e328f0?sid=017f1c0f-ff7d-4ea9-a99d-17ca72262646" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-</iframe>
-</div>
-</section>
-<section id="lattice-lse-fsm-automatically-decode-unreachable-states" class="level2">
-<h2 class="anchored" data-anchor-id="lattice-lse-fsm-automatically-decode-unreachable-states">Lattice LSE FSM Automatically Decode Unreachable States</h2>
-<div style="position: relative; padding-bottom: 62.5%; height: 0;">
-<iframe src="
-https://www.loom.com/embed/44838b3b8f49473ba348165aaab2e4f5?sid=f02a578e-5515-4ce4-9e01-e1ba1c754371" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-</iframe>
-</div>
+<section id="appendix-b-st-link-to-j-link-firmware-upgrade" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-b-st-link-to-j-link-firmware-upgrade">Appendix B: ST-LINK to J-Link Firmware Upgrade</h2>
+<p>Your STM32 Nucleo boards come with an on-board debugger ST-LINK debugger. This debugger is not compatible out of the box with the SEGGER tools and the firmware needs to be updated to connect to SEGGER Embedded Studio. The boards in your kits should have already been updated so that they are ready to go, but if for some reason your computer is not recognizing the board, you may need to download and perform the firmware upgrade yourself. Instructions on how to do so can be found <a href="https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/">here</a>. Note that this upgrade process can only be completed on Windows.</p>
 </section>
 <section id="share-your-feedback" class="level2">
 <h2 class="anchored" data-anchor-id="share-your-feedback">Share Your Feedback</h2>
@@ -295,7 +371,7 @@ Share Your Feedback!
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you caught any typos or have any suggestions for this page, please open an issue on the <a href="https://github.com/HMC-E155/hmc-e155.github.io/issues">website Github repository</a>. Click the link <a href="../../resources/how-to-create-a-github-issue.html">here</a> for instructions on how to create an issue.</p>
+<p>If you caught any typos or have any suggestions for this page, please open an issue on the <a href="https://github.com/HMC-E155/hmc-e155.github.io/issues">website Github repository</a>. Click the link <a href="../../../resources/how-to-create-a-github-issue.html">here</a> for instructions on how to create an issue.</p>
 </div>
 </div>
 
