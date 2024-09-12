@@ -1,5 +1,6 @@
 ---
 title: 'SEGGER Embedded Studio Setup'
+categories: [MCU, SEGGER Embedded Studio]
 ---
 
 ## Create New Test Project

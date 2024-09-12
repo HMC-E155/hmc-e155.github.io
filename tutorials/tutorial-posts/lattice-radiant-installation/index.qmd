@@ -1,5 +1,6 @@
 ---
 title: 'Lattice Radiant Installation Instructions'
+categories: [FPGA]
 ---
 
 ## Introduction

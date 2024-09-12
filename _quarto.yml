@@ -49,21 +49,7 @@ website:
       - text: Resources
         href: resources/
       - text: Tutorials
-        menu:
-        - text: Tutorial Videos
-          href: tutorials/tutorial-videos/
-        - text: Git Setup
-          href: tutorials/git-setup/
-        - text: Quarto Portfolio Setup
-          href: tutorials/quarto-portfolio-setup/
-        - text: Lattice Radiant Installation
-          href: tutorials/lattice-radiant-installation/
-        - text: ice40 Project Setup
-          href: tutorials/lattice-radiant-ice40-ultraplus-project-setup/
-        - text: QuestaSim/ModelSim Tutorial
-          href: tutorials/modelsim-simulation-tutorial/
-        - text: SEGGER Embedded Studio Tutorial
-          href: tutorials/segger-embedded-studio-setup
+        href: tutorials/
 
 format:
   html:

@@ -1,0 +1,9 @@
+---
+title: Publishing Your Quarto Website to Github Pages
+categories: [video, software tools]
+include: false
+---
+
+VIDEO URL
+
+{{< include /resources/github-issue-footer.qmd >}}
