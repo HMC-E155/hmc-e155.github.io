@@ -1,5 +1,6 @@
 ---
 title: 'Lattice Radiant iCE40 UltraPlus Project Setup'
+categories: [FPGA]
 ---
 
 # Project Setup

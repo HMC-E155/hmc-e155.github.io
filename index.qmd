@@ -15,3 +15,4 @@ Below is a listing of some important links:
 - [Labs Overview](./lab/)
 - [Lecture Slides](./lecture/)
 - [Resources](./resources/)
+- [Tutorials](./tutorials/)

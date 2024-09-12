@@ -1,5 +1,6 @@
 ---
 title: 'QuestaSim/ModelSim Simulation Tutorial'
+categories: [FPGA, QuestaSim/ModelSim]
 ---
 
 ::: {.callout-warning title="QuestaSim is ModelSim"}

@@ -1,5 +1,6 @@
 ---
 title: 'How to Build a Quarto Portfolio'
+categories: [Quarto]
 format:
   html:
     other-links:
@@ -302,7 +303,7 @@ You should see the entry disappear.
 
 ### Tracking Your Work With Git
 
-If you haven't yet set up Git on your machine or are not familiar with it, complete the [Git Tutorial](/tutorials/git-setup/) before continuing.
+If you haven't yet set up Git on your machine or are not familiar with it, complete the [Git Tutorial](/tutorials/tutorial-posts/git-setup/) before continuing.
 You'll need to have Git set up before you move to the next step to publish your site.
 
 #### Initialize Git Repo
