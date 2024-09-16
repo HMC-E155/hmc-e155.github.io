@@ -3,6 +3,7 @@
 - [ ] Design measures and displays speed of motor in units of m/s with an update rate of at least 1 Hz
 - [ ] Measured speed matches true motor speed and direction (calculations should be provided in the report to verify this)
 - [ ] Code uses interrupts (rather than polling or timers) to detect encoder pulses
+- [ ] Interrupt code does not miss any encoder pulses at normal speed
 
 #### Excellence
 
