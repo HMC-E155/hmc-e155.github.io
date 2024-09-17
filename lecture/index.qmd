@@ -4,14 +4,14 @@ title: 'Lecture'
 
 See the list below for links to lecture slides and handouts. Slides and handouts will normally be posted shortly before each class period.
 
-* Lecture 1: Introduction and Analog Behavior of Digital Systems [[slides](./slides/lecture-01-slides.pdf)] [[handout](./slides/lecture-01-handout.pdf)]
-* Lecture 2: Combinational and Sequential Logic [[slides](./slides/lecture-02-slides.pdf)] [[handout](./slides/lecture-02-handout.pdf)]
-* Lecture 3: Verilog Review [[slides](./slides/lecture-03-slides.pdf)] [[handout](./slides/lecture-03-handout.pdf)]
-Lecture 4: Synchronous Design [[slides](./slides/lecture-04-slides.pdf)] [[handout](./slides/lecture-04-handout.pdf)]
-* Lecture 5: FPGA Documentation [[slides](./slides/lecture-05-slides.pdf)] [[handout](./slides/lecture-05-handout.pdf)]
-* Lecture 6: Introduction to the STM32 L432KC MCU and C Programming [[slides](./slides/lecture-06-slides.pdf)] [[handout](./slides/lecture-06-handout.pdf)]
-<!-- * Lecture 7: ARM Assembly Programming [[slides](./slides/lecture-07-slides.pdf)] [[handout](./slides/lecture-07-handout.pdf)]
-* Lecture 8: C Programming [[slides](./slides/lecture-08-slides.pdf)] [[handout](./slides/lecture-08-handout.pdf)]
+- Lecture 1: Introduction and Analog Behavior of Digital Systems [[slides](./slides/lecture-01-slides.pdf)] [[handout](./slides/lecture-01-handout.pdf)]
+- Lecture 2: Combinational and Sequential Logic [[slides](./slides/lecture-02-slides.pdf)] [[handout](./slides/lecture-02-handout.pdf)]
+- Lecture 3: Verilog Review [[slides](./slides/lecture-03-slides.pdf)] [[handout](./slides/lecture-03-handout.pdf)]
+- Lecture 4: Synchronous Design [[slides](./slides/lecture-04-slides.pdf)] [[handout](./slides/lecture-04-handout.pdf)]
+- Lecture 5: FPGA Documentation [[slides](./slides/lecture-05-slides.pdf)] [[handout](./slides/lecture-05-handout.pdf)]
+- Lecture 6: Introduction to the STM32 L432KC MCU and Refresher on C Programming [[slides](./slides/lecture-06-slides.pdf)] [[handout](./slides/lecture-06-handout.pdf)]
+- Lecture 7: Clock Configuration [[slides](./slides/lecture-07-slides.pdf)] [[handout](./slides/lecture-07-handout.pdf)] [[tutorial repository](https://github.com/HMC-E155/tutorial-clock-configuration)]
+<!-- * Lecture 8: C Programming [[slides](./slides/lecture-08-slides.pdf)] [[handout](./slides/lecture-08-handout.pdf)]
 * Lecture 9: Clock Configuration [[slides](./slides/lecture-09-slides.pdf)] [[handout](./slides/lecture-09-handout.pdf)]
 * Lecture 10: Timers [[slides](./slides/lecture-10-slides.pdf)] [[handout](./slides/lecture-10-handout.pdf)]
 * Lecture 11: Serial Interfaces and SPI [[slides](./slides/lecture-11-slides.pdf)] [[handout](./slides/lecture-11-handout.pdf)]
