@@ -1,0 +1,17 @@
+::: {.callout-warning title="FA24 Checkoff Modification"}
+Due to Prof. Brake's travel schedule, there will be no standard checkoff for this lab.
+Instead of meeting with him to demonstrate the performance of your system, you must upload a video of your system in operation.
+Your video should document the entire song playing.
+
+Uploading a video directly to your Github site is **not** recommended due to the large file sizes involved.
+Instead, you should upload your video to a hosting site like YouTube (you may used your HMC Google account) and then copy and paste the embed HTML code into your website.
+To do so, you may use the following Quarto shortcode as shown below.
+Simply replace the given URL with the URL to your video.
+More information can be found in the [Quarto docs](https://quarto.org/docs/authoring/videos.html).
+
+``` {.markdown shortcodes="false"}
+{{< video https://www.youtube.com/embed/wo9vZccmqwc >}}
+```
+
+{{< video https://www.youtube.com/embed/wo9vZccmqwc >}}
+:::

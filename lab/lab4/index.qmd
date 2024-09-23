@@ -8,10 +8,11 @@ format:
         icon: file-earmark-check
     code-links:
       - text: "Starter Code"
-        href: https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab05
+        href: https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab04
         icon: github
 ---
 
+{{< include ./fa24-note.qmd >}}
 
 ## Introduction
 
@@ -38,7 +39,7 @@ In particular, this means that you are not allowed to use the CMSIS headers for 
 
 ## Discussion
 
-You can find `lab5_starter.c` on the class web page with the Für Elise score provided as an array of ordered pairs of pitch frequencies and durations.
+You can find starter code for this lab in the course Github repository. The code provides the Für Elise score as an array of ordered pairs of pitch frequencies and durations.
 
 A goal of this lab is for you to learn to interpret a datasheet and figure out how the timer works. Write your own code from scratch to use the system timer.
 
@@ -96,14 +97,6 @@ Recall that the A above middle C (called A4) is 440 Hz (at least in the United S
 | A5                 |       880      |
 
 :::
-
-## What to Turn In
-
-When you are done, have your lab checked off by the instructor. You should thoroughly understand how it works and what would happen if any changes were made. Turn in your lab writeup including the following information:
-
-- Schematics of the breadboarded circuit.
-- Your source code.
-- How many hours did you spend on this lab? This will not count toward your grade.
 
 ## Credits
 
