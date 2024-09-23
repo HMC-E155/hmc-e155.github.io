@@ -19,13 +19,13 @@ format:
 
 Be sure to join the class Discord and check it regularly as it will be the main source of course-related communication for this semester.
 
-## Course Schedule
+## Schedule
 
 | **Name**     | **Info**                                             |
 |--------------|------------------------------------------------------|
 | Lecture      | TR 1:15 - 2:30 pm                                    |
 | Lab Checkoff | TR afternoons by signup in the Digital Lab (PA B183) |
-| Office Hours | TBD                                                  |
+| Office Hours | M 3:30-4:30 pm and by appointment                                                  |
 
 You will be working on labs on your own time and it is not required that you attend the entire scheduled lab period. Instead, sign up for a time to get your lab checked off. Please sign up for a time during your lab section. If you are unable to find a spot that works for you, see if you can swap with one of your classmates. If you are still having trouble finding a time that works for you, reach out and let me know.
 
@@ -38,11 +38,11 @@ In broad strokes, MicroPs can be divided into two halves. The first half of the 
 | 1 | 8/26 | Intro & Analog Behavior of Digital Systems | Combinational and Sequential Logic | Git & Quarto Portfolio Setup |
 | 2 | 9/2 | Verilog Coding | Synchronous Design | [Lab 1](/lab/lab1/) |
 | 3 | 9/9 | FPGA Documentation | C Programming on an MCU | [Lab 2](/lab/lab2/) |
-| 4 | 9/16 | Clock Configuration | Timers | [Lab 3](/lab/lab3/) |
-| 5 | 9/23 | Interrupts | Serial Interfaces Overview & SPI | [Lab 4](/lab/lab4/) |
-| 6 | 9/30 | TBD | TBD |  |
-| 7 | 10/7 | Project Kickoff | UART and the IoT | [Lab 5](/lab/lab5/) |
-| 8 | 10/14 | Happy Fall Break! **No Class** | Proposal Debriefs | [Project Proposal](/project/) |
+| 4 | 9/16 | GPIO | Clock Configuration | [Lab 3](/lab/lab3/) |
+| 5 | 9/23 | Timers | Interrupts |  |
+| 6 | 9/30 | PCB Design Activity | PCB Design Activity | [Lab 4](/lab/lab4/) |
+| 7 | 10/7 | Serial Interfaces Overview, SPI, and Project Kickoff | UART and the IoT | [Lab 5](/lab/lab5/) |
+| 8 | 10/14 | **Happy Fall Break! No Class** | Proposal Debriefs | [Project Proposal](/project/) |
 | 9 | 10/21 | Advanced Encryption Standard (AES) | Graphics and Displays | [Lab 6](/lab/lab6/) |
 | 10 | 10/28 | Motors and Speakers | Direct Memory Access | [Lab 7](/lab/lab7/) |
 | 11 | 11/4 | Design Review Presentations | Design Review Presentations | Design Review Presentation & Memo |
@@ -51,7 +51,7 @@ In broad strokes, MicroPs can be divided into two halves. The first half of the 
 | 14 | 11/25 | Emerging Topics in Embedded Systems | Happy Thanksgiving! **No class** |  |
 | 15 | 12/2 | Guest Lecture: Ben Chelf | TBD | Project Checkoffs, Report, Demo Day |
 
-## Course Learning Objectives
+## Learning Objectives
 
 The overarching goal of this course is to take you from a basic familiarity and knowledge of digital design with field gate programmable arrays (FPGAs) and microcontrollers programming and expand your capabilities to design, build, and test embedded systems.
 
