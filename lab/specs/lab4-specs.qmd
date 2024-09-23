@@ -5,6 +5,7 @@
 - [ ] Individual pitches are accurate to within 1% across the frequency range (of 220-1000 Hz) (calculations should be provided in the report to verify this)
 - [ ] All rests (pauses with no sound) are played properly
 - [ ] Code uses `#define` macros for memory-mapped registers
+- [ ] Portfolio page includes a video of the system playing the entire song.
 
 #### Excellence
 
