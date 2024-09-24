@@ -1502,7 +1502,7 @@
     "href": "lecture/index.html",
     "title": "Lecture",
     "section": "",
-    "text": "See the list below for links to lecture slides and handouts. Slides and handouts will normally be posted shortly before each class period.\n\nLecture 1: Introduction and Analog Behavior of Digital Systems [slides] [handout]\nLecture 2: Combinational and Sequential Logic [slides] [handout]\nLecture 3: Verilog Review [slides] [handout]\nLecture 4: Synchronous Design [slides] [handout]\nLecture 5: FPGA Documentation [slides] [handout]\nLecture 6: Introduction to the STM32 L432KC MCU and Refresher on C Programming [slides] [handout]\nLecture 7: Clock Configuration [slides] [handout] [tutorial repository]"
+    "text": "See the list below for links to lecture slides and handouts. Slides and handouts will normally be posted shortly before each class period.\n\nLecture 1: Introduction and Analog Behavior of Digital Systems [slides] [handout]\nLecture 2: Combinational and Sequential Logic [slides] [handout]\nLecture 3: Verilog Review [slides] [handout]\nLecture 4: Synchronous Design [slides] [handout]\nLecture 5: FPGA Documentation [slides] [handout]\nLecture 6: Introduction to the STM32 L432KC MCU and Refresher on C Programming [slides] [handout]\nLecture 7: GPIO Device Driver [slides] [handout]\nLecture 8: C Clock Configuration [slides] [handout] [tutorial repository]\nLecture 9: Timers [slides] [handout]"
   },
   {
     "objectID": "project/index.html",
