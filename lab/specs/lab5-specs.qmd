@@ -9,3 +9,4 @@
 
 - [ ] Design uses all edges of encoder pulses to achieve highest resolution measurement
 - [ ] MCU does not miss any pulses at high speed and outputs a non-zero velocity at low speeds
+- [ ] Compare the performance of interrupt based code to manual polling at high speeds
