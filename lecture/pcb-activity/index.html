@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorials – HMC E155</title>
+<title>PCB Activity – HMC E155</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="..//assets/img/microps-logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../..//assets/img/microps-logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,65 +66,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -137,7 +77,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">HMC E155</span>
     </a>
   </div>
@@ -148,11 +88,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../syllabus/"> 
+    <a class="nav-link" href="../../syllabus/"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -161,61 +101,61 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
         <li>
-    <a class="dropdown-item" href="../lab/">
+    <a class="dropdown-item" href="../../lab/">
  <span class="dropdown-text">Labs Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/specs/">
+    <a class="dropdown-item" href="../../lab/specs/">
  <span class="dropdown-text">Lab Specs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab-report-template/">
+    <a class="dropdown-item" href="../../lab/lab-report-template/">
  <span class="dropdown-text">Lab Report Template</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab1/">
+    <a class="dropdown-item" href="../../lab/lab1/">
  <span class="dropdown-text">Lab 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab2/">
+    <a class="dropdown-item" href="../../lab/lab2/">
  <span class="dropdown-text">Lab 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab3/">
+    <a class="dropdown-item" href="../../lab/lab3/">
  <span class="dropdown-text">Lab 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab4/">
+    <a class="dropdown-item" href="../../lab/lab4/">
  <span class="dropdown-text">Lab 4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab5/">
+    <a class="dropdown-item" href="../../lab/lab5/">
  <span class="dropdown-text">Lab 5</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab6/">
+    <a class="dropdown-item" href="../../lab/lab6/">
  <span class="dropdown-text">Lab 6</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab7/">
+    <a class="dropdown-item" href="../../lab/lab7/">
  <span class="dropdown-text">Lab 7</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../lecture/"> 
+    <a class="nav-link" href="../../lecture/"> 
 <span class="menu-text">Lecture</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../project/"> 
+    <a class="nav-link" href="../../project/"> 
 <span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../resources/"> 
+    <a class="nav-link" href="../../resources/"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../tutorials/"> 
+    <a class="nav-link" href="../../tutorials/"> 
 <span class="menu-text">Tutorials</span></a>
   </li>  
 </ul>
@@ -232,14 +172,30 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(12)</span></div><div class="category" data-category="FPGA">FPGA <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Git">Git <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Hardware tools">Hardware tools <span class="quarto-category-count">(1)</span></div><div class="category" data-category="MCU">MCU <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Quarto">Quarto <span class="quarto-category-count">(2)</span></div><div class="category" data-category="QuestaSim/ModelSim">QuestaSim/ModelSim <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SEGGER Embedded Studio">SEGGER Embedded Studio <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Software Tools">Software Tools <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Video">Video <span class="quarto-category-count">(6)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
+  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link" data-scroll-target="#learning-goals"><span class="header-section-number">2</span> Learning Goals</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements"><span class="header-section-number">3</span> Requirements</a></li>
+  <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule"><span class="header-section-number">4</span> Schedule</a>
+  <ul class="collapse">
+  <li><a href="#day-1-schematic-capture" id="toc-day-1-schematic-capture" class="nav-link" data-scroll-target="#day-1-schematic-capture"><span class="header-section-number">4.1</span> Day 1: Schematic Capture</a></li>
+  <li><a href="#day-2-pcb-layout-design-and-fabrication-preparation" id="toc-day-2-pcb-layout-design-and-fabrication-preparation" class="nav-link" data-scroll-target="#day-2-pcb-layout-design-and-fabrication-preparation"><span class="header-section-number">4.2</span> Day 2: PCB Layout Design and Fabrication Preparation</a></li>
+  </ul></li>
+  <li><a href="#kicad-tutorial-videos" id="toc-kicad-tutorial-videos" class="nav-link" data-scroll-target="#kicad-tutorial-videos"><span class="header-section-number">5</span> KiCad Tutorial Videos</a></li>
+  <li><a href="#design-constraints" id="toc-design-constraints" class="nav-link" data-scroll-target="#design-constraints"><span class="header-section-number">6</span> Design Constraints</a></li>
+  <li><a href="#what-to-submit" id="toc-what-to-submit" class="nav-link" data-scroll-target="#what-to-submit"><span class="header-section-number">7</span> What to Submit</a></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="https://download.mikroe.com/documents/standards/mikrobus/mikrobus-standard-specification-v200.pdf"><i class="bi bi-file-earmark-pdf"></i>mikroBUS Standard Specifications</a></li><li><a href="https://www.analog.com/media/en/technical-documentation/data-sheets/DS1722.pdf"><i class="bi bi-file-earmark-pdf"></i>DS1722 Datasheet</a></li><li><a href="https://www.youtube.com/watch?v=vaCVh2SAZY4&amp;list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB"><i class="bi bi-play-btn"></i>KiCad Tutorial Videos</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorials</h1>
+<h1 class="title">PCB Activity</h1>
 </div>
 
 
@@ -256,239 +212,172 @@ window.Quarto = {
 </header>
 
 
+<section id="introduction" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<p>In this assignments, you will learn how to design a printed circuit board (PCB) using the computer aided design (CAD) tool <a href="https://www.kicad.org/">KiCad</a>. First, you will watch a series of YouTube videos which will show you how to use KiCad. Then, you will design a custom PCB board to interface with the DS1722 temperature sensor integrated circuit (IC).</p>
+</section>
+<section id="learning-goals" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="learning-goals"><span class="header-section-number">2</span> Learning Goals</h2>
+<p>By the end of this lab you will have…</p>
+<ul>
+<li>Learned how to use KiCad to design a PCB.</li>
+<li>Created a custom PCB to interface with the DS1722.</li>
+</ul>
+</section>
+<section id="requirements" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="requirements"><span class="header-section-number">3</span> Requirements</h2>
+<p>Design a custom PCB to interface with the DS1722 SPI temperature sensor. In addition to the DS1722 chip, the board should include five indicator LEDs: power, SCLK, SDO (MOSI), SDI (MISO), and CS (SS). To aid in your debugging, include test points that you can use to easily probe the SPI signals.</p>
+<p>The board must adhere to the mikroBUS standard. In particular, the SPI interface lines should be routed to their respective pins on the mikroBUS headers and the form factor of the board should match the dimensions specified. <a href="#fig-mikrobus-standard" class="quarto-xref">Figure&nbsp;1</a> includes screenshots of some relevant figures from the <a href="https://download.mikroe.com/documents/standards/mikrobus/mikrobus-standard-specification-v200.pdf">mikroBUS standard specifications</a>. You should read the whole document.</p>
+<div id="fig-mikrobus-standard" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-mikrobus-standard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-mikrobus-standard" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-dimensions" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-dimensions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/mikrobus-dimensions.png" class="img-fluid figure-img" data-ref-parent="fig-mikrobus-standard">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-dimensions-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) mikroBUS Dimensions
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-mikrobus-standard" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-pinout" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-pinout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/mikrobus-pinout.png" class="img-fluid figure-img" data-ref-parent="fig-mikrobus-standard">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-pinout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) mikroBUS pinout
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mikrobus-standard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: mikroBUS standard specifications.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="schedule" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="schedule"><span class="header-section-number">4</span> Schedule</h2>
+<section id="day-1-schematic-capture" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="day-1-schematic-capture"><span class="header-section-number">4.1</span> Day 1: Schematic Capture</h3>
+<p>In the first session you will create a schematic for your board. By the conclusion of this class period, you should have a completed schematic for your board with all components properly connected together and ready to be physically arranged on the PCB.</p>
+<section id="prep-work" class="level4" data-number="4.1.1">
+<h4 data-number="4.1.1" class="anchored" data-anchor-id="prep-work"><span class="header-section-number">4.1.1</span> Prep work</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Download and install <a href="https://www.kicad.org/">KiCad</a> on your computer.</label></li>
+<li><label><input type="checkbox">Watch videos 1-4 on the <a href="https://www.youtube.com/watch?v=vaCVh2SAZY4&amp;list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB">KiCad tutorial playlist</a>.</label></li>
+<li><label><input type="checkbox">Create blank KiCad project and create an initial commit to Git.</label></li>
+</ul>
+</section>
+<section id="in-class" class="level4" data-number="4.1.2">
+<h4 data-number="4.1.2" class="anchored" data-anchor-id="in-class"><span class="header-section-number">4.1.2</span> In-class</h4>
+<p>Recreate the following schematic in KiCad.</p>
+<div id="fig-kicad-schematic-screenshot" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-kicad-schematic-screenshot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/ds1722-schematic.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kicad-schematic-screenshot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: DS1722 breakout board schematic in KiCad.
+</figcaption>
+</figure>
+</div>
+<p>Complete the following steps:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Create a custom symbol for the DS1722 chip.</label></li>
+<li><label><input type="checkbox">Add all other components to the schematics (resistors, LEDs, connectors).</label></li>
+<li><label><input type="checkbox">Wire components together and review schematics with your neighbors.</label></li>
+</ul>
+</section>
+</section>
+<section id="day-2-pcb-layout-design-and-fabrication-preparation" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="day-2-pcb-layout-design-and-fabrication-preparation"><span class="header-section-number">4.2</span> Day 2: PCB Layout Design and Fabrication Preparation</h3>
+<p>In the second session you will implement your schematic on the physical PCB. By the end of this class period, you should have a completed circuit board which is ready to be submitted to be manufactured.</p>
+<section id="prep-work-1" class="level4" data-number="4.2.1">
+<h4 data-number="4.2.1" class="anchored" data-anchor-id="prep-work-1"><span class="header-section-number">4.2.1</span> Prep work</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Watch videos 5-8 on the <a href="https://www.youtube.com/watch?v=vaCVh2SAZY4&amp;list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB">KiCad tutorial playlist</a>.</label></li>
+</ul>
+</section>
+<section id="in-class-1" class="level4" data-number="4.2.2">
+<h4 data-number="4.2.2" class="anchored" data-anchor-id="in-class-1"><span class="header-section-number">4.2.2</span> In-class</h4>
+<p>Complete the following steps:</p>
+<ul class="task-list">
+<li><label><input type="checkbox">Set up PCB project in KiCad with the design rules listed <a href="https://docs.oshpark.com/design-tools/kicad/kicad-design-rules/">here</a>. <a href="#fig-kicad-design-rules" class="quarto-xref">Figure&nbsp;3</a> shows a screenshot of what your final settings should look like. While these are specific recommendations from OSH Park, they are a good baseline standard for any board fab house.</label></li>
+</ul>
+<div id="fig-kicad-design-rules" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-kicad-design-rules-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/board-setup-constraints.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kicad-design-rules-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Screenshot of settings at: <code>Board Setup &gt; Design Rules &gt; Constraints</code>.
+</figcaption>
+</figure>
+</div>
+<ul class="task-list">
+<li><label><input type="checkbox">Set up netclasses with two types in addition to default: <code>power</code> and <code>signal</code>. Set both the clearance and track width to 8 mils for the signal netclass and both to 15 mils for power netclass. The signal tracks are for general purpose connections and the power traces are wider traces since they will carry more current. You may leave all other columns at the default. <a href="#fig-netclasses" class="quarto-xref">Figure&nbsp;4</a> shows what the settings should look like when you finish.</label></li>
+</ul>
+<div id="fig-netclasses" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-netclasses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/board-setup-netclasses.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-netclasses-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Netclasses for <code>signal</code> and <code>power</code>.
+</figcaption>
+</figure>
+</div>
+<ul class="task-list">
+<li><label><input type="checkbox">Assign footprints to all components. All LEDs and resistors should be Imperial 0805 footprints.</label></li>
+<li><label><input type="checkbox">Create physical board which does not exceed the specifications of the mikroBUS extension board specifications (1100 mil wide by 1125 mil tall). You should be careful to ensure that the size of your board and the physical arrangement of the headers is correct, but you do not need to comply with all of the details of the mikroBUS standard (e.g., no need to include the mikroBUS logo).</label></li>
+<li><label><input type="checkbox">Arrange all components on the board and route traces to connect them.</label></li>
+<li><label><input type="checkbox">Run design rules check to confirm your board meets all constraints. Resolve any issues.</label></li>
+<li><label><input type="checkbox">Export Gerber files and <a href="https://www.pcbway.com/QuickOrderOnline.aspx">upload to PCBWay</a> to confirm that your board is ready to order.</label></li>
+<li><label><input type="checkbox">Upload the URL to your Git repository with your finished board to Canvas.</label></li>
+<li><label><input type="checkbox">Make sure to commit a .zip file with all your Gerber files to the repository.</label></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="kicad-tutorial-videos" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="kicad-tutorial-videos"><span class="header-section-number">5</span> KiCad Tutorial Videos</h2>
+<p><a href="https://shawnhymel.com/">Shawn Hymel</a> has an excellent YouTube tutorial on how to make a PCB. The tutorial consists of 10 videos which walk you through the process from beginning to end. You should watch all the tutorials, although you won’t need to follow the steps in the last two videos since the parts will be provided for you and you already know how to solder components to the board.</p>
+<p>The tutorials are linked below, and can also be found in the <a href="https://www.youtube.com/watch?v=vaCVh2SAZY4&amp;list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB">playlist</a>.</p>
+<ol type="1">
+<li><a href="https://www.youtube.com/watch?v=vaCVh2SAZY4&amp;list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&amp;index=1">How PCBs Are Made</a></li>
+<li><a href="https://www.youtube.com/watch?v=c2niS9ZRBHo&amp;list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&amp;index=2">Create a Schematic Symbol</a></li>
+<li><a href="https://www.youtube.com/watch?v=4Gtd7xY6zS4&amp;list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&amp;index=3">Schematic Capture</a></li>
+<li><a href="https://www.youtube.com/watch?v=ZHH4G_EWhm0&amp;list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&amp;index=4">Create a Footprint</a></li>
+<li><a href="https://www.youtube.com/watch?v=Ghv0bGiZFL8&amp;list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&amp;index=5">Associate Footprints and Generate Netlist</a></li>
+<li><a href="https://www.youtube.com/watch?v=dM5b_s2ysVk&amp;list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&amp;index=6">Place Parts and Define Outline</a></li>
+<li><a href="https://www.youtube.com/watch?v=jaQPr7PgImk&amp;list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&amp;index=7">Board Layout</a></li>
+<li><a href="https://www.youtube.com/watch?v=ENmDnoKs2hM&amp;list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&amp;index=8">Generate Gerbers and Order Boards</a></li>
+<li><a href="https://www.youtube.com/watch?v=I7GUiGoD1w8&amp;list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&amp;index=9">Generate BOM and Order Parts</a></li>
+<li><a href="https://www.youtube.com/watch?v=Zkn_Au5aeLA&amp;list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&amp;index=10">Solder Components to the PCB</a></li>
+</ol>
+</section>
+<section id="design-constraints" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="design-constraints"><span class="header-section-number">6</span> Design Constraints</h2>
+<p>To make it easier to source parts for your board, you will need to limit yourself to only specific components. In particular, you should limit yourself to surface mount technology (SMT) Imperial 0805 resistors and Imperial 0805 LEDs. Your through-hole technology (THT) header pins should be a standard<br>
+0.100” (2.54 mm) pitch.</p>
+</section>
+<section id="what-to-submit" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="what-to-submit"><span class="header-section-number">7</span> What to Submit</h2>
+<p>If you successfully complete your board, by the end of the week, you may submit it to be manufactured. To do so, you must ensure that all design specifications are met. When complete, submit a link to a Github repository which includes all the design files for your board along with any custom libraries. Your git repository must also include a .zip file of the Gerber files needed to manufacture your board.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Video,Software Tools" data-listing-file-modified-sort="1727727134729" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
-<a href="../tutorials/tutorial-videos/creating-and-initializing-your-git-repo.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Creating and Initializing Your Git Repo
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Video'); return false;">
-Video
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Software Tools'); return false;">
-Software Tools
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Video,MCU,SEGGER Embedded Studio" data-listing-file-modified-sort="1727727134729" data-listing-reading-time-sort="1" data-listing-word-count-sort="39">
-<a href="../tutorials/tutorial-videos/floating-point-support-for-printf-in-segger-embedded-studio.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Floating Point Support for <code>printf()</code> in SEGGER Embedded Studio
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Video'); return false;">
-Video
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('MCU'); return false;">
-MCU
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('SEGGER Embedded Studio'); return false;">
-SEGGER Embedded Studio
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="Git" data-listing-file-modified-sort="1727727134651" data-listing-reading-time-sort="8" data-listing-word-count-sort="1485">
-<a href="../tutorials/tutorial-posts/git-setup/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Git Setup
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Git'); return false;">
-Git
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="Quarto" data-listing-file-modified-sort="1727727134718" data-listing-reading-time-sort="11" data-listing-word-count-sort="2165">
-<a href="../tutorials/tutorial-posts/quarto-portfolio-setup/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-How to Build a Quarto Portfolio
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
-Quarto
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="Video,FPGA" data-listing-file-modified-sort="1727727134729" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
-<a href="../tutorials/tutorial-videos/lattice-lse-fsm-automatically-decode-unreachable-states.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Lattice LSE FSM Automatically Decode Unreachable States
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Video'); return false;">
-Video
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('FPGA'); return false;">
-FPGA
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="FPGA" data-listing-file-modified-sort="1727727134666" data-listing-reading-time-sort="3" data-listing-word-count-sort="576">
-<a href="../tutorials/tutorial-posts/lattice-radiant-installation/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Lattice Radiant Installation Instructions
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('FPGA'); return false;">
-FPGA
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="FPGA" data-listing-file-modified-sort="1727727134664" data-listing-reading-time-sort="7" data-listing-word-count-sort="1359">
-<a href="../tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Lattice Radiant iCE40 UltraPlus Project Setup
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('FPGA'); return false;">
-FPGA
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="Video,MCU" data-listing-file-modified-sort="1727727134730" data-listing-reading-time-sort="1" data-listing-word-count-sort="33">
-<a href="../tutorials/tutorial-videos/monitoring-memory-mapped-registers-in-segger-embedded-studio.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Monitoring Memory-mapped Registers in SEGGER Embedded Studio
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Video'); return false;">
-Video
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('MCU'); return false;">
-MCU
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="8" data-categories="Video,Quarto,Software Tools" data-listing-file-modified-sort="1727727134730" data-listing-reading-time-sort="1" data-listing-word-count-sort="36">
-<a href="../tutorials/tutorial-videos/publishing-your-quarto-website-to-github-pages.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Publishing Your Quarto Website to Github Pages
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Video'); return false;">
-Video
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Quarto'); return false;">
-Quarto
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Software Tools'); return false;">
-Software Tools
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="9" data-categories="FPGA,QuestaSim/ModelSim" data-listing-file-modified-sort="1727727134695" data-listing-reading-time-sort="9" data-listing-word-count-sort="1639">
-<a href="../tutorials/tutorial-posts/modelsim-simulation-tutorial/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-QuestaSim/ModelSim Simulation Tutorial
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('FPGA'); return false;">
-FPGA
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('QuestaSim/ModelSim'); return false;">
-QuestaSim/ModelSim
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="10" data-categories="Video,Hardware tools" data-listing-file-modified-sort="1727727134730" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
-<a href="../tutorials/tutorial-videos/rigol-mso1104-logic-analyzer-demo.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-RIGOL MSO1104 Logic Analyzer Demo
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Video'); return false;">
-Video
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Hardware tools'); return false;">
-Hardware tools
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="11" data-categories="MCU,SEGGER Embedded Studio" data-listing-file-modified-sort="1727727134729" data-listing-reading-time-sort="5" data-listing-word-count-sort="873">
-<a href="../tutorials/tutorial-posts/segger-embedded-studio-setup/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-SEGGER Embedded Studio Setup
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('MCU'); return false;">
-MCU
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('SEGGER Embedded Studio'); return false;">
-SEGGER Embedded Studio
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
