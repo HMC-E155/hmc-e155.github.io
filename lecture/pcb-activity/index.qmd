@@ -1,0 +1,156 @@
+---
+title: PCB Activity
+format:
+  html:
+    number-sections: true
+    other-links:
+      - text: "mikroBUS Standard Specifications"
+        href: https://download.mikroe.com/documents/standards/mikrobus/mikrobus-standard-specification-v200.pdf
+        icon: file-earmark-pdf
+      - text: "DS1722 Datasheet"
+        href: https://www.analog.com/media/en/technical-documentation/data-sheets/DS1722.pdf
+        icon: file-earmark-pdf
+      - text: KiCad Tutorial Videos
+        href: https://www.youtube.com/watch?v=vaCVh2SAZY4&list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB
+        icon: play-btn
+
+---
+
+## Introduction
+
+In this assignments, you will learn how to design a printed circuit board (PCB) using the computer aided design (CAD) tool [KiCad](https://www.kicad.org/).
+First, you will watch a series of YouTube videos which will show you how to use KiCad.
+Then, you will design a custom PCB board to interface with the DS1722 temperature sensor integrated circuit (IC).
+
+## Learning Goals
+
+By the end of this lab you will have...
+
+- Learned how to use KiCad to design a PCB.
+- Created a custom PCB to interface with the DS1722.
+
+## Requirements
+
+Design a custom PCB to interface with the DS1722 SPI temperature sensor.
+In addition to the DS1722 chip, the board should include five indicator LEDs: power, SCLK, SDO (MOSI), SDI (MISO), and CS (SS).
+To aid in your debugging, include test points that you can use to easily probe the SPI signals.
+
+The board must adhere to the mikroBUS standard.
+In particular, the SPI interface lines should be routed to their respective pins on the mikroBUS headers and the form factor of the board should match the dimensions specified.
+@fig-mikrobus-standard includes screenshots of some relevant figures from the [mikroBUS standard specifications](https://download.mikroe.com/documents/standards/mikrobus/mikrobus-standard-specification-v200.pdf).
+You should read the whole document.
+
+::: {#fig-mikrobus-standard layout-ncol=2}
+
+![mikroBUS Dimensions](images/mikrobus-dimensions.png){#fig-dimensions}
+
+![mikroBUS pinout](images/mikrobus-pinout.png){#fig-pinout}
+
+mikroBUS standard specifications.
+:::
+
+## Schedule
+
+### Day 1: Schematic Capture
+
+In the first session you will create a schematic for your board.
+By the conclusion of this class period, you should have a completed schematic for your board with all components properly connected together and ready to be physically arranged on the PCB.
+
+#### Prep work
+
+- [ ] Download and install [KiCad](https://www.kicad.org/) on your computer.
+- [ ] Watch videos 1-4 on the [KiCad tutorial playlist](https://www.youtube.com/watch?v=vaCVh2SAZY4&list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB).
+- [ ] Create blank KiCad project and create an initial commit to Git.
+
+#### In-class
+
+Recreate the following schematic in KiCad.
+
+::: {#fig-kicad-schematic-screenshot}
+![](images/ds1722-schematic.png)
+
+DS1722 breakout board schematic in KiCad.
+:::
+
+Complete the following steps:
+
+- [ ] Create a custom symbol for the DS1722 chip.
+- [ ] Add all other components to the schematics (resistors, LEDs, connectors).
+- [ ] Wire components together and review schematics with your neighbors.
+
+
+### Day 2: PCB Layout Design and Fabrication Preparation
+
+In the second session you will implement your schematic on the physical PCB.
+By the end of this class period, you should have a completed circuit board which is ready to be submitted to be manufactured.
+
+#### Prep work
+
+- [ ] Watch videos 5-8 on the [KiCad tutorial playlist](https://www.youtube.com/watch?v=vaCVh2SAZY4&list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB).
+
+#### In-class
+
+Complete the following steps:
+
+- [ ] Set up PCB project in KiCad with the design rules listed [here](https://docs.oshpark.com/design-tools/kicad/kicad-design-rules/). @fig-kicad-design-rules shows a screenshot of what your final settings should look like. While these are specific recommendations from OSH Park, they are a good baseline standard for any board fab house.
+
+::: {#fig-kicad-design-rules}
+![](images/board-setup-constraints.png)
+
+Screenshot of settings at: `Board Setup > Design Rules > Constraints`.
+:::
+
+
+- [ ] Set up netclasses with two types in addition to default: `power` and `signal`. Set both the clearance and track width to 8 mils for the signal netclass and both to 15 mils for power netclass. The signal tracks are for general purpose connections and the power traces are wider traces since they will carry more current. You may leave all other columns at the default. @fig-netclasses shows what the settings should look like when you finish.
+
+
+::: {#fig-netclasses}
+![](images/board-setup-netclasses.png)
+
+Netclasses for `signal` and `power`.
+:::
+
+
+- [ ] Assign footprints to all components. All LEDs and resistors should be Imperial 0805 footprints.
+- [ ] Create physical board which does not exceed the specifications of the mikroBUS extension board specifications (1100 mil wide by 1125 mil tall). You should be careful to ensure that the size of your board and the physical arrangement of the headers is correct, but you do not need to comply with all of the details of the mikroBUS standard (e.g., no need to include the mikroBUS logo).
+- [ ] Arrange all components on the board and route traces to connect them.
+- [ ] Run design rules check to confirm your board meets all constraints. Resolve any issues.
+- [ ] Export Gerber files and [upload to PCBWay](https://www.pcbway.com/QuickOrderOnline.aspx) to confirm that your board is ready to order.
+- [ ] Upload the URL to your Git repository with your finished board to Canvas.
+- [ ] Make sure to commit a .zip file with all your Gerber files to the repository.
+
+
+## KiCad Tutorial Videos
+
+
+[Shawn Hymel](https://shawnhymel.com/) has an excellent YouTube tutorial on how to make a PCB.
+The tutorial consists of 10 videos which walk you through the process from beginning to end.
+You should watch all the tutorials, although you won't need to follow the steps in the last two videos since the parts will be provided for you and you already know how to solder components to the board.
+
+The tutorials are linked below, and can also be found in the [playlist](https://www.youtube.com/watch?v=vaCVh2SAZY4&list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB).
+
+1. [How PCBs Are Made](https://www.youtube.com/watch?v=vaCVh2SAZY4&list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&index=1)
+2. [Create a Schematic Symbol](https://www.youtube.com/watch?v=c2niS9ZRBHo&list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&index=2)
+3. [Schematic Capture](https://www.youtube.com/watch?v=4Gtd7xY6zS4&list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&index=3)
+4. [Create a Footprint](https://www.youtube.com/watch?v=ZHH4G_EWhm0&list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&index=4)
+5. [Associate Footprints and Generate Netlist](https://www.youtube.com/watch?v=Ghv0bGiZFL8&list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&index=5)
+6. [Place Parts and Define Outline](https://www.youtube.com/watch?v=dM5b_s2ysVk&list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&index=6)
+7. [Board Layout](https://www.youtube.com/watch?v=jaQPr7PgImk&list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&index=7)
+8. [Generate Gerbers and Order Boards](https://www.youtube.com/watch?v=ENmDnoKs2hM&list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&index=8)
+9. [Generate BOM and Order Parts](https://www.youtube.com/watch?v=I7GUiGoD1w8&list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&index=9)
+10. [Solder Components to the PCB](https://www.youtube.com/watch?v=Zkn_Au5aeLA&list=PL3bNyZYHcRSUhUXUt51W6nKvxx2ORvUQB&index=10)
+
+## Design Constraints
+
+To make it easier to source parts for your board, you will need to limit yourself to only specific components.
+In particular, you should limit yourself to surface mount technology (SMT) Imperial 0805 resistors and Imperial 0805 LEDs.
+Your through-hole technology (THT) header pins should be a standard 	
+0.100" (2.54 mm) pitch.
+
+
+## What to Submit
+
+If you successfully complete your board, by the end of the week, you may submit it to be manufactured.
+To do so, you must ensure that all design specifications are met.
+When complete, submit a link to a Github repository which includes all the design files for your board along with any custom libraries.
+Your git repository must also include a .zip file of the Gerber files needed to manufacture your board.
