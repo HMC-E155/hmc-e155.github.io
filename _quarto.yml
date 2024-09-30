@@ -5,6 +5,7 @@ project:
     browser: false
   resources: 
     - "*.html"
+    - "/assets/**/*.pdf"
 
 website:
   title: "HMC E155"
