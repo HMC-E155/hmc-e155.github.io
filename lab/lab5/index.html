@@ -171,8 +171,19 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  <li><a href="#credits" id="toc-credits" class="nav-link" data-scroll-target="#credits">Credits</a></li>
+  <li><a href="#share-your-feedback" id="toc-share-your-feedback" class="nav-link" data-scroll-target="#share-your-feedback">Share Your Feedback</a></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="./specs.html"><i class="bi bi-file-earmark-check"></i>Specifications</a></li><li><a href="/assets/lab/25GA370.pdf"><i class="bi bi-file-earmark-pdf"></i>25GA-370</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -196,21 +207,74 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-warning callout-titled" title="Under Construction">
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>In this lab you will use your MCU to determine the speed of a motor by reading from a quadrature encoder using interrupts.</p>
+</section>
+<section id="learning-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
+<p>By the end of this lab you will have…</p>
+<ul>
+<li>Implemented an algorithm to sense quadrature encoder pulses and convert those pulses into a motor velocity.</li>
+<li>Written code to display the measured velocity and direction to a user with an update rate of at least 1 Hz.</li>
+<li>Understood the quadrature encoder protocol and implemented a multi-interrupt routine on the MCU to interface with it.</li>
+</ul>
+</section>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
+<p>Build a system to determine the angular velocity of a brushed DC motor. Use your MCU, a quadrature encoder, and a motor. The MCU should use interrupts to detect pulses from the encoder and use them to calculate a direction and velocity. Ensure that the system remains functional when the motor is spinning at very high and very low speeds. Display the direction and angular velocity of the motor in revolutions/s with an update rate of at least 1 Hz.</p>
+<p>In addition to the standard deliverables, your report should include a flowchart (see examples <a href="https://users.ece.utexas.edu/~valvano/Volume1/E-Book/C12_Interrupts.htm">here</a>) showing each interrupt and the main loop that are executed. Test your system with the motor provided in the lab which spins at a known speed of approximately 10 rev/s.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Under Construction
+Encoder Output Voltage Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This lab is currently in development and will be released later this semester.</p>
+<p>The encoders used for this lab operate at a <strong>5V</strong> logic level. The STM32L432KC uses 3.3V, but has a few pins that are 5V tolerant. Make sure to use those pins or a voltage conversion circuit so you don’t damage your board. The 5V tolerant pins are listed in Tables 13-14 in the <a href="../../assets/doc/ds11451-stm32l432kc.pdf">STM32L432KC Datasheet</a>).</p>
+</div>
+</div>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<p>Quadrature encoders are a common type of encoder used to measure the relative or absolute angle of a motor. They do this by adding a patterned disk to the motor and tracking how fast the disk rotates. Using two sensors that are 90° degrees out of phase provides higher angular resolution and can be used to determine the direction of rotation.</p>
+<div id="fig-quadrature-encoder" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-quadrature-encoder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/quadrature_encoder.gif" class="img-fluid figure-img" style="width:90.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-quadrature-encoder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Animation of quadrature encoder.
+</figcaption>
+</figure>
+</div>
+<p>All quadrature encoders contain two stationary digital sensors, and a disc that rotates with the motor. The encoders you will use in this lab use hall effect sensors and magnets. You should design your system to take full advantage of both signals to get the highest resolution measurement.</p>
+</section>
+<section id="credits" class="level2">
+<h2 class="anchored" data-anchor-id="credits">Credits</h2>
+<p>This lab was original developed in 2024 by Kavi Dey ’26 and Prof.&nbsp;Josh Brake.</p>
+</section>
+<section id="share-your-feedback" class="level2">
+<h2 class="anchored" data-anchor-id="share-your-feedback">Share Your Feedback</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Share Your Feedback!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Share Your Feedback!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you caught any typos or have any suggestions for this page, please open an issue on the <a href="https://github.com/HMC-E155/hmc-e155.github.io/issues">website Github repository</a>. Click the link <a href="../../resources/how-to-create-a-github-issue.html">here</a> for instructions on how to create an issue.</p>
 </div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

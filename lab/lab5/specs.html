@@ -197,9 +197,21 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="lab-specific-specifications">Lab-specific Specifications</h3>
 <section id="proficiency" class="level4">
 <h4 class="anchored" data-anchor-id="proficiency">Proficiency</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Design measures and displays speed of motor in units of m/s with an update rate of at least 1 Hz.</label></li>
+<li><label><input type="checkbox">Measured speed matches true motor speed and direction (calculations should be provided in the report to verify this).</label></li>
+<li><label><input type="checkbox">Code uses interrupts (rather than polling or timers) to detect encoder pulses.</label></li>
+<li><label><input type="checkbox">Interrupt code does not miss any encoder pulses at normal speed.</label></li>
+</ul>
 </section>
 <section id="excellence" class="level4">
 <h4 class="anchored" data-anchor-id="excellence">Excellence</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Design uses all edges of encoder pulses to achieve highest resolution measurement.</label></li>
+<li><label><input type="checkbox">MCU does not miss any pulses at high speed and outputs a non-zero velocity at low speeds.</label></li>
+<li><label><input type="checkbox">Report compares the performance of interrupt based code to manual polling at high speeds.</label></li>
+<li><label><input type="checkbox">Report includes flowchart illustrating main steps of the program and function calls.</label></li>
+</ul>
 <div style="page-break-after: always;"></div>
 </section>
 </section>
