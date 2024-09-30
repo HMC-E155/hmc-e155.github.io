@@ -1,3 +1,13 @@
 #### Proficiency
 
+- [ ] Design measures and displays speed of motor in units of m/s with an update rate of at least 1 Hz.
+- [ ] Measured speed matches true motor speed and direction (calculations should be provided in the report to verify this).
+- [ ] Code uses interrupts (rather than polling or timers) to detect encoder pulses.
+- [ ] Interrupt code does not miss any encoder pulses at normal speed.
+
 #### Excellence
+
+- [ ] Design uses all edges of encoder pulses to achieve highest resolution measurement.
+- [ ] MCU does not miss any pulses at high speed and outputs a non-zero velocity at low speeds.
+- [ ] Report compares the performance of interrupt based code to manual polling at high speeds.
+- [ ] Report includes flowchart illustrating main steps of the program and function calls.
