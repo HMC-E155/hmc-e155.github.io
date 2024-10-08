@@ -15,8 +15,8 @@ See the list below for links to lecture slides and handouts. Slides and handouts
 - Lecture 9: Timers [[slides](./slides/lecture-09-slides.pdf)] [[handout](./slides/lecture-09-handout.pdf)]
 - Lecture 10: Interrupts [[slides](./slides/lecture-10-slides.pdf)] [[handout](./slides/lecture-10-handout.pdf)]
 - [PCB Design Activity](./pcb-activity/)
-<!-- * Lecture 11: Serial Interfaces and SPI [[slides](./slides/lecture-11-slides.pdf)] [[handout](./slides/lecture-11-handout.pdf)]
-* Lecture 12: UART and the Internet of Things [[slides](./slides/lecture-12-slides.pdf)] [[handout](./slides/lecture-12-handout.pdf)]
+- Lecture 11: Serial Interfaces and SPI [[slides](./slides/lecture-11-slides.pdf)] [[handout](./slides/lecture-11-handout.pdf)] [[project kickoff slides](./slides/project-kickoff.pdf)]
+<!-- * Lecture 12: UART and the Internet of Things [[slides](./slides/lecture-12-slides.pdf)] [[handout](./slides/lecture-12-handout.pdf)]
 * Lecture 13: Introduction to AES: Galois Fields [[slides](./slides/lecture-13-slides.pdf)] [[handout](./slides/lecture-13-handout.pdf)]
 * Lecture 14: The Advanced Encryption Standard (AES) [[slides](./slides/lecture-14-slides.pdf)] [[handout](./slides/lecture-14-handout.pdf)]
 * Lecture 15: Final Project Kickoff
