@@ -1,0 +1,24 @@
+---
+title: Fall 2021
+subtitle: E155 MicroPs Final Projects 
+format:
+  html: default
+---
+
+|  |  |  |
+|------------------|------------------|-------------------------------------|
+| **Title** | **Team Members** | **Report PDF** |
+| Room Capacity Monitor | Marz Barnes, Max Castro | [PDF](./pdfs/Barnes_Castro.pdf) |
+| ATLAS: Audio Tracking Laser-Assisted Light Show | Arya Goutam, Alec Vercruysse | [PDF](./pdfs/Goutam_Vercruysse.pdf) |
+| Bal(l)ancing Act: PID controlled balancing of a ball using resistive touch sensing and dual-servo actuation | Caitlin Huang, Hugo So | [PDF](./pdfs/Huang_So.pdf) |
+| Braille Calculator | Yoo-Jin Hwang, Udeema Shakya | [PDF](./pdfs/Hwang_Shakya.pdf) |
+| Whiteboard Drawing Robot | Garrick Jensen, Stevie Steinberg | [PDF](./pdfs/Jensen_Steinberg.pdf) |
+| Programmable RGB LED Strip | Kevin Kong, John Hearn | [PDF](./pdfs/Kong_Hearn.pdf) |
+| Keyboard Light Display | Yoni Maltsman, Joseph Han | [PDF](./pdfs/Maltsman_Han.pdf) |
+| Real-Time Audio Spectrum Analyzer | Weston Miller, Ingrid Tsang | [PDF](./pdfs/Miller_Tsang.pdf) |
+| Whack-a-Mole | Kaanthi Pandhigunta, Cora Payne | [PDF](./pdfs/Pandhigunta_Payne.pdf) |
+| Ocean Forecast Visualizer | Shreya Sanghai, Lauren Le | [PDF](./pdfs/Sanghai_Le.pdf) |
+| MC You | Santiago Rodriguez, Kariessa Schultz | [PDF](./pdfs/Schultz_Rodriguez.pdf) |
+| Vending Machine | Ava Sherry, Leila Wiberg | [PDF](./pdfs/Sherry_Wiberg.pdf) |
+| Breathalyzer | Michael Jang, George Wang | [PDF](./pdfs/Wang_Jang.pdf) |
+| Musical Hat | Mason Wray, Robert Gallardo | [PDF](./pdfs/Wray_Gallardo.pdf) |
