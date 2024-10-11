@@ -1,0 +1,19 @@
+---
+title: Fall 2020
+subtitle: E155 MicroPs Final Projects 
+format:
+  html: default
+---
+
+|  |  |  |
+|----------------------|--------------------------|------------|
+| **Title** | **Team Members** | **Report PDF** |
+| UltraVisionAid | Anuragini Arora, Sam Freisem-Kirov | [PDF](./pdf/Arora_Freisem-Kirov.pdf) |
+| Vector Display | Ben Bracker, Varun Singh | [PDF](./pdf/Bracker_Singh.pdf) |
+| Musical LEDs | Ethan Falicov, Shriya Nadgauda | [PDF](./pdf/Falicov_Nadgauda.pdf) |
+| Music Rhythm Game: 8 Bit Hero | Jimmy Fernandez, Kathryn Chan, Anneka Noë | [PDF](./pdf/Fernandez_Chan_Noë.pdf) |
+| Alien Voice Filter | Dithi Ganjam, Rebecca Qin | [PDF](./pdf/Ganjam_Qin.pdf) |
+| A Low-Power Air Quality Data Logger | Yaqub Mahsud, Ethan Greenberg | [PDF](./pdf/Greenberg_Mahsud.pdf) |
+| Better Barista: Brew Data Interface | Tejus Rao, Samin Zachariah | [PDF](./pdf/Rao_Zachariah.pdf) |
+| Bop It!: MicroPs Edition | Nick Tan, Andreas Roeseler | [PDF](./pdf/Tan_Roeseler.pdf) |
+| IoT Plant Waterer | Nico Perez Vergel, Naiche Whyte-Aguayo | [PDF](./pdf/Whyte-Aguayo_Perez_Vergal.pdf) |
