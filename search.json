@@ -126,11 +126,18 @@
     "text": "Grading\nYour project will be graded according to the policy laid out in the syllabus. For reference, that policy can be found here.\nIf you feel there has been inequality between the work you and your teammate deliver, contact me personally."
   },
   {
-    "objectID": "project/reports/2022/index.html",
-    "href": "project/reports/2022/index.html",
-    "title": "Fall 2022",
+    "objectID": "project/reports/2023/index.html",
+    "href": "project/reports/2023/index.html",
+    "title": "Fall 2023",
     "section": "",
-    "text": "Title\nTeam Members\nWebsite URL\n\n\nRobotic Slide Whistle\nDeclan O’Neill, Kip Macsai-Goren\nhttps://doneill890.github.io/slide-whistle/\n\n\nAuto Audio Harmonizer\nBrian Simpkins, Kevin Kim\nhttps://briansimpkins.github.io/E155_Final/\n\n\nAnalog Signal Display (Scope)\nTristan Huang, Alexa Wright\nhttps://thuang8.github.io/E155_FA22_Final_Project_TH_AW/\n\n\nGuarded Safe\nLimnanthes Serafini, Noah Limpert\nhttps://magpyed.github.io/E155-FA22-Final-Project/\n\n\nRFID Doorbell\nJoseph Zales, Ava Fascetti\nhttps://joseph-q-zales.github.io/HMC-MicroPs-Final-Portfolio/\n\n\nPinball Machine\nAlessandro Maiuolo, Cristian Gonzalez\nhttps://cristiango23.github.io/E155-FA22-Final-Project/\n\n\nRandom Clock\nRuth Mueller, Kevin Wan\nhttps://koooo-142857.github.io/E155_Random_Clock/\n\n\nPet Autofeeder\nCedar Turek, Manuel Mendoza Manriquez\nhttps://cturek.github.io/E155-Autofeeder/\n\n\nSelf-balancing Robot\nTanvika Dasari, Eric Chen\nhttps://tanvikad.github.io/balance-robot/\n\n\nCrane Game\nMiles Cook, Penny Hernandez\nhttps://mcook26.github.io/Crane-Game/"
+    "text": "Title\nTeam Members\nWebsite URL\n\n\nRhythm Game\nJulia Du, Allison Tsai\nhttps://julia-du.github.io/Rhythm-Game/\n\n\nIron Man Helmet\nJames Woo, Kaito Robson\nhttps://jwoo-20.github.io/E155-Final-Project-Website/\n\n\nSplit-Flap Display\nNithya Yeluri, Javier Perez, Dimitri Avila\nhttps://nyeluri53.github.io/E155-Final-Project-Website/\n\n\nCamera\nKavi Dey, Henry Merrilees, Neil Chulani\nhttps://kavidey.github.io/NeoObscura/\n\n\nSnake on VGA\nDiego Hererra Vicioso, Kate Lucio\nhttps://dherreravicioso.github.io/e155snakevga/\n\n\nDigital synthesizer\nKevin Box, Eli Rejito\nhttps://erejto.github.io/FPGA-Synth-project-portfolio/\n\n\nVolumetric display\nRafael Burger, Tjaard Van Loben Sels\nhttps://rafael-burger.github.io/E155-Final-Project-Website/\n\n\nMaze Game\nLawrence Nelson, Cecilia Li, Martin Susanto\nhttps://martin5009.github.io/amazing_game/design/"
+  },
+  {
+    "objectID": "project/reports/2021/index.html",
+    "href": "project/reports/2021/index.html",
+    "title": "Fall 2021",
+    "section": "",
+    "text": "Title\nTeam Members\nReport PDF\n\n\nRoom Capacity Monitor\nMarz Barnes, Max Castro\nPDF\n\n\nATLAS: Audio Tracking Laser-Assisted Light Show\nArya Goutam, Alec Vercruysse\nPDF\n\n\nBal(l)ancing Act: PID controlled balancing of a ball using resistive touch sensing and dual-servo actuation\nCaitlin Huang, Hugo So\nPDF\n\n\nBraille Calculator\nYoo-Jin Hwang, Udeema Shakya\nPDF\n\n\nWhiteboard Drawing Robot\nGarrick Jensen, Stevie Steinberg\nPDF\n\n\nProgrammable RGB LED Strip\nKevin Kong, John Hearn\nPDF\n\n\nKeyboard Light Display\nYoni Maltsman, Joseph Han\nPDF\n\n\nReal-Time Audio Spectrum Analyzer\nWeston Miller, Ingrid Tsang\nPDF\n\n\nWhack-a-Mole\nKaanthi Pandhigunta, Cora Payne\nPDF\n\n\nOcean Forecast Visualizer\nShreya Sanghai, Lauren Le\nPDF\n\n\nMC You\nSantiago Rodriguez, Kariessa Schultz\nPDF\n\n\nVending Machine\nAva Sherry, Leila Wiberg\nPDF\n\n\nBreathalyzer\nMichael Jang, George Wang\nPDF\n\n\nMusical Hat\nMason Wray, Robert Gallardo\nPDF"
   },
   {
     "objectID": "project/specs/project-checkoff-specs.html",
@@ -1677,7 +1684,7 @@
     "href": "project/index.html#final-projects-from-previous-years-of-e155",
     "title": "Project",
     "section": "Final Projects from Previous Years of E155",
-    "text": "Final Projects from Previous Years of E155\n\nFall 2023 Project Reports\nFall 2022 Project Reports\nFall 2019 Project Reports\nFall 2017 Project Reports\nFall 2016 Project Reports\nFall 2009 Project Reports\nFall 2006 Project Reports\nFall 2003 Project Reports\nFall 2002 Project Reports\nFall 2000 Project Reports\nFall 1999 Project Reports"
+    "text": "Final Projects from Previous Years of E155\n\nFall 2023 Project Reports\nFall 2022 Project Reports\nFall 2021 Project Reports\nFall 2020 Project Reports\nFall 2019 Project Reports\nFall 2017 Project Reports\nFall 2016 Project Reports\nFall 2009 Project Reports\nFall 2006 Project Reports\nFall 2003 Project Reports\nFall 2002 Project Reports\nFall 2000 Project Reports\nFall 1999 Project Reports"
   },
   {
     "objectID": "project/index.html#vendors",
@@ -1687,11 +1694,18 @@
     "text": "Vendors\n\nSparkFun\nAdafruit\nDigikey\nMouser"
   },
   {
-    "objectID": "project/reports/2023/index.html",
-    "href": "project/reports/2023/index.html",
-    "title": "Fall 2023",
+    "objectID": "project/reports/2022/index.html",
+    "href": "project/reports/2022/index.html",
+    "title": "Fall 2022",
     "section": "",
-    "text": "Title\nTeam Members\nWebsite URL\n\n\nRhythm Game\nJulia Du, Allison Tsai\nhttps://julia-du.github.io/Rhythm-Game/\n\n\nIron Man Helmet\nJames Woo, Kaito Robson\nhttps://jwoo-20.github.io/E155-Final-Project-Website/\n\n\nSplit-Flap Display\nNithya Yeluri, Javier Perez, Dimitri Avila\nhttps://nyeluri53.github.io/E155-Final-Project-Website/\n\n\nCamera\nKavi Dey, Henry Merrilees, Neil Chulani\nhttps://kavidey.github.io/NeoObscura/\n\n\nSnake on VGA\nDiego Hererra Vicioso, Kate Lucio\nhttps://dherreravicioso.github.io/e155snakevga/\n\n\nDigital synthesizer\nKevin Box, Eli Rejito\nhttps://erejto.github.io/FPGA-Synth-project-portfolio/\n\n\nVolumetric display\nRafael Burger, Tjaard Van Loben Sels\nhttps://rafael-burger.github.io/E155-Final-Project-Website/\n\n\nMaze Game\nLawrence Nelson, Cecilia Li, Martin Susanto\nhttps://martin5009.github.io/amazing_game/design/"
+    "text": "Title\nTeam Members\nWebsite URL\n\n\nRobotic Slide Whistle\nDeclan O’Neill, Kip Macsai-Goren\nhttps://doneill890.github.io/slide-whistle/\n\n\nAuto Audio Harmonizer\nBrian Simpkins, Kevin Kim\nhttps://briansimpkins.github.io/E155_Final/\n\n\nAnalog Signal Display (Scope)\nTristan Huang, Alexa Wright\nhttps://thuang8.github.io/E155_FA22_Final_Project_TH_AW/\n\n\nGuarded Safe\nLimnanthes Serafini, Noah Limpert\nhttps://magpyed.github.io/E155-FA22-Final-Project/\n\n\nRFID Doorbell\nJoseph Zales, Ava Fascetti\nhttps://joseph-q-zales.github.io/HMC-MicroPs-Final-Portfolio/\n\n\nPinball Machine\nAlessandro Maiuolo, Cristian Gonzalez\nhttps://cristiango23.github.io/E155-FA22-Final-Project/\n\n\nRandom Clock\nRuth Mueller, Kevin Wan\nhttps://koooo-142857.github.io/E155_Random_Clock/\n\n\nPet Autofeeder\nCedar Turek, Manuel Mendoza Manriquez\nhttps://cturek.github.io/E155-Autofeeder/\n\n\nSelf-balancing Robot\nTanvika Dasari, Eric Chen\nhttps://tanvikad.github.io/balance-robot/\n\n\nCrane Game\nMiles Cook, Penny Hernandez\nhttps://mcook26.github.io/Crane-Game/"
+  },
+  {
+    "objectID": "project/reports/2020/index.html",
+    "href": "project/reports/2020/index.html",
+    "title": "Fall 2020",
+    "section": "",
+    "text": "Title\nTeam Members\nReport PDF\n\n\nUltraVisionAid\nAnuragini Arora, Sam Freisem-Kirov\nPDF\n\n\nVector Display\nBen Bracker, Varun Singh\nPDF\n\n\nMusical LEDs\nEthan Falicov, Shriya Nadgauda\nPDF\n\n\nMusic Rhythm Game: 8 Bit Hero\nJimmy Fernandez, Kathryn Chan, Anneka Noë\nPDF\n\n\nAlien Voice Filter\nDithi Ganjam, Rebecca Qin\nPDF\n\n\nA Low-Power Air Quality Data Logger\nYaqub Mahsud, Ethan Greenberg\nPDF\n\n\nBetter Barista: Brew Data Interface\nTejus Rao, Samin Zachariah\nPDF\n\n\nBop It!: MicroPs Edition\nNick Tan, Andreas Roeseler\nPDF\n\n\nIoT Plant Waterer\nNico Perez Vergel, Naiche Whyte-Aguayo\nPDF"
   },
   {
     "objectID": "project/storytelling-worksheet.html",
