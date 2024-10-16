@@ -1,0 +1,15 @@
+---
+title: ESP8266 Web Server
+categories: [Video, ESP8266]
+code-links:
+  - text: Demo Code
+    href: https://github.com/HMC-E155/tutorial-esp8266-click-webserver
+    icon: github
+  
+---
+
+This video covers how to interface with the ESP8266 web server.
+
+<div style="position: relative; padding-bottom: 65.0210716435882%; height: 0;"><iframe src="https://www.loom.com/embed/ea77a5737d114063bebf315318cf592a?sid=fd133976-241d-4609-9bc7-cb53e5b28148" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+{{< include /resources/github-issue-footer.qmd >}}
