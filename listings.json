@@ -3,6 +3,7 @@
     "listing": "/tutorials/index.html",
     "items": [
       "/tutorials/tutorial-videos/creating-and-initializing-your-git-repo.html",
+      "/tutorials/tutorial-videos/esp8266-webserver.html",
       "/tutorials/tutorial-videos/floating-point-support-for-printf-in-segger-embedded-studio.html",
       "/tutorials/tutorial-posts/git-setup/index.html",
       "/tutorials/tutorial-posts/quarto-portfolio-setup/index.html",
