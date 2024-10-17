@@ -1579,7 +1579,7 @@
     "href": "lab/index.html#list-of-e155-labs",
     "title": "Lab",
     "section": "List of E155 Labs",
-    "text": "List of E155 Labs\n\nLab 1 - Board Assembly and Testing\nLab 2 - Multiplexed 7-Segment Display\nLab 3 - Keypad Scanner\nLab 4 - ARM Assembly Sort\nLab 5 - Digital Audio\nLab 6 - The Internet of Things and Serial Peripheral Interface\n\nDS1722 Datasheet\nSerial Protocol Decoding on the RIGOL MSO1104z\n\nLab 7 - The Advanced Encryption Standard (AES)"
+    "text": "List of E155 Labs\n\nLab 1 - Board Assembly and Testing\nLab 2 - Multiplexed 7-Segment Display\nLab 3 - Keypad Scanner\nLab 4 - Digital Audio\nLab 5 - Interrupts\nLab 6 - The Internet of Things and Serial Peripheral Interface\n\nDS1722 Datasheet\nSerial Protocol Decoding on the RIGOL MSO1104z\n\nLab 7 - The Advanced Encryption Standard (AES)"
   },
   {
     "objectID": "lab/index.html#lab-report-template",
