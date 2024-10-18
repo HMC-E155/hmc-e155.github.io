@@ -23,11 +23,11 @@ format:
 
 By the end of this lab you will have...
 
-* Learned to read and implement a complex specification
-* Built a nontrivial system on an FPGA that requires thoughtful architecture to fit on the chip
-* Designed and implemented an interface to communicate between the FPGA and microprocessor on your MCU
-* Learned how to use a logic analyzer to analyze and debug your system
-* Gained experience with hardware accelerators
+- Learned to read and implement a complex specification
+- Built a nontrivial system on an FPGA that requires thoughtful architecture to fit on the chip
+- Designed and implemented an interface to communicate between the FPGA and microprocessor on your MCU
+- Learned how to use a logic analyzer to analyze and debug your system
+- Gained experience with hardware accelerators
 
 
 ## Requirements
@@ -41,8 +41,8 @@ The Advanced Encryption Standard is described in an unusually succinct and clear
 
 ### Implementation
 
-Download the starter source code and libraries from the course website. 
-The provided MCU libraries (included in the lib subdirectory of the project) support a number of peripherals on the MCU so that you can directly use them and do not need to write them yourself.
+Download the starter source code and libraries.
+The provided MCU libraries (included in the `lib/` subdirectory of the project) support a number of peripherals on the MCU so that you can directly use them and do not need to write them yourself.
 
 Examine `aes_starter.sv`, `sbox.txt`.
 `aes_starter.sv` contains the top-level module, an SPI interface, and two testbenches.
@@ -51,9 +51,9 @@ The `testbench_aes_core` module is a separate testbench that tests only the `aes
 It is suggested that you use `testbench_aes_core` first to check your core and then test the whole system including the SPI link with the full testbench. 
 These testbenches apply and check the test vector described in Appendix A-1 and B.
 
-The starter code also contains the mixcolumns logic that operates on a 128-bit intermediate state. 
-The Galois field arithmetic for mixcolumns is more complicated than for the rest of AES, and the implementation is based on a paper cited in the code. 
-The sbox module and `sbox.txt` lookup table perform the sbox substitution on a single byte.
+The starter code also contains the `mixcolumns` logic that operates on a 128-bit intermediate state. 
+The Galois field arithmetic for `mixcolumns` is more complicated than for the rest of AES, and the implementation is based on a paper cited in the code. 
+The `sbox` module and `sbox.txt` lookup table perform the sbox substitution on a single byte.
 
 The MCU code `lab7.c` sends a key and plaintext message over SPI to the FPGA, then checks that the result is correct. 
 Set up your project to target the FPGA on your board and develop the remaining modules necessary to implement AES.
@@ -74,16 +74,31 @@ Previous students have spent a highly variable amount of time on this lab. Here 
 
 ### Start by thoroughly understanding the specification
 
-In prior labs you may have gotten in the habit of thinking in code. Remember to go back to thinking about hardware rather than function calls. Draw a block diagram for your hardware using elements such as registers, multiplexers, FSMs, and blocks of combinational logic. Name all of the signals between blocks. Remember how the E85 multicycle processor had a datapath that required certain control signals such as mux selects, and a controller that generates the control signals at the appropriate times. You’ll find a similar organization helpful. Write idiomatic Verilog code that exactly matches your block diagram.
+In prior labs you may have gotten in the habit of thinking in code.
+Remember to go back to thinking about hardware rather than function calls.
+Draw a block diagram for your hardware using elements such as registers, multiplexers, FSMs, and blocks of combinational logic.
+Name all of the signals between blocks.
+Remember how the E85 multicycle processor had a datapath that required certain control signals such as mux selects, and a controller that generates the control signals at the appropriate times.
+You’ll find a similar organization helpful. Write idiomatic Verilog code that exactly matches your block diagram.
 
 
 ### Watch for warnings in synthesis and simulation, and correct these before moving ahead.
 
-Get your design working in simulation first. When debugging, find the first place you can tell a signal is wrong. Add all the relevant inputs that influence that signal. If one of them is wrong, recursively work backward. When the inputs are good and the output is bad, you’ve isolated the bug and can look for it in that part of the code. Learn to do this systematically so you can find and solve each bug in minutes rather than hours.
+Get your design working in simulation first.
+When debugging, find the first place you can tell a signal is wrong.
+Add all the relevant inputs that influence that signal.
+If one of them is wrong, recursively work backward.
+When the inputs are good and the output is bad, you’ve isolated the bug and can look for it in that part of the code.
+Learn to do this systematically so you can find and solve each bug in minutes rather than hours.
 
-If the design works in simulation but not on hardware, it is often a wiring error or a discrepancy between how you timed your control signals and what the C code expects. Make sure you’ve read the provided code carefully and are producing signals at the right times. Check that your FPGA and microcontroller are expecting the same polarity and phase for your SPI clock signal. Use the many channels of the logic analyzer to view all of the relevant signals at once and check them against your expectations. If you have a hard bug, it’s helpful to tap out intermediate signals, such as the state of a FSM, onto FPGA pins so you can watch them on the logic analyzer.
+If the design works in simulation but not on hardware, it is often a wiring error or a discrepancy between how you timed your control signals and what the C code expects.
+Make sure you’ve read the provided code carefully and are producing signals at the right times.
+Check that your FPGA and microcontroller are expecting the same polarity and phase for your SPI clock signal.
+Use the many channels of the logic analyzer to view all of the relevant signals at once and check them against your expectations.
+If you have a hard bug, it’s helpful to tap out intermediate signals, such as the state of a FSM, onto FPGA pins so you can watch them on the logic analyzer.
 
-Have fun! This is a sophisticated system and you should feel proud when you have built and debugged it!
+Have fun!
+This is a sophisticated system and you should feel proud when you have built and debugged it!
 
 ## Credits
 
