@@ -1,5 +1,4 @@
 ---
-title: Lab 6 Specifications
 format:
   html: default
   pdf: default

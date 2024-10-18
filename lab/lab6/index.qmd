@@ -13,18 +13,21 @@ format:
       - text: Starter Code
         href: https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab06
         icon: github
+      - text: ESP8266 Web Server Demo Code
+        href: https://github.com/HMC-E155/tutorial-esp8266-click-webserver
+        icon: github
 ---
 
 ## Learning Objectives
 
 By the end of this lab you will have...
 
-* Designed and built a simple IoT device
-* Written C libraries using the CMSIS device templates to implement the SPI functionality of the MCU
-* Interfaced with a temperature sensor module over an SPI link
-* Interfaced the MCU with an ESP8266 module over a UART link
-* Use the logic analyze functionality of the scope in the Digital Lab to debug serial communication protocols and export captured signal data.
-* Written a simple HTML page to control and display data from the peripherals connected to your MCU.
+- Designed and built a simple IoT device
+- Written C libraries using the CMSIS device templates to implement the SPI functionality of the MCU
+- Interfaced with a temperature sensor module over an SPI link
+- Interfaced the MCU with an ESP8266 module over a UART link
+- Use the logic analyze functionality of the scope in the Digital Lab to debug serial communication protocols and export captured signal data.
+- Written a simple HTML page to control and display data from the peripherals connected to your MCU.
 
 
 ## Requirements
@@ -40,8 +43,8 @@ At heart, this lab asks you to consult the MCU documentation to learn how to dir
 Note that for this lab your SPI device driver **must** use the Common Microcontroller Software Interface Standard (CMSIS) device templates included in the `stm32l432xx.h` device header. 
 See the provided example device drivers on the course GitHub repository for an example. The GPIO driver provides a good example of how to use the information included in the CMSIS headers.
 
-::: {.hint-box}
-**Note:** There are only a limited number of ESP8266 boards and DS1722 SPI temperature sensors available for this lab. Please do not remove these devices from the digital lab so that everyone can access these shared resources.
+::: {.callout-note title="Don't remove DS1722 boards from the lab!"}
+There are only a limited number of DS1722 SPI temperature sensors available for this lab. Please do not remove these devices from the digital lab so that everyone can access these shared resources.
 :::
 
 ## ESP8266 Web Server
@@ -55,27 +58,40 @@ Implementing an HTTP web server on the ARM microcontroller is a non-trivial task
 
 ## ESP8266-MCU Interface
 
-Download the Lab 6 starter code and support files from the class web page. You may use any code we have developed in class to help you write your code.
+Download the Lab 6 starter code and support files from the class web page. 
+You may use any code we have developed in class to help you write your code.
 
-ESP8266 development boards are available from the E155 supply closet and are pre-programmed with the webserver code. The SSID for the WiFi access points associated with each board is `Lab6_ESP_xx` where xx is the number listed on each board.
+ESP8266 development boards are available from the E155 supply closet and are pre-programmed with the web server code.
+The SSID for the WiFi access points associated with each board is `Lab6ESP_xx` where `xx` is the number listed on the bottom of each board.
 
-The ESP8266 board requires 3.3 V power. However, it has an onboard regulator so you can power the board with between 3-6 V using the V+ and GND pins. If after supplying power to the chip and waiting for it to initialize you do not see the expected WiFi network appear, you may need to reprogram the chip with the provided code. 
+The ESP8266 board requires 3.3 V power.
 
-The MCU must supply a webpage to the ESP8266, and must interpret any web browser requests from the ESP8266. The devices interface through a 125000 baud serial UART connection on the MCU and the UART TX and RX lines of the ESP8266. Note that with a UART connection the receive and transmit lines should be crossed. In other words, the TX of the transmitter should be connected to the RX of the receiver and the RX of the transmitter should be connected to the TX of the receiver. 
+If you are using the ESP8266 Mikroe Click board, you can just plug it into the MikroBUS socket on your development board.
+If after supplying power to the chip and waiting for it to initialize you do not see the expected WiFi network appear, you may need to reprogram the chip with the provided code. 
+
+The MCU must supply a webpage to the ESP8266, and must interpret any web browser requests from the ESP8266. 
+The devices interface through a 125000 baud serial UART connection on the MCU and the UART TX and RX lines of the ESP8266. 
+Note that with a UART connection the receive and transmit lines should be crossed. 
+In other words, the TX of the transmitter should be connected to the RX of the receiver and the RX of the transmitter should be connected to the TX of the receiver. 
 
 The protocol is as follows:
 
+1. When the ESP8266 updates the webpage from the MCU, it sends the most recent request from the client, within `/REQ:'...'\n`. For example, a user accessing the page `http://<server_address>/ledon` would result in the request `/REQ:ledon` being sent to the microcontroller. A user accessing the root webpage of the server, `http://<server_address>/` would result in the request `/REQ:\n`. Note that you must use `http://` and not `https://`.
+2. The MCU then transmits the entire web page to the ESP8266. The ESP8266 expects a webpage encoded as an HTML file. Therefore the webpage must start with `<!DOCTYPE html>` and end with `</html>`. The ESP will wait for either `</html>` or 200 ms from the last byte sent over serial before terminating the HTTP request and forwarding the content to the web browser.
 
-
-1. When the ESP8266 updates the webpage from the MCU, it sends the most recent request from the client, within `/REQ:'...'\n`. For example, a user accessing the page `http://&lt;server_address>/ledon` would result in the request `/REQ:ledonn` being sent to the microcontroller. A user accessing the root webpage of the server, `http://<server_address>/` would result in the request `/REQ:\n`. Note that you must use `http://` and not `https://`.
-2. The MCU then transmits the entire web page to the ESP8266. The ESP8266 expects a webpage encoded as an HTML file. Therefore the webpage must start with '&lt;!DOCTYPE html>&lt;html>' and end with '&lt;/html>'. The ESP will wait for either &lt;/html> or 200 ms from the last byte sent over serial before terminating the HTTP request and forwarding the content to the web browser.
-
-The ESP8266 will create a WiFi access point named whatever SSID is labeled on the board. Connect to this WiFi network, and then go to http://192.168.4.1/. Beware that the ESP is slow and it may sometimes take a few attempts to connect.
+The ESP8266 will create a WiFi access point named whatever SSID is labeled on the board. 
+Connect to this WiFi network, and then go to http://192.168.4.1/
+ Beware that the ESP is slow and it may sometimes take a few attempts to connect.
 
 
 ## Digital Temperature Sensor
 
-The temperature sensor you will interface with for this lab is the DS1722 Digital Thermometer with SPI/3-Wire Interface from Maxim Integrated. This chip is an example of a simple peripheral that supports an SPI interface. You will need to get a DS1722 chip from the E155 stock cabinet mounted on an SOIC-8 breakout board. There are some boards that are already soldered, but if you are unable to find any pre-soldered boards to use, there may also be some chips and extra breakout boards you can solder yourself. After getting a board, consult the DS1722 datasheet to correctly wire up the device. Make sure to thoroughly read the data sheet and refer to the pinout before attempting to interface with the device!
+The temperature sensor you will interface with for this lab is the DS1722 Digital Thermometer with SPI/3-Wire Interface from Maxim Integrated. 
+This chip is an example of a simple peripheral that supports an SPI interface. 
+You will need to get a DS1722 chip from the E155 stock cabinet mounted on an SOIC-8 breakout board.
+There are some boards that are already soldered, but if you are unable to find any pre-soldered boards to use, there may also be some chips and extra breakout boards you can solder yourself. 
+After getting a board, consult the DS1722 datasheet to correctly wire up the device. 
+Make sure to thoroughly read the data sheet and refer to the pinout before attempting to interface with the device!
 
 The figure below shows the corresponding pinout between the SMT pads and the header pins on the breakout board for your convenience.
 
@@ -89,28 +105,28 @@ SMT breakout board pinout.
 
 ## MCU Hardware and the Internet of Things
 
-The last component of this lab is to write a program that parses a request from the ESP8266, toggles the LED state as necessary, reads from the SPI temperature sensor, and uses this data to generate a webpage that is transmitted to the ESP8266. Make sure that the FPGA code on your board does not interfere with any of the pins which you may want to use for your sensors or else you will experience undefined behavior.
+The last component of this lab is to write a program that parses a request from the ESP8266, toggles the LED state as necessary, reads from the SPI temperature sensor, and uses this data to generate a webpage that is transmitted to the ESP8266.
+Make sure that the FPGA code on your board does not interfere with any of the pins which you may want to use for your sensors or else you will experience undefined behavior.
+In particular, make sure that the DIP switches connecting the MCU and FPGA pins are set to the open position to disconnect the two devices.
 
-You will need to write an HTML webpage that displays dynamic temperature data as well as creating requests to change the state of the LED. There are many ways to do this, but we suggest the following resources for information on HTML formatting and interactive elements: 
+You will need to write an HTML webpage that displays dynamic temperature data as well as creating requests to change the state of the LED.
+There are many ways to do this, but we suggest the following resources for information on HTML formatting and interactive elements: 
 
 - [http://www.w3schools.com/html/default.asp](http://www.w3schools.com/html/default.asp)
 - [http://www.w3schools.com/html/html_forms.asp](http://www.w3schools.com/html/html_forms.asp) 
 
-The final product of this lab is a simple example of an emerging class of devices called the Internet of Things. Proponents of these devices argue that everything—from your washing machine to your car to giant factories—should be connected to the internet so that the shared data can be used to optimize and improve societal functions. Internet-controlled lighting, and internet-accessible sensors are two promising domains for the field, and are exemplified in this lab.
+The final product of this lab is a simple example of an emerging class of devices called the Internet of Things.
+Proponents of these devices argue that everything—from your washing machine to your car to giant factories—should be connected to the internet so that the shared data can be used to optimize and improve societal functions.
+Internet-controlled lighting, and internet-accessible sensors are two promising domains for the field, and are exemplified in this lab.
 
 
 ## Hints
 
-The time spent on this lab has been highly variable in the past. If SPI doesn’t work on your first try, it can take a long time to debug because there are many different settings, all of which have to be correct. You can increase the chance of SPI working by carefully studying the MCU documentation before coding. Before connecting the peripheral device, look at the SPI outputs on a logic analyzer and make sure that the clock, SDO, and the chip enables are matching your expectations. Fix your code if they do not. Then attach the peripheral and recheck all the signals including SDI.
+The time spent on this lab has been highly variable in the past.
+If SPI doesn’t work on your first try, it can take a long time to debug because there are many different settings, all of which have to be correct.
+You can increase the chance of SPI working by carefully studying the MCU documentation before coding.
+Before connecting the peripheral device, look at the SPI outputs on a logic analyzer and make sure that the clock, SDO, and the chip enables are matching your expectations. 
+Fix your code if they do not. Then attach the peripheral and recheck all the signals including SDI.
 
-
-## What to Turn In
-
-When you are done, have your lab checked off by the instructor. You should thoroughly understand how it works and what would happen if any changes were made. Turn in your lab writeup including the following information:
-
-- Schematics of the breadboarded circuit.
-- A screen capture (exported from the scope, not a photo captured using a camera) of an example SPI transaction captured on the oscilloscope/logic analyzer.
-- Your source code.
-- How many hours did you spend on the lab? This will not count toward your grade.
 
 {{< include /resources/github-issue-footer.qmd >}}
