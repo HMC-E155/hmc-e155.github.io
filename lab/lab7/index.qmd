@@ -11,6 +11,12 @@ format:
       - text: "AES Standard: NIST FIPS 197"
         href: /assets/doc/NIST.FIPS.197-upd1.pdf
         icon: file-earmark-pdf
+      - text: AES Explainer Video
+        href: https://www.youtube.com/watch?v=O4xNJsjtN6E
+        icon: youtube
+      - text: Public Key Encryption
+        href: https://www.youtube.com/watch?v=GSIDS_lvRv4
+        icon: youtube
     code-links:
       - text: "Starter Code"
         href: https://github.com/HMC-E155/hmc-e155//tree/main/lab/lab07
