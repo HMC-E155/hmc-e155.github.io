@@ -43,13 +43,13 @@ In broad strokes, MicroPs can be divided into two halves. The first half of the 
 | 6 | 9/30 | PCB Design Activity | PCB Design Activity | [Lab 4](/lab/lab4/) |
 | 7 | 10/7 | Serial Interfaces Overview, SPI, and Project Kickoff | UART and the IoT | [Lab 5](/lab/lab5/) |
 | 8 | 10/14 | **Happy Fall Break! No Class** | Proposal Debriefs | [Project Proposal](/project/) |
-| 9 | 10/21 | Advanced Encryption Standard (AES) | Graphics and Displays | [Lab 6](/lab/lab6/) |
-| 10 | 10/28 | Motors and Speakers | Direct Memory Access | [Lab 7](/lab/lab7/) |
+| 9 | 10/21 | Advanced Encryption Standard (AES) | AES on FPGA Workshop | [Lab 6](/lab/lab6/) |
+| 10 | 10/28 | Graphics and Displays | Motors and Speakers | [Lab 7](/lab/lab7/) |
 | 11 | 11/4 | Design Review Presentations | Design Review Presentations | Design Review Presentation & Memo |
 | 12 | 11/11 | Introduction to Real Time Operating Systems | Project Status Report and Demo | Project Status Reports & Demo |
-| 13 | 11/18 | The Fast Fourier Transform (FFT) | Connectors |  |
-| 14 | 11/25 | Emerging Topics in Embedded Systems | Happy Thanksgiving! **No class** |  |
-| 15 | 12/2 | Guest Lecture: Ben Chelf | TBD | Project Checkoffs, Report, Demo Day |
+| 13 | 11/18 | Direct Memory Access | Connectors |  |
+| 14 | 11/25 | The Fast Fourier Transform (FFT) | Happy Thanksgiving! **No class** |  |
+| 15 | 12/2 | Guest Lecture: [Ben Chelf](https://www.linkedin.com/in/ben-chelf-726b7/) | Guest Lecture: [Adam Taylor](https://www.linkedin.com/in/adam-taylor-8a991713/) | Project Checkoffs, Report, Demo Day |
 
 ## Learning Objectives
 
