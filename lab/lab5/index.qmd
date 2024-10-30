@@ -41,7 +41,7 @@ Test your system with the motor provided in the lab which spins at a known speed
 ::: {.callout-warning}
 ## Encoder Output Voltage Warning
 
-The encoders used for this lab operate at a **5V** logic level. The STM32L432KC uses 3.3V, but has a few pins that are 5V tolerant.
+The encoders used for this lab operate at a **5 V** logic level. The STM32L432KC uses 3.3 V, but has a few pins that are 5V tolerant.
 Make sure to use those pins or a voltage conversion circuit so you don't damage your board. 
 The 5V tolerant pins are listed in Tables 13-14 in the [STM32L432KC Datasheet](/assets/doc/ds11451-stm32l432kc.pdf)).
 :::
