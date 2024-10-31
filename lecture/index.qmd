@@ -19,9 +19,9 @@ See the list below for links to lecture slides and handouts. Slides and handouts
 - Lecture 12: UART and the Internet of Things [[slides](./slides/lecture-12-slides.pdf)] [[handout](./slides/lecture-12-handout.pdf)]
 - Lecture 13: Introduction to AES: Galois Fields [[slides](./slides/lecture-13-slides.pdf)] [[handout](./slides/lecture-13-handout.pdf)]
 - Lecture 14: Implementing AES on an FPGA  [[slides](./slides/lecture-14-slides.pdf)] [[handout](./slides/lecture-14-handout.pdf)]
-- Lecture 15: Graphics and Displays [[slides](./slides/lecture-15-slides.pdf)] [[handout](./slides/lecture-15-handout.pdf)]
-<!-- * Lecture 16: Graphics and Displays
-* Lecture 17: Motors and Speakers
+- Lecture 15: Graphics and Displays [[slides](./slides/lecture-15-slides.pdf)]
+- Lecture 16: Motors and Speakers [[slides](./slides/lecture-16-slides.pdf)]
+<!-- - Lecture 17: 
 * Lecture 18: Interrupts [[slides](./slides/lecture-18-slides.pdf)] [[handout](./slides/lecture-18-handout.pdf)]
 * Lecture 19: Interrupts Activity [[slides](./slides/lecture-19-slides.pdf)] [[handout](./slides/lecture-19-handout.pdf)]
 * Lecture 20: The Fast Fourier Transform [[slides](./slides/lecture-20-slides.pdf)] [[handout](./slides/lecture-20-handout.pdf)]
