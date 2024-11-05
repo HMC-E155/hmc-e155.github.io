@@ -81,6 +81,7 @@ Then click the “Generate License” button.
 
 After receiving the license file (`license.dat`), follow the instructions in the email about how to install the license.
 You must:
+
 1. Copy the `license.dat` file to the location specified in the email (`<sw_install>\license\license.dat` on Windows). `<sw_install>` is probably `C:\lscc\radiant\2024.1` or similar if you installed it in the default location). When you open Radiant for the first time, you'll probably be prompted to select this license location in the FlexNet License Finder window.
 2.  Create a new `LATTICE_LICENSE_FILE` system environment variable pointing to the path of your license file `<sw_install>\license\license.dat` ([instructions](https://geekflare.com/system-environment-variables-in-windows/)).
 3.  Create a new `LM_LICENSE_FILE` system environment variable pointing to the path of your license file.
