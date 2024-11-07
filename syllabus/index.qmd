@@ -46,8 +46,8 @@ In broad strokes, MicroPs can be divided into two halves. The first half of the 
 | 9 | 10/21 | Advanced Encryption Standard (AES) | AES on FPGA Workshop | [Lab 6](/lab/lab6/) |
 | 10 | 10/28 | Graphics and Displays | Motors and Speakers | [Lab 7](/lab/lab7/) |
 | 11 | 11/4 | Design Review Presentations | Design Review Presentations | Design Review Presentation & Memo |
-| 12 | 11/11 | Introduction to Real Time Operating Systems | Project Status Report and Demo | Project Status Reports & Demo |
-| 13 | 11/18 | Direct Memory Access | Connectors |  |
+| 12 | 11/11 | Introduction to Real Time Operating Systems | Direct Memory Access |  |
+| 13 | 11/18 | Project Status Report and Demo  | Connectors | Project Status Reports & Demo |
 | 14 | 11/25 | The Fast Fourier Transform (FFT) | Happy Thanksgiving! **No class** |  |
 | 15 | 12/2 | Guest Lecture: [Ben Chelf](https://www.linkedin.com/in/ben-chelf-726b7/) | Guest Lecture: [Adam Taylor](https://www.linkedin.com/in/adam-taylor-8a991713/) | Project Checkoffs, Report, Demo Day |
 
@@ -122,11 +122,11 @@ The table below describes the levels that you need to meet in each bundle (i.e.,
 
 | Grade | Labs                   | Project                |
 |-------|------------------------|------------------------|
-| F     | P \< 5                 | P \< 4                 |
-| D     | P $\geq$ 5, E $\geq$ 1 | P $\geq$ 4             |
-| C     | P $\geq$ 6, E $\geq$ 2 | P $\geq$ 4, E $\geq$ 2 |
-| B     | P = 7, E $\geq$ 5      | P = 5, E $\geq$ 4      |
-| A     | P = 7, E = 7           | P = 5, E = 5           |
+| F     | P \< 4                 | P \< 4                 |
+| D     | P $\geq$ 4, E $\geq$ 0 | P $\geq$ 4             |
+| C     | P $\geq$ 5, E $\geq$ 1 | P $\geq$ 4, E $\geq$ 2 |
+| B     | P = 6, E $\geq$ 4      | P = 5, E $\geq$ 4      |
+| A     | P = 6, E = 6           | P = 5, E = 5           |
 
 Performance on the labs and project is weighted equally. +/- grades will be assigned for situations in which your performance falls between the conditions for each row.
 
