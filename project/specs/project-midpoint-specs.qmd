@@ -9,7 +9,7 @@ format:
 - [ ] Clear and concise written summary of current status
 - [ ] Schematics of all breadboarded circuits
 - [ ] Block diagram of system components and the interfaces between them
-- [ ] Hardware demo functioning (potentailly with some minor bugs)
+- [ ] Hardware demo functioning (potentially with some minor bugs)
 - [ ] More than 25% of the way to the final deliverable
 - [ ] Clear description of microcontroller routines
 - [ ] All external parts ordered
