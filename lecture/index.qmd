@@ -24,8 +24,9 @@ See the list below for links to lecture slides and handouts. Slides and handouts
 - Lecture 17: Introduction to Real Time Operating Systems [[slides](./slides/lecture-17-slides.pdf)] [[handout](./slides/lecture-17-handout.pdf)] 
 - Lecture 18: Direct Memory Access [[slides](./slides/lecture-18-slides.pdf)] [[handout](./slides/lecture-18-handout.pdf)]
 - Lecture 19: Connectors [[slides](./slides/lecture-19-slides.pdf)]
+- Lecture 20: The Fast Fourier Transform [[slides](./slides/lecture-20-slides.pdf)] [[handout](./slides/lecture-20-handout.pdf)]
 <!-- * Lecture 18: Interrupts [[slides](./slides/lecture-18-slides.pdf)] [[handout](./slides/lecture-18-handout.pdf)]
 * Lecture 19: Interrupts Activity [[slides](./slides/lecture-19-slides.pdf)] [[handout](./slides/lecture-19-handout.pdf)]
-* Lecture 20: The Fast Fourier Transform [[slides](./slides/lecture-20-slides.pdf)] [[handout](./slides/lecture-20-handout.pdf)]
+
 * Lecture 21: Direct Memory Access [[slides](./slides/lecture-21-slides.pdf)] [[handout](./slides/lecture-21-handout.pdf)]
 * Lecture 22: Introduction to Real Time Operating Systems [[slides](./slides/lecture-22-slides.pdf)] [[handout](./slides/lecture-22-handout.pdf)] -->
