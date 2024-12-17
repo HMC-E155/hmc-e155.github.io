@@ -1,0 +1,20 @@
+---
+title: Fall 2024
+subtitle: E155 MicroPs Final Projects 
+format:
+  html: default
+---
+
+|  |  |
+|-------------------------|------------------------------------------|
+| **Project Title** | **Team Members** |
+| [Squat Hero](https://jasonbowman55.github.io/squat_hero_website/) | [Jason Bowman](https://www.linkedin.com/in/jasonbbowman/) and [Ket Hollingsworth](https://www.linkedin.com/in/ket-hollingsworth/) |
+| [Remy the Rat](https://e155-remy-the-rat.github.io/) | [Alisha Chulani](https://www.linkedin.com/in/alishachulani30/) and [Marina Ring](https://www.linkedin.com/in/marina-ring/) |
+| [Micro P(ictionary)](https://jordancarlin.github.io/e155-project/) | [Zoe Worrall](https://www.linkedin.com/in/zoeworrall) and [Jordan Carlin](https://www.linkedin.com/in/jordanmcarlin) |
+| [Project Parivo](https://projectparivo.github.io/ProjectParivoPortfolio) | [Audrey Vo](https://www.linkedin.com/in/audrey-vo-us23/) and [Victoria Parizot](https://www.linkedin.com/in/martha-victoria-parizot/) |
+| [Fix That Note!](https://jacksonphilion.github.io/final-project-portfolio/) | [Jackson Philion](https://www.linkedin.com/in/jacksonphilion/) and [Zhian Zhou](https://www.linkedin.com/in/zhian-zhou-14ba8b325/) |
+| [Knight Light](https://maxdesomma.github.io/knight-light-portfolio/) | [Max De Somma](https://www.linkedin.com/in/max-de-somma/) and [Luke Summers](https://www.linkedin.com/in/luke-summers-370075251/) |
+| [Edge Detection on an FPGA](https://anonymousvikram.github.io/e155-project/) | [Troy Kaufman](https://www.linkedin.com/in/troy-kaufman-152b41248/), [Vikram Krishna](https://www.linkedin.com/in/v-krishna/), and [Joseph Abdelmalek](https://www.linkedin.com/in/joseph-abdelmalek) |
+| [Hands-Free Arm Wrestling](https://daniel-fajardo.github.io/e155-project-website/) | [Ellie Sundheim](www.linkedin.com/in/ellie-sundheim) and [Daniel Fajardo](https://www.linkedin.com/in/daniel-fajardo-b39413261/) |
+| [DMX Controller](https://avsmith11.github.io/DMX_controller/) | [Avery Smith](https://www.linkedin.com/in/avery-smith-434ab4262/) and [Henry Heathwood](https://www.linkedin.com/in/henry-heathwood-9a0192176) |
+| [Interactive 2D Physics Engine](https://interactive-physics-engine.netlify.app/) | [Stephen Xu](https://www.linkedin.com/in/stuxf/) and [Amy Liu](https://www.linkedin.com/in/xiyuan-liu-amy/) |
