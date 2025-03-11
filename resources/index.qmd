@@ -6,7 +6,7 @@ title: "Resources"
 
 * [E155 Development Board Schematic](/assets/doc/E155 Development Board Schematic.pdf)
 * [E155 Breadboard Adapter Schematic](/assets/doc/E155 Breadboard Adapter Schematic.pdf)
-* [E155 Development Board BOM](/assets/doc/E155_FA23_Dev_Board_BOM.html)
+* [E155 Development Board BOM](/assets/doc/E155_v4_Dev_Board_BOM.html)
 
 ## Nucleo & STM32 Documentation
 
