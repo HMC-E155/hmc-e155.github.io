@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -31,14 +31,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="..//assets/img/microps-logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d86344d77c7f2231073cd213115bed18.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-ab2d8c6492d6fe6b0374d65600c5f373.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -99,7 +100,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -207,24 +208,13 @@ window.Quarto = {
   <ul>
   <li><a href="#class-details" id="toc-class-details" class="nav-link active" data-scroll-target="#class-details">Class Details</a></li>
   <li><a href="#schedule" id="toc-schedule" class="nav-link" data-scroll-target="#schedule">Schedule</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a>
-  <ul class="collapse">
-  <li><a href="#technical-learning-goals" id="toc-technical-learning-goals" class="nav-link" data-scroll-target="#technical-learning-goals">Technical Learning Goals</a></li>
-  <li><a href="#professional-learning-goals" id="toc-professional-learning-goals" class="nav-link" data-scroll-target="#professional-learning-goals">Professional Learning Goals</a></li>
-  </ul></li>
-  <li><a href="#teaching-philosophy" id="toc-teaching-philosophy" class="nav-link" data-scroll-target="#teaching-philosophy">Teaching Philosophy</a></li>
   <li><a href="#recommended-texts" id="toc-recommended-texts" class="nav-link" data-scroll-target="#recommended-texts">Recommended Texts</a></li>
   <li><a href="#lab-kit" id="toc-lab-kit" class="nav-link" data-scroll-target="#lab-kit">Lab Kit</a></li>
   <li><a href="#lab-access" id="toc-lab-access" class="nav-link" data-scroll-target="#lab-access">Lab Access</a></li>
   <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
-  <li><a href="#course-policies-honor-code" id="toc-course-policies-honor-code" class="nav-link" data-scroll-target="#course-policies-honor-code">Course Policies &amp; Honor Code</a>
-  <ul class="collapse">
-  <li><a href="#communication-policy" id="toc-communication-policy" class="nav-link" data-scroll-target="#communication-policy">Communication Policy</a></li>
   <li><a href="#collaboration-policy" id="toc-collaboration-policy" class="nav-link" data-scroll-target="#collaboration-policy">Collaboration Policy</a></li>
   <li><a href="#ai-policy" id="toc-ai-policy" class="nav-link" data-scroll-target="#ai-policy">AI Policy</a></li>
-  <li><a href="#honor-code-violations" id="toc-honor-code-violations" class="nav-link" data-scroll-target="#honor-code-violations">Honor Code Violations</a></li>
   <li><a href="#honor-code-policy" id="toc-honor-code-policy" class="nav-link" data-scroll-target="#honor-code-policy">Honor Code Policy</a></li>
-  </ul></li>
   <li><a href="#inclusiveness-and-harassment" id="toc-inclusiveness-and-harassment" class="nav-link" data-scroll-target="#inclusiveness-and-harassment">Inclusiveness and Harassment</a></li>
   <li><a href="#educational-accessibility" id="toc-educational-accessibility" class="nav-link" data-scroll-target="#educational-accessibility">Educational Accessibility</a></li>
   </ul>
@@ -252,6 +242,22 @@ window.Quarto = {
 </header>
 
 
+<p>Welcome to E155! I am excited about all the cool projects you will make, and I am glad to have you here. This course teaches students how to practically realize complicated digital electronic systems, including FPGAs, microcontrollers and some chips of your own choosing. It culminates with a project where you decide what you want to build.</p>
+<p>At the end of the course you will be able to</p>
+<ul>
+<li>Read technical documentation for microcontrollers and other digital chips</li>
+<li>Write and interpret clean RTL</li>
+<li>Design combinational logic</li>
+<li>Design finite state machines</li>
+<li>Identify and derisk clock domain crossings and other sources of asynchrony</li>
+<li>Program a microcontroller to interact with real-world systems (motors, speakers, etc.) using C</li>
+<li>Program a microcontroller using modern techniques like HAL or RTOS</li>
+<li>Decide when to use peripherals in a microcontroller circuit</li>
+<li>Name and describe common communication protocols and their tradeoffs</li>
+<li>Select parts for a large digital system, and decide how to spread computation among those parts</li>
+<li>Work with Github and present your work on a portfolio website</li>
+<li>Scope, design and implement a digital electronics project of your choice!</li>
+</ul>
 <section id="class-details" class="level2">
 <h2 class="anchored" data-anchor-id="class-details">Class Details</h2>
 <table class="caption-top table">
@@ -264,11 +270,11 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td>Instructors:</td>
-<td>Prof.&nbsp;Josh Brake</td>
+<td>Prof.&nbsp;Matthew Spencer</td>
 </tr>
 <tr class="even">
 <td>Lab Assistant(s):</td>
-<td>Kavi Dey, Neil Chulani, Henry Merilees</td>
+<td>Neil Chulani, Kavi Dey, Troy Kaufman, Vikram Krishna</td>
 </tr>
 <tr class="odd">
 <td>Web page:</td>
@@ -276,24 +282,20 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td>Lab Checkoff Sheet:</td>
-<td><a href="https://docs.google.com/spreadsheets/d/1a3AYsH6h4MXBBWj8NsZqYXHCqkDg1v4uRdfXhTSOc34/edit">Sheet Link</a></td>
+<td><a href="https://docs.google.com/spreadsheets/d/1FaxU4ObCUjAUZGviM_TV8BBTtrLwemSLpArldSDZJgI/edit?usp=sharing">Sheet Link</a></td>
 </tr>
 <tr class="odd">
 <td>Email list:</td>
-<td>eng-155 [at] g.hmc.edu</td>
+<td>We don’t use email, only Discord</td>
 </tr>
 <tr class="even">
 <td>Discord Server:</td>
-<td>See email for invite</td>
+<td>See intro email for invite.</td>
 </tr>
 </tbody>
 </table>
-<p>Be sure to join the class Discord and check it regularly as it will be the main source of course-related communication for this semester.</p>
+<p>Be sure to join the class Discord and check it regularly. It is be the only source of course-related communication for this semester.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 79%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Name</th>
@@ -307,11 +309,23 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td>Lab Checkoff</td>
-<td>TR afternoons by signup in the Digital Lab (PA B183)</td>
+<td>TWR afternoons by signup in the Digital Lab (PA B183)</td>
 </tr>
 <tr class="odd">
 <td>Office Hours</td>
-<td>M 3:30-4:30 pm and by appointment</td>
+<td>Saturday – Kavi 6-8 PM</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Sunday – Kavi 2-4 PM, Vikram 8-10 PM</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Monday – Prof.&nbsp;Spencer 1-4 PM (in P2358), Troy 7-9 PM</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Tuesday – Neil 7-9 PM</td>
 </tr>
 </tbody>
 </table>
@@ -331,152 +345,112 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">8/26</td>
+<td style="text-align: center;">8/25</td>
 <td style="text-align: center;">Intro &amp; Analog Behavior of Digital Systems</td>
 <td style="text-align: center;">Combinational and Sequential Logic</td>
 <td style="text-align: center;">Git &amp; Quarto Portfolio Setup</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">2</td>
-<td style="text-align: center;">9/2</td>
+<td style="text-align: center;">9/1</td>
 <td style="text-align: center;">Verilog Coding</td>
 <td style="text-align: center;">Synchronous Design</td>
 <td style="text-align: center;"><a href="../lab/lab1/">Lab 1</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">3</td>
-<td style="text-align: center;">9/9</td>
+<td style="text-align: center;">9/8</td>
 <td style="text-align: center;">FPGA Documentation</td>
 <td style="text-align: center;">C Programming on an MCU</td>
 <td style="text-align: center;"><a href="../lab/lab2/">Lab 2</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">4</td>
-<td style="text-align: center;">9/16</td>
+<td style="text-align: center;">9/15</td>
 <td style="text-align: center;">GPIO</td>
 <td style="text-align: center;">Clock Configuration</td>
 <td style="text-align: center;"><a href="../lab/lab3/">Lab 3</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">5</td>
-<td style="text-align: center;">9/23</td>
+<td style="text-align: center;">9/22</td>
 <td style="text-align: center;">Timers</td>
 <td style="text-align: center;">Interrupts</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">9/30</td>
+<td style="text-align: center;">9/29</td>
 <td style="text-align: center;">PCB Design Activity</td>
 <td style="text-align: center;">PCB Design Activity</td>
 <td style="text-align: center;"><a href="../lab/lab4/">Lab 4</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">7</td>
-<td style="text-align: center;">10/7</td>
+<td style="text-align: center;">10/6</td>
 <td style="text-align: center;">Serial Interfaces Overview, SPI, and Project Kickoff</td>
 <td style="text-align: center;">UART and the IoT</td>
 <td style="text-align: center;"><a href="../lab/lab5/">Lab 5</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">10/14</td>
+<td style="text-align: center;">10/13</td>
 <td style="text-align: center;"><strong>Happy Fall Break! No Class</strong></td>
 <td style="text-align: center;">Proposal Debriefs</td>
 <td style="text-align: center;"><a href="../project/">Project Proposal</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">9</td>
-<td style="text-align: center;">10/21</td>
+<td style="text-align: center;">10/20</td>
 <td style="text-align: center;">Advanced Encryption Standard (AES)</td>
 <td style="text-align: center;">AES on FPGA Workshop</td>
 <td style="text-align: center;"><a href="../lab/lab6/">Lab 6</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">10/28</td>
+<td style="text-align: center;">10/27</td>
 <td style="text-align: center;">Graphics and Displays</td>
 <td style="text-align: center;">Motors and Speakers</td>
 <td style="text-align: center;"><a href="../lab/lab7/">Lab 7</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">11</td>
-<td style="text-align: center;">11/4</td>
+<td style="text-align: center;">11/3</td>
 <td style="text-align: center;">Design Review Presentations</td>
 <td style="text-align: center;">Design Review Presentations</td>
 <td style="text-align: center;">Design Review Presentation &amp; Memo</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">11/11</td>
+<td style="text-align: center;">11/10</td>
 <td style="text-align: center;">Introduction to Real Time Operating Systems</td>
 <td style="text-align: center;">Direct Memory Access</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">13</td>
-<td style="text-align: center;">11/18</td>
+<td style="text-align: center;">11/17</td>
 <td style="text-align: center;">Project Status Report and Demo</td>
 <td style="text-align: center;">Connectors</td>
 <td style="text-align: center;">Project Status Reports &amp; Demo</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">14</td>
-<td style="text-align: center;">11/25</td>
+<td style="text-align: center;">11/24</td>
 <td style="text-align: center;">The Fast Fourier Transform (FFT)</td>
 <td style="text-align: center;">Happy Thanksgiving! <strong>No class</strong></td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">15</td>
-<td style="text-align: center;">12/2</td>
-<td style="text-align: center;">Guest Lecture: <a href="https://www.linkedin.com/in/ben-chelf-726b7/">Ben Chelf</a></td>
-<td style="text-align: center;">Guest Lecture: <a href="https://www.linkedin.com/in/adam-taylor-8a991713/">Adam Taylor</a></td>
+<td style="text-align: center;">12/4</td>
+<td style="text-align: center;">Digital Signal Processing</td>
+<td style="text-align: center;">Special Topics / Guest Lecture</td>
 <td style="text-align: center;">Project Checkoffs, Report, Demo Day</td>
 </tr>
 </tbody>
 </table>
 <p>You will be working on labs on your own time and it is not required that you attend the entire scheduled lab period. Instead, sign up for a time to get your lab checked off. Please sign up for a time during your lab section. If you are unable to find a spot that works for you, see if you can swap with one of your classmates. If you are still having trouble finding a time that works for you, reach out and let me know.</p>
-<p>“Office hours” is code for “come hang out.” You are encouraged to attend office hours to ask questions, get help with your labs, talk about careers and graduate school, or chat about something on your mind (whether it is related to this class, academics, or anything else). In addition to things related to Engineering, embedded systems, digital electronics, and microcontrollers, a short (but not comprehensive!) list of things I enjoy talking about are sports (MLB: NY Mets; NFL: Tennessee Titans), running/biking/hiking, life design, time management, or books/essays I’m reading. I am available more often than not, so try dropping me a line via Discord or email if you are having a problem with your lab or want to set up a time. You may also contact the lab assistant(s) for questions when I am not available.</p>
-<p>In broad strokes, MicroPs can be divided into two halves. The first half of the class focuses on giving you fundamental embedded systems concepts in lecture which you learn by experience through seven, hands-on labs. These labs are designed to be loosely structured design projects – you will be given information about the required specifications and some pointers on how to get started, but much of the development process is left open to you. The second half of the class is mainly focused on the project. The project gives you the opportunity to demonstrate independent and creative mastery of embedded system design in teams of two. The specific project task is very open-ended; the only requirement is that the project does something fun or useful and that it meaningfully uses both the FPGA and MCU. In addition to having a series of design review checkpoints, you will give a mid-project presentation to the class and a final presentation of your project when finished. The content of the lectures in the second half of the class focuses on exposing you to more advanced embedded systems concepts and exploring a range of various types of external hardware that may be useful to use in your project.</p>
-</section>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>The overarching goal of this course is to take you from a basic familiarity and knowledge of digital design with field gate programmable arrays (FPGAs) and microcontrollers programming and expand your capabilities to design, build, and test embedded systems.</p>
-<p>The learning goals for the course are divided into two main categories: technical and professional. The technical learning goals describe the technical skills you will acquire as you complete the course. The professional learning goals articulate how this course will help you to grow as a person and develop the character traits that will help you to thrive as you take the skills you learn in this class beyond the walls of Harvey Mudd.</p>
-<section id="technical-learning-goals" class="level3">
-<h3 class="anchored" data-anchor-id="technical-learning-goals">Technical Learning Goals</h3>
-<p>By the end of this course you should be able to:</p>
-<ul>
-<li>Design and implement combinational and sequential circuits on an FPGA.</li>
-<li>Use an ARM-based microcontroller to interface with the real world via sensors and actuators.</li>
-<li>Build an embedded system project of your own design from the ground up.</li>
-<li>Select appropriate embedded hardware for a given design challenge.</li>
-<li>Effectively and efficiently debug electrical systems with measurement tools such as an oscilloscope and logic analyzer.</li>
-<li>Read and understand complicated datasheets at a level that enables you to incorporate them into your designs.</li>
-</ul>
-</section>
-<section id="professional-learning-goals" class="level3">
-<h3 class="anchored" data-anchor-id="professional-learning-goals">Professional Learning Goals</h3>
-<p>By the end of this course you should be able to:</p>
-<ul>
-<li>Communicate technical results with clarity and in a professional manner through oral presentations and written reports.</li>
-<li>Communicate your work with a wide variety of audiences, including technical experts, your peers, and the general public.</li>
-<li>Articulate how you have developed character strengths throughout the semester.</li>
-</ul>
-</section>
-</section>
-<section id="teaching-philosophy" class="level2">
-<h2 class="anchored" data-anchor-id="teaching-philosophy">Teaching Philosophy</h2>
-<p>The ultimate goal for this course is to help you to master the material and become skilled embedded systems developers who understand how to build a system from a set of requirements and specifications and to verify that the system meets those specifications.</p>
-<p>Here are a few of the main pedagogical concepts that you can expect to see in this course.</p>
-<ul>
-<li><strong>Transparent Teaching</strong> – you should not have to guess what you are supposed to get out of a given activity or assignment in this class. I strive to be as transparent about why we are doing what we are doing. This is most clearly articulated through explicit learning goals that accompany each lecture, lab, or project. If the purpose of anything we do in this class is ever unclear, please ask me and I will be happy to clarify it.</li>
-<li><strong>Psychological Safety</strong> – A psychologically safe environment is one where each person feels able to share their questions, concerns, or mistakes without feeling embarrassed or looked down upon by others. Building a psychologically safe classroom is a joint venture which I expect each of you to join with me in pursuing.</li>
-<li><strong>A Growth Mindset</strong> – growth can only happen when you reach the end of what you already know. Each of you coming into this class will have different levels of experience with the types of skills that are useful in this class like working with embedded systems, programming, debugging, design, etc. My goal as an instructor is to take you from wherever you are and bring you as far along in your journey as possible. To do that, I encourage each of you to ask questions and push yourself to the edge of your knowledge. It can be frustrating or embarrassing to have questions that you feel you should already have the answer to. You should take these moments as opportunities to ask questions and fill the gaps in your knowledge. In the end, having a growth mindset is strongly linked with deep curiosity about what you are learning and a realization that while being honest about the limits of your understanding might be challenging, embracing that discomfort allows you to grow and improve quickly.</li>
-<li><strong>Frequent, Low-stakes Testing</strong> – Research has shown that having frequent opportunities to assess your knowledge is a powerful way to learn and correct any misconceptions. One way that this will take place is through regular in-class quizzes and activities.</li>
-<li><strong>Interleaving</strong> – The scheduling of the material is arranged in such a way that you will return to many similar concepts throughout the semester with some time in between. The goal of this is to have you return to familiar concepts after some time away so that you reinforce the material after working on something else. This has been shown to improve long-term retention of the material (see <em>Small Teaching</em> by James Lang if you are curious in learning more).</li>
-</ul>
 </section>
 <section id="recommended-texts" class="level2">
 <h2 class="anchored" data-anchor-id="recommended-texts">Recommended Texts</h2>
@@ -484,8 +458,8 @@ window.Quarto = {
 </section>
 <section id="lab-kit" class="level2">
 <h2 class="anchored" data-anchor-id="lab-kit">Lab Kit</h2>
-<p>While there is not a textbook to purchase, you will need to buy a lab kit. The fee is $75 in Claremont Cash, and should be paid by filling out the Google Form (<a href="https://docs.google.com/forms/u/4/d/e/1FAIpQLScFsRMlY9bXX4cCjMj6bc8qeh0SuJ9qBNOK9hlsB7YhkOSDQQ/viewform">link</a>) which authorizes Sydney Torrey in the Engineering office to charge your Claremont Cash account. Once you have paid for your kit via the form, see Sam Abdelmuati in the stockroom to pick up your kit. If you cook your board this semester, you can buy and rebuild a replacement, but ask the instructor for help troubleshooting first. You’ll also check out a large breadboard from the stockroom, and will need to return it at the end of the semester.</p>
-<p>The kit fee can be waived in cases of financial hardship. To request a waiver fill out the form here (<a href="https://docs.google.com/forms/d/e/1FAIpQLSdXZWmHfxhT2ghX4gnlICxygpujlotxC-JceWKZOwb3d8tH7g/viewform">link</a>). Course instructors will not know about waiver requests.</p>
+<p>While there is not a textbook to purchase, you will need to buy a lab kit. The fee is $75 in Claremont Cash, and should be paid by filling out the Google Form (<a href="https://docs.google.com/forms/d/16dClFYEs7F0u6p03QxZZmObhVr3oodubnv7AGdnzejs/preview">link</a>) which authorizes Sydney Torrey in the Engineering office to charge your Claremont Cash account. Once you have paid for your kit via the form, see Jacob Staimpel in the stockroom to pick up your kit. If you cook your board this semester, you can buy and rebuild a replacement, but ask the instructor for help troubleshooting first. You’ll also check out a large breadboard from the stockroom, and will need to return it at the end of the semester.</p>
+<p>The kit fee can be waived in cases of financial hardship. To request a waiver fill out the form here (<a href="https://docs.google.com/forms/d/1JydPbGVCUtwSTKrZ4wOklCso2R3DPgfNg50w1hA90Dk/preview">link</a>). Course instructors will not know about waiver requests.</p>
 </section>
 <section id="lab-access" class="level2">
 <h2 class="anchored" data-anchor-id="lab-access">Lab Access</h2>
@@ -499,6 +473,7 @@ window.Quarto = {
 <li>Labs</li>
 <li>Project</li>
 <li>In-class reflections</li>
+<li>Completion-graded assignments: the pre-assessment, the post-assessment and setting up your portfolio</li>
 </ol>
 <p>Each assignment will contain a list of specifications (or specs) for two levels of completeness: proficiency and excellence. The list of specifications are designed to be aligned with the learning goals for the assignment. The proficiency specifications will indicate the level of completeness that demonstrates that you have achieved a level of comfort with the material in the assignment such that you would be able to implement the learning outcomes in a different setting. Excellence specs are above and beyond proficiency specs. Meeting the excellence specs for an assignment indicates that you have not only achieved the basic level of expected knowledge of the material, but have truly understood and are able to apply the techniques with deftness.</p>
 <p>The table below describes the levels that you need to meet in each bundle (i.e., column) in order to earn the grade in the respective row. To earn the grade in a given row, you must meet <strong>all</strong> the criteria in that row. In other words, to get a B, you must complete the following:</p>
@@ -543,23 +518,11 @@ window.Quarto = {
 </tbody>
 </table>
 <p>Performance on the labs and project is weighted equally. +/- grades will be assigned for situations in which your performance falls between the conditions for each row.</p>
-<p>In addition to the labs and projects, you will also write short (2-3 paragraph) reflections each week as a way of helping you to catalog your growth in the class. These informal reflections are designed to be published as blog posts on your portfolio website and along with your in-class participation on short quizzes can help to boost your grade in the class by up to half a letter grade (e.g., from a B- to a B or B+ to an A-). A list of some ideas for potential blog topics can be found <a href="../resources/blog-reflection-ideas.html">here</a>. As one example, if you meet the requirements for an A in the labs bundle but the requirements for a B in the project bundle, you can expect to earn either a B+ or A-. In these situations, your in-class participation is a contributing factor to split the difference between the - of the higher tier and the + of the lower tier.</p>
+<p>In addition to the labs and projects, you will also write short (2-3 paragraph) reflections each week as a way of helping you to catalog your growth in the class. These informal reflections are designed to be published as blog posts on your portfolio website. Your reflections and your participation on short in-class quizzes can help to boost your grade in the class by up to third of a letter grade (e.g., from a B- to a B or B+ to an A-). A list of some ideas for potential blog topics can be found <a href="../resources/blog-reflection-ideas.html">here</a>.</p>
+<p>As one example, if you meet the requirements for an A in the labs bundle but the requirements for a B in the project bundle, you can expect to earn either a B+ or A-. In these situations, your in-class participation is a contributing factor to split the difference between the - of the higher tier and the + of the lower tier.</p>
 </section>
-<section id="course-policies-honor-code" class="level2">
-<h2 class="anchored" data-anchor-id="course-policies-honor-code">Course Policies &amp; Honor Code</h2>
-<p>This section articulates a number of policies for the course. The goal of theses policies is to create the most effective learning experience for you in this course. If you have questions about any of these policies or the motivation behind them, I would be glad to discuss more with you. Please find me sometime after class or in office hours!</p>
-<section id="communication-policy" class="level3">
-<h3 class="anchored" data-anchor-id="communication-policy">Communication Policy</h3>
-<p>Please note that I do not always respond immediately to messages. In particular I typically do not check email or Discord between 6:00 pm and 6:00 am on weeknights, and I typically do not check these at all on weekends. In addition, Friday is my off-campus consulting day which means that I may be slow to respond to messages then.</p>
-<p>That said, I do my best to do meet the following:</p>
-<ul>
-<li>Messages sent on a weekday other than Friday (i.e., Monday-Thursday) before 4:00 pm PT will get a response the same day.</li>
-<li>Messages sent after 4:00 pm PT Sunday-Wednesday will get a response the next day.</li>
-<li>Messages sent after 4:00 pm PT on Fridays or on the weekend will get a response the following Monday.</li>
-</ul>
-</section>
-<section id="collaboration-policy" class="level3">
-<h3 class="anchored" data-anchor-id="collaboration-policy">Collaboration Policy</h3>
+<section id="collaboration-policy" class="level2">
+<h2 class="anchored" data-anchor-id="collaboration-policy">Collaboration Policy</h2>
 <p>Your peers are an excellent source of support and can be a great help as you complete MicroPs. With that said, it is important that each student in the class do the work for themselves to develop their own expertise. The collaboration policy for MicroPs is as follows:</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Collaboration Policy">
 <div class="callout-header d-flex align-content-center">
@@ -588,15 +551,11 @@ Collaboration Policy
 </div>
 </div>
 </section>
-<section id="ai-policy" class="level3">
-<h3 class="anchored" data-anchor-id="ai-policy">AI Policy</h3>
-<p>AI tools like ChatGPT are an emerging and active area of research and development. The generative AI tools available today are significantly better than those available even six months ago. Although there are no guarantees in life, it is reasonable to assume that they will continue to improve as they are further refined, even as laws of diminishing returns inevitably come into play.</p>
-<p>Experiencing this rapidly evolving field in real time is exciting, but it also presents some challenges for teaching and learning. Some have argued that generative AI democratizes expertise, but in truth what it democratizes is the <em>appearance</em> of expertise, not the expertise itself. As we think about generative AI tools like large language models (LLMs) and their place in education, we need to be careful to keep our principles and values clearly in view at all times. What is the goal of the work we are doing together?</p>
-<p>From a practical point of view, it is prudent to ask the question about how the continued development of AI will impact the value of this knowledge and skill. It is hard to believe that AI will not significantly change the nature of work in the course of your careers. It is highly likely that there is a future where some of the skills you learn today are no longer relevant, in the same way that we no longer use slide rules to make calculations. For example, it has become clear that LLMs can be a significant aid when programming.</p>
-<p>While we look toward the future and anticipate many changes, we must be careful not to discard the foundational skills and knowledge that will allow us to leverage the capabilities of whatever innovation is on the horizon. Not only that, but we must also not forget that our knowledge and skill is built on the foundation of our character; those things that define who we are as people and shape our deepest values for who we want to be and the world we want to be a part of.</p>
-<p>On the question of how to engage generative AI, I encourage us all to embrace a posture of curiosity and critical exploration. To turn a blind eye to an innovation of such magnitude is to surrender one’s agency to shape its trajectory. How to engage AI wisely through this lens will vary based on the situation. For example, some of your classes and professors will urge you to avoid using generative AI tools altogether. Instead of responding with an attitude of suspicion or assuming that they have made this decision out of fear, I would urge you to engage with a posture of humility and curiosity, seeking to understand the reasons behind their policy and how the decision aligns with the goals they are trying to guide you and your classmates toward.</p>
-<p>Other professors may have a more or less welcoming approach to these new tools, encouraging or even requiring that you experiment with them in their classes. Once again, I would encourage you to engage with curiosity and seek to understand the values that motivate their decision.</p>
-<p>Following the public release of ChatGPT in late 2022, large language models (LLMs) hit the mainstream and have been the subject of robust conversations about how educators and students should approach these tools. AI tools, whether in the form of an LLM or something else, are likely to have an impact on your career and work as an engineer. In this class, we will be approaching AI tools with a posture of cautious engagement. The guiding principle for the use of AI tools is that these tools must be used in the spirit of the assignment.</p>
+<section id="ai-policy" class="level2">
+<h2 class="anchored" data-anchor-id="ai-policy">AI Policy</h2>
+<p>Harvey Mudd is piloting <a href="https://docs.google.com/document/d/1mmVUqSwLWZb4H7jj3fT5kaXQr0rjLpy2ht9BzHAiXlo/edit?tab=t.0#heading=h.r0vz96q31316">AI/LLM use language</a> that instructors can adopt in their syllabi. During the labs in this course, we are closest to level 0 - no AI use allowed. During the project we are closest to level 3 - full AI use allowed.</p>
+<p>Academic work on the effects of AI on learning are still nascent, but <a href="https://nemo.asee.org/public/conferences/365/papers/45536/view">a case study</a> in a course similar to ours suggested that students who rely on AI early in the course often struggle with concepts later in the course. However, LLMs are rapidly transforming industrial practice in software development and digital engineering, and <a href="https://nemo.asee.org/public/conferences/365/papers/48474/view">other academic work</a> suggests that an AI with expert prompting can succeed in programming a microcontroller to the level required by a class.</p>
+<p>Therefore, this course is taking a cautious stance about engagement with AI. Many of the learning goals (especially learning to interpret documentation and RTL) are undermined by the use of AI. Therefore, in the policy outlined below, AI will be allowed only on “AI prototype” questions in the labs. During the project, I am amenable to more liberal AI use because you will have demonstrated many fundamental skills from the class. We can discuss more at the project launch.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Using AI in MicroPs">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -607,7 +566,7 @@ Using AI in MicroPs
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>In MicroPs this fall we will adopt the following policies for generative AI use:</p>
+<p>In MicroPs this fall we will adopt the following policies for generative AI use during labs 1-7:</p>
 <p>You <strong>should</strong>:</p>
 <ul>
 <li><strong>Use AI on the AI prototypes throughout the course.</strong> Each lab this fall will include a section describing a generative AI experiment. For the tasks in these sections you are required to leverage generative AI. As you embrace AI, I would encourage you to reflect on your experience using it and on its impact on your skill development. Your reflections on these AI experiments each week are a great topic to discuss in your weekly reflections.</li>
@@ -616,18 +575,15 @@ Using AI in MicroPs
 <ul>
 <li><strong>Use generative AI to directly generate any code on the main lab design challenges.</strong> Learning how to write Verilog and C code is a core learning objective in this class. The best way to learn how to evaluate the quality of LLM-generated code is by first writing a large quantity of it for yourself.</li>
 <li><strong>Use generative AI to generate any of your technical documentation.</strong> Thinking is writing, and learning how to articulate what you’ve done and what it means matters. Outsourcing this task to an LLM will not help you to better understand the work you are doing. As noted above, you may use spellcheckers, but you must not use tools which will rewrite sentences for you or generate text (e.g., Google’s “Help Me Write” feature)</li>
+<li><strong>Use generative AI to summarize or search datasheets</strong> Learning to read datasheets is a foundational and essential skill in this discipline, and verifying AI’s work is much harder if you haven’t read datasheets on your own at first.</li>
 </ul>
 </div>
 </div>
-<p>Once the labs finish, we will revisit this policy for the project phase of the class to decide collectively how we may want to revise our approach to generative AI. The results of your weekly AI prototypes and reflections about them will provide a healthy foundation from which we can discuss!</p>
 </section>
-<section id="honor-code-violations" class="level3">
-<h3 class="anchored" data-anchor-id="honor-code-violations">Honor Code Violations</h3>
+<section id="honor-code-policy" class="level2">
+<h2 class="anchored" data-anchor-id="honor-code-policy">Honor Code Policy</h2>
 <p>Students in this class are expected to follow the HMC honor code. An honor code policy appears below and prescribes behavior that is considered honorable, so read those maxims and follow them closely. Any honor code violations will be handled through JB.</p>
 <p>If you believe you have violated the honor code in any way, please take the initiative to self report so that we can come up with a fair and just path forward together.</p>
-</section>
-<section id="honor-code-policy" class="level3">
-<h3 class="anchored" data-anchor-id="honor-code-policy">Honor Code Policy</h3>
 <ol type="1">
 <li>All students enrolled in this course are bound by the HMC Honor Code. More information on the HMC Honor Code can be found in the HMC Student Handbook.</li>
 <li>It is your responsibility to determine whether your actions adhere to the HMC Honor Code. If this document does not clarify the legitimacy of a particular action, you should contact the course instructor and request clarification.</li>
@@ -640,7 +596,6 @@ Using AI in MicroPs
 <li><strong>Use of Other Course Resources from Previous Semesters.</strong> You may not reference assignments (labs, problem sets, activities) of this course from previous semesters.</li>
 <li><strong>Retention of Course Resources.</strong> Assignments and exams from this course may not be committed to dorm repositories or otherwise used to help future students.</li>
 </ol>
-</section>
 </section>
 <section id="inclusiveness-and-harassment" class="level2">
 <h2 class="anchored" data-anchor-id="inclusiveness-and-harassment">Inclusiveness and Harassment</h2>
@@ -655,241 +610,247 @@ Using AI in MicroPs
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/HMC-E155\.github\.io\/hmc-e155\.github\.io\/");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-          // target, if specified
-          link.setAttribute("target", "_blank");
-          if (link.getAttribute("rel") === null) {
-            link.setAttribute("rel", "noopener");
-          }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
       }
+      return false;
     }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/HMC-E155\.github\.io\/hmc-e155\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
         }
-        return container.innerHTML
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -897,185 +858,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 
 
