@@ -6,24 +6,44 @@ format:
   pdf: default
 ---
 
+Welcome to E155!  I am excited about all the cool projects you will make, and I am glad to have you here.  This course teaches students how to practically realize complicated digital electronic systems, including FPGAs, microcontrollers and some chips of your own choosing.  It culminates with a project where you decide what you want to build.
+
+At the end of the course you will be able to 
+
+- Read technical documentation for microcontrollers and other digital chips
+- Write and interpret clean RTL
+- Design combinational logic
+- Design finite state machines
+- Identify and derisk clock domain crossings and other sources of asynchrony
+- Program a microcontroller to interact with real-world systems (motors, speakers, etc.) using C
+- Program a microcontroller using modern techniques like HAL or RTOS
+- Decide when to use peripherals in a microcontroller circuit
+- Name and describe common communication protocols and their tradeoffs
+- Select parts for a large digital system, and decide how to spread computation among those parts
+- Work with Github and present your work on a portfolio website
+- Scope, design and implement a digital electronics project of your choice!
+
 ## Class Details
 
-| Item                | Information                                        |
-|---------------------|----------------------------------------------------|
-| Instructors:        | Prof. Josh Brake                                   |
-| Lab Assistant(s):   | Kavi Dey, Neil Chulani, Henry Merilees             |
-| Web page:           | [{{< var website-url >}}]({{< var website-url >}}) |
-| Lab Checkoff Sheet: | [Sheet Link]({{< var lab-checkoff-gsheet-url >}})  |
-| Email list:         | eng-155 \[at\] g.hmc.edu                           |
-| Discord Server:     | See email for invite                               |
+| Item                | Information                                          |
+|---------------------|------------------------------------------------------|
+| Instructors:        | Prof. Matthew Spencer                                |
+| Lab Assistant(s):   | Neil Chulani, Kavi Dey, Troy Kaufman, Vikram Krishna |
+| Web page:           | [{{< var website-url >}}]({{< var website-url >}})   |
+| Lab Checkoff Sheet: | [Sheet Link]({{< var lab-checkoff-gsheet-url >}})    |
+| Email list:         | We don't use email, only Discord                     |
+| Discord Server:     | See intro email for invite.                          |
 
-Be sure to join the class Discord and check it regularly as it will be the main source of course-related communication for this semester.
+Be sure to join the class Discord and check it regularly. It is be the only source of course-related communication for this semester.
 
-| Name     | Info                                             |
-|--------------|------------------------------------------------------|
-| Lecture      | TR 1:15 - 2:30 pm                                    |
-| Lab Checkoff | TR afternoons by signup in the Digital Lab (PA B183) |
-| Office Hours | M 3:30-4:30 pm and by appointment                                                  |
+| Name         | Info                                                  |
+|--------------|-------------------------------------------------------|
+| Lecture      | TR 1:15 - 2:30 pm                                     |
+| Lab Checkoff | TWR afternoons by signup in the Digital Lab (PA B183) |
+| Office Hours | Saturday -- Kavi 6-8 PM                               |
+|              | Sunday -- Kavi 2-4 PM, Vikram 8-10 PM                 |
+|              | Monday -- Prof. Spencer 1-4 PM (in P2358), Troy 7-9 PM|
+|              | Tuesday -- Neil 7-9 PM                                |
 
 
 ## Schedule
@@ -31,64 +51,23 @@ Be sure to join the class Discord and check it regularly as it will be the main 
 
 | Week \# | Monday Date | Tuesday's Class | Thursday's Class | Due |
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
-| 1 | 8/26 | Intro & Analog Behavior of Digital Systems | Combinational and Sequential Logic | Git & Quarto Portfolio Setup |
-| 2 | 9/2 | Verilog Coding | Synchronous Design | [Lab 1](/lab/lab1/) |
-| 3 | 9/9 | FPGA Documentation | C Programming on an MCU | [Lab 2](/lab/lab2/) |
-| 4 | 9/16 | GPIO | Clock Configuration | [Lab 3](/lab/lab3/) |
-| 5 | 9/23 | Timers | Interrupts |  |
-| 6 | 9/30 | PCB Design Activity | PCB Design Activity | [Lab 4](/lab/lab4/) |
-| 7 | 10/7 | Serial Interfaces Overview, SPI, and Project Kickoff | UART and the IoT | [Lab 5](/lab/lab5/) |
-| 8 | 10/14 | **Happy Fall Break! No Class** | Proposal Debriefs | [Project Proposal](/project/) |
-| 9 | 10/21 | Advanced Encryption Standard (AES) | AES on FPGA Workshop | [Lab 6](/lab/lab6/) |
-| 10 | 10/28 | Graphics and Displays | Motors and Speakers | [Lab 7](/lab/lab7/) |
-| 11 | 11/4 | Design Review Presentations | Design Review Presentations | Design Review Presentation & Memo |
-| 12 | 11/11 | Introduction to Real Time Operating Systems | Direct Memory Access |  |
-| 13 | 11/18 | Project Status Report and Demo  | Connectors | Project Status Reports & Demo |
-| 14 | 11/25 | The Fast Fourier Transform (FFT) | Happy Thanksgiving! **No class** |  |
-| 15 | 12/2 | Guest Lecture: [Ben Chelf](https://www.linkedin.com/in/ben-chelf-726b7/) | Guest Lecture: [Adam Taylor](https://www.linkedin.com/in/adam-taylor-8a991713/) | Project Checkoffs, Report, Demo Day |
+| 1  | 8/25  | Intro & Analog Behavior of Digital Systems | Combinational and Sequential Logic | Git & Quarto Portfolio Setup |
+| 2  | 9/1   | Verilog Coding | Synchronous Design | [Lab 1](/lab/lab1/) |
+| 3  | 9/8   | FPGA Documentation | C Programming on an MCU | [Lab 2](/lab/lab2/) |
+| 4  | 9/15  | GPIO | Clock Configuration | [Lab 3](/lab/lab3/) |
+| 5  | 9/22  | Timers | Interrupts |  |
+| 6  | 9/29  | PCB Design Activity | PCB Design Activity | [Lab 4](/lab/lab4/) |
+| 7  | 10/6  | Serial Interfaces Overview, SPI, and Project Kickoff | UART and the IoT | [Lab 5](/lab/lab5/) |
+| 8  | 10/13 | **Happy Fall Break! No Class** | Proposal Debriefs | [Project Proposal](/project/) |
+| 9  | 10/20 | Advanced Encryption Standard (AES) | AES on FPGA Workshop | [Lab 6](/lab/lab6/) |
+| 10 | 10/27 | Graphics and Displays | Motors and Speakers | [Lab 7](/lab/lab7/) |
+| 11 | 11/3  | Design Review Presentations | Design Review Presentations | Design Review Presentation & Memo |
+| 12 | 11/10 | Introduction to Real Time Operating Systems | Direct Memory Access |  |
+| 13 | 11/17 | Project Status Report and Demo  | Connectors | Project Status Reports & Demo |
+| 14 | 11/24 | The Fast Fourier Transform (FFT) | Happy Thanksgiving! **No class** |  |
+| 15 | 12/4  | Digital Signal Processing | Special Topics / Guest Lecture | Project Checkoffs, Report, Demo Day |
 
 You will be working on labs on your own time and it is not required that you attend the entire scheduled lab period. Instead, sign up for a time to get your lab checked off. Please sign up for a time during your lab section. If you are unable to find a spot that works for you, see if you can swap with one of your classmates. If you are still having trouble finding a time that works for you, reach out and let me know.
-
-"Office hours" is code for "come hang out." You are encouraged to attend office hours to ask questions, get help with your labs, talk about careers and graduate school, or chat about something on your mind (whether it is related to this class, academics, or anything else). In addition to things related to Engineering, embedded systems, digital electronics, and microcontrollers, a short (but not comprehensive!) list of things I enjoy talking about are sports (MLB: NY Mets; NFL: Tennessee Titans), running/biking/hiking, life design, time management, or books/essays I'm reading. I am available more often than not, so try dropping me a line via Discord or email if you are having a problem with your lab or want to set up a time. You may also contact the lab assistant(s) for questions when I am not available.
-
-In broad strokes, MicroPs can be divided into two halves. The first half of the class focuses on giving you fundamental embedded systems concepts in lecture which you learn by experience through seven, hands-on labs. These labs are designed to be loosely structured design projects -- you will be given information about the required specifications and some pointers on how to get started, but much of the development process is left open to you. The second half of the class is mainly focused on the project. The project gives you the opportunity to demonstrate independent and creative mastery of embedded system design in teams of two. The specific project task is very open-ended; the only requirement is that the project does something fun or useful and that it meaningfully uses both the FPGA and MCU. In addition to having a series of design review checkpoints, you will give a mid-project presentation to the class and a final presentation of your project when finished. The content of the lectures in the second half of the class focuses on exposing you to more advanced embedded systems concepts and exploring a range of various types of external hardware that may be useful to use in your project.
-
-## Learning Objectives
-
-The overarching goal of this course is to take you from a basic familiarity and knowledge of digital design with field gate programmable arrays (FPGAs) and microcontrollers programming and expand your capabilities to design, build, and test embedded systems.
-
-The learning goals for the course are divided into two main categories: technical and professional. The technical learning goals describe the technical skills you will acquire as you complete the course. The professional learning goals articulate how this course will help you to grow as a person and develop the character traits that will help you to thrive as you take the skills you learn in this class beyond the walls of Harvey Mudd.
-
-### Technical Learning Goals
-
-By the end of this course you should be able to:
-
--   Design and implement combinational and sequential circuits on an FPGA.
--   Use an ARM-based microcontroller to interface with the real world via sensors and actuators.
--   Build an embedded system project of your own design from the ground up.
--   Select appropriate embedded hardware for a given design challenge.
--   Effectively and efficiently debug electrical systems with measurement tools such as an oscilloscope and logic analyzer.
--   Read and understand complicated datasheets at a level that enables you to incorporate them into your designs.
-
-### Professional Learning Goals
-
-By the end of this course you should be able to:
-
--   Communicate technical results with clarity and in a professional manner through oral presentations and written reports.
--   Communicate your work with a wide variety of audiences, including technical experts, your peers, and the general public.
--   Articulate how you have developed character strengths throughout the semester.
-
-## Teaching Philosophy
-
-The ultimate goal for this course is to help you to master the material and become skilled embedded systems developers who understand how to build a system from a set of requirements and specifications and to verify that the system meets those specifications.
-
-Here are a few of the main pedagogical concepts that you can expect to see in this course.
-
--   **Transparent Teaching** -- you should not have to guess what you are supposed to get out of a given activity or assignment in this class. I strive to be as transparent about why we are doing what we are doing. This is most clearly articulated through explicit learning goals that accompany each lecture, lab, or project. If the purpose of anything we do in this class is ever unclear, please ask me and I will be happy to clarify it.
--   **Psychological Safety** -- A psychologically safe environment is one where each person feels able to share their questions, concerns, or mistakes without feeling embarrassed or looked down upon by others. Building a psychologically safe classroom is a joint venture which I expect each of you to join with me in pursuing.
--   **A Growth Mindset** -- growth can only happen when you reach the end of what you already know. Each of you coming into this class will have different levels of experience with the types of skills that are useful in this class like working with embedded systems, programming, debugging, design, etc. My goal as an instructor is to take you from wherever you are and bring you as far along in your journey as possible. To do that, I encourage each of you to ask questions and push yourself to the edge of your knowledge. It can be frustrating or embarrassing to have questions that you feel you should already have the answer to. You should take these moments as opportunities to ask questions and fill the gaps in your knowledge. In the end, having a growth mindset is strongly linked with deep curiosity about what you are learning and a realization that while being honest about the limits of your understanding might be challenging, embracing that discomfort allows you to grow and improve quickly.
--   **Frequent, Low-stakes Testing** -- Research has shown that having frequent opportunities to assess your knowledge is a powerful way to learn and correct any misconceptions. One way that this will take place is through regular in-class quizzes and activities.
--   **Interleaving** -- The scheduling of the material is arranged in such a way that you will return to many similar concepts throughout the semester with some time in between. The goal of this is to have you return to familiar concepts after some time away so that you reinforce the material after working on something else. This has been shown to improve long-term retention of the material (see *Small Teaching* by James Lang if you are curious in learning more).
 
 ## Recommended Texts
 
@@ -96,7 +75,7 @@ I assume you have a solid grasp of digital design at the level of E85; review Di
 
 ## Lab Kit
 
-While there is not a textbook to purchase, you will need to buy a lab kit. The fee is \$75 in Claremont Cash, and should be paid by filling out the Google Form ([link]({{< var lab-kit-fee-url >}})) which authorizes Sydney Torrey in the Engineering office to charge your Claremont Cash account. Once you have paid for your kit via the form, see Sam Abdelmuati in the stockroom to pick up your kit. If you cook your board this semester, you can buy and rebuild a replacement, but ask the instructor for help troubleshooting first. You'll also check out a large breadboard from the stockroom, and will need to return it at the end of the semester.
+While there is not a textbook to purchase, you will need to buy a lab kit. The fee is \$75 in Claremont Cash, and should be paid by filling out the Google Form ([link]({{< var lab-kit-fee-url >}})) which authorizes Sydney Torrey in the Engineering office to charge your Claremont Cash account. Once you have paid for your kit via the form, see Jacob Staimpel in the stockroom to pick up your kit. If you cook your board this semester, you can buy and rebuild a replacement, but ask the instructor for help troubleshooting first. You'll also check out a large breadboard from the stockroom, and will need to return it at the end of the semester.
 
 The kit fee can be waived in cases of financial hardship. To request a waiver fill out the form here ([link]({{< var lab-kit-waiver-url >}})). Course instructors will not know about waiver requests.
 
@@ -114,6 +93,7 @@ The grading for this class is based on a variation of specifications-grading and
 1.  Labs
 2.  Project
 3.  In-class reflections
+4.  Completion-graded assignments: the pre-assessment, the post-assessment and setting up your portfolio
 
 Each assignment will contain a list of specifications (or specs) for two levels of completeness: proficiency and excellence. The list of specifications are designed to be aligned with the learning goals for the assignment. The proficiency specifications will indicate the level of completeness that demonstrates that you have achieved a level of comfort with the material in the assignment such that you would be able to implement the learning outcomes in a different setting. Excellence specs are above and beyond proficiency specs. Meeting the excellence specs for an assignment indicates that you have not only achieved the basic level of expected knowledge of the material, but have truly understood and are able to apply the techniques with deftness.
 
@@ -127,28 +107,16 @@ The table below describes the levels that you need to meet in each bundle (i.e.,
 | F     | P \< 4                 | P \< 4                 |
 | D     | P $\geq$ 4, E $\geq$ 0 | P $\geq$ 4             |
 | C     | P $\geq$ 5, E $\geq$ 1 | P $\geq$ 4, E $\geq$ 2 |
-| B     | P $\geq$ 6, E $\geq$ 4      | P = 5, E $\geq$ 4      |
-| A     | P $\geq$ 6, E $\geq$ 6           | P = 5, E = 5           |
+| B     | P $\geq$ 6, E $\geq$ 4 | P = 5, E $\geq$ 4      |
+| A     | P $\geq$ 6, E $\geq$ 6 | P = 5, E = 5           |
 
 Performance on the labs and project is weighted equally. +/- grades will be assigned for situations in which your performance falls between the conditions for each row.
 
-In addition to the labs and projects, you will also write short (2-3 paragraph) reflections each week as a way of helping you to catalog your growth in the class. These informal reflections are designed to be published as blog posts on your portfolio website and along with your in-class participation on short quizzes can help to boost your grade in the class by up to half a letter grade (e.g., from a B- to a B or B+ to an A-). A list of some ideas for potential blog topics can be found [here](/resources/blog-reflection-ideas.qmd). As one example, if you meet the requirements for an A in the labs bundle but the requirements for a B in the project bundle, you can expect to earn either a B+ or A-. In these situations, your in-class participation is a contributing factor to split the difference between the - of the higher tier and the + of the lower tier.
+In addition to the labs and projects, you will also write short (2-3 paragraph) reflections each week as a way of helping you to catalog your growth in the class. These informal reflections are designed to be published as blog posts on your portfolio website. Your reflections and your participation on short in-class quizzes can help to boost your grade in the class by up to third of a letter grade (e.g., from a B- to a B or B+ to an A-). A list of some ideas for potential blog topics can be found [here](/resources/blog-reflection-ideas.qmd). 
 
-## Course Policies & Honor Code
+As one example, if you meet the requirements for an A in the labs bundle but the requirements for a B in the project bundle, you can expect to earn either a B+ or A-. In these situations, your in-class participation is a contributing factor to split the difference between the - of the higher tier and the + of the lower tier.
 
-This section articulates a number of policies for the course. The goal of theses policies is to create the most effective learning experience for you in this course. If you have questions about any of these policies or the motivation behind them, I would be glad to discuss more with you. Please find me sometime after class or in office hours!
-
-### Communication Policy
-
-Please note that I do not always respond immediately to messages. In particular I typically do not check email or Discord between 6:00 pm and 6:00 am on weeknights, and I typically do not check these at all on weekends. In addition, Friday is my off-campus consulting day which means that I may be slow to respond to messages then.
-
-That said, I do my best to do meet the following:
-
--   Messages sent on a weekday other than Friday (i.e., Monday-Thursday) before 4:00 pm PT will get a response the same day.
--   Messages sent after 4:00 pm PT Sunday-Wednesday will get a response the next day.
--   Messages sent after 4:00 pm PT on Fridays or on the weekend will get a response the following Monday.
-
-### Collaboration Policy
+## Collaboration Policy
 
 Your peers are an excellent source of support and can be a great help as you complete MicroPs. With that said, it is important that each student in the class do the work for themselves to develop their own expertise. The collaboration policy for MicroPs is as follows:
 
@@ -169,25 +137,17 @@ You may **not**:
 
 :::
 
-### AI Policy
+## AI Policy
 
-AI tools like ChatGPT are an emerging and active area of research and development. The generative AI tools available today are significantly better than those available even six months ago. Although there are no guarantees in life, it is reasonable to assume that they will continue to improve as they are further refined, even as laws of diminishing returns inevitably come into play.
+Harvey Mudd is piloting [AI/LLM use language](https://docs.google.com/document/d/1mmVUqSwLWZb4H7jj3fT5kaXQr0rjLpy2ht9BzHAiXlo/edit?tab=t.0#heading=h.r0vz96q31316) that instructors can adopt in their syllabi.  During the labs in this course, we are closest to level 0 - no AI use allowed.   During the project we are closest to level 3 - full AI use allowed.
 
-Experiencing this rapidly evolving field in real time is exciting, but it also presents some challenges for teaching and learning. Some have argued that generative AI democratizes expertise, but in truth what it democratizes is the *appearance* of expertise, not the expertise itself. As we think about generative AI tools like large language models (LLMs) and their place in education, we need to be careful to keep our principles and values clearly in view at all times. What is the goal of the work we are doing together?
+Academic work on the effects of AI on learning are still nascent, but [a case study](https://nemo.asee.org/public/conferences/365/papers/45536/view) in a course similar to ours suggested that students who rely on AI early in the course often struggle with concepts later in the course.  However, LLMs are rapidly transforming industrial practice in software development and digital engineering, and [other academic work](https://nemo.asee.org/public/conferences/365/papers/48474/view) suggests that an AI with expert prompting can succeed in programming a microcontroller to the level required by a class. 
 
-From a practical point of view, it is prudent to ask the question about how the continued development of AI will impact the value of this knowledge and skill. It is hard to believe that AI will not significantly change the nature of work in the course of your careers. It is highly likely that there is a future where some of the skills you learn today are no longer relevant, in the same way that we no longer use slide rules to make calculations. For example, it has become clear that LLMs can be a significant aid when programming.
-
-While we look toward the future and anticipate many changes, we must be careful not to discard the foundational skills and knowledge that will allow us to leverage the capabilities of whatever innovation is on the horizon. Not only that, but we must also not forget that our knowledge and skill is built on the foundation of our character; those things that define who we are as people and shape our deepest values for who we want to be and the world we want to be a part of.
-
-On the question of how to engage generative AI, I encourage us all to embrace a posture of curiosity and critical exploration. To turn a blind eye to an innovation of such magnitude is to surrender one's agency to shape its trajectory. How to engage AI wisely through this lens will vary based on the situation. For example, some of your classes and professors will urge you to avoid using generative AI tools altogether. Instead of responding with an attitude of suspicion or assuming that they have made this decision out of fear, I would urge you to engage with a posture of humility and curiosity, seeking to understand the reasons behind their policy and how the decision aligns with the goals they are trying to guide you and your classmates toward.
-
-Other professors may have a more or less welcoming approach to these new tools, encouraging or even requiring that you experiment with them in their classes. Once again, I would encourage you to engage with curiosity and seek to understand the values that motivate their decision.
-
-Following the public release of ChatGPT in late 2022, large language models (LLMs) hit the mainstream and have been the subject of robust conversations about how educators and students should approach these tools. AI tools, whether in the form of an LLM or something else, are likely to have an impact on your career and work as an engineer. In this class, we will be approaching AI tools with a posture of cautious engagement. The guiding principle for the use of AI tools is that these tools must be used in the spirit of the assignment.
+Therefore, this course is taking a cautious stance about engagement with AI.  Many of the learning goals (especially learning to interpret documentation and RTL) are undermined by the use of AI. Therefore, in the policy outlined below, AI will be allowed only on "AI prototype" questions in the labs.  During the project, I am amenable to more liberal AI use because you will have demonstrated many fundamental skills from the class.  We can discuss more at the project launch.
 
 ::: {.callout-note title="Using AI in MicroPs"}
 
-In MicroPs this fall we will adopt the following policies for generative AI use:
+In MicroPs this fall we will adopt the following policies for generative AI use during labs 1-7:
 
 You **should**:
 
@@ -197,18 +157,15 @@ You should **not**:
 
 - **Use generative AI to directly generate any code on the main lab design challenges.** Learning how to write Verilog and C code is a core learning objective in this class. The best way to learn how to evaluate the quality of LLM-generated code is by first writing a large quantity of it for yourself.
 - **Use generative AI to generate any of your technical documentation.** Thinking is writing, and learning how to articulate what you've done and what it means matters. Outsourcing this task to an LLM will not help you to better understand the work you are doing. As noted above, you may use spellcheckers, but you must not use tools which will rewrite sentences for you or generate text (e.g., Google's "Help Me Write" feature)
+- **Use generative AI to summarize or search datasheets** Learning to read datasheets is a foundational and essential skill in this discipline, and verifying AI's work is much harder if you haven't read datasheets on your own at first.
 
 :::
 
-Once the labs finish, we will revisit this policy for the project phase of the class to decide collectively how we may want to revise our approach to generative AI. The results of your weekly AI prototypes and reflections about them will provide a healthy foundation from which we can discuss!
-
-### Honor Code Violations
+## Honor Code Policy
 
 Students in this class are expected to follow the HMC honor code. An honor code policy appears below and prescribes behavior that is considered honorable, so read those maxims and follow them closely. Any honor code violations will be handled through JB.
 
 If you believe you have violated the honor code in any way, please take the initiative to self report so that we can come up with a fair and just path forward together.
-
-### Honor Code Policy
 
 1.  All students enrolled in this course are bound by the HMC Honor Code. More information on the HMC Honor Code can be found in the HMC Student Handbook.
 2.  It is your responsibility to determine whether your actions adhere to the HMC Honor Code. If this document does not clarify the legitimacy of a particular action, you should contact the course instructor and request clarification.
