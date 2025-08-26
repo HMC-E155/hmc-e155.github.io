@@ -29,9 +29,6 @@
 
 **Lab Writeup/Summary**
 
-- [ ] Brief (e.g., 3-5 sentence) description of the main goals of the assignment and what was done.
-- [ ] Explanation of design approach. How did you go about designing and implementing the design?
-- [ ] Explanation of testing approach. How did you verify your design was behaving as expected?
 - [ ] Statement of whether the design meets all the requirements. If not, list the shortcomings.
 - [ ] Number of hours spent working on the lab are included.
 - [ ] Writeup contains minimal spelling or grammar issues and any errors do not significantly detract from clarity of the writeup.
@@ -57,10 +54,6 @@
 
 - [ ] Testbenches written for each individual module to demonstrate proper operation
 - [ ] Testbench output included in the report
-
-**Lab Writeup/Summary**
-
-- [ ] Writeup is free of spelling and grammar issues
 
 ### Comments
 
