@@ -116,7 +116,7 @@ In addition to the labs and projects, you will also write short (2-3 paragraph) 
 
 As one example, if you meet the requirements for an A in the labs bundle but the requirements for a B in the project bundle, you can expect to earn either a B+ or A-. In these situations, your in-class participation is a contributing factor to split the difference between the - of the higher tier and the + of the lower tier.
 
-An essential part of specifications grading is allowing you to retry specifications if they fail, and allowing flexibility is an important part of helping classes to effectively serve studetns.  To that end, each student has one late token and two redo token that allow them to repectively, turn in a lab up to a week late (checkoff in office hours) and redo a lab where they did not achieve a specification they desired.
+An essential part of specifications grading is allowing you to retry specifications if they fail, and allowing flexibility is an important part of helping classes to effectively serve students.  To that end, each student has one late token and two redo token that allow them to respectively, turn in a lab up to a week late (checkoff in office hours) and redo a lab where they did not achieve a specification they desired.
 
 ## Collaboration Policy
 
