@@ -33,6 +33,7 @@
 - [ ] Number of hours spent working on the lab are included.
 - [ ] Writeup contains minimal spelling or grammar issues and any errors do not significantly detract from clarity of the writeup.
 - [ ] (Optional) List comments or suggestions on what was particularly good about the assignment or what you think needs to change in future versions.
+- [ ] AI prototype attempted and some reflection is recorded.
 
 #### Excellence
 

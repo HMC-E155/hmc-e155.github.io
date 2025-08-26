@@ -89,3 +89,7 @@ Briefly summarize what was done and how it performed. Also note how many hours y
 
 The design successfully blinked an external LED using the on-board high-speed oscillator.
 I spent a total of two hours working on this lab.
+
+## AI Prototype Summary
+
+Include generated code, easy-to-read chat transcripts, and a reflection on how well it worked.

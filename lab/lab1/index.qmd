@@ -27,6 +27,9 @@ format:
 
 In this lab you will familiarize yourself with the microcontroller unit (MCU) and field-programmable gate array (FPGA) development boards we will be using this semester.
 
+- [Specs](specs.qmd)
+- [AI Prototype](ai-prototype.qmd)
+
 ## Learning Objectives
 
 By the end of this lab you will have...
