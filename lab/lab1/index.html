@@ -74,7 +74,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-ab2d8c6492d6fe6b0374d65600c5f373.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-13ea4d8d79307d4bf4bdbc2ce7d0365a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -244,6 +244,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#seven-segment-display-circuit" id="toc-seven-segment-display-circuit" class="nav-link" data-scroll-target="#seven-segment-display-circuit">Seven Segment Display Circuit</a></li>
   <li><a href="#generating-the-fpga-configuration-files" id="toc-generating-the-fpga-configuration-files" class="nav-link" data-scroll-target="#generating-the-fpga-configuration-files">Generating the FPGA Configuration Files</a></li>
   </ul></li>
+  <li><a href="#ai-prototype-and-reflection" id="toc-ai-prototype-and-reflection" class="nav-link" data-scroll-target="#ai-prototype-and-reflection">AI Prototype and Reflection</a></li>
   <li><a href="#share-your-feedback" id="toc-share-your-feedback" class="nav-link" data-scroll-target="#share-your-feedback">Share Your Feedback</a></li>
   </ul>
 <div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="./specs.html"><i class="bi bi-file-earmark-check"></i>Specifications</a></li><li><a href="./ai-prototype.html"><i class="bi bi-robot"></i>AI Prototype</a></li><li><a href="/assets/doc/FPGA-DS-02008-2-0-iCE40-UltraPlus-Family-Data-Sheet.pdf"><i class="bi bi-link-45deg"></i>iCE40 UltraPlus Family Data Sheet</a></li><li><a href="/tutorials/tutorial-posts/lattice-radiant-installation/"><i class="bi bi-link-45deg"></i>Lattice Radiant Installation Tutorial</a></li><li><a href="/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup"><i class="bi bi-link-45deg"></i>Lattice Radiant iCE40 Project Setup</a></li><li><a href="/assets/doc/E155_v4_Dev_Board_BOM.html"><i class="bi bi-link-45deg"></i>Interactive Dev Board BOM</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab01"><i class="bi bi-github"></i>Starter Code</a></li></ul></div></nav>
@@ -426,7 +427,7 @@ Figure&nbsp;6: LED and current limiting resistors.
 </figure>
 </div>
 <ol start="6" type="1">
-<li>Now it’s time to tackle the THT components. Put the components into their respective places and solder them in. Pay careful attention to ensure that the female header strips are correctly aligned and perpendicular to the board. You will need to snap off 2- and 3-pin headers from the provided 40-pin header strip in order to populate J2-J4. The easiest way to do this is to use a pair of needle nose pliers to snap off the right number of pins.</li>
+<li>Now it’s time to tackle the THT components. Put the components into their respective places and solder them in. Pay careful attention to ensure that the female header strips are correctly aligned and perpendicular to the board. You will need to snap off 2- and 3-pin headers from the provided 40-pin header strip in order to populate J2-J4. The easiest way to do this is to use a pair of needle nose pliers to snap off the right number of pins. <strong>Do not solder the UPduino or the Nucleo directly to your board. Populate U2 and U1 with female header sockets.</strong></li>
 <li>After finishing the main development board, follow the same procedure to assemble the breadboard adapter PCB.</li>
 </ol>
 <div id="fig-ribbon-cable" class="quarto-layout-panel">
@@ -738,7 +739,7 @@ Figure&nbsp;9: Seven-segment display pin map
 </section>
 <section id="logic-simulation-in-modelsim" class="level3">
 <h3 class="anchored" data-anchor-id="logic-simulation-in-modelsim">Logic Simulation in ModelSim</h3>
-<p>The next step is to simulate your logic with ModelSim. Open ModelSim from Radiant from the Tools menu or the icon in the toolbar. The ModelSim window will open. Get in the habit of watching the transcript window to look for errors and to familiarize yourself with what a good run looks like. If you see errors, close ModelSim, correct your Verilog code in Radiant, and reopen ModelSim. You can also edit the file directly in ModelSim and recompile there without going through the entire synthesis pipeline in Radiant.</p>
+<p>The next step is to simulate your logic with ModelSim. Open ModelSim from Radiant from the Tools-&gt;QuestaSim Lattice Edition menu or the icon in the toolbar. The ModelSim window will open. Get in the habit of watching the transcript window to look for errors and to familiarize yourself with what a good run looks like. If you see errors, close ModelSim, correct your Verilog code in Radiant, and reopen ModelSim. You can also edit the file directly in ModelSim and recompile there without going through the entire synthesis pipeline in Radiant.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -828,6 +829,10 @@ Troubleshooting Tips
 </div>
 </div>
 </section>
+</section>
+<section id="ai-prototype-and-reflection" class="level2">
+<h2 class="anchored" data-anchor-id="ai-prototype-and-reflection">AI Prototype and Reflection</h2>
+<p>Don’t forget to complete the <a href="../../lab/lab1/ai-prototype.html">AI Prototype</a> and reflect on it in your lab 1 writeup.</p>
 </section>
 <section id="share-your-feedback" class="level2">
 <h2 class="anchored" data-anchor-id="share-your-feedback">Share Your Feedback</h2>
