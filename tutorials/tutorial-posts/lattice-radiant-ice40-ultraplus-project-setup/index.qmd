@@ -150,7 +150,7 @@ Click the button in the toolbar to open the programmer (the icon is the chip wit
 
 Connect your UPduino board to your computer and click the "Detect Cable" button in the "Cable Setup" sub-window on the right of the Programmer window.
 You should see a message noting that "INFO - Board with FTDI USB Host Chip detected." in the output window.
-If the host chip is not detected, you may need to install FTDI drivers for the device.
+If the host chip is not detected, you may need to install FTDI drivers for the device.  Sometimes you need to change the dropdown menu away from "FTDI" and then hit detect cable again if your UPduino is not being recognized (try this if your device appears as "Generic JTAG Device")
 
 Next we need to correctly configure the programming toolchain to program our device.
 By default, the UPduino board only enables programming of the flash chip on board and not the onboard compressed random access memory (CRAM) of the FPGA itself.

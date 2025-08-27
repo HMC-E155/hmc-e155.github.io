@@ -174,7 +174,7 @@ Voltage regulator soldering procedure.
 LED and current limiting resistors.
 :::
 
-6. Now it’s time to tackle the THT components. Put the components into their respective places and solder them in. Pay careful attention to ensure that the female header strips are correctly aligned and perpendicular to the board. You will need to snap off 2- and 3-pin headers from the provided 40-pin header strip in order to populate J2-J4. The easiest way to do this is to use a pair of needle nose pliers to snap off the right number of pins.
+6. Now it’s time to tackle the THT components. Put the components into their respective places and solder them in. Pay careful attention to ensure that the female header strips are correctly aligned and perpendicular to the board. You will need to snap off 2- and 3-pin headers from the provided 40-pin header strip in order to populate J2-J4. The easiest way to do this is to use a pair of needle nose pliers to snap off the right number of pins.  **Do not solder the UPduino or the Nucleo directly to your board. Populate U2 and U1 with female header sockets.**
 7. After finishing the main development board, follow the same procedure to assemble the breadboard adapter PCB.
 
 
@@ -380,7 +380,7 @@ Every module should begin with a comment section that includes your name and ema
 
 ### Logic Simulation in ModelSim
 
-The next step is to simulate your logic with ModelSim. Open ModelSim from Radiant from the Tools menu or the icon in the toolbar. The ModelSim window will open. Get in the habit of watching the transcript window to look for errors and to familiarize yourself with what a good run looks like. If you see errors, close ModelSim, correct your Verilog code in Radiant, and reopen ModelSim. You can also edit the file directly in ModelSim and recompile there without going through the entire synthesis pipeline in Radiant.
+The next step is to simulate your logic with ModelSim. Open ModelSim from Radiant from the Tools->QuestaSim Lattice Edition menu or the icon in the toolbar. The ModelSim window will open. Get in the habit of watching the transcript window to look for errors and to familiarize yourself with what a good run looks like. If you see errors, close ModelSim, correct your Verilog code in Radiant, and reopen ModelSim. You can also edit the file directly in ModelSim and recompile there without going through the entire synthesis pipeline in Radiant.
 
 ::: {.callout-note}
 Some of your designs may include modules from the iCE40 Technology Library (e.g., the HSOSC module we are using to generate our clock signal).
@@ -462,6 +462,10 @@ If some of you are seeing issues with specific pins on your FPGA there could be 
 - You should also read through the Nucleo board documentation to see what pins have special functions that are used by default by the MCU. Hint: You likely want to stay away from using the pins that the MCU uses for serial communication by default.
 
 :::
+
+## AI Prototype and Reflection
+
+Don't forget to complete the [AI Prototype](ai-prototype.qmd) and reflect on it in your lab 1 writeup.
 
 [^1]:
      In order for the NUCLEO board to be compatible with SEGGER, it is necessary to reflash the ST-LINK programmer with SEGGER J-Link firmware to convert it to a J-Link. This has been already taken care of on the board in your kit, but if you want to use another STM32 board with SEGGER you’ll need to follow the instructions [here](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/) to do this yourself.

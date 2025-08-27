@@ -41,7 +41,7 @@ Be sure to join the class Discord and check it regularly. It is be the only sour
 | Lecture      | TR 1:15 - 2:30 pm                                     |
 | Lab Checkoff | TWR afternoons by signup in the Digital Lab (PA B183) |
 | Office Hours | Saturday -- Kavi 6-8 PM                               |
-|              | Sunday -- Kavi 2-4 PM, Vikram 8-10 PM                 |
+|              | Sunday -- Kavi 2-4 PM, Vikram 7-9 PM                  |
 |              | Monday -- Prof. Spencer 1-4 PM (in P2358), Troy 7-9 PM|
 |              | Tuesday -- Neil 7-9 PM                                |
 
@@ -78,6 +78,8 @@ I assume you have a solid grasp of digital design at the level of E85; review Di
 While there is not a textbook to purchase, you will need to buy a lab kit. The fee is \$75 in Claremont Cash, and should be paid by filling out the Google Form ([link]({{< var lab-kit-fee-url >}})) which authorizes Sydney Torrey in the Engineering office to charge your Claremont Cash account. Once you have paid for your kit via the form, see Jacob Staimpel in the stockroom to pick up your kit. If you cook your board this semester, you can buy and rebuild a replacement, but ask the instructor for help troubleshooting first. You'll also check out a large breadboard from the stockroom, and will need to return it at the end of the semester.
 
 The kit fee can be waived in cases of financial hardship. To request a waiver fill out the form here ([link]({{< var lab-kit-waiver-url >}})). Course instructors will not know about waiver requests.
+
+You will also need to check out a breadboard for the semester.  You can do so by talking to Jacob Staimpel in the stockroom.
 
 ## Lab Access
 
