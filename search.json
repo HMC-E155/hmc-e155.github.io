@@ -704,7 +704,7 @@
     "href": "tutorials/index.html",
     "title": "Tutorials",
     "section": "",
-    "text": "Creating and Initializing Your Git Repo\n\n\n\nVideo\n\nSoftware Tools\n\n\n\n\n\n\n\n\n\n\nESP8266 Web Server\n\n\n\nVideo\n\nESP8266\n\n\n\n\n\n\n\n\n\n\nFloating Point Support for printf() in SEGGER Embedded Studio\n\n\n\nVideo\n\nMCU\n\nSEGGER Embedded Studio\n\n\n\n\n\n\n\n\n\n\nGit Setup\n\n\n\nGit\n\n\n\n\n\n\n\n\n\n\nHow to Build a Quarto Portfolio\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\nLattice LSE FSM Automatically Decode Unreachable States\n\n\n\nVideo\n\nFPGA\n\n\n\n\n\n\n\n\n\n\nLattice Radiant Installation Instructions\n\n\n\nFPGA\n\n\n\n\n\n\n\n\n\n\nLattice Radiant iCE40 UltraPlus Project Setup\n\n\n\nFPGA\n\n\n\n\n\n\n\n\n\n\nMonitoring Memory-mapped Registers in SEGGER Embedded Studio\n\n\n\nVideo\n\nMCU\n\n\n\n\n\n\n\n\n\n\nPublishing Your Quarto Website to Github Pages\n\n\n\nVideo\n\nQuarto\n\nSoftware Tools\n\n\n\n\n\n\n\n\n\n\nQuestaSim/ModelSim Simulation Tutorial\n\n\n\nFPGA\n\nQuestaSim/ModelSim\n\n\n\n\n\n\n\n\n\n\nRIGOL MSO1104 Logic Analyzer Demo\n\n\n\nVideo\n\nHardware tools\n\n\n\n\n\n\n\n\n\n\nSEGGER Embedded Studio Setup\n\n\n\nMCU\n\nSEGGER Embedded Studio\n\n\n\n\n\n\nNo matching items"
+    "text": "Creating and Initializing Your Git Repo\n\n\n\nVideo\n\nSoftware Tools\n\n\n\n\n\n\n\n\n\n\nESP8266 Web Server\n\n\n\nVideo\n\nESP8266\n\n\n\n\n\n\n\n\n\n\nFloating Point Support for printf() in SEGGER Embedded Studio\n\n\n\nVideo\n\nMCU\n\nSEGGER Embedded Studio\n\n\n\n\n\n\n\n\n\n\nGit Setup\n\n\n\nGit\n\n\n\n\n\n\n\n\n\n\nHow to Build a Quarto Portfolio\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\nLattice LSE FSM Automatically Decode Unreachable States\n\n\n\nVideo\n\nFPGA\n\n\n\n\n\n\n\n\n\n\nLattice Radiant Installation Instructions\n\n\n\nFPGA\n\n\n\n\n\n\n\n\n\n\nLattice Radiant iCE40 UltraPlus Project Setup\n\n\n\nFPGA\n\n\n\n\n\n\n\n\n\n\nMonitoring Memory-mapped Registers in SEGGER Embedded Studio\n\n\n\nVideo\n\nMCU\n\n\n\n\n\n\n\n\n\n\nPublishing Your Quarto Website to Github Pages\n\n\n\nVideo\n\nQuarto\n\nSoftware Tools\n\n\n\n\n\n\n\n\n\n\nQuestaSim/ModelSim Simulation Tutorial\n\n\n\nFPGA\n\nQuestaSim/ModelSim\n\n\n\n\n\n\n\n\n\n\nRIGOL MSO1104 Logic Analyzer Demo\n\n\n\nVideo\n\nHardware tools\n\n\n\n\n\n\n\n\n\n\nSEGGER Embedded Studio Setup\n\n\n\nMCU\n\nSEGGER Embedded Studio\n\n\n\n\n\n\n\n\n\n\nopenFPGALoader Programmer\n\n\n\nFPGA\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "tutorials/tutorial-videos/rigol-mso1104-logic-analyzer-demo.html",
@@ -948,6 +948,48 @@
     "objectID": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#share-your-feedback",
     "href": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#share-your-feedback",
     "title": "Lattice Radiant iCE40 UltraPlus Project Setup",
+    "section": "Share Your Feedback",
+    "text": "Share Your Feedback\n\n\n\n\n\n\nShare Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html",
+    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html",
+    "title": "openFPGALoader Programmer",
+    "section": "",
+    "text": "The built in programmer in Lattice Radiant can have issues communiciating with the FPGA over FTDI. This document explains how to install an alternative, more reliable programmer.\nWhen you synthesize your code in Lattice Radiant, it creates a .bin file contaning the design to be uploaded to the FPGA. This file exists at\n&lt;project_name&gt;/impl_1/&lt;project_name&gt;_impl_1.bin\nIf your project is called lab_2 the file would be\nlab_2/impl_1/lab_2_impl_1.bin\nYou will need the location of the bin file to upload code once you are done with the installation process.\n\n\nTo upload a synthesized design to the FPGA\nopenFPGALoader -b ice40_generic -c ft232  -f &lt;path_to_.bin_file&gt;\nIf you are in a Lattice Radiant project folder and you don’t have the exact path to the .bin file, this command will find and upload the first .bin file it finds\nfind . -name '*.bin' -print | xargs openFPGALoader -b ice40_generic -c ft232  -f\nIf you are having trouble figuring out which path to use, ask a in office hours or on Discord."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#introduction",
+    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#introduction",
+    "title": "openFPGALoader Programmer",
+    "section": "",
+    "text": "The built in programmer in Lattice Radiant can have issues communiciating with the FPGA over FTDI. This document explains how to install an alternative, more reliable programmer.\nWhen you synthesize your code in Lattice Radiant, it creates a .bin file contaning the design to be uploaded to the FPGA. This file exists at\n&lt;project_name&gt;/impl_1/&lt;project_name&gt;_impl_1.bin\nIf your project is called lab_2 the file would be\nlab_2/impl_1/lab_2_impl_1.bin\nYou will need the location of the bin file to upload code once you are done with the installation process.\n\n\nTo upload a synthesized design to the FPGA\nopenFPGALoader -b ice40_generic -c ft232  -f &lt;path_to_.bin_file&gt;\nIf you are in a Lattice Radiant project folder and you don’t have the exact path to the .bin file, this command will find and upload the first .bin file it finds\nfind . -name '*.bin' -print | xargs openFPGALoader -b ice40_generic -c ft232  -f\nIf you are having trouble figuring out which path to use, ask a in office hours or on Discord."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#macos-install",
+    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#macos-install",
+    "title": "openFPGALoader Programmer",
+    "section": "MacOS install",
+    "text": "MacOS install\nFirst install Homebrew if you don’t already have it installed.\nThen install it using\nbrew install openfpgaloader\nNow you can upload code using the commands above."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#windows-install",
+    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#windows-install",
+    "title": "openFPGALoader Programmer",
+    "section": "Windows Install",
+    "text": "Windows Install\nThis can only be done on personal computers (not lab computers) because you need admin access to install and setup the software\n\nOption 1 (recommended)\nFollow this tutorial to install openFPGALoader: github.com/DFiantWorks/openFPGALoaderWSL\nOnce it is installed run the commands at the top of the document, but replace openFPGALoader with openFPGALoaderWSL.\n\n\nOption 2\nFirst, install MSYS2. It should open a window that looks like this. If you don’t see it, open the UCRT64 that was installed.\n\n\n\n\n\n\nFigure 1: MSYS2 Terminal Window\n\n\n\nSecond, install openFPGALoader by running this command in the terminal window (you need to right click to paste, CTRL+V doesn’t work):\npacman -S mingw-w64-ucrt-x86_64-openFPGALoader\nYou can verify that it installed correctly by running openFPGALoader -h.\nThird, replace the default usb driver with one that work with openFPGALoader. Download and install Zadig. Then open it, select Options -&gt; List All Devices, and select the UPduino in the dropdown menu. It should look like this before you press install driver.\n\n\n\n\n\n\nFigure 2: Zadig before driver repacement\n\n\n\nThen click replace driver and wait for it to finish (you won’t need Zadig again).\nNow openFPGALoader is installed and you are ready to use it, however you need to go to the right folder in the terminal. Do this using the cd command, eg:\ncd /c/Users/&lt;username&gt;/Desktop/E155/lab_1\nThen run the commands at the top of this document to program your FPGA."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#linux-install",
+    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#linux-install",
+    "title": "openFPGALoader Programmer",
+    "section": "Linux Install",
+    "text": "Linux Install\nSee the openFPGALoader documentation here"
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#share-your-feedback",
+    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#share-your-feedback",
+    "title": "openFPGALoader Programmer",
     "section": "Share Your Feedback",
     "text": "Share Your Feedback\n\n\n\n\n\n\nShare Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
   },

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorials – HMC E155</title>
+<title>openFPGALoader Programmer – HMC E155</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="..//assets/img/microps-logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-13ea4d8d79307d4bf4bdbc2ce7d0365a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../..//assets/img/microps-logo.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-13ea4d8d79307d4bf4bdbc2ce7d0365a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,65 +67,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -138,7 +78,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">HMC E155</span>
     </a>
   </div>
@@ -149,11 +89,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../syllabus/"> 
+    <a class="nav-link" href="../../../syllabus/"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -162,61 +102,61 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
         <li>
-    <a class="dropdown-item" href="../lab/">
+    <a class="dropdown-item" href="../../../lab/">
  <span class="dropdown-text">Labs Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/specs/">
+    <a class="dropdown-item" href="../../../lab/specs/">
  <span class="dropdown-text">Lab Specs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab-report-template/">
+    <a class="dropdown-item" href="../../../lab/lab-report-template/">
  <span class="dropdown-text">Lab Report Template</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab1/">
+    <a class="dropdown-item" href="../../../lab/lab1/">
  <span class="dropdown-text">Lab 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab2/">
+    <a class="dropdown-item" href="../../../lab/lab2/">
  <span class="dropdown-text">Lab 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab3/">
+    <a class="dropdown-item" href="../../../lab/lab3/">
  <span class="dropdown-text">Lab 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab4/">
+    <a class="dropdown-item" href="../../../lab/lab4/">
  <span class="dropdown-text">Lab 4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab5/">
+    <a class="dropdown-item" href="../../../lab/lab5/">
  <span class="dropdown-text">Lab 5</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab6/">
+    <a class="dropdown-item" href="../../../lab/lab6/">
  <span class="dropdown-text">Lab 6</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab7/">
+    <a class="dropdown-item" href="../../../lab/lab7/">
  <span class="dropdown-text">Lab 7</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../lecture/"> 
+    <a class="nav-link" href="../../../lecture/"> 
 <span class="menu-text">Lecture</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../project/"> 
+    <a class="nav-link" href="../../../project/"> 
 <span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../resources/"> 
+    <a class="nav-link" href="../../../resources/"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../tutorials/"> 
+    <a class="nav-link" href="../../../tutorials/"> 
 <span class="menu-text">Tutorials</span></a>
   </li>  
 </ul>
@@ -233,15 +173,35 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(14)</span></div><div class="category" data-category="RVNQODI2Ng==">ESP8266 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RlBHQQ==">FPGA <span class="quarto-category-count">(5)</span></div><div class="category" data-category="R2l0">Git <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SGFyZHdhcmUlMjB0b29scw==">Hardware tools <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TUNV">MCU <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UXVhcnRv">Quarto <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UXVlc3RhU2ltJTJGTW9kZWxTaW0=">QuestaSim/ModelSim <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U0VHR0VSJTIwRW1iZWRkZWQlMjBTdHVkaW8=">SEGGER Embedded Studio <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U29mdHdhcmUlMjBUb29scw==">Software Tools <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VmlkZW8=">Video <span class="quarto-category-count">(7)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#after-installing-openfpgaloader" id="toc-after-installing-openfpgaloader" class="nav-link" data-scroll-target="#after-installing-openfpgaloader">After installing openFPGALoader</a></li>
+  </ul></li>
+  <li><a href="#macos-install" id="toc-macos-install" class="nav-link" data-scroll-target="#macos-install">MacOS install</a></li>
+  <li><a href="#windows-install" id="toc-windows-install" class="nav-link" data-scroll-target="#windows-install">Windows Install</a>
+  <ul class="collapse">
+  <li><a href="#option-1-recommended" id="toc-option-1-recommended" class="nav-link" data-scroll-target="#option-1-recommended">Option 1 (recommended)</a></li>
+  <li><a href="#option-2" id="toc-option-2" class="nav-link" data-scroll-target="#option-2">Option 2</a></li>
+  </ul></li>
+  <li><a href="#linux-install" id="toc-linux-install" class="nav-link" data-scroll-target="#linux-install">Linux Install</a></li>
+  <li><a href="#share-your-feedback" id="toc-share-your-feedback" class="nav-link" data-scroll-target="#share-your-feedback">Share Your Feedback</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorials</h1>
-</div>
+<h1 class="title">openFPGALoader Programmer</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">FPGA</div>
+  </div>
+  </div>
 
 
 
@@ -257,247 +217,95 @@ window.Quarto = {
 </header>
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="VmlkZW8lMkNTb2Z0d2FyZSUyMFRvb2xz" data-listing-file-modified-sort="1756760306236" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
-<a href="../tutorials/tutorial-videos/creating-and-initializing-your-git-repo.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Creating and Initializing Your Git Repo
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VmlkZW8='); return false;">Video</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmUlMjBUb29scw=='); return false;">Software Tools</div>
-
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>The built in programmer in Lattice Radiant can have issues communiciating with the FPGA over FTDI. This document explains how to install an alternative, more reliable programmer.</p>
+<p>When you synthesize your code in Lattice Radiant, it creates a <code>.bin</code> file contaning the design to be uploaded to the FPGA. This file exists at</p>
+<pre><code>&lt;project_name&gt;/impl_1/&lt;project_name&gt;_impl_1.bin</code></pre>
+<p>If your project is called <code>lab_2</code> the file would be</p>
+<pre><code>lab_2/impl_1/lab_2_impl_1.bin</code></pre>
+<p>You will need the location of the bin file to upload code once you are done with the installation process.</p>
+<section id="after-installing-openfpgaloader" class="level3">
+<h3 class="anchored" data-anchor-id="after-installing-openfpgaloader">After installing openFPGALoader</h3>
+<p>To upload a synthesized design to the FPGA</p>
+<pre><code>openFPGALoader -b ice40_generic -c ft232  -f &lt;path_to_.bin_file&gt;</code></pre>
+<p>If you are in a Lattice Radiant project folder and you don’t have the exact path to the <code>.bin</code> file, this command will find and upload the first <code>.bin</code> file it finds</p>
+<pre><code>find . -name '*.bin' -print | xargs openFPGALoader -b ice40_generic -c ft232  -f</code></pre>
+<p>If you are having trouble figuring out which path to use, ask a in office hours or on Discord.</p>
+</section>
+</section>
+<section id="macos-install" class="level2">
+<h2 class="anchored" data-anchor-id="macos-install">MacOS install</h2>
+<p>First install <a href="https://brew.sh/">Homebrew</a> if you don’t already have it installed.</p>
+<p>Then install it using</p>
+<pre><code>brew install openfpgaloader</code></pre>
+<p>Now you can upload code using the commands above.</p>
+</section>
+<section id="windows-install" class="level2">
+<h2 class="anchored" data-anchor-id="windows-install">Windows Install</h2>
+<p>This can only be done on personal computers (not lab computers) because you need admin access to install and setup the software</p>
+<section id="option-1-recommended" class="level3">
+<h3 class="anchored" data-anchor-id="option-1-recommended">Option 1 (recommended)</h3>
+<p>Follow this tutorial to install openFPGALoader: <a href="https://github.com/DFiantWorks/openFPGALoaderWSL">github.com/DFiantWorks/openFPGALoaderWSL</a></p>
+<p>Once it is installed run the commands at the top of the document, but replace <code>openFPGALoader</code> with <code>openFPGALoaderWSL</code>.</p>
+</section>
+<section id="option-2" class="level3">
+<h3 class="anchored" data-anchor-id="option-2">Option 2</h3>
+<p>First, install <a href="https://www.msys2.org/">MSYS2</a>. It should open a window that looks like this. If you don’t see it, open the UCRT64 that was installed.</p>
+<div id="fig-msys2-terminal" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-msys2-terminal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/msys2-terminal.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-msys2-terminal-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: MSYS2 Terminal Window
+</figcaption>
+</figure>
+</div>
+<p>Second, install openFPGALoader by running this command in the terminal window (you need to right click to paste, CTRL+V doesn’t work):</p>
+<pre><code>pacman -S mingw-w64-ucrt-x86_64-openFPGALoader</code></pre>
+<p>You can verify that it installed correctly by running <code>openFPGALoader -h</code>.</p>
+<p>Third, replace the default usb driver with one that work with openFPGALoader. Download and install <a href="https://zadig.akeo.ie/">Zadig</a>. Then open it, select Options -&gt; List All Devices, and select the UPduino in the dropdown menu. It should look like this before you press install driver.</p>
+<div id="fig-zadig" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-zadig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/zadig.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-zadig-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Zadig before driver repacement
+</figcaption>
+</figure>
+</div>
+<p>Then click replace driver and wait for it to finish (you won’t need Zadig again).</p>
+<p>Now openFPGALoader is installed and you are ready to use it, however you need to go to the right folder in the terminal. Do this using the <code>cd</code> command, eg:</p>
+<pre><code>cd /c/Users/&lt;username&gt;/Desktop/E155/lab_1</code></pre>
+<p>Then run the commands at the top of this document to program your FPGA.</p>
+</section>
+</section>
+<section id="linux-install" class="level2">
+<h2 class="anchored" data-anchor-id="linux-install">Linux Install</h2>
+<p>See the openFPGALoader documentation <a href="https://trabucayre.github.io/openFPGALoader/guide/install.html">here</a></p>
+</section>
+<section id="share-your-feedback" class="level2">
+<h2 class="anchored" data-anchor-id="share-your-feedback">Share Your Feedback</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Share Your Feedback!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Share Your Feedback!
 </div>
 </div>
-</div></a>
+<div class="callout-body-container callout-body">
+<p>If you caught any typos or have any suggestions for this page, please open an issue on the <a href="https://github.com/HMC-E155/hmc-e155.github.io/issues">website Github repository</a>. Click the link <a href="../../../resources/how-to-create-a-github-issue.html">here</a> for instructions on how to create an issue.</p>
 </div>
-<div class="g-col-1" data-index="1" data-categories="VmlkZW8lMkNFU1A4MjY2" data-listing-file-modified-sort="1756760306236" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
-<a href="../tutorials/tutorial-videos/esp8266-webserver.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-ESP8266 Web Server
-</h5>
-<div class="listing-categories">
+</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('VmlkZW8='); return false;">Video</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('RVNQODI2Ng=='); return false;">ESP8266</div>
+</section>
 
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="VmlkZW8lMkNNQ1UlMkNTRUdHRVIlMjBFbWJlZGRlZCUyMFN0dWRpbw==" data-listing-file-modified-sort="1756760306236" data-listing-reading-time-sort="1" data-listing-word-count-sort="39">
-<a href="../tutorials/tutorial-videos/floating-point-support-for-printf-in-segger-embedded-studio.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Floating Point Support for <code>printf()</code> in SEGGER Embedded Studio
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VmlkZW8='); return false;">Video</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TUNV'); return false;">MCU</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U0VHR0VSJTIwRW1iZWRkZWQlMjBTdHVkaW8='); return false;">SEGGER Embedded Studio</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="R2l0" data-listing-file-modified-sort="1756760306161" data-listing-reading-time-sort="8" data-listing-word-count-sort="1485">
-<a href="../tutorials/tutorial-posts/git-setup/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Git Setup
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2l0'); return false;">Git</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="UXVhcnRv" data-listing-file-modified-sort="1756760306225" data-listing-reading-time-sort="11" data-listing-word-count-sort="2165">
-<a href="../tutorials/tutorial-posts/quarto-portfolio-setup/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-How to Build a Quarto Portfolio
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="VmlkZW8lMkNGUEdB" data-listing-file-modified-sort="1756760306236" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
-<a href="../tutorials/tutorial-videos/lattice-lse-fsm-automatically-decode-unreachable-states.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Lattice LSE FSM Automatically Decode Unreachable States
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VmlkZW8='); return false;">Video</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RlBHQQ=='); return false;">FPGA</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="RlBHQQ==" data-listing-file-modified-sort="1756760306176" data-listing-reading-time-sort="3" data-listing-word-count-sort="576">
-<a href="../tutorials/tutorial-posts/lattice-radiant-installation/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Lattice Radiant Installation Instructions
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RlBHQQ=='); return false;">FPGA</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="RlBHQQ==" data-listing-file-modified-sort="1756760306173" data-listing-reading-time-sort="7" data-listing-word-count-sort="1394">
-<a href="../tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Lattice Radiant iCE40 UltraPlus Project Setup
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RlBHQQ=='); return false;">FPGA</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="8" data-categories="VmlkZW8lMkNNQ1U=" data-listing-file-modified-sort="1756760306236" data-listing-reading-time-sort="1" data-listing-word-count-sort="33">
-<a href="../tutorials/tutorial-videos/monitoring-memory-mapped-registers-in-segger-embedded-studio.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Monitoring Memory-mapped Registers in SEGGER Embedded Studio
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VmlkZW8='); return false;">Video</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TUNV'); return false;">MCU</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="9" data-categories="VmlkZW8lMkNRdWFydG8lMkNTb2Z0d2FyZSUyMFRvb2xz" data-listing-file-modified-sort="1756760306236" data-listing-reading-time-sort="1" data-listing-word-count-sort="36">
-<a href="../tutorials/tutorial-videos/publishing-your-quarto-website-to-github-pages.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Publishing Your Quarto Website to Github Pages
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VmlkZW8='); return false;">Video</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmUlMjBUb29scw=='); return false;">Software Tools</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="10" data-categories="RlBHQSUyQ1F1ZXN0YVNpbSUyRk1vZGVsU2lt" data-listing-file-modified-sort="1756760306203" data-listing-reading-time-sort="9" data-listing-word-count-sort="1639">
-<a href="../tutorials/tutorial-posts/modelsim-simulation-tutorial/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-QuestaSim/ModelSim Simulation Tutorial
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RlBHQQ=='); return false;">FPGA</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVlc3RhU2ltJTJGTW9kZWxTaW0='); return false;">QuestaSim/ModelSim</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="11" data-categories="VmlkZW8lMkNIYXJkd2FyZSUyMHRvb2xz" data-listing-file-modified-sort="1756760306236" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
-<a href="../tutorials/tutorial-videos/rigol-mso1104-logic-analyzer-demo.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-RIGOL MSO1104 Logic Analyzer Demo
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VmlkZW8='); return false;">Video</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SGFyZHdhcmUlMjB0b29scw=='); return false;">Hardware tools</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="12" data-categories="TUNVJTJDU0VHR0VSJTIwRW1iZWRkZWQlMjBTdHVkaW8=" data-listing-file-modified-sort="1756760306236" data-listing-reading-time-sort="5" data-listing-word-count-sort="873">
-<a href="../tutorials/tutorial-posts/segger-embedded-studio-setup/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-SEGGER Embedded Studio Setup
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TUNV'); return false;">MCU</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U0VHR0VSJTIwRW1iZWRkZWQlMjBTdHVkaW8='); return false;">SEGGER Embedded Studio</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="13" data-categories="RlBHQQ==" data-listing-file-modified-sort="1756760306203" data-listing-reading-time-sort="3" data-listing-word-count-sort="407">
-<a href="../tutorials/tutorial-posts/openfpgaloader-programmer/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-openFPGALoader Programmer
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RlBHQQ=='); return false;">FPGA</div>
-
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
