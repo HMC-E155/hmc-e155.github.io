@@ -11,5 +11,5 @@
 #### Excellence
 
 - [ ] Calculations provided to demonstrate that the current draw for each segment in the seven-segment display is within recommended operating conditions.
-- [ ] ModelSim simulation (either manually force or automatic testbench) to demonstrate that the design is working properly.
+- [ ] QuestaSim simulation with automatic testbenches for each module to demonstrate that the design is working properly.
 - [ ] All digits are equally bright, regardless of the number of segments illuminated.
