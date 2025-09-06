@@ -2,7 +2,8 @@
 
 - [ ] HDL design includes only a single seven-segment decoder module.
 - [ ] Sum of the numbers on the two displays is correctly displayed for all inputs
-- [ ] Seven segment displays are same brightness regardless of how many segments are lit.
+- [ ] Seven segment displays are same brightness regardless of how many segments are lit
+- [ ] Resistors are in series with FPGA pins so that they correctly limit current
 
 #### Excellence
 

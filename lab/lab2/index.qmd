@@ -6,11 +6,18 @@ format:
       - text: "Specifications"
         href: ./specs.html
         icon: file-earmark-check
+      - text: "AI Prototype"
+        href: ./ai-prototype.qmd
+        icon: file-earmark-check
 ---
 
 ## Introduction
 
 In this lab you will learn how to use time multiplexing to efficiently use the I/O on your FPGA.
+
+* [Specs](specs.qmd)
+* [AI Prototype](ai-prototype.qmd)
+* You'll need the [ice40 datasheet](../../assets/doc/FPGA-DS-02008-2-0-iCE40-UltraPlus-Family-Data-Sheet.pdf) to do some LED calculations. Check out section 4.17.
 
 ## Learning Objectives
 

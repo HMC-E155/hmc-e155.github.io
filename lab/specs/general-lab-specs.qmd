@@ -1,6 +1,8 @@
-#### Proficiency
 
-##### General Schematic Specifications
+
+#### Schematic Specifications
+
+##### Proficiency
 
 - [ ] All pin names labeled
 - [ ] All pin numbers labeled
@@ -13,29 +15,8 @@
 
 - [ ] Block diagram present with one block per SystemVerilog module
 - [ ] Each block includes all input and output signals
-	
-**HDL & Code Specifications**
 
-*General Formatting*
-
-- [ ] Descriptive filename (e.g., `lab2_jb.sv`)
-- [ ] Descriptive variable names
-- [ ] Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase ))
-- [ ] Descriptive and clear function/module names
-
-*Comments*
-
-- [ ] Comments to indicate the purpose of each function/module
-
-**Lab Writeup/Summary**
-
-- [ ] Statement of whether the design meets all the requirements. If not, list the shortcomings.
-- [ ] Number of hours spent working on the lab are included.
-- [ ] Writeup contains minimal spelling or grammar issues and any errors do not significantly detract from clarity of the writeup.
-- [ ] (Optional) List comments or suggestions on what was particularly good about the assignment or what you think needs to change in future versions.
-- [ ] AI prototype attempted and some reflection is recorded.
-
-#### Excellence
+##### Excellence
 
 **General Schematic Specifications	**
 
@@ -43,18 +24,36 @@
 - [ ] Signals "flow" from left to right where possible (e.g., inputs on left hand side, outputs on right hand side)
 - [ ] Title block with author name, title, and date
 
-**HDL & Code Specifications**
+#### HDL & Code Specifications
 
-*General Formatting*
+##### Proficiency
+
+- [ ] Descriptive filename that matches module name (e.g., `lab2_jb.sv`)
+- [ ] One module per file
+- [ ] Descriptive variable names
+- [ ] Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase ))
+- [ ] Descriptive and clear function/module names
+- [ ] Comments to indicate the purpose of each function/module
+
+
+##### Excellence
 
 - [ ] Name, email, and date at the top of every file
 - [ ] Comment at the top of each source code file to describe what is in it
 - [ ] Clear and organized hierarchy (e.g., delineation between top level modules and submodules)
-
-*Testbenches*
-
 - [ ] Testbenches written for each individual module to demonstrate proper operation
-- [ ] Testbench output included in the report
+- [ ] Testbench output for each module included in the report
+
+
+##### Writeup/Summary
+
+##### Proficiency and Excellence
+
+- [ ] Statement of whether the design meets all the requirements. If not, list the shortcomings.
+- [ ] Number of hours spent working on the lab are included.
+- [ ] Writeup contains minimal spelling or grammar issues and any errors do not significantly detract from clarity of the writeup.
+- [ ] AI prototype attempted and some reflection is recorded.
+- [ ] (Optional) List comments or suggestions on what was particularly good about the assignment or what you think needs to change in future versions.
 
 ### Comments
 
