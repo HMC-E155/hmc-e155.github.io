@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>specs – HMC E155</title>
+<title>Lab 1 AI Prototype – HMC E155</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -177,126 +177,90 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lab-4-specifications" id="toc-lab-4-specifications" class="nav-link active" data-scroll-target="#lab-4-specifications">Lab 4 Specifications</a>
-  <ul class="collapse">
-  <li><a href="#lab-specific-specifications" id="toc-lab-specific-specifications" class="nav-link" data-scroll-target="#lab-specific-specifications">Lab-specific Specifications</a></li>
-  <li><a href="#general-specifications" id="toc-general-specifications" class="nav-link" data-scroll-target="#general-specifications">General Specifications</a></li>
-  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">Comments</a></li>
-  </ul></li>
+  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link active" data-scroll-target="#learning-goals">Learning Goals</a></li>
+  <li><a href="#prototype" id="toc-prototype" class="nav-link" data-scroll-target="#prototype">Prototype</a></li>
+  <li><a href="#reflect" id="toc-reflect" class="nav-link" data-scroll-target="#reflect">Reflect</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="specs.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Lab 1 AI Prototype</h1>
+<p class="subtitle lead">Context Engineering</p>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="lab-4-specifications" class="level2">
-<h2 class="anchored" data-anchor-id="lab-4-specifications">Lab 4 Specifications</h2>
-<section id="lab-specific-specifications" class="level3">
-<h3 class="anchored" data-anchor-id="lab-specific-specifications">Lab-specific Specifications</h3>
-<section id="proficiency" class="level4">
-<h4 class="anchored" data-anchor-id="proficiency">Proficiency</h4>
-<ul class="task-list">
-<li><label><input type="checkbox">Design plays <em>Für Elise</em> from provided starter code</label></li>
-<li><label><input type="checkbox">Note durations match the durations specified in the starter code for <em>Für Elise</em> (i.e., the tune plays at the correct tempo)</label></li>
-<li><label><input type="checkbox">Individual pitches are accurate to within 1% across the frequency range (of 220-1000 Hz) (calculations should be provided in the report to verify this)</label></li>
-<li><label><input type="checkbox">All rests (pauses with no sound) are played properly</label></li>
-<li><label><input type="checkbox">Code uses <code>#define</code> macros for memory-mapped registers</label></li>
-<li><label><input type="checkbox">Portfolio page includes a video of the system playing the entire song.</label></li>
-</ul>
-</section>
-<section id="excellence" class="level4">
-<h4 class="anchored" data-anchor-id="excellence">Excellence</h4>
-<ul class="task-list">
-<li><label><input type="checkbox">Report contains accurate calculations for <strong>minimum duration</strong> supported</label></li>
-<li><label><input type="checkbox">Report contains accurate calculations for <strong>maximum duration</strong> supported</label></li>
-<li><label><input type="checkbox">Report contains accurate calculations for <strong>minimum frequency</strong> supported</label></li>
-<li><label><input type="checkbox">Report contains accurate calculations for <strong>maximum frequency</strong> supported</label></li>
-<li><label><input type="checkbox">Report provides documentation and calculations to show that the durations and pitches are correct based on the timer configuration.</label></li>
-<li><label><input type="checkbox">Design contains potentiometer to control the output volume.</label></li>
-<li><label><input type="checkbox">Design plays an extra composition of your choice. You need not compose the tune from scratch, it is acceptable to transpose an existing tune.</label></li>
-</ul>
-<div style="page-break-after: always;"></div>
-</section>
-</section>
-<section id="general-specifications" class="level3">
-<h3 class="anchored" data-anchor-id="general-specifications">General Specifications</h3>
-<section id="schematic-specifications" class="level4">
-<h4 class="anchored" data-anchor-id="schematic-specifications">Schematic Specifications</h4>
-<section id="proficiency-1" class="level5">
-<h5 class="anchored" data-anchor-id="proficiency-1">Proficiency</h5>
-<ul class="task-list">
-<li><label><input type="checkbox">All pin names labeled</label></li>
-<li><label><input type="checkbox">All pin numbers labeled</label></li>
-<li><label><input type="checkbox">Crossing wires clearly identified as junction or unconnected</label></li>
-<li><label><input type="checkbox">Neat layout (e.g., clear organization and spacing)</label></li>
-<li><label><input type="checkbox">All parts labeled with part number</label></li>
-<li><label><input type="checkbox">All component values present</label></li>
-</ul>
-<p><strong>Block Diagram</strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Block diagram present with one block per SystemVerilog module</label></li>
-<li><label><input type="checkbox">Each block includes all input and output signals</label></li>
-</ul>
-</section>
-<section id="excellence-1" class="level5">
-<h5 class="anchored" data-anchor-id="excellence-1">Excellence</h5>
-<p><strong>General Schematic Specifications </strong></p>
-<ul class="task-list">
-<li><label><input type="checkbox">Standard symbols used for all components where applicable</label></li>
-<li><label><input type="checkbox">Signals “flow” from left to right where possible (e.g., inputs on left hand side, outputs on right hand side)</label></li>
-<li><label><input type="checkbox">Title block with author name, title, and date</label></li>
-</ul>
-</section>
-</section>
-<section id="hdl-code-specifications" class="level4">
-<h4 class="anchored" data-anchor-id="hdl-code-specifications">HDL &amp; Code Specifications</h4>
-<section id="proficiency-2" class="level5">
-<h5 class="anchored" data-anchor-id="proficiency-2">Proficiency</h5>
-<ul class="task-list">
-<li><label><input type="checkbox">Descriptive filename that matches module name (e.g., <code>lab2_jb.sv</code>)</label></li>
-<li><label><input type="checkbox">One module per file</label></li>
-<li><label><input type="checkbox">Descriptive variable names</label></li>
-<li><label><input type="checkbox">Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase ))</label></li>
-<li><label><input type="checkbox">Descriptive and clear function/module names</label></li>
-<li><label><input type="checkbox">Comments to indicate the purpose of each function/module</label></li>
-</ul>
-</section>
-<section id="excellence-2" class="level5">
-<h5 class="anchored" data-anchor-id="excellence-2">Excellence</h5>
-<ul class="task-list">
-<li><label><input type="checkbox">Name, email, and date at the top of every file</label></li>
-<li><label><input type="checkbox">Comment at the top of each source code file to describe what is in it</label></li>
-<li><label><input type="checkbox">Clear and organized hierarchy (e.g., delineation between top level modules and submodules)</label></li>
-<li><label><input type="checkbox">Testbenches written for each individual module to demonstrate proper operation</label></li>
-<li><label><input type="checkbox">Testbench output for each module included in the report</label></li>
-</ul>
-</section>
-<section id="writeupsummary" class="level5">
-<h5 class="anchored" data-anchor-id="writeupsummary">Writeup/Summary</h5>
-</section>
-<section id="proficiency-and-excellence" class="level5">
-<h5 class="anchored" data-anchor-id="proficiency-and-excellence">Proficiency and Excellence</h5>
-<ul class="task-list">
-<li><label><input type="checkbox">Statement of whether the design meets all the requirements. If not, list the shortcomings.</label></li>
-<li><label><input type="checkbox">Number of hours spent working on the lab are included.</label></li>
-<li><label><input type="checkbox">Writeup contains minimal spelling or grammar issues and any errors do not significantly detract from clarity of the writeup.</label></li>
-<li><label><input type="checkbox">AI prototype attempted and some reflection is recorded.</label></li>
-<li><label><input type="checkbox">(Optional) List comments or suggestions on what was particularly good about the assignment or what you think needs to change in future versions.</label></li>
-</ul>
-</section>
-</section>
-</section>
-<section id="comments" class="level3">
-<h3 class="anchored" data-anchor-id="comments">Comments</h3>
-<p>Add specific notes here about the assignment.</p>
-<textarea style="width: 100%" id="comments" name="comments" rows="10" cols="10">
-</textarea>
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<section id="learning-goals" class="level2">
+<h2 class="anchored" data-anchor-id="learning-goals">Learning Goals</h2>
+<p>The goal of this prototype is to experiment with using AI as a coding assistant to generate HDL, and to validate whether . By the end of this experiment you should be able to:</p>
+<ul>
+<li>Attach a file as context to a prompt for a LLM agent.<br>
+</li>
+<li>Describe the effect that context has on a prompt.</li>
+</ul>
 </section>
+<section id="prototype" class="level2">
+<h2 class="anchored" data-anchor-id="prototype">Prototype</h2>
+<p>Fire up your favorite LLM. (ChatGPT, Claude, Copilot, Gemini, etc.). Enter the prompt below.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="LLM Prompt">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+LLM Prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Write SystemVerilog HDL to time multiplex a single seven segment decoder (that decodes from four bits to a common anode seven segment display) to decode two sets of input bits and drive two sets of seven output bits.</p>
+</div>
+</div>
+<p>Create a new Radiant project, type the code generated by the LLM in and analyze the results.</p>
+<p>Now start a new AI conversation (don’t leave the old one in your history), attach your lab 1 files as context (usually using a + or attach symbol in the chat box) and write the following, similar prompt:</p>
+<div class="callout callout-style-default callout-note callout-titled" title="LLM Prompt">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+LLM Prompt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Write SystemVerilog HDL to time multiplex a single seven segment decoder (that decodes from four bits to a common anode seven segment display) to decode two sets of input bits and drive two sets of seven output bits. Use the seven segment decoder and oscillator provided in the attached files.</p>
+</div>
+</div>
+<p>Create a new Radiant project, type the code generated by the LLM in and analyze the results.</p>
+</section>
+<section id="reflect" class="level2">
+<h2 class="anchored" data-anchor-id="reflect">Reflect</h2>
+<p>Write up a few paragraphs reflecting on your experience using the LLM to help you code. Feel free to make full use of screenshots, code snippets, and other media as you write your reflections.</p>
+<p>Here are a few ideas of on what you might comment on:</p>
+<ul>
+<li>How would you rate the quality of the output and why?</li>
+<li>What SystemVerilog constructs/syntax did the LLM generated that were new to you?</li>
+<li>Did the LLM-generated code synthesize the first time around? If not, what were the issues?</li>
+<li>What error or warning messages did Radiant output?</li>
+<li>What would you do differently the next time you use an LLM in your workflow?</li>
+</ul>
+
+
 </section>
 
 </main> <!-- /main -->
