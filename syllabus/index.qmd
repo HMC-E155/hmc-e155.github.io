@@ -40,10 +40,9 @@ Be sure to join the class Discord and check it regularly. It is be the only sour
 |--------------|-------------------------------------------------------|
 | Lecture      | TR 1:15 - 2:30 pm                                     |
 | Lab Checkoff | TWR afternoons by signup in the Digital Lab (PA B183) |
-| Office Hours | Saturday -- Kavi 6-8 PM                               |
+| Office Hours | Saturday -- Neil 2-4 PM, Kavi 6-8 PM                  |
 |              | Sunday -- Kavi 2-4 PM, Vikram 7-9 PM                  |
 |              | Monday -- Prof. Spencer 1-4 PM (in P2358), Troy 7-9 PM|
-|              | Tuesday -- Neil 7-9 PM                                |
 
 
 ## Schedule
