@@ -6,12 +6,17 @@ format:
       - text: "Specifications"
         href: ./specs.html
         icon: file-earmark-check
+      - text: "AI Prototype"
+        href: ./ai-prototype.html
+        icon: robot
 ---
 
 ## Introduction
 
 In this lab you will learn how to use an FPGA to scan inputs from a keypad.
 
+- [Specs](specs.qmd)
+- [AI Prototype](ai-prototype.qmd)
 
 ## Learning Objectives
 
@@ -47,5 +52,9 @@ This is a thinking person’s lab. If you thoroughly understand the problem and 
 ## Hints
 
 Look at your RTL schematic in your synthesis tool (`Tools -> Netlist Analyzer`). Understand why your code produces the hardware you see. Be sure your combinational logic doesn’t have any registers. Be sure your logic has no latches or tristate buffers. The oscilloscope is handy for tracking down timing problems.
+
+## AI Prototype and Reflection
+
+Don't forget to complete the [AI Prototype](ai-prototype.qmd) and reflect on it in your lab 3 writeup.
 
 {{< include /resources/github-issue-footer.qmd >}}
