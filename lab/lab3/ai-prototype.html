@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Tutorials – HMC E155</title>
+<title>Lab 3 AI Prototype – HMC E155</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="..//assets/img/microps-logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-13ea4d8d79307d4bf4bdbc2ce7d0365a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../..//assets/img/microps-logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-13ea4d8d79307d4bf4bdbc2ce7d0365a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,65 +67,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -138,7 +78,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">HMC E155</span>
     </a>
   </div>
@@ -149,11 +89,11 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../syllabus/"> 
+    <a class="nav-link" href="../../syllabus/"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -162,61 +102,61 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
         <li>
-    <a class="dropdown-item" href="../lab/">
+    <a class="dropdown-item" href="../../lab/">
  <span class="dropdown-text">Labs Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/specs/">
+    <a class="dropdown-item" href="../../lab/specs/">
  <span class="dropdown-text">Lab Specs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab-report-template/">
+    <a class="dropdown-item" href="../../lab/lab-report-template/">
  <span class="dropdown-text">Lab Report Template</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab1/">
+    <a class="dropdown-item" href="../../lab/lab1/">
  <span class="dropdown-text">Lab 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab2/">
+    <a class="dropdown-item" href="../../lab/lab2/">
  <span class="dropdown-text">Lab 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab3/">
+    <a class="dropdown-item" href="../../lab/lab3/">
  <span class="dropdown-text">Lab 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab4/">
+    <a class="dropdown-item" href="../../lab/lab4/">
  <span class="dropdown-text">Lab 4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab5/">
+    <a class="dropdown-item" href="../../lab/lab5/">
  <span class="dropdown-text">Lab 5</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab6/">
+    <a class="dropdown-item" href="../../lab/lab6/">
  <span class="dropdown-text">Lab 6</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab7/">
+    <a class="dropdown-item" href="../../lab/lab7/">
  <span class="dropdown-text">Lab 7</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../lecture/"> 
+    <a class="nav-link" href="../../lecture/"> 
 <span class="menu-text">Lecture</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../project/"> 
+    <a class="nav-link" href="../../project/"> 
 <span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../resources/"> 
+    <a class="nav-link" href="../../resources/"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../tutorials/"> 
+    <a class="nav-link" href="../../tutorials/"> 
 <span class="menu-text">Tutorials</span></a>
   </li>  
 </ul>
@@ -233,14 +173,25 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(14)</span></div><div class="category" data-category="RVNQODI2Ng==">ESP8266 <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RlBHQQ==">FPGA <span class="quarto-category-count">(5)</span></div><div class="category" data-category="R2l0">Git <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SGFyZHdhcmUlMjB0b29scw==">Hardware tools <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TUNV">MCU <span class="quarto-category-count">(3)</span></div><div class="category" data-category="UXVhcnRv">Quarto <span class="quarto-category-count">(2)</span></div><div class="category" data-category="UXVlc3RhU2ltJTJGTW9kZWxTaW0=">QuestaSim/ModelSim <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U0VHR0VSJTIwRW1iZWRkZWQlMjBTdHVkaW8=">SEGGER Embedded Studio <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U29mdHdhcmUlMjBUb29scw==">Software Tools <span class="quarto-category-count">(2)</span></div><div class="category" data-category="VmlkZW8=">Video <span class="quarto-category-count">(7)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link active" data-scroll-target="#learning-goals">Learning Goals</a></li>
+  <li><a href="#prototype-a-monolithic-prompt-all-at-once" id="toc-prototype-a-monolithic-prompt-all-at-once" class="nav-link" data-scroll-target="#prototype-a-monolithic-prompt-all-at-once">Prototype A: Monolithic Prompt (All-at-once)</a></li>
+  <li><a href="#prototype-b-modular-prompts-decompose-into-fsms" id="toc-prototype-b-modular-prompts-decompose-into-fsms" class="nav-link" data-scroll-target="#prototype-b-modular-prompts-decompose-into-fsms">Prototype B: Modular Prompts (Decompose into FSMs)</a></li>
+  <li><a href="#reference-material" id="toc-reference-material" class="nav-link" data-scroll-target="#reference-material">Reference Material</a></li>
+  <li><a href="#reflect" id="toc-reflect" class="nav-link" data-scroll-target="#reflect">Reflect</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tutorials</h1>
+<h1 class="title">Lab 3 AI Prototype</h1>
+<p class="subtitle lead">Modularity Experiment: Debounce + Keypad FSM</p>
 </div>
 
 
@@ -257,247 +208,130 @@ window.Quarto = {
 </header>
 
 
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="VmlkZW8lMkNTb2Z0d2FyZSUyMFRvb2xz" data-listing-file-modified-sort="1757438254448" data-listing-reading-time-sort="1" data-listing-word-count-sort="25">
-<a href="../tutorials/tutorial-videos/creating-and-initializing-your-git-repo.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Creating and Initializing Your Git Repo
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VmlkZW8='); return false;">Video</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmUlMjBUb29scw=='); return false;">Software Tools</div>
-
+<section id="learning-goals" class="level2">
+<h2 class="anchored" data-anchor-id="learning-goals">Learning Goals</h2>
+<p>The goal of this prototype is to explore how AI handles design modularity when implementing digital systems. By the end of this experiment you should be able to:</p>
+<ul>
+<li>Demonstrate how an LLM can be used as a coding partner for modular designs.</li>
+<li>Compare a monolithic prompt versus decomposed prompts on quality and correctness.</li>
+<li>Document specific tips on how to prompt an LLM effectively for FSM-based designs.</li>
+</ul>
+</section>
+<section id="prototype-a-monolithic-prompt-all-at-once" class="level2">
+<h2 class="anchored" data-anchor-id="prototype-a-monolithic-prompt-all-at-once">Prototype A: Monolithic Prompt (All-at-once)</h2>
+<p>Fire up your favorite LLM. ChatGPT is a good place to start, but you may consider using other LLMs as well like Claude or Gemini. Enter the prompt below.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="LLM Prompt: Whole Lab (Monolithic)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+LLM Prompt: Whole Lab (Monolithic)
 </div>
 </div>
-</div></a>
+<div class="callout-body-container callout-body">
+<p>Target device: Lattice iCE40 UP5K FPGA with internal high-speed oscillator (~20 MHz).</p>
+<p>Write synthesizable SystemVerilog to scan a 4x4 matrix keypad and display the last two hex keys pressed on a dual 7‑segment display. Implement:</p>
+<ul>
+<li>A clock divider that derives a scan clock on the order of 100–200 Hz from the internal oscillator.</li>
+<li>A keypad scanning controller that iterates one active‑low column at a time and samples active‑low rows, registering at most one key per press (debounce‑by‑design), ignoring additional presses while any key is held, and allowing a new registration only after release.</li>
+<li>A top level that updates two hex digits (older and most recent) when a new key is registered and drives a time‑multiplexed two‑digit 7‑segment display without visible flicker and with balanced brightness.</li>
+</ul>
+<p>Use idiomatic SystemVerilog (e.g., <code>logic</code>, <code>always_ff</code>, enumerated states for FSMs). Provide clean module boundaries and keep all state synchronous. Include brief comments explaining the design choices.</p>
 </div>
-<div class="g-col-1" data-index="1" data-categories="VmlkZW8lMkNFU1A4MjY2" data-listing-file-modified-sort="1757438254448" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
-<a href="../tutorials/tutorial-videos/esp8266-webserver.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-ESP8266 Web Server
-</h5>
-<div class="listing-categories">
+</div>
+<p>Create a new Radiant project, type the code generated by the LLM in and analyze the results. If the synthesis fails, type the error message back into the LLM to see what suggestions it generates.</p>
+</section>
+<section id="prototype-b-modular-prompts-decompose-into-fsms" class="level2">
+<h2 class="anchored" data-anchor-id="prototype-b-modular-prompts-decompose-into-fsms">Prototype B: Modular Prompts (Decompose into FSMs)</h2>
+<p>In this variant, you will prompt the LLM for the two main FSMs separately: (1) the one‑shot registration (debounce‑by‑design) behavior and (2) the keypad scanning controller. After generating those, you will request a top‑level integration and display logic.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="LLM Prompt 1: One‑shot Registration (Debounce‑by‑design)">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+LLM Prompt 1: One‑shot Registration (Debounce‑by‑design)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Target device: Lattice iCE40 UP5K FPGA.</p>
+<p>Overall Goal: Write SystemVerilog to scan a 4x4 matrix keypad and display the last two hex keys pressed on a dual 7 segment display.</p>
+<p>Current Goal: Write a synthesizable SystemVerilog module that produces a one‑shot registration signal for the keypad system. Behavior:</p>
+<ul>
+<li>When a key press is first detected, capture the current key code and assert a single‑cycle “new key” pulse.</li>
+<li>While any key remains pressed, do not accept additional keys.</li>
+<li>Only after keys are released should a subsequent press be recognized.</li>
+<li>This should handle debouncing of the keys.</li>
+</ul>
+<p>Implement as a small synchronous FSM with enumerated states and glitch‑free outputs. Keep names and interfaces reasonable; do not assume any hidden modules beyond what you define here.</p>
+</div>
+</div>
+<p>Run this prompt within the same session to maintain the context of the above FSM.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="LLM Prompt 2: Keypad Scanner Controller">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+LLM Prompt 2: Keypad Scanner Controller
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Target device: Lattice iCE40 UP5K FPGA.</p>
+<p>Write a synthesizable SystemVerilog module that cycles through keypad columns (active‑low, one at a time) and samples rows (active‑low) to detect a single key at a time. Behavior:</p>
+<ul>
+<li>Iterate columns at a suitable scan rate derived from the divided clock and sample rows.</li>
+<li>When a key is detected, report a stable key code consistent with a standard 4x4 keypad layout and maintain it while the key remains pressed.</li>
+<li>Provide a boolean signal indicating whether any key is currently pressed.</li>
+</ul>
+<p>Use clean state encoding and synchronous logic; avoid combinational feedback and latches.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="LLM Prompt 3: Integrate and Display">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+LLM Prompt 3: Integrate and Display
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Target device: Lattice iCE40 UP5K FPGA with internal oscillator as the root clock source.</p>
+<p>Write a top‑level SystemVerilog module that instantiates the scanner and one‑shot modules, shifts the last two keys (older ← most recent; most recent ← new), and drives a multiplexed two‑digit seven‑segment display. Requirements:</p>
+<ul>
+<li>Update the displayed digits only when a new key is registered.</li>
+<li>Ensure equal apparent brightness and no visible flicker.</li>
+<li>Keep all logic synthesizable and synchronous; use idiomatic SystemVerilog constructs.</li>
+</ul>
+<p>Provide any small clock‑enable or divider logic you need. You can also assume that a sevenSegment module exists that takes a 4 bit input and outputs the 7 segments.</p>
+</div>
+</div>
+</section>
+<section id="reference-material" class="level2">
+<h2 class="anchored" data-anchor-id="reference-material">Reference Material</h2>
+<ul>
+<li>Use the Lab 3 specifications for exact behavior and constraints: <code>lab/lab3/specs.qmd</code>.</li>
+</ul>
+</section>
+<section id="reflect" class="level2">
+<h2 class="anchored" data-anchor-id="reflect">Reflect</h2>
+<p>Write up a few paragraphs reflecting on your experience using the LLM in both styles (monolithic vs modular). Include screenshots, code snippets, and other media as needed.</p>
+<p>Consider discussing:</p>
+<ul>
+<li>How did the monolithic prompt perform versus the decomposed prompts?</li>
+<li>Did modularizing the prompts improve correctness, synthesis success, or readability?</li>
+<li>Did Prototype A modularize the design in the way you expected without explicit instruction?</li>
+<li>What FSM structures and SystemVerilog idioms did the LLM use that were helpful or surprising?</li>
+<li>What issues did you encounter (e.g., keypad code mapping, active‑low row/col logic, debounce‑by‑design), and how did the LLM handle them?</li>
+<li>What would you do differently the next time you use an LLM in your workflow?</li>
+</ul>
 
-<div class="listing-category" onclick="window.quartoListingCategory('VmlkZW8='); return false;">Video</div>
 
-<div class="listing-category" onclick="window.quartoListingCategory('RVNQODI2Ng=='); return false;">ESP8266</div>
+</section>
 
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="VmlkZW8lMkNNQ1UlMkNTRUdHRVIlMjBFbWJlZGRlZCUyMFN0dWRpbw==" data-listing-file-modified-sort="1757438254448" data-listing-reading-time-sort="1" data-listing-word-count-sort="39">
-<a href="../tutorials/tutorial-videos/floating-point-support-for-printf-in-segger-embedded-studio.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Floating Point Support for <code>printf()</code> in SEGGER Embedded Studio
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VmlkZW8='); return false;">Video</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TUNV'); return false;">MCU</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U0VHR0VSJTIwRW1iZWRkZWQlMjBTdHVkaW8='); return false;">SEGGER Embedded Studio</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="R2l0" data-listing-file-modified-sort="1757438254373" data-listing-reading-time-sort="8" data-listing-word-count-sort="1485">
-<a href="../tutorials/tutorial-posts/git-setup/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Git Setup
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('R2l0'); return false;">Git</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="UXVhcnRv" data-listing-file-modified-sort="1757438254437" data-listing-reading-time-sort="11" data-listing-word-count-sort="2165">
-<a href="../tutorials/tutorial-posts/quarto-portfolio-setup/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-How to Build a Quarto Portfolio
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="VmlkZW8lMkNGUEdB" data-listing-file-modified-sort="1757438254448" data-listing-reading-time-sort="1" data-listing-word-count-sort="43">
-<a href="../tutorials/tutorial-videos/lattice-lse-fsm-automatically-decode-unreachable-states.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Lattice LSE FSM Automatically Decode Unreachable States
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VmlkZW8='); return false;">Video</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('RlBHQQ=='); return false;">FPGA</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="RlBHQQ==" data-listing-file-modified-sort="1757438254388" data-listing-reading-time-sort="3" data-listing-word-count-sort="576">
-<a href="../tutorials/tutorial-posts/lattice-radiant-installation/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Lattice Radiant Installation Instructions
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RlBHQQ=='); return false;">FPGA</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="RlBHQQ==" data-listing-file-modified-sort="1757438254385" data-listing-reading-time-sort="7" data-listing-word-count-sort="1394">
-<a href="../tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Lattice Radiant iCE40 UltraPlus Project Setup
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RlBHQQ=='); return false;">FPGA</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="8" data-categories="VmlkZW8lMkNNQ1U=" data-listing-file-modified-sort="1757438254448" data-listing-reading-time-sort="1" data-listing-word-count-sort="33">
-<a href="../tutorials/tutorial-videos/monitoring-memory-mapped-registers-in-segger-embedded-studio.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Monitoring Memory-mapped Registers in SEGGER Embedded Studio
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VmlkZW8='); return false;">Video</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('TUNV'); return false;">MCU</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="9" data-categories="VmlkZW8lMkNRdWFydG8lMkNTb2Z0d2FyZSUyMFRvb2xz" data-listing-file-modified-sort="1757438254448" data-listing-reading-time-sort="1" data-listing-word-count-sort="36">
-<a href="../tutorials/tutorial-videos/publishing-your-quarto-website-to-github-pages.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Publishing Your Quarto Website to Github Pages
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VmlkZW8='); return false;">Video</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVhcnRv'); return false;">Quarto</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U29mdHdhcmUlMjBUb29scw=='); return false;">Software Tools</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="10" data-categories="RlBHQSUyQ1F1ZXN0YVNpbSUyRk1vZGVsU2lt" data-listing-file-modified-sort="1757438254414" data-listing-reading-time-sort="9" data-listing-word-count-sort="1639">
-<a href="../tutorials/tutorial-posts/modelsim-simulation-tutorial/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-QuestaSim/ModelSim Simulation Tutorial
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RlBHQQ=='); return false;">FPGA</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UXVlc3RhU2ltJTJGTW9kZWxTaW0='); return false;">QuestaSim/ModelSim</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="11" data-categories="VmlkZW8lMkNIYXJkd2FyZSUyMHRvb2xz" data-listing-file-modified-sort="1757438254448" data-listing-reading-time-sort="1" data-listing-word-count-sort="35">
-<a href="../tutorials/tutorial-videos/rigol-mso1104-logic-analyzer-demo.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-RIGOL MSO1104 Logic Analyzer Demo
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('VmlkZW8='); return false;">Video</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('SGFyZHdhcmUlMjB0b29scw=='); return false;">Hardware tools</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="12" data-categories="TUNVJTJDU0VHR0VSJTIwRW1iZWRkZWQlMjBTdHVkaW8=" data-listing-file-modified-sort="1757438254448" data-listing-reading-time-sort="5" data-listing-word-count-sort="873">
-<a href="../tutorials/tutorial-posts/segger-embedded-studio-setup/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-SEGGER Embedded Studio Setup
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('TUNV'); return false;">MCU</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('U0VHR0VSJTIwRW1iZWRkZWQlMjBTdHVkaW8='); return false;">SEGGER Embedded Studio</div>
-
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="13" data-categories="RlBHQQ==" data-listing-file-modified-sort="1757438254415" data-listing-reading-time-sort="3" data-listing-word-count-sort="407">
-<a href="../tutorials/tutorial-posts/openfpgaloader-programmer/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-openFPGALoader Programmer
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RlBHQQ=='); return false;">FPGA</div>
-
-</div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
