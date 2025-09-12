@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Josh Brake">
 
-<title>Best Practices for HDL Coding – HMC E155</title>
+<title>Testbench Example – HMC E155</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,24 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="..//assets/img/microps-logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-272e182edf7bee7f8f0204874c19e4e1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../..//assets/img/microps-logo.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-272e182edf7bee7f8f0204874c19e4e1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -80,9 +79,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">HMC E155</span>
     </a>
   </div>
@@ -93,11 +92,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../syllabus/"> 
+    <a class="nav-link" href="../../../syllabus/"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -106,61 +105,61 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
         <li>
-    <a class="dropdown-item" href="../lab/">
+    <a class="dropdown-item" href="../../../lab/">
  <span class="dropdown-text">Labs Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/specs/">
+    <a class="dropdown-item" href="../../../lab/specs/">
  <span class="dropdown-text">Lab Specs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab-report-template/">
+    <a class="dropdown-item" href="../../../lab/lab-report-template/">
  <span class="dropdown-text">Lab Report Template</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab1/">
+    <a class="dropdown-item" href="../../../lab/lab1/">
  <span class="dropdown-text">Lab 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab2/">
+    <a class="dropdown-item" href="../../../lab/lab2/">
  <span class="dropdown-text">Lab 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab3/">
+    <a class="dropdown-item" href="../../../lab/lab3/">
  <span class="dropdown-text">Lab 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab4/">
+    <a class="dropdown-item" href="../../../lab/lab4/">
  <span class="dropdown-text">Lab 4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab5/">
+    <a class="dropdown-item" href="../../../lab/lab5/">
  <span class="dropdown-text">Lab 5</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab6/">
+    <a class="dropdown-item" href="../../../lab/lab6/">
  <span class="dropdown-text">Lab 6</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../lab/lab7/">
+    <a class="dropdown-item" href="../../../lab/lab7/">
  <span class="dropdown-text">Lab 7</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../lecture/"> 
+    <a class="nav-link" href="../../../lecture/"> 
 <span class="menu-text">Lecture</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../project/"> 
+    <a class="nav-link" href="../../../project/"> 
 <span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../resources/"> 
+    <a class="nav-link" href="../../../resources/"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../tutorials/"> 
+    <a class="nav-link" href="../../../tutorials/"> 
 <span class="menu-text">Tutorials</span></a>
   </li>  
 </ul>
@@ -181,21 +180,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#before-writing-code" id="toc-before-writing-code" class="nav-link" data-scroll-target="#before-writing-code">Before Writing Code</a></li>
-  <li><a href="#while-you-are-coding-your-design" id="toc-while-you-are-coding-your-design" class="nav-link" data-scroll-target="#while-you-are-coding-your-design">While you are coding your design</a></li>
-  <li><a href="#conventions" id="toc-conventions" class="nav-link" data-scroll-target="#conventions">Conventions</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#quick-design-review" id="toc-quick-design-review" class="nav-link" data-scroll-target="#quick-design-review">Quick Design Review</a></li>
+  <li><a href="#testbench-code-explanation" id="toc-testbench-code-explanation" class="nav-link" data-scroll-target="#testbench-code-explanation">Testbench Code Explanation</a>
   <ul class="collapse">
-  <li><a href="#file-names" id="toc-file-names" class="nav-link" data-scroll-target="#file-names">File Names</a></li>
-  <li><a href="#module-names" id="toc-module-names" class="nav-link" data-scroll-target="#module-names">Module Names</a></li>
-  <li><a href="#signal-names" id="toc-signal-names" class="nav-link" data-scroll-target="#signal-names">Signal Names</a></li>
-  <li><a href="#constants" id="toc-constants" class="nav-link" data-scroll-target="#constants">Constants</a></li>
-  <li><a href="#indenting" id="toc-indenting" class="nav-link" data-scroll-target="#indenting">Indenting</a></li>
-  <li><a href="#commenting" id="toc-commenting" class="nav-link" data-scroll-target="#commenting">Commenting</a></li>
+  <li><a href="#concurrent-assertions-for-the-fsm" id="toc-concurrent-assertions-for-the-fsm" class="nav-link" data-scroll-target="#concurrent-assertions-for-the-fsm">Concurrent Assertions for the FSM</a></li>
+  <li><a href="#immediate-assertions-for-the-7-segment-decoder" id="toc-immediate-assertions-for-the-7-segment-decoder" class="nav-link" data-scroll-target="#immediate-assertions-for-the-7-segment-decoder">Immediate Assertions for the 7-Segment Decoder</a></li>
   </ul></li>
-  <li><a href="#assignment-statements" id="toc-assignment-statements" class="nav-link" data-scroll-target="#assignment-statements">Assignment Statements</a></li>
-  <li><a href="#general-systemverilog-coding-practices" id="toc-general-systemverilog-coding-practices" class="nav-link" data-scroll-target="#general-systemverilog-coding-practices">General SystemVerilog Coding Practices</a></li>
-  <li><a href="#resources-for-learning-more" id="toc-resources-for-learning-more" class="nav-link" data-scroll-target="#resources-for-learning-more">Resources for Learning More</a></li>
+  <li><a href="#testbench-code" id="toc-testbench-code" class="nav-link" data-scroll-target="#testbench-code">Testbench Code</a></li>
+  <li><a href="#waveform-and-transcript-outputs" id="toc-waveform-and-transcript-outputs" class="nav-link" data-scroll-target="#waveform-and-transcript-outputs">Waveform and Transcript Outputs</a></li>
+  <li><a href="#extra-topics-of-interest" id="toc-extra-topics-of-interest" class="nav-link" data-scroll-target="#extra-topics-of-interest">Extra Topics Of Interest</a></li>
   </ul>
 </nav>
     </div>
@@ -204,20 +198,16 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Best Practices for HDL Coding</h1>
-<p class="subtitle lead">a.k.a. How to write HDL that won’t make you want to pull your hair out</p>
-</div>
+<h1 class="title">Testbench Example</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">FPGA</div>
+  </div>
+  </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Josh Brake </p>
-          </div>
-  </div>
     
   
     
@@ -228,50 +218,190 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Writing HDL code <em>seems</em> similar to writing code that runs on a processor core in a programming language like C or Python. However, this impression is misleading and is the source of a great deal of confusion for many novice digital designers.</p>
-<p>The number one, most important lesson you need to internalize before you write a line of HDL code is this: <strong>you absolutely, 100% must know what hardware you’re trying to imply before you write a line of code.</strong> If you just start writing code without having a clear idea of the hardware that you’re hoping to get at the end of the day (e.g., combinational logic blocks and flip-flops), you’re in for a world of hurt.</p>
-<p>The tips and advice in this document are geared toward helping you become a knowledgeable digital designer.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>To robustly test your design without testvectors, you can use assertions. The example testbench below demonstrates how to use immediate and concurrent assertions to verify seven segment display logic and a divide by 3 counter FSM.</p>
 </section>
-<section id="before-writing-code" class="level2">
-<h2 class="anchored" data-anchor-id="before-writing-code">Before Writing Code</h2>
-</section>
-<section id="while-you-are-coding-your-design" class="level2">
-<h2 class="anchored" data-anchor-id="while-you-are-coding-your-design">While you are coding your design</h2>
-</section>
-<section id="conventions" class="level2">
-<h2 class="anchored" data-anchor-id="conventions">Conventions</h2>
-<section id="file-names" class="level3">
-<h3 class="anchored" data-anchor-id="file-names">File Names</h3>
-</section>
-<section id="module-names" class="level3">
-<h3 class="anchored" data-anchor-id="module-names">Module Names</h3>
-</section>
-<section id="signal-names" class="level3">
-<h3 class="anchored" data-anchor-id="signal-names">Signal Names</h3>
-</section>
-<section id="constants" class="level3">
-<h3 class="anchored" data-anchor-id="constants">Constants</h3>
-</section>
-<section id="indenting" class="level3">
-<h3 class="anchored" data-anchor-id="indenting">Indenting</h3>
-</section>
-<section id="commenting" class="level3">
-<h3 class="anchored" data-anchor-id="commenting">Commenting</h3>
-</section>
-</section>
-<section id="assignment-statements" class="level2">
-<h2 class="anchored" data-anchor-id="assignment-statements">Assignment Statements</h2>
-</section>
-<section id="general-systemverilog-coding-practices" class="level2">
-<h2 class="anchored" data-anchor-id="general-systemverilog-coding-practices">General SystemVerilog Coding Practices</h2>
-</section>
-<section id="resources-for-learning-more" class="level2">
-<h2 class="anchored" data-anchor-id="resources-for-learning-more">Resources for Learning More</h2>
+<section id="quick-design-review" class="level2">
+<h2 class="anchored" data-anchor-id="quick-design-review">Quick Design Review</h2>
+<p>The device under test used in the example is fairly straightforward. This includes a simple seven segment decoder and a divide by 3 counter FSM that contains four states: RESET, DELAY0, DELAY1, and PULSE.</p>
 <ul>
-<li>IEEE SystemVerilog Standards</li>
-<li>Best Practices for HDL Coding from Paul Hummel</li>
+<li><p>A 7-segment decoder that converts 4-bit input (s) into the correct 7-segment display output (seg)</p></li>
+<li><p>A divide by 3 counter FSM generates a pulse (y) every three clock cycles</p></li>
+</ul>
+<p>In verification, it’s important to consider functional coverage. This ensures that all intended features and scenarios of the design are tested. For example, checking that every state in the FSM is exercised, and every 7-segment digit output is driven at least once.</p>
+</section>
+<section id="testbench-code-explanation" class="level2">
+<h2 class="anchored" data-anchor-id="testbench-code-explanation">Testbench Code Explanation</h2>
+<p>Key terms:</p>
+<ul>
+<li><p>assert: A statement that checks whether a given condition or property holds during simulation. If the condition fails, the simulator reports an error. Used to verify correctness of design behavior.</p></li>
+<li><p>property: A named description of a behavior or sequence of events that the design is expected to follow. Properties are the things being checked or asserted.</p></li>
+<li><p>disable: A keyword that allows a property or assertion to be turned off (aborted) when a certain condition is met. This prevents false failures when the property is no longer relevant.</p></li>
+<li><p>iff: Stands for if and only if. It attaches a condition to an assertion or property. This means that the check is only performed when the condition is true.</p></li>
+<li><p>Implication (|-&gt;): The implication operator. It specifies that if the left-hand side condition is true at a given time, then the right-hand side sequence must also hold. In other words, one behavior implies another.</p></li>
+</ul>
+<section id="concurrent-assertions-for-the-fsm" class="level3">
+<h3 class="anchored" data-anchor-id="concurrent-assertions-for-the-fsm">Concurrent Assertions for the FSM</h3>
+<p>The testbench uses SystemVerilog properties and concurrent assertions to formally describe the expected behavior of the FSM.</p>
+<section id="property-1" class="level4">
+<h4 class="anchored" data-anchor-id="property-1">Property #1</h4>
+<pre><code>property pulse_after_delay;
+    @(posedge clk)
+    disable iff (~nrst)
+    (dut.state == dut.DELAY0) |-&gt; ##2 (dut.state == dut.PULSE &amp;&amp; y == 1);
+endproperty</code></pre>
+<p>This says: On a rising clock edge, if the FSM is in the DELAY0 state (while reset is inactive), then two clock cycles later it must be in the PULSE state and y must be high.</p>
+</section>
+<section id="property-2" class="level4">
+<h4 class="anchored" data-anchor-id="property-2">Property #2</h4>
+<pre><code>property y_only_in_pulse;
+    @(posedge clk)
+    disable iff (~nrst)
+    (y == 1) |-&gt; (dut.state == dut.PULSE);
+endproperty</code></pre>
+<p>This says: If y is high, then the FSM must be in the PULSE state. This enforces that the signal y is only active in one state, catching illegal behavior.</p>
+</section>
+<section id="assertions-on-these-properties" class="level4">
+<h4 class="anchored" data-anchor-id="assertions-on-these-properties">Assertions on these properties</h4>
+<pre><code>assert property (pulse_after_delay)
+    $display("PASSED!...");  
+else 
+    $error("FAILED!...");</code></pre>
+<p>Each property is wrapped in an assertion. If the property holds, a “PASSED!” message is printed. If not, a “FAILED!” error is thrown with the current simulation time.</p>
+<p>These are concurrent assertions. They monitor signal behavior across time, checking sequences of events.</p>
+</section>
+</section>
+<section id="immediate-assertions-for-the-7-segment-decoder" class="level3">
+<h3 class="anchored" data-anchor-id="immediate-assertions-for-the-7-segment-decoder">Immediate Assertions for the 7-Segment Decoder</h3>
+<p>Inside the stimulus block, the testbench drives all 16 possible inputs into the decoder and immediately checks the outputs:</p>
+<pre><code>assert (seg == expected[i])
+    $display("PASSED!...");  
+else 
+    $error("FAILED!...");</code></pre>
+<p>This is an immediate assertion because it checks a condition right now. If the actual output doesn’t match the expected lookup table, the testbench reports a failure.</p>
+<p>This tests combinational correctness of the decoder logic for every input value.</p>
+</section>
+</section>
+<section id="testbench-code" class="level2">
+<h2 class="anchored" data-anchor-id="testbench-code">Testbench Code</h2>
+<pre><code>`timescale 1ns / 1ns
+
+module example_tb();
+    // set up signals
+    logic clk;          // system clock
+    logic nrst;         // active low reset
+    logic [3:0] s;      // 4-bit switch input
+    logic [6:0] seg;    // 7-segment output
+    logic y;            // clock divided signal
+
+    // expected outputs for inputs 'd0 to 'd15
+    logic [6:0] expected [0:15] = '{
+        7'b111_1110, // 0
+        7'b011_0000, // 1
+        7'b110_1101, // 2
+        7'b111_1001, // 3
+        7'b011_0011, // 4
+        7'b101_1011, // 5
+        7'b101_1111, // 6
+        7'b111_0000, // 7
+        7'b111_1111, // 8
+        7'b111_0011, // 9
+        7'b111_0111, // A
+        7'b001_1111, // B
+        7'b100_1110, // C
+        7'b011_1101, // D
+        7'b100_1111, // E
+        7'b100_0111  // F
+    };
+
+    // instantiate the device under test
+    example dut(clk, nrst, s, seg, y);
+
+    // generate a clock signal with 10 timesteps
+    always begin
+        clk = 1; #5;
+        clk = 0; #5;
+    end
+
+    // reset sequence
+    initial begin
+        nrst = 0; #17;
+        nrst = 1;
+        $display("Reset released.");
+    end
+
+    // create divideby3 properties
+    property pulse_after_delay;
+            @(posedge clk)
+            disable iff (~nrst)
+            (dut.state == dut.DELAY0) |-&gt; ##2 (dut.state == dut.PULSE &amp;&amp; y == 1);
+    endproperty
+
+    property y_only_in_pulse;
+        @(posedge clk)
+        disable iff (~nrst)
+        (y == 1) |-&gt; (dut.state == dut.PULSE);
+    endproperty
+
+    // set up concurrent assert statements
+    assert property (pulse_after_delay)
+        $display("PASSED! The divide by three fsm divides the clock as desired at time: %0t.", $time);
+    else 
+        $error("FAILED! The divide by three fsm behaves incorrectly at time: %0t.", $time);
+
+    assert property (y_only_in_pulse)
+        $display("PASSED! The divide by three fsm asserts y high only in the PULSE state at time: %0t.", $time);
+    else 
+        $error("FAILED! The divide by three fsm behaves incorrectly at time: %0t.", $time);
+
+    // stimulate and check 7-seg logic
+    initial begin
+        // loop over immediate assert statements to check the 7-seg logic
+        for (int i = 0; i &lt; 16; i++) begin 
+            s = i;
+            #1;
+            assert (seg == expected[i])
+                $display("PASSED! 4-DIP switch input: %0h; 7-seg output: %b; 7-seg expected output: %b; At time: %0t.", i, seg, expected[i], $time);
+            else 
+                $error("FAILED! 4-DIP switch input: %0h; 7-seg output: %b; 7-seg expected output: %b; At time: %0t.", i, seg, expected[i], $time);
+            #5;
+        end
+        #35;
+        $finish;
+    end
+
+    // Add a timeout to prevent infinite loops
+    initial begin
+        #1_000_000; // 1 ms timeout
+        $error("Testbench timeout! Test did not complete in time.");
+        $stop;
+    end
+endmodule</code></pre>
+</section>
+<section id="waveform-and-transcript-outputs" class="level2">
+<h2 class="anchored" data-anchor-id="waveform-and-transcript-outputs">Waveform and Transcript Outputs</h2>
+<p>The pink signal represents the 7-segment display output while the gold signal is the divide by three counter output (y). The FSM’s current state signals are represented in the waveform by their names.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/med_waveform.png" class="img-fluid figure-img"></p>
+<figcaption>Example Waveform</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/transcript.png" class="img-fluid figure-img"></p>
+<figcaption>Text Output</figcaption>
+</figure>
+</div>
+</section>
+<section id="extra-topics-of-interest" class="level2">
+<h2 class="anchored" data-anchor-id="extra-topics-of-interest">Extra Topics Of Interest</h2>
+<p>For the interested student who has time on their hands, feel free to explore other verification methods in making robust testbenches. In addition to powerful assertions, there are:</p>
+<ul>
+<li><p>task: A reusable block of code that performs some action. It can contain timing controls unlike a function</p></li>
+<li><p>queue: A dynamic array. Useful to hold sequences of input, expected outputs, or events. For example, queues can be used to compare I/O data for FIFO and UART loopback testing</p></li>
+<li><p>random/random_range: Perfect for signed and unsigned randomized testing</p></li>
 </ul>
 
 
