@@ -9,7 +9,7 @@
 - [ ] Seven segment displays are same brightness regardless of how many segments are illuminated.
 - [ ] Design has no latches.
 - [ ] Design has no tristate buffers.
-- [ ] Report includes state transition diagram illustrating the operation of the system.
+- [ ] Report includes state transition diagram(s) illustrating the operation of the system.
 
 #### Excellence
 

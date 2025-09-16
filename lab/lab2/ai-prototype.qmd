@@ -1,5 +1,5 @@
 ---
-title: "Lab 1 AI Prototype"
+title: "Lab 2 AI Prototype"
 subtitle: "Context Engineering"
 ---
 

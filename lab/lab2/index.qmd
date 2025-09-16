@@ -7,7 +7,7 @@ format:
         href: ./specs.html
         icon: file-earmark-check
       - text: "AI Prototype"
-        href: ./ai-prototype.qmd
+        href: ./ai-prototype.html
         icon: file-earmark-check
 ---
 

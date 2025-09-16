@@ -11,18 +11,19 @@
 - [ ] All parts labeled with part number
 - [ ] All component values present
 
-**Block Diagram**
-
-- [ ] Block diagram present with one block per SystemVerilog module
-- [ ] Each block includes all input and output signals
-
 ##### Excellence
-
-**General Schematic Specifications	**
 
 - [ ] Standard symbols used for all components where applicable
 - [ ] Signals "flow" from left to right where possible (e.g., inputs on left hand side, outputs on right hand side)
 - [ ] Title block with author name, title, and date
+
+
+#### Block Diagram
+
+##### Proficiency and Excellence
+
+- [ ] Block diagram present with one block per SystemVerilog module
+- [ ] Each block includes all input and output signals
 
 #### HDL & Code Specifications
 
