@@ -14,7 +14,6 @@
 #### Excellence
 
 - [ ] Design uses synchronizers on asynchronous inputs to mitigate metastability.
-- [ ] Keypad and seven-segment display are aligned in the same orientation (i.e., the top of the numbers on both are facing the same direction).
 - [ ] State transition diagram is completely specified (i.e., all transitions between states are specified, output conditions specified in each state)
 - [ ] Report includes state transition table to document the nextstate and output values for each state based on the current state and inputs.
 - [ ] Report explains tradeoffs between the chosen design decisions and alternatives (e.g., why did you select a certain switch debouncing strategy and what are the tradeoffs between your chosen method and others?).
