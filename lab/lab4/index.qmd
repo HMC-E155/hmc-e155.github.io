@@ -6,6 +6,9 @@ format:
       - text: "Specifications"
         href: ./specs.html
         icon: file-earmark-check
+      - text: "AI Prototype"
+        href: ./ai-prototype.html
+        icon: robot
     code-links:
       - text: "Starter Code"
         href: https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab04
