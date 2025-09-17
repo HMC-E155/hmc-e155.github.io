@@ -10,5 +10,4 @@
 - [ ] No noticeable bleeding of the digits between displays
 - [ ] No flickering on the individual digits
 - [ ] Current draw/sink on all FPGA pins are below the currents specified in the recommended operating conditions. Claims are backed up by calculations and reference to the appropriate items on the datasheet.
-- [ ] Digits on the seven-segment display are upright to the viewer.
 

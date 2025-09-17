@@ -7,9 +7,12 @@
 - [ ] All digits are unique (e.g., `0x6` and `0xb` are different shapes)
 - [ ] DIP switches to control the display are arranged so that each adjacent switch controls the next bit. (e.g., the switch for bit 0 is next to the switch for bit 1, which is next to the switch for bit 2, etc.)
 - [ ] LEDs display the specified logic operations properly.
+- [ ] Resistors are in series with FPGA pins to properly limit current, not in shunt to ground.
+- [ ] 7 segment display is powered off of 3.3V, not 5V.
 
 #### Excellence
 
 - [ ] Calculations provided to demonstrate that the current draw for each segment in the seven-segment display is within recommended operating conditions.
 - [ ] QuestaSim simulation with automatic testbenches for each module to demonstrate that the design is working properly.
 - [ ] All digits are equally bright, regardless of the number of segments illuminated.
+- [ ] LED blink rate is close to 2.4Hz. A 1.2Hz or 4.8Hz blink rate fails this spec.
