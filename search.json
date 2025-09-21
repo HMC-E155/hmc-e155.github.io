@@ -952,144 +952,39 @@
     "text": "Share Your Feedback\n\n\n\n\n\n\nNoteShare Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
   },
   {
-    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html",
-    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html",
-    "title": "Lattice Radiant Installation Instructions",
+    "objectID": "tutorials/tutorial-posts/keypad-testbench/index.html",
+    "href": "tutorials/tutorial-posts/keypad-testbench/index.html",
+    "title": "Keypad Testbench Example",
     "section": "",
-    "text": "Lattice Radiant is the synthesis tool provided by Lattice Semiconductor for targeting their FPGA devices."
+    "text": "In this testbench, we are simulating a 4x4 matrix keypad. The testbench connects rows and columns together through virutal switches and checks whether the DUT (Device Under Test) correctly decodes which key is pressed.\nTo do this, we introduce several new SystemVerilog constructs:\n\ntranif1\ngenvar and generate loops\ntask definitions\npullup primitives"
   },
   {
-    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#introduction",
-    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#introduction",
-    "title": "Lattice Radiant Installation Instructions",
+    "objectID": "tutorials/tutorial-posts/keypad-testbench/index.html#introduction",
+    "href": "tutorials/tutorial-posts/keypad-testbench/index.html#introduction",
+    "title": "Keypad Testbench Example",
     "section": "",
-    "text": "Lattice Radiant is the synthesis tool provided by Lattice Semiconductor for targeting their FPGA devices."
+    "text": "In this testbench, we are simulating a 4x4 matrix keypad. The testbench connects rows and columns together through virutal switches and checks whether the DUT (Device Under Test) correctly decodes which key is pressed.\nTo do this, we introduce several new SystemVerilog constructs:\n\ntranif1\ngenvar and generate loops\ntask definitions\npullup primitives"
   },
   {
-    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#download",
-    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#download",
-    "title": "Lattice Radiant Installation Instructions",
-    "section": "Download",
-    "text": "Download\nDownload the software installer from Lattice’s website for your operating system from this link Lattice Radiant Software. (Windows and Linux only. You will need to use virtualization to use Radiant on Mac.). You will also need to create an account to access the download."
+    "objectID": "tutorials/tutorial-posts/keypad-testbench/index.html#definitions",
+    "href": "tutorials/tutorial-posts/keypad-testbench/index.html#definitions",
+    "title": "Keypad Testbench Example",
+    "section": "Definitions",
+    "text": "Definitions\n\ntranif1\nThe tranif1 primitive is a conditional bidirectional switch.\ntranif1 key_switch(rows[r], cols[c], keys[r][c]);\nWhen keys[r][c] (control signal) is equal to 1, rows[r] (inout1 signal) and cols[c] (inout2 signal) are shorted together. When control is equal to 0, the switch is open and the two signals are not connected.\n\n\ngenvar and generate\nIn hardware modeling, we often need to create many repeated structures like the 16 switches of a 4x4 keypad. genvar declares a loop variable for generate-time use. A generate block creates multiple instances of hardware.\n    genvar r, c;\n    generate\n        for (r = 0; r &lt; 4; r++) begin : row_loop\n            for (c = 0; c &lt; 4; c++) begin : col_loop\n                // when keys[r][c] == 1, connect cols[c] and rows[r] \n                tranif1 key_switch(rows[r], cols[c], keys[r][c]);\n            end\n        end\n    endgenerate\nThe double loop creates 16 conditional switches.\n\n\ntask\nA task is a reusable block of simulation code. Unlike functions, tasks can contain delay and event controls (#, @, wait). Tasks are useful for producing stimuli and checking results.\n// task to check expected values of d0 (recently pressed key) and d1 (previously pressed key)\n    task check_key(input [3:0] exp_d0, exp_d1, string msg);\n        #100;\n        assert (d0 == exp_d0 && d1 == exp_d1)\n            $display(\"PASSED!: %s -- got d0=%h d1=%h expected d0=%h d1=%h at time %0t.\", msg, d0, d1, exp_d0, exp_d1, $time);\n        else\n            $error(\"FAILED!: %s -- got d0=%h d1=%h expected d0=%h d1=%h at time %0t.\", msg, d0, d1, exp_d0, exp_d1, $time);\n        #50;\n    endtask\nThis task waits, compares outputs against expected values, and reports failures.\n\n\npullup\nIn real hardware, pull-up resistors hold signals at a high logic value when nothing is actively driving them. SystemVerilog provides a pullup primitive for modeling this behavior in simulation.\npullup(rows[0]);\npullup(rows[1]);\npullup(rows[2]);\npullup(rows[3]);\nWithout a pull-up, a floating wire would have high impedance. Pressing a key (closing a tranif1 switch) pulls the row low when the column is driven low."
   },
   {
-    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#working-with-the-upduino-v3.1-on-macos",
-    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#working-with-the-upduino-v3.1-on-macos",
-    "title": "Lattice Radiant Installation Instructions",
-    "section": "Working with the UPduino v3.1 on macOS",
-    "text": "Working with the UPduino v3.1 on macOS\nI use the Windows version in a Parallels Windows 11 Virtual Machine. The synthesis and simulation works without a hitch but the programming is finicky. I suspect it has something to do with some wonkiness with the USB drivers and the Virtual Machine. To work around this, you can use the openFPGALoader project which is universal utility for programming FPGAs. Instructions for installation and use can be found here.\nThe easiest way is to directly install it as a Homebrew formula:\nbrew install openfpgaloader\nAfter installation, to program our UPduino v3.1 board, use the command:\nopenFPGALoader -b ice40_generic -c ft232  -f &lt;path_to_.bin_file&gt;"
+    "objectID": "tutorials/tutorial-posts/keypad-testbench/index.html#testbench-code",
+    "href": "tutorials/tutorial-posts/keypad-testbench/index.html#testbench-code",
+    "title": "Keypad Testbench Example",
+    "section": "Testbench Code",
+    "text": "Testbench Code\nBelow is an example of a keypad testbench using these constructs for simple stimuli.\n`timescale 1 ns/1 ns\n\nmodule keypad_tb();\n    logic           clk;    // system clock\n    logic           reset;  // active high reset\n    tri     [3:0]   rows;   // 4-bit row input\n    tri     [3:0]   cols;   // 4-bit column output\n    logic   [3:0]   d0;     // new key\n    logic   [3:0]   d1;     // previous key\n\n    // matrix of key presses: keys[row][col]\n    logic [3:0][3:0] keys;\n\n    // dut\n    keypad dut(.clk(clk), .reset(reset), .rows(rows), .cols(cols), .d0(d0), .d1(d1));\n\n    // ensures rows = 4'b1111 when no key is pressed\n    pullup(rows[0]);\n    pullup(rows[1]);\n    pullup(rows[2]);\n    pullup(rows[3]);\n\n    // keypad model using tranif\n    genvar r, c;\n    generate\n        for (r = 0; r &lt; 4; r++) begin : row_loop\n            for (c = 0; c &lt; 4; c++) begin : col_loop\n                // when keys[r][c] == 1, connect cols[c] &lt;-&gt; rows[r]\n                tranif1 key_switch(rows[r], cols[c], keys[r][c]);\n            end\n        end\n    endgenerate\n\n    // generate clock\n    always begin\n        clk = 0; #5;\n        clk = 1; #5;\n    end\n\n    // task to check expected values of d0 and d1\n    task check_key(input [3:0] exp_d0, exp_d1, string msg);\n        #100;\n        assert (d0 == exp_d0 && d1 == exp_d1)\n            $display(\"PASSED!: %s -- got d0=%h d1=%h expected d0=%h d1=%h at time %0t.\", msg, d0, d1, exp_d0, exp_d1, $time);\n        else\n            $error(\"FAILED!: %s -- got d0=%h d1=%h expected d0=%h d1=%h at time %0t.\", msg, d0, d1, exp_d0, exp_d1, $time);\n        #50;\n    endtask\n\n    // apply stimuli and check outputs\n    initial begin\n        reset = 1;\n\n        // no key pressed\n        keys = '{default:0};\n\n        #22 reset = 0;\n\n        // press key at row=1, col=2\n        #50 keys[1][2] = 1;\n        check_key(4'h6, 4'h0, \"First key press\");\n\n        // release button\n        keys[1][2] = 0;\n\n        // press another key at row=0, col=0\n        keys[2][3] = 1;\n        check_key(4'hc, 4'h6, \"Second key press\");\n\n        // release buttons\n        #100 keys = '{default:0};\n\n        #100 $stop;\n    end\n\n    // add a timeout\n    initial begin\n        #5000; // wait 5 us\n        $error(\"Simulation did not complete in time.\");\n        $stop;\n    end\nendmodule"
   },
   {
-    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#installing-ftdi-drivers",
-    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#installing-ftdi-drivers",
-    "title": "Lattice Radiant Installation Instructions",
-    "section": "Installing FTDI Drivers",
-    "text": "Installing FTDI Drivers\nTo program the UPduino on Windows, you’ll need to install FTDI drivers if they’re not already installed. To do so, go to the Virtual COM Port (VCP) drivers page and download the appropriate drivers for your system.\n\n\n\n\n\n\nNoteCorrect VCP Drivers for M-series Macs\n\n\n\nFor M-series Macs virtualizing Windows, you will need to download the files for an ARM architecture since your installation of Windows is likely using the native ARM architecture instead of virtualizing an x64 instruction set."
-  },
-  {
-    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#installation",
-    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#installation",
-    "title": "Lattice Radiant Installation Instructions",
-    "section": "Installation",
-    "text": "Installation\nAs part of the installation, make sure to select the iCE40 UltraPlus family device support package along with the Programmer and Mentor QuestaSim Lattice Edition. After this menu, click through to finish the installation process.\n\n\n\n\n\n\nFigure 1: Installation components to select."
-  },
-  {
-    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#licensing",
-    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#licensing",
-    "title": "Lattice Radiant Installation Instructions",
-    "section": "Licensing",
-    "text": "Licensing\nTo run Radiant you will need to also request and install a license for the software. Navigate here and request a node-locked license. This license is designed to be run on a single computer.\nTo download the license you will need to find your Host Network Interface Card (NIC) address. To find the NIC address, follow the steps below.\nFor Windows, from an MS-DOS window (command prompt), use the ipconfig /all command\nFor Linux, from the command prompt, use the ifconfig -a command\n\n\n\n\n\n\nFigure 2: Finding NIC physical address.\n\n\n\nEnter your Host NIC address (without dashes) and click the required checkbox. You do not need to select any of the optional Radiant Free IP. Then click the “Generate License” button.\nAfter receiving the license file (license.dat), follow the instructions in the email about how to install the license. You must:\n\nCopy the license.dat file to the location specified in the email (&lt;sw_install&gt;\\license\\license.dat on Windows). &lt;sw_install&gt; is probably C:\\lscc\\radiant\\2024.1 or similar if you installed it in the default location). When you open Radiant for the first time, you’ll probably be prompted to select this license location in the FlexNet License Finder window.\nCreate a new LATTICE_LICENSE_FILE system environment variable pointing to the path of your license file &lt;sw_install&gt;\\license\\license.dat (instructions).\nCreate a new LM_LICENSE_FILE system environment variable pointing to the path of your license file.\n\n\n\n\n\n\n\nWarningQuestaSim Licensing\n\n\n\nAlthough the step to create the LM_LICENSE_FILE isn’t listed in the installation instructions in the email, it seems to be required to successfully license QuestaSim. The instructions to create this variable are listed in the Licensing User Guide for Windows.\n\n\nThis should ensure that both Radiant and QuestaSim are properly licensed and the files are correctly linked.\n\n\n\n\n\n\nFigure 3: FlexNet License Finder dialog.\n\n\n\nYou can also check the license paths afterwards by using the License Debug Tool under the Help menu."
-  },
-  {
-    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#share-your-feedback",
-    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#share-your-feedback",
-    "title": "Lattice Radiant Installation Instructions",
-    "section": "Share Your Feedback",
-    "text": "Share Your Feedback\n\n\n\n\n\n\nNoteShare Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
-  },
-  {
-    "objectID": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html",
-    "href": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html",
-    "title": "Lattice Radiant iCE40 UltraPlus Project Setup",
-    "section": "",
-    "text": "Open Lattice Radiant. If you are prompted for a license file, navigate to it. See the Radiant install instructions if needed.\nCreate a new project and name it “iCE40_demo”. Select the project location in the directory you wish. Make sure that the path does not include spaces since this often leads to errors later in the synthesis process. You do not need to add any existing HDL files to the project.\nIn the “Select Device” menu, select the iCE40UP5K and the SG48 package. On the next page, select Lattice LSE as the synthesis tool.\n\n\n\n\n\n\nFigure 1: New project setup."
-  },
-  {
-    "objectID": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#netlist-analyzer",
-    "href": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#netlist-analyzer",
-    "title": "Lattice Radiant iCE40 UltraPlus Project Setup",
-    "section": "Netlist Analyzer",
-    "text": "Netlist Analyzer\nAfter synthesizing your design, it is worth taking a look at the Netlist Analyzer. This tool provides a block diagram view of the design. This is a helpful tool to make sure that the Verilog you wrote is implying the hardware that you intend. Remember that as a digital designer you should always think about the underlying hardware and simply write the Verilog idioms to imply it. Approach HDL like a traditional programming language at your peril!\nIf we look at the Netlist Analyzer (found under “Tools &gt; Netlist Analyzer” or the green and black icon in the toolbar), we will open a window which shows a block diagram. We see that we have implied an adder, a mux to control the value to the registers, the HSOSC module, and a 25-bit-wide register.\n\n\n\n\n\n\nFigure 5: Netlist analyzer window."
-  },
-  {
-    "objectID": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#resource-usage",
-    "href": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#resource-usage",
-    "title": "Lattice Radiant iCE40 UltraPlus Project Setup",
-    "section": "Resource Usage",
-    "text": "Resource Usage\nThere is also some useful information in the Reports tab under Project Summary in the Resource Usage section. In particular, this section will show us the number of registers, look-up tables, IO buffers, and embedded RAM blocks (EBRs) that we have implied in our design. For this design, we have 25 registers for storing the current count. An additional 3 logic cells are needed for their LUT4s to provide the additional logic (adder, mux, inverter).\n\n\n\n\n\n\nFigure 6: Resource usage report."
-  },
-  {
-    "objectID": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#device-assignment-device-constraint-editor",
-    "href": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#device-assignment-device-constraint-editor",
-    "title": "Lattice Radiant iCE40 UltraPlus Project Setup",
-    "section": "Device Assignment: Device Constraint Editor",
-    "text": "Device Assignment: Device Constraint Editor\nWhen you first synthesize the design, the inputs and outputs of your top-level module will be randomly assigned to I/O pins. Next, you need to set the pin assignments to route the signals to the I/O pins that you desire.\nOpen the Device Constraint Editor and find the signal name and assign it to your desired pin. In this example, we will route the “led” output to GPIO 42. Select the table entry in the “Pin” column associated with the LED signal and enter “42”. You will notice that the currently routed pin is labeled in parentheses, 36 in this example. To update the design to route to our desired GPIO pin, we need to resynthesize the design. Click the green play button again to run the toolchain. When you do this for the first time, you will be asked to save a .pdc (pin device constraint) file. Name and save the file. After synthesis completes, open the Device Constraint Editor and confirm that the desired and routed pins match. In this case you should see “42(42)” in the table entry corresponding to the led output.\n\n\n\n\n\n\nFigure 7: Pinout diagram."
-  },
-  {
-    "objectID": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#device-programming",
-    "href": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#device-programming",
-    "title": "Lattice Radiant iCE40 UltraPlus Project Setup",
-    "section": "Device Programming",
-    "text": "Device Programming\nTo get our design working on our board, we need to program it to the flash memory onboard the UPduino board.\nEach time the FPGA powers up or resets, it reconfigures itself over a serial peripheral interface (SPI) connection from a binary (.bin) configuration file on a flash memory chip.\nTo program the device, we need to set up the programmer to put the .bin file that is generated by our synthesis tool onto the flash chip.\nClick the button in the toolbar to open the programmer (the icon is the chip with a blue arrow pointing downward) or using the menu Tools &gt; Programmer.\nConnect your UPduino board to your computer and click the “Detect Cable” button in the “Cable Setup” sub-window on the right of the Programmer window. You should see a message noting that “INFO - Board with FTDI USB Host Chip detected.” in the output window. If the host chip is not detected, you may need to install FTDI drivers for the device. However, some devices with drivers installed will still report an FTDI error. Sometimes you need to change the dropdown menu away from “FTDI” and then hit detect cable again if your UPduino is not being recognized (try this if your device appears as “Generic JTAG Device”). Sometimes double clicking on the generic JTAG device will allow you to access drop down menus and set the device settings.\nNext we need to correctly configure the programming toolchain to program our device. By default, the UPduino board only enables programming of the flash chip on board and not the onboard compressed random access memory (CRAM) of the FPGA itself. To do this, highlight the device in the list view and open the “Device Properties” window either by using the icon in the toolbar (chip with pencil on top) or by right-clicking on the entry in the table and selecting the “Device Properties” option.\nChange the default entries to the following selections:\n\nSet Target Memory to External SPI Flash Memory\nSet operation to Erase, Program, Verify\nUnder SPI Flash Options set\n\nFamily: SPI Serial Flash\nVendor: WinBond\nDevice: W25Q32JV\nPackage: 208mil 8-pin SOIC\n\n\nAfter configuration, the block diagram should look like this.\n\n\n\n\n\n\nFigure 8: Flash programming setup.\n\n\n\nAfter updating the configuration, you are ready to program the device. (Note: on your first run, you may get a firewall warning that a new program “cableserver” is being run and needs access. Allow access to the program.)\nYou should see a series of outputs printing in the output window as the programmer cycles through the various pieces of the programming process (initialization, enabling, erasing, programming, verifying, etc.). After the programming finishes, you should see a message that the programming operation was successful."
-  },
-  {
-    "objectID": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#share-your-feedback",
-    "href": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#share-your-feedback",
-    "title": "Lattice Radiant iCE40 UltraPlus Project Setup",
-    "section": "Share Your Feedback",
-    "text": "Share Your Feedback\n\n\n\n\n\n\nNoteShare Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
-  },
-  {
-    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html",
-    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html",
-    "title": "openFPGALoader Programmer",
-    "section": "",
-    "text": "The built in programmer in Lattice Radiant can have issues communiciating with the FPGA over FTDI. This document explains how to install an alternative, more reliable programmer.\nWhen you synthesize your code in Lattice Radiant, it creates a .bin file contaning the design to be uploaded to the FPGA. This file exists at\n&lt;project_name&gt;/impl_1/&lt;project_name&gt;_impl_1.bin\nIf your project is called lab_2 the file would be\nlab_2/impl_1/lab_2_impl_1.bin\nYou will need the location of the bin file to upload code once you are done with the installation process.\n\n\nTo upload a synthesized design to the FPGA\nopenFPGALoader -b ice40_generic -c ft232  -f &lt;path_to_.bin_file&gt;\nIf you are in a Lattice Radiant project folder and you don’t have the exact path to the .bin file, this command will find and upload the first .bin file it finds\nfind . -name '*.bin' -print | xargs openFPGALoader -b ice40_generic -c ft232  -f\nIf you are having trouble figuring out which path to use, ask a in office hours or on Discord."
-  },
-  {
-    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#introduction",
-    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#introduction",
-    "title": "openFPGALoader Programmer",
-    "section": "",
-    "text": "The built in programmer in Lattice Radiant can have issues communiciating with the FPGA over FTDI. This document explains how to install an alternative, more reliable programmer.\nWhen you synthesize your code in Lattice Radiant, it creates a .bin file contaning the design to be uploaded to the FPGA. This file exists at\n&lt;project_name&gt;/impl_1/&lt;project_name&gt;_impl_1.bin\nIf your project is called lab_2 the file would be\nlab_2/impl_1/lab_2_impl_1.bin\nYou will need the location of the bin file to upload code once you are done with the installation process.\n\n\nTo upload a synthesized design to the FPGA\nopenFPGALoader -b ice40_generic -c ft232  -f &lt;path_to_.bin_file&gt;\nIf you are in a Lattice Radiant project folder and you don’t have the exact path to the .bin file, this command will find and upload the first .bin file it finds\nfind . -name '*.bin' -print | xargs openFPGALoader -b ice40_generic -c ft232  -f\nIf you are having trouble figuring out which path to use, ask a in office hours or on Discord."
-  },
-  {
-    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#macos-install",
-    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#macos-install",
-    "title": "openFPGALoader Programmer",
-    "section": "MacOS install",
-    "text": "MacOS install\nFirst install Homebrew if you don’t already have it installed.\nThen install it using\nbrew install openfpgaloader\nNow you can upload code using the commands above."
-  },
-  {
-    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#windows-install",
-    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#windows-install",
-    "title": "openFPGALoader Programmer",
-    "section": "Windows Install",
-    "text": "Windows Install\nThis can only be done on personal computers (not lab computers) because you need admin access to install and setup the software\n\nOption 1 (recommended)\nFollow this tutorial to install openFPGALoader: github.com/DFiantWorks/openFPGALoaderWSL\nOnce it is installed run the commands at the top of the document, but replace openFPGALoader with openFPGALoaderWSL.\n\n\nOption 2\nFirst, install MSYS2. It should open a window that looks like this. If you don’t see it, open the UCRT64 that was installed.\n\n\n\n\n\n\nFigure 1: MSYS2 Terminal Window\n\n\n\nSecond, install openFPGALoader by running this command in the terminal window (you need to right click to paste, CTRL+V doesn’t work):\npacman -S mingw-w64-ucrt-x86_64-openFPGALoader\nYou can verify that it installed correctly by running openFPGALoader -h.\nThird, replace the default usb driver with one that work with openFPGALoader. Download and install Zadig. Then open it, select Options -&gt; List All Devices, and select the UPduino in the dropdown menu. It should look like this before you press install driver.\n\n\n\n\n\n\nFigure 2: Zadig before driver repacement\n\n\n\nThen click replace driver and wait for it to finish (you won’t need Zadig again).\nNow openFPGALoader is installed and you are ready to use it, however you need to go to the right folder in the terminal. Do this using the cd command, eg:\ncd /c/Users/&lt;username&gt;/Desktop/E155/lab_1\nThen run the commands at the top of this document to program your FPGA."
-  },
-  {
-    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#linux-install",
-    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#linux-install",
-    "title": "openFPGALoader Programmer",
-    "section": "Linux Install",
-    "text": "Linux Install\nSee the openFPGALoader documentation here"
-  },
-  {
-    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#share-your-feedback",
-    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#share-your-feedback",
-    "title": "openFPGALoader Programmer",
-    "section": "Share Your Feedback",
-    "text": "Share Your Feedback\n\n\n\n\n\n\nNoteShare Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
+    "objectID": "tutorials/tutorial-posts/keypad-testbench/index.html#waveform-output",
+    "href": "tutorials/tutorial-posts/keypad-testbench/index.html#waveform-output",
+    "title": "Keypad Testbench Example",
+    "section": "Waveform Output",
+    "text": "Waveform Output\nIn this simulation waveform, you can see two key presses being applied: on the first press the DUT captures the new key value into d0 (gold) while d1 (purple) stays at 0, and on the second press the old key shifts into d1 while the new value appears in d0, showing the design correctly tracks the current and previous keys. Notice how there are no floating values on the rows bus because of the pull-up resistors.\n\n\n\nExample Waveform"
   },
   {
     "objectID": "tutorials/tutorial-posts/git-setup/index.html",
@@ -1144,6 +1039,146 @@
     "objectID": "tutorials/tutorial-posts/git-setup/index.html#share-your-feedback",
     "href": "tutorials/tutorial-posts/git-setup/index.html#share-your-feedback",
     "title": "Git Setup",
+    "section": "Share Your Feedback",
+    "text": "Share Your Feedback\n\n\n\n\n\n\nNoteShare Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html",
+    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html",
+    "title": "openFPGALoader Programmer",
+    "section": "",
+    "text": "The built in programmer in Lattice Radiant can have issues communiciating with the FPGA over FTDI. This document explains how to install an alternative, more reliable programmer.\nWhen you synthesize your code in Lattice Radiant, it creates a .bin file contaning the design to be uploaded to the FPGA. This file exists at\n&lt;project_name&gt;/impl_1/&lt;project_name&gt;_impl_1.bin\nIf your project is called lab_2 the file would be\nlab_2/impl_1/lab_2_impl_1.bin\nYou will need the location of the bin file to upload code once you are done with the installation process.\n\n\nTo upload a synthesized design to the FPGA\nopenFPGALoader -b ice40_generic -c ft232  -f &lt;path_to_.bin_file&gt;\nIf you are in a Lattice Radiant project folder and you don’t have the exact path to the .bin file, this command will find and upload the first .bin file it finds\nfind . -name '*.bin' -print | xargs openFPGALoader -b ice40_generic -c ft232  -f\nIf you are having trouble figuring out which path to use, ask a in office hours or on Discord."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#introduction",
+    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#introduction",
+    "title": "openFPGALoader Programmer",
+    "section": "",
+    "text": "The built in programmer in Lattice Radiant can have issues communiciating with the FPGA over FTDI. This document explains how to install an alternative, more reliable programmer.\nWhen you synthesize your code in Lattice Radiant, it creates a .bin file contaning the design to be uploaded to the FPGA. This file exists at\n&lt;project_name&gt;/impl_1/&lt;project_name&gt;_impl_1.bin\nIf your project is called lab_2 the file would be\nlab_2/impl_1/lab_2_impl_1.bin\nYou will need the location of the bin file to upload code once you are done with the installation process.\n\n\nTo upload a synthesized design to the FPGA\nopenFPGALoader -b ice40_generic -c ft232  -f &lt;path_to_.bin_file&gt;\nIf you are in a Lattice Radiant project folder and you don’t have the exact path to the .bin file, this command will find and upload the first .bin file it finds\nfind . -name '*.bin' -print | xargs openFPGALoader -b ice40_generic -c ft232  -f\nIf you are having trouble figuring out which path to use, ask a in office hours or on Discord."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#macos-install",
+    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#macos-install",
+    "title": "openFPGALoader Programmer",
+    "section": "MacOS install",
+    "text": "MacOS install\nFirst install Homebrew if you don’t already have it installed.\nThen install it using\nbrew install openfpgaloader\nNow you can upload code using the commands above."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#windows-install",
+    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#windows-install",
+    "title": "openFPGALoader Programmer",
+    "section": "Windows Install",
+    "text": "Windows Install\nThis can only be done on personal computers (not lab computers) because you need admin access to install and setup the software\n\nOption 1 (recommended)\nFollow this tutorial to install openFPGALoader: github.com/DFiantWorks/openFPGALoaderWSL\nOnce it is installed run the commands at the top of the document, but replace openFPGALoader with openFPGALoaderWSL.\n\n\nOption 2\nFirst, install MSYS2. It should open a window that looks like this. If you don’t see it, open the UCRT64 that was installed.\n\n\n\n\n\n\nFigure 1: MSYS2 Terminal Window\n\n\n\nSecond, install openFPGALoader by running this command in the terminal window (you need to right click to paste, CTRL+V doesn’t work):\npacman -S mingw-w64-ucrt-x86_64-openFPGALoader\nYou can verify that it installed correctly by running openFPGALoader -h.\nThird, replace the default usb driver with one that work with openFPGALoader. Download and install Zadig. Then open it, select Options -&gt; List All Devices, and select the UPduino in the dropdown menu. It should look like this before you press install driver.\n\n\n\n\n\n\nFigure 2: Zadig before driver repacement\n\n\n\nThen click replace driver and wait for it to finish (you won’t need Zadig again).\nNow openFPGALoader is installed and you are ready to use it, however you need to go to the right folder in the terminal. Do this using the cd command, eg:\ncd /c/Users/&lt;username&gt;/Desktop/E155/lab_1\nThen run the commands at the top of this document to program your FPGA."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#linux-install",
+    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#linux-install",
+    "title": "openFPGALoader Programmer",
+    "section": "Linux Install",
+    "text": "Linux Install\nSee the openFPGALoader documentation here"
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#share-your-feedback",
+    "href": "tutorials/tutorial-posts/openfpgaloader-programmer/index.html#share-your-feedback",
+    "title": "openFPGALoader Programmer",
+    "section": "Share Your Feedback",
+    "text": "Share Your Feedback\n\n\n\n\n\n\nNoteShare Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html",
+    "href": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html",
+    "title": "Lattice Radiant iCE40 UltraPlus Project Setup",
+    "section": "",
+    "text": "Open Lattice Radiant. If you are prompted for a license file, navigate to it. See the Radiant install instructions if needed.\nCreate a new project and name it “iCE40_demo”. Select the project location in the directory you wish. Make sure that the path does not include spaces since this often leads to errors later in the synthesis process. You do not need to add any existing HDL files to the project.\nIn the “Select Device” menu, select the iCE40UP5K and the SG48 package. On the next page, select Lattice LSE as the synthesis tool.\n\n\n\n\n\n\nFigure 1: New project setup."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#netlist-analyzer",
+    "href": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#netlist-analyzer",
+    "title": "Lattice Radiant iCE40 UltraPlus Project Setup",
+    "section": "Netlist Analyzer",
+    "text": "Netlist Analyzer\nAfter synthesizing your design, it is worth taking a look at the Netlist Analyzer. This tool provides a block diagram view of the design. This is a helpful tool to make sure that the Verilog you wrote is implying the hardware that you intend. Remember that as a digital designer you should always think about the underlying hardware and simply write the Verilog idioms to imply it. Approach HDL like a traditional programming language at your peril!\nIf we look at the Netlist Analyzer (found under “Tools &gt; Netlist Analyzer” or the green and black icon in the toolbar), we will open a window which shows a block diagram. We see that we have implied an adder, a mux to control the value to the registers, the HSOSC module, and a 25-bit-wide register.\n\n\n\n\n\n\nFigure 5: Netlist analyzer window."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#resource-usage",
+    "href": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#resource-usage",
+    "title": "Lattice Radiant iCE40 UltraPlus Project Setup",
+    "section": "Resource Usage",
+    "text": "Resource Usage\nThere is also some useful information in the Reports tab under Project Summary in the Resource Usage section. In particular, this section will show us the number of registers, look-up tables, IO buffers, and embedded RAM blocks (EBRs) that we have implied in our design. For this design, we have 25 registers for storing the current count. An additional 3 logic cells are needed for their LUT4s to provide the additional logic (adder, mux, inverter).\n\n\n\n\n\n\nFigure 6: Resource usage report."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#device-assignment-device-constraint-editor",
+    "href": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#device-assignment-device-constraint-editor",
+    "title": "Lattice Radiant iCE40 UltraPlus Project Setup",
+    "section": "Device Assignment: Device Constraint Editor",
+    "text": "Device Assignment: Device Constraint Editor\nWhen you first synthesize the design, the inputs and outputs of your top-level module will be randomly assigned to I/O pins. Next, you need to set the pin assignments to route the signals to the I/O pins that you desire.\nOpen the Device Constraint Editor and find the signal name and assign it to your desired pin. In this example, we will route the “led” output to GPIO 42. Select the table entry in the “Pin” column associated with the LED signal and enter “42”. You will notice that the currently routed pin is labeled in parentheses, 36 in this example. To update the design to route to our desired GPIO pin, we need to resynthesize the design. Click the green play button again to run the toolchain. When you do this for the first time, you will be asked to save a .pdc (pin device constraint) file. Name and save the file. After synthesis completes, open the Device Constraint Editor and confirm that the desired and routed pins match. In this case you should see “42(42)” in the table entry corresponding to the led output.\n\n\n\n\n\n\nFigure 7: Pinout diagram."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#device-programming",
+    "href": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#device-programming",
+    "title": "Lattice Radiant iCE40 UltraPlus Project Setup",
+    "section": "Device Programming",
+    "text": "Device Programming\nTo get our design working on our board, we need to program it to the flash memory onboard the UPduino board.\nEach time the FPGA powers up or resets, it reconfigures itself over a serial peripheral interface (SPI) connection from a binary (.bin) configuration file on a flash memory chip.\nTo program the device, we need to set up the programmer to put the .bin file that is generated by our synthesis tool onto the flash chip.\nClick the button in the toolbar to open the programmer (the icon is the chip with a blue arrow pointing downward) or using the menu Tools &gt; Programmer.\nConnect your UPduino board to your computer and click the “Detect Cable” button in the “Cable Setup” sub-window on the right of the Programmer window. You should see a message noting that “INFO - Board with FTDI USB Host Chip detected.” in the output window. If the host chip is not detected, you may need to install FTDI drivers for the device. However, some devices with drivers installed will still report an FTDI error. Sometimes you need to change the dropdown menu away from “FTDI” and then hit detect cable again if your UPduino is not being recognized (try this if your device appears as “Generic JTAG Device”). Sometimes double clicking on the generic JTAG device will allow you to access drop down menus and set the device settings.\nNext we need to correctly configure the programming toolchain to program our device. By default, the UPduino board only enables programming of the flash chip on board and not the onboard compressed random access memory (CRAM) of the FPGA itself. To do this, highlight the device in the list view and open the “Device Properties” window either by using the icon in the toolbar (chip with pencil on top) or by right-clicking on the entry in the table and selecting the “Device Properties” option.\nChange the default entries to the following selections:\n\nSet Target Memory to External SPI Flash Memory\nSet operation to Erase, Program, Verify\nUnder SPI Flash Options set\n\nFamily: SPI Serial Flash\nVendor: WinBond\nDevice: W25Q32JV\nPackage: 208mil 8-pin SOIC\n\n\nAfter configuration, the block diagram should look like this.\n\n\n\n\n\n\nFigure 8: Flash programming setup.\n\n\n\nAfter updating the configuration, you are ready to program the device. (Note: on your first run, you may get a firewall warning that a new program “cableserver” is being run and needs access. Allow access to the program.)\nYou should see a series of outputs printing in the output window as the programmer cycles through the various pieces of the programming process (initialization, enabling, erasing, programming, verifying, etc.). After the programming finishes, you should see a message that the programming operation was successful."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#share-your-feedback",
+    "href": "tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html#share-your-feedback",
+    "title": "Lattice Radiant iCE40 UltraPlus Project Setup",
+    "section": "Share Your Feedback",
+    "text": "Share Your Feedback\n\n\n\n\n\n\nNoteShare Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html",
+    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html",
+    "title": "Lattice Radiant Installation Instructions",
+    "section": "",
+    "text": "Lattice Radiant is the synthesis tool provided by Lattice Semiconductor for targeting their FPGA devices."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#introduction",
+    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#introduction",
+    "title": "Lattice Radiant Installation Instructions",
+    "section": "",
+    "text": "Lattice Radiant is the synthesis tool provided by Lattice Semiconductor for targeting their FPGA devices."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#download",
+    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#download",
+    "title": "Lattice Radiant Installation Instructions",
+    "section": "Download",
+    "text": "Download\nDownload the software installer from Lattice’s website for your operating system from this link Lattice Radiant Software. (Windows and Linux only. You will need to use virtualization to use Radiant on Mac.). You will also need to create an account to access the download."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#working-with-the-upduino-v3.1-on-macos",
+    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#working-with-the-upduino-v3.1-on-macos",
+    "title": "Lattice Radiant Installation Instructions",
+    "section": "Working with the UPduino v3.1 on macOS",
+    "text": "Working with the UPduino v3.1 on macOS\nI use the Windows version in a Parallels Windows 11 Virtual Machine. The synthesis and simulation works without a hitch but the programming is finicky. I suspect it has something to do with some wonkiness with the USB drivers and the Virtual Machine. To work around this, you can use the openFPGALoader project which is universal utility for programming FPGAs. Instructions for installation and use can be found here.\nThe easiest way is to directly install it as a Homebrew formula:\nbrew install openfpgaloader\nAfter installation, to program our UPduino v3.1 board, use the command:\nopenFPGALoader -b ice40_generic -c ft232  -f &lt;path_to_.bin_file&gt;"
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#installing-ftdi-drivers",
+    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#installing-ftdi-drivers",
+    "title": "Lattice Radiant Installation Instructions",
+    "section": "Installing FTDI Drivers",
+    "text": "Installing FTDI Drivers\nTo program the UPduino on Windows, you’ll need to install FTDI drivers if they’re not already installed. To do so, go to the Virtual COM Port (VCP) drivers page and download the appropriate drivers for your system.\n\n\n\n\n\n\nNoteCorrect VCP Drivers for M-series Macs\n\n\n\nFor M-series Macs virtualizing Windows, you will need to download the files for an ARM architecture since your installation of Windows is likely using the native ARM architecture instead of virtualizing an x64 instruction set."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#installation",
+    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#installation",
+    "title": "Lattice Radiant Installation Instructions",
+    "section": "Installation",
+    "text": "Installation\nAs part of the installation, make sure to select the iCE40 UltraPlus family device support package along with the Programmer and Mentor QuestaSim Lattice Edition. After this menu, click through to finish the installation process.\n\n\n\n\n\n\nFigure 1: Installation components to select."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#licensing",
+    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#licensing",
+    "title": "Lattice Radiant Installation Instructions",
+    "section": "Licensing",
+    "text": "Licensing\nTo run Radiant you will need to also request and install a license for the software. Navigate here and request a node-locked license. This license is designed to be run on a single computer.\nTo download the license you will need to find your Host Network Interface Card (NIC) address. To find the NIC address, follow the steps below.\nFor Windows, from an MS-DOS window (command prompt), use the ipconfig /all command\nFor Linux, from the command prompt, use the ifconfig -a command\n\n\n\n\n\n\nFigure 2: Finding NIC physical address.\n\n\n\nEnter your Host NIC address (without dashes) and click the required checkbox. You do not need to select any of the optional Radiant Free IP. Then click the “Generate License” button.\nAfter receiving the license file (license.dat), follow the instructions in the email about how to install the license. You must:\n\nCopy the license.dat file to the location specified in the email (&lt;sw_install&gt;\\license\\license.dat on Windows). &lt;sw_install&gt; is probably C:\\lscc\\radiant\\2024.1 or similar if you installed it in the default location). When you open Radiant for the first time, you’ll probably be prompted to select this license location in the FlexNet License Finder window.\nCreate a new LATTICE_LICENSE_FILE system environment variable pointing to the path of your license file &lt;sw_install&gt;\\license\\license.dat (instructions).\nCreate a new LM_LICENSE_FILE system environment variable pointing to the path of your license file.\n\n\n\n\n\n\n\nWarningQuestaSim Licensing\n\n\n\nAlthough the step to create the LM_LICENSE_FILE isn’t listed in the installation instructions in the email, it seems to be required to successfully license QuestaSim. The instructions to create this variable are listed in the Licensing User Guide for Windows.\n\n\nThis should ensure that both Radiant and QuestaSim are properly licensed and the files are correctly linked.\n\n\n\n\n\n\nFigure 3: FlexNet License Finder dialog.\n\n\n\nYou can also check the license paths afterwards by using the License Debug Tool under the Help menu."
+  },
+  {
+    "objectID": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#share-your-feedback",
+    "href": "tutorials/tutorial-posts/lattice-radiant-installation/index.html#share-your-feedback",
+    "title": "Lattice Radiant Installation Instructions",
     "section": "Share Your Feedback",
     "text": "Share Your Feedback\n\n\n\n\n\n\nNoteShare Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
   },
@@ -1313,7 +1348,7 @@
     "href": "tutorials/index.html",
     "title": "Tutorials",
     "section": "",
-    "text": "Creating and Initializing Your Git Repo\n\n\n\nVideo\n\nSoftware Tools\n\n\n\n\n\n\n\n\n\n\nESP8266 Web Server\n\n\n\nVideo\n\nESP8266\n\n\n\n\n\n\n\n\n\n\nFloating Point Support for printf() in SEGGER Embedded Studio\n\n\n\nVideo\n\nMCU\n\nSEGGER Embedded Studio\n\n\n\n\n\n\n\n\n\n\nGit Setup\n\n\n\nGit\n\n\n\n\n\n\n\n\n\n\nHow to Build a Quarto Portfolio\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\nLattice LSE FSM Automatically Decode Unreachable States\n\n\n\nVideo\n\nFPGA\n\n\n\n\n\n\n\n\n\n\nLattice Radiant Installation Instructions\n\n\n\nFPGA\n\n\n\n\n\n\n\n\n\n\nLattice Radiant iCE40 UltraPlus Project Setup\n\n\n\nFPGA\n\n\n\n\n\n\n\n\n\n\nMonitoring Memory-mapped Registers in SEGGER Embedded Studio\n\n\n\nVideo\n\nMCU\n\n\n\n\n\n\n\n\n\n\nPublishing Your Quarto Website to Github Pages\n\n\n\nVideo\n\nQuarto\n\nSoftware Tools\n\n\n\n\n\n\n\n\n\n\nQuestaSim/ModelSim Simulation Tutorial\n\n\n\nFPGA\n\nQuestaSim/ModelSim\n\n\n\n\n\n\n\n\n\n\nRIGOL MSO1104 Logic Analyzer Demo\n\n\n\nVideo\n\nHardware tools\n\n\n\n\n\n\n\n\n\n\nSEGGER Embedded Studio Setup\n\n\n\nMCU\n\nSEGGER Embedded Studio\n\n\n\n\n\n\n\n\n\n\nTestbench Example\n\n\n\nFPGA\n\n\n\n\n\n\n\n\n\n\nopenFPGALoader Programmer\n\n\n\nFPGA\n\n\n\n\n\n\nNo matching items"
+    "text": "Creating and Initializing Your Git Repo\n\n\n\nVideo\n\nSoftware Tools\n\n\n\n\n\n\n\n\n\n\nESP8266 Web Server\n\n\n\nVideo\n\nESP8266\n\n\n\n\n\n\n\n\n\n\nFloating Point Support for printf() in SEGGER Embedded Studio\n\n\n\nVideo\n\nMCU\n\nSEGGER Embedded Studio\n\n\n\n\n\n\n\n\n\n\nGit Setup\n\n\n\nGit\n\n\n\n\n\n\n\n\n\n\nHow to Build a Quarto Portfolio\n\n\n\nQuarto\n\n\n\n\n\n\n\n\n\n\nKeypad Testbench Example\n\n\n\nFPGA\n\n\n\n\n\n\n\n\n\n\nLattice LSE FSM Automatically Decode Unreachable States\n\n\n\nVideo\n\nFPGA\n\n\n\n\n\n\n\n\n\n\nLattice Radiant Installation Instructions\n\n\n\nFPGA\n\n\n\n\n\n\n\n\n\n\nLattice Radiant iCE40 UltraPlus Project Setup\n\n\n\nFPGA\n\n\n\n\n\n\n\n\n\n\nMonitoring Memory-mapped Registers in SEGGER Embedded Studio\n\n\n\nVideo\n\nMCU\n\n\n\n\n\n\n\n\n\n\nPublishing Your Quarto Website to Github Pages\n\n\n\nVideo\n\nQuarto\n\nSoftware Tools\n\n\n\n\n\n\n\n\n\n\nQuestaSim/ModelSim Simulation Tutorial\n\n\n\nFPGA\n\nQuestaSim/ModelSim\n\n\n\n\n\n\n\n\n\n\nRIGOL MSO1104 Logic Analyzer Demo\n\n\n\nVideo\n\nHardware tools\n\n\n\n\n\n\n\n\n\n\nSEGGER Embedded Studio Setup\n\n\n\nMCU\n\nSEGGER Embedded Studio\n\n\n\n\n\n\n\n\n\n\nTestbench Example\n\n\n\nFPGA\n\n\n\n\n\n\n\n\n\n\nopenFPGALoader Programmer\n\n\n\nFPGA\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "lab/lab4/ai-prototype.html",
