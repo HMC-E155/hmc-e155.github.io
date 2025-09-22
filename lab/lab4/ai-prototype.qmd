@@ -5,7 +5,7 @@ subtitle: "Help! Which Timers Should I Use?"
 
 ## Learning Goals
 
-The goal of this prototype is to experiment with using AI as a coding assistant to generate HDL. By the end of this experiment you should be able to:
+The goal of this prototype is to experiment with using AI as a coding assistant to generate code. By the end of this experiment you should be able to:
 
 - Demonstrate how an LLM can be used as a coding partner.
 - Analyze the quality of the LLM-generated code.
