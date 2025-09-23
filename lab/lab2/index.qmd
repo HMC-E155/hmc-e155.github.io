@@ -8,7 +8,7 @@ format:
         icon: file-earmark-check
       - text: "AI Prototype"
         href: ./ai-prototype.html
-        icon: file-earmark-check
+        icon: robot
 ---
 
 ## Introduction

@@ -4,7 +4,6 @@
 - [ ] Dual seven-segment display shows the last two hexadecimal digits pressed.
 - [ ] Most recent numeric entry is shown on the right.
 - [ ] Design does not lock up when multiple buttons are pressed at once. (i.e., it just holds the current values on the display and functions properly again when the buttons are released.)
-- [ ] Design only registers first button press if additional buttons are pressed down while holding down one button.
 - [ ] Each button press registered only once (e.g., no switch bouncing)
 - [ ] Seven segment displays are same brightness regardless of how many segments are illuminated.
 - [ ] Design has no latches.
@@ -14,6 +13,7 @@
 #### Excellence
 
 - [ ] Design uses synchronizers on asynchronous inputs to mitigate metastability.
+- [ ] Design only registers first button press if additional buttons are pressed down while holding down one button.
 - [ ] Keypad and seven-segment display are aligned in the same orientation (i.e., the top of the numbers on both are facing the same direction).
 - [ ] State transition diagram is completely specified (i.e., all transitions between states are specified, output conditions specified in each state)
 - [ ] Report includes state transition table to document the nextstate and output values for each state based on the current state and inputs.

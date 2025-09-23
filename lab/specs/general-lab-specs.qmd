@@ -46,7 +46,7 @@
 - [ ] Testbench output for each module included in the report
 
 
-##### Writeup/Summary
+#### Writeup/Summary
 
 ##### Proficiency and Excellence
 
