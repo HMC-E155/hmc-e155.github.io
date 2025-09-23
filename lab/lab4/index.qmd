@@ -15,8 +15,6 @@ format:
         icon: github
 ---
 
-{{< include ./fa24-note.qmd >}}
-
 ## Introduction
 
 In this lab you will use your MCU to play music by using timers to generate square waves by toggling a GPIO pin at a specific frequency for specified durations.

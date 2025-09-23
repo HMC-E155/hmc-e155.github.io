@@ -48,7 +48,7 @@ Block diagram of the Verilog design.
 :::
 
 The block diagram in @fig-block-diagram demonstrates the overall architecture of the design.
-The top-level module `top` includes two submodules: the high-speed oscillator block (`HSOSC`) and the clock divider module (`clk_divider`).
+The top-level module `top` includes two submodules: the high-speed oscillator block (`HSOSC`) and the clock divider module (`clk_divider`).  Every net and port in the block diagram must be labeled -- that means each wire at the top level has to have a name, and the connection to a submodule must show the name inside the module.  This is true even if the submodule port name is the same as the top level net name.
 
 ### Schematic
 ::: {#fig-schematic}
