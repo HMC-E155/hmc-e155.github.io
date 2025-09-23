@@ -641,7 +641,7 @@
     "href": "lab/lab-report-template/index.html#technical-documentation",
     "title": "Annotated Lab Report Template",
     "section": "Technical Documentation:",
-    "text": "Technical Documentation:\n\n\n\n\n\n\nNoteTechnical Documentation\n\n\n\nInclude a link to a Git repository with your Verilog code, a block diagram of your design, and schematics of your circuits.\n\n\nThe source code for the project can be found in the associated Github repository.\n\nBlock Diagram\n\n\n\n\n\n\nFigure 1: Block diagram of the Verilog design.\n\n\n\nThe block diagram in Figure 1 demonstrates the overall architecture of the design. The top-level module top includes two submodules: the high-speed oscillator block (HSOSC) and the clock divider module (clk_divider).\n\n\nSchematic\n\n\n\n\n\n\nFigure 2: Schematic of the physical circuit.\n\n\n\nFigure 2 shows the physical layout of the design. An internal 100 k\\(\\Omega\\) pullup resistor was used to ensure the active low reset pin was not floating. The output LED was connected using a 1 k\\(\\Omega\\) current-limiting resistor to ensure the output current (~2.6 mA) did not exceed the maximum output current of the FPGA I/O pins."
+    "text": "Technical Documentation:\n\n\n\n\n\n\nNoteTechnical Documentation\n\n\n\nInclude a link to a Git repository with your Verilog code, a block diagram of your design, and schematics of your circuits.\n\n\nThe source code for the project can be found in the associated Github repository.\n\nBlock Diagram\n\n\n\n\n\n\nFigure 1: Block diagram of the Verilog design.\n\n\n\nThe block diagram in Figure 1 demonstrates the overall architecture of the design. The top-level module top includes two submodules: the high-speed oscillator block (HSOSC) and the clock divider module (clk_divider). Every net and port in the block diagram must be labeled – that means each wire at the top level has to have a name, and the connection to a submodule must show the name inside the module. This is true even if the submodule port name is the same as the top level net name.\n\n\nSchematic\n\n\n\n\n\n\nFigure 2: Schematic of the physical circuit.\n\n\n\nFigure 2 shows the physical layout of the design. An internal 100 k\\(\\Omega\\) pullup resistor was used to ensure the active low reset pin was not floating. The output LED was connected using a 1 k\\(\\Omega\\) current-limiting resistor to ensure the output current (~2.6 mA) did not exceed the maximum output current of the FPGA I/O pins."
   },
   {
     "objectID": "lab/lab-report-template/index.html#results-and-discussion",
@@ -1285,14 +1285,14 @@
     "href": "lab/lab4/index.html",
     "title": "Lab 4: Digital Audio",
     "section": "",
-    "text": "WarningFA24 Checkoff Modification\n\n\n\nDue to Prof. Brake’s travel schedule, there will be no standard checkoff for this lab. Instead of meeting with him to demonstrate the performance of your system, you must upload a video of your system in operation. Your video should document the entire song playing.\nUploading a video directly to your Github site is not recommended due to the large file sizes involved. Instead, you should upload your video to a hosting site like YouTube (you may used your HMC Google account) and then copy and paste the embed HTML code into your website. To do so, you may use the following Quarto shortcode as shown below. Simply replace the given URL with the URL to your video. More information can be found in the Quarto docs.\n{{&lt; video https://www.youtube.com/embed/wo9vZccmqwc &gt;}}"
+    "text": "In this lab you will use your MCU to play music by using timers to generate square waves by toggling a GPIO pin at a specific frequency for specified durations."
   },
   {
     "objectID": "lab/lab4/index.html#introduction",
     "href": "lab/lab4/index.html#introduction",
     "title": "Lab 4: Digital Audio",
-    "section": "Introduction",
-    "text": "Introduction\nIn this lab you will use your MCU to play music by using timers to generate square waves by toggling a GPIO pin at a specific frequency for specified durations."
+    "section": "",
+    "text": "In this lab you will use your MCU to play music by using timers to generate square waves by toggling a GPIO pin at a specific frequency for specified durations."
   },
   {
     "objectID": "lab/lab4/index.html#learning-objectives",

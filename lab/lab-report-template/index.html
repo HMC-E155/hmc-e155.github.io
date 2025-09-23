@@ -323,7 +323,7 @@ Figure&nbsp;1: Block diagram of the Verilog design.
 </figcaption>
 </figure>
 </div>
-<p>The block diagram in <a href="#fig-block-diagram" class="quarto-xref">Figure&nbsp;1</a> demonstrates the overall architecture of the design. The top-level module <code>top</code> includes two submodules: the high-speed oscillator block (<code>HSOSC</code>) and the clock divider module (<code>clk_divider</code>).</p>
+<p>The block diagram in <a href="#fig-block-diagram" class="quarto-xref">Figure&nbsp;1</a> demonstrates the overall architecture of the design. The top-level module <code>top</code> includes two submodules: the high-speed oscillator block (<code>HSOSC</code>) and the clock divider module (<code>clk_divider</code>). Every net and port in the block diagram must be labeled – that means each wire at the top level has to have a name, and the connection to a submodule must show the name inside the module. This is true even if the submodule port name is the same as the top level net name.</p>
 </section>
 <section id="schematic" class="level3">
 <h3 class="anchored" data-anchor-id="schematic">Schematic</h3>
