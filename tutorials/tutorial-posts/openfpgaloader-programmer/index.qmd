@@ -53,7 +53,7 @@ Once it is installed run the commands at the top of the document, but replace `o
 
 ### Option 2
 
-First, install [MSYS2](https://www.msys2.org/). It should open a window that looks like this. If you don't see it, open the UCRT64 that was installed.
+First, install [MSYS2](https://www.msys2.org/). It should open a window that looks like this. If you don't see it, open the UCRT app that was installed.
 
 ::: {#fig-msys2-terminal}
 ![](images/msys2-terminal.png)
@@ -67,7 +67,7 @@ pacman -S mingw-w64-ucrt-x86_64-openFPGALoader
 ```
 You can verify that it installed correctly by running `openFPGALoader -h`.
 
-Third, replace the default usb driver with one that work with openFPGALoader. Download and install [Zadig](https://zadig.akeo.ie/). Then open it, select Options -> List All Devices, and select the UPduino in the dropdown menu. It should look like this before you press install driver.
+Third, replace the default usb driver with one that work with openFPGALoader. Download and install [Zadig](https://zadig.akeo.ie/). Then open it, select `Options -> List All Devices`, and select the UPduino in the dropdown menu. It should look like this before you press install driver.
 
 ::: {#fig-zadig}
 ![](images/zadig.png)

@@ -1,0 +1,37 @@
+---
+title: "Lab 4 AI Prototype"
+subtitle: "Help! Which Timers Should I Use?"
+---
+
+## Learning Goals
+
+The goal of this prototype is to experiment with using AI as a coding assistant to generate code. By the end of this experiment you should be able to:
+
+- Demonstrate how an LLM can be used as a coding partner.
+- Analyze the quality of the LLM-generated code.
+- Document specific tips on how to use the LLM effectively.
+
+## Prototype
+
+Fire up your favorite LLM. ChatGPT is a good place to start, but you may consider using other LLMs as well like Claude or Gemini. Enter the prompt below.
+
+::: {.callout-note title="LLM Prompt"}
+What timers should I use on the STM32L432KC to generate frequencies ranging from 220Hz to 1kHz? 
+What's the best choice of timer if I want to easily connect it to a GPIO pin?
+What formulae are relevant, and what registers next to be set to configure them properly?
+:::
+
+Once the LLM responds, review the answer and compare it with your decision-making process. 
+Try attaching the programming manual for the MCU. Does its answer become more accurate?
+
+## Reflect
+
+Write up a few paragraphs reflecting on your experience using the LLM to help you code. Feel free to make full use of screenshots, code snippets, and other media as you write your reflections.
+
+Here are a few ideas of on what you might comment on:
+
+- How would you rate the quality of the output and why?
+- Did the LLM generate any code for you? If so, how does it compare to your setup?
+- How does the LLM's explanation compare to your reasoning for choosing your timer?
+- Does the LLM work well as a sounding board, rather than a code generator as used in previous prototypes?
+
