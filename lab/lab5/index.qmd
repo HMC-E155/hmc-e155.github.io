@@ -6,6 +6,9 @@ format:
       - text: "Specifications"
         href: ./specs.html
         icon: file-earmark-check
+      - text: "AI Prototype"
+        href: ./ai-prototype.html
+        icon: robot
       - text: "25GA-370"
         href: /assets/lab/25GA370.pdf
         icon: file-earmark-pdf
