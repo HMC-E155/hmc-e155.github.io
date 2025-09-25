@@ -22,8 +22,15 @@
 
 ##### Proficiency and Excellence
 
-- [ ] Block diagram present with one block per SystemVerilog module
-- [ ] Each block includes all input and output signals
+- [ ] Top-level block diagram present with one block per SystemVerilog module
+- [ ] Blocks that contain other modules have their own block diagrams, or the hierarchy is depicted in the top level drawing.
+- [ ] Each block is labeled with the module name. (Usually inside the block, upper left corner.)
+- [ ] Each block is labeled with the instance name. (Usually outside the block, upper right corner.)
+- [ ] Each block is labeled with every input and output port. (i.e.: the names of signals inside the module are written on the inner boundary.)
+- [ ] The top level block has every net labeled. (i.e.: the names of signals outside of the submodules are all labeled.)
+- [ ] Logic that is not wrapped in a module is drawn as gates.
+- [ ] Pin numbers are attached to the outer perimeter of the top level block, capturing the mapping of logic signals to pins.
+- [ ] Clock and reset nets are connected symbolically.
 
 #### HDL & Code Specifications
 
