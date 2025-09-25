@@ -18,7 +18,7 @@
 - [ ] Title block with author name, title, and date
 
 
-#### Block Diagram
+#### Block Diagram (Required for labs 1, 2, 3 and 7)
 
 ##### Proficiency and Excellence
 
