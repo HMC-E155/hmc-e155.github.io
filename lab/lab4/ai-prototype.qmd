@@ -5,12 +5,13 @@ subtitle: "Help! Which Timers Should I Use?"
 
 ## Learning Goals
 
-The goal of this prototype is to experiment with using AI as a coding assistant to navigate memory maps and guide the configuration of various peripherals. 
+The goal of this prototype is to experiment with using AI as a documentation search assistant to navigate memory maps and guide the configuration of various peripherals. 
 By the end of this experiment you should be able to:
 
-- Demonstrate the feasibility of using an LLM as a sounding board.
+- Demonstrate the using an LLM to search complex documentation.
 - Analyze the steps provided and compare with the thought process you undertook.
 - Document specific tips on how to use the LLM effectively.
+- Compare your experience using an LLM to search for information against using Google, Ctrl-F and other technologies.
 
 ## Prototype
 
@@ -23,7 +24,8 @@ What formulae are relevant, and what registers need to be set to configure them 
 :::
 
 Once the LLM responds, review the answer and compare it with your decision-making process. 
-Try attaching the programming manual for the MCU. Does its answer become more accurate?
+
+Try attaching the reference manual for the MCU as context. Does its answer become more accurate?
 
 ## Reflect
 
@@ -32,7 +34,8 @@ Write up a few paragraphs reflecting on your experience using the LLM to help yo
 Here are a few ideas of on what you might comment on:
 
 - How would you rate the quality of the output and why?
+- How does the speed and quality of LLM output compare to your own read of the reference manual? Can it point you in the right direction when Ctrl-F can't?
 - Did the LLM generate any code for you? If so, how does it compare to your setup?
 - How does the LLM's explanation compare to your reasoning for choosing your timer?
-- Does the LLM work well as a sounding board, rather than a code generator as used in previous prototypes?
+- Does the LLM work well for document search? Is it better or worse at this than acting as a HDL generator as demonstrated in previous prototypes?
 
