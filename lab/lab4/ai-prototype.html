@@ -211,11 +211,12 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="learning-goals" class="level2">
 <h2 class="anchored" data-anchor-id="learning-goals">Learning Goals</h2>
-<p>The goal of this prototype is to experiment with using AI as a coding assistant to navigate memory maps and guide the configuration of various peripherals. By the end of this experiment you should be able to:</p>
+<p>The goal of this prototype is to experiment with using AI as a documentation search assistant to navigate memory maps and guide the configuration of various peripherals. By the end of this experiment you should be able to:</p>
 <ul>
-<li>Demonstrate the feasibility of using an LLM as a sounding board.</li>
+<li>Demonstrate the using an LLM to search complex documentation.</li>
 <li>Analyze the steps provided and compare with the thought process you undertook.</li>
 <li>Document specific tips on how to use the LLM effectively.</li>
+<li>Compare your experience using an LLM to search for information against using Google, Ctrl-F and other technologies.</li>
 </ul>
 </section>
 <section id="prototype" class="level2">
@@ -234,7 +235,8 @@ ul.task-list li input[type="checkbox"] {
 <p>What timers should I use on the STM32L432KC to generate frequencies ranging from 220Hz to 1kHz? What’s the best choice of timer if I want to easily connect it to a GPIO pin? What formulae are relevant, and what registers need to be set to configure them properly?</p>
 </div>
 </div>
-<p>Once the LLM responds, review the answer and compare it with your decision-making process. Try attaching the programming manual for the MCU. Does its answer become more accurate?</p>
+<p>Once the LLM responds, review the answer and compare it with your decision-making process.</p>
+<p>Try attaching the reference manual for the MCU as context. Does its answer become more accurate?</p>
 </section>
 <section id="reflect" class="level2">
 <h2 class="anchored" data-anchor-id="reflect">Reflect</h2>
@@ -242,9 +244,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Here are a few ideas of on what you might comment on:</p>
 <ul>
 <li>How would you rate the quality of the output and why?</li>
+<li>How does the speed and quality of LLM output compare to your own read of the reference manual? Can it point you in the right direction when Ctrl-F can’t?</li>
 <li>Did the LLM generate any code for you? If so, how does it compare to your setup?</li>
 <li>How does the LLM’s explanation compare to your reasoning for choosing your timer?</li>
-<li>Does the LLM work well as a sounding board, rather than a code generator as used in previous prototypes?</li>
+<li>Does the LLM work well for document search? Is it better or worse at this than acting as a HDL generator as demonstrated in previous prototypes?</li>
 </ul>
 
 
