@@ -5,10 +5,11 @@ subtitle: "Help! Which Timers Should I Use?"
 
 ## Learning Goals
 
-The goal of this prototype is to experiment with using AI as a coding assistant to generate code. By the end of this experiment you should be able to:
+The goal of this prototype is to experiment with using AI as a coding assistant to navigate memory maps and guide the configuration of various peripherals. 
+By the end of this experiment you should be able to:
 
-- Demonstrate how an LLM can be used as a coding partner.
-- Analyze the quality of the LLM-generated code.
+- Demonstrate the feasibility of using an LLM as a sounding board.
+- Analyze the steps provided and compare with the thought process you undertook.
 - Document specific tips on how to use the LLM effectively.
 
 ## Prototype
@@ -18,7 +19,7 @@ Fire up your favorite LLM. ChatGPT is a good place to start, but you may conside
 ::: {.callout-note title="LLM Prompt"}
 What timers should I use on the STM32L432KC to generate frequencies ranging from 220Hz to 1kHz? 
 What's the best choice of timer if I want to easily connect it to a GPIO pin?
-What formulae are relevant, and what registers next to be set to configure them properly?
+What formulae are relevant, and what registers need to be set to configure them properly?
 :::
 
 Once the LLM responds, review the answer and compare it with your decision-making process. 
