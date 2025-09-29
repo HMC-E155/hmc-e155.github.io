@@ -1,0 +1,65 @@
+## Protecting Your Speaker (and MCU)
+
+Before you connect your circuit to the 8&nbsp;Ω speaker, it is **critical** to ensure that the amplifier output and speaker load will not draw excessive current.  
+Driving the speaker directly from your MCU **will damage both the MCU and the speaker**, so always check your circuit before connecting the speaker.
+
+::: {.callout-tip title="Measure Before You Connect"}
+Always verify your output current using a dummy load (resistor) or multimeter before connecting a real speaker!
+:::
+
+### Step 1: Measure the Output Current
+
+1. Build your circuit **without the speaker** — instead, connect a **dummy load** such as an 8&nbsp;Ω resistor to simulate the speaker.  
+2. Use a multimeter to **measure the RMS voltage drop** across the resistor while your MCU is generating the audio signal.  
+3. From the measured voltage, compute the expected current using Ohm’s law:
+
+$$
+I = \frac{V}{R}
+$$
+
+If you prefer, you can measure current directly by inserting the multimeter in series with the load.
+
+---
+
+### Step 2: Stay Below Safe Limits
+
+An LM386 amplifier can safely drive small speakers, but you must ensure that:
+
+- The **output voltage** does not exceed approximately **1&nbsp;V RMS** (≈ 2.8&nbsp;V peak-to-peak).  
+- This corresponds to a **maximum RMS current** of about:
+
+$$
+I_{\text{max}} = \frac{1\,\text{V}}{8\,\Omega} = 0.125\,\text{A (125 mA)}
+$$
+
+If your measured voltage produces a current greater than **125&nbsp;mA**, you risk damaging the speaker.  
+To reduce current:
+- Lower the amplifier gain
+- Reduce the input signal amplitude
+- Add a small series resistor
+
+---
+
+### Step 3: Never Connect the MCU Pin Directly
+
+Remember:  
+- MCU GPIO pins can safely source **no more than 10–20&nbsp;mA**.  
+- An 8&nbsp;Ω speaker draws **over 100&nbsp;mA** even at low volume.  
+
+If you connect the speaker directly to the MCU, you will **fry the MCU output** and possibly the speaker.  
+Always use the **LM386** amplifier to buffer the signal and supply sufficient current.
+
+---
+
+### Quick Reference
+
+| Parameter               | Recommended Limit |
+|:-------------------------|:-----------------|
+| Speaker impedance        | 8&nbsp;Ω         |
+| Max safe RMS voltage     | ~1&nbsp;V        |
+| Max RMS current          | ~125&nbsp;mA     |
+| MCU GPIO output current  | <20&nbsp;mA      |
+
+---
+
+By following these steps, you’ll protect both your hardware and your hearing while getting clean audio output from your MCU.
