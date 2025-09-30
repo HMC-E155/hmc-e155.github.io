@@ -148,9 +148,8 @@ Your through-hole technology (THT) header pins should be a standard
 0.100" (2.54 mm) pitch.
 
 
-## What to Submit
+## Where to Submit
 
-If you successfully complete your board, by the end of the week, you may submit it to be manufactured.
-To do so, you must ensure that all design specifications are met.
-When complete, submit a link to a Github repository which includes all the design files for your board along with any custom libraries.
-Your git repository must also include a .zip file of the Gerber files needed to manufacture your board.
+If you successfully complete your board, you may submit it to be manufactured at a modest cost (often a few tens of dollars).
+Ensure that all design specifications are met before you do so.
+Follow instructions at [OshPark](https://oshpark.com/) to submit a design for manufacture.
