@@ -49,11 +49,11 @@
     "text": "6 Design Constraints\nTo make it easier to source parts for your board, you will need to limit yourself to only specific components. In particular, you should limit yourself to surface mount technology (SMT) Imperial 0805 resistors and Imperial 0805 LEDs. Your through-hole technology (THT) header pins should be a standard\n0.100” (2.54 mm) pitch."
   },
   {
-    "objectID": "lecture/pcb-activity/index.html#what-to-submit",
-    "href": "lecture/pcb-activity/index.html#what-to-submit",
+    "objectID": "lecture/pcb-activity/index.html#where-to-submit",
+    "href": "lecture/pcb-activity/index.html#where-to-submit",
     "title": "PCB Activity",
-    "section": "7 What to Submit",
-    "text": "7 What to Submit\nIf you successfully complete your board, by the end of the week, you may submit it to be manufactured. To do so, you must ensure that all design specifications are met. When complete, submit a link to a Github repository which includes all the design files for your board along with any custom libraries. Your git repository must also include a .zip file of the Gerber files needed to manufacture your board."
+    "section": "7 Where to Submit",
+    "text": "7 Where to Submit\nIf you successfully complete your board, you may submit it to be manufactured at a modest cost (often a few tens of dollars). Ensure that all design specifications are met before you do so. Follow instructions at OshPark to submit a design for manufacture."
   },
   {
     "objectID": "tutorials/template.html",
