@@ -13,10 +13,10 @@ See the list below for links to lecture slides and handouts. Slides and handouts
 - Lecture 7: GPIO Device Driver [[slides](./slides/lecture-07-slides.pdf)] [[handout](./slides/lecture-07-handout.pdf)] 
 - Lecture 8: C Clock Configuration [[slides](./slides/lecture-08-slides.pdf)] [[handout](./slides/lecture-08-handout.pdf)] [[tutorial repository](https://github.com/HMC-E155/tutorial-clock-configuration)]
 - Lecture 9: Timers [[slides](./slides/lecture-09-slides.pdf)] [[handout](./slides/lecture-09-handout.pdf)]
-- Lecture 10: Interrupts [[slides](./slides/lecture-10-slides.pdf)] [[handout](./slides/lecture-10-handout.pdf)]
+- Lecture 10: Interrupts [[slides](./slides/lecture-10-slides.pdf)] [[handout](./slides/lecture-10-handout.pdf)] [[tutorial repository](https://github.com/HMC-E155/tutorial-interrupts)]
 - [PCB Design Activity](./pcb-activity/)
 - Lecture 11: Serial Interfaces and SPI [[slides](./slides/lecture-11-slides.pdf)] [[handout](./slides/lecture-11-handout.pdf)] [[project kickoff slides](./slides/project-kickoff.pdf)]
-- Lecture 12: UART and the Internet of Things [[slides](./slides/lecture-12-slides.pdf)] [[handout](./slides/lecture-12-handout.pdf)]
+- Lecture 12: UART and the Internet of Things [[slides](./slides/lecture-12-slides.pdf)] [[handout](./slides/lecture-12-handout.pdf)] [[tutorial repository UART](https://github.com/HMC-E155/tutorial-uart)] [[tutorial repository ESP8266](https://github.com/HMC-E155/tutorial-esp8266-click-webserver)]
 - Lecture 13: Introduction to AES: Galois Fields [[slides](./slides/lecture-13-slides.pdf)] [[handout](./slides/lecture-13-handout.pdf)]
 - Lecture 14: Implementing AES on an FPGA  [[slides](./slides/lecture-14-slides.pdf)] [[handout](./slides/lecture-14-handout.pdf)]
 - Lecture 15: Graphics and Displays [[slides](./slides/lecture-15-slides.pdf)]
