@@ -35,6 +35,6 @@ int main(void) {
 
 Note that this only works in the debug mode, and the logs appear here:
 
-TODO: insert image here from running this code on lab computers
+![Screenshot of Segger demonstrating printouts using the above code](images/printf-example.png)
 
-If you want to include floating point values in your prints, you need to enable Printf Floating Point Support under Project Options -> Linker -> Printf/Scanf.
+If you want to include floating point values in your prints, you need to enable fPrintf Floating Point Support in your solution settings. Right click on the solution name in the left panel and select options. In the window that opens search for "float" and change "Printf Floating Point Supported" from *No* to *Yes*.
