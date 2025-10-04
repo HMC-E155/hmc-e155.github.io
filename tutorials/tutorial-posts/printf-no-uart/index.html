@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lab 4: Digital Audio – HMC E155</title>
+<title>Using printf for MCU debugging – HMC E155</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<link href="../..//assets/img/microps-logo.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-6bfc7d598bfa5b068f2d83e2a21e42cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../..//assets/img/microps-logo.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-6bfc7d598bfa5b068f2d83e2a21e42cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,9 +114,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
     </a>
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">HMC E155</span>
     </a>
   </div>
@@ -92,11 +127,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html"> 
+    <a class="nav-link" href="../../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../syllabus/"> 
+    <a class="nav-link" href="../../../syllabus/"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -105,61 +140,61 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-labs">    
         <li>
-    <a class="dropdown-item" href="../../lab/">
+    <a class="dropdown-item" href="../../../lab/">
  <span class="dropdown-text">Labs Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/specs/">
+    <a class="dropdown-item" href="../../../lab/specs/">
  <span class="dropdown-text">Lab Specs</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab-report-template/">
+    <a class="dropdown-item" href="../../../lab/lab-report-template/">
  <span class="dropdown-text">Lab Report Template</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab1/">
+    <a class="dropdown-item" href="../../../lab/lab1/">
  <span class="dropdown-text">Lab 1</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab2/">
+    <a class="dropdown-item" href="../../../lab/lab2/">
  <span class="dropdown-text">Lab 2</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab3/">
+    <a class="dropdown-item" href="../../../lab/lab3/">
  <span class="dropdown-text">Lab 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab4/">
+    <a class="dropdown-item" href="../../../lab/lab4/">
  <span class="dropdown-text">Lab 4</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab5/">
+    <a class="dropdown-item" href="../../../lab/lab5/">
  <span class="dropdown-text">Lab 5</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab6/">
+    <a class="dropdown-item" href="../../../lab/lab6/">
  <span class="dropdown-text">Lab 6</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../lab/lab7/">
+    <a class="dropdown-item" href="../../../lab/lab7/">
  <span class="dropdown-text">Lab 7</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../../lecture/"> 
+    <a class="nav-link" href="../../../lecture/"> 
 <span class="menu-text">Lecture</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../project/"> 
+    <a class="nav-link" href="../../../project/"> 
 <span class="menu-text">Project</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../resources/"> 
+    <a class="nav-link" href="../../../resources/"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../tutorials/"> 
+    <a class="nav-link" href="../../../tutorials/"> 
 <span class="menu-text">Tutorials</span></a>
   </li>  
 </ul>
@@ -175,29 +210,19 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
-  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
-  <li><a href="#before-connecting-a-speaker" id="toc-before-connecting-a-speaker" class="nav-link" data-scroll-target="#before-connecting-a-speaker">Before Connecting a Speaker</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
-  <li><a href="#optional-exercise" id="toc-optional-exercise" class="nav-link" data-scroll-target="#optional-exercise">Optional Exercise</a></li>
-  <li><a href="#credits" id="toc-credits" class="nav-link" data-scroll-target="#credits">Credits</a></li>
-  <li><a href="#share-your-feedback" id="toc-share-your-feedback" class="nav-link" data-scroll-target="#share-your-feedback">Share Your Feedback</a></li>
-  </ul>
-<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="./specs.html"><i class="bi bi-file-earmark-check"></i>Specifications</a></li><li><a href="./ai-prototype.html"><i class="bi bi-robot"></i>AI Prototype</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab04"><i class="bi bi-github"></i>Starter Code</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lab 4: Digital Audio</h1>
-</div>
+<h1 class="title">Using <code>printf</code> for MCU debugging</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">MCU</div>
+  </div>
+  </div>
 
 
 
@@ -213,204 +238,42 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>In this lab you will use your MCU to play music by using timers to generate square waves by toggling a GPIO pin at a specific frequency for specified durations.</p>
-</section>
-<section id="learning-objectives" class="level2">
-<h2 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h2>
-<p>By the end of this lab you will have…</p>
-<ul>
-<li>Built a circuit to enable an I/O pin from your MCU to drive a speaker</li>
-<li>Implemented the timer functionality available on the MCU by reading the datasheet and writing your own library in C from scratch</li>
-</ul>
-</section>
-<section id="requirements" class="level2">
-<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
-<p>Build a system to play music on a speaker. Use your MCU, an LM386 audio amplifier, and an 8-ohm speaker. The MCU should read a list of notes specifying the pitch (in Hz) and duration (in ms) of each note. It should generate a corresponding sequence of square waves. A frequency of 0 indicates a rest (silence for the given duration). A duration of 0 indicates the end of the song. Your system should play accurate pitches regardless of the frequency. Test your system on the score of Für Elise, which is provided. Your code should manually define <code>#define</code> macros and register structures for the memory-mapped registers you need to manipulate to help you practice developing your own device drivers from scratch using only the reference manual as a reference. In particular, this means that you are not allowed to use the CMSIS headers for your device.</p>
-</section>
-<section id="before-connecting-a-speaker" class="level2">
-<h2 class="anchored" data-anchor-id="before-connecting-a-speaker">Before Connecting a Speaker</h2>
-<p>Before connecting a speaker to your LM386 circuit, verify your output audio signals to ensure you don’t fry a speaker. <a href="../../lab/lab4/speaker-safety.html">Learn more about protecting your speaker</a></p>
-</section>
-<section id="discussion" class="level2">
-<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
-<p>You can find starter code for this lab in the course Github repository. The code provides the Für Elise score as an array of ordered pairs of pitch frequencies and durations.</p>
-<p>A goal of this lab is for you to learn to interpret a datasheet and figure out how the timer works. Write your own code from scratch to use the system timer.</p>
-<p>The GPIO pins don’t generate enough output current to play satisfactory music directly on the speaker, so use an LM386 audio amplifier between the MCU and the speaker. Do not connect the MCU directly to the speaker, as the current draw could damage it. The datasheet shows AC coupling from the amplifier to the speaker, but you can leave out the capacitors and resistors and produce an acceptable square wave. Volume control is optional (but recommended for your own sanity and that of your roommates and labmates). There are only a limited number of speakers available in the lab so please leave the speakers in the supply cabinet when you leave the lab. Do not leave them attached to your breadboard when you are done working. If you kill a speaker, throw it away rather than putting it back in the cabinet for your unfortunate classmates.</p>
-</section>
-<section id="optional-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="optional-exercise">Optional Exercise</h2>
-<p>In the past students have enjoyed composing their own tune to play on their MCU. The following information may help if you wish to compose your own piece of music.</p>
-<p>The duration depends on an arbitrary choice of tempo (speed at which the piece is played). If a whole note is chosen to be 1/2 a second long, other notes follow accordingly:</p>
-<div class="center-table">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Note Type</th>
-<th style="text-align: center;">Duration [s]</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">Whole</td>
-<td style="text-align: center;">0.5</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Half</td>
-<td style="text-align: center;">0.25</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Quarter</td>
-<td style="text-align: center;">0.125</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">Eighth</td>
-<td style="text-align: center;">0.0625</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">Sixteenth</td>
-<td style="text-align: center;">0.03125</td>
-</tr>
-</tbody>
-</table>
+<p>In Lab 6 you will learn how to use the UART peripheral to send debugging logs to your laptop from the MCU.</p>
+<p>The MCU can also print to a specialized debug channel using <code>ITM_SendChar</code> and <code>printf</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Necessary includes for printf to work</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">"stm32l432xx.h"</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">// Function used by printf to send characters to the laptop</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> _write<span class="op">(</span><span class="dt">int</span> file<span class="op">,</span> <span class="dt">char</span> <span class="op">*</span>ptr<span class="op">,</span> <span class="dt">int</span> len<span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> <span class="op">(</span>i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> len<span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    ITM_SendChar<span class="op">((*</span>ptr<span class="op">++));</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> len<span class="op">;</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">(</span><span class="dt">void</span><span class="op">)</span> <span class="op">{</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="dt">int</span> i<span class="op">;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> <span class="op">(</span>i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">100</span><span class="op">;</span> i<span class="op">++)</span> <span class="op">{</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>      <span class="co">// printf</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    printf<span class="op">(</span><span class="st">"Hello World </span><span class="sc">%d</span><span class="st">!</span><span class="sc">\n</span><span class="st">"</span><span class="op">,</span> i<span class="op">);</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  <span class="cf">do</span> <span class="op">{</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    i<span class="op">++;</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="op">}</span> <span class="cf">while</span> <span class="op">(</span><span class="dv">1</span><span class="op">);</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Note that this only works in the debug mode, and the logs appear here:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/printf-example.png" class="img-fluid figure-img"></p>
+<figcaption>Screenshot of Segger demonstrating printouts using the above code</figcaption>
+</figure>
 </div>
-<p>Recall that the A above middle C (called A4) is 440 Hz (at least in the United States) and that an octave spans a factor of 2 in frequency. There are twelve notes in an octave spaced evenly on a geometric scale, so each is separated in frequency by a factor of 2<sup>1/12</sup>.</p>
-<div class="center-table">
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th style="text-align: center;">Note</th>
-<th style="text-align: center;">Frequency (Hz)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">A3</td>
-<td style="text-align: center;">220</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">A3 sharp / B3 flat</td>
-<td style="text-align: center;">233.1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">B3</td>
-<td style="text-align: center;">246.9</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">C4 (middle C)</td>
-<td style="text-align: center;">261.6</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">C4 sharp / D4 flat</td>
-<td style="text-align: center;">277.2</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">D4</td>
-<td style="text-align: center;">293.7</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">D4 sharp / E4 flat</td>
-<td style="text-align: center;">311.1</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">E4</td>
-<td style="text-align: center;">329.6</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">F4</td>
-<td style="text-align: center;">349.2</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">F4 sharp / G4 flat</td>
-<td style="text-align: center;">370.0</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">G4</td>
-<td style="text-align: center;">392.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">G4 sharp / A4 flat</td>
-<td style="text-align: center;">415.3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">A4</td>
-<td style="text-align: center;">440</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">A4 sharp / B4 flat</td>
-<td style="text-align: center;">466.2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">B4</td>
-<td style="text-align: center;">493.9</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">C5</td>
-<td style="text-align: center;">523.3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">C5 sharp / D5 flat</td>
-<td style="text-align: center;">554.4</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">D5</td>
-<td style="text-align: center;">587.3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">D5 sharp / E5 flat</td>
-<td style="text-align: center;">622.2</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">E5</td>
-<td style="text-align: center;">659.2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">F5</td>
-<td style="text-align: center;">698.4</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">F5 sharp / G5 flat</td>
-<td style="text-align: center;">740.9</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">G5</td>
-<td style="text-align: center;">784.0</td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">G5 sharp / A5 flat</td>
-<td style="text-align: center;">830.6</td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">A5</td>
-<td style="text-align: center;">880</td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<section id="credits" class="level2">
-<h2 class="anchored" data-anchor-id="credits">Credits</h2>
-<p>This lab was originally developed in 2015 by Alex Alves ’16, redesigned for the μMudd Mark 5.1 in 2019 by Caleb Norfleet ’21, and redesigned for the μMudd MkVI in Fall 2021 by Prof.&nbsp;Josh Brake.</p>
-</section>
-<section id="share-your-feedback" class="level2">
-<h2 class="anchored" data-anchor-id="share-your-feedback">Share Your Feedback</h2>
-<div class="callout callout-style-default callout-note callout-titled" title="Share Your Feedback!">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Share Your Feedback!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you caught any typos or have any suggestions for this page, please open an issue on the <a href="https://github.com/HMC-E155/hmc-e155.github.io/issues">website Github repository</a>. Click the link <a href="../../resources/how-to-create-a-github-issue.html">here</a> for instructions on how to create an issue.</p>
-</div>
-</div>
+<p>If you want to include floating point values in your prints, you need to enable fPrintf Floating Point Support in your solution settings. Right click on the solution name in the left panel and select options. In the window that opens search for “float” and change “Printf Floating Point Supported” from <em>No</em> to <em>Yes</em>.</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
