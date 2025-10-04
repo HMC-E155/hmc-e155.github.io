@@ -67,7 +67,7 @@ The encoders you will use in this lab use hall effect sensors and magnets.
 You should design your system to take full advantage of both signals to get the highest resolution measurement.
 
 In Lab 6, you will learn how to use the UART peripheral to send binary data between devices, and print to the terminal embedded in Segger.
-For this lab, you can follow this tutorial on using `printf` without UART.
+For this lab, you can follow [this tutorial](../../tutorials/tutorial-posts/printf-no-uart/index.qmd) on using `printf` without UART.
 
 ## Credits
 
