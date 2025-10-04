@@ -38,6 +38,10 @@ Test your system on the score of Für Elise, which is provided.
 Your code should manually define `#define` macros and register structures for the memory-mapped registers you need to manipulate to help you practice developing your own device drivers from scratch using only the reference manual as a reference. 
 In particular, this means that you are not allowed to use the CMSIS headers for your device.
 
+## Before Connecting a Speaker
+
+Before connecting a speaker to your LM386 circuit, verify your output audio signals to ensure you don't fry a speaker. [Learn more about protecting your speaker](./speaker-safety.qmd)
+
 ## Discussion
 
 You can find starter code for this lab in the course Github repository. The code provides the Für Elise score as an array of ordered pairs of pitch frequencies and durations.
