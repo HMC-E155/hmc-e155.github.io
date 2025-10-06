@@ -5,9 +5,13 @@ subtitle: "Beautify my Website"
 
 ## Learning Goals
 
-The goal of this prototype is to experiment with using AI as a coding assistant to generate code. By the end of this experiment you should be able to:
+The goal of this prototype is to experiment with using AI as a coding assistant to generate code. 
+Through the various previous prototypes, you should have a good idea of the performance of LLMs in writing SystemVerilog and C.
+For this prototype, you will give the LLM a task that it is (generally) considered to be more proficient at: frontend websites.
+By the end of this experiment you should be able to:
 
 - Demonstrate how an LLM can be used as a coding partner.
+- Realize the strengths and weaknesses of LLMs.
 - Analyze the quality of the LLM-generated code.
 - Document specific tips on how to use the LLM effectively.
 
@@ -21,6 +25,15 @@ Create a HTML page that looks good and is intuitive to show the temperature, con
 :::
 
 Once the LLM responds, add in the code to your web server. How does it look? Does the output make sense?
+
+Compare this result with the outputs for this subsequent prompt:
+
+::: {.callout-note title="LLM Prompt"}
+Write me a C function to carry out a SPI transaction to retrieve a temperature reading from a DS1722 sensor.
+Make use of CMSIS libraries for the STM32L432KC.
+:::
+
+How did it perform in this case? Was the code reasonable? Does it work when plugged into the project?
 
 ## Reflect
 
