@@ -854,74 +854,32 @@
     "text": "AI Prototype Summary\nInclude generated code, easy-to-read chat transcripts, and a reflection on how well it worked."
   },
   {
-    "objectID": "lab/lab6/index.html",
-    "href": "lab/lab6/index.html",
-    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
+    "objectID": "lab/lab6/ai-prototype.html",
+    "href": "lab/lab6/ai-prototype.html",
+    "title": "Lab 6 AI Prototype",
     "section": "",
-    "text": "By the end of this lab you will have…\n\nDesigned and built a simple IoT device\nWritten C libraries using the CMSIS device templates to implement the SPI functionality of the MCU\nInterfaced with a temperature sensor module over an SPI link\nInterfaced the MCU with an ESP8266 module over a UART link\nUse the logic analyze functionality of the scope in the Digital Lab to debug serial communication protocols and export captured signal data.\nWritten a simple HTML page to control and display data from the peripherals connected to your MCU."
+    "text": "The goal of this prototype is to experiment with using AI as a coding assistant to generate code. Through the various previous prototypes, you should have a good idea of the performance of LLMs in writing SystemVerilog and C. For this prototype, you will give the LLM a task that it is (generally) considered to be more proficient at: frontend websites. By the end of this experiment you should be able to:\n\nDemonstrate how an LLM can be used as a coding partner.\nRealize the strengths and weaknesses of LLMs.\nAnalyze the quality of the LLM-generated code.\nDocument specific tips on how to use the LLM effectively."
   },
   {
-    "objectID": "lab/lab6/index.html#learning-objectives",
-    "href": "lab/lab6/index.html#learning-objectives",
-    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
+    "objectID": "lab/lab6/ai-prototype.html#learning-goals",
+    "href": "lab/lab6/ai-prototype.html#learning-goals",
+    "title": "Lab 6 AI Prototype",
     "section": "",
-    "text": "By the end of this lab you will have…\n\nDesigned and built a simple IoT device\nWritten C libraries using the CMSIS device templates to implement the SPI functionality of the MCU\nInterfaced with a temperature sensor module over an SPI link\nInterfaced the MCU with an ESP8266 module over a UART link\nUse the logic analyze functionality of the scope in the Digital Lab to debug serial communication protocols and export captured signal data.\nWritten a simple HTML page to control and display data from the peripherals connected to your MCU."
+    "text": "The goal of this prototype is to experiment with using AI as a coding assistant to generate code. Through the various previous prototypes, you should have a good idea of the performance of LLMs in writing SystemVerilog and C. For this prototype, you will give the LLM a task that it is (generally) considered to be more proficient at: frontend websites. By the end of this experiment you should be able to:\n\nDemonstrate how an LLM can be used as a coding partner.\nRealize the strengths and weaknesses of LLMs.\nAnalyze the quality of the LLM-generated code.\nDocument specific tips on how to use the LLM effectively."
   },
   {
-    "objectID": "lab/lab6/index.html#requirements",
-    "href": "lab/lab6/index.html#requirements",
-    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
-    "section": "Requirements",
-    "text": "Requirements\nBuild an internet-accessible device to control an onboard LED and measure ambient temperature. Use an ESP8266 with the provided web server code to host the webpage and use the onboard MCU GPIO and SPI peripherals to toggle an LED and to read temperature from a provided sensor chip. An end-user must be able to turn the LED ON and OFF and view the current temperature from the webpage.\nIn addition to the standard deliverables in your report (summary, schematic, etc.), your report also must include an example of a SPI read/write interaction with all pertinent data signals (e.g., CE, SCK, SDO, SDI) captured using the logic analyzer functionality of the oscilloscopes in the Digital Lab.\nAt heart, this lab asks you to consult the MCU documentation to learn how to directly control the SPI memory-mapped peripheral on the MCU, so refrain from consulting any other C device drivers that can be found on the web or elsewhere.\nNote that for this lab your SPI device driver must use the Common Microcontroller Software Interface Standard (CMSIS) device templates included in the stm32l432xx.h device header. See the provided example device drivers on the course GitHub repository for an example. The GPIO driver provides a good example of how to use the information included in the CMSIS headers.\n\n\n\n\n\n\nNoteDon’t remove DS1722 boards from the lab!\n\n\n\nThere are only a limited number of DS1722 SPI temperature sensors available for this lab. Please do not remove these devices from the digital lab so that everyone can access these shared resources."
+    "objectID": "lab/lab6/ai-prototype.html#prototype",
+    "href": "lab/lab6/ai-prototype.html#prototype",
+    "title": "Lab 6 AI Prototype",
+    "section": "Prototype",
+    "text": "Prototype\nFire up your favorite LLM. ChatGPT is a good place to start, but you may consider using other LLMs as well like Claude or Gemini. Enter the prompt below.\n\n\n\n\n\n\nNoteLLM Prompt\n\n\n\nI’m making a web portal to interface with a temperature sensor. Create a HTML page that looks good and is intuitive to show the temperature, control an LED, and change the precision of the readout.\n\n\nOnce the LLM responds, add in the code to your web server. How does it look? Does the output make sense?\nCompare this result with the outputs for this subsequent prompt:\n\n\n\n\n\n\nNoteLLM Prompt\n\n\n\nWrite me a C function to carry out a SPI transaction to retrieve a temperature reading from a DS1722 sensor. Make use of CMSIS libraries for the STM32L432KC.\n\n\nHow did it perform in this case? Was the code reasonable? Does it work when plugged into the project?"
   },
   {
-    "objectID": "lab/lab6/index.html#esp8266-web-server",
-    "href": "lab/lab6/index.html#esp8266-web-server",
-    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
-    "section": "ESP8266 Web Server",
-    "text": "ESP8266 Web Server\nBroadly speaking, everything that you see on the internet is the product of one computer presenting text to another. The text is often formatted in a special, internet-specific, way that includes information about how to display it which is referred to as hypertext. (Forgive the early internet engineers for this indulgence; I’m sure it sounded really cool at the time.) Hypertext is specified using a compact programming language called hypertext markup language or HTML. It is transferred over the internet based on a predefined set of agreements between all computers which is referred to as the hypertext transfer protocol or HTTP. The latter most of these acronyms should be familiar: whenever you type http:// into a web browser you are informing your computer that you are attempting to retrieve hypertext from the address that follows.\nThere are two common tools that interact with HTTP: the web browser, which lives on a receiving computer, sends internet requests, and renders the received hypertext; and the web server, which listens for requests from the internet and sends out hypertext in response.\nImplementing an HTTP web server on the ARM microcontroller is a non-trivial task. Instead, you will be using an ESP8266, a small WiFi development board which incorporates a TCP/IP stack as well as onboard WiFi and an integrated antenna. You are provided an Arduino language program which hosts an HTTP web server with an HTML page generated by the MCU."
-  },
-  {
-    "objectID": "lab/lab6/index.html#esp8266-mcu-interface",
-    "href": "lab/lab6/index.html#esp8266-mcu-interface",
-    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
-    "section": "ESP8266-MCU Interface",
-    "text": "ESP8266-MCU Interface\nDownload the Lab 6 starter code and support files from the class web page. You may use any code we have developed in class to help you write your code.\nESP8266 development boards are available from the E155 supply closet and are pre-programmed with the web server code. The SSID for the WiFi access points associated with each board is Lab6ESP_xx where xx is the number listed on the bottom of each board.\nThe ESP8266 board requires 3.3 V power.\nIf you are using the ESP8266 Mikroe Click board, you can just plug it into the MikroBUS socket on your development board. If after supplying power to the chip and waiting for it to initialize you do not see the expected WiFi network appear, you may need to reprogram the chip with the provided code.\nThe MCU must supply a webpage to the ESP8266, and must interpret any web browser requests from the ESP8266. The devices interface through a 125000 baud serial UART connection on the MCU and the UART TX and RX lines of the ESP8266. Note that with a UART connection the receive and transmit lines should be crossed. In other words, the TX of the transmitter should be connected to the RX of the receiver and the RX of the transmitter should be connected to the TX of the receiver.\nThe protocol is as follows:\n\nWhen the ESP8266 updates the webpage from the MCU, it sends the most recent request from the client, within /REQ:'...'\\n. For example, a user accessing the page http://&lt;server_address&gt;/ledon would result in the request /REQ:ledon being sent to the microcontroller. A user accessing the root webpage of the server, http://&lt;server_address&gt;/ would result in the request /REQ:\\n. Note that you must use http:// and not https://.\nThe MCU then transmits the entire web page to the ESP8266. The ESP8266 expects a webpage encoded as an HTML file. Therefore the webpage must start with &lt;!DOCTYPE html&gt; and end with &lt;/html&gt;. The ESP will wait for either &lt;/html&gt; or 200 ms from the last byte sent over serial before terminating the HTTP request and forwarding the content to the web browser.\n\nThe ESP8266 will create a WiFi access point named whatever SSID is labeled on the board. Connect to this WiFi network, and then go to http://192.168.4.1/ Beware that the ESP is slow and it may sometimes take a few attempts to connect."
-  },
-  {
-    "objectID": "lab/lab6/index.html#digital-temperature-sensor",
-    "href": "lab/lab6/index.html#digital-temperature-sensor",
-    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
-    "section": "Digital Temperature Sensor",
-    "text": "Digital Temperature Sensor\nThe temperature sensor you will interface with for this lab is the DS1722 Digital Thermometer with SPI/3-Wire Interface from Maxim Integrated. This chip is an example of a simple peripheral that supports an SPI interface. You will need to get a DS1722 chip from the E155 stock cabinet mounted on an SOIC-8 breakout board. There are some boards that are already soldered, but if you are unable to find any pre-soldered boards to use, there may also be some chips and extra breakout boards you can solder yourself. After getting a board, consult the DS1722 datasheet to correctly wire up the device. Make sure to thoroughly read the data sheet and refer to the pinout before attempting to interface with the device!\nThe figure below shows the corresponding pinout between the SMT pads and the header pins on the breakout board for your convenience.\n\n\n\n\n\n\nFigure 1: SMT breakout board pinout."
-  },
-  {
-    "objectID": "lab/lab6/index.html#mcu-hardware-and-the-internet-of-things",
-    "href": "lab/lab6/index.html#mcu-hardware-and-the-internet-of-things",
-    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
-    "section": "MCU Hardware and the Internet of Things",
-    "text": "MCU Hardware and the Internet of Things\nThe last component of this lab is to write a program that parses a request from the ESP8266, toggles the LED state as necessary, reads from the SPI temperature sensor, and uses this data to generate a webpage that is transmitted to the ESP8266. Make sure that the FPGA code on your board does not interfere with any of the pins which you may want to use for your sensors or else you will experience undefined behavior. In particular, make sure that the DIP switches connecting the MCU and FPGA pins are set to the open position to disconnect the two devices.\nYou will need to write an HTML webpage that displays dynamic temperature data as well as creating requests to change the state of the LED. There are many ways to do this, but we suggest the following resources for information on HTML formatting and interactive elements:\n\nhttp://www.w3schools.com/html/default.asp\nhttp://www.w3schools.com/html/html_forms.asp\n\nThe final product of this lab is a simple example of an emerging class of devices called the Internet of Things. Proponents of these devices argue that everything—from your washing machine to your car to giant factories—should be connected to the internet so that the shared data can be used to optimize and improve societal functions. Internet-controlled lighting, and internet-accessible sensors are two promising domains for the field, and are exemplified in this lab."
-  },
-  {
-    "objectID": "lab/lab6/index.html#hints",
-    "href": "lab/lab6/index.html#hints",
-    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
-    "section": "Hints",
-    "text": "Hints\nThe time spent on this lab has been highly variable in the past. If SPI doesn’t work on your first try, it can take a long time to debug because there are many different settings, all of which have to be correct. You can increase the chance of SPI working by carefully studying the MCU documentation before coding. Before connecting the peripheral device, look at the SPI outputs on a logic analyzer and make sure that the clock, SDO, and the chip enables are matching your expectations. Fix your code if they do not. Then attach the peripheral and recheck all the signals including SDI."
-  },
-  {
-    "objectID": "lab/lab6/index.html#share-your-feedback",
-    "href": "lab/lab6/index.html#share-your-feedback",
-    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
-    "section": "Share Your Feedback",
-    "text": "Share Your Feedback\n\n\n\n\n\n\nNoteShare Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
-  },
-  {
-    "objectID": "index.html#welcome-to-microps",
-    "href": "index.html#welcome-to-microps",
-    "title": "E155",
-    "section": "Welcome to MicroPs!",
-    "text": "Welcome to MicroPs!\nThis website will be the main location for course material this semester.\nBelow is a listing of some important links:\n\nSyllabus\nLabs Overview\nLecture Slides\nResources\nTutorials"
+    "objectID": "lab/lab6/ai-prototype.html#reflect",
+    "href": "lab/lab6/ai-prototype.html#reflect",
+    "title": "Lab 6 AI Prototype",
+    "section": "Reflect",
+    "text": "Reflect\nWrite up a few paragraphs reflecting on your experience using the LLM to help you code. Feel free to make full use of screenshots, code snippets, and other media as you write your reflections.\nHere are a few ideas of on what you might comment on:\n\nHow would you rate the quality of the output and why?\nDid the LLM generate any code for you? If so, how does it compare to your setup?\nHow does the LLM’s explanation compare to your reasoning for choosing your timer?\nDoes the LLM work well as a sounding board, rather than a code generator as used in previous prototypes?"
   },
   {
     "objectID": "syllabus/index.html",
@@ -1006,6 +964,76 @@
     "title": "E155 Course Syllabus",
     "section": "Educational Accessibility",
     "text": "Educational Accessibility\nHMC is committed to providing an inclusive learning environment and support for all students. Students with a disability (including mental health, chronic or temporary medical conditions) who may need some accommodation in order to fully participate in this class are encouraged to contact Educational Accessibility Services at ability@g.hmc.edu to request accommodations. Students from the other Claremont Colleges should contact their home college’s disability resources officer."
+  },
+  {
+    "objectID": "index.html#welcome-to-microps",
+    "href": "index.html#welcome-to-microps",
+    "title": "E155",
+    "section": "Welcome to MicroPs!",
+    "text": "Welcome to MicroPs!\nThis website will be the main location for course material this semester.\nBelow is a listing of some important links:\n\nSyllabus\nLabs Overview\nLecture Slides\nResources\nTutorials"
+  },
+  {
+    "objectID": "lab/lab6/index.html",
+    "href": "lab/lab6/index.html",
+    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
+    "section": "",
+    "text": "By the end of this lab you will have…\n\nDesigned and built a simple IoT device\nWritten C libraries using the CMSIS device templates to implement the SPI functionality of the MCU\nInterfaced with a temperature sensor module over an SPI link\nInterfaced the MCU with an ESP8266 module over a UART link\nUse the logic analyze functionality of the scope in the Digital Lab to debug serial communication protocols and export captured signal data.\nWritten a simple HTML page to control and display data from the peripherals connected to your MCU."
+  },
+  {
+    "objectID": "lab/lab6/index.html#learning-objectives",
+    "href": "lab/lab6/index.html#learning-objectives",
+    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
+    "section": "",
+    "text": "By the end of this lab you will have…\n\nDesigned and built a simple IoT device\nWritten C libraries using the CMSIS device templates to implement the SPI functionality of the MCU\nInterfaced with a temperature sensor module over an SPI link\nInterfaced the MCU with an ESP8266 module over a UART link\nUse the logic analyze functionality of the scope in the Digital Lab to debug serial communication protocols and export captured signal data.\nWritten a simple HTML page to control and display data from the peripherals connected to your MCU."
+  },
+  {
+    "objectID": "lab/lab6/index.html#requirements",
+    "href": "lab/lab6/index.html#requirements",
+    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
+    "section": "Requirements",
+    "text": "Requirements\nBuild an internet-accessible device to control an onboard LED and measure ambient temperature. Use an ESP8266 with the provided web server code to host the webpage and use the onboard MCU GPIO and SPI peripherals to toggle an LED and to read temperature from a provided sensor chip. An end-user must be able to turn the LED ON and OFF and view the current temperature from the webpage.\nIn addition to the standard deliverables in your report (summary, schematic, etc.), your report also must include an example of a SPI read/write interaction with all pertinent data signals (e.g., CE, SCK, SDO, SDI) captured using the logic analyzer functionality of the oscilloscopes in the Digital Lab.\nAt heart, this lab asks you to consult the MCU documentation to learn how to directly control the SPI memory-mapped peripheral on the MCU, so refrain from consulting any other C device drivers that can be found on the web or elsewhere.\nNote that for this lab your SPI device driver must use the Common Microcontroller Software Interface Standard (CMSIS) device templates included in the stm32l432xx.h device header. See the provided example device drivers on the course GitHub repository for an example. The GPIO driver provides a good example of how to use the information included in the CMSIS headers.\n\n\n\n\n\n\nNoteDon’t remove DS1722 boards from the lab!\n\n\n\nThere are only a limited number of DS1722 SPI temperature sensors available for this lab. Please do not remove these devices from the digital lab so that everyone can access these shared resources."
+  },
+  {
+    "objectID": "lab/lab6/index.html#esp8266-web-server",
+    "href": "lab/lab6/index.html#esp8266-web-server",
+    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
+    "section": "ESP8266 Web Server",
+    "text": "ESP8266 Web Server\nBroadly speaking, everything that you see on the internet is the product of one computer presenting text to another. The text is often formatted in a special, internet-specific, way that includes information about how to display it which is referred to as hypertext. (Forgive the early internet engineers for this indulgence; I’m sure it sounded really cool at the time.) Hypertext is specified using a compact programming language called hypertext markup language or HTML. It is transferred over the internet based on a predefined set of agreements between all computers which is referred to as the hypertext transfer protocol or HTTP. The latter most of these acronyms should be familiar: whenever you type http:// into a web browser you are informing your computer that you are attempting to retrieve hypertext from the address that follows.\nThere are two common tools that interact with HTTP: the web browser, which lives on a receiving computer, sends internet requests, and renders the received hypertext; and the web server, which listens for requests from the internet and sends out hypertext in response.\nImplementing an HTTP web server on the ARM microcontroller is a non-trivial task. Instead, you will be using an ESP8266, a small WiFi development board which incorporates a TCP/IP stack as well as onboard WiFi and an integrated antenna. You are provided an Arduino language program which hosts an HTTP web server with an HTML page generated by the MCU."
+  },
+  {
+    "objectID": "lab/lab6/index.html#esp8266-mcu-interface",
+    "href": "lab/lab6/index.html#esp8266-mcu-interface",
+    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
+    "section": "ESP8266-MCU Interface",
+    "text": "ESP8266-MCU Interface\nDownload the Lab 6 starter code and support files from the class web page. You may use any code we have developed in class to help you write your code.\nESP8266 development boards are available from the E155 supply closet and are pre-programmed with the web server code. The SSID for the WiFi access points associated with each board is Lab6ESP_xx where xx is the number listed on the bottom of each board.\nThe ESP8266 board requires 3.3 V power.\nIf you are using the ESP8266 Mikroe Click board, you can just plug it into the MikroBUS socket on your development board. If after supplying power to the chip and waiting for it to initialize you do not see the expected WiFi network appear, you may need to reprogram the chip with the provided code.\nThe MCU must supply a webpage to the ESP8266, and must interpret any web browser requests from the ESP8266. The devices interface through a 125000 baud serial UART connection on the MCU and the UART TX and RX lines of the ESP8266. Note that with a UART connection the receive and transmit lines should be crossed. In other words, the TX of the transmitter should be connected to the RX of the receiver and the RX of the transmitter should be connected to the TX of the receiver.\nThe protocol is as follows:\n\nWhen the ESP8266 updates the webpage from the MCU, it sends the most recent request from the client, within /REQ:'...'\\n. For example, a user accessing the page http://&lt;server_address&gt;/ledon would result in the request /REQ:ledon being sent to the microcontroller. A user accessing the root webpage of the server, http://&lt;server_address&gt;/ would result in the request /REQ:\\n. Note that you must use http:// and not https://.\nThe MCU then transmits the entire web page to the ESP8266. The ESP8266 expects a webpage encoded as an HTML file. Therefore the webpage must start with &lt;!DOCTYPE html&gt; and end with &lt;/html&gt;. The ESP will wait for either &lt;/html&gt; or 200 ms from the last byte sent over serial before terminating the HTTP request and forwarding the content to the web browser.\n\nThe ESP8266 will create a WiFi access point named whatever SSID is labeled on the board. Connect to this WiFi network, and then go to http://192.168.4.1/ Beware that the ESP is slow and it may sometimes take a few attempts to connect."
+  },
+  {
+    "objectID": "lab/lab6/index.html#digital-temperature-sensor",
+    "href": "lab/lab6/index.html#digital-temperature-sensor",
+    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
+    "section": "Digital Temperature Sensor",
+    "text": "Digital Temperature Sensor\nThe temperature sensor you will interface with for this lab is the DS1722 Digital Thermometer with SPI/3-Wire Interface from Maxim Integrated. This chip is an example of a simple peripheral that supports an SPI interface. You will need to get a DS1722 chip from the E155 stock cabinet mounted on an SOIC-8 breakout board. There are some boards that are already soldered, but if you are unable to find any pre-soldered boards to use, there may also be some chips and extra breakout boards you can solder yourself. After getting a board, consult the DS1722 datasheet to correctly wire up the device. Make sure to thoroughly read the data sheet and refer to the pinout before attempting to interface with the device!\nThe figure below shows the corresponding pinout between the SMT pads and the header pins on the breakout board for your convenience.\n\n\n\n\n\n\nFigure 1: SMT breakout board pinout."
+  },
+  {
+    "objectID": "lab/lab6/index.html#mcu-hardware-and-the-internet-of-things",
+    "href": "lab/lab6/index.html#mcu-hardware-and-the-internet-of-things",
+    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
+    "section": "MCU Hardware and the Internet of Things",
+    "text": "MCU Hardware and the Internet of Things\nThe last component of this lab is to write a program that parses a request from the ESP8266, toggles the LED state as necessary, reads from the SPI temperature sensor, and uses this data to generate a webpage that is transmitted to the ESP8266. Make sure that the FPGA code on your board does not interfere with any of the pins which you may want to use for your sensors or else you will experience undefined behavior. In particular, make sure that the DIP switches connecting the MCU and FPGA pins are set to the open position to disconnect the two devices.\nYou will need to write an HTML webpage that displays dynamic temperature data as well as creating requests to change the state of the LED. There are many ways to do this, but we suggest the following resources for information on HTML formatting and interactive elements:\n\nhttp://www.w3schools.com/html/default.asp\nhttp://www.w3schools.com/html/html_forms.asp\n\nThe final product of this lab is a simple example of an emerging class of devices called the Internet of Things. Proponents of these devices argue that everything—from your washing machine to your car to giant factories—should be connected to the internet so that the shared data can be used to optimize and improve societal functions. Internet-controlled lighting, and internet-accessible sensors are two promising domains for the field, and are exemplified in this lab."
+  },
+  {
+    "objectID": "lab/lab6/index.html#hints",
+    "href": "lab/lab6/index.html#hints",
+    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
+    "section": "Hints",
+    "text": "Hints\nThe time spent on this lab has been highly variable in the past. If SPI doesn’t work on your first try, it can take a long time to debug because there are many different settings, all of which have to be correct. You can increase the chance of SPI working by carefully studying the MCU documentation before coding. Before connecting the peripheral device, look at the SPI outputs on a logic analyzer and make sure that the clock, SDO, and the chip enables are matching your expectations. Fix your code if they do not. Then attach the peripheral and recheck all the signals including SDI."
+  },
+  {
+    "objectID": "lab/lab6/index.html#share-your-feedback",
+    "href": "lab/lab6/index.html#share-your-feedback",
+    "title": "Lab 6: The Internet of Things and Serial Peripheral Interface",
+    "section": "Share Your Feedback",
+    "text": "Share Your Feedback\n\n\n\n\n\n\nNoteShare Your Feedback!\n\n\n\nIf you caught any typos or have any suggestions for this page, please open an issue on the website Github repository. Click the link here for instructions on how to create an issue."
   },
   {
     "objectID": "lab/lab6/specs.html",
