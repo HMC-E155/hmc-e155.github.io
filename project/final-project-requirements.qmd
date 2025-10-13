@@ -31,9 +31,10 @@ You can find examples of past final projects on the class web page. Examples inc
 
 ## Budget
 
+**UNDER CONSTRUCTION DO NOT BUY ANYTHING UNTIL PROF SPENCER CONFIRMS DETAILS**
+
 If your team needs parts that are not available in the stockroom, you may spend up to \$50 to purchase them. 
 You will need to save your receipts, fill out a reimbursement form available from the [department website](https://www.hmc.edu/engineering/current-student-information/department-forms/), and have me approve the reimbursement (list me as the faculty advisor on the form).
-You may exceed this budget, but you must pay the remainder out of your own pocket.
 
 ## Deliverables
 
@@ -42,11 +43,14 @@ Your team is responsible for the following deliverables at the dates described a
 ### Project Proposal
 
 A 2-page proposal describing what you plan to build. It must be specific enough that I can tell when you demonstrate your project that it meets the specs of the proposal. 
-Do not list stretch goals or wiggle words; simply state what you are committing to deliver. You may need to do some preliminary technical work to gain confidence you can deliver what you promise. 
-Include a bill of materials with the parts you expect to need along with prices for any supplies that are not available in the stock room. 
-Describe the main subsystems of the design and the features of the MCU that you plan to use.
-Explain the new piece(s) of hardware and show that both the FPGA and MCU are performing nontrivial functions appropriate to each.
-Include a block diagram showing the components and the interfaces between each.
+Do not list stretch goals or wiggle words; simply state what you are committing to deliver. You may need to do some preliminary technical work to gain confidence you can deliver what you promise. The proposal must include the following:
+
+* Include a bill of materials with the parts you expect to need along with prices for any supplies that are not available in the stock room. 
+* Describe the main subsystems of the design and the features of the MCU that you plan to use.
+* Explain the new piece(s) of hardware and show that both the FPGA and MCU are performing nontrivial functions appropriate to each.
+* Include a block diagram showing the components and the interfaces between each.
+* Include calculations of performance parameters that are important to the project (frame rates, data rates, ADC bits, Power levels, FFT sizes, etc.)
+* Include a rough schedule and work breakdown.
 
 ### Midpoint Report & Demo
 

@@ -9,15 +9,16 @@ The goal of the proposal is to describe what you plan to build and how you plan 
 The specifications below provide the expectations for the project proposal.
 
 It should be no longer than 2-pages worth of text along with any technical documentation needed (i.e., diagrams, tables, or other figures do not count against the 2-page limit).
-The point is for you to make your description cleard, direct, and concise.
+The point is for you to make your description clear, direct, and concise.
 
 While you are free to organize your proposal in the way that best suits your project, you should be sure to address the following sections:
 
 - Project Description and Overview
-- Block Diagram
-- Schedule (e.g., Gantt chart or similar)
 - FPGA Design Details
 - MCU Design Details
+- Calculations relevant to the system's performance - bandwidths, data rates, FFT widths, frame rates, etc.
+- Diagram indicating chips, connection, and protocols
+- Schedule and work breakdown (e.g., Gantt chart or similar)
 - Bill of Materials/Budget
 
 
@@ -49,6 +50,7 @@ While you are free to organize your proposal in the way that best suits your pro
 - [ ] Completely clear what the project must do to meet specs.
 - [ ] Rough timeline included which lists the tasks which need to be completed, the order in which they will be pursued, and the time they are expected to take.
 - [ ] Short explanation of how the project tasks will be divided among the team members.
+- [ ] Calculation of performance critical parameters is present.
 - [ ] Writing is well organized
 - [ ] No grammar or spelling issues.
 
