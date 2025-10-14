@@ -11,6 +11,8 @@ The goal of this prototype is to explore how AI handles design modularity when i
 - Compare a monolithic prompt versus decomposed prompts on quality and correctness.
 - Document specific tips on how to prompt an LLM effectively for FSM-based designs.
 
+Build both of the prototypes below and compare their performance in your reflection.
+
 ## Prototype A: Monolithic Prompt (All-at-once)
 
 Fire up your favorite LLM. ChatGPT is a good place to start, but you may consider using other LLMs as well like Claude or Gemini. Enter the prompt below.
