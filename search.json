@@ -767,14 +767,14 @@
     "href": "lab/lab3/ai-prototype.html",
     "title": "Lab 3 AI Prototype",
     "section": "",
-    "text": "The goal of this prototype is to explore how AI handles design modularity when implementing digital systems. By the end of this experiment you should be able to:\n\nDemonstrate how an LLM can be used as a coding partner for modular designs.\nCompare a monolithic prompt versus decomposed prompts on quality and correctness.\nDocument specific tips on how to prompt an LLM effectively for FSM-based designs."
+    "text": "The goal of this prototype is to explore how AI handles design modularity when implementing digital systems. By the end of this experiment you should be able to:\n\nDemonstrate how an LLM can be used as a coding partner for modular designs.\nCompare a monolithic prompt versus decomposed prompts on quality and correctness.\nDocument specific tips on how to prompt an LLM effectively for FSM-based designs.\n\nBuild both of the prototypes below and compare their performance in your reflection."
   },
   {
     "objectID": "lab/lab3/ai-prototype.html#learning-goals",
     "href": "lab/lab3/ai-prototype.html#learning-goals",
     "title": "Lab 3 AI Prototype",
     "section": "",
-    "text": "The goal of this prototype is to explore how AI handles design modularity when implementing digital systems. By the end of this experiment you should be able to:\n\nDemonstrate how an LLM can be used as a coding partner for modular designs.\nCompare a monolithic prompt versus decomposed prompts on quality and correctness.\nDocument specific tips on how to prompt an LLM effectively for FSM-based designs."
+    "text": "The goal of this prototype is to explore how AI handles design modularity when implementing digital systems. By the end of this experiment you should be able to:\n\nDemonstrate how an LLM can be used as a coding partner for modular designs.\nCompare a monolithic prompt versus decomposed prompts on quality and correctness.\nDocument specific tips on how to prompt an LLM effectively for FSM-based designs.\n\nBuild both of the prototypes below and compare their performance in your reflection."
   },
   {
     "objectID": "lab/lab3/ai-prototype.html#prototype-a-monolithic-prompt-all-at-once",
