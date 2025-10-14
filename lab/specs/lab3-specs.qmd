@@ -2,10 +2,6 @@
 
 - [ ] Circuit correctly reads inputs from $4 \times 4$ keypad.
 - [ ] Dual seven-segment display shows the last two hexadecimal digits pressed.
-- [ ] Most recent numeric entry is shown on the right.
-- [ ] Design does not lock up when multiple buttons are pressed at once. (i.e., it just holds the current values on the display and functions properly again when the buttons are released.)
-- [ ] Each button press registered only once (e.g., no switch bouncing)
-- [ ] Seven segment displays are same brightness regardless of how many segments are illuminated.
 - [ ] Design has no latches.
 - [ ] Design has no tristate buffers.
 - [ ] Report includes state transition diagram(s) illustrating the operation of the system.
@@ -13,8 +9,11 @@
 #### Excellence
 
 - [ ] Design uses synchronizers on asynchronous inputs to mitigate metastability.
+- [ ] Each button press registered only once (e.g., no switch bouncing)
+- [ ] Design does not lock up when multiple buttons are pressed at once. (i.e., it just holds the current values on the display and functions properly again when the buttons are released.)
 - [ ] Design only registers first button press if additional buttons are pressed down while holding down one button.
-- [ ] Keypad and seven-segment display are aligned in the same orientation (i.e., the top of the numbers on both are facing the same direction).
 - [ ] State transition diagram is completely specified (i.e., all transitions between states are specified, output conditions specified in each state)
 - [ ] Report includes state transition table to document the nextstate and output values for each state based on the current state and inputs.
+- [ ] State machines are implemented in canonical form (one state update block that controls only the machine's state, one next state block, and one output block).  
+- [ ] Other logic elements with state (like counters or synchronizers) are wrapped in appropriate modules and do not share blocks with FSMs.
 - [ ] Report explains tradeoffs between the chosen design decisions and alternatives (e.g., why did you select a certain switch debouncing strategy and what are the tradeoffs between your chosen method and others?).

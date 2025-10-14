@@ -4,11 +4,10 @@
 - [ ] Measured speed matches true motor speed and direction (calculations should be provided in the report to verify this).
 - [ ] Code uses interrupts (rather than polling or timers) to detect encoder pulses.
 - [ ] Interrupt code does not miss any encoder pulses at normal speed.
-- [ ] Motor speed is reported as zero when it is not spinning
+- [ ] Motor speed is reported as zero when it is not spinning.
 
 #### Excellence
 
 - [ ] Design uses all edges of encoder pulses to achieve highest resolution measurement.
-- [ ] MCU does not miss any pulses at high speed and outputs a non-zero velocity at low speeds.
-- [ ] Report compares the performance of interrupt based code to manual polling at high speeds.
-- [ ] Report includes flowchart illustrating main steps of the program and function calls.
+- [ ] MCU does not miss any pulses at high speed (Up to 24V! Don't test there for too long though) and outputs a non-zero velocity at low speeds (down to 0.1V / just above stall).
+- [ ] Report compares the performance of interrupt based code to manual polling at high speeds.  This comparison is quantitative and includes the maximum revolutions/second achievable by each implementation.
