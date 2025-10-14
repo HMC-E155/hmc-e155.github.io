@@ -69,6 +69,8 @@ You should design your system to take full advantage of both signals to get the 
 In Lab 6, you will learn how to use the UART peripheral to send binary data between devices, and print to the terminal embedded in Segger.
 For this lab, you can follow [this tutorial](../../tutorials/tutorial-posts/printf-no-uart/index.qmd) on using `printf` without UART.
 
+A datasheet for the motor is linked on the side of this page, but note that ours are slightly different: they have 408 pulse per rotation, and rotate at ~2.5 rev/s at 12V.
+
 ## Credits
 
 This lab was original developed in 2024 by Kavi Dey ’26 and Prof. Josh Brake.

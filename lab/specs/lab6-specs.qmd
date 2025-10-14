@@ -12,4 +12,4 @@
 #### Excellence
 
 - [ ] Report includes sample SPI transaction from logic analyzer
-- [ ] System reads temperature values at either user-configured resolution (e.g., user can choose from 8/9/10/11/12-bit resolution on webpage).
+- [ ] System reads temperature values at any user-configured resolution (e.g., user can choose from 8/9/10/11/12-bit resolution on webpage).
