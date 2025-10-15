@@ -343,18 +343,25 @@
     "text": "The goal of the proposal is to describe what you plan to build and how you plan to build it. The specifications below provide the expectations for the project proposal.\nIt should be no longer than 2-pages worth of text along with any technical documentation needed (i.e., diagrams, tables, or other figures do not count against the 2-page limit). The point is for you to make your description clear, direct, and concise.\nWhile you are free to organize your proposal in the way that best suits your project, you should be sure to address the following sections:"
   },
   {
-    "objectID": "project/specs/project-proposal-specs.html#proficiency",
-    "href": "project/specs/project-proposal-specs.html#proficiency",
+    "objectID": "project/specs/project-proposal-specs.html#general",
+    "href": "project/specs/project-proposal-specs.html#general",
     "title": "Project Proposal Specs",
-    "section": "Proficiency",
-    "text": "Proficiency\n\nGeneral\n\nBill of materials included with list of all items needed for the project\nProject lists specifications for design\nIdentifies the riskiest element of the project\n\n\n\nTechnical\n\nDescribes microcontroller use\nProject uses FPGA\nProject uses new hardware\n\n\n\nDocumentation\n\nBlock diagram of system provided showing all elements of the design and their connections."
+    "section": "General",
+    "text": "General\n\nProficiency\n\nBill of materials included with list of all items needed for the project\nProject lists specifications for design\nIdentifies the riskiest element of the project\n\n\n\nExcellence\n\nCompletely clear what the project must do to meet specs.\nRough timeline included which lists the tasks which need to be completed, the order in which they will be pursued, and the time they are expected to take.\nShort explanation of how the project tasks will be divided among the team members.\nCalculation of performance critical parameters is present.\nWriting is well organized\nNo grammar or spelling issues."
   },
   {
-    "objectID": "project/specs/project-proposal-specs.html#excellence",
-    "href": "project/specs/project-proposal-specs.html#excellence",
+    "objectID": "project/specs/project-proposal-specs.html#technical",
+    "href": "project/specs/project-proposal-specs.html#technical",
     "title": "Project Proposal Specs",
-    "section": "Excellence",
-    "text": "Excellence\n\nGeneral\n\nCompletely clear what the project must do to meet specs.\nRough timeline included which lists the tasks which need to be completed, the order in which they will be pursued, and the time they are expected to take.\nShort explanation of how the project tasks will be divided among the team members.\nCalculation of performance critical parameters is present.\nWriting is well organized\nNo grammar or spelling issues.\n\n\n\nTechnical\n\nProject uses functionality of microcontroller not previously covered in labs\nProject uses functionality of FPGA not previously covered in labs\nProject uses new non-trivial new hardware (e.g., digital chip with non-trivial interface)\n\n\n\nDocumentation\n\nBill of materials includes part numbers, quantities, and prices for all components. Prices for components available in the stock room should be indicated as “stockroom”.\nBlock diagram of system clearly deliniates all protocols and interfaces.\nBlock diagram is computer drawn and neatly laid out."
+    "section": "Technical",
+    "text": "Technical\n\nProficiency\n\nDescribes microcontroller use\nDescribes FPGA use\nProject uses new hardware\n\n\n\nExcellence\n\nProject uses functionality of microcontroller not previously covered in labs\nProject uses functionality of FPGA not previously covered in labs\nProject uses new non-trivial new hardware (e.g., digital chip with non-trivial interface)"
+  },
+  {
+    "objectID": "project/specs/project-proposal-specs.html#documentation",
+    "href": "project/specs/project-proposal-specs.html#documentation",
+    "title": "Project Proposal Specs",
+    "section": "Documentation",
+    "text": "Documentation\n\nProficiency\n\nBlock diagram of system provided showing all elements of the design and their connections.\n\n\n\nExcellence\n\nBill of materials includes part numbers, quantities, and prices for all components. Prices for components available in the stock room should be indicated as “stockroom”.\nBlock diagram of system clearly describes all protocols and interfaces.\nBlock diagram is computer drawn and neatly laid out."
   },
   {
     "objectID": "project/specs/project-design-review-presentation-specs.html",
