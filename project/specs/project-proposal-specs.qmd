@@ -45,7 +45,7 @@ While you are free to organize your proposal in the way that best suits your pro
 ### Proficiency
 
 - [ ] Describes microcontroller use
-- [ ] Project uses FPGA
+- [ ] Describes FPGA use
 - [ ] Project uses new hardware
 
 ### Excellence
