@@ -347,7 +347,7 @@
     "href": "project/specs/project-proposal-specs.html#general",
     "title": "Project Proposal Specs",
     "section": "General",
-    "text": "General\n\nProficiency\n\nBill of materials included with list of all items needed for the project\nProject lists specifications for design\nIdentifies the riskiest element of the project\n\n\n\nExcellence\n\nCompletely clear what the project must do to meet specs.\nRough timeline included which lists the tasks which need to be completed, the order in which they will be pursued, and the time they are expected to take.\nShort explanation of how the project tasks will be divided among the team members.\nCalculation of performance critical parameters is present.\nWriting is well organized\nNo grammar or spelling issues."
+    "text": "General\n\nProficiency\n\nBill of materials included with list of all items needed for the project\nProject lists specifications for design\nIdentifies the riskiest element of the project\n\n\n\nExcellence\n\nBill of materials includes part numbers, quantities, and prices for all components including shipping and taxes. Prices for components available in the stock room should be indicated as “stockroom”.\nCompletely clear what the project must do to meet specs.\nRough timeline included which lists the tasks which need to be completed, the order in which they will be pursued, the time they are expected to take, and how the tasks will be divided among the team members.\nCalculation of performance critical parameters is present.\nWriting is well organized and no grammar or spelling issues."
   },
   {
     "objectID": "project/specs/project-proposal-specs.html#technical",
@@ -361,7 +361,7 @@
     "href": "project/specs/project-proposal-specs.html#documentation",
     "title": "Project Proposal Specs",
     "section": "Documentation",
-    "text": "Documentation\n\nProficiency\n\nBlock diagram of system provided showing all elements of the design and their connections.\n\n\n\nExcellence\n\nBill of materials includes part numbers, quantities, and prices for all components. Prices for components available in the stock room should be indicated as “stockroom”.\nBlock diagram of system clearly describes all protocols and interfaces.\nBlock diagram is computer drawn and neatly laid out."
+    "text": "Documentation\n\nProficiency\n\nBlock diagram of system provided showing all elements of the design and their connections.\n\n\n\nExcellence\n\nBlock diagram of system clearly describes all protocols and interfaces.\nBlock diagram is computer drawn and neatly laid out."
   },
   {
     "objectID": "project/specs/project-design-review-presentation-specs.html",
