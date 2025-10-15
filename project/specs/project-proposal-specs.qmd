@@ -21,31 +21,17 @@ While you are free to organize your proposal in the way that best suits your pro
 - Schedule and work breakdown (e.g., Gantt chart or similar)
 - Bill of Materials/Budget
 
+{{< pagebreak >}}
 
+## General
 
-
-## Proficiency
-
-### General
+### Proficiency
 
 - [ ] Bill of materials included with list of all items needed for the project
 - [ ] Project lists specifications for design
 - [ ] Identifies the riskiest element of the project
 
-### Technical 
-
-- [ ] Describes microcontroller use
-- [ ] Project uses FPGA
-- [ ] Project uses new hardware
-
-### Documentation
-
-- [ ] Block diagram of system provided showing all elements of the design and their connections.
-
-
-## Excellence
-
-### General
+### Excellence
 
 - [ ] Completely clear what the project must do to meet specs.
 - [ ] Rough timeline included which lists the tasks which need to be completed, the order in which they will be pursued, and the time they are expected to take.
@@ -54,14 +40,29 @@ While you are free to organize your proposal in the way that best suits your pro
 - [ ] Writing is well organized
 - [ ] No grammar or spelling issues.
 
-### Technical 
+## Technical 
+
+### Proficiency
+
+- [ ] Describes microcontroller use
+- [ ] Project uses FPGA
+- [ ] Project uses new hardware
+
+### Excellence
 
 - [ ] Project uses functionality of microcontroller not previously covered in labs
 - [ ] Project uses functionality of FPGA not previously covered in labs
 - [ ] Project uses new non-trivial new hardware (e.g., digital chip with non-trivial interface)
 
-### Documentation
+
+## Documentation
+
+### Proficiency
+
+- [ ] Block diagram of system provided showing all elements of the design and their connections.
+
+### Excellence
 
 - [ ] Bill of materials includes part numbers, quantities, and prices for all components. Prices for components available in the stock room should be indicated as "stockroom".
-- [ ] Block diagram of system clearly deliniates all protocols and interfaces.
+- [ ] Block diagram of system clearly describes all protocols and interfaces.
 - [ ] Block diagram is computer drawn and neatly laid out.
