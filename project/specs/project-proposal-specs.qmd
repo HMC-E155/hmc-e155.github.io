@@ -33,12 +33,11 @@ While you are free to organize your proposal in the way that best suits your pro
 
 ### Excellence
 
+- [ ] Bill of materials includes part numbers, quantities, and prices for all components including shipping and taxes. Prices for components available in the stock room should be indicated as "stockroom".
 - [ ] Completely clear what the project must do to meet specs.
-- [ ] Rough timeline included which lists the tasks which need to be completed, the order in which they will be pursued, and the time they are expected to take.
-- [ ] Short explanation of how the project tasks will be divided among the team members.
+- [ ] Rough timeline included which lists the tasks which need to be completed, the order in which they will be pursued, the time they are expected to take, and how the  tasks will be divided among the team members.
 - [ ] Calculation of performance critical parameters is present.
-- [ ] Writing is well organized
-- [ ] No grammar or spelling issues.
+- [ ] Writing is well organized and no grammar or spelling issues.
 
 ## Technical 
 
@@ -63,6 +62,5 @@ While you are free to organize your proposal in the way that best suits your pro
 
 ### Excellence
 
-- [ ] Bill of materials includes part numbers, quantities, and prices for all components. Prices for components available in the stock room should be indicated as "stockroom".
 - [ ] Block diagram of system clearly describes all protocols and interfaces.
 - [ ] Block diagram is computer drawn and neatly laid out.
