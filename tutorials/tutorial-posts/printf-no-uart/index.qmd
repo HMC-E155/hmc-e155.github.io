@@ -1,6 +1,6 @@
 ---
 title: 'Using `printf` for MCU debugging'
-categories: [MCU]
+categories: [MCU, Video, SEGGER Embedded Studio]
 ---
 
 In Lab 6 you will learn how to use the UART peripheral to send debugging logs to your laptop from the MCU.
@@ -38,3 +38,8 @@ Note that this only works in the debug mode, and the logs appear here:
 ![Screenshot of Segger demonstrating printouts using the above code](images/printf-example.png)
 
 If you want to include floating point values in your prints, you need to enable fPrintf Floating Point Support in your solution settings. Right click on the solution name in the left panel and select options. In the window that opens search for "float" and change "Printf Floating Point Supported" from *No* to *Yes*.
+
+<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="
+https://www.loom.com/embed/c27d30aba2f147a1ae01e26391e328f0?sid=017f1c0f-ff7d-4ea9-a99d-17ca72262646" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+{{< include /resources/github-issue-footer.qmd >}}
