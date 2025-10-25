@@ -48,60 +48,14 @@ Follow the steps in this guide to test your FPGA and MCU boards. Write some Veri
 
 Before you start working on this lab, you should familiarize yourself with the documentation for both the UPduino v3.1 and Nucleo-L432KC boards. The website has links for the UPduino v3.1 User Guide and the Nucleo-L432KC User Manuals on the Resources tab. These two documents contain information that will be helpful for answering questions that you may have during the course of this lab.
 
-## Background
-
-In the 1980’s and 1990’s, digital design projects were built from a truckload of chips, each containing a few logic gates such as 74xx series logic gates or simple programmable array logic chips (PALs). Such projects involve placing and wiring together dozens of chips on a breadboard. It was easy to make a wiring mistake or burn out a chip and spend hours tracking down the problem. Now you can perform all of your digital logic on a single field-programmable gate array (FPGA) to greatly reduce the necessary wiring and number of chips. Later in the course, you will use the Cortex-M4 microcontroller to write programs in assembly language and C that can interface with external hardware and the FPGA.
-
-
-## Nucleo-L432KC Development Board
-
-The Nucleo-L432KC development board provides a convenient platform to test and develop embedded systems applications. The board is focused around an STM32L432KC MCU and provides voltage regulators to provide power to the chip, various breakout headers which allow access to the pins of the microcontroller chip, a reset button and user input button, configuration jumpers, and an embedded ST-LINK programmer/debugger.
-
-### Programming
-
-The STM32L432KC has an embedded ST-LINK/V2-1 programmer and debugger as described in the Nucleo-32 User Manual. The main purpose of the ST-LINK is to provide the ability to interface with the serial wire debug (SWD) interface of the MCU via USB.
-
-There are a variety of integrated development environments (IDEs) which can be used to interact with the device including PlatformIO, Keil μVision, and SEGGER Embedded Studio. The IDEs provide a helpful wrapper around compiler toolchains such as GNU Compiler Collection (GCC) toolchain to facilitate easy programming and debugging. In this course you are welcome to use any IDE you would like, although instruction and support will be focused around SEGGER Embedded Studio which is based on the GCC toolchain.[^1]
-
-
-## UPduino v3.1 FPGA Development Board
-
-The UPduino v3.1 is developed by tinyvision.ai and designed around a Lattice Semiconductor UP5K field programmable gate array (FPGA). Section 5.3 of the iCE40 UltraPlus Family Data Sheet (FPGA-DS-02008-2.0) explains the naming of the chip.
-
-::: {#fig-ic40-part-number-description}
-![](images/ice40_part_number_description.png)
-
-ice40 Part Number Description
-:::
-
-The Lattice UP5K is very similar to the Cyclone IV architecture that is used to introduce FPGAs in E85.
-At its root, the FPGA consists of Logic Cells (Lattice’s version of the Intel/Altera Logic Elements you learned about in E85) which can be internally connected within Programmable Logic Blocks (PLBs) within the FPGA to form digital circuits.
-Each Logic Cell (LC) consists of a 4-input look-up table (LUT) and a programmable D flip-flop, along with additional clock control and carry logic. 
-Figure 3.2 from the FPGA datasheet shows the basic architecture of a PLB and LC.
-
-::: {#fig-ice40-plb-block-diagram}
-![](images/ice40_plb_block_diagram.png)
-
-ice40 PLB Block Diagram.
-:::
-
-The UP5K on our UPduino v3.1 board is the 48-pin QFN package.
-As you can see from the table, it contains 5280 logic cells, 30 Embedded Block Ram (EBR) Memory Blocks of 4 Kbits each, 4 256-bit Single Port synchronous RAM Memory Blocks, and an on-board high-frequency (48 MHz) and low-frequency (10 kHz) oscillator.
-
-::: {#fig-ice40-resource-table}
-![](images/ice40_resource_table.png)
-
-ice40 Resource Table.
-:::
-
-### Digital Design Synthesis and Programming
-
-The FPGA is programmed using the onboard programmer via the synthesis tool Lattice Radiant. After setting up and compiling the Radiant project, Radiant will generate bitstream files which are used to configure the FPGA.
-
-More details will be provided later in this lab writeup.
+You should also read [this tutorial](/tutorials/tutorial-posts/background/index.qmd) with important programming instructions and background information for the FPGA and MCU.
 
 ## Development Board Assembly
 Before you start working on your FPGA design, you need to assemble your development board as described in [this tutorial](/tutorials/tutorial-posts/dev-board-assembly/index.qmd). The majority of your time on this lab will likely be spent assembling the board, so make sure to plan ahead.
+
+### Create Your Git Repository
+The first step before you begin writing any code is to create a Git repository.
+Follow the [linked tutorial](/tutorials/tutorial-videos/creating-and-initializing-your-git-repo.qmd) to get started with your project.
 
 ## FPGA Design
 
@@ -147,71 +101,6 @@ If you look at that Verilog code, you'll notice an instantiated module called HS
 This module is part of the iCE40 Technology Library (see the iCE40 Technology Library document linked on the course website) and is a built-in module included with Lattice Radiant designed for controlling the internal oscillator on the iCE40 chip.
 You can simply copy the line from the testing program and use it in your project.
 :::
-
-### Create Your Git Repository
-
-The first step before you begin writing any code is to create a Git repository.
-Follow the following steps to get started with your project.
-
-1. Create a new folder for your project. Here is a suggested template folder structure to use. Add a few sentences to your README to describe the contents of the repository. For example, for this lab you might say something about holding code to verify that your FPGA and MCU are working properly.
-
-```markdown
-/
-├── fpga
-│   ├── src
-│   ├── sim
-│   ├── radiant_project
-│   ├── .gitignore
-├── mcu
-│   ├── src
-│   ├── segger_project
-│   ├── .gitignore
-├── README.md
-```
-
-
-2. Populate your .gitignore files. This file tells git which files and folders should not be tracked. It's best practice to ignore many of the miscellaneous configuration files that Radiant and SEGGER Embedded Studio generate. Sample .gitignore files are included below. Paste the contents of these files into the .gitignore files you created.
-
-> Sample Radiant .gitignore
-  ```
-  # Lattice Radiant files
-  *.html
-  impl*/
-  *.xml
-  .build_status
-  .run_manager.ini
-  .recovery
-  .spread_sheet.ini
-  .spreadsheet_view.ini
-  *.dir/
-  *.log
-  *.tcl
-  *.ccl
-  *.srp
-  *.dmp
-  ._Real_._Math_.vhd
-  ```
-
-> Sample SEGGER Embedded Studio .gitignore
-  ```
-  # Segger Embedded Studio
-  **/Output/
-  **/Debug/
-  *.emSession
-  *.jlink
-  ```
-
-3. Initialize your git repository using `git init`.
-4. Add the existing files in your folder using `git add .`. (Note: the `.` means to add all the contents of the current directory, so you'll need to make sure you're at the root).
-5. Make an initial commit with the folder structure above by typing `git commit -m "Initializing Lab 1 repository"`.
-6. Open the Github web interface and create a new repository on Github ([link](https://github.com/new)). Name your repository something descriptive like `e155-lab1`. Optionally add a short description.
-7. Link your local git repository to the new remote repository by adding a new remote. This will look something like `git remote set-url origin git@github.com:<username>/<repo>.git` where you'll need to replace `<username>` and `<repo>` with your specific information. For my example, this command is ``git remote set-url origin git@github.com:joshbrake/e155-lab1.git`
-8. Push your local commit to the remote using `git push origin main`. If git complains that it doesn't know what main is, then your branch might be named master. In this case, run `git branch -m master main` and run the push command again.
-9. Navigate to your repository page on Github and you should see your folder structure there.
-
-Here's a video walking through the steps above as well.
-
-<div style="position: relative; padding-bottom: 64.63195691202873%; height: 0;"><iframe src="https://www.loom.com/embed/ee828a5b3c024653a9c210d2451a7251?sid=844f2d0e-c6b0-47ef-aacd-5e7cb4b36aab" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
 
 ### Design and Synthesis in Radiant
 
