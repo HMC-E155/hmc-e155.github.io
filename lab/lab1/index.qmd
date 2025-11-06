@@ -163,6 +163,65 @@ If you're not seeing all the signals in your design, it's possible that QuestaSi
 
 You should see the `led` and `seg` outputs displaying appropriate values. Check the outputs against your expectations. If you find any discrepancies, fix the code and resimulate. A helpful shortcut to avoid restarting ModelSim is that you can edit the module by finding it under “work” in the library pane, right clicking, and choosing Edit. Make your fixes, then right click again and choose `Recompile`. Then type `restart -f` in the transcript window to restart simulation without having to set up the waveforms window again. When you return to Radiant, you’ll find your corrected code.
 
+Next, test your design automatically using a `stim/assert` style testbench. Rather than manually forcing inputs or using pre-defined test vectors, this means using your testbench to set inputs, and check for correct outputs.
+
+This is an example testbench for an LED controller module that implements the truth table for led[0] and led[1] described above. You probably structured your code differently and should modify this testbench to test your inputs and outputs!
+```
+`timescale 1 ns/1 ns
+
+module lab1_tb();
+  logic           clk;    // system clock
+  logic           reset;  // active high reset
+  logic   [3:0]   s;      // 4-bit input switches
+  logic   [1:0]   led;    // 2 output leds
+
+	led_controller dut (
+		.clk(clk),
+		.reset(reset),
+		.s(s),
+		.led(led)
+	);
+
+  // generate clock
+  always begin
+      clk = 0; #5;
+      clk = 1; #5;
+  end
+
+  // apply stimuli and check outputs
+  initial begin
+    reset = 1;
+    #22 reset = 0;
+
+    // for each test case we setup the inputs, wait for the outputs to update,
+    // and then check that the outputs match what we expect using `assert`
+    // in this case, the leds use combinational logic, so we don't *need* to wait
+    // a full clock cycle (#10)
+
+    // example test 1
+		s = 4'b0000;                // setup inputs
+		#10;                        // wait required time
+		assert (led == 3'b00)       // check outputs
+			$display("PASSED! The led controller behaves as desired at time: %0t.", $time);
+		else 
+			$error("FAILED! The led controller behaves incorrectly at time: %0t.", $time); 
+			
+    // test 2
+		s = 4'b0101;
+		#10;
+		assert (led == 3'b01)
+			$display("PASSED! The led controller behaves as desired at time: %0t.", $time);
+		else 
+			$error("FAILED! The led controller behaves incorrectly at time: %0t.", $time); 
+		
+		// ... add the rest of the states you want to check here
+
+    #100 $stop;
+  end
+endmodule
+```
+
+In the example above, we're testing a module that only uses combinational logic, so testvectors would have also worked well. But the `stim/assert` architecture works even better for sequential logic like an FSM or clock divider. Think about (and write) a testbench to check if led[2] is blinking at the right frequency (this may involve resetting the clock divder, making sure the output is zero, waiting a known time, check if it is one, etc.).
 
 ### Pin Assignment
 
