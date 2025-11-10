@@ -229,6 +229,20 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="protecting-your-speaker-and-mcu">Protecting Your Speaker (and MCU)</h2>
 <p>Before you connect your circuit to the 8&nbsp;Ω speaker, it is <strong>critical</strong> to ensure that the amplifier output and speaker load will not draw excessive current.<br>
 Driving the speaker directly from your MCU <strong>will damage both the MCU and the speaker</strong>, so always check your circuit before connecting the speaker.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Speaker Specifications">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Speaker Specifications
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Refer to your speaker datasheet for the exact specifications. A typical 8&nbsp;Ω speaker datasheet will show:</p>
+<p><img src="images/Datasheet.png" class="img-fluid" alt="Speaker datasheet showing electrical specifications including impedance, power rating, and other parameters"></p>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Measure Before You Connect">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -261,15 +275,15 @@ I = \frac{V}{R}
 <h3 class="anchored" data-anchor-id="step-2-stay-below-safe-limits">Step 2: Stay Below Safe Limits</h3>
 <p>An LM386 amplifier can safely drive small speakers, but you must ensure that:</p>
 <ul>
-<li>The <strong>output voltage</strong> does not exceed approximately <strong>1&nbsp;V RMS</strong> (≈ 2.8&nbsp;V peak-to-peak).<br>
+<li>The <strong>output voltage</strong> does not exceed approximately <strong>1&nbsp;V RMS</strong> (≈ 2.8&nbsp;V peak-to-peak) for conservative operation.<br>
 </li>
 <li>This corresponds to a <strong>maximum RMS current</strong> of about:</li>
 </ul>
 <p><span class="math display">\[
 I_{\text{max}} = \frac{1\,\text{V}}{8\,\Omega} = 0.125\,\text{A (125 mA)}
 \]</span></p>
-<p>If your measured voltage produces a current greater than <strong>125&nbsp;mA</strong>, you risk damaging the speaker.<br>
-To reduce current: - Lower the amplifier gain - Reduce the input signal amplitude - Add a small series resistor</p>
+<p><strong>Note:</strong> According to the speaker datasheet, the rated input power is <strong>2&nbsp;W</strong> (corresponding to ~4&nbsp;V RMS, ~500&nbsp;mA) and maximum input power is <strong>3&nbsp;W</strong>. The 1&nbsp;V RMS limit recommended here (~125&nbsp;mW) is intentionally conservative to provide a safety margin and prevent distortion. If you need higher volume, you can increase the voltage up to the rated limits, but always verify with measurements first.</p>
+<p>To adjust current: - Lower the amplifier gain (to reduce current) - Reduce the input signal amplitude (to reduce current) - Add a small series resistor (to reduce current) - Increase gain/amplitude carefully if you need more volume (stay below 2&nbsp;W rated power)</p>
 <hr>
 </section>
 <section id="step-3-never-connect-the-mcu-pin-directly" class="level3">
@@ -284,28 +298,48 @@ Always use the <strong>LM386</strong> amplifier to buffer the signal and supply 
 <section id="quick-reference" class="level3">
 <h3 class="anchored" data-anchor-id="quick-reference">Quick Reference</h3>
 <table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 42%">
+<col style="width: 24%">
+</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Parameter</th>
-<th style="text-align: left;">Recommended Limit</th>
+<th style="text-align: left;">Recommended Limit (Conservative)</th>
+<th style="text-align: left;">Datasheet Maximum</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Speaker impedance</td>
 <td style="text-align: left;">8&nbsp;Ω</td>
+<td style="text-align: left;">8&nbsp;Ω ±15%</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Max safe RMS voltage</td>
 <td style="text-align: left;">~1&nbsp;V</td>
+<td style="text-align: left;">~4&nbsp;V (2&nbsp;W rated)</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Max RMS current</td>
 <td style="text-align: left;">~125&nbsp;mA</td>
+<td style="text-align: left;">~500&nbsp;mA (2&nbsp;W rated)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rated input power</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">2&nbsp;W</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Maximum input power</td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">3&nbsp;W</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">MCU GPIO output current</td>
 <td style="text-align: left;">&lt;20&nbsp;mA</td>
+<td style="text-align: left;">—</td>
 </tr>
 </tbody>
 </table>
