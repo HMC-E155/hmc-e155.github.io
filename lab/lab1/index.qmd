@@ -165,7 +165,7 @@ You should see the `led` and `seg` outputs displaying appropriate values. Check 
 
 Next, test your design automatically using a `stim/assert` style testbench. Rather than manually forcing inputs or using pre-defined test vectors, this means using your testbench to set inputs, and check for correct outputs.
 
-This is an example testbench for an LED controller module that implements the truth table for led[0] and led[1] described above. You probably structured your code differently and should modify this testbench to test your inputs and outputs!
+Start by making a new system verilog testbench file, based on the example below. This is for an LED controller module that implements the truth table for led[0] and led[1] described above. You probably structured your code differently and should modify this testbench to test your inputs and outputs!
 ```
 `timescale 1 ns/1 ns
 
@@ -220,6 +220,29 @@ module lab1_tb();
   end
 endmodule
 ```
+
+Next, launch Questa/ModelSim using the Simulation Wizard button as shown in the figure below
+
+::: {#launch-questa}
+
+![Button to launch Questa Simulation Wizard](images/simulation_wizard.png)
+:::
+
+Follow the instructions in the wizard to name and create the simulation. The default settings are good, but make sure to select *your* module name as the `Simulation Top Module` (in this case that would be `lab1_tb`).
+
+Once you finish, Questa will automatically open and run your simulation! By default, it only runs for 100ns, so if your simulation takes longer you may need to use the `run` command from the manual testing section. As expected, we can see that all of the tests passed in the `Transcripts` section at the bottom.
+
+::: {#questa-sim}
+
+![Example questa simulation](images/example_questa_simulation.png)
+:::
+
+By default, only signals in your testbench are displayed, but you can add more by selecting `dut` in the instance pane, dragging signals from `Objects` into `Wave` and then restarting the simulation with by running `restart -f` and then `run 100`. If you edit the testbench or module code, you can update the simulator by clicking `Compile → Compile All` or closing and re-opening the simulation. If you aren't changing simulation settings, then you can re-open a previous simulation from Lattice by double clicking on the simulation name in the `Script Files` folder.
+
+::: {#questa-sim}
+
+![Restart existing simulation](images/restart_simulation.png)
+:::
 
 In the example above, we're testing a module that only uses combinational logic, so testvectors would have also worked well. But the `stim/assert` architecture works even better for sequential logic like an FSM or clock divider. Think about (and write) a testbench to check if led[2] is blinking at the right frequency (this may involve resetting the clock divder, making sure the output is zero, waiting a known time, check if it is one, etc.).
 
