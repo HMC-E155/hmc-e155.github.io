@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -114,8 +79,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">HMC E155</span>
     </a>
@@ -219,28 +182,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
   <li><a href="#before-you-start" id="toc-before-you-start" class="nav-link" data-scroll-target="#before-you-start">Before You Start</a></li>
-  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
-  <li><a href="#nucleo-l432kc-development-board" id="toc-nucleo-l432kc-development-board" class="nav-link" data-scroll-target="#nucleo-l432kc-development-board">Nucleo-L432KC Development Board</a>
-  <ul class="collapse">
-  <li><a href="#programming" id="toc-programming" class="nav-link" data-scroll-target="#programming">Programming</a></li>
-  </ul></li>
-  <li><a href="#upduino-v3.1-fpga-development-board" id="toc-upduino-v3.1-fpga-development-board" class="nav-link" data-scroll-target="#upduino-v3.1-fpga-development-board">UPduino v3.1 FPGA Development Board</a>
-  <ul class="collapse">
-  <li><a href="#digital-design-synthesis-and-programming" id="toc-digital-design-synthesis-and-programming" class="nav-link" data-scroll-target="#digital-design-synthesis-and-programming">Digital Design Synthesis and Programming</a></li>
-  </ul></li>
-  <li><a href="#e155-development-board" id="toc-e155-development-board" class="nav-link" data-scroll-target="#e155-development-board">E155 Development Board</a></li>
-  <li><a href="#assembling-the-board" id="toc-assembling-the-board" class="nav-link" data-scroll-target="#assembling-the-board">Assembling the Board</a></li>
-  <li><a href="#assembly-tips" id="toc-assembly-tips" class="nav-link" data-scroll-target="#assembly-tips">Assembly Tips</a></li>
-  <li><a href="#suggested-soldering-order" id="toc-suggested-soldering-order" class="nav-link" data-scroll-target="#suggested-soldering-order">Suggested Soldering Order</a></li>
-  <li><a href="#powering-the-board" id="toc-powering-the-board" class="nav-link" data-scroll-target="#powering-the-board">Powering the Board</a>
-  <ul class="collapse">
-  <li><a href="#powering-through-vin" id="toc-powering-through-vin" class="nav-link" data-scroll-target="#powering-through-vin">Powering through VIN</a></li>
-  <li><a href="#powering-via-usb" id="toc-powering-via-usb" class="nav-link" data-scroll-target="#powering-via-usb">Powering via USB</a></li>
-  </ul></li>
-  <li><a href="#testing-the-boards" id="toc-testing-the-boards" class="nav-link" data-scroll-target="#testing-the-boards">Testing the Boards</a></li>
-  <li><a href="#fpga-design" id="toc-fpga-design" class="nav-link" data-scroll-target="#fpga-design">FPGA Design</a>
+  <li><a href="#development-board-assembly" id="toc-development-board-assembly" class="nav-link" data-scroll-target="#development-board-assembly">Development Board Assembly</a>
   <ul class="collapse">
   <li><a href="#create-your-git-repository" id="toc-create-your-git-repository" class="nav-link" data-scroll-target="#create-your-git-repository">Create Your Git Repository</a></li>
+  </ul></li>
+  <li><a href="#fpga-design" id="toc-fpga-design" class="nav-link" data-scroll-target="#fpga-design">FPGA Design</a>
+  <ul class="collapse">
   <li><a href="#design-and-synthesis-in-radiant" id="toc-design-and-synthesis-in-radiant" class="nav-link" data-scroll-target="#design-and-synthesis-in-radiant">Design and Synthesis in Radiant</a></li>
   <li><a href="#logic-simulation-in-modelsim" id="toc-logic-simulation-in-modelsim" class="nav-link" data-scroll-target="#logic-simulation-in-modelsim">Logic Simulation in ModelSim</a></li>
   <li><a href="#pin-assignment" id="toc-pin-assignment" class="nav-link" data-scroll-target="#pin-assignment">Pin Assignment</a></li>
@@ -300,234 +247,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="before-you-start" class="level2">
 <h2 class="anchored" data-anchor-id="before-you-start">Before You Start</h2>
 <p>Before you start working on this lab, you should familiarize yourself with the documentation for both the UPduino v3.1 and Nucleo-L432KC boards. The website has links for the UPduino v3.1 User Guide and the Nucleo-L432KC User Manuals on the Resources tab. These two documents contain information that will be helpful for answering questions that you may have during the course of this lab.</p>
+<p>You should also read <a href="../../tutorials/tutorial-posts/background/index.html">this tutorial</a> with important programming instructions and background information for the FPGA and MCU.</p>
 </section>
-<section id="background" class="level2">
-<h2 class="anchored" data-anchor-id="background">Background</h2>
-<p>In the 1980’s and 1990’s, digital design projects were built from a truckload of chips, each containing a few logic gates such as 74xx series logic gates or simple programmable array logic chips (PALs). Such projects involve placing and wiring together dozens of chips on a breadboard. It was easy to make a wiring mistake or burn out a chip and spend hours tracking down the problem. Now you can perform all of your digital logic on a single field-programmable gate array (FPGA) to greatly reduce the necessary wiring and number of chips. Later in the course, you will use the Cortex-M4 microcontroller to write programs in assembly language and C that can interface with external hardware and the FPGA.</p>
+<section id="development-board-assembly" class="level2">
+<h2 class="anchored" data-anchor-id="development-board-assembly">Development Board Assembly</h2>
+<p>Before you start working on your FPGA design, you need to assemble your development board as described in <a href="../../tutorials/tutorial-posts/dev-board-assembly/index.html">this tutorial</a>. The majority of your time on this lab will likely be spent assembling the board, so make sure to plan ahead.</p>
+<section id="create-your-git-repository" class="level3">
+<h3 class="anchored" data-anchor-id="create-your-git-repository">Create Your Git Repository</h3>
+<p>The first step before you begin writing any code is to create a Git repository. Follow the <a href="../../tutorials/tutorial-videos/creating-and-initializing-your-git-repo.html">linked tutorial</a> to get started with your project.</p>
 </section>
-<section id="nucleo-l432kc-development-board" class="level2">
-<h2 class="anchored" data-anchor-id="nucleo-l432kc-development-board">Nucleo-L432KC Development Board</h2>
-<p>The Nucleo-L432KC development board provides a convenient platform to test and develop embedded systems applications. The board is focused around an STM32L432KC MCU and provides voltage regulators to provide power to the chip, various breakout headers which allow access to the pins of the microcontroller chip, a reset button and user input button, configuration jumpers, and an embedded ST-LINK programmer/debugger.</p>
-<section id="programming" class="level3">
-<h3 class="anchored" data-anchor-id="programming">Programming</h3>
-<p>The STM32L432KC has an embedded ST-LINK/V2-1 programmer and debugger as described in the Nucleo-32 User Manual. The main purpose of the ST-LINK is to provide the ability to interface with the serial wire debug (SWD) interface of the MCU via USB.</p>
-<p>There are a variety of integrated development environments (IDEs) which can be used to interact with the device including PlatformIO, Keil μVision, and SEGGER Embedded Studio. The IDEs provide a helpful wrapper around compiler toolchains such as GNU Compiler Collection (GCC) toolchain to facilitate easy programming and debugging. In this course you are welcome to use any IDE you would like, although instruction and support will be focused around SEGGER Embedded Studio which is based on the GCC toolchain.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-</section>
-</section>
-<section id="upduino-v3.1-fpga-development-board" class="level2">
-<h2 class="anchored" data-anchor-id="upduino-v3.1-fpga-development-board">UPduino v3.1 FPGA Development Board</h2>
-<p>The UPduino v3.1 is developed by tinyvision.ai and designed around a Lattice Semiconductor UP5K field programmable gate array (FPGA). Section 5.3 of the iCE40 UltraPlus Family Data Sheet (FPGA-DS-02008-2.0) explains the naming of the chip.</p>
-<div id="fig-ic40-part-number-description" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ic40-part-number-description-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/ice40_part_number_description.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ic40-part-number-description-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: ice40 Part Number Description
-</figcaption>
-</figure>
-</div>
-<p>The Lattice UP5K is very similar to the Cyclone IV architecture that is used to introduce FPGAs in E85. At its root, the FPGA consists of Logic Cells (Lattice’s version of the Intel/Altera Logic Elements you learned about in E85) which can be internally connected within Programmable Logic Blocks (PLBs) within the FPGA to form digital circuits. Each Logic Cell (LC) consists of a 4-input look-up table (LUT) and a programmable D flip-flop, along with additional clock control and carry logic. Figure 3.2 from the FPGA datasheet shows the basic architecture of a PLB and LC.</p>
-<div id="fig-ice40-plb-block-diagram" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ice40-plb-block-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/ice40_plb_block_diagram.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ice40-plb-block-diagram-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: ice40 PLB Block Diagram.
-</figcaption>
-</figure>
-</div>
-<p>The UP5K on our UPduino v3.1 board is the 48-pin QFN package. As you can see from the table, it contains 5280 logic cells, 30 Embedded Block Ram (EBR) Memory Blocks of 4 Kbits each, 4 256-bit Single Port synchronous RAM Memory Blocks, and an on-board high-frequency (48 MHz) and low-frequency (10 kHz) oscillator.</p>
-<div id="fig-ice40-resource-table" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ice40-resource-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/ice40_resource_table.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ice40-resource-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: ice40 Resource Table.
-</figcaption>
-</figure>
-</div>
-<section id="digital-design-synthesis-and-programming" class="level3">
-<h3 class="anchored" data-anchor-id="digital-design-synthesis-and-programming">Digital Design Synthesis and Programming</h3>
-<p>The FPGA is programmed using the onboard programmer via the synthesis tool Lattice Radiant. After setting up and compiling the Radiant project, Radiant will generate bitstream files which are used to configure the FPGA.</p>
-<p>More details will be provided later in this lab writeup.</p>
-</section>
-</section>
-<section id="e155-development-board" class="level2">
-<h2 class="anchored" data-anchor-id="e155-development-board">E155 Development Board</h2>
-<p>In this lab you will assemble a custom printed circuit board which hosts the MCU and FPGA boards. The board has several features that will be convenient for developing embedded systems such as:</p>
-<ul>
-<li>Pins which can be directly routed from the MCU to the FPGA via the board</li>
-<li>Extension headers for the mikroBUS and 6-pin PMOD standard</li>
-<li>User configurable LEDs, pushbuttons, and slider switches.</li>
-<li>Header to route pins via a ribbon cable to a separate breadboard adapter PCB which can be inserted into a solderless breadboard.</li>
-</ul>
-<div id="fig-board-sections" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-board-sections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/board_sections.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-board-sections-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Annotated sections of the development board.
-</figcaption>
-</figure>
-</div>
-<p>The board has several main sections that you should make yourself aware of. They are annotated in the image above.</p>
-<ul>
-<li><strong>Voltage Regulators and Power Terminal</strong>: A +5 V (NCP1117DT50RKG) and +3.3 V (NCP1117DT33T5G) low-dropout (LDO) voltage regulator which is used to regulate the input provided via the power terminal on VIN. Make sure to check with the schematic to ensure that you put the regulators in their proper places. See <a href="#powering-the-board">Powering the Board</a> for more details.</li>
-<li><strong>FPGA, MCU, mikroBUS, and PMOD sockets: </strong>These sockets are populated with female headers for the MCU, FPGA, and other extension sockets to be plugged into.</li>
-<li><strong>Reset Push Buttons: </strong>The reset pushbuttons are connected to the reset inputs on the MCU and FPGA respectively. The MCU reset button will cause the code to begin execution from the first instruction. The FPGA reset button causes the FPGA to reconfigure itself from the on-board RAM which stores the configuration file for the design you have uploaded.</li>
-<li><strong>Configuration Jumpers</strong>: The configuration jumpers on the board allow you several options to set the power and signal connections for the MCU and FPGA. J2, J3, and J4 control the mikroBUS reset signal and the power for the FPGA and MCU boards respectively. The mikroBUS reset signal can also be connected to MCU pin PA12 to enable the MCU to reset the connected peripheral via software. The configuration jumper J5 is a 2x8 header with MCU pins on the left hand side and FPGA pins on the right hand side. Note that on version v4 of the board, J5 has been replaced with an 8-pin DIP switch with the reference designator SW7. The functionality however, remains the same as the jumper. By attaching a jumper between the pins in the same row, the MCU pin on the left side of the jumper can be directly routed to the FPGA pin on the right hand side via traces on the PCB. This allows for convenient and high-fidelity interfaces between the MCU and the FPGA without the need for external wires.</li>
-<li><strong>Ribbon Cable Connector</strong>: The ribbon cable connector is used to route a subset of the MCU and FPGA pins out to a cable which connects to the breadboard adapter board.</li>
-<li><strong>MCU, FPGA, and Slide Buttons:</strong> The push and slide buttons on the board are routed to pins on the MCU and FPGA in order to provide on-board options to toggle GPIO pins on the respective devices. Note that all of these buttons are configured as active low (i.e., closing the switch connects the pin of the device to ground) without any hardware pullup resistors. In order to use them, you must configure the internal pullup resistors on the MCU or FPGA in order to avoid floating logic levels.</li>
-</ul>
-</section>
-<section id="assembling-the-board" class="level2">
-<h2 class="anchored" data-anchor-id="assembling-the-board">Assembling the Board</h2>
-<p>In this section you will walk through the steps to assemble your board. The PCB has both through hole technology (THT) and surface mount technology (SMT) parts. SMT parts are generally preferred on PCBs since they are more compact and easier for machines to solder although THT parts are typically easier for beginners to solder. If you haven’t done much (or any!) SMT soldering before, don’t worry! One of the points of this lab is to give you a chance to develop this skill!</p>
-<p>All the parts you need to build your board are provided in your kit bag. Typically, it is easiest to start with the SMT parts before soldering the THT parts since the board will lay flat. So we’ll start by soldering the SMT components.</p>
-</section>
-<section id="assembly-tips" class="level2">
-<h2 class="anchored" data-anchor-id="assembly-tips">Assembly Tips</h2>
-<p>Soldering is a skill that you need to practice just like anything else. The most important thing to remember when soldering is that it is roughly 100x easier to solder than to desolder a component. So, whenever possible, make sure that you align the component correctly before soldering all the pins. Often the best way to do this is to solder a single pin on one side and then confirm that the component is correctly aligned before soldering the rest of the pins. If something is misaligned, then this will make it easy to correct since you only will need to reflow a single solder joint. A few additional tips:</p>
-<ul>
-<li>Soldering often will make you wish you had another hand or two. Soldering SMT components in particular can be a bit tricky because you need to hold the component with tweezers to align it. A good strategy is to first melt a little bit of solder on one of the pads and then grab the component with tweezers while holding the iron in your other hand to reflow the solder and align it.</li>
-<li>When soldering THT headers like those used for the sockets, make sure that the headers are oriented correctly (most of the time perpendicular to the PCB surface). One tip is to insert a strip of male headers into a breadboard and then attach the female headers and set the PCB upside down on top of the male headers to solder them. If you do end up making a mistake and need to desolder a strip of header pins, the plastic shroud can be removed in order to let you pull out individual pins. See this <a href="https://youtu.be/bQzbZEsPGD0?t=160">YouTube video</a> for an example. Although in the video he shows the example for a male header pin strip, you can do the same thing with a female strip as well.</li>
-</ul>
-</section>
-<section id="suggested-soldering-order" class="level2">
-<h2 class="anchored" data-anchor-id="suggested-soldering-order">Suggested Soldering Order</h2>
-<p>Below is a recommended soldering order.</p>
-<ol type="1">
-<li>Solder the voltage regulators. Put a bit of solder on the big square pad and reflow while bringing the regulator on top in order to solder it. You can apply heat to the pad via the metal edge at the top of the regulator.</li>
-</ol>
-<div id="fig-voltage-regulators" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-voltage-regulators-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/board_vregs.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-voltage-regulators-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: Voltage regulator soldering procedure.
-</figcaption>
-</figure>
-</div>
-<ol start="2" type="1">
-<li>Prepare to solder the remaining SMT components (resistors, capacitors, and LEDs) by applying a small amount of solder to one pad of the SMT footprints R1-R11, C1-C4, and D1-D8..</li>
-<li>Solder the decoupling (also known as bypass) capacitors C1-C4 around the regulators. These are used to smooth out any transients and ensure smooth, constant voltages. These capacitors have no polarity, so either way is fine.</li>
-<li>Next, solder the resistors on the board. Pay careful attention to make sure that you solder the correct resistors by referring to the board schematic (available on the course website).</li>
-<li>Next solder the LEDs. The LEDs are polarized, so you’ll need to make sure to solder them the right direction or they won’t work. There is an arrow on the bottom of the package which indicates the direction of the current flow from the anode to the cathode. Again, refer to the schematic for proper alignment. When looking at the PCB with the text facing upright, the cathode should go on the left hand side (connected to its current limiting resistor). There are three different color LEDs. D1 is red (VIN), D2-D5 are green (connected to the MCU), and D6-D8 are blue (connected to the FPGA). After finishing this step, you are finished with all the SMT components!</li>
-</ol>
-<div id="fig-surface-mount-soldering" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-surface-mount-soldering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/board_surface_mount_soldering.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-surface-mount-soldering-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: LED and current limiting resistors.
-</figcaption>
-</figure>
-</div>
-<ol start="6" type="1">
-<li>Now it’s time to tackle the THT components. Put the components into their respective places and solder them in. Pay careful attention to ensure that the female header strips are correctly aligned and perpendicular to the board. You will need to snap off 2- and 3-pin headers from the provided 40-pin header strip in order to populate J2-J4. The easiest way to do this is to use a pair of needle nose pliers to snap off the right number of pins. <strong>Do not solder the UPduino or the Nucleo directly to your board. Populate U2 and U1 with female header sockets.</strong></li>
-<li>After finishing the main development board, follow the same procedure to assemble the breadboard adapter PCB.</li>
-</ol>
-<div id="fig-ribbon-cable" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ribbon-cable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ribbon-cable" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div id="fig-ribbon-cable-alignment" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-ribbon-cable-alignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/ribbon_cable_alignment.png" class="img-fluid figure-img" data-ref-parent="fig-ribbon-cable">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ribbon-cable-alignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) Make sure the notches are both pointing the same direction.
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ribbon-cable" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div id="fig-ribbon-cable-connector" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-ribbon-cable-connector-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/ribbon_cable_alignment_2.png" class="img-fluid figure-img" data-ref-parent="fig-ribbon-cable">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ribbon-cable-connector-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(b) The triangle on the connector should match with the red wire in the ribbon cable.
-</figcaption>
-</figure>
-</div>
-</div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ribbon-cable" style="flex-basis: 33.3%;justify-content: flex-start;">
-<div id="fig-ribbon-cable-crimp" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-subfloat-fig figure">
-<div aria-describedby="fig-ribbon-cable-crimp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/ribbon_cable_crimp.jpg" class="img-fluid figure-img" data-ref-parent="fig-ribbon-cable">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ribbon-cable-crimp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(c) Crimping alignment.
-</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ribbon-cable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Ribbon cable alignment procedure.
-</figcaption>
-</figure>
-</div>
-<p>Use the included insulation-displacement contact (IDC) ribbon cable connectors and the spool of ribbon cable in the lab to make yourself a short (~6-12”) cable. You have probably done this before in E80, but if you don’t remember how, see the video <a href="https://www.youtube.com/watch?v=4pDRrrpAcGQ">here</a>. Cut the cable to length with the flush cutters in the toolbox and use either a vise or the cable assembly tool found in the E155 cabinet. Please make sure to put it back after you are finished. If you can’t find it around the lab, ask an instructor.</p>
-<p>Finally, solder the 20-pin male headers and 2x20 pin cable connector onto the breadboard adapter PCB, making sure that the pins are all correctly aligned and perpendicular to the PCB.</p>
-<p>Congratulations, you are now finished assembling your board and ready to test it! The photo below shows an example of what the board should look like when it is finished.</p>
-<div id="fig-board-assembled" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-board-assembled-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/board_assembled.jpg" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-board-assembled-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: Fully assembled development board.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="powering-the-board" class="level2">
-<h2 class="anchored" data-anchor-id="powering-the-board">Powering the Board</h2>
-<p>There are three different ways to power the components on the development board: (1) via the VIN power input, (2) via the FPGA’s USB connection, and (3) via the MCU’s USB connection. In this section we will walk through the various ways to power the board to make sure that you are aware of how to properly power the board and avoid any issues which might damage the components on board.</p>
-<p>The +5 V and +3.3 V voltage regulators provide power for the various components. All logic levels are +3.3 V unless stated otherwise. So, the +3.3 V supply is used to power the various buttons on the board.</p>
-<section id="powering-through-vin" class="level3">
-<h3 class="anchored" data-anchor-id="powering-through-vin">Powering through VIN</h3>
-<p>To power through VIN, apply a voltage to the power screw terminal between VIN and GND. The <a href="https://www.onsemi.com/pdf/datasheet/ncp1117-d.pdf">NCP117 series</a> can accept voltages up to +20 V but in most scenarios you will likely want to use a VIN between +6-12 V. Be aware that VIN should always be more than +5 V for both regulators to function properly. When powering via VIN, the jumpers J3 (FPGA_+5V) and J4 (MCU_+5V) should be shorted in order to apply the +5 V output from the regulator to the MCU and FPGA +5 V pin.</p>
-</section>
-<section id="powering-via-usb" class="level3">
-<h3 class="anchored" data-anchor-id="powering-via-usb">Powering via USB</h3>
-<p>It is also possible to power the board via a USB connection to either the MCU or FPGA board. Each board has an onboard voltage regulator to create a stabilized +5 V output on the boards respective +5 V pins. Assuming J3 and J4 are shorted, this +5 V output from whichever board is connected to USB power is fed back to the +5 V line (which is also the output of the +5 V regulator) and thus powers the other components connected to that net.</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Testing Voltage Regulators">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Testing Voltage Regulators
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Before connecting your MCU and FPGA boards, check the voltage regulators are on correctly by connecting to a lab DC power supply using the screw terminals and using a multimeter to confirm that the +3.3 V rail is +3.3 V and the +5 V rail is +5 V. If you read +5 V on the +3.3 V or vice versa, you have installed the regulators in the wrong place and need to swap them. If you read a low voltage (less than ~0.1 V), you likely have a bad solder joint on the back pad of the respective regulator and need to reflow the solder joint to make a better connection.</p>
-</div>
-</div>
-</section>
-</section>
-<section id="testing-the-boards" class="level2">
-<h2 class="anchored" data-anchor-id="testing-the-boards">Testing the Boards</h2>
-<p>To test the boards, you will upload a simple design to the FPGA which toggles an LED on and off and some code on the MCU to read in the toggling GPIO pin and echo is back to the FPGA. This will ensure that the board is working properly and that you have good communication between the two devices.</p>
-<p>To familiarize yourself with how to program the FPGA using Lattice Radiant, see the <a href="../../tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup">Lattice Radiant iCE40 UltraPlus Project Setup</a> tutorial. This tutorial has information about how to create a project in Radiant and how to synthesize and upload designs to your FPGA board.</p>
-<p>After working through the tutorial, download the Radiant project file <code>fpga_dev_board_test.zip</code> under the Lab 1 subfolder from <a href="https://github.com/HMC-E155/hmc-e155">the course GitHub</a> and use it to program your FPGA. This design toggles pin P25 at about 1 Hz. If you have the switch properly set on SW7, P25 is connected to PA9 and so you will see LED D3 blinking.</p>
-<p>After programming your FPGA, the next step is to upload the code to the MCU that will read the value of the toggled LED from the FPGA and echo it back on another pin. See the tutorial titled “Segger Embedded Studio Setup” to familiarize yourself with the process of installing and setting up SEGGER Embedded Studio (SES). If you are using a lab computer, SES is already installed. The lab computers may also have other versions installed.</p>
-<p>After working through the tutorial, download the SES solution folder from the course GitHub titled <code>mcu_dev_board_test.zip</code>. Then, double click on the <code>.emProject</code> file or use the <code>File → Open Solution</code> option in SES to open the solution. This project contains a simple program that monitors the status of PA9 (which is connected to P25 through the appropriate jumper on J5. Make sure you have the jumper attached to connect PA9 to P25). Build and download the project to your MCU.</p>
-<p>Now, in addition to LED D3 (PA9/P25) blinking, you should see LED D2 (PA10/P23) and LED D7 (P38) blinking as well.</p>
 </section>
 <section id="fpga-design" class="level2">
 <h2 class="anchored" data-anchor-id="fpga-design">FPGA Design</h2>
@@ -657,68 +385,6 @@ Figure&nbsp;8: Fully assembled development board.
 <p>To generate the clock for your design, use the onboard high-speed oscillator. This is the same strategy as in the FPGA testing source code you downloaded earlier to test the board. If you look at that Verilog code, you’ll notice an instantiated module called HSOSC (for High-Speed OSCillator). This module is part of the iCE40 Technology Library (see the iCE40 Technology Library document linked on the course website) and is a built-in module included with Lattice Radiant designed for controlling the internal oscillator on the iCE40 chip. You can simply copy the line from the testing program and use it in your project.</p>
 </div>
 </div>
-<section id="create-your-git-repository" class="level3">
-<h3 class="anchored" data-anchor-id="create-your-git-repository">Create Your Git Repository</h3>
-<p>The first step before you begin writing any code is to create a Git repository. Follow the following steps to get started with your project.</p>
-<ol type="1">
-<li>Create a new folder for your project. Here is a suggested template folder structure to use. Add a few sentences to your README to describe the contents of the repository. For example, for this lab you might say something about holding code to verify that your FPGA and MCU are working properly.</li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>/</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>├── fpga</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>│   ├── src</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>│   ├── sim</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>│   ├── radiant_project</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>│   ├── .gitignore</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>├── mcu</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>│   ├── src</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>│   ├── segger_project</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>│   ├── .gitignore</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>├── README.md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ol start="2" type="1">
-<li>Populate your .gitignore files. This file tells git which files and folders should not be tracked. It’s best practice to ignore many of the miscellaneous configuration files that Radiant and SEGGER Embedded Studio generate. Sample .gitignore files are included below. Paste the contents of these files into the .gitignore files you created.</li>
-</ol>
-<blockquote class="blockquote">
-<p>Sample Radiant .gitignore</p>
-<pre><code># Lattice Radiant files
-*.html
-impl*/
-*.xml
-.build_status
-.run_manager.ini
-.recovery
-.spread_sheet.ini
-.spreadsheet_view.ini
-*.dir/
-*.log
-*.tcl
-*.ccl
-*.srp
-*.dmp
-._Real_._Math_.vhd</code></pre>
-</blockquote>
-<blockquote class="blockquote">
-<p>Sample SEGGER Embedded Studio .gitignore</p>
-<pre><code># Segger Embedded Studio
-**/Output/
-**/Debug/
-*.emSession
-*.jlink</code></pre>
-</blockquote>
-<ol start="3" type="1">
-<li>Initialize your git repository using <code>git init</code>.</li>
-<li>Add the existing files in your folder using <code>git add .</code>. (Note: the <code>.</code> means to add all the contents of the current directory, so you’ll need to make sure you’re at the root).</li>
-<li>Make an initial commit with the folder structure above by typing <code>git commit -m "Initializing Lab 1 repository"</code>.</li>
-<li>Open the Github web interface and create a new repository on Github (<a href="https://github.com/new">link</a>). Name your repository something descriptive like <code>e155-lab1</code>. Optionally add a short description.</li>
-<li>Link your local git repository to the new remote repository by adding a new remote. This will look something like <code>git remote set-url origin git@github.com:&lt;username&gt;/&lt;repo&gt;.git</code> where you’ll need to replace <code>&lt;username&gt;</code> and <code>&lt;repo&gt;</code> with your specific information. For my example, this command is `<code>git remote set-url origin git@github.com:joshbrake/e155-lab1.git</code></li>
-<li>Push your local commit to the remote using <code>git push origin main</code>. If git complains that it doesn’t know what main is, then your branch might be named master. In this case, run <code>git branch -m master main</code> and run the push command again.</li>
-<li>Navigate to your repository page on Github and you should see your folder structure there.</li>
-</ol>
-<p>Here’s a video walking through the steps above as well.</p>
-<div style="position: relative; padding-bottom: 64.63195691202873%; height: 0;">
-<iframe src="https://www.loom.com/embed/ee828a5b3c024653a9c210d2451a7251?sid=844f2d0e-c6b0-47ef-aacd-5e7cb4b36aab" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-</iframe>
-</div>
-</section>
 <section id="design-and-synthesis-in-radiant" class="level3">
 <h3 class="anchored" data-anchor-id="design-and-synthesis-in-radiant">Design and Synthesis in Radiant</h3>
 <p>The 7-segment display should display a single hexadecimal digit specified by <code>s[3:0]</code>. Be sure each digit can be distinguished from other digits (e.g., b and 8 should look different). Remember that you will be using a common anode display. The anode (positive terminal) of all of the LEDs is tied to 3.3 V through a single (“common”) pin. Each segment’s cathode (negative terminal) is connected to a pin. Therefore, you will need 7 separate control signals. Remember that a logic 0 applied to the cathode will turn on the segment. The segments are defined as shown below. Let <code>seg[0]</code> be A and <code>seg[6]</code> be G.</p>
@@ -733,7 +399,7 @@ impl*/
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-seven-segment-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9: Seven-segment display pin map
+Figure&nbsp;1: Seven-segment display pin map
 </figcaption>
 </figure>
 </div>
@@ -782,6 +448,89 @@ run 100
 </div>
 </div>
 <p>You should see the <code>led</code> and <code>seg</code> outputs displaying appropriate values. Check the outputs against your expectations. If you find any discrepancies, fix the code and resimulate. A helpful shortcut to avoid restarting ModelSim is that you can edit the module by finding it under “work” in the library pane, right clicking, and choosing Edit. Make your fixes, then right click again and choose <code>Recompile</code>. Then type <code>restart -f</code> in the transcript window to restart simulation without having to set up the waveforms window again. When you return to Radiant, you’ll find your corrected code.</p>
+<p>Next, test your design automatically using a <code>stim/assert</code> style testbench. Rather than manually forcing inputs or using pre-defined test vectors, this means using your testbench to set inputs, and check for correct outputs.</p>
+<p>Start by making a new system verilog testbench file, based on the example below. This is for an LED controller module that implements the truth table for led[0] and led[1] described above. You probably structured your code differently and should modify this testbench to test your inputs and outputs!</p>
+<pre><code>`timescale 1 ns/1 ns
+
+module lab1_tb();
+  logic           clk;    // system clock
+  logic           reset;  // active high reset
+  logic   [3:0]   s;      // 4-bit input switches
+  logic   [1:0]   led;    // 2 output leds
+
+    led_controller dut (
+        .clk(clk),
+        .reset(reset),
+        .s(s),
+        .led(led)
+    );
+
+  // generate clock
+  always begin
+      clk = 0; #5;
+      clk = 1; #5;
+  end
+
+  // apply stimuli and check outputs
+  initial begin
+    reset = 1;
+    #22 reset = 0;
+
+    // for each test case we setup the inputs, wait for the outputs to update,
+    // and then check that the outputs match what we expect using `assert`
+    // in this case, the leds use combinational logic, so we don't *need* to wait
+    // a full clock cycle (#10)
+
+    // example test 1
+        s = 4'b0000;                // setup inputs
+        #10;                        // wait required time
+        assert (led == 3'b00)       // check outputs
+            $display("PASSED! The led controller behaves as desired at time: %0t.", $time);
+        else 
+            $error("FAILED! The led controller behaves incorrectly at time: %0t.", $time); 
+            
+    // test 2
+        s = 4'b0101;
+        #10;
+        assert (led == 3'b01)
+            $display("PASSED! The led controller behaves as desired at time: %0t.", $time);
+        else 
+            $error("FAILED! The led controller behaves incorrectly at time: %0t.", $time); 
+        
+        // ... add the rest of the states you want to check here
+
+    #100 $stop;
+  end
+endmodule</code></pre>
+<p>Next, launch Questa/ModelSim using the Simulation Wizard button as shown in the figure below</p>
+<div id="launch-questa">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/simulation_wizard.png" class="img-fluid figure-img"></p>
+<figcaption>Button to launch Questa Simulation Wizard</figcaption>
+</figure>
+</div>
+</div>
+<p>Follow the instructions in the wizard to name and create the simulation. The default settings are good, but make sure to select <em>your</em> module name as the <code>Simulation Top Module</code> (in this case that would be <code>lab1_tb</code>).</p>
+<p>Once you finish, Questa will automatically open and run your simulation! By default, it only runs for 100ns, so if your simulation takes longer you may need to use the <code>run</code> command from the manual testing section. As expected, we can see that all of the tests passed in the <code>Transcripts</code> section at the bottom.</p>
+<div id="questa-sim">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/example_questa_simulation.png" class="img-fluid figure-img"></p>
+<figcaption>Example questa simulation</figcaption>
+</figure>
+</div>
+</div>
+<p>By default, only signals in your testbench are displayed, but you can add more by selecting <code>dut</code> in the instance pane, dragging signals from <code>Objects</code> into <code>Wave</code> and then restarting the simulation with by running <code>restart -f</code> and then <code>run 100</code>. If you edit the testbench or module code, you can update the simulator by clicking <code>Compile → Compile All</code> or closing and re-opening the simulation. If you aren’t changing simulation settings, then you can re-open a previous simulation from Lattice by double clicking on the simulation name in the <code>Script Files</code> folder.</p>
+<div id="questa-sim">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/restart_simulation.png" class="img-fluid figure-img"></p>
+<figcaption>Restart existing simulation</figcaption>
+</figure>
+</div>
+</div>
+<p>In the example above, we’re testing a module that only uses combinational logic, so testvectors would have also worked well. But the <code>stim/assert</code> architecture works even better for sequential logic like an FSM or clock divider. Think about (and write) a testbench to check if led[2] is blinking at the right frequency (this may involve resetting the clock divder, making sure the output is zero, waiting a known time, check if it is one, etc.).</p>
 </section>
 </section>
 <section id="pin-assignment" class="level3">
@@ -793,7 +542,7 @@ run 100
 <img src="images/radiant_pin_assignments.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pin-radiant-assignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10: Radiant pin assignments.
+Figure&nbsp;2: Radiant pin assignments.
 </figcaption>
 </figure>
 </div>
@@ -856,13 +605,7 @@ Figure&nbsp;10: Radiant pin assignments.
 
 </section>
 
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
-
-<ol>
-<li id="fn1"><p>In order for the NUCLEO board to be compatible with SEGGER, it is necessary to reflash the ST-LINK programmer with SEGGER J-Link firmware to convert it to a J-Link. This has been already taken care of on the board in your kit, but if you want to use another STM32 board with SEGGER you’ll need to follow the instructions <a href="https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/">here</a> to do this yourself.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol>
-</section></div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

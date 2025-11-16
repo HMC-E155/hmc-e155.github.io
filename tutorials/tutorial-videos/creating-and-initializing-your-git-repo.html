@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -79,8 +114,6 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">HMC E155</span>
     </a>
@@ -210,6 +243,60 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<ol type="1">
+<li>Create a new folder for your project. Here is a suggested template folder structure to use. Add a few sentences to your README to describe the contents of the repository. For example, for this lab you might say something about holding code to verify that your FPGA and MCU are working properly.</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>/</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>├── fpga</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>│   ├── src</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>│   ├── sim</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>│   ├── radiant_project</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>│   ├── .gitignore</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>├── mcu</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>│   ├── src</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>│   ├── segger_project</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>│   ├── .gitignore</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>├── README.md</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="2" type="1">
+<li>Populate your .gitignore files. This file tells git which files and folders should not be tracked. It’s best practice to ignore many of the miscellaneous configuration files that Radiant and SEGGER Embedded Studio generate. Sample .gitignore files are included below. Paste the contents of these files into the .gitignore files you created.</li>
+</ol>
+<blockquote class="blockquote">
+<p>Sample Radiant .gitignore</p>
+<pre><code># Lattice Radiant files
+*.html
+impl*/
+*.xml
+.build_status
+.run_manager.ini
+.recovery
+.spread_sheet.ini
+.spreadsheet_view.ini
+*.dir/
+*.log
+*.tcl
+*.ccl
+*.srp
+*.dmp
+._Real_._Math_.vhd</code></pre>
+</blockquote>
+<blockquote class="blockquote">
+<p>Sample SEGGER Embedded Studio .gitignore</p>
+<pre><code># Segger Embedded Studio
+**/Output/
+**/Debug/
+*.emSession
+*.jlink</code></pre>
+</blockquote>
+<ol start="3" type="1">
+<li>Initialize your git repository using <code>git init</code>.</li>
+<li>Add the existing files in your folder using <code>git add .</code>. (Note: the <code>.</code> means to add all the contents of the current directory, so you’ll need to make sure you’re at the root).</li>
+<li>Make an initial commit with the folder structure above by typing <code>git commit -m "Initializing Lab 1 repository"</code>.</li>
+<li>Open the Github web interface and create a new repository on Github (<a href="https://github.com/new">link</a>). Name your repository something descriptive like <code>e155-lab1</code>. Optionally add a short description.</li>
+<li>Link your local git repository to the new remote repository by adding a new remote. This will look something like <code>git remote set-url origin git@github.com:&lt;username&gt;/&lt;repo&gt;.git</code> where you’ll need to replace <code>&lt;username&gt;</code> and <code>&lt;repo&gt;</code> with your specific information. For my example, this command is `<code>git remote set-url origin git@github.com:joshbrake/e155-lab1.git</code></li>
+<li>Push your local commit to the remote using <code>git push origin main</code>. If git complains that it doesn’t know what main is, then your branch might be named master. In this case, run <code>git branch -m master main</code> and run the push command again.</li>
+<li>Navigate to your repository page on Github and you should see your folder structure there.</li>
+</ol>
+<p>Here’s a video walking through the steps above as well.</p>
 <div style="position: relative; padding-bottom: 64.63195691202873%; height: 0;">
 <iframe src="https://www.loom.com/embed/ee828a5b3c024653a9c210d2451a7251?sid=844f2d0e-c6b0-47ef-aacd-5e7cb4b36aab" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
 </iframe>

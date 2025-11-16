@@ -3,8 +3,10 @@
     "listing": "/tutorials/index.html",
     "items": [
       "/tutorials/tutorial-videos/creating-and-initializing-your-git-repo.html",
+      "/tutorials/tutorial-posts/dev-board-assembly/index.html",
       "/tutorials/tutorial-videos/esp8266-webserver.html",
       "/tutorials/tutorial-posts/git-setup/index.html",
+      "/tutorials/tutorial-posts/background/index.html",
       "/tutorials/tutorial-posts/quarto-portfolio-setup/index.html",
       "/tutorials/tutorial-posts/keypad-testbench/index.html",
       "/tutorials/tutorial-videos/lattice-lse-fsm-automatically-decode-unreachable-states.html",
