@@ -25,6 +25,7 @@ While these rubrics are a good reference, they are subject to changes.
 
 ## Final Projects from Previous Years of E155
 
+- [Fall 2025 Project Reports](./reports/2025/)
 - [Fall 2024 Project Reports](./reports/2024/)
 - [Fall 2023 Project Reports](./reports/2023/)
 - [Fall 2022 Project Reports](./reports/2022/)

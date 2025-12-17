@@ -1,0 +1,32 @@
+---
+title: Fall 2025
+subtitle: E155 MicroPs Final Projects 
+format:
+  html: default
+---
+
+|  |  |
+|-------------------------|------------------------------------------|
+| **Project Title** | **Team Members** |
+| [Invisible Drum Set](https://marina-bellido.github.io/E155_Project/) | [Marina Bellido](https://www.linkedin.com/in/marina-bellido-hmc/) and [Emmett Stralka](https://www.linkedin.com/in/emmett-stralka-b41575213/) |
+| [High Speed ADC+Bluetooth](https://massinihs.quarto.pub/e155-final-report/) | [Massin Ihs](https://www.linkedin.com/in/massin-ihs-65359a255/) and [Tian Xie](https://www.linkedin.com/in/tian-xie-11404220a/) |
+| [Bode Plot Generator](https://matt-molinar.github.io/bode-plot-website/) | [George Davis](https://www.linkedin.com/in/gswdavis/) and [Matthew Molinar](https://www.linkedin.com/in/matthew-molinar/) |
+| [Microcontroller Karaoke](https://mayu-tatsu.github.io/e155-karaoke-site/) | [Quinn Miyamoto](https://www.linkedin.com/in/quinn-miyamoto-62a112381/) and [Mayu Tatsumi](https://www.linkedin.com/in/mayutatsumi/) |
+| [FPGA Tetris](https://jacassidy.github.io/E155-Website/project/portfolio/portfolio.html) | [Kaden Cassidy](https://www.linkedin.com/in/kaden-cassidy/) and [Noah Fotenos](https://www.linkedin.com/in/noah-fotenos/) |
+| [Guitar Pedal with Chorus](https://roman-de-santos.github.io/E155Project/) | [Roman De Santos](https://www.linkedin.com/in/roman-de-santos/), [Cameron Hernandez](https://www.linkedin.com/in/cameron-hernandez-91b431212/) and [Lucas Lemos](https://www.linkedin.com/in/lucas-a-lemos/) |
+| [LIDAR Paper-Rock-Scissors](https://isabella-hottenrott.github.io/e155-final-project-portfolio/) | [Isabella Hottenrott](https://www.linkedin.com/in/isabella-hottenrott-ba6200259/) and [Wava Chan](https://www.linkedin.com/in/wava-chan-b2b894215/) |
+| [Spinning Synth](https://sxyandell.github.io/e155-final-website/) | [Sarah Yandell](https://www.linkedin.com/in/yandell-sarah/) and [Madeleine Kan](https://www.linkedin.com/in/madeleinekan/) |
+| [Barcode Beats](https://tlilygren.github.io/e155-project-portfolio/) | [Leilani Elkaslasy](https://www.linkedin.com/in/leilani-elkaslasy-7863a3330/) and [Thomas Lilygren](https://linkedin.com/in/thomas-lilygren) |
+| [Multi-Effect Guitar Pedal](https://lughnasam.github.io/e155-quarto-page/project/project_final_report/project_final_report.html) | [Lughnasa Miller](https://www.linkedin.com/in/lughnasamiller/) and [Kanoa Parker](https://www.linkedin.com/in/kanoa-parker/) |
+| [LED Zepplin](https://joshua-heinstein.github.io/e155-website/) | [Joshua Heinstein](https://www.linkedin.com/in/joshua-heinstein/) and [Sorin Jayaweera](https://www.linkedin.com/in/sorin-jayaweera/) |
+| [Live Music Transcriber](https://juliacygong.github.io/E155-project-website/) | [Julia Gong](https://www.linkedin.com/in/julia-gong-b8222830a) and [Georgia Tai](https://www.linkedin.com/in/georgia-tai/) |
+| [MechaCrypt](https://rex-josaphat.github.io/MechaCrypt-Portfolio/pages/) | [Josephat Ngoga](https://www.linkedin.com/in/jngoga/) and [Christian Wu](https://www.linkedin.com/in/christiancwu) |
+| [FPGA Autotune](https://shreyajampana.github.io/e155-portflio/project/proposal.html) | [Emma Angel](https://www.linkedin.com/in/emmaangel/), [Jared Carreno](https://www.linkedin.com/in/jared-carreno/) and [Shreya Jampana](https://shreyajampana.github.io/personal-portfolio/) |
+| [RFID Jukebox](https://emenemi1y.github.io/e155-project/team.html) | [Nina Jobanputra](https://www.linkedin.com/in/nina-jobanputra/) and [Emily Kendrick](https://www.linkedin.com/in/emily56/) |
+| [Real-time 3-Band Equalizer](https://eoinoconnell04.github.io/E155-Portfolio/E155-Project/final_report.html) | [Eoin O'Connell](https://www.linkedin.com/in/eoinoconnell04/) and [Drake Gonzalez](https://www.linkedin.com/in/drake-gonzales-a953092a6/) |
+| [VGA Slot Machine](https://sadhvinarayanan.github.io/E155_Final_Project_Portfolio/) | [Corey Hickson](https://www.linkedin.com/in/corey-hickson/) and [Sadhvi Narayanan](https://www.linkedin.com/in/sadhvi-narayanan-3b1292283/) |
+| [Portable DJ Set](https://maynorb.github.io/E155ProjectSite/) | [Carlos Ojeda](https://github.com/cojedadesilva) and [Maynor Bac-Itzep](https://github.com/MaynorB) |
+| [Toothless Candy Bucket](https://erinlywang.github.io/toothless-candy-bucket/) | [Caiya Coggshall](https://caiyacoggshall1.wixsite.com/caiya-coggshall/portfolio) and [Erin Wang](https://github.com/erinlywang) |
+| [Digital Instrument Tuner](https://brbownds.github.io/e155-final-project-bbdh/) | [Broderick Bownds](https://www.linkedin.com/in/broderickbownds/) and [Sebastian Heredia](https://www.linkedin.com/in/sebastian-heredia4/) |
+| [DDRUM](https://abe-3.github.io/E155-Microprocessors/project/project-final-report.html) | [Abe Rock](https://www.linkedin.com/in/abrahamrock/) and [Santiago Burgos-Fallon](https://www.linkedin.com/in/santiago-burgos-fallon-555a81309/) |
+| [Line Following OVerkill](https://diego2317.github.io/E155-project-site/) | [Diego Weiss](https://www.linkedin.com/in/diegoweiss/) and [Aabhas Senapati](https://linkedin.com/in/aabhassenapati) |
