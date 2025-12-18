@@ -6,7 +6,7 @@
 - [ ] Note durations match the durations specified in the starter code for *Für Elise* (i.e., the tune plays at the correct tempo)
 - [ ] All rests (pauses with no sound) are played properly
 - [ ] Calculations show that the system can create 220 Hz and 1000 Hz pitches within 1% accuracy. 
-- [ ] Code uses `#define` macros for memory-mapped registers
+- [ ] Code uses `#define` macros for memory-mapped registers, copying the struct and base address design format from class.
 
 #### Excellence
 
