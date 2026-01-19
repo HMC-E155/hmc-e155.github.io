@@ -26,7 +26,7 @@ format:
 | [Real-time 3-Band Equalizer](https://eoinoconnell04.github.io/E155-Portfolio/E155-Project/final_report.html) | [Eoin O'Connell](https://www.linkedin.com/in/eoinoconnell04/) and [Drake Gonzalez](https://www.linkedin.com/in/drake-gonzales-a953092a6/) |
 | [VGA Slot Machine](https://sadhvinarayanan.github.io/E155_Final_Project_Portfolio/) | [Corey Hickson](https://www.linkedin.com/in/corey-hickson/) and [Sadhvi Narayanan](https://www.linkedin.com/in/sadhvi-narayanan-3b1292283/) |
 | [Portable DJ Set](https://maynorb.github.io/E155ProjectSite/) | [Carlos Ojeda](https://github.com/cojedadesilva) and [Maynor Bac-Itzep](https://github.com/MaynorB) |
-| [Toothless Candy Bucket](https://erinlywang.github.io/toothless-candy-bucket/) | [Caiya Coggshall](https://caiyacoggshall1.wixsite.com/caiya-coggshall/portfolio) and [Erin Wang](https://github.com/erinlywang) |
+| [Toothless Candy Bucket](https://erinlywang.github.io/toothless-candy-bucket/) | [Caiya Coggshall](https://caiyacoggshall7.github.io/professional-portfolio/) and [Erin Wang](https://github.com/erinlywang) |
 | [Digital Instrument Tuner](https://brbownds.github.io/e155-final-project-bbdh/) | [Broderick Bownds](https://www.linkedin.com/in/broderickbownds/) and [Sebastian Heredia](https://www.linkedin.com/in/sebastian-heredia4/) |
 | [DDRUM](https://abe-3.github.io/E155-Microprocessors/project/project-final-report.html) | [Abe Rock](https://www.linkedin.com/in/abrahamrock/) and [Santiago Burgos-Fallon](https://www.linkedin.com/in/santiago-burgos-fallon-555a81309/) |
 | [Line Following OVerkill](https://diego2317.github.io/E155-project-site/) | [Diego Weiss](https://www.linkedin.com/in/diegoweiss/) and [Aabhas Senapati](https://linkedin.com/in/aabhassenapati) |
