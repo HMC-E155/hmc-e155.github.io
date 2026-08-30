@@ -31,10 +31,10 @@ You can find examples of past final projects on the class web page. Examples inc
 
 ## Budget
 
-**UNDER CONSTRUCTION DO NOT BUY ANYTHING UNTIL PROF SPENCER CONFIRMS DETAILS**
+**UNDER CONSTRUCTION DO NOT BUY ANYTHING UNTIL THE INSTRUCTORS CONFIRM DETAILS**
 
 If your team needs parts that are not available in the stockroom, you may spend up to \$50 to purchase them. 
-You will need to save your receipts, fill out a reimbursement form available from the [department website](https://www.hmc.edu/engineering/current-student-information/department-forms/), and have me approve the reimbursement (list me as the faculty advisor on the form).
+You will need to save your receipts, fill out a reimbursement form available from the [department website](https://www.hmc.edu/engineering/current-student-information/department-forms/), and have an instructor approve the reimbursement (list your instructor as the faculty advisor on the form).
 
 ## Deliverables
 
@@ -42,7 +42,7 @@ Your team is responsible for the following deliverables at the dates described a
 
 ### Project Proposal
 
-A 2-page proposal describing what you plan to build. It must be specific enough that I can tell when you demonstrate your project that it meets the specs of the proposal. 
+A 2-page proposal describing what you plan to build. It must be specific enough that we can tell when you demonstrate your project that it meets the specs of the proposal. 
 Do not list stretch goals or wiggle words; simply state what you are committing to deliver. You may need to do some preliminary technical work to gain confidence you can deliver what you promise. The proposal must include the following:
 
 * Include a bill of materials with the parts you expect to need along with prices for any supplies that are not available in the stock room. 
@@ -73,7 +73,7 @@ The goal of the presentation is to get input from other students who might have 
 
 ### Project Demonstration
 
-Demonstrate a working project to the instructor in the lab.
+Demonstrate a working project to an instructor in the lab.
 There will be signups for demonstration periods, during which you will show that you meet your specifications and be asked technical questions about the operation of your design. 
 Come prepared with printouts of your schematics, software and Verilog. If your project is one day late, one letter grade will be deducted.
 
@@ -93,11 +93,11 @@ The website should include:
 
 Late projects will not be accepted except in the case of unusual extenuating circumstances. 
 Be careful to choose a project within a scope that you can reasonably expect to finish. 
-If you realize your project is too large, contact me as soon as possible to renegotiate your project proposal. 
-I will not accept revisions to the proposal after the Friday following the in-class presentation.
+If you realize your project is too large, contact us as soon as possible to renegotiate your project proposal. 
+We will not accept revisions to the proposal after the Friday following the in-class presentation.
 
 ## Grading
 
 Your project will be graded according to the policy laid out in the syllabus. For reference, that policy can be found [here](/syllabus/index.qmd#grading).
 
-If you feel there has been inequality between the work you and your teammate deliver, contact me personally.
+If you feel there has been inequality between the work you and your teammate deliver, contact an instructor personally.

@@ -6,7 +6,7 @@ format:
   pdf: default
 ---
 
-Welcome to E155!  I am excited about all the cool projects you will make, and I am glad to have you here.  This course teaches students how to practically realize complicated digital electronic systems, including FPGAs, microcontrollers and some chips of your own choosing.  It culminates with a project where you decide what you want to build.
+Welcome to E155!  We are excited about all the cool projects you will make, and we are glad to have you here.  This course teaches students how to practically realize complicated digital electronic systems, including FPGAs, microcontrollers and some chips of your own choosing.  It culminates with a project where you decide what you want to build.
 
 At the end of the course you will be able to 
 
@@ -27,8 +27,8 @@ At the end of the course you will be able to
 
 | Item                | Information                                          |
 |---------------------|------------------------------------------------------|
-| Instructors:        | Prof. Matthew Spencer                                |
-| Lab Assistant(s):   | Neil Chulani, Kavi Dey, Troy Kaufman, Vikram Krishna |
+| Instructors:        | Prof. Josh Brake (Parsons 2364), Prof. Matt Spencer (Parsons 2358) |
+| Lab Assistant(s):   | Drake Gonzalez (4 hrs/wk), Julia Gong (4 hrs/wk), Quinn Miyamoto (6 hrs/wk), Sadhvi Narayanan (4 hrs/wk) |
 | Web page:           | [{{< var website-url >}}]({{< var website-url >}})   |
 | Lab Checkoff Sheet: | [Sheet Link]({{< var lab-checkoff-gsheet-url >}})    |
 | Email list:         | We don't use email, only Discord                     |
@@ -39,10 +39,9 @@ Be sure to join the class Discord and check it regularly. It is be the only sour
 | Name         | Info                                                  |
 |--------------|-------------------------------------------------------|
 | Lecture      | TR 1:15 - 2:30 pm                                     |
-| Lab Checkoff | TWR afternoons by signup in the Digital Lab (PA B183) |
-| Lab Hours    | Saturday -- Neil 2-4 PM, Kavi 6-8 PM                  |
-|              | Sunday -- Kavi 2-4 PM, Vikram 7-9 PM                  |
-|              | Monday -- Prof. Spencer 1-4 PM (check P2358 if not in lab), Troy 7-9 PM |
+| Lab Checkoff | TW afternoons by signup in the Digital Lab (PA B183)  |
+| Lab Hours    | TBD                                                   |
+| Office Hours | TBD                                                   |
 
 
 ## Schedule
@@ -50,31 +49,31 @@ Be sure to join the class Discord and check it regularly. It is be the only sour
 
 | Week \# | Monday Date | Tuesday's Class | Thursday's Class | Due |
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
-| 1  | 8/25  | Intro & Analog Behavior of Digital Systems | Combinational and Sequential Logic | Git & Quarto Portfolio Setup |
-| 2  | 9/1   | Verilog Coding | Synchronous Design | [Lab 1](/lab/lab1/) |
-| 3  | 9/8   | FPGA Documentation | C Programming on an MCU | [Lab 2](/lab/lab2/) |
-| 4  | 9/15  | GPIO | Clock Configuration | [Lab 3](/lab/lab3/) |
-| 5  | 9/22  | Timers | Interrupts |  |
-| 6  | 9/29  | PCB Design Activity | PCB Design Activity | [Lab 4](/lab/lab4/) |
-| 7  | 10/6  | Serial Interfaces Overview, SPI, and Project Kickoff | UART and the IoT | [Lab 5](/lab/lab5/) |
-| 8  | 10/13 | **Happy Fall Break! No Class** | Proposal Debriefs | [Project Proposal](/project/) |
-| 9  | 10/20 | Advanced Encryption Standard (AES) | AES on FPGA Workshop | [Lab 6](/lab/lab6/) |
-| 10 | 10/27 | Graphics and Displays | Motors and Speakers | [Lab 7](/lab/lab7/) |
-| 11 | 11/3  | Design Review Presentations | Design Review Presentations | Design Review Presentation & Memo |
-| 12 | 11/10 | Introduction to Real Time Operating Systems | Direct Memory Access |  |
-| 13 | 11/17 | Project Status Report and Demo  | Connectors | Project Status Reports & Demo |
-| 14 | 11/24 | The Fast Fourier Transform (FFT) | Happy Thanksgiving! **No class** |  |
-| 15 | 12/4  | Digital Signal Processing | Special Topics / Guest Lecture | Project Checkoffs, Report, Demo Day |
+| 1  | 8/31  | Intro & Analog Behavior of Digital Systems | Combinational and Sequential Logic | Git & Quarto Portfolio Setup |
+| 2  | 9/7   | Verilog Coding | Synchronous Design | [Lab 1](/lab/lab1/) |
+| 3  | 9/14  | FPGA Documentation | C Programming on an MCU | [Lab 2](/lab/lab2/) |
+| 4  | 9/21  | GPIO | Clock Configuration | [Lab 3](/lab/lab3/) |
+| 5  | 9/28  | Timers | Interrupts | [Lab 4](/lab/lab4/) |
+| 6  | 10/5  | Serial Interfaces Overview and SPI | UART and the IoT | [Lab 5](/lab/lab5/) |
+| 7  | 10/12 | Advanced Encryption Standard (AES) | Project Kickoff | [Lab 6](/lab/lab6/) |
+| 8  | 10/19 | **Happy Fall Break! No Class** | Proposal Debriefs / Spare Time Slot | [Project Proposal](/project/) |
+| 9  | 10/26 | TBD | AES on FPGA Workshop | [Lab 7](/lab/lab7/) |
+| 10 | 11/2  | Advanced Topics 1 | Advanced Topics 2 | Redo week |
+| 11 | 11/9  | Design Review Presentations | Design Review Presentations | Design Review Presentation & Memo |
+| 12 | 11/16 | Design Review Presentations | Advanced Topics 3 |  |
+| 13 | 11/23 | Project Status Report and Demo | Happy Thanksgiving! **No class** | Project Status Report & Demo |
+| 14 | 11/30 | Advanced Topics 4 | Advanced Topics 5 |  |
+| 15 | 12/7  | Advanced Topics 6 | Special Topics / Guest Lecture | Project Checkoffs, Report, Final Demo (Tue) and Demo Day (Fri 12/11, last day of classes) |
 
-You will be working on labs on your own time and it is not required that you attend the entire scheduled lab period. Instead, sign up for a time to get your lab checked off. Please sign up for a time during your lab section. If you are unable to find a spot that works for you, see if you can swap with one of your classmates. If you are still having trouble finding a time that works for you, reach out and let me know.
+You will be working on labs on your own time and it is not required that you attend the entire scheduled lab period. Instead, sign up for a time to get your lab checked off. Please sign up for a time during your lab section. If you are unable to find a spot that works for you, see if you can swap with one of your classmates. If you are still having trouble finding a time that works for you, reach out and let us know.
 
 ## Recommended Texts
 
-I assume you have a solid grasp of digital design at the level of E85; review Digital Design and Computer Architecture, ARM Edition ([link](https://ccl.on.worldcat.org/oclc/900028206)) if you feel rusty on a topic. We will not be closely following a textbook, but you may find The Definitive Guide to ARM® Cortex®-M3 and Cortex®-M4 Processors by Joseph Yiu to be a helpful, comprehensive reference for the microcontroller. An electronic version of the book is available through the library ([link](https://ccl.on.worldcat.org/oclc/868231734)).
+We assume you have a solid grasp of digital design at the level of E85; review Digital Design and Computer Architecture, ARM Edition ([link](https://ccl.on.worldcat.org/oclc/900028206)) if you feel rusty on a topic. We will not be closely following a textbook, but you may find The Definitive Guide to ARM® Cortex®-M3 and Cortex®-M4 Processors by Joseph Yiu to be a helpful, comprehensive reference for the microcontroller. An electronic version of the book is available through the library ([link](https://ccl.on.worldcat.org/oclc/868231734)).
 
 ## Lab Kit
 
-While there is not a textbook to purchase, you will need to buy a lab kit. The fee is \$75 in Claremont Cash, and should be paid by filling out the Google Form ([link]({{< var lab-kit-fee-url >}})) which authorizes Sydney Torrey in the Engineering office to charge your Claremont Cash account. Once you have paid for your kit via the form, see Jacob Staimpel in the stockroom to pick up your kit. If you cook your board this semester, you can buy and rebuild a replacement, but ask the instructor for help troubleshooting first. You'll also check out a large breadboard from the stockroom, and will need to return it at the end of the semester.
+While there is not a textbook to purchase, you will need to buy a lab kit. The fee is \$75 in Claremont Cash, and should be paid by filling out the Google Form ([link]({{< var lab-kit-fee-url >}})) which authorizes Sydney Torrey in the Engineering office to charge your Claremont Cash account. Once you have paid for your kit via the form, see Jacob Staimpel in the stockroom to pick up your kit. If you cook your board this semester, you can buy and rebuild a replacement, but ask an instructor for help troubleshooting first. You'll also check out a large breadboard from the stockroom, and will need to return it at the end of the semester.
 
 The kit fee can be waived in cases of financial hardship. To request a waiver fill out the form here ([link]({{< var lab-kit-waiver-url >}})). Course instructors will not know about waiver requests.
 
@@ -127,7 +126,7 @@ You **should**:
 - Discuss high level questions about the approach to the lab **after** you have spent time developing your own initial approach.
 - Ask for feedback on your Verilog code **after** both you and the person you are asking to review your code have made a significant attempt on your own.
 - List on your lab writeup any people that have reviewed your work or for whom you have reviewed work.
-- Ask the instructor any question you think might be inappropriate to discuss with a peer.
+- Ask an instructor any question you think might be inappropriate to discuss with a peer.
 
 You may **not**:
 
@@ -144,7 +143,7 @@ Harvey Mudd is piloting [AI/LLM use language](https://docs.google.com/document/d
 
 Academic work on the effects of AI on learning are still nascent, but [a case study](https://nemo.asee.org/public/conferences/365/papers/45536/view) in a course similar to ours suggested that students who rely on AI early in the course often struggle with concepts later in the course.  However, LLMs are rapidly transforming industrial practice in software development and digital engineering, and [other academic work](https://nemo.asee.org/public/conferences/365/papers/48474/view) suggests that an AI with expert prompting can succeed in programming a microcontroller to the level required by a class. 
 
-Therefore, this course is taking a cautious stance about engagement with AI.  Many of the learning goals (especially learning to interpret documentation and RTL) are undermined by the use of AI. Therefore, in the policy outlined below, AI will be allowed only on "AI prototype" questions in the labs.  During the project, I am amenable to more liberal AI use because you will have demonstrated many fundamental skills from the class.  We can discuss more at the project launch.
+Therefore, this course is taking a cautious stance about engagement with AI.  Many of the learning goals (especially learning to interpret documentation and RTL) are undermined by the use of AI. Therefore, in the policy outlined below, AI will be allowed only on "AI prototype" questions in the labs.  During the project, we are amenable to more liberal AI use because you will have demonstrated many fundamental skills from the class.  We can discuss more at the project launch.
 
 ::: {.callout-note title="Using AI in MicroPs"}
 
@@ -152,7 +151,7 @@ In MicroPs this fall we will adopt the following policies for generative AI use 
 
 You **should**:
 
-- **Use AI on the AI prototypes throughout the course.** Each lab this fall will include a section describing a generative AI experiment. For the tasks in these sections you are required to leverage generative AI. As you embrace AI, I would encourage you to reflect on your experience using it and on its impact on your skill development. Your reflections on these AI experiments each week are a great topic to discuss in your weekly reflections.
+- **Use AI on the AI prototypes throughout the course.** Each lab this fall will include a section describing a generative AI experiment. For the tasks in these sections you are required to leverage generative AI. As you embrace AI, we would encourage you to reflect on your experience using it and on its impact on your skill development. Your reflections on these AI experiments each week are a great topic to discuss in your weekly reflections.
 
 You should **not**:
 
@@ -169,7 +168,7 @@ Students in this class are expected to follow the HMC honor code. An honor code 
 If you believe you have violated the honor code in any way, please take the initiative to self report so that we can come up with a fair and just path forward together.
 
 1.  All students enrolled in this course are bound by the HMC Honor Code. More information on the HMC Honor Code can be found in the HMC Student Handbook.
-2.  It is your responsibility to determine whether your actions adhere to the HMC Honor Code. If this document does not clarify the legitimacy of a particular action, you should contact the course instructor and request clarification.
+2.  It is your responsibility to determine whether your actions adhere to the HMC Honor Code. If this document does not clarify the legitimacy of a particular action, you should contact a course instructor and request clarification.
 3.  Work you submit for individual assignments should be your own, and you should complete all assignments based on your own understanding of the underlying material. If you work with, or receive help from, another individual on an assignment, provide a written acknowledgement in complete sentences that includes the person's name and the nature of the help.
 4.  This document is not meant to be an exhaustive list of every possible Honor Code violation. Infractions not explicitly mentioned here may still violate the Honor Code.
 5.  **Boundaries of Collaboration.** Verbal collaboration with other students on individual assignments is encouraged **after** you have given serious thought to each component yourself. However, all submitted written work should be written by yourself individually, and not a collaborative effort or copied from a common source (e.g., a chalkboard). It is **not** acceptable to work on labs in lockstep with another classmate.
