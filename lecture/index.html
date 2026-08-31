@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>Lecture – HMC E155</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -33,14 +39,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="..//assets/img/microps-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6bfc7d598bfa5b068f2d83e2a21e42cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0be6f067fb88b5911c0e6a259786e242.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -200,31 +205,30 @@ ul.task-list li input[type="checkbox"] {
 
 <p>See the list below for links to lecture slides and handouts. Slides and handouts will normally be posted shortly before each class period.</p>
 <ul>
-<li>Lecture 1: Introduction and Analog Behavior of Digital Systems [<a href="./slides/lecture-01-slides.pdf">slides</a>] [<a href="./slides/lecture-01-handout.pdf">handout</a>]</li>
-<li>Lecture 2: Combinational and Sequential Logic [<a href="./slides/lecture-02-slides.pdf">slides</a>] [<a href="./slides/lecture-02-handout.pdf">handout</a>]</li>
-<li>Lecture 3: Verilog Review [<a href="./slides/lecture-03-slides.pdf">slides</a>] [<a href="./slides/lecture-03-handout.pdf">handout</a>]</li>
-<li>Lecture 4: Synchronous Design [<a href="./slides/lecture-04-slides.pdf">slides</a>] [<a href="./slides/lecture-04-handout.pdf">handout</a>]</li>
-<li>Lecture 5: FPGA Documentation [<a href="./slides/lecture-05-slides.pdf">slides</a>] [<a href="./slides/lecture-05-handout.pdf">handout</a>]</li>
-<li>Lecture 6: Introduction to the STM32 L432KC MCU and Refresher on C Programming [<a href="./slides/lecture-06-slides.pdf">slides</a>] [<a href="./slides/lecture-06-handout.pdf">handout</a>]</li>
-<li>Lecture 7: GPIO Device Driver [<a href="./slides/lecture-07-slides.pdf">slides</a>] [<a href="./slides/lecture-07-handout.pdf">handout</a>]</li>
-<li>Lecture 8: C Clock Configuration [<a href="./slides/lecture-08-slides.pdf">slides</a>] [<a href="./slides/lecture-08-handout.pdf">handout</a>] [<a href="https://github.com/HMC-E155/tutorial-clock-configuration">tutorial repository</a>]</li>
-<li>Lecture 9: Timers [<a href="./slides/lecture-09-slides.pdf">slides</a>] [<a href="./slides/lecture-09-handout.pdf">handout</a>]</li>
-<li>Lecture 10: Interrupts [<a href="./slides/lecture-10-slides.pdf">slides</a>] [<a href="./slides/lecture-10-handout.pdf">handout</a>] [<a href="https://github.com/HMC-E155/tutorial-interrupts">tutorial repository</a>]</li>
-<li><a href="./pcb-activity/">PCB Design Activity</a></li>
-<li>Lecture 11: Serial Interfaces and SPI [<a href="./slides/lecture-11-slides.pdf">slides</a>] [<a href="./slides/lecture-11-handout.pdf">handout</a>] [<a href="./slides/project-kickoff.pdf">project kickoff slides</a>]</li>
-<li>Lecture 12: UART and the Internet of Things [<a href="./slides/lecture-12-slides.pdf">slides</a>] [<a href="./slides/lecture-12-handout.pdf">handout</a>] [<a href="https://github.com/HMC-E155/tutorial-uart">tutorial repository UART</a>] [<a href="https://github.com/HMC-E155/tutorial-esp8266-click-webserver">tutorial repository ESP8266</a>]</li>
-<li>Lecture 13: Introduction to AES: Galois Fields [<a href="./slides/lecture-13-slides.pdf">slides</a>] [<a href="./slides/lecture-13-handout.pdf">handout</a>]</li>
-<li>Lecture 14: Implementing AES on an FPGA [<a href="./slides/lecture-14-slides.pdf">slides</a>] [<a href="./slides/lecture-14-handout.pdf">handout</a>]</li>
-<li>Lecture 15: Graphics and Displays [<a href="./slides/lecture-15-slides.pdf">slides</a>]</li>
-<li>Lecture 16: Motors and Speakers [<a href="./slides/lecture-16-slides.pdf">slides</a>]</li>
-<li>Lecture 17: Introduction to Real Time Operating Systems [<a href="./slides/lecture-17-slides.pdf">slides</a>] [<a href="./slides/lecture-17-handout.pdf">handout</a>] [<a href="https://github.com/HMC-E155/tutorial-free-rtos">tutorial repository</a>]</li>
-<li>Lecture 18: Direct Memory Access [<a href="./slides/lecture-18-slides.pdf">slides</a>] [<a href="./slides/lecture-18-handout.pdf">handout</a>] [<a href="https://github.com/HMC-E155/tutorial-dma">tutorial repository</a>]</li>
-<li>Lecture 19: Connectors [<a href="./slides/lecture-19-slides.pdf">slides</a>]</li>
-<li>Lecture 20: The Fast Fourier Transform [<a href="./slides/lecture-20-slides.pdf">slides</a>] [<a href="./slides/lecture-20-handout.pdf">handout</a>] <!-- * Lecture 18: Interrupts [[slides](./slides/lecture-18-slides.pdf)] [[handout](./slides/lecture-18-handout.pdf)]
-* Lecture 19: Interrupts Activity [[slides](./slides/lecture-19-slides.pdf)] [[handout](./slides/lecture-19-handout.pdf)]
-
-* Lecture 21: Direct Memory Access [[slides](./slides/lecture-21-slides.pdf)] [[handout](./slides/lecture-21-handout.pdf)]
-* Lecture 22: Introduction to Real Time Operating Systems [[slides](./slides/lecture-22-slides.pdf)] [[handout](./slides/lecture-22-handout.pdf)] --></li>
+<li><p>Lecture 1: Introduction and Analog Behavior of Digital Systems [<a href="./slides/lecture-01-slides.pdf">slides</a>] [<a href="./slides/lecture-01-handout.pdf">handout</a>]</p></li>
+<li><p>Lecture 2: Combinational and Sequential Logic [<a href="./slides/lecture-02-slides.pdf">slides</a>] [<a href="./slides/lecture-02-handout.pdf">handout</a>]</p></li>
+<li><p>Lecture 3: Verilog Review [<a href="./slides/lecture-03-slides.pdf">slides</a>] [<a href="./slides/lecture-03-handout.pdf">handout</a>]</p></li>
+<li><p>Lecture 4: Synchronous Design [<a href="./slides/lecture-04-slides.pdf">slides</a>] [<a href="./slides/lecture-04-handout.pdf">handout</a>]</p></li>
+<li><p>Lecture 5: FPGA Documentation [<a href="./slides/lecture-05-slides.pdf">slides</a>] [<a href="./slides/lecture-05-handout.pdf">handout</a>]</p></li>
+<li><p>Lecture 6: Introduction to the STM32 L432KC MCU and Refresher on C Programming [<a href="./slides/lecture-06-slides.pdf">slides</a>] [<a href="./slides/lecture-06-handout.pdf">handout</a>]</p></li>
+<li><p>Lecture 7: GPIO Device Driver [<a href="./slides/lecture-07-slides.pdf">slides</a>] [<a href="./slides/lecture-07-handout.pdf">handout</a>]</p></li>
+<li><p>Lecture 8: C Clock Configuration [<a href="./slides/lecture-08-slides.pdf">slides</a>] [<a href="./slides/lecture-08-handout.pdf">handout</a>] [<a href="https://github.com/HMC-E155/tutorial-clock-configuration">tutorial repository</a>]</p></li>
+<li><p>Lecture 9: Timers [<a href="./slides/lecture-09-slides.pdf">slides</a>] [<a href="./slides/lecture-09-handout.pdf">handout</a>]</p></li>
+<li><p>Lecture 10: Interrupts [<a href="./slides/lecture-10-slides.pdf">slides</a>] [<a href="./slides/lecture-10-handout.pdf">handout</a>] [<a href="https://github.com/HMC-E155/tutorial-interrupts">tutorial repository</a>]</p></li>
+<li><p><a href="./pcb-activity/">PCB Design Activity</a></p></li>
+<li><p>Lecture 11: Serial Interfaces and SPI [<a href="./slides/lecture-11-slides.pdf">slides</a>] [<a href="./slides/lecture-11-handout.pdf">handout</a>] [<a href="./slides/project-kickoff.pdf">project kickoff slides</a>]</p></li>
+<li><p>Lecture 12: UART and the Internet of Things [<a href="./slides/lecture-12-slides.pdf">slides</a>] [<a href="./slides/lecture-12-handout.pdf">handout</a>] [<a href="https://github.com/HMC-E155/tutorial-uart">tutorial repository UART</a>] [<a href="https://github.com/HMC-E155/tutorial-esp8266-click-webserver">tutorial repository ESP8266</a>]</p></li>
+<li><p>Lecture 13: Introduction to AES: Galois Fields [<a href="./slides/lecture-13-slides.pdf">slides</a>] [<a href="./slides/lecture-13-handout.pdf">handout</a>]</p></li>
+<li><p>Lecture 14: Implementing AES on an FPGA [<a href="./slides/lecture-14-slides.pdf">slides</a>] [<a href="./slides/lecture-14-handout.pdf">handout</a>]</p></li>
+<li><p>Lecture 15: Graphics and Displays [<a href="./slides/lecture-15-slides.pdf">slides</a>]</p></li>
+<li><p>Lecture 16: Motors and Speakers [<a href="./slides/lecture-16-slides.pdf">slides</a>]</p></li>
+<li><p>Lecture 17: Introduction to Real Time Operating Systems [<a href="./slides/lecture-17-slides.pdf">slides</a>] [<a href="./slides/lecture-17-handout.pdf">handout</a>] [<a href="https://github.com/HMC-E155/tutorial-free-rtos">tutorial repository</a>]</p></li>
+<li><p>Lecture 18: Direct Memory Access [<a href="./slides/lecture-18-slides.pdf">slides</a>] [<a href="./slides/lecture-18-handout.pdf">handout</a>] [<a href="https://github.com/HMC-E155/tutorial-dma">tutorial repository</a>]</p></li>
+<li><p>Lecture 19: Connectors [<a href="./slides/lecture-19-slides.pdf">slides</a>]</p></li>
+<li><p>Lecture 20: The Fast Fourier Transform [<a href="./slides/lecture-20-slides.pdf">slides</a>] [<a href="./slides/lecture-20-handout.pdf">handout</a>] &lt;!– * Lecture 18: Interrupts [<a href="./slides/lecture-18-slides.pdf">slides</a>] [<a href="./slides/lecture-18-handout.pdf">handout</a>]</p></li>
+<li><p>Lecture 19: Interrupts Activity [<a href="./slides/lecture-19-slides.pdf">slides</a>] [<a href="./slides/lecture-19-handout.pdf">handout</a>]</p></li>
+<li><p>Lecture 21: Direct Memory Access [<a href="./slides/lecture-21-slides.pdf">slides</a>] [<a href="./slides/lecture-21-handout.pdf">handout</a>]</p></li>
+<li><p>Lecture 22: Introduction to Real Time Operating Systems [<a href="./slides/lecture-22-slides.pdf">slides</a>] [<a href="./slides/lecture-22-handout.pdf">handout</a>] –&gt;</p></li>
 </ul>
 
 

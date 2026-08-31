@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>MicroPs Final Project Requirements – HMC E155</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -33,14 +39,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="..//assets/img/microps-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6bfc7d598bfa5b068f2d83e2a21e42cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0be6f067fb88b5911c0e6a259786e242.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -277,15 +282,15 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="budget" class="level2">
 <h2 class="anchored" data-anchor-id="budget">Budget</h2>
-<p><strong>UNDER CONSTRUCTION DO NOT BUY ANYTHING UNTIL PROF SPENCER CONFIRMS DETAILS</strong></p>
-<p>If your team needs parts that are not available in the stockroom, you may spend up to $50 to purchase them. You will need to save your receipts, fill out a reimbursement form available from the <a href="https://www.hmc.edu/engineering/current-student-information/department-forms/">department website</a>, and have me approve the reimbursement (list me as the faculty advisor on the form).</p>
+<p><strong>UNDER CONSTRUCTION DO NOT BUY ANYTHING UNTIL THE INSTRUCTORS CONFIRM DETAILS</strong></p>
+<p>If your team needs parts that are not available in the stockroom, you may spend up to $50 to purchase them. You will need to save your receipts, fill out a reimbursement form available from the <a href="https://www.hmc.edu/engineering/current-student-information/department-forms/">department website</a>, and have an instructor approve the reimbursement (list your instructor as the faculty advisor on the form).</p>
 </section>
 <section id="deliverables" class="level2">
 <h2 class="anchored" data-anchor-id="deliverables">Deliverables</h2>
 <p>Your team is responsible for the following deliverables at the dates described above:</p>
 <section id="project-proposal" class="level3">
 <h3 class="anchored" data-anchor-id="project-proposal">Project Proposal</h3>
-<p>A 2-page proposal describing what you plan to build. It must be specific enough that I can tell when you demonstrate your project that it meets the specs of the proposal. Do not list stretch goals or wiggle words; simply state what you are committing to deliver. You may need to do some preliminary technical work to gain confidence you can deliver what you promise. The proposal must include the following:</p>
+<p>A 2-page proposal describing what you plan to build. It must be specific enough that we can tell when you demonstrate your project that it meets the specs of the proposal. Do not list stretch goals or wiggle words; simply state what you are committing to deliver. You may need to do some preliminary technical work to gain confidence you can deliver what you promise. The proposal must include the following:</p>
 <ul>
 <li>Include a bill of materials with the parts you expect to need along with prices for any supplies that are not available in the stock room.</li>
 <li>Describe the main subsystems of the design and the features of the MCU that you plan to use.</li>
@@ -311,7 +316,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="project-demonstration" class="level3">
 <h3 class="anchored" data-anchor-id="project-demonstration">Project Demonstration</h3>
-<p>Demonstrate a working project to the instructor in the lab. There will be signups for demonstration periods, during which you will show that you meet your specifications and be asked technical questions about the operation of your design. Come prepared with printouts of your schematics, software and Verilog. If your project is one day late, one letter grade will be deducted.</p>
+<p>Demonstrate a working project to an instructor in the lab. There will be signups for demonstration periods, during which you will show that you meet your specifications and be asked technical questions about the operation of your design. Come prepared with printouts of your schematics, software and Verilog. If your project is one day late, one letter grade will be deducted.</p>
 </section>
 <section id="final-report" class="level3">
 <h3 class="anchored" data-anchor-id="final-report">Final Report</h3>
@@ -323,13 +328,13 @@ ul.task-list li input[type="checkbox"] {
 <li>Photos of your finished design</li>
 <li>A video (hosted in the provided Google Drive folder) demonstrating your project. Any videos should be titled “&lt;LastName1&gt;<em>&lt;LastName2&gt;</em>&lt;VideoName&gt;” to clearly identify your videos in the folder.</li>
 </ul>
-<p>Late projects will not be accepted except in the case of unusual extenuating circumstances. Be careful to choose a project within a scope that you can reasonably expect to finish. If you realize your project is too large, contact me as soon as possible to renegotiate your project proposal. I will not accept revisions to the proposal after the Friday following the in-class presentation.</p>
+<p>Late projects will not be accepted except in the case of unusual extenuating circumstances. Be careful to choose a project within a scope that you can reasonably expect to finish. If you realize your project is too large, contact us as soon as possible to renegotiate your project proposal. We will not accept revisions to the proposal after the Friday following the in-class presentation.</p>
 </section>
 </section>
 <section id="grading" class="level2">
 <h2 class="anchored" data-anchor-id="grading">Grading</h2>
 <p>Your project will be graded according to the policy laid out in the syllabus. For reference, that policy can be found <a href="../syllabus/index.html#grading">here</a>.</p>
-<p>If you feel there has been inequality between the work you and your teammate deliver, contact me personally.</p>
+<p>If you feel there has been inequality between the work you and your teammate deliver, contact an instructor personally.</p>
 
 
 </section>

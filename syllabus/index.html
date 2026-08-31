@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>E155 Course Syllabus – HMC E155</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -33,14 +39,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="..//assets/img/microps-logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6bfc7d598bfa5b068f2d83e2a21e42cc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0be6f067fb88b5911c0e6a259786e242.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -243,7 +248,7 @@ window.Quarto = {
 </header>
 
 
-<p>Welcome to E155! I am excited about all the cool projects you will make, and I am glad to have you here. This course teaches students how to practically realize complicated digital electronic systems, including FPGAs, microcontrollers and some chips of your own choosing. It culminates with a project where you decide what you want to build.</p>
+<p>Welcome to E155! We are excited about all the cool projects you will make, and we are glad to have you here. This course teaches students how to practically realize complicated digital electronic systems, including FPGAs, microcontrollers and some chips of your own choosing. It culminates with a project where you decide what you want to build.</p>
 <p>At the end of the course you will be able to</p>
 <ul>
 <li>Read technical documentation for microcontrollers and other digital chips</li>
@@ -271,11 +276,11 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td>Instructors:</td>
-<td>Prof.&nbsp;Matthew Spencer</td>
+<td>Prof.&nbsp;Josh Brake (Parsons 2364), Prof.&nbsp;Matt Spencer (Parsons 2358)</td>
 </tr>
 <tr class="even">
 <td>Lab Assistant(s):</td>
-<td>Neil Chulani, Kavi Dey, Troy Kaufman, Vikram Krishna</td>
+<td>Drake Gonzalez (4 hrs/wk), Julia Gong (4 hrs/wk), Quinn Miyamoto (6 hrs/wk), Sadhvi Narayanan (4 hrs/wk)</td>
 </tr>
 <tr class="odd">
 <td>Web page:</td>
@@ -297,10 +302,6 @@ window.Quarto = {
 </table>
 <p>Be sure to join the class Discord and check it regularly. It is be the only source of course-related communication for this semester.</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 79%">
-</colgroup>
 <thead>
 <tr class="header">
 <th>Name</th>
@@ -314,19 +315,15 @@ window.Quarto = {
 </tr>
 <tr class="even">
 <td>Lab Checkoff</td>
-<td>TWR afternoons by signup in the Digital Lab (PA B183)</td>
+<td>TW afternoons by signup in the Digital Lab (PA B183)</td>
 </tr>
 <tr class="odd">
 <td>Lab Hours</td>
-<td>Saturday – Neil 2-4 PM, Kavi 6-8 PM</td>
+<td>TBD</td>
 </tr>
 <tr class="even">
-<td></td>
-<td>Sunday – Kavi 2-4 PM, Vikram 7-9 PM</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td>Monday – Prof.&nbsp;Spencer 1-4 PM (check P2358 if not in lab), Troy 7-9 PM</td>
+<td>Office Hours</td>
+<td>TBD</td>
 </tr>
 </tbody>
 </table>
@@ -346,121 +343,121 @@ window.Quarto = {
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">1</td>
-<td style="text-align: center;">8/25</td>
+<td style="text-align: center;">8/31</td>
 <td style="text-align: center;">Intro &amp; Analog Behavior of Digital Systems</td>
 <td style="text-align: center;">Combinational and Sequential Logic</td>
 <td style="text-align: center;">Git &amp; Quarto Portfolio Setup</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">2</td>
-<td style="text-align: center;">9/1</td>
+<td style="text-align: center;">9/7</td>
 <td style="text-align: center;">Verilog Coding</td>
 <td style="text-align: center;">Synchronous Design</td>
 <td style="text-align: center;"><a href="../lab/lab1/">Lab 1</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">3</td>
-<td style="text-align: center;">9/8</td>
+<td style="text-align: center;">9/14</td>
 <td style="text-align: center;">FPGA Documentation</td>
 <td style="text-align: center;">C Programming on an MCU</td>
 <td style="text-align: center;"><a href="../lab/lab2/">Lab 2</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">4</td>
-<td style="text-align: center;">9/15</td>
+<td style="text-align: center;">9/21</td>
 <td style="text-align: center;">GPIO</td>
 <td style="text-align: center;">Clock Configuration</td>
 <td style="text-align: center;"><a href="../lab/lab3/">Lab 3</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">5</td>
-<td style="text-align: center;">9/22</td>
+<td style="text-align: center;">9/28</td>
 <td style="text-align: center;">Timers</td>
 <td style="text-align: center;">Interrupts</td>
-<td style="text-align: center;"></td>
+<td style="text-align: center;"><a href="../lab/lab4/">Lab 4</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">6</td>
-<td style="text-align: center;">9/29</td>
-<td style="text-align: center;">PCB Design Activity</td>
-<td style="text-align: center;">PCB Design Activity</td>
-<td style="text-align: center;"><a href="../lab/lab4/">Lab 4</a></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">7</td>
-<td style="text-align: center;">10/6</td>
-<td style="text-align: center;">Serial Interfaces Overview, SPI, and Project Kickoff</td>
+<td style="text-align: center;">10/5</td>
+<td style="text-align: center;">Serial Interfaces Overview and SPI</td>
 <td style="text-align: center;">UART and the IoT</td>
 <td style="text-align: center;"><a href="../lab/lab5/">Lab 5</a></td>
 </tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">10/12</td>
+<td style="text-align: center;">Advanced Encryption Standard (AES)</td>
+<td style="text-align: center;">Project Kickoff</td>
+<td style="text-align: center;"><a href="../lab/lab6/">Lab 6</a></td>
+</tr>
 <tr class="even">
 <td style="text-align: center;">8</td>
-<td style="text-align: center;">10/13</td>
+<td style="text-align: center;">10/19</td>
 <td style="text-align: center;"><strong>Happy Fall Break! No Class</strong></td>
-<td style="text-align: center;">Proposal Debriefs</td>
+<td style="text-align: center;">Proposal Debriefs / Spare Time Slot</td>
 <td style="text-align: center;"><a href="../project/">Project Proposal</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">9</td>
-<td style="text-align: center;">10/20</td>
-<td style="text-align: center;">Advanced Encryption Standard (AES)</td>
+<td style="text-align: center;">10/26</td>
+<td style="text-align: center;">TBD</td>
 <td style="text-align: center;">AES on FPGA Workshop</td>
-<td style="text-align: center;"><a href="../lab/lab6/">Lab 6</a></td>
+<td style="text-align: center;"><a href="../lab/lab7/">Lab 7</a></td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">10</td>
-<td style="text-align: center;">10/27</td>
-<td style="text-align: center;">Graphics and Displays</td>
-<td style="text-align: center;">Motors and Speakers</td>
-<td style="text-align: center;"><a href="../lab/lab7/">Lab 7</a></td>
+<td style="text-align: center;">11/2</td>
+<td style="text-align: center;">Advanced Topics 1</td>
+<td style="text-align: center;">Advanced Topics 2</td>
+<td style="text-align: center;">Redo week</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">11</td>
-<td style="text-align: center;">11/3</td>
+<td style="text-align: center;">11/9</td>
 <td style="text-align: center;">Design Review Presentations</td>
 <td style="text-align: center;">Design Review Presentations</td>
 <td style="text-align: center;">Design Review Presentation &amp; Memo</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">12</td>
-<td style="text-align: center;">11/10</td>
-<td style="text-align: center;">Introduction to Real Time Operating Systems</td>
-<td style="text-align: center;">Direct Memory Access</td>
+<td style="text-align: center;">11/16</td>
+<td style="text-align: center;">Design Review Presentations</td>
+<td style="text-align: center;">Advanced Topics 3</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">13</td>
-<td style="text-align: center;">11/17</td>
+<td style="text-align: center;">11/23</td>
 <td style="text-align: center;">Project Status Report and Demo</td>
-<td style="text-align: center;">Connectors</td>
-<td style="text-align: center;">Project Status Reports &amp; Demo</td>
+<td style="text-align: center;">Happy Thanksgiving! <strong>No class</strong></td>
+<td style="text-align: center;">Project Status Report &amp; Demo</td>
 </tr>
 <tr class="even">
 <td style="text-align: center;">14</td>
-<td style="text-align: center;">11/24</td>
-<td style="text-align: center;">The Fast Fourier Transform (FFT)</td>
-<td style="text-align: center;">Happy Thanksgiving! <strong>No class</strong></td>
+<td style="text-align: center;">11/30</td>
+<td style="text-align: center;">Advanced Topics 4</td>
+<td style="text-align: center;">Advanced Topics 5</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">15</td>
-<td style="text-align: center;">12/4</td>
-<td style="text-align: center;">Digital Signal Processing</td>
+<td style="text-align: center;">12/7</td>
+<td style="text-align: center;">Advanced Topics 6</td>
 <td style="text-align: center;">Special Topics / Guest Lecture</td>
-<td style="text-align: center;">Project Checkoffs, Report, Demo Day</td>
+<td style="text-align: center;">Project Checkoffs, Report, Final Demo (Tue) and Demo Day (Fri 12/11, last day of classes)</td>
 </tr>
 </tbody>
 </table>
-<p>You will be working on labs on your own time and it is not required that you attend the entire scheduled lab period. Instead, sign up for a time to get your lab checked off. Please sign up for a time during your lab section. If you are unable to find a spot that works for you, see if you can swap with one of your classmates. If you are still having trouble finding a time that works for you, reach out and let me know.</p>
+<p>You will be working on labs on your own time and it is not required that you attend the entire scheduled lab period. Instead, sign up for a time to get your lab checked off. Please sign up for a time during your lab section. If you are unable to find a spot that works for you, see if you can swap with one of your classmates. If you are still having trouble finding a time that works for you, reach out and let us know.</p>
 </section>
 <section id="recommended-texts" class="level2">
 <h2 class="anchored" data-anchor-id="recommended-texts">Recommended Texts</h2>
-<p>I assume you have a solid grasp of digital design at the level of E85; review Digital Design and Computer Architecture, ARM Edition (<a href="https://ccl.on.worldcat.org/oclc/900028206">link</a>) if you feel rusty on a topic. We will not be closely following a textbook, but you may find The Definitive Guide to ARM® Cortex®-M3 and Cortex®-M4 Processors by Joseph Yiu to be a helpful, comprehensive reference for the microcontroller. An electronic version of the book is available through the library (<a href="https://ccl.on.worldcat.org/oclc/868231734">link</a>).</p>
+<p>We assume you have a solid grasp of digital design at the level of E85; review Digital Design and Computer Architecture, ARM Edition (<a href="https://ccl.on.worldcat.org/oclc/900028206">link</a>) if you feel rusty on a topic. We will not be closely following a textbook, but you may find The Definitive Guide to ARM® Cortex®-M3 and Cortex®-M4 Processors by Joseph Yiu to be a helpful, comprehensive reference for the microcontroller. An electronic version of the book is available through the library (<a href="https://ccl.on.worldcat.org/oclc/868231734">link</a>).</p>
 </section>
 <section id="lab-kit" class="level2">
 <h2 class="anchored" data-anchor-id="lab-kit">Lab Kit</h2>
-<p>While there is not a textbook to purchase, you will need to buy a lab kit. The fee is $75 in Claremont Cash, and should be paid by filling out the Google Form (<a href="https://docs.google.com/forms/d/16dClFYEs7F0u6p03QxZZmObhVr3oodubnv7AGdnzejs/preview">link</a>) which authorizes Sydney Torrey in the Engineering office to charge your Claremont Cash account. Once you have paid for your kit via the form, see Jacob Staimpel in the stockroom to pick up your kit. If you cook your board this semester, you can buy and rebuild a replacement, but ask the instructor for help troubleshooting first. You’ll also check out a large breadboard from the stockroom, and will need to return it at the end of the semester.</p>
-<p>The kit fee can be waived in cases of financial hardship. To request a waiver fill out the form here (<a href="https://docs.google.com/forms/d/1JydPbGVCUtwSTKrZ4wOklCso2R3DPgfNg50w1hA90Dk/preview">link</a>). Course instructors will not know about waiver requests.</p>
+<p>While there is not a textbook to purchase, you will need to buy a lab kit. The fee is $75 in Claremont Cash, and should be paid by filling out the Google Form (<a href="https://docs.google.com/forms/d/10oOJ7ma6UPWpAHROGLrQbFbSuZUuLUG7q-Oyg7u7CXE/preview">link</a>) which authorizes Sydney Torrey in the Engineering office to charge your Claremont Cash account. Once you have paid for your kit via the form, see Jacob Staimpel in the stockroom to pick up your kit. If you cook your board this semester, you can buy and rebuild a replacement, but ask an instructor for help troubleshooting first. You’ll also check out a large breadboard from the stockroom, and will need to return it at the end of the semester.</p>
+<p>The kit fee can be waived in cases of financial hardship. To request a waiver fill out the form here (<a href="https://docs.google.com/forms/d/19WDAiEcCA61PLnLF6MXCwBwqxFjaKXjmjZXgTfWmXOQ/preview">link</a>). Course instructors will not know about waiver requests.</p>
 <p>You will also need to check out a breadboard for the semester. You can do so by talking to Jacob Staimpel in the stockroom.</p>
 </section>
 <section id="lab-access" class="level2">
@@ -541,7 +538,7 @@ window.Quarto = {
 <li>Discuss high level questions about the approach to the lab <strong>after</strong> you have spent time developing your own initial approach.</li>
 <li>Ask for feedback on your Verilog code <strong>after</strong> both you and the person you are asking to review your code have made a significant attempt on your own.</li>
 <li>List on your lab writeup any people that have reviewed your work or for whom you have reviewed work.</li>
-<li>Ask the instructor any question you think might be inappropriate to discuss with a peer.</li>
+<li>Ask an instructor any question you think might be inappropriate to discuss with a peer.</li>
 </ul>
 <p>You may <strong>not</strong>:</p>
 <ul>
@@ -557,7 +554,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="ai-policy">AI Policy</h2>
 <p>Harvey Mudd is piloting <a href="https://docs.google.com/document/d/1mmVUqSwLWZb4H7jj3fT5kaXQr0rjLpy2ht9BzHAiXlo/edit?tab=t.0#heading=h.r0vz96q31316">AI/LLM use language</a> that instructors can adopt in their syllabi. During the labs in this course, we are closest to level 0 - no AI use allowed. During the project we are closest to level 3 - full AI use allowed.</p>
 <p>Academic work on the effects of AI on learning are still nascent, but <a href="https://nemo.asee.org/public/conferences/365/papers/45536/view">a case study</a> in a course similar to ours suggested that students who rely on AI early in the course often struggle with concepts later in the course. However, LLMs are rapidly transforming industrial practice in software development and digital engineering, and <a href="https://nemo.asee.org/public/conferences/365/papers/48474/view">other academic work</a> suggests that an AI with expert prompting can succeed in programming a microcontroller to the level required by a class.</p>
-<p>Therefore, this course is taking a cautious stance about engagement with AI. Many of the learning goals (especially learning to interpret documentation and RTL) are undermined by the use of AI. Therefore, in the policy outlined below, AI will be allowed only on “AI prototype” questions in the labs. During the project, I am amenable to more liberal AI use because you will have demonstrated many fundamental skills from the class. We can discuss more at the project launch.</p>
+<p>Therefore, this course is taking a cautious stance about engagement with AI. Many of the learning goals (especially learning to interpret documentation and RTL) are undermined by the use of AI. Therefore, in the policy outlined below, AI will be allowed only on “AI prototype” questions in the labs. During the project, we are amenable to more liberal AI use because you will have demonstrated many fundamental skills from the class. We can discuss more at the project launch.</p>
 <div class="callout callout-style-default callout-note callout-titled" title="Using AI in MicroPs">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -571,7 +568,7 @@ window.Quarto = {
 <p>In MicroPs this fall we will adopt the following policies for generative AI use during labs 1-7:</p>
 <p>You <strong>should</strong>:</p>
 <ul>
-<li><strong>Use AI on the AI prototypes throughout the course.</strong> Each lab this fall will include a section describing a generative AI experiment. For the tasks in these sections you are required to leverage generative AI. As you embrace AI, I would encourage you to reflect on your experience using it and on its impact on your skill development. Your reflections on these AI experiments each week are a great topic to discuss in your weekly reflections.</li>
+<li><strong>Use AI on the AI prototypes throughout the course.</strong> Each lab this fall will include a section describing a generative AI experiment. For the tasks in these sections you are required to leverage generative AI. As you embrace AI, we would encourage you to reflect on your experience using it and on its impact on your skill development. Your reflections on these AI experiments each week are a great topic to discuss in your weekly reflections.</li>
 </ul>
 <p>You should <strong>not</strong>:</p>
 <ul>
@@ -588,7 +585,7 @@ window.Quarto = {
 <p>If you believe you have violated the honor code in any way, please take the initiative to self report so that we can come up with a fair and just path forward together.</p>
 <ol type="1">
 <li>All students enrolled in this course are bound by the HMC Honor Code. More information on the HMC Honor Code can be found in the HMC Student Handbook.</li>
-<li>It is your responsibility to determine whether your actions adhere to the HMC Honor Code. If this document does not clarify the legitimacy of a particular action, you should contact the course instructor and request clarification.</li>
+<li>It is your responsibility to determine whether your actions adhere to the HMC Honor Code. If this document does not clarify the legitimacy of a particular action, you should contact a course instructor and request clarification.</li>
 <li>Work you submit for individual assignments should be your own, and you should complete all assignments based on your own understanding of the underlying material. If you work with, or receive help from, another individual on an assignment, provide a written acknowledgement in complete sentences that includes the person’s name and the nature of the help.</li>
 <li>This document is not meant to be an exhaustive list of every possible Honor Code violation. Infractions not explicitly mentioned here may still violate the Honor Code.</li>
 <li><strong>Boundaries of Collaboration.</strong> Verbal collaboration with other students on individual assignments is encouraged <strong>after</strong> you have given serious thought to each component yourself. However, all submitted written work should be written by yourself individually, and not a collaborative effort or copied from a common source (e.g., a chalkboard). It is <strong>not</strong> acceptable to work on labs in lockstep with another classmate.</li>
