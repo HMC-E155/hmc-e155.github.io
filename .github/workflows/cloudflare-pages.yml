@@ -1,0 +1,66 @@
+name: Cloudflare Pages
+
+# Runs alongside the existing gh-pages publish workflow. Pushes to main go to
+# the Cloudflare production deployment; every pull request gets its own preview
+# URL, posted back to the PR as a comment.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+concurrency:
+  group: cloudflare-pages-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # The syllabus also renders to PDF, which needs LaTeX
+          tinytex: true
+
+      - name: Render site
+        run: quarto render
+
+      - name: Deploy to Cloudflare Pages
+        id: deploy
+        # Forked PRs cannot read secrets, so skip the deploy rather than fail
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ./_site --project-name=hmc-e155 --branch=${{ github.head_ref || github.ref_name }}
+
+      - name: Comment preview URL on PR
+        if: github.event_name == 'pull_request' && steps.deploy.outcome == 'success'
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          header: cloudflare-preview
+          message: |
+            ## ⚡ Cloudflare Pages preview
+
+            Your changes are live for review:
+
+            | | |
+            | --- | --- |
+            | **Preview URL** | ${{ steps.deploy.outputs.deployment-url }} |
+            | **Branch alias** | ${{ steps.deploy.outputs.pages-deployment-alias-url }} |
+            | **Commit** | `${{ github.sha }}` |
+
+            <sub>Updated automatically on each push to this PR.</sub>
