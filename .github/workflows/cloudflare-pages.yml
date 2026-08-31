@@ -37,6 +37,17 @@ jobs:
       - name: Render site
         run: quarto render
 
+      # Cloudflare Pages rejects the whole deploy if any single file is over
+      # 25 MiB, so fail here with a useful message instead of inside wrangler
+      - name: Check file sizes against the Cloudflare limit
+        run: |
+          oversized=$(find _site -type f -size +25M)
+          if [ -n "$oversized" ]; then
+            echo "::error::These files are over the Cloudflare Pages 25 MiB per-file limit:"
+            echo "$oversized" | xargs -r du -h
+            exit 1
+          fi
+
       - name: Deploy to Cloudflare Pages
         id: deploy
         # Forked PRs cannot read secrets, so skip the deploy rather than fail
