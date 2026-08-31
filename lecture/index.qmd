@@ -2,31 +2,6 @@
 title: 'Lecture'
 ---
 
-See the list below for links to lecture slides and handouts. Slides and handouts will normally be posted shortly before each class period.
+Lecture slides and handouts will be posted here shortly before each class period.
 
-- Lecture 1: Introduction and Analog Behavior of Digital Systems [[slides](./slides/lecture-01-slides.pdf)] [[handout](./slides/lecture-01-handout.pdf)]
-- Lecture 2: Combinational and Sequential Logic [[slides](./slides/lecture-02-slides.pdf)] [[handout](./slides/lecture-02-handout.pdf)]
-- Lecture 3: Verilog Review [[slides](./slides/lecture-03-slides.pdf)] [[handout](./slides/lecture-03-handout.pdf)]
-- Lecture 4: Synchronous Design [[slides](./slides/lecture-04-slides.pdf)] [[handout](./slides/lecture-04-handout.pdf)]
-- Lecture 5: FPGA Documentation [[slides](./slides/lecture-05-slides.pdf)] [[handout](./slides/lecture-05-handout.pdf)]
-- Lecture 6: Introduction to the STM32 L432KC MCU and Refresher on C Programming [[slides](./slides/lecture-06-slides.pdf)] [[handout](./slides/lecture-06-handout.pdf)]
-- Lecture 7: GPIO Device Driver [[slides](./slides/lecture-07-slides.pdf)] [[handout](./slides/lecture-07-handout.pdf)] 
-- Lecture 8: C Clock Configuration [[slides](./slides/lecture-08-slides.pdf)] [[handout](./slides/lecture-08-handout.pdf)] [[tutorial repository](https://github.com/HMC-E155/tutorial-clock-configuration)]
-- Lecture 9: Timers [[slides](./slides/lecture-09-slides.pdf)] [[handout](./slides/lecture-09-handout.pdf)]
-- Lecture 10: Interrupts [[slides](./slides/lecture-10-slides.pdf)] [[handout](./slides/lecture-10-handout.pdf)] [[tutorial repository](https://github.com/HMC-E155/tutorial-interrupts)]
 - [PCB Design Activity](./pcb-activity/)
-- Lecture 11: Serial Interfaces and SPI [[slides](./slides/lecture-11-slides.pdf)] [[handout](./slides/lecture-11-handout.pdf)] [[project kickoff slides](./slides/project-kickoff.pdf)]
-- Lecture 12: UART and the Internet of Things [[slides](./slides/lecture-12-slides.pdf)] [[handout](./slides/lecture-12-handout.pdf)] [[tutorial repository UART](https://github.com/HMC-E155/tutorial-uart)] [[tutorial repository ESP8266](https://github.com/HMC-E155/tutorial-esp8266-click-webserver)]
-- Lecture 13: Introduction to AES: Galois Fields [[slides](./slides/lecture-13-slides.pdf)] [[handout](./slides/lecture-13-handout.pdf)]
-- Lecture 14: Implementing AES on an FPGA  [[slides](./slides/lecture-14-slides.pdf)] [[handout](./slides/lecture-14-handout.pdf)]
-- Lecture 15: Graphics and Displays [[slides](./slides/lecture-15-slides.pdf)]
-- Lecture 16: Motors and Speakers [[slides](./slides/lecture-16-slides.pdf)]
-- Lecture 17: Introduction to Real Time Operating Systems [[slides](./slides/lecture-17-slides.pdf)] [[handout](./slides/lecture-17-handout.pdf)] [[tutorial repository](https://github.com/HMC-E155/tutorial-free-rtos)]
-- Lecture 18: Direct Memory Access [[slides](./slides/lecture-18-slides.pdf)] [[handout](./slides/lecture-18-handout.pdf)] [[tutorial repository](https://github.com/HMC-E155/tutorial-dma)]
-- Lecture 19: Connectors [[slides](./slides/lecture-19-slides.pdf)]
-- Lecture 20: The Fast Fourier Transform [[slides](./slides/lecture-20-slides.pdf)] [[handout](./slides/lecture-20-handout.pdf)]
-<!-- * Lecture 18: Interrupts [[slides](./slides/lecture-18-slides.pdf)] [[handout](./slides/lecture-18-handout.pdf)]
-* Lecture 19: Interrupts Activity [[slides](./slides/lecture-19-slides.pdf)] [[handout](./slides/lecture-19-handout.pdf)]
-
-* Lecture 21: Direct Memory Access [[slides](./slides/lecture-21-slides.pdf)] [[handout](./slides/lecture-21-handout.pdf)]
-* Lecture 22: Introduction to Real Time Operating Systems [[slides](./slides/lecture-22-slides.pdf)] [[handout](./slides/lecture-22-handout.pdf)] -->
