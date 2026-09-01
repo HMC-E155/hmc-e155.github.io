@@ -49,21 +49,21 @@ Be sure to join the class Discord and check it regularly. It is be the only sour
 
 | Week \# | Monday Date | Tuesday's Class | Thursday's Class | Due |
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
-| 1  | 8/31  | Intro & Analog Behavior of Digital Systems | Combinational and Sequential Logic --- Josh | Git & Quarto Portfolio Setup |
-| 2  | 9/7   | Verilog Coding --- Josh | Synchronous Design --- Josh | [Lab 1](/lab/lab1/) |
-| 3  | 9/14  | FPGA Documentation --- Josh | C Programming on an MCU --- Josh | [Lab 2](/lab/lab2/) |
-| 4  | 9/21  | GPIO --- Josh | Clock Configuration --- Josh | [Lab 3](/lab/lab3/) |
-| 5  | 9/28  | Timers --- Josh | Interrupts --- Josh | [Lab 4](/lab/lab4/) |
-| 6  | 10/5  | Serial Interfaces Overview and SPI --- Josh | UART and the IoT --- Josh | [Lab 5](/lab/lab5/) |
-| 7  | 10/12 | Advanced Encryption Standard (AES) --- Josh | Project Kickoff --- Josh | [Lab 6](/lab/lab6/) |
-| 8  | 10/19 | **Happy Fall Break! No Class** | AES on FPGA Workshop --- Josh | [Project Proposal](/project/) Reviews |
-| 9  | 10/26 | Advanced Topics --- Matt | Advanced Topics --- Matt | [Lab 7](/lab/lab7/) |
-| 10 | 11/2  | Advanced Topics --- Matt | Advanced Topics --- Matt | Lab redo week / proposal redos |
+| 1  | 8/31  | Intro & Analog Behavior of Digital Systems | Combinational and Sequential Logic | Git & Quarto Portfolio Setup |
+| 2  | 9/7   | Verilog Coding | Synchronous Design | [Lab 1](/lab/lab1/) |
+| 3  | 9/14  | FPGA Documentation | C Programming on an MCU | [Lab 2](/lab/lab2/) |
+| 4  | 9/21  | GPIO | Clock Configuration | [Lab 3](/lab/lab3/) |
+| 5  | 9/28  | Timers | Interrupts | [Lab 4](/lab/lab4/) |
+| 6  | 10/5  | Serial Interfaces Overview and SPI | UART and the IoT | [Lab 5](/lab/lab5/) |
+| 7  | 10/12 | Advanced Encryption Standard (AES) | Project Kickoff | [Lab 6](/lab/lab6/) |
+| 8  | 10/19 | **Happy Fall Break! No Class** | AES on FPGA Workshop | [Project Proposal](/project/) Reviews |
+| 9  | 10/26 | Advanced Topics | Advanced Topics | [Lab 7](/lab/lab7/) |
+| 10 | 11/2  | Advanced Topics | Advanced Topics | Lab redo week / proposal redos |
 | 11 | 11/9  | Design Review Presentations | Design Review Presentations |  |
-| 12 | 11/16 | Design Review Presentations | Advanced Topics --- Matt | Status Demo |
+| 12 | 11/16 | Design Review Presentations | Advanced Topics | Status Demo |
 | 13 | 11/23 | Project Status Report and Demo | Happy Thanksgiving! **No class** |  |
-| 14 | 11/30 | Advanced Topics --- Matt | Advanced Topics --- Matt | Project help / office hours |
-| 15 | 12/7  | Advanced Topics --- Matt | Special Topics / Guest Lecture | Final Demo (Tue) and Demo Day (Fri 12/11, last day of classes) |
+| 14 | 11/30 | Advanced Topics | Advanced Topics | Project help / office hours |
+| 15 | 12/7  | Advanced Topics | Special Topics / Guest Lecture | Final Demo (Tue) and Demo Day (Fri 12/11, last day of classes) |
 
 You will be working on labs on your own time and it is not required that you attend the entire scheduled lab period. Instead, sign up for a time to get your lab checked off. Please sign up for a time during your lab section. If you are unable to find a spot that works for you, see if you can swap with one of your classmates. If you are still having trouble finding a time that works for you, reach out and let us know.
 
