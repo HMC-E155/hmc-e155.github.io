@@ -25,7 +25,7 @@ website:
         menu:
         - text: Labs Overview
           href: lab/
-        - text: Lab Specs
+        - text: General Lab and Documentation Specs
           href: lab/specs/
         - text: Lab Report Template
           href: lab/lab-report-template/
