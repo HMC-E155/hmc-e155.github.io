@@ -36,16 +36,21 @@ At the end of the course you will be able to
 
 Be sure to join the class Discord and check it regularly. It is be the only source of course-related communication for this semester.
 
-| Name         | Info                                                  |
-|--------------|-------------------------------------------------------|
-| Lecture      | TR 1:15 - 2:30 pm                                     |
-| Lab Checkoff | TW afternoons by signup in the Digital Lab (PA B183)  |
-| Lab Hours    | Friday -- Quinn 7-8:30 PM                             |
-|              | Saturday -- Julia 1-2:30 PM, Quinn 7-9 PM (4-6 PM on 9/5 only) |
-|              | Sunday -- Sadhvi 2-4 PM, Drake 8-10 PM                |
-|              | Monday -- Drake 6-7:30 PM, Julia 7:30-9:30 PM         |
-|              | Tuesday -- Sadhvi 6-7:30 PM                           |
-| Office Hours | TBD                                                   |
++--------------+-----------------------------------------------------------------+
+| Name         | Info                                                            |
++==============+=================================================================+
+| Lecture      | TR 1:15 - 2:30 pm                                               |
++--------------+-----------------------------------------------------------------+
+| Lab Checkoff | TW afternoons by signup in the Digital Lab (PA B183)            |
++--------------+-----------------------------------------------------------------+
+| Lab Hours    | Friday -- Quinn 7-8:30 PM\                                      |
+|              | Saturday -- Julia 1-2:30 PM, Quinn 7-9 PM (4-6 PM on 9/5 only)\ |
+|              | Sunday -- Sadhvi 2-4 PM, Drake 8-10 PM\                         |
+|              | Monday -- Drake 6-7:30 PM, Julia 7:30-9:30 PM\                  |
+|              | Tuesday -- Sadhvi 6-7:30 PM                                     |
++--------------+-----------------------------------------------------------------+
+| Office Hours | TBD                                                             |
++--------------+-----------------------------------------------------------------+
 
 
 ## Schedule
