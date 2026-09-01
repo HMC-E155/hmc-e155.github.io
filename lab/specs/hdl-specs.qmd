@@ -9,5 +9,5 @@
 
 ##### Excellence
 
-- [ ] Documentation for module captures major features, describing each in text and supporting with waveforms if necessary. Special attention paid to whether modules are combinational or sequential, and whether sequential behaviors are synchronous or asynchronous.
+- [ ] External (i.e.: not in the comments) documentation for module captures major features, describing each in text and supporting with waveforms if necessary. Special attention paid to whether modules are combinational or sequential, and whether sequential behaviors are synchronous or asynchronous.
 - [ ] Clear and organized hierarchy (e.g., delineation between top level modules and submodules)
