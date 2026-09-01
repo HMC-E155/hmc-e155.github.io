@@ -3,5 +3,3 @@ title: 'Lecture'
 ---
 
 Lecture slides and handouts will be posted here shortly before each class period.
-
-- [PCB Design Activity](./pcb-activity/)
