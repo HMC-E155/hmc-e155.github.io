@@ -70,7 +70,7 @@ Be sure to join the class Discord and check it regularly. It is be the only sour
 | 10 | 11/2  | Advanced Topics | Advanced Topics | Lab redo week / proposal redos |
 | 11 | 11/9  | Design Review Presentations | Design Review Presentations |  |
 | 12 | 11/16 | Design Review Presentations | Advanced Topics | Status Demo |
-| 13 | 11/23 | Project Status Report and Demo | Happy Thanksgiving! **No class** |  |
+| 13 | 11/23 | Project Status Report and Demo | **Happy Thanksgiving! No class** |  |
 | 14 | 11/30 | Advanced Topics | Advanced Topics | Project help / office hours |
 | 15 | 12/7  | Advanced Topics | Special Topics / Guest Lecture | Final Demo (Tue) and Demo Day (Fri 12/11, last day of classes) |
 
@@ -120,9 +120,9 @@ You need to earn the following number of proficiency and excellence specificatio
 | D     | 4            | 0           | 65   | 
 | F     | less         | 0           | 0    |
 
-Retrying labs to improve learning is an essential part of specifications grading pedagogy, and allowing flexibility is an important part of helping classes to effectively serve students.  To that end, each student has three redo tokens that allow them to turn in a lab up to a week late or redo a lab. A "redo week" is included in the course schedule to allow students to use their redo tokens, though note that the redo week will be busy and taking advantage of office hours to redo labs earlier will give you more attempts.
+Retrying labs to improve learning is an essential part of specifications grading pedagogy, and allowing flexibility is an important part of helping classes to effectively serve students.  To that end, each student has two redo tokens that allow them to turn in a lab up to a week late or redo a lab. A "redo week" is included in the course schedule to allow students to use their redo tokens, though note that the redo week will be busy and taking advantage of office hours to redo labs earlier will give you more attempts.
 
-These redo tokens are intended for major reworking of labs.  It is common for students to make small mistakes that put them out of specification, and instructors may respond by granting a "minor redo", which allows students to work for a few more minutes (maybe 30, generally bounded by the end of the lab section) to correct an error. These minor redos do not count against your three redo tokens.
+These redo tokens are intended for major reworking of labs.  It is common for students to make small mistakes that put them out of specification, and instructors may respond by granting a "minor redo", which allows students to work for a few more minutes (maybe 30, generally bounded by the end of the lab section) to correct an error. These minor redos do not count against your two redo tokens.
 
 The project will be graded using traditional grading. Rubrics for each project component will be provided on appropriate project pages. Components of the project will be weighted as follows:
 
