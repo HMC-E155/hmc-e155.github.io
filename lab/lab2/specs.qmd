@@ -6,12 +6,4 @@ format:
 
 ## Lab 2 Specifications
 
-### Lab-specific Specifications
-
-{{< include ../specs/lab2-specs.qmd >}} 
-
-{{< pagebreak >}}
-
-### General Specifications
-
-{{< include  ../specs/general-lab-specs.qmd >}} 
+Under construction.

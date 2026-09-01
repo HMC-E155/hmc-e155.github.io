@@ -6,13 +6,76 @@ format:
 
 ## Lab 1 Specifications
 
-### Lab-specific Specifications
+The focus of lab 1 specifications, in addition to proving hardware functionality, is correct Verilog hierarchy and style. Block diagram and schematic specifications will be checked in more detail in later labs, but don't cut corners on them because you need feedback of your first attempts before you are graded on them for real.
 
-{{< include ../specs/lab1-specs.qmd >}} 
+### Hardware Specifications
 
+#### Proficiency
 
-{{< pagebreak >}}
+- [ ] Development board is fully assembled (e.g., all parts soldered)
+- [ ] Verilog module to control LEDs and a 7-segment display written
+- [ ] FPGA programmed with Verilog code.
+- [ ] 7-segment display can display all sixteen hexadecimal digits from `0x0` through `0xF`
+- [ ] All digits are unique (e.g., `0x6` and `0xb` are different shapes)
+- [ ] DIP switches to control the display are arranged so that each adjacent switch controls the next bit. (e.g., the switch for bit 0 is next to the switch for bit 1, which is next to the switch for bit 2, etc.)
+- [ ] LEDs display the specified logic operations properly.
 
-### General Specifications
+#### Excellence
 
-{{< include  ../specs/general-lab-specs.qmd >}} 
+- [ ] All digits are equally bright, regardless of the number of segments illuminated.
+
+### Verilog Structure and Style Specifications
+
+#### Proficiency
+
+- [ ] assign used to implement switch-to-LED logic in the top level module. (Note that it is standard practice to avoid putting 1 liner logic in a module; doing so would add more lines of codes than it saves!)
+- [ ] Switch-to-7-segment logic contained in a module 
+- [ ] Switch-to-7-segment logic uses a case statement to select the correct segment pattern, and doesn't imply a latch
+- [ ] Counter logic contained in a module 
+- [ ] Counter includes reset, enable and settable (possibly hardcoded) max count features. The max count feature sets the counter back to zero when the count reaches the max value.
+- [ ] Counter is implemented using a single always_ff block.
+- [ ] Top level consists only of instantiated modules and switch-to-LED logic.
+- [ ] Descriptive filename that matches module name (e.g., `lab2_jb.sv`)
+- [ ] One module per file with a descriptive name
+- [ ] Descriptive variable names
+- [ ] Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase ))
+
+#### Excellence
+
+- [ ] Verilog parameters used to specify the width and maximum count values for the counter module
+
+### Simulation Specifications
+
+#### Proficiency
+
+- [ ] QuestaSim simulations carried out (possibly manually) for the 7-segment module.
+- [ ] All simulations captured as legible waveform screenshots in report.
+
+#### Excellence
+
+- [ ] QuestaSim simulation with automatic testbenches for each 7-segment module covering all input-output pairs.
+- [ ] QuestaSim simulation with automatic testbenches for the counter module. This simulation does not need to cover all possible states, but should show the reset, enable and max count features working correctly. These features may be captured in separate screenshots for legibility.
+- [ ] QuestaSim simulation with automatic testbenches for the top module showing behaviors not-covered by module-level simulations: "are the connections to submodules correct?", "does the HSOSC work?" and "does the assign 1 liner work?".
+
+### Schematic and Block Diagram Specifications
+
+- [ ] A schematic exists and a good faith effort has been made to meet the full specifications below (they are not yet in full effect, brace yourself for lab 2).
+- [ ] A block diagram exists and a good faith effort has been made to meet the full specifications below (they are not yet in full effect, brace yourself for lab 3).
+
+### Other Documentation
+
+#### Proficiency
+
+- [ ] Calculations provided to demonstrate that the current draw for each segment in the seven-segment display is within recommended operating conditions.
+
+#### Excellence
+
+- [ ] No errors in LED current calculation (correct VON selected for current level, VON included in calculation, etc.).
+
+{{< include  ../specs/lab-writeup-specs.qmd >}} 
+
+## FOR REFERENCE ONLY (NOT YET IN EFFECT)
+
+{{< include  ../specs/schematic-specs.qmd >}} 
+
+{{< include  ../specs/block-diagram-specs.qmd >}}

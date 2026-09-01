@@ -6,7 +6,7 @@ format:
 ---
 
 
-Written documentation should follow all the specifications for written documentation as laid out in the [general lab specs](../../lab/specs/general-lab-specs.qmd).
+Written documentation should follow all the specifications for written documentation as laid out in the [general lab specs](../../lab/specs/lab-writeup-specs.qmd).
 In addition, the report should address these project-specific specifications.
 
 ## Proficiency
