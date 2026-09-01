@@ -28,7 +28,7 @@ At the end of the course you will be able to
 | Item                | Information                                          |
 |---------------------|------------------------------------------------------|
 | Instructors:        | Prof. Josh Brake (Parsons 2364), Prof. Matt Spencer (Parsons 2358) |
-| Lab Assistant(s):   | Drake Gonzalez (4 hrs/wk), Julia Gong (4 hrs/wk), Quinn Miyamoto (6 hrs/wk), Sadhvi Narayanan (4 hrs/wk) |
+| Lab Assistant(s):   | Drake Gonzalez, Julia Gong, Quinn Miyamoto, Sadhvi Narayanan |
 | Web page:           | [{{< var website-url >}}]({{< var website-url >}})   |
 | Lab Checkoff Sheet: | [Sheet Link]({{< var lab-checkoff-gsheet-url >}})    |
 | Email list:         | We don't use email, only Discord                     |
