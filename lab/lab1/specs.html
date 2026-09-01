@@ -113,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="../../lab/specs/">
- <span class="dropdown-text">Lab Specs</span></a>
+ <span class="dropdown-text">General Lab and Documentation Specs</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../lab/lab-report-template/">
@@ -185,9 +185,17 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#lab-1-specifications" id="toc-lab-1-specifications" class="nav-link active" data-scroll-target="#lab-1-specifications">Lab 1 Specifications</a>
   <ul class="collapse">
-  <li><a href="#lab-specific-specifications" id="toc-lab-specific-specifications" class="nav-link" data-scroll-target="#lab-specific-specifications">Lab-specific Specifications</a></li>
-  <li><a href="#general-specifications" id="toc-general-specifications" class="nav-link" data-scroll-target="#general-specifications">General Specifications</a></li>
-  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">Comments</a></li>
+  <li><a href="#hardware-specifications" id="toc-hardware-specifications" class="nav-link" data-scroll-target="#hardware-specifications">Hardware Specifications</a></li>
+  <li><a href="#verilog-structure-and-style-specifications" id="toc-verilog-structure-and-style-specifications" class="nav-link" data-scroll-target="#verilog-structure-and-style-specifications">Verilog Structure and Style Specifications</a></li>
+  <li><a href="#simulation-specifications" id="toc-simulation-specifications" class="nav-link" data-scroll-target="#simulation-specifications">Simulation Specifications</a></li>
+  <li><a href="#schematic-and-block-diagram-specifications" id="toc-schematic-and-block-diagram-specifications" class="nav-link" data-scroll-target="#schematic-and-block-diagram-specifications">Schematic and Block Diagram Specifications</a></li>
+  <li><a href="#other-documentation" id="toc-other-documentation" class="nav-link" data-scroll-target="#other-documentation">Other Documentation</a></li>
+  <li><a href="#lab-writeup" id="toc-lab-writeup" class="nav-link" data-scroll-target="#lab-writeup">Lab Writeup</a></li>
+  </ul></li>
+  <li><a href="#for-reference-only-not-yet-in-effect" id="toc-for-reference-only-not-yet-in-effect" class="nav-link" data-scroll-target="#for-reference-only-not-yet-in-effect">FOR REFERENCE ONLY (NOT YET IN EFFECT)</a>
+  <ul class="collapse">
+  <li><a href="#schematic-specifications" id="toc-schematic-specifications" class="nav-link" data-scroll-target="#schematic-specifications">Schematic Specifications</a></li>
+  <li><a href="#block-diagram-specifications" id="toc-block-diagram-specifications" class="nav-link" data-scroll-target="#block-diagram-specifications">Block Diagram Specifications</a></li>
   </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="specs.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -200,8 +208,9 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="lab-1-specifications" class="level2">
 <h2 class="anchored" data-anchor-id="lab-1-specifications">Lab 1 Specifications</h2>
-<section id="lab-specific-specifications" class="level3">
-<h3 class="anchored" data-anchor-id="lab-specific-specifications">Lab-specific Specifications</h3>
+<p>The focus of lab 1 specifications, in addition to proving hardware functionality, is correct Verilog hierarchy and style. Block diagram and schematic specifications will be checked in more detail in later labs, but don’t cut corners on them because you need feedback of your first attempts before you are graded on them for real.</p>
+<section id="hardware-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="hardware-specifications">Hardware Specifications</h3>
 <section id="proficiency" class="level4">
 <h4 class="anchored" data-anchor-id="proficiency">Proficiency</h4>
 <ul class="task-list">
@@ -217,19 +226,97 @@ ul.task-list li input[type="checkbox"] {
 <section id="excellence" class="level4">
 <h4 class="anchored" data-anchor-id="excellence">Excellence</h4>
 <ul class="task-list">
-<li><label><input type="checkbox">Calculations provided to demonstrate that the current draw for each segment in the seven-segment display is within recommended operating conditions.</label></li>
-<li><label><input type="checkbox">QuestaSim simulation with automatic testbenches for each module to demonstrate that the design is working properly.</label></li>
 <li><label><input type="checkbox">All digits are equally bright, regardless of the number of segments illuminated.</label></li>
 </ul>
-<div style="page-break-after: always;"></div>
 </section>
 </section>
-<section id="general-specifications" class="level3">
-<h3 class="anchored" data-anchor-id="general-specifications">General Specifications</h3>
-<section id="schematic-specifications" class="level4">
-<h4 class="anchored" data-anchor-id="schematic-specifications">Schematic Specifications</h4>
-<section id="proficiency-1" class="level5">
-<h5 class="anchored" data-anchor-id="proficiency-1">Proficiency</h5>
+<section id="verilog-structure-and-style-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="verilog-structure-and-style-specifications">Verilog Structure and Style Specifications</h3>
+<section id="proficiency-1" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency-1">Proficiency</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">assign used to implement switch-to-LED logic in the top level module. (Note that it is standard practice to avoid putting 1 liner logic in a module; doing so would add more lines of codes than it saves!)</label></li>
+<li><label><input type="checkbox">Switch-to-7-segment logic contained in a module</label></li>
+<li><label><input type="checkbox">Switch-to-7-segment logic uses a case statement to select the correct segment pattern, and doesn’t imply a latch</label></li>
+<li><label><input type="checkbox">Counter logic contained in a module</label></li>
+<li><label><input type="checkbox">Counter includes reset, enable and settable (possibly hardcoded) max count features. The max count feature sets the counter back to zero when the count reaches the max value.</label></li>
+<li><label><input type="checkbox">Counter is implemented using a single always_ff block.</label></li>
+<li><label><input type="checkbox">Top level consists only of instantiated modules and switch-to-LED logic.</label></li>
+<li><label><input type="checkbox">Descriptive filename that matches module name (e.g., <code>lab2_jb.sv</code>)</label></li>
+<li><label><input type="checkbox">One module per file with a descriptive name</label></li>
+<li><label><input type="checkbox">Descriptive variable names</label></li>
+<li><label><input type="checkbox">Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase ))</label></li>
+</ul>
+</section>
+<section id="excellence-1" class="level4">
+<h4 class="anchored" data-anchor-id="excellence-1">Excellence</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Verilog parameters used to specify the width and maximum count values for the counter module</label></li>
+</ul>
+</section>
+</section>
+<section id="simulation-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="simulation-specifications">Simulation Specifications</h3>
+<section id="proficiency-2" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency-2">Proficiency</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">QuestaSim simulations carried out (possibly manually) for the 7-segment module.</label></li>
+<li><label><input type="checkbox">All simulations captured as legible waveform screenshots in report.</label></li>
+</ul>
+</section>
+<section id="excellence-2" class="level4">
+<h4 class="anchored" data-anchor-id="excellence-2">Excellence</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">QuestaSim simulation with automatic testbenches for each 7-segment module covering all input-output pairs.</label></li>
+<li><label><input type="checkbox">QuestaSim simulation with automatic testbenches for the counter module. This simulation does not need to cover all possible states, but should show the reset, enable and max count features working correctly. These features may be captured in separate screenshots for legibility.</label></li>
+<li><label><input type="checkbox">QuestaSim simulation with automatic testbenches for the top module showing behaviors not-covered by module-level simulations: “are the connections to submodules correct?”, “does the HSOSC work?” and “does the assign 1 liner work?”.</label></li>
+</ul>
+</section>
+</section>
+<section id="schematic-and-block-diagram-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="schematic-and-block-diagram-specifications">Schematic and Block Diagram Specifications</h3>
+<ul class="task-list">
+<li><label><input type="checkbox">A schematic exists and a good faith effort has been made to meet the full specifications below (they are not yet in full effect, brace yourself for lab 2).</label></li>
+<li><label><input type="checkbox">A block diagram exists and a good faith effort has been made to meet the full specifications below (they are not yet in full effect, brace yourself for lab 3).</label></li>
+</ul>
+</section>
+<section id="other-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="other-documentation">Other Documentation</h3>
+<section id="proficiency-3" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency-3">Proficiency</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Calculations provided to demonstrate that the current draw for each segment in the seven-segment display is within recommended operating conditions.</label></li>
+</ul>
+</section>
+<section id="excellence-3" class="level4">
+<h4 class="anchored" data-anchor-id="excellence-3">Excellence</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">No errors in LED current calculation (correct VON selected for current level, VON included in calculation, etc.).</label></li>
+</ul>
+</section>
+</section>
+<section id="lab-writeup" class="level3">
+<h3 class="anchored" data-anchor-id="lab-writeup">Lab Writeup</h3>
+<section id="proficiency-and-excellence" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency-and-excellence">Proficiency and Excellence</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Documentation embedded in a well-structured, concise report with one section per major deliverable. Sections should match structure of other specs.</label></li>
+<li><label><input type="checkbox">Spoiler tags are used to hide screenshots and code. Some unspoilered entries (~1 waveform, essential code snippets) allowed if they are essential to the narrative, kept to a minimum.</label></li>
+<li><label><input type="checkbox">Writeup contains minimal spelling or grammar issues and any errors do not significantly detract from clarity of the writeup.</label></li>
+<li><label><input type="checkbox">Statement of whether the design meets all the requirements. If not, list the shortcomings.</label></li>
+<li><label><input type="checkbox">AI prototype attempted and some reflection is recorded.</label></li>
+<li><label><input type="checkbox">Number of hours spent working on the lab are included.</label></li>
+<li><label><input type="checkbox">(Optional) List comments or suggestions on what was particularly good about the assignment or what you think needs to change in future versions.</label></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="for-reference-only-not-yet-in-effect" class="level2">
+<h2 class="anchored" data-anchor-id="for-reference-only-not-yet-in-effect">FOR REFERENCE ONLY (NOT YET IN EFFECT)</h2>
+<section id="schematic-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="schematic-specifications">Schematic Specifications</h3>
+<section id="proficiency-4" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency-4">Proficiency</h4>
 <ul class="task-list">
 <li><label><input type="checkbox">All pin names labeled</label></li>
 <li><label><input type="checkbox">All pin numbers labeled</label></li>
@@ -239,8 +326,8 @@ ul.task-list li input[type="checkbox"] {
 <li><label><input type="checkbox">All component values present</label></li>
 </ul>
 </section>
-<section id="excellence-1" class="level5">
-<h5 class="anchored" data-anchor-id="excellence-1">Excellence</h5>
+<section id="excellence-4" class="level4">
+<h4 class="anchored" data-anchor-id="excellence-4">Excellence</h4>
 <ul class="task-list">
 <li><label><input type="checkbox">Standard symbols used for all components where applicable</label></li>
 <li><label><input type="checkbox">Signals “flow” from left to right where possible (e.g., inputs on left hand side, outputs on right hand side)</label></li>
@@ -248,61 +335,29 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="block-diagram-required-for-labs-1-2-3-and-7" class="level4">
-<h4 class="anchored" data-anchor-id="block-diagram-required-for-labs-1-2-3-and-7">Block Diagram (Required for labs 1, 2, 3 and 7)</h4>
-<section id="proficiency-and-excellence" class="level5">
-<h5 class="anchored" data-anchor-id="proficiency-and-excellence">Proficiency and Excellence</h5>
+<section id="block-diagram-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="block-diagram-specifications">Block Diagram Specifications</h3>
+<section id="proficiency-5" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency-5">Proficiency</h4>
 <ul class="task-list">
-<li><label><input type="checkbox">Block diagram present with one block per SystemVerilog module</label></li>
-<li><label><input type="checkbox">Each block includes all input and output signals</label></li>
+<li><label><input type="checkbox">Each module is represented by a block diagram</label></li>
+<li><label><input type="checkbox">Bare logic in all module is represented by appropriately drawn gates.</label></li>
+<li><label><input type="checkbox">Submodules in each module are represented by blocks inside of the instantiating module.</label></li>
+<li><label><input type="checkbox">Submodules have all ports represented by pin symbols on the boundary of the submodule, each with a port name.</label></li>
+<li><label><input type="checkbox">Submodules indicate the name of the module being instantiated and the name of the instance.</label></li>
+<li><label><input type="checkbox">All connections between module ports, logic and submodules are indicated.</label></li>
+<li><label><input type="checkbox">Module ports are represented by pin symbols on the boundary of the module and labeled with port names</label></li>
+<li><label><input type="checkbox">All nets internal to the module are labeled, even when they share a name with a port on a module/submodule boundary.</label></li>
 </ul>
-</section>
-</section>
-<section id="hdl-code-specifications" class="level4">
-<h4 class="anchored" data-anchor-id="hdl-code-specifications">HDL &amp; Code Specifications</h4>
-<section id="proficiency-2" class="level5">
-<h5 class="anchored" data-anchor-id="proficiency-2">Proficiency</h5>
+<p>#### Excellence</p>
 <ul class="task-list">
-<li><label><input type="checkbox">Descriptive filename that matches module name (e.g., <code>lab2_jb.sv</code>)</label></li>
-<li><label><input type="checkbox">One module per file</label></li>
-<li><label><input type="checkbox">Descriptive variable names</label></li>
-<li><label><input type="checkbox">Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase ))</label></li>
-<li><label><input type="checkbox">Descriptive and clear function/module names</label></li>
-<li><label><input type="checkbox">Comments to indicate the purpose of each function/module</label></li>
+<li><label><input type="checkbox">Appropriate use of bus notation for multi-bit signals (e.g., <code>data[7:0]</code> for an 8-bit bus), including fan-in and fan-out when needed.</label></li>
+<li><label><input type="checkbox">Appropriate use of implicit connections (i.e.: connect-by-label-name) to reduce routing connection</label></li>
+<li><label><input type="checkbox">Block diagram is an exact, 1:1 representation of the Verilog code.</label></li>
 </ul>
-</section>
-<section id="excellence-2" class="level5">
-<h5 class="anchored" data-anchor-id="excellence-2">Excellence</h5>
-<ul class="task-list">
-<li><label><input type="checkbox">Name, email, and date at the top of every file</label></li>
-<li><label><input type="checkbox">Comment at the top of each source code file to describe what is in it</label></li>
-<li><label><input type="checkbox">Clear and organized hierarchy (e.g., delineation between top level modules and submodules)</label></li>
-<li><label><input type="checkbox">Testbenches written for each individual module to demonstrate proper operation</label></li>
-<li><label><input type="checkbox">Testbench output for each module included in the report</label></li>
-</ul>
-</section>
-</section>
-<section id="writeupsummary" class="level4">
-<h4 class="anchored" data-anchor-id="writeupsummary">Writeup/Summary</h4>
-<section id="proficiency-and-excellence-1" class="level5">
-<h5 class="anchored" data-anchor-id="proficiency-and-excellence-1">Proficiency and Excellence</h5>
-<ul class="task-list">
-<li><label><input type="checkbox">Statement of whether the design meets all the requirements. If not, list the shortcomings.</label></li>
-<li><label><input type="checkbox">Number of hours spent working on the lab are included.</label></li>
-<li><label><input type="checkbox">Writeup contains minimal spelling or grammar issues and any errors do not significantly detract from clarity of the writeup.</label></li>
-<li><label><input type="checkbox">AI prototype attempted and some reflection is recorded.</label></li>
-<li><label><input type="checkbox">(Optional) List comments or suggestions on what was particularly good about the assignment or what you think needs to change in future versions.</label></li>
-</ul>
-</section>
-</section>
-</section>
-<section id="comments" class="level3">
-<h3 class="anchored" data-anchor-id="comments">Comments</h3>
-<p>Add specific notes here about the assignment.</p>
-<textarea style="width: 100%" id="comments" name="comments" rows="10" cols="10">
-</textarea>
 
 
+</section>
 </section>
 </section>
 
