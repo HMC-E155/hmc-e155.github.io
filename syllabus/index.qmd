@@ -88,33 +88,44 @@ In addition, the software we will be using for programming the MCU (SEGGER Embed
 
 ## Grading
 
-The grading for this class is based on a variation of specifications-grading and may be a bit different than what you have seen in other classes. The grade you earn in the class will be determined based the number of deliverables you successfully complete and the level of polish to which you complete them across three different bundles:
-
-1.  Labs
+There are three categories of assignments that you will be graded on in this class:
+1.  Labs (including AI reflections)
 2.  Project
-3.  AI reflections
-4.  Completion-graded assignments: the pre-assessment, the post-assessment and setting up your portfolio
+3.  Completion-graded assignments: the pre-assessment, the post-assessment, setting up your portfolio, etc.
 
-Each assignment will contain a list of specifications (or specs) for two levels of completeness: proficiency and excellence. The list of specifications are designed to be aligned with the learning goals for the assignment. The proficiency specifications will indicate the level of completeness that demonstrates that you have achieved a level of comfort with the material in the assignment such that you would be able to implement the learning outcomes in a different setting. Excellence specs are above and beyond proficiency specs. Meeting the excellence specs for an assignment indicates that you have not only achieved the basic level of expected knowledge of the material, but have truly understood and are able to apply the techniques with deftness.
+Labs in this class are graded using specifications-grading, which may be a bit different than what you have seen in other classes. Under specifications grading, the grade you earn in the class will be determined based the number of deliverables you successfully complete and the level of polish to which you complete them. Each assignment will contain a list of specifications (or specs) for two levels of completeness: proficiency and excellence. The list of specifications are designed to be aligned with the learning goals for the assignment. The proficiency specifications will indicate the level of completeness that demonstrates that you have achieved a level of comfort with the material in the assignment such that you would be able to implement the learning outcomes in a different setting. Meeting the excellence specs for an assignment indicates that you have not only achieved the basic level of expected knowledge of the material, but have truly understood and are able to apply the techniques with deftness.
 
-The table below describes the levels that you need to meet in each bundle (i.e., column) in order to earn the grade in the respective row. To earn the grade in a given row, you must meet **all** the criteria in that row. In other words, to get a B, you must complete the following:
+You need to earn the following number of proficiency and excellence specifications to earn a given grade in the class. The weight each grade will contribute to your final grade (see below) is also shown.
 
--   6 labs to the proficiency specs and 5 of those labs must meet the excellence specs.
--   All 5 project elements must meet proficiency specs and 4 of them must meet the excellence specs.
+| Grade | Proficiency  | Excellence  | Weight in Final Grade |
+|-------|--------------|-------------|-----------------------|
+| A     | 7            | 6           | 100  |
+| A-    | 7            | 5           | 97   | 
+| B+    | 6            | 4           | 93   | 
+| B     | 6            | 3           | 90   | 
+| B-    | 6            | 2           | 85   | 
+| C+    | 5            | 2           | 80   | 
+| C     | 5            | 1           | 75   | 
+| C-    | 5            | 0           | 70   | 
+| D     | 4            | 0           | 65   | 
+| F     | less         | 0           | 0    |
 
-| Grade | Labs                   | Project                |
-|-------|------------------------|------------------------|
-| F     | P \< 4                 | P \< 4                 |
-| D     | P $\geq$ 4, E $\geq$ 0 | P $\geq$ 4             |
-| C     | P $\geq$ 5, E $\geq$ 1 | P $\geq$ 4, E $\geq$ 2 |
-| B     | P $\geq$ 6, E $\geq$ 4 | P = 5, E $\geq$ 4      |
-| A     | P $\geq$ 6, E $\geq$ 6 | P = 5, E = 5           |
+Retrying labs to improve learning is an essential part of specifications grading pedagogy, and allowing flexibility is an important part of helping classes to effectively serve students.  To that end, each student has three redo tokens that allow them to turn in a lab up to a week late or redo a lab. A "redo week" is included in the course schedule to allow students to use their redo tokens, though note that the redo week will be busy and taking advantage of office hours to redo labs earlier will give you more attempts.
 
-Performance on the labs and project is weighted equally. +/- grades will be assigned for situations in which your performance falls between the conditions for each row.
+These redo tokens are intended for major reworking of labs.  It is common for students to make small mistakes that put them out of specification, and instructors may respond by granting a "minor redo", which allows students to work for a few more minutes (maybe 30, generally bounded by the end of the lab section) to correct an error. These minor redos do not count against your three redo tokens.
 
-As one example, if you meet the requirements for an A in the labs bundle but the requirements for a B in the project bundle, you can expect to earn either a B+ or A-. In these situations, your in-class participation, AI reflections, and completion of completion-graded assignments will help decide whether you split the difference between the - of the higher tier and the + of the lower tier.
+The project will be graded using traditional grading. Rubrics for each project component will be provided on appropriate project pages. Components of the project will be weighted as follows:
+- Proposal: 10% (note that you have two attempts at submitting a proposal, almost everyone needs both attempts!)
+- Design Review Presentation: 20%
+- Midpoint Status Report + Checkoff: 20%
+- Final Checkoff: 30%
+- Final Report: 20%
 
-An essential part of specifications grading is allowing you to retry specifications if they fail, and allowing flexibility is an important part of helping classes to effectively serve students.  To that end, each student has one late token and two redo token that allow them to respectively, turn in a lab up to a week late (checkoff in office hours) and redo a lab where they did not achieve a specification they desired.
+Your final grade will be determined by the following weights:
+- Labs: 40% (weighted by grade as shows above)
+- Project: 40% (each component may be weighted by rubric)
+- Completion-Graded Assignments: 5%
+- Instructor Participation Score: 5%
 
 ## Collaboration Policy
 
@@ -141,7 +152,7 @@ You may **not**:
 
 Harvey Mudd is piloting [AI/LLM use language](https://docs.google.com/document/d/1mmVUqSwLWZb4H7jj3fT5kaXQr0rjLpy2ht9BzHAiXlo/edit?tab=t.0#heading=h.r0vz96q31316) that instructors can adopt in their syllabi.  During the labs in this course, we are closest to level 0 - no AI use allowed.   During the project we are closest to level 3 - full AI use allowed.
 
-Academic work on the effects of AI on learning are still nascent, but [a case study](https://nemo.asee.org/public/conferences/365/papers/45536/view) in a course similar to ours suggested that students who rely on AI early in the course often struggle with concepts later in the course.  However, LLMs are rapidly transforming industrial practice in software development and digital engineering, and [other academic work](https://nemo.asee.org/public/conferences/365/papers/48474/view) suggests that an AI with expert prompting can succeed in programming a microcontroller to the level required by a class. 
+Academic work on the effects of AI on learning are still nascent, but [a case study](https://nemo.asee.org/public/conferences/365/papers/45536/view) in a course similar to ours suggested that students who rely on AI early in the course often struggle with concepts later in the course.  However, LLMs are rapidly transforming industrial practice in software development and digital engineering, and [other academic work](https://nemo.asee.org/public/conferences/365/papers/48474/view) suggests that an AI with expert prompting can succeed in programming a microcontroller to the level required by a class. [Absolutely terrifying quantitative work](https://cepr.org/publications/dp21577) suggests that LLMs displace learning even in populations highly motivated to use them to learn.
 
 Therefore, this course is taking a cautious stance about engagement with AI.  Many of the learning goals (especially learning to interpret documentation and RTL) are undermined by the use of AI. Therefore, in the policy outlined below, AI will be allowed only on "AI prototype" questions in the labs.  During the project, we are amenable to more liberal AI use because you will have demonstrated many fundamental skills from the class.  We can discuss more at the project launch.
 
