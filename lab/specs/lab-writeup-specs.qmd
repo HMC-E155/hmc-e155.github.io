@@ -1,0 +1,11 @@
+#### Lab Writeup
+
+##### Proficiency and Excellence
+
+- [ ] Documentation embedded in a well-structured, concise report with one section per major deliverable
+- [ ] Spoiler tags are used to hide screenshots and code. (Some unspoilered entries allowed if they are essential to the narrative, kept to a minimum.)
+- [ ] Statement of whether the design meets all the requirements. If not, list the shortcomings.
+- [ ] Number of hours spent working on the lab are included.
+- [ ] Writeup contains minimal spelling or grammar issues and any errors do not significantly detract from clarity of the writeup.
+- [ ] AI prototype attempted and some reflection is recorded.
+- [ ] (Optional) List comments or suggestions on what was particularly good about the assignment or what you think needs to change in future versions.

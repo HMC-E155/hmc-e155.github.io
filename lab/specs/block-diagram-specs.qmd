@@ -1,0 +1,18 @@
+### Block Diagram Specifications
+
+#### Proficiency
+
+- [ ] Each module is represented by a block diagram
+- [ ] Bare logic in all module is represented by appropriately drawn gates.
+- [ ] Submodules in each module are represented by blocks inside of the instantiating module.
+- [ ] Submodules have all ports represented by pin symbols on the boundary of the submodule, each with a port name.
+- [ ] Submodules indicate the name of the module being instantiated and the name of the instance.
+- [ ] All connections between module ports, logic and submodules are indicated.
+- [ ] Module ports are represented by pin symbols on the boundary of the module and labeled with port names
+- [ ] All nets internal to the module are labeled, even when they share a name with a port on a module/submodule boundary.
+
+ #### Excellence
+
+- [ ] Appropriate use of bus notation for multi-bit signals (e.g., `data[7:0]` for an 8-bit bus), including fan-in and fan-out when needed.
+- [ ] Appropriate use of implicit connections (i.e.: connect-by-label-name) to reduce routing connection
+- [ ] Block diagram is an exact, 1:1 representation of the Verilog code.

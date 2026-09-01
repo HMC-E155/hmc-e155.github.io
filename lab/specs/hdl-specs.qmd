@@ -1,0 +1,18 @@
+#### HDL & Code Specifications
+
+##### Proficiency
+
+- [ ] Descriptive filename that matches module name (e.g., `lab2_jb.sv`)
+- [ ] One module per file
+- [ ] Descriptive variable names
+- [ ] Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase ))
+- [ ] Descriptive and clear function/module names
+- [ ] Comments to indicate the purpose of each function/module
+
+##### Excellence
+
+- [ ] Name, email, and date at the top of every file
+- [ ] Comment at the top of each source code file to describe what is in it
+- [ ] Clear and organized hierarchy (e.g., delineation between top level modules and submodules)
+- [ ] Testbenches written for each individual module to demonstrate proper operation
+- [ ] Testbench output for each module included in the report
