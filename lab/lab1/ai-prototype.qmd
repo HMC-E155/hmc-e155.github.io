@@ -11,7 +11,7 @@ The goal of this prototype is to experiment with using AI as a coding assistant 
 - Analyze the quality of the LLM-generated RTL.
 - Document specific tips on how to use the LLM effectively.
 
-The question you should be interrogating is "can my LLMs of choice generate HDL that compiles, synthesizes and exhibits correct behavior?""
+The question you should be interrogating is "can my LLMs of choice generate SystemVerilog that compiles, synthesizes and exhibits correct behavior?""
 
 Note that performance varies a great deal among LLMs.  If you want a subscription-grade model, the college provides Gemini Pro Models as part of the Google Suite for Education, and Copilot as part of Microsoft 365. It is also easy to secure copilot access through a free educational license. You might see better performance with frontier models (the latest Anthropic and OpenAI models), but **do not** feel obligated to pay for them; you are not graded on the quality of your LLM output, but rather on your reflection.
 
