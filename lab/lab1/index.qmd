@@ -11,10 +11,18 @@ format:
         icon: robot
       - text: "iCE40 UltraPlus Family Data Sheet"
         href: /assets/doc/FPGA-DS-02008-2-0-iCE40-UltraPlus-Family-Data-Sheet.pdf
+      - text: "Hardware Background"
+        href: /tutorials/tutorial-posts/background/
+      - text: "E155 Development Board Assembly"
+        href: /tutorials/tutorial-posts/dev-board-assembly/
       - text: "Lattice Radiant Installation Tutorial"
         href: /tutorials/tutorial-posts/lattice-radiant-installation/
       - text: "Lattice Radiant iCE40 Project Setup"
-        href: /tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup
+        href: /tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/
+      - text: "QuestaSim/ModelSim Simulation Tutorial"
+        href: /tutorials/tutorial-posts/modelsim-simulation-tutorial/
+      - text: "SEGGER Embedded Studio Setup"
+        href: /tutorials/tutorial-posts/segger-embedded-studio-setup/
       - text: "Interactive Dev Board BOM"
         href: /assets/doc/E155_v4_Dev_Board_BOM.html
     code-links:
@@ -44,22 +52,42 @@ By the end of this lab you will have...
 
 Follow the steps in this guide to test your FPGA and MCU boards. Write some Verilog code to exercise the FPGA using the switches, LEDs, and a 7-segment display to ensure your board is operational. Simulate and synthesize your code, then upload it to the flash memory and re-test the board. Hook up a 7-segment display and demonstrate that it works.
 
+::: {.callout-tip title="How this lab uses the tutorials"}
+The step-by-step tool instructions for this lab live in the [tutorials section](/tutorials/) of the website rather than in this page, so that you can find them again later in the semester without digging through Lab 1.
+
+When this page links you into a tutorial, work through the linked section and then come back here — each tutorial ends the relevant section with a callout telling you to return to Lab 1. You do not need to read the tutorials end to end.
+:::
+
 ## Before You Start
 
 Before you start working on this lab, you should familiarize yourself with the documentation for both the UPduino v3.1 and Nucleo-L432KC boards. The website has links for the UPduino v3.1 User Guide and the Nucleo-L432KC User Manuals on the Resources tab. These two documents contain information that will be helpful for answering questions that you may have during the course of this lab.
 
-You should also read [this tutorial](/tutorials/tutorial-posts/background/index.qmd) with important programming instructions and background information for the FPGA and MCU.
+You should also read the [Hardware Background tutorial](/tutorials/tutorial-posts/background/), which has important programming instructions and background information for the FPGA and MCU.
 
-## Development Board Assembly
-Before you start working on your FPGA design, you need to assemble your development board as described in [this tutorial](/tutorials/tutorial-posts/dev-board-assembly/index.qmd). The majority of your time on this lab will likely be spent assembling the board, so make sure to plan ahead.
+Finally, install the toolchain you will need for the rest of the semester:
+
+- [Lattice Radiant](/tutorials/tutorial-posts/lattice-radiant-installation/) (includes QuestaSim/ModelSim) for FPGA design.
+- [SEGGER Embedded Studio](/tutorials/tutorial-posts/segger-embedded-studio-setup/) for MCU development.
+
+## Getting Started
 
 ### Create Your Git Repository
-The first step before you begin writing any code is to create a Git repository.
-Follow the [linked tutorial](/tutorials/tutorial-videos/creating-and-initializing-your-git-repo.qmd) to get started with your project.
+
+The first step before you begin writing any code is to create a Git repository. Follow the [Creating and Initializing Your Git Repo](/tutorials/tutorial-videos/creating-and-initializing-your-git-repo.qmd) video to get started with your project. If you are new to Git, the [Git Setup tutorial](/tutorials/tutorial-posts/git-setup/) covers the basics first.
+
+### Assemble Your Development Board
+
+Next, assemble your development board as described in the [E155 Development Board tutorial](/tutorials/tutorial-posts/dev-board-assembly/). The majority of your time on this lab will likely be spent assembling the board, so make sure to plan ahead.
+
+### Test Your Boards
+
+Before writing any of your own HDL, confirm that both halves of your assembled board work. Follow the [Testing the Boards](/tutorials/tutorial-posts/dev-board-assembly/#testing-the-boards) section of the development board tutorial. You will program the FPGA with a provided design that toggles a pin at about 1 Hz, then program the MCU[^1] with a provided program that reads that pin and echoes it back, which verifies both devices and the communication between them.
+
+Hold on to the FPGA test project — you will reuse its clock generation code in your own design below.
 
 ## FPGA Design
 
-Now it’s your turn to take the wheel and create your own design and dust off your digital design chops! Your goal is to write some Verilog modules to further test the hardware on your board and operate a 7-segment display. The system should have the following inputs and outputs:
+Now it's your turn to take the wheel and create your own design and dust off your digital design chops! Your goal is to write some Verilog modules to further test the hardware on your board and operate a 7-segment display. The system should have the following inputs and outputs:
 
 | Signal  Name | Signal Type | Description |
 |--------------|-------------|-------------|
@@ -94,21 +122,9 @@ The following tables define the relationship of the LEDs to the switches and clo
 | Blink at 2.4 Hz|
 :::
 
-::: {.callout-tip title="Clock Generation"}
-To generate the clock for your design, use the onboard high-speed oscillator.
-This is the same strategy as in the FPGA testing source code you downloaded earlier to test the board.
-If you look at that Verilog code, you'll notice an instantiated module called HSOSC (for High-Speed OSCillator).
-This module is part of the iCE40 Technology Library (see the iCE40 Technology Library document linked on the course website) and is a built-in module included with Lattice Radiant designed for controlling the internal oscillator on the iCE40 chip.
-You can simply copy the line from the testing program and use it in your project.
-:::
+The 7-segment display should display a single hexadecimal digit specified by `s[3:0]`. Be sure each digit can be distinguished from other digits (e.g., b and 8 should look different).
 
-### Design and Synthesis in Radiant
-
-The 7-segment display should display a single hexadecimal digit specified by `s[3:0]`.
-Be sure each digit can be distinguished from other digits (e.g., b and 8 should look different).
-Remember that you will be using a common anode display. The anode (positive terminal) of all of the LEDs is tied to 3.3 V through a single (“common”) pin.
-Each segment’s cathode (negative terminal) is connected to a pin.
-Therefore, you will need 7 separate control signals. Remember that a logic 0 applied to the cathode will turn on the segment. The segments are defined as shown below. Let `seg[0]` be A and `seg[6]` be G.
+Remember that you will be using a common anode display. The anode (positive terminal) of all of the LEDs is tied to 3.3 V through a single ("common") pin. Each segment's cathode (negative terminal) is connected to a pin. Therefore, you will need 7 separate control signals. Remember that a logic 0 applied to the cathode will turn on the segment. The segments are defined as shown below. Let `seg[0]` be A and `seg[6]` be G.
 
 ::: {#fig-seven-segment-map}
 
@@ -117,55 +133,40 @@ Therefore, you will need 7 separate control signals. Remember that a logic 0 app
 Seven-segment display pin map
 :::
 
+::: {.callout-tip title="Clock Generation"}
+To generate the clock for your design, use the onboard high-speed oscillator.
+This is the same strategy as in the FPGA testing source code you downloaded when you tested your boards.
+If you look at that Verilog code, you'll notice an instantiated module called HSOSC (for High-Speed OSCillator).
+This module is part of the iCE40 Technology Library (see the iCE40 Technology Library document linked on the course website) and is a built-in module included with Lattice Radiant designed for controlling the internal oscillator on the iCE40 chip.
+You can simply copy the line from the testing program and use it in your project.
+:::
 
-Launch Lattice Radiant and start the New Project Wizard from the File or startup menu. Setup a new project for the UP5K chip following the instructions in the [Lattice Radiant Tutorial](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup) on the E155 website.
+### Design and Synthesis in Radiant
 
-Choose `File → New` and create a SystemVerilog HDL file.
-Save the file as `lab1_xx.sv` in your project directory and check the box to add the file to the current project. Create modules to perform the functions described above. The 7-segment display decoder should be combinational logic. 
-Use a reasonable amount of hierarchy. Name the top-level module `lab1_xx`.
-The 7-segment display code, for example, will be reused in future labs, so it should be a module of its own (for the sake of reusability you may want to put this in a separate SystemVerilog file but this is not required). 
+Launch Lattice Radiant and start the New Project Wizard from the File or startup menu. Set up a new project for the UP5K chip following the [Project Setup](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#project-setup) section of the Lattice Radiant tutorial.
+
+Choose `File → New` and create a SystemVerilog HDL file. Save the file as `lab1_xx.sv` in your project directory and check the box to add the file to the current project.
+
+Create modules to perform the functions described above. The 7-segment display decoder should be combinational logic. Use a reasonable amount of hierarchy and name the top-level module `lab1_xx`. The 7-segment display code, for example, will be reused in future labs, so it should be a module of its own (for the sake of reusability you may want to put this in a separate SystemVerilog file, but this is not required).
+
 Every module should begin with a comment section that includes your name and email address, the date of creation, and a brief summary of its purpose, so that somebody else can understand what the module does and get a hold of you if they need help with it. Comment the modules as appropriate.
-
 
 ### Logic Simulation in ModelSim
 
-The next step is to simulate your logic with ModelSim. Open ModelSim from Radiant from the Tools->QuestaSim Lattice Edition menu or the icon in the toolbar. The ModelSim window will open. Get in the habit of watching the transcript window to look for errors and to familiarize yourself with what a good run looks like. If you see errors, close ModelSim, correct your Verilog code in Radiant, and reopen ModelSim. You can also edit the file directly in ModelSim and recompile there without going through the entire synthesis pipeline in Radiant.
+Simulate your logic in ModelSim following the [QuestaSim/ModelSim tutorial](/tutorials/tutorial-posts/modelsim-simulation-tutorial/). Start by forcing the inputs by hand so you can see your design respond.
 
-::: {.callout-note}
-Some of your designs may include modules from the iCE40 Technology Library (e.g., the HSOSC module we are using to generate our clock signal).
-If you try to simulate a design including one of these modules, you need to be sure to include the library.
-When you simulate a design that includes a module from the iCE40 Technology Library, make sure that you include the library by adding under the Libraries tab of the Start Simulation window as shown below.
-You can also use the `-L` flag in the command line to `vsim`.
+You should see the `led` and `seg` outputs displaying appropriate values. Check the outputs against your expectations. If you find any discrepancies, fix the code and resimulate.
+
+::: {.callout-tip title="Fixing code without restarting ModelSim"}
+A helpful shortcut to avoid restarting ModelSim is that you can edit the module by finding it under "work" in the library pane, right clicking, and choosing Edit. Make your fixes, then right click again and choose `Recompile`. Then type `restart -f` in the transcript window to restart simulation without having to set up the waveforms window again. When you return to Radiant, you'll find your corrected code.
 :::
 
-#### Starting Simulation
+### Automatic Testing with a Testbench
 
-In QuestaSim/ModelSim, simulate your module by choosing `Simulate → Start Simulation...`. Click on the + symbol next to the work library and select your code (`lab1_xx`).
+Forcing signals by hand gets tedious quickly, and it does not leave you with anything you can rerun. Next, test your design automatically using a `stim/assert` style testbench. Rather than manually forcing inputs or using pre-defined test vectors, this means using your testbench to set inputs and check for correct outputs.
 
-If the wave pane isn’t open, open it by choosing View → Wave. View all of the inputs and outputs of your design by selecting them in the Objects window and dragging them to the Waves window. In a more complicated design, you may wish to examine internal signals as well.
+Start by making a new SystemVerilog testbench file, based on the example below. This is for an LED controller module that implements the truth table for `led[0]` and `led[1]` described above. You probably structured your code differently and should modify this testbench to test your inputs and outputs!
 
-Manually test your design by forcing the inputs to specific values and then advancing the simulation using “run.” In the transcript window, type:
-
-
-```
-force s 0000
-run 100
-force s 0001
-run 100
-force s 0010
-run 100
-...
-```
-
-::: {.callout-tip title="Watch Out for Optimization"}
-If you're not seeing all the signals in your design, it's possible that QuestaSim optimized them away. To configure the optimization settings, see the relevant section in the [QuestaSim/ModelSim tutorial](/tutorials/tutorial-posts/modelsim-simulation-tutorial#preventing-optimization).
-:::
-
-You should see the `led` and `seg` outputs displaying appropriate values. Check the outputs against your expectations. If you find any discrepancies, fix the code and resimulate. A helpful shortcut to avoid restarting ModelSim is that you can edit the module by finding it under “work” in the library pane, right clicking, and choosing Edit. Make your fixes, then right click again and choose `Recompile`. Then type `restart -f` in the transcript window to restart simulation without having to set up the waveforms window again. When you return to Radiant, you’ll find your corrected code.
-
-Next, test your design automatically using a `stim/assert` style testbench. Rather than manually forcing inputs or using pre-defined test vectors, this means using your testbench to set inputs, and check for correct outputs.
-
-Start by making a new system verilog testbench file, based on the example below. This is for an LED controller module that implements the truth table for led[0] and led[1] described above. You probably structured your code differently and should modify this testbench to test your inputs and outputs!
 ```
 `timescale 1 ns/1 ns
 
@@ -221,49 +222,21 @@ module lab1_tb();
 endmodule
 ```
 
-Next, launch Questa/ModelSim using the Simulation Wizard button as shown in the figure below
+Once your testbench is written, run it using the [Simulation Wizard](/tutorials/tutorial-posts/modelsim-simulation-tutorial/#launching-questa).
 
-::: {#launch-questa}
-
-![Button to launch Questa Simulation Wizard](images/simulation_wizard.png)
+::: {.callout-tip title="Watch out for optimization"}
+If some of your testbench signals are missing from the Wave window, QuestaSim has likely optimized them away. See [Preventing Optimization](/tutorials/tutorial-posts/modelsim-simulation-tutorial/#preventing-optimization) in the simulation tutorial.
 :::
 
-Follow the instructions in the wizard to name and create the simulation. The default settings are good, but make sure to select *your* module name as the `Simulation Top Module` (in this case that would be `lab1_tb`).
-
-Once you finish, Questa will automatically open and run your simulation! By default, it only runs for 100ns, so if your simulation takes longer you may need to use the `run` command from the manual testing section. As expected, we can see that all of the tests passed in the `Transcripts` section at the bottom.
-
-::: {#questa-sim}
-
-![Example questa simulation](images/example_questa_simulation.png)
-:::
-
-By default, only signals in your testbench are displayed, but you can add more by selecting `dut` in the instance pane, dragging signals from `Objects` into `Wave` and then restarting the simulation with by running `restart -f` and then `run 100`. If you edit the testbench or module code, you can update the simulator by clicking `Compile → Compile All` or closing and re-opening the simulation. If you aren't changing simulation settings, then you can re-open a previous simulation from Lattice by double clicking on the simulation name in the `Script Files` folder.
-
-::: {#questa-sim}
-
-![Restart existing simulation](images/restart_simulation.png)
-:::
-
-In the example above, we're testing a module that only uses combinational logic, so testvectors would have also worked well. But the `stim/assert` architecture works even better for sequential logic like an FSM or clock divider. Think about (and write) a testbench to check if led[2] is blinking at the right frequency (this may involve resetting the clock divder, making sure the output is zero, waiting a known time, check if it is one, etc.).
+The LED decoder above is combinational, so test vectors would have worked equally well. But the `stim/assert` architecture works even better for sequential logic like an FSM or clock divider. Think about (and write) a testbench to check whether `led[2]` is blinking at the right frequency. This may involve resetting the clock divider, checking that the output is zero, waiting a known time, checking that it is one, and so on.
 
 ### Pin Assignment
 
-Next, assign pins to relate the signal names in your Verilog code to physical pin numbers on the FPGA. Launch Tools → Device Constraint Editor. A table listing all inputs and outputs for the project should appear. Under Pin, type the pin number to associate with the given signal.
+Next, assign pins to relate the signal names in your Verilog code to physical pin numbers on the FPGA, following the [Pin Assignment](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#pin-assignment) section of the Lattice Radiant tutorial.
 
+For the 7-segment display outputs you may select any I/O pins you'd like, but make sure that these pins are not being used for other purposes. Write down which pins you choose — you will wire the display to them in the next section.
 
-::: {#fig-pin-radiant-assignment}
-
-![](images/radiant_pin_assignments.png)
-
-Radiant pin assignments.
-:::
-
-The FPGA pinouts are shown in the Board Schematic. Most of the user input/output (I/O) pins are tapped out to the headers and labeled on the board silk screen. Some have special functions; for example, FPGA pin P42 is connected to LED D6.
-
-The pin numbers for the LEDs and switches are marked on the board’s silkscreen. For the outputs for the 7-segment display, you may select any I/O pins you’d like. Do make sure that these pins are not being used for other purposes.
-
-The Device Constraint Editor is also the place where you can configure the pullup resistors for the I/O pins. To do this, examine the `PULLMODE` column for any input pins. In your design, this will be the pins connected to `s[3:0]`. These should be configured with pull-up resistors to avoid invalid logic levels (the exact value is not very important. A value between 10k and 100k is generally sufficient).
-
+The pins connected to `s[3:0]` must be configured with pull-up resistors to avoid invalid logic levels. The exact value is not very important; a value between 10 kΩ and 100 kΩ is generally sufficient. See [Configuring Pull-Up Resistors](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#pull-up-resistors) in the Lattice Radiant tutorial.
 
 ### Seven Segment Display Circuit
 
@@ -273,33 +246,42 @@ Each segment of the display works as an independent LED. Therefore, the same cur
 
 Consult the data sheet for the pinout of the common anode dual seven segment display. All seven segments share the same anode, which should be connected to VCC (3.3 V). Each of the segments has its own cathode, which can be pulled to 0 to turn on the segments.
 
-Be sure to turn power off before wiring circuits on your board. You can choose either side of the display to use in this lab. After deciding on which side to use, you will need to connect the VDD pin of that side (either VDD1 or VDD2) to 3.3 V. Then connect the input pins of the same side of the display to the header pins you chose. Remember to add suitable resistors between each of the inputs to the display and the header pins. These LEDs are common anode LEDs. That is, all the anodes from the LEDs are connected to a single VDD (VDD1 or VDD2). You are driving the cathode of each LED. Given this information, you might need to modify your Verilog file. Do so in the simplest way possible.
+::: {.callout-warning}
+Be sure to turn power off before wiring circuits on your board.
+:::
 
+You can choose either side of the display to use in this lab. After deciding on which side to use, you will need to connect the VDD pin of that side (either VDD1 or VDD2) to 3.3 V. Then connect the input pins of the same side of the display to the header pins you chose during pin assignment. Remember to add suitable resistors between each of the inputs to the display and the header pins.
+
+These LEDs are common anode LEDs. That is, all the anodes from the LEDs are connected to a single VDD (VDD1 or VDD2). You are driving the cathode of each LED. Given this information, you might need to modify your Verilog file. Do so in the simplest way possible.
 
 ### Generating the FPGA Configuration Files
 
-Now you will synthesize your HDL into a programming file to be transferred onto the FPGA. This outputs a binary file (`.bin`) in your project directory that can be used to program the FPGA directly over JTAG using the onboard USB programmer. Be sure your SystemVerilog files are saved, and click the green “Play” triangle to start the synthesis process. To help sort the many messages that the compilation process generates, click a tab under the Message area to see only that type of message. If compilation is successful but generates warnings, check the Warning and Error tabs for errors relevant to your design. Warnings about incomplete I/O assignments may be ignored if you have in fact assigned all relevant I/O pins.
+Now you will synthesize your HDL into a programming file to be transferred onto the FPGA, following the [Synthesizing the Design](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#synthesizing-the-design) section of the Lattice Radiant tutorial.
 
-`Launch Tools → Netlist Analyzer` and examine the RTL schematic of your design. This shows the logic synthesized from your Verilog design. Ensure the hardware matches your expectations.
+While you are there, use the Netlist Analyzer to examine the RTL schematic of your design and confirm the synthesized hardware matches your expectations, and check the Resource Usage report for a register and pin count that matches what you intended.
 
-Look at the Reports tab. In the Project Summary under Resource Usage you should see a total number of registers and pins that match your expectations. Under Analysis & Synthesis, you can see how the logic blocks and registers are broken down in each module. Under Fitter, the Pin-Out File should match the pin assignments you intended.
+### Program and Test Your Design
 
-::: {.callout-tip title="Troubleshooting Tips"}
+Finally, program your design onto the flash memory on the UPduino following the [Programming the Device](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#programming-the-device) section of the Lattice Radiant tutorial.
 
-If some of you are seeing issues with specific pins on your FPGA there could be a few different reasons and corresponding steps to take to troubleshoot.
+Once programmed, re-test the board against the specification above:
 
-- You could have an electrical short which is causing some pins to be electrically connected that should not due to solder bridges. Double check to make sure that the pins are isolated and not connected together by checking the resistance between the pins with a multimeter.
-- You are trying to use a pin that is shared between the FPGA and the MCU and the MCU is not leaving that pin floating or it is driving it as an output. You can get around this by wiping the code on the MCU by uploading a file with a blank main function.
-- You should also read through the Nucleo board documentation to see what pins have special functions that are used by default by the MCU. Hint: You likely want to stay away from using the pins that the MCU uses for serial communication by default.
+- Step `s[3:0]` through all sixteen values and confirm the 7-segment display shows the correct hexadecimal digit and that every digit is distinguishable.
+- Confirm `led[0]` and `led[1]` follow the truth tables above.
+- Confirm `led[2]` blinks at roughly 2.4 Hz.
 
-:::
+If a specific pin misbehaves, the [Troubleshooting](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#troubleshooting) callout in the Radiant tutorial covers the most common causes, including solder bridges and pins shared with the MCU.
 
 ## AI Prototype and Reflection
 
 Don't forget to complete the [AI Prototype](ai-prototype.qmd) and reflect on it in your lab 1 writeup.
 
+## What to Submit
+
+See the [Lab 1 specifications](specs.qmd) for the full list of deliverables and how this lab is graded.
+
 [^1]:
-     In order for the NUCLEO board to be compatible with SEGGER, it is necessary to reflash the ST-LINK programmer with SEGGER J-Link firmware to convert it to a J-Link. This has been already taken care of on the board in your kit, but if you want to use another STM32 board with SEGGER you’ll need to follow the instructions [here](https://www.segger.com/products/debug-probes/j-link/models/other-j-links/st-link-on-board/) to do this yourself.
+     In order for the NUCLEO board to be compatible with SEGGER, it is necessary to reflash the ST-LINK programmer with SEGGER J-Link firmware to convert it to a J-Link. This has been already taken care of on the board in your kit, but if you want to use another STM32 board with SEGGER you'll need to follow the instructions in [Appendix B of the SEGGER Embedded Studio Setup tutorial](/tutorials/tutorial-posts/segger-embedded-studio-setup/#appendix-b-st-link-to-j-link-firmware-upgrade) to do this yourself.
 
 
 {{< include /resources/github-issue-footer.qmd >}}
