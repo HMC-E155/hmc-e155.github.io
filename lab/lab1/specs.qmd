@@ -67,10 +67,13 @@ The focus of lab 1 specifications, in addition to proving hardware functionality
 #### Proficiency
 
 - [ ] Calculations provided to demonstrate that the current draw for each segment in the seven-segment display is within recommended operating conditions.
+- [ ] Calculations provided to demonstrate that the flashing rate of the LED is 2Hz.
+
 
 #### Excellence
 
 - [ ] No errors in LED current calculation (correct VON selected for current level, VON included in calculation, etc.).
+- [ ] No errors in LED frequency calculations (not off by a factor of 2, uses appripriate clock rates, etc.)
 
 {{< include  ../specs/lab-writeup-specs.qmd >}} 
 
