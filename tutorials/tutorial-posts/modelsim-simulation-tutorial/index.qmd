@@ -4,34 +4,79 @@ categories: [FPGA, QuestaSim/ModelSim]
 ---
 
 ::: {.callout-warning title="QuestaSim is ModelSim"}
-Modelsim was renamed to Questasim as part of Mentor Graphics’ (now Siemens EDA) strategy to unify and rebrand their simulation tools under the "Questa" umbrella.
+ModelSim was renamed to QuestaSim as part of Mentor Graphics' (now Siemens EDA) strategy to unify and rebrand their simulation tools under the "Questa" umbrella.
 Across the web and on this website you may see references to both QuestaSim and ModelSim, but both names refer to the same software tool.
 :::
 
-
 ## Introduction
 
-To verify that designs are working, it is useful to simulate them using ModelSim.
-This document will provide a quick demo of how to perform a simulation in ModelSim and how to include iCE40UP library files in the simulation.
+To verify that designs are working, it is useful to simulate them before putting them on hardware.
+This tutorial covers three ways to drive a simulation, from quickest to most rigorous:
 
+1. [Forcing signals by hand](#forcing-signals) — fastest way to sanity-check a small design.
+2. [Writing a testbench](#testbench-simulation) — automatic, repeatable checking.
+3. [Launching from the Simulation Wizard](#launching-questa) — the fastest way to run a testbench you have already written.
 
-## Simple Simulations by Forcing Signals
+It also covers [including the iCE40 technology library](#libraries), which you need whenever your design instantiates a Lattice primitive such as `HSOSC`.
 
-If you have a simple design and want to quickly test it out to see that it is working, you can use the force function in the ModelSim command window to apply test inputs and measure the outputs.
+## Opening ModelSim from Radiant
 
-We will use a full adder circuit as a demonstration.
+Open ModelSim from Radiant using the `Tools → QuestaSim Lattice Edition` menu or the icon in the toolbar.
+The ModelSim window will open.
 
+Get in the habit of watching the transcript window to look for errors and to familiarize yourself with what a good run looks like.
+If you see errors, close ModelSim, correct your Verilog code in Radiant, and reopen ModelSim.
+You can also edit the file directly in ModelSim and recompile there without going through the entire synthesis pipeline in Radiant.
+
+::: {.callout-note title="Designs using the iCE40 Technology Library"}
+Some of your designs may include modules from the iCE40 Technology Library (e.g., the `HSOSC` module used to generate a clock signal).
+If you simulate a design including one of these modules, you must include the library or ModelSim will not find the design unit.
+See [Including the iCE40 Technology Library](#libraries) below before you start the simulation.
+:::
+
+### Starting a Simulation
+
+In QuestaSim/ModelSim, simulate your module by choosing `Simulate → Start Simulation...`.
+Click on the `+` symbol next to the work library and select the module you want to simulate.
+
+If the wave pane isn't open, open it by choosing `View → Wave`.
+View all of the inputs and outputs of your design by selecting them in the Objects window and dragging them into the Wave window.
+In a more complicated design, you may wish to examine internal signals as well.
+
+## Simple Simulations by Forcing Signals {#forcing-signals}
+
+If you have a simple design and want to quickly check that it is working, you can use the `force` command in the ModelSim transcript window to apply test inputs, then advance time with `run`.
+
+For example, to step a 4-bit input `s` through its first few values:
+
+```
+force s 0000
+run 100
+force s 0001
+run 100
+force s 0010
+run 100
+...
+```
+
+::: {.callout-tip title="Watch out for optimization"}
+If you're not seeing all the signals in your design, it's possible that QuestaSim optimized them away.
+See [Preventing Optimization](#preventing-optimization) below to fix this.
+:::
+
+### Full Adder Example
+
+Let's walk through a complete example using a full adder circuit.
 
 ::: {#fig-full-adder-schematic}
 ![](images/full-adder-schematic.png){width=50%}
 
 Full adder schematic.
-
 :::
 
-
-To code up the full adder, first, open ModelSim and create a new ModelSim project titled `ModelSim_Tutorial` and save it in a location where the path name has no spaces. Then create a new file named `fulladder.sv`, making sure the file type is SystemVerilog. You should now have a blank file. Add the Verilog code below to create a structural Verilog model of the full adder circuit show above.
-
+Open ModelSim and create a new ModelSim project titled `ModelSim_Tutorial`, saved in a location where the path name has no spaces.
+Then create a new file named `fulladder.sv`, making sure the file type is SystemVerilog.
+Add the Verilog code below to create a structural Verilog model of the full adder circuit shown above.
 
 ::: {#fig-new-project}
 ![](images/modelsim-create-project.png){width=50%}
@@ -64,15 +109,14 @@ module fulladder(
 endmodule
 ```
 
+Compile your file via the `Compile` menu, then start the simulation using `Simulate → Start Simulation...`.
+You will see the GUI change and open up the Objects and Wave panes.
+You can always toggle windows on or off as desired using the View toolbar menu.
 
-Next, we will simulate the file. First, compile your file via the Compile menu. Then, start the simulation using “Simulate > Start Simulation…”. You will see the GUI change and open up the Objects and Wave panes. You can always toggle windows on or off as desired using the View toolbar menu.
-
-Next, add the selected symbols by selecting them in the Objects pane and adding them to the Wave pane either by using the right-click menu or dragging them.
-Next, to run the simulation, we need to initialize the input values which are floating (HiZ) to begin. 
-We can do this by typing the command `force <Signal Name> <Signal Value>` in the Transcript pane. 
-Force `A`, `B`, and `Cin` to some desired values of your choosing and then run the simulation for 10 time units by typing `run 10`.
-When you run the simulation, you will see the waves window advance the appropriate number of time points, displaying the values of the signals.
-
+Add the signals you care about by selecting them in the Objects pane and dragging them into the Wave pane.
+The inputs start floating (HiZ), so initialize them with `force <Signal Name> <Signal Value>` in the Transcript pane.
+Force `A`, `B`, and `Cin` to some values of your choosing and then run the simulation for 10 time units by typing `run 10`.
+The Wave window will advance the appropriate number of time points, displaying the values of the signals.
 
 ::: {#fig-sim-waves-force}
 ![](images/modelsim-sim-waves.png)
@@ -80,36 +124,85 @@ When you run the simulation, you will see the waves window advance the appropria
 Running simulation by forcing signals.
 :::
 
+Fill out a truth table for a full adder by evaluating the circuit schematic shown above for all combinations of `A`, `B`, and `Cin`, and verify a few values by forcing them to get the hang of it.
 
-Fill out a truth table for a full adder by evaluating the circuit schematic shown above for all combinations of A, B, and Cin and verify a few values by forcing them to get the hang of it.
+::: {.callout-important title="Working on Lab 1? Return to the lab now"}
+You now know enough to bring up your Lab 1 design in simulation and check the `led` and `seg` outputs by hand.
+Go back to [Lab 1 → Logic Simulation in ModelSim](/lab/lab1/#logic-simulation-in-modelsim) and continue there.
+Lab 1 will send you back to the [testbench](#testbench-simulation) and [Simulation Wizard](#launching-questa) sections below once you have written your testbench.
+:::
 
+## Testbench Simulation {#testbench-simulation}
 
-## Testbench Simulation
+After testing only two or three different inputs by manually forcing values, you are probably already frustrated with how tedious this is.
+There is a much more efficient way to run simulations: testbenches.
 
-After testing about only two different inputs by manually forcing values you are probably already frustrated with the tediousness of running a simulation this way. Luckily, there is a much more efficient way to run simulations using testbenches.
+A testbench is a separate module which generates simulated inputs and enables the generated output signals to be traced versus time.
+You've likely seen testbenches before (e.g., in E85) but you may have never written one from scratch by yourself.
+While this is a bit daunting at first, the basic architecture of a testbench is straightforward.
+Before you proceed, you should review the HDL testbench section in *Digital Design and Computer Architecture* (Section 4.9 in the ARM edition), which covers several different styles of testbenches.
 
-A testbench is a separate module which generates simulated inputs and enables the generated output signals to be traced versus time. You’ve likely seen testbenches before (e.g., in E85) but you may have never written one from scratch by yourself before. While this is a bit daunting at first, the basic architecture of a testbench is straightforward. Before you proceed, you should review the HDL testbench section in Digital Design and Computer Architecture (Section 4.9 in the ARM edition) which covers several different styles of testbenches.
-
-Note that testbenches include Verilog statements that are non-synthesizable (in other words, they cannot be mapped onto hardware). One example is the initial block, which runs only once at the start of a simulation. In this sense, testbenches use SystemVerilog a bit like a scripting language to enable designs to be easily tested and verified.
-
-In this example we will create a testbench with automatic checking against a test vector file. This is the most powerful type of testbench and will be a good foundation for all the testbenches you will write for this class.
+Note that testbenches include Verilog statements that are non-synthesizable (in other words, they cannot be mapped onto hardware).
+One example is the `initial` block, which runs only once at the start of a simulation.
+In this sense, testbenches use SystemVerilog a bit like a scripting language to enable designs to be easily tested and verified.
 
 A testbench is composed of the following elements:
 
-
 - Create and initialize the signals for the inputs, outputs, and internal signals of your modules.
-- Instantiate the device under test (DUT)
+- Instantiate the device under test (DUT).
 - Generate a simulated clock signal. Even if your module is purely combinational, you will need this clock signal to control when the input test vectors are applied and the outputs checked.
-- Load the test vectors and initialize the signals for the simulation (e.g., pulsing the reset line)
-- Apply the inputs and check the resulting outputs using the test vectors. One simple way to do this is to apply the test vector on the rising edge of the clock and then check the outputs against the expect outputs on the negative edge of the clock.
+- Load the test vectors and initialize the signals for the simulation (e.g., pulsing the reset line).
+- Apply the inputs and check the resulting outputs using the test vectors. One simple way to do this is to apply the test vector on the rising edge of the clock and then check the outputs against the expected outputs on the falling edge of the clock.
 
-Every HDL module that you write should have a testbench to accompany it. While this will cost you some time up front, it will save you loads of time and potential head injuries from banging your head against the wall wondering why your circuit is not working as you expect.
+Every HDL module that you write should have a testbench to accompany it.
+While this will cost you some time up front, it will save you loads of time and potential head injuries from banging your head against the wall wondering why your circuit is not working as you expect.
 
+In this example we will create a testbench with automatic checking against a test vector file.
+This is the most powerful type of testbench and will be a good foundation for all the testbenches you will write for this class.
+
+::: {.callout-note title="Two testbench styles"}
+This tutorial demonstrates the **test vector** style, where inputs and expected outputs are read from a `.tv` file.
+Lab 1 asks you to write a **stim/assert** style testbench instead, where the stimulus and the expected values are written directly in the testbench using `assert` statements.
+Both styles run in the simulator exactly the same way — only the source of the expected values differs.
+The test vector style shines when you have many cases of the same shape; stim/assert shines for sequential logic like an FSM or clock divider.
+:::
+
+### Designing a Good Testbench {#designing-a-good-testbench}
+
+Before writing any testbench code, decide what "tested" actually means for the module in front of you. **A testbench should cover all of the functionality of the module it tests** — every output behavior the module is responsible for should be exercised and checked. How much work that is depends on what kind of module it is.
+
+**Combinational modules — exercise every input combination.**
+A purely combinational module has no memory, so its output depends only on its current inputs. That makes complete coverage achievable: drive every possible input combination and check every output. A seven-segment decoder driven by a 4-bit input has just 16 combinations, so there is no excuse for testing only a few of them. If the input space is small, test all of it.
+
+**Sequential modules — exercise every state transition, within reason.**
+A sequential module's output depends on its history, so it is not enough to try each input once; you need to check the *transitions* between states. Nominally that means covering every state transition. In practice this is often impractical — a counter that divides a 48 MHz clock down to a few Hz has millions of states, and simulating all of them is neither useful nor fast.
+
+Instead, test the *features* rather than every count value:
+
+- Does reset return the counter to zero?
+- Does the enable input actually start and stop counting?
+- Does the counter wrap back to zero when it reaches its max count?
+
+**Top-level modules — only test what the module tests didn't cover.**
+Once each submodule is verified on its own, re-testing that logic through the top level adds nothing. A top-level testbench should target what is genuinely new at that level:
+
+- Are the submodules wired together correctly?
+- Does anything instantiated only at the top level work — for example, does the `HSOSC` produce a clock?
+- Does logic written directly in the top level (such as an `assign` statement) behave correctly?
+
+Note that a top-level module which instantiates `HSOSC` generates its own clock internally, so its testbench should *not* drive a `clk` input. Let the oscillator run and simulate long enough to observe the behavior you care about.
+
+::: {.callout-important title="Working on Lab 1? Return to the lab now"}
+That is everything you need to plan your Lab 1 testbenches.
+Go back to [Lab 1 → Automatic Testing with a Testbench](/lab/lab1/#automatic-testing-with-a-testbench) and write yours.
+
+The worked example below uses the *test vector* style on a full adder. Lab 1 asks for the `stim/assert` style instead, so read it only if you want a second example of testbench structure.
+:::
 
 ### Creating the Testbench
 
-Next, we will create the testbench. Create a new SystemVerilog file `fulladder_tb.sv` and add it to your project. Then, type the following code into the testbench.
-
+Create a new SystemVerilog file `fulladder_tb.sv` and add it to your project.
+Then type the following code into the testbench.
 
 ```
 `timescale 1ns/1ns
@@ -132,7 +225,7 @@ module fulladder_tb();
      clk = 1; #5;
      clk = 0; #5;
    end
-  
+
  // At the start of the simulation:
  //  - Load the testvectors
  //  - Pulse the reset line (if applicable)
@@ -165,9 +258,9 @@ module fulladder_tb();
              errors = errors + 1;
            end
 
-      
+
        vectornum = vectornum + 1;
-      
+
        if (testvectors[vectornum] === 11'bx)
          begin
            $display("%d tests completed with %d errors.", vectornum, errors);
@@ -184,8 +277,9 @@ endmodule
 
 ### The Testvector (.tv) File
 
-The test vector file is a plaintext file with a single test vector on each line. Typically these are organized in the format &lt;inputs>_&lt;expected_outputs> (underscores are ignored but help to provide visual organization) but the specific format is up to you. You just need to make sure to assign the bits properly in your testbench module.
-
+The test vector file is a plaintext file with a single test vector on each line.
+Typically these are organized in the format &lt;inputs>_&lt;expected_outputs> (underscores are ignored but help to provide visual organization) but the specific format is up to you.
+You just need to make sure to assign the bits properly in your testbench module.
 
 ```
 // fulladder_testvectors.tv
@@ -193,7 +287,7 @@ The test vector file is a plaintext file with a single test vector on each line.
 // jbrake@hmc.edu
 // 5/26/22
 //
-// 5-bit vectors in binary. 
+// 5-bit vectors in binary.
 // underscore is ignored
 // // indicates comment
 // a b cin _ s cout
@@ -207,7 +301,7 @@ The test vector file is a plaintext file with a single test vector on each line.
 111_11
 ```
 
-### Preventing Optimization
+### Preventing Optimization {#preventing-optimization}
 
 When we simulate a testbench, we need to disable some of the default optimization.
 If you don't, QuestaSim will eliminate many of your testbench signals because they are not directly linked to inputs or outputs of the modules.
@@ -224,52 +318,81 @@ Click `Optimization Settings` and then select the option to "Apply full visibili
 QuestaSim optimization settings for preserving testbench signals.
 :::
 
+## Launching Questa from the Simulation Wizard {#launching-questa}
 
+Once you have a testbench written and added to your Radiant project, the quickest way to run it is the Simulation Wizard, launched from the button shown below.
 
-## Libraries
+::: {#fig-simulation-wizard}
+
+![Button to launch the Questa Simulation Wizard](images/simulation_wizard.png)
+
+Button to launch the Questa Simulation Wizard.
+:::
+
+Follow the instructions in the wizard to name and create the simulation.
+The default settings are good, but make sure to select **your** testbench module name as the `Simulation Top Module` (for Lab 1 that would be `lab1_tb`).
+
+Once you finish, Questa will automatically open and run your simulation.
+By default it only runs for 100 ns, so if your simulation takes longer you may need to use the `run` command described in the [forcing signals](#forcing-signals) section.
+In the example below, all of the tests passed, as reported in the `Transcript` pane at the bottom.
+
+::: {#fig-questa-sim}
+
+![Example Questa simulation](images/example_questa_simulation.png)
+
+Example Questa simulation.
+:::
+
+By default, only signals in your testbench are displayed.
+You can add more by selecting `dut` in the instance pane, dragging signals from `Objects` into `Wave`, and then restarting the simulation by running `restart -f` followed by `run 100`.
+
+If you edit the testbench or module code, you can update the simulator by clicking `Compile → Compile All`, or by closing and re-opening the simulation.
+If you aren't changing simulation settings, you can re-open a previous simulation from Radiant by double clicking on the simulation name in the `Script Files` folder.
+
+::: {#fig-restart-simulation}
+
+![Restart existing simulation](images/restart_simulation.png)
+
+Restart an existing simulation.
+:::
+
+::: {.callout-important title="Working on Lab 1? Return to the lab now"}
+Your testbench is now running in Questa.
+Go back to [Lab 1 → Pin Assignment](/lab/lab1/#pin-assignment) and continue with the rest of the lab.
+The section below on technology libraries is a reference you will need if your design instantiates `HSOSC`.
+:::
+
+## Including the iCE40 Technology Library {#libraries}
 
 In many instances we want to leverage the iCE40 Technology Library.
-However, when we go to simulate these designs, we need to make sure to include the appropriate libraries so that ModelSim can find the correct design units when it goes to do the simulation.
+However, when we simulate these designs, we need to include the appropriate libraries so that ModelSim can find the correct design units.
 
 When you install Lattice Radiant with ModelSim Lattice FPGA Edition, it comes with a set of installed libraries.
-For our purposes, we are most interested in the iCE40UP library and will need to include this in our simulation.
+For our purposes, we are most interested in the iCE40UP library.
 
-To do this, start the simulation by clicking Simulate > Start Simulation.
-Then navigate to the Libraries tab and add iCE40UP to the Search Libraries window using the “Add…” button.
-
+To include it, start the simulation by clicking `Simulate > Start Simulation`.
+Then navigate to the Libraries tab and add `iCE40UP` to the Search Libraries window using the "Add…" button.
 
 ::: {#fig-ice40-tech-library}
 ![](images/ice40-tech-library.png){width=50%}
 
-ice40 Technology Library.
+iCE40 technology library.
 :::
 
-
-
-::: {#fig-ice40-tech-library}
+::: {#fig-ice40-add-library}
 ![](images/ice40-add-library.png){width=50%}
 
-Add ice40 Technology Library.
+Add the iCE40 technology library.
 :::
 
+Then navigate to the "Design" tab, select your top-level module, and click OK.
+Your simulation should now start and open up the Wave window.
 
 ::: {#fig-ice40-start-sim}
 ![](images/modelsim-start-sim-module.png){width=50%}
 
-Start sim with loaded library.
+Start simulation of the `top` module with the library loaded.
 :::
-
-
-Then navigate to the “Design” tab, select the `top` module and then click OK. 
-Your simulation should now start and open up the Wave window. 
-
-
-::: {#fig-ice40-tech-library}
-![](images/modelsim-start-sim-module.png){width=50%}
-
-Start sim of `top` module.
-:::
-
 
 Note that you can also achieve the steps above by running `vsim work.top -L iCE40UP` in the command window.
 
