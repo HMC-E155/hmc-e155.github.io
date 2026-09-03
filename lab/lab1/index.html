@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-b9bebea3e3d544ce656829e36b415e27.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-0be6f067fb88b5911c0e6a259786e242.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -187,22 +187,27 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
   <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
   <li><a href="#before-you-start" id="toc-before-you-start" class="nav-link" data-scroll-target="#before-you-start">Before You Start</a></li>
-  <li><a href="#development-board-assembly" id="toc-development-board-assembly" class="nav-link" data-scroll-target="#development-board-assembly">Development Board Assembly</a>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting Started</a>
   <ul class="collapse">
   <li><a href="#create-your-git-repository" id="toc-create-your-git-repository" class="nav-link" data-scroll-target="#create-your-git-repository">Create Your Git Repository</a></li>
+  <li><a href="#assemble-your-development-board" id="toc-assemble-your-development-board" class="nav-link" data-scroll-target="#assemble-your-development-board">Assemble Your Development Board</a></li>
+  <li><a href="#test-your-boards" id="toc-test-your-boards" class="nav-link" data-scroll-target="#test-your-boards">Test Your Boards</a></li>
   </ul></li>
   <li><a href="#fpga-design" id="toc-fpga-design" class="nav-link" data-scroll-target="#fpga-design">FPGA Design</a>
   <ul class="collapse">
   <li><a href="#design-and-synthesis-in-radiant" id="toc-design-and-synthesis-in-radiant" class="nav-link" data-scroll-target="#design-and-synthesis-in-radiant">Design and Synthesis in Radiant</a></li>
   <li><a href="#logic-simulation-in-modelsim" id="toc-logic-simulation-in-modelsim" class="nav-link" data-scroll-target="#logic-simulation-in-modelsim">Logic Simulation in ModelSim</a></li>
+  <li><a href="#automatic-testing-with-a-testbench" id="toc-automatic-testing-with-a-testbench" class="nav-link" data-scroll-target="#automatic-testing-with-a-testbench">Automatic Testing with a Testbench</a></li>
   <li><a href="#pin-assignment" id="toc-pin-assignment" class="nav-link" data-scroll-target="#pin-assignment">Pin Assignment</a></li>
   <li><a href="#seven-segment-display-circuit" id="toc-seven-segment-display-circuit" class="nav-link" data-scroll-target="#seven-segment-display-circuit">Seven Segment Display Circuit</a></li>
   <li><a href="#generating-the-fpga-configuration-files" id="toc-generating-the-fpga-configuration-files" class="nav-link" data-scroll-target="#generating-the-fpga-configuration-files">Generating the FPGA Configuration Files</a></li>
+  <li><a href="#program-and-test-your-design" id="toc-program-and-test-your-design" class="nav-link" data-scroll-target="#program-and-test-your-design">Program and Test Your Design</a></li>
   </ul></li>
   <li><a href="#ai-prototype-and-reflection" id="toc-ai-prototype-and-reflection" class="nav-link" data-scroll-target="#ai-prototype-and-reflection">AI Prototype and Reflection</a></li>
+  <li><a href="#what-to-submit" id="toc-what-to-submit" class="nav-link" data-scroll-target="#what-to-submit">What to Submit</a></li>
   <li><a href="#share-your-feedback" id="toc-share-your-feedback" class="nav-link" data-scroll-target="#share-your-feedback">Share Your Feedback</a></li>
   </ul>
-<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="./specs.html"><i class="bi bi-file-earmark-check"></i>Specifications</a></li><li><a href="./ai-prototype.html"><i class="bi bi-robot"></i>AI Prototype</a></li><li><a href="/assets/doc/FPGA-DS-02008-2-0-iCE40-UltraPlus-Family-Data-Sheet.pdf"><i class="bi bi-link-45deg"></i>iCE40 UltraPlus Family Data Sheet</a></li><li><a href="/tutorials/tutorial-posts/lattice-radiant-installation/"><i class="bi bi-link-45deg"></i>Lattice Radiant Installation Tutorial</a></li><li><a href="/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup"><i class="bi bi-link-45deg"></i>Lattice Radiant iCE40 Project Setup</a></li><li><a href="/assets/doc/E155_v4_Dev_Board_BOM.html"><i class="bi bi-link-45deg"></i>Interactive Dev Board BOM</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab01"><i class="bi bi-github"></i>Starter Code</a></li></ul></div></nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="./specs.html"><i class="bi bi-file-earmark-check"></i>Specifications</a></li><li><a href="./ai-prototype.html"><i class="bi bi-robot"></i>AI Prototype</a></li><li><a href="/assets/doc/FPGA-DS-02008-2-0-iCE40-UltraPlus-Family-Data-Sheet.pdf"><i class="bi bi-link-45deg"></i>iCE40 UltraPlus Family Data Sheet</a></li><li><a href="/tutorials/tutorial-posts/background/"><i class="bi bi-link-45deg"></i>Hardware Background</a></li><li><a href="/tutorials/tutorial-posts/dev-board-assembly/"><i class="bi bi-link-45deg"></i>E155 Development Board Assembly</a></li><li><a href="/tutorials/tutorial-posts/lattice-radiant-installation/"><i class="bi bi-link-45deg"></i>Lattice Radiant Installation Tutorial</a></li><li><a href="/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/"><i class="bi bi-link-45deg"></i>Lattice Radiant iCE40 Project Setup</a></li><li><a href="/tutorials/tutorial-posts/modelsim-simulation-tutorial/"><i class="bi bi-link-45deg"></i>QuestaSim/ModelSim Simulation Tutorial</a></li><li><a href="/tutorials/tutorial-posts/segger-embedded-studio-setup/"><i class="bi bi-link-45deg"></i>SEGGER Embedded Studio Setup</a></li><li><a href="/assets/doc/E155_v4_Dev_Board_BOM.html"><i class="bi bi-link-45deg"></i>Interactive Dev Board BOM</a></li></ul></div><div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab01"><i class="bi bi-github"></i>Starter Code</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -248,18 +253,45 @@ ul.task-list li input[type="checkbox"] {
 <section id="requirements" class="level2">
 <h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
 <p>Follow the steps in this guide to test your FPGA and MCU boards. Write some Verilog code to exercise the FPGA using the switches, LEDs, and a 7-segment display to ensure your board is operational. Simulate and synthesize your code, then upload it to the flash memory and re-test the board. Hook up a 7-segment display and demonstrate that it works.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="How this lab uses the tutorials">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>How this lab uses the tutorials
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The step-by-step tool instructions for this lab live in the <a href="../../tutorials/">tutorials section</a> of the website rather than in this page, so that you can find them again later in the semester without digging through Lab 1.</p>
+<p>When this page links you into a tutorial, work through the linked section and then come back here — each tutorial ends the relevant section with a callout telling you to return to Lab 1. You do not need to read the tutorials end to end.</p>
+</div>
+</div>
 </section>
 <section id="before-you-start" class="level2">
 <h2 class="anchored" data-anchor-id="before-you-start">Before You Start</h2>
 <p>Before you start working on this lab, you should familiarize yourself with the documentation for both the UPduino v3.1 and Nucleo-L432KC boards. The website has links for the UPduino v3.1 User Guide and the Nucleo-L432KC User Manuals on the Resources tab. These two documents contain information that will be helpful for answering questions that you may have during the course of this lab.</p>
-<p>You should also read <a href="../../tutorials/tutorial-posts/background/index.html">this tutorial</a> with important programming instructions and background information for the FPGA and MCU.</p>
+<p>You should also read the <a href="../../tutorials/tutorial-posts/background/">Hardware Background tutorial</a>, which has important programming instructions and background information for the FPGA and MCU.</p>
+<p>Finally, install the toolchain you will need for the rest of the semester:</p>
+<ul>
+<li><a href="../../tutorials/tutorial-posts/lattice-radiant-installation/">Lattice Radiant</a> (includes QuestaSim/ModelSim) for FPGA design.</li>
+<li><a href="../../tutorials/tutorial-posts/segger-embedded-studio-setup/">SEGGER Embedded Studio</a> for MCU development.</li>
+</ul>
 </section>
-<section id="development-board-assembly" class="level2">
-<h2 class="anchored" data-anchor-id="development-board-assembly">Development Board Assembly</h2>
-<p>Before you start working on your FPGA design, you need to assemble your development board as described in <a href="../../tutorials/tutorial-posts/dev-board-assembly/index.html">this tutorial</a>. The majority of your time on this lab will likely be spent assembling the board, so make sure to plan ahead.</p>
+<section id="getting-started" class="level2">
+<h2 class="anchored" data-anchor-id="getting-started">Getting Started</h2>
 <section id="create-your-git-repository" class="level3">
 <h3 class="anchored" data-anchor-id="create-your-git-repository">Create Your Git Repository</h3>
-<p>The first step before you begin writing any code is to create a Git repository. Follow the <a href="../../tutorials/tutorial-videos/creating-and-initializing-your-git-repo.html">linked tutorial</a> to get started with your project.</p>
+<p>The first step before you begin writing any code is to create a Git repository. Follow the <a href="../../tutorials/tutorial-videos/creating-and-initializing-your-git-repo.html">Creating and Initializing Your Git Repo</a> video to get started with your project. If you are new to Git, the <a href="../../tutorials/tutorial-posts/git-setup/">Git Setup tutorial</a> covers the basics first.</p>
+</section>
+<section id="assemble-your-development-board" class="level3">
+<h3 class="anchored" data-anchor-id="assemble-your-development-board">Assemble Your Development Board</h3>
+<p>Next, assemble your development board as described in the <a href="../../tutorials/tutorial-posts/dev-board-assembly/">E155 Development Board tutorial</a>. The majority of your time on this lab will likely be spent assembling the board, so make sure to plan ahead.</p>
+</section>
+<section id="test-your-boards" class="level3">
+<h3 class="anchored" data-anchor-id="test-your-boards">Test Your Boards</h3>
+<p>Before writing any of your own HDL, confirm that both halves of your assembled board work. Follow the <a href="../../tutorials/tutorial-posts/dev-board-assembly/#testing-the-boards">Testing the Boards</a> section of the development board tutorial. You will program the FPGA with a provided design that toggles a pin at about 1 Hz, then program the MCU<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> with a provided program that reads that pin and echoes it back, which verifies both devices and the communication between them.</p>
+<p>Hold on to the FPGA test project — you will reuse its clock generation code in your own design below.</p>
 </section>
 </section>
 <section id="fpga-design" class="level2">
@@ -275,27 +307,36 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td><code>clk</code></td>
-<td>input</td>
-<td>48 MHz clock on FPGA</td>
-</tr>
-<tr class="even">
 <td><code>s[3:0]</code></td>
 <td>input</td>
 <td>the four DIP switches (on the board, SW6)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><code>led[2:0]</code></td>
 <td>output</td>
 <td>3 LEDs (you may use the on-board LEDs)</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><code>seg[6:0]</code></td>
 <td>output</td>
 <td>the segments of a common-anode 7-segment display</td>
 </tr>
 </tbody>
 </table>
+<div class="callout callout-style-default callout-important callout-titled" title="The clock is not a top-level port">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>The clock is not a top-level port
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Notice that there is no <code>clk</code> input in the table above. The 48 MHz clock is generated <em>inside</em> the FPGA by the <code>HSOSC</code> primitive, which you instantiate in your top-level module. The clock is therefore an internal signal, not a pin you route in from outside.</p>
+<p>This matters when you write your testbenches: a module that takes <code>clk</code> as an input port (like your counter) can be given a generated clock by its testbench, but your top-level testbench has to let the real <code>HSOSC</code> produce the clock.</p>
+</div>
+</div>
 <p>The following tables define the relationship of the LEDs to the switches and clock.</p>
 <div class="center-table">
 <table class="caption-top table">
@@ -377,22 +418,8 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Clock Generation">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Clock Generation
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>To generate the clock for your design, use the onboard high-speed oscillator. This is the same strategy as in the FPGA testing source code you downloaded earlier to test the board. If you look at that Verilog code, you’ll notice an instantiated module called HSOSC (for High-Speed OSCillator). This module is part of the iCE40 Technology Library (see the iCE40 Technology Library document linked on the course website) and is a built-in module included with Lattice Radiant designed for controlling the internal oscillator on the iCE40 chip. You can simply copy the line from the testing program and use it in your project.</p>
-</div>
-</div>
-<section id="design-and-synthesis-in-radiant" class="level3">
-<h3 class="anchored" data-anchor-id="design-and-synthesis-in-radiant">Design and Synthesis in Radiant</h3>
-<p>The 7-segment display should display a single hexadecimal digit specified by <code>s[3:0]</code>. Be sure each digit can be distinguished from other digits (e.g., b and 8 should look different). Remember that you will be using a common anode display. The anode (positive terminal) of all of the LEDs is tied to 3.3 V through a single (“common”) pin. Each segment’s cathode (negative terminal) is connected to a pin. Therefore, you will need 7 separate control signals. Remember that a logic 0 applied to the cathode will turn on the segment. The segments are defined as shown below. Let <code>seg[0]</code> be A and <code>seg[6]</code> be G.</p>
+<p>The 7-segment display should display a single hexadecimal digit specified by <code>s[3:0]</code>. Be sure each digit can be distinguished from other digits (e.g., b and 8 should look different).</p>
+<p>Remember that you will be using a common anode display. The anode (positive terminal) of all of the LEDs is tied to 3.3 V through a single (“common”) pin. Each segment’s cathode (negative terminal) is connected to a pin. Therefore, you will need 7 separate control signals. Remember that a logic 0 applied to the cathode will turn on the segment. The segments are defined as shown below. Let <code>seg[0]</code> be A and <code>seg[6]</code> be G.</p>
 <div id="fig-seven-segment-map" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-seven-segment-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -408,62 +435,70 @@ Figure&nbsp;1: Seven-segment display pin map
 </figcaption>
 </figure>
 </div>
-<p>Launch Lattice Radiant and start the New Project Wizard from the File or startup menu. Setup a new project for the UP5K chip following the instructions in the <a href="../../tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup">Lattice Radiant Tutorial</a> on the E155 website.</p>
-<p>Choose <code>File → New</code> and create a SystemVerilog HDL file. Save the file as <code>lab1_xx.sv</code> in your project directory and check the box to add the file to the current project. Create modules to perform the functions described above. The 7-segment display decoder should be combinational logic. Use a reasonable amount of hierarchy. Name the top-level module <code>lab1_xx</code>. The 7-segment display code, for example, will be reused in future labs, so it should be a module of its own (for the sake of reusability you may want to put this in a separate SystemVerilog file but this is not required). Every module should begin with a comment section that includes your name and email address, the date of creation, and a brief summary of its purpose, so that somebody else can understand what the module does and get a hold of you if they need help with it. Comment the modules as appropriate.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Clock Generation">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Clock Generation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To generate the clock for your design, use the onboard high-speed oscillator. This is the same strategy as in the FPGA testing source code you downloaded when you tested your boards. If you look at that Verilog code, you’ll notice an instantiated module called HSOSC (for High-Speed OSCillator). This module is part of the iCE40 Technology Library (see the iCE40 Technology Library document linked on the course website) and is a built-in module included with Lattice Radiant designed for controlling the internal oscillator on the iCE40 chip. You can simply copy the line from the testing program and use it in your project.</p>
+</div>
+</div>
+<section id="design-and-synthesis-in-radiant" class="level3">
+<h3 class="anchored" data-anchor-id="design-and-synthesis-in-radiant">Design and Synthesis in Radiant</h3>
+<p>Launch Lattice Radiant and start the New Project Wizard from the File or startup menu. Set up a new project for the UP5K chip following the <a href="../../tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#project-setup">Project Setup</a> section of the Lattice Radiant tutorial.</p>
+<p>Choose <code>File → New</code> and create a SystemVerilog HDL file. Save the file as <code>lab1_xx.sv</code> in your project directory and check the box to add the file to the current project.</p>
+<p>Create modules to perform the functions described above. The seven-segment display decoder should be combinational logic, and the counter that blinks <code>led[2]</code> should be a module of its own. Name the top-level module <code>lab1_xx</code> and keep it to instantiated modules plus the switch-to-LED <code>assign</code> logic. Put each module in its own file with a descriptive name matching the module. The seven-segment decoder in particular will be reused in future labs, so keeping it self-contained will save you work later. See the <a href="../../lab/lab1/specs.html">lab specifications</a> for the full structure and style requirements.</p>
+<p>Every module should begin with a comment section that includes your name and email address, the date of creation, and a brief summary of its purpose, so that somebody else can understand what the module does and get a hold of you if they need help with it. Comment the modules as appropriate.</p>
 </section>
 <section id="logic-simulation-in-modelsim" class="level3">
 <h3 class="anchored" data-anchor-id="logic-simulation-in-modelsim">Logic Simulation in ModelSim</h3>
-<p>The next step is to simulate your logic with ModelSim. Open ModelSim from Radiant from the Tools-&gt;QuestaSim Lattice Edition menu or the icon in the toolbar. The ModelSim window will open. Get in the habit of watching the transcript window to look for errors and to familiarize yourself with what a good run looks like. If you see errors, close ModelSim, correct your Verilog code in Radiant, and reopen ModelSim. You can also edit the file directly in ModelSim and recompile there without going through the entire synthesis pipeline in Radiant.</p>
-<div class="callout callout-style-default callout-note callout-titled">
+<p>Simulate your logic in ModelSim following the <a href="../../tutorials/tutorial-posts/modelsim-simulation-tutorial/">QuestaSim/ModelSim tutorial</a>. Start by forcing the inputs by hand so you can see your design respond.</p>
+<p>You should see the <code>led</code> and <code>seg</code> outputs displaying appropriate values. Check the outputs against your expectations. If you find any discrepancies, fix the code and resimulate.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Fixing code without restarting ModelSim">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+<span class="screen-reader-only">Tip</span>Fixing code without restarting ModelSim
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Some of your designs may include modules from the iCE40 Technology Library (e.g., the HSOSC module we are using to generate our clock signal). If you try to simulate a design including one of these modules, you need to be sure to include the library. When you simulate a design that includes a module from the iCE40 Technology Library, make sure that you include the library by adding under the Libraries tab of the Start Simulation window as shown below. You can also use the <code>-L</code> flag in the command line to <code>vsim</code>.</p>
+<p>A helpful shortcut to avoid restarting ModelSim is that you can edit the module by finding it under “work” in the library pane, right clicking, and choosing Edit. Make your fixes, then right click again and choose <code>Recompile</code>. Then type <code>restart -f</code> in the transcript window to restart simulation without having to set up the waveforms window again. When you return to Radiant, you’ll find your corrected code.</p>
 </div>
 </div>
-<section id="starting-simulation" class="level4">
-<h4 class="anchored" data-anchor-id="starting-simulation">Starting Simulation</h4>
-<p>In QuestaSim/ModelSim, simulate your module by choosing <code>Simulate → Start Simulation...</code>. Click on the + symbol next to the work library and select your code (<code>lab1_xx</code>).</p>
-<p>If the wave pane isn’t open, open it by choosing View → Wave. View all of the inputs and outputs of your design by selecting them in the Objects window and dragging them to the Waves window. In a more complicated design, you may wish to examine internal signals as well.</p>
-<p>Manually test your design by forcing the inputs to specific values and then advancing the simulation using “run.” In the transcript window, type:</p>
-<pre><code>force s 0000
-run 100
-force s 0001
-run 100
-force s 0010
-run 100
-...</code></pre>
-<div class="callout callout-style-default callout-tip callout-titled" title="Watch Out for Optimization">
-<div class="callout-header d-flex align-content-center">
+</section>
+<section id="automatic-testing-with-a-testbench" class="level3">
+<h3 class="anchored" data-anchor-id="automatic-testing-with-a-testbench">Automatic Testing with a Testbench</h3>
+<p>Forcing signals by hand gets tedious quickly, and it does not leave you with anything you can rerun. Next, test your design automatically using a <code>stim/assert</code> style testbench. Rather than manually forcing inputs or using pre-defined test vectors, this means using your testbench to set inputs and check for correct outputs.</p>
+<p>Start by writing a testbench for one of your submodules. Before you write it, read <a href="../../tutorials/tutorial-posts/modelsim-simulation-tutorial/#designing-a-good-testbench">Designing a Good Testbench</a> in the simulation tutorial — it explains how much coverage each kind of module needs, which is what the <a href="../../lab/lab1/specs.html">specifications</a> are graded against.</p>
+<p>The example below tests a module named <code>lab1_led_controller</code> that implements the truth tables for <code>led[0]</code> and <code>led[1]</code> described above. Try writing yours first, and open the example only if you get stuck or want to check your structure against it. You almost certainly structured your code differently, so treat this as a template for the <em>shape</em> of a testbench rather than something to copy verbatim.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Example testbench: lab1_led_controller_tb (click to expand)">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Watch Out for Optimization
+<span class="screen-reader-only">Note</span>Example testbench: lab1_led_controller_tb (click to expand)
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>If you’re not seeing all the signals in your design, it’s possible that QuestaSim optimized them away. To configure the optimization settings, see the relevant section in the <a href="../../tutorials/tutorial-posts/modelsim-simulation-tutorial#preventing-optimization">QuestaSim/ModelSim tutorial</a>.</p>
-</div>
-</div>
-<p>You should see the <code>led</code> and <code>seg</code> outputs displaying appropriate values. Check the outputs against your expectations. If you find any discrepancies, fix the code and resimulate. A helpful shortcut to avoid restarting ModelSim is that you can edit the module by finding it under “work” in the library pane, right clicking, and choosing Edit. Make your fixes, then right click again and choose <code>Recompile</code>. Then type <code>restart -f</code> in the transcript window to restart simulation without having to set up the waveforms window again. When you return to Radiant, you’ll find your corrected code.</p>
-<p>Next, test your design automatically using a <code>stim/assert</code> style testbench. Rather than manually forcing inputs or using pre-defined test vectors, this means using your testbench to set inputs, and check for correct outputs.</p>
-<p>Start by making a new system verilog testbench file, based on the example below. This is for an LED controller module that implements the truth table for led[0] and led[1] described above. You probably structured your code differently and should modify this testbench to test your inputs and outputs!</p>
 <pre><code>`timescale 1 ns/1 ns
 
-module lab1_tb();
+module lab1_led_controller_tb();
   logic           clk;    // system clock
   logic           reset;  // active high reset
   logic   [3:0]   s;      // 4-bit input switches
   logic   [1:0]   led;    // 2 output leds
 
-    led_controller dut (
+    lab1_led_controller dut (
         .clk(clk),
         .reset(reset),
         .s(s),
@@ -489,7 +524,7 @@ module lab1_tb();
     // example test 1
         s = 4'b0000;                // setup inputs
         #10;                        // wait required time
-        assert (led == 3'b00)       // check outputs
+        assert (led == 2'b00)       // check outputs
             $display("PASSED! The led controller behaves as desired at time: %0t.", $time);
         else 
             $error("FAILED! The led controller behaves incorrectly at time: %0t.", $time); 
@@ -497,7 +532,7 @@ module lab1_tb();
     // test 2
         s = 4'b0101;
         #10;
-        assert (led == 3'b01)
+        assert (led == 2'b01)
             $display("PASSED! The led controller behaves as desired at time: %0t.", $time);
         else 
             $error("FAILED! The led controller behaves incorrectly at time: %0t.", $time); 
@@ -507,89 +542,80 @@ module lab1_tb();
     #100 $stop;
   end
 endmodule</code></pre>
-<p>Next, launch Questa/ModelSim using the Simulation Wizard button as shown in the figure below</p>
-<div id="launch-questa">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/simulation_wizard.png" class="img-fluid figure-img"></p>
-<figcaption>Button to launch Questa Simulation Wizard</figcaption>
-</figure>
 </div>
 </div>
-<p>Follow the instructions in the wizard to name and create the simulation. The default settings are good, but make sure to select <em>your</em> module name as the <code>Simulation Top Module</code> (in this case that would be <code>lab1_tb</code>).</p>
-<p>Once you finish, Questa will automatically open and run your simulation! By default, it only runs for 100ns, so if your simulation takes longer you may need to use the <code>run</code> command from the manual testing section. As expected, we can see that all of the tests passed in the <code>Transcripts</code> section at the bottom.</p>
-<div id="questa-sim">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/example_questa_simulation.png" class="img-fluid figure-img"></p>
-<figcaption>Example questa simulation</figcaption>
-</figure>
 </div>
-</div>
-<p>By default, only signals in your testbench are displayed, but you can add more by selecting <code>dut</code> in the instance pane, dragging signals from <code>Objects</code> into <code>Wave</code> and then restarting the simulation with by running <code>restart -f</code> and then <code>run 100</code>. If you edit the testbench or module code, you can update the simulator by clicking <code>Compile → Compile All</code> or closing and re-opening the simulation. If you aren’t changing simulation settings, then you can re-open a previous simulation from Lattice by double clicking on the simulation name in the <code>Script Files</code> folder.</p>
-<div id="questa-sim">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/restart_simulation.png" class="img-fluid figure-img"></p>
-<figcaption>Restart existing simulation</figcaption>
-</figure>
-</div>
-</div>
-<p>In the example above, we’re testing a module that only uses combinational logic, so testvectors would have also worked well. But the <code>stim/assert</code> architecture works even better for sequential logic like an FSM or clock divider. Think about (and write) a testbench to check if led[2] is blinking at the right frequency (this may involve resetting the clock divder, making sure the output is zero, waiting a known time, check if it is one, etc.).</p>
-</section>
-</section>
-<section id="pin-assignment" class="level3">
-<h3 class="anchored" data-anchor-id="pin-assignment">Pin Assignment</h3>
-<p>Next, assign pins to relate the signal names in your Verilog code to physical pin numbers on the FPGA. Launch Tools → Device Constraint Editor. A table listing all inputs and outputs for the project should appear. Under Pin, type the pin number to associate with the given signal.</p>
-<div id="fig-pin-radiant-assignment" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-pin-radiant-assignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/radiant_pin_assignments.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pin-radiant-assignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Radiant pin assignments.
-</figcaption>
-</figure>
-</div>
-<p>The FPGA pinouts are shown in the Board Schematic. Most of the user input/output (I/O) pins are tapped out to the headers and labeled on the board silk screen. Some have special functions; for example, FPGA pin P42 is connected to LED D6.</p>
-<p>The pin numbers for the LEDs and switches are marked on the board’s silkscreen. For the outputs for the 7-segment display, you may select any I/O pins you’d like. Do make sure that these pins are not being used for other purposes.</p>
-<p>The Device Constraint Editor is also the place where you can configure the pullup resistors for the I/O pins. To do this, examine the <code>PULLMODE</code> column for any input pins. In your design, this will be the pins connected to <code>s[3:0]</code>. These should be configured with pull-up resistors to avoid invalid logic levels (the exact value is not very important. A value between 10k and 100k is generally sufficient).</p>
-</section>
-<section id="seven-segment-display-circuit" class="level3">
-<h3 class="anchored" data-anchor-id="seven-segment-display-circuit">Seven Segment Display Circuit</h3>
-<p>The 7-segment display will be used throughout the class for general output of numbers. In this lab assignment, though, it will be used to output the hexadecimal number entered by the user through the DIP switches.</p>
-<p>Each segment of the display works as an independent LED. Therefore, the same current-limiting concern with the LEDs applies to the display as to the on-board bank of LEDs. You can limit the current into each segment of the display the same way you did for the LEDs on board, adding a suitable resistor to provide roughly 5-20 mA of current. You can find resistors and other such components in the supply cabinet or in the stockroom.</p>
-<p>Consult the data sheet for the pinout of the common anode dual seven segment display. All seven segments share the same anode, which should be connected to VCC (3.3 V). Each of the segments has its own cathode, which can be pulled to 0 to turn on the segments.</p>
-<p>Be sure to turn power off before wiring circuits on your board. You can choose either side of the display to use in this lab. After deciding on which side to use, you will need to connect the VDD pin of that side (either VDD1 or VDD2) to 3.3 V. Then connect the input pins of the same side of the display to the header pins you chose. Remember to add suitable resistors between each of the inputs to the display and the header pins. These LEDs are common anode LEDs. That is, all the anodes from the LEDs are connected to a single VDD (VDD1 or VDD2). You are driving the cathode of each LED. Given this information, you might need to modify your Verilog file. Do so in the simplest way possible.</p>
-</section>
-<section id="generating-the-fpga-configuration-files" class="level3">
-<h3 class="anchored" data-anchor-id="generating-the-fpga-configuration-files">Generating the FPGA Configuration Files</h3>
-<p>Now you will synthesize your HDL into a programming file to be transferred onto the FPGA. This outputs a binary file (<code>.bin</code>) in your project directory that can be used to program the FPGA directly over JTAG using the onboard USB programmer. Be sure your SystemVerilog files are saved, and click the green “Play” triangle to start the synthesis process. To help sort the many messages that the compilation process generates, click a tab under the Message area to see only that type of message. If compilation is successful but generates warnings, check the Warning and Error tabs for errors relevant to your design. Warnings about incomplete I/O assignments may be ignored if you have in fact assigned all relevant I/O pins.</p>
-<p><code>Launch Tools → Netlist Analyzer</code> and examine the RTL schematic of your design. This shows the logic synthesized from your Verilog design. Ensure the hardware matches your expectations.</p>
-<p>Look at the Reports tab. In the Project Summary under Resource Usage you should see a total number of registers and pins that match your expectations. Under Analysis &amp; Synthesis, you can see how the logic blocks and registers are broken down in each module. Under Fitter, the Pin-Out File should match the pin assignments you intended.</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Troubleshooting Tips">
+<p>Once your testbench is written, run it using the <a href="../../tutorials/tutorial-posts/modelsim-simulation-tutorial/#launching-questa">Simulation Wizard</a>.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="Watch out for optimization">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Troubleshooting Tips
+<span class="screen-reader-only">Tip</span>Watch out for optimization
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If some of you are seeing issues with specific pins on your FPGA there could be a few different reasons and corresponding steps to take to troubleshoot.</p>
+<p>If some of your testbench signals are missing from the Wave window, QuestaSim has likely optimized them away. See <a href="../../tutorials/tutorial-posts/modelsim-simulation-tutorial/#preventing-optimization">Preventing Optimization</a> in the simulation tutorial.</p>
+</div>
+</div>
+<p>Write a testbench for each of your submodules. Your seven-segment decoder is combinational with only 16 input combinations, so test all of them. Your counter is sequential, so rather than simulating every count for example, verify its reset, enable, and max count behavior.</p>
+<p>Finally, write a top-level testbench that covers only what the submodule tests could not: that the modules are wired together correctly, that the <code>HSOSC</code> produces a clock, and that your <code>assign</code> logic works. Remember that the top level generates its own clock, so the testbench should not drive one.</p>
+</section>
+<section id="pin-assignment" class="level3">
+<h3 class="anchored" data-anchor-id="pin-assignment">Pin Assignment</h3>
+<p>Next, assign pins to relate the signal names in your Verilog code to physical pin numbers on the FPGA, following the <a href="../../tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#pin-assignment">Pin Assignment</a> section of the Lattice Radiant tutorial.</p>
+<p>For the 7-segment display outputs you may select any I/O pins you’d like, but make sure that these pins are not being used for other purposes by checking the <a href="../../assets/doc/E155 Development Board Schematic.pdf">E155 Development Board Schematic</a>. Write down which pins you choose — you will wire the display to them in the next section.</p>
+<p>The pins connected to <code>s[3:0]</code> must be configured with pull-up resistors to avoid invalid logic levels. The exact value is not very important; a value between 10 kΩ and 100 kΩ is generally sufficient. See <a href="../../tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#pull-up-resistors">Configuring Pull-Up Resistors</a> in the Lattice Radiant tutorial.</p>
+</section>
+<section id="seven-segment-display-circuit" class="level3">
+<h3 class="anchored" data-anchor-id="seven-segment-display-circuit">Seven Segment Display Circuit</h3>
+<p>The 7-segment display will be used throughout the class for general output of numbers. In this lab assignment, though, it will be used to output the hexadecimal number entered by the user through the DIP switches.</p>
+<p>Each segment of the display works as an independent LED. Therefore, the same current-limiting concern with the LEDs applies to the display as to the on-board bank of LEDs. You can limit the current into each segment of the display the same way you did for the LEDs on board, adding a suitable resistor to provide roughly 5-20 mA of current. You can find resistors and other such components in the supply cabinet or in the stockroom.</p>
+<p>The course datasheet is for the <strong><code>MAN6410</code></strong> — a two-digit, common anode display from the Fairchild MAN6400 series (<a href="../../assets/doc/MAN64x0 Series.pdf">datasheet</a>). If you have a single-digit display instead, the common anode member of the same series is the <code>MAN6460</code>, and the pinout section of the datasheet covers both.</p>
+<p>Whatever part you have, <strong>confirm it is common anode before wiring anything.</strong> The series also includes common cathode models (<code>MAN6440</code>, <code>MAN6980</code>) that are wired the opposite way and will not work with the circuit described here.</p>
+<p>All seven segments of a digit share the same anode, which should be connected to 3.3 V. Each segment has its own cathode, which can be pulled to 0 to turn the segment on.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Be sure to turn power off before wiring circuits on your board.</p>
+</div>
+</div>
+<p>You only need one digit for this lab. If you have a two-digit part, pick whichever digit you like and ignore the other one — each digit has its own common anode pin, so the digit you don’t use simply stays unpowered.</p>
+<p>Connect the common anode pin for your chosen digit to 3.3 V. Then connect that digit’s seven segment pins to the header pins you selected during pin assignment, with a suitable current-limiting resistor in series with each one. Consult the datasheet pinout to identify which physical pin is which segment, since the numbering is not in alphabetical order.</p>
+<p>Because the segments are common anode, you drive each segment by pulling its cathode <strong>low</strong>. A logic 0 turns a segment on and a logic 1 turns it off — the opposite of what you might assume. Given this, you may need to adjust your seven-segment decoder. Do so in the simplest way possible.</p>
+</section>
+<section id="generating-the-fpga-configuration-files" class="level3">
+<h3 class="anchored" data-anchor-id="generating-the-fpga-configuration-files">Generating the FPGA Configuration Files</h3>
+<p>Now you will synthesize your HDL into a programming file to be transferred onto the FPGA, following the <a href="../../tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#synthesizing-the-design">Synthesizing the Design</a> section of the Lattice Radiant tutorial.</p>
+<p>While you are there, use the Netlist Analyzer to examine the RTL schematic of your design and confirm the synthesized hardware matches your expectations, and check the Resource Usage report for a register and pin count that matches what you intended.</p>
+</section>
+<section id="program-and-test-your-design" class="level3">
+<h3 class="anchored" data-anchor-id="program-and-test-your-design">Program and Test Your Design</h3>
+<p>Finally, program your design onto the flash memory on the UPduino following the <a href="../../tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#programming-the-device">Programming the Device</a> section of the Lattice Radiant tutorial.</p>
+<p>Once programmed, re-test the board against the specification above:</p>
 <ul>
-<li>You could have an electrical short which is causing some pins to be electrically connected that should not due to solder bridges. Double check to make sure that the pins are isolated and not connected together by checking the resistance between the pins with a multimeter.</li>
-<li>You are trying to use a pin that is shared between the FPGA and the MCU and the MCU is not leaving that pin floating or it is driving it as an output. You can get around this by wiping the code on the MCU by uploading a file with a blank main function.</li>
-<li>You should also read through the Nucleo board documentation to see what pins have special functions that are used by default by the MCU. Hint: You likely want to stay away from using the pins that the MCU uses for serial communication by default.</li>
+<li>Step <code>s[3:0]</code> through all sixteen values and confirm the 7-segment display shows the correct hexadecimal digit and that every digit is distinguishable.</li>
+<li>Confirm <code>led[0]</code> and <code>led[1]</code> follow the truth tables above.</li>
+<li>Confirm <code>led[2]</code> blinks at roughly 2.4 Hz.</li>
 </ul>
-</div>
-</div>
+<p>If a specific pin misbehaves, the <a href="../../tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#troubleshooting">Troubleshooting</a> callout in the Radiant tutorial covers the most common causes, including solder bridges and pins shared with the MCU.</p>
 </section>
 </section>
 <section id="ai-prototype-and-reflection" class="level2">
 <h2 class="anchored" data-anchor-id="ai-prototype-and-reflection">AI Prototype and Reflection</h2>
 <p>Don’t forget to complete the <a href="../../lab/lab1/ai-prototype.html">AI Prototype</a> and reflect on it in your lab 1 writeup.</p>
+</section>
+<section id="what-to-submit" class="level2">
+<h2 class="anchored" data-anchor-id="what-to-submit">What to Submit</h2>
+<p>See the <a href="../../lab/lab1/specs.html">Lab 1 specifications</a> for the full list of deliverables and how this lab is graded.</p>
 </section>
 <section id="share-your-feedback" class="level2">
 <h2 class="anchored" data-anchor-id="share-your-feedback">Share Your Feedback</h2>
@@ -610,7 +636,13 @@ Figure&nbsp;2: Radiant pin assignments.
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>In order for the NUCLEO board to be compatible with SEGGER, it is necessary to reflash the ST-LINK programmer with SEGGER J-Link firmware to convert it to a J-Link. This has been already taken care of on the board in your kit, but if you want to use another STM32 board with SEGGER you’ll need to follow the instructions in <a href="../../tutorials/tutorial-posts/segger-embedded-studio-setup/#appendix-b-st-link-to-j-link-firmware-upgrade">Appendix B of the SEGGER Embedded Studio Setup tutorial</a> to do this yourself.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

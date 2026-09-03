@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-b9bebea3e3d544ce656829e36b415e27.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-0be6f067fb88b5911c0e6a259786e242.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -183,19 +183,30 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-setup" id="toc-project-setup" class="nav-link active" data-scroll-target="#project-setup">Project Setup</a></li>
-  <li><a href="#project-implementation" id="toc-project-implementation" class="nav-link" data-scroll-target="#project-implementation">Project Implementation</a></li>
-  <li><a href="#implementing-the-design-in-systemverilog" id="toc-implementing-the-design-in-systemverilog" class="nav-link" data-scroll-target="#implementing-the-design-in-systemverilog">Implementing the Design in SystemVerilog</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#project-setup" id="toc-project-setup" class="nav-link" data-scroll-target="#project-setup">Project Setup</a>
+  <ul class="collapse">
+  <li><a href="#creating-a-source-file" id="toc-creating-a-source-file" class="nav-link" data-scroll-target="#creating-a-source-file">Creating a Source File</a></li>
+  </ul></li>
+  <li><a href="#implementing-the-demo-design-in-systemverilog" id="toc-implementing-the-demo-design-in-systemverilog" class="nav-link" data-scroll-target="#implementing-the-demo-design-in-systemverilog">Implementing the Demo Design in SystemVerilog</a></li>
+  <li><a href="#synthesizing-the-design" id="toc-synthesizing-the-design" class="nav-link" data-scroll-target="#synthesizing-the-design">Synthesizing the Design</a>
   <ul class="collapse">
   <li><a href="#netlist-analyzer" id="toc-netlist-analyzer" class="nav-link" data-scroll-target="#netlist-analyzer">Netlist Analyzer</a></li>
   <li><a href="#resource-usage" id="toc-resource-usage" class="nav-link" data-scroll-target="#resource-usage">Resource Usage</a></li>
-  <li><a href="#device-assignment-device-constraint-editor" id="toc-device-assignment-device-constraint-editor" class="nav-link" data-scroll-target="#device-assignment-device-constraint-editor">Device Assignment: Device Constraint Editor</a></li>
-  <li><a href="#device-programming" id="toc-device-programming" class="nav-link" data-scroll-target="#device-programming">Device Programming</a></li>
   </ul></li>
-  <li><a href="#testing-in-hardware" id="toc-testing-in-hardware" class="nav-link" data-scroll-target="#testing-in-hardware">Testing in Hardware</a>
+  <li><a href="#pin-assignment" id="toc-pin-assignment" class="nav-link" data-scroll-target="#pin-assignment">Pin Assignment</a>
   <ul class="collapse">
-  <li><a href="#share-your-feedback" id="toc-share-your-feedback" class="nav-link" data-scroll-target="#share-your-feedback">Share Your Feedback</a></li>
+  <li><a href="#assigning-pins-in-the-device-constraint-editor" id="toc-assigning-pins-in-the-device-constraint-editor" class="nav-link" data-scroll-target="#assigning-pins-in-the-device-constraint-editor">Assigning Pins in the Device Constraint Editor</a></li>
+  <li><a href="#finding-the-right-pin-numbers" id="toc-finding-the-right-pin-numbers" class="nav-link" data-scroll-target="#finding-the-right-pin-numbers">Finding the Right Pin Numbers</a></li>
+  <li><a href="#pull-up-resistors" id="toc-pull-up-resistors" class="nav-link" data-scroll-target="#pull-up-resistors">Configuring Pull-Up Resistors</a></li>
+  <li><a href="#demo-example-routing-the-led-to-gpio-42" id="toc-demo-example-routing-the-led-to-gpio-42" class="nav-link" data-scroll-target="#demo-example-routing-the-led-to-gpio-42">Demo Example: Routing the LED to GPIO 42</a></li>
   </ul></li>
+  <li><a href="#programming-the-device" id="toc-programming-the-device" class="nav-link" data-scroll-target="#programming-the-device">Programming the Device</a>
+  <ul class="collapse">
+  <li><a href="#troubleshooting" id="toc-troubleshooting" class="nav-link" data-scroll-target="#troubleshooting">Troubleshooting</a></li>
+  </ul></li>
+  <li><a href="#testing-the-demo-in-hardware" id="toc-testing-the-demo-in-hardware" class="nav-link" data-scroll-target="#testing-the-demo-in-hardware">Testing the Demo in Hardware</a></li>
+  <li><a href="#share-your-feedback" id="toc-share-your-feedback" class="nav-link" data-scroll-target="#share-your-feedback">Share Your Feedback</a></li>
   </ul>
 </nav>
     </div>
@@ -224,9 +235,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="project-setup" class="level1">
-<h1>Project Setup</h1>
-<p>Open Lattice Radiant. If you are prompted for a license file, navigate to it. See the Radiant install instructions if needed.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>This tutorial covers the complete Lattice Radiant workflow for the iCE40 UltraPlus: creating a project, writing a design, synthesizing it, assigning pins, and programming the FPGA.</p>
+<p>It uses a small demo design that blinks the onboard LED at ~1 Hz so you have something concrete to run. If you are working on a lab, use the demo to learn the tool flow, then apply the same steps to your own design.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Related tutorials">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Related tutorials
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Two closely related topics live on their own pages:</p>
+<ul>
+<li><a href="../../../tutorials/tutorial-posts/lattice-radiant-installation/">Lattice Radiant Installation</a> — downloading, installing, and licensing Radiant. Do this first if you have not installed the tools.</li>
+<li><a href="../../../tutorials/tutorial-posts/modelsim-simulation-tutorial/">QuestaSim/ModelSim Simulation</a> — simulating your design before you commit it to hardware.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Working on Lab 1?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Working on Lab 1?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Lab 1 sends you to this page at four points. Each section ends with a callout telling you when to head back to the lab.</p>
+<ol type="1">
+<li><a href="#project-setup">Project Setup</a> — create your Radiant project.</li>
+<li><a href="#pin-assignment">Pin Assignment</a> — map your signals to physical pins.</li>
+<li><a href="#synthesizing-the-design">Synthesizing the Design</a> — generate the configuration file.</li>
+<li><a href="#programming-the-device">Programming the Device</a> — load your design onto the board.</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="project-setup" class="level2">
+<h2 class="anchored" data-anchor-id="project-setup">Project Setup</h2>
+<p>Open Lattice Radiant. If you are prompted for a license file, navigate to it. See the <a href="../../../tutorials/tutorial-posts/lattice-radiant-installation/">Lattice Radiant Installation</a> instructions if needed.</p>
 <p>Create a new project and name it “iCE40_demo”. Select the project location in the directory you wish. <strong>Make sure that the path does not include spaces since this often leads to errors later in the synthesis process.</strong> You do not need to add any existing HDL files to the project.</p>
 <p>In the “Select Device” menu, select the <code>iCE40UP5K</code> and the <code>SG48</code> package. On the next page, select <code>Lattice LSE</code> as the synthesis tool.</p>
 <div id="fig-new-project-device" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -239,9 +291,6 @@ Figure&nbsp;1: New project setup.
 </figcaption>
 </figure>
 </div>
-</section>
-<section id="project-implementation" class="level1">
-<h1>Project Implementation</h1>
 <p>After the new project wizard completes, you will be presented with the following default screen.</p>
 <div id="fig-project-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -253,7 +302,9 @@ Figure&nbsp;2: New project summary.
 </figcaption>
 </figure>
 </div>
-<p>Navigate to <code>File &gt; New &gt; New File</code> and select <code>SystemVerilog Files</code> in the New File selection window. Name your file <code>top</code> and click <code>New</code> to create the file.</p>
+<section id="creating-a-source-file" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-source-file">Creating a Source File</h3>
+<p>Navigate to <code>File &gt; New &gt; New File</code> and select <code>SystemVerilog Files</code> in the New File selection window. Name your file and click <code>New</code> to create it.</p>
 <div id="fig-create-file" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-create-file-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -264,12 +315,25 @@ Figure&nbsp;3: Create new file.
 </figcaption>
 </figure>
 </div>
+<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1? Return to the lab now">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Working on Lab 1? Return to the lab now
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You now have a project set up for the UP5K. Go back to <a href="../../../lab/lab1/#design-and-synthesis-in-radiant">Lab 1 → Design and Synthesis in Radiant</a> and create your own <code>lab1_xx.sv</code> source file instead of the demo below. Lab 1 will send you back here to assign pins, synthesize, and program.</p>
+</div>
+</div>
 </section>
-<section id="implementing-the-design-in-systemverilog" class="level1">
-<h1>Implementing the Design in SystemVerilog</h1>
+</section>
+<section id="implementing-the-demo-design-in-systemverilog" class="level2">
+<h2 class="anchored" data-anchor-id="implementing-the-demo-design-in-systemverilog">Implementing the Demo Design in SystemVerilog</h2>
 <p>In this demo we will write HDL to blink the onboard LED at ~1 Hz.</p>
 <p>To do this, we will use the on-board iCE40 high-frequency oscillator to generate the clock signal and build a simple counter which will toggle at the desired frequency.</p>
-<p>Save the file and click the green play button in the GUI to run the synthesis process.</p>
 <pre><code>module top(
      input   logic reset,
      output  logic led
@@ -277,23 +341,23 @@ Figure&nbsp;3: Create new file.
 
    logic int_osc;
    logic [24:0] counter;
-  
+
    // Internal high-speed oscillator
-   HSOSC #(.CLKHF_DIV(2'b01)) 
+   HSOSC #(.CLKHF_DIV(2'b01))
          hf_osc (.CLKHFPU(1'b1), .CLKHFEN(1'b1), .CLKHF(int_osc));
-  
+
    // Counter
    always_ff @(posedge int_osc) begin
      if(reset == 0)  counter &lt;= 0;
      else            counter &lt;= counter + 1;
    end
-  
+
    // Assign LED output
    assign led = counter[24];
-  
+
 endmodule</code></pre>
 <p>Note that we configure our reset to be active low (reset when 0 or connected to ground) since we have internal pullup resistors which make it easy to pull the pin high but not internal pulldown resistors.</p>
-<p>In this design we use the HSOSC module which is the high-speed oscillator available on the iCE40UP5K chip. The HSOSC module is a Verilog library that is provided with the iCE40 device support package in Radiant. You can find more information about the oscillator under <code>Help &gt; Lattice Radiant Software Help &gt; Reference Guides &gt; FPGA Libraries Reference Guide &gt; Primitive Library - iCE40UP (iCE40 UltraPlus)</code>. Here, as an example of how to infer a modules with parameters in Verilog, we instantiate it with the optional parameter <code>CLKHF_DIV</code> which sets the output frequency to 24 MHz.</p>
+<p>In this design we use the HSOSC module, the high-speed oscillator available on the iCE40UP5K chip. The HSOSC module is a Verilog library provided with the iCE40 device support package in Radiant. You can find more information about the oscillator under <code>Help &gt; Lattice Radiant Software Help &gt; Reference Guides &gt; FPGA Libraries Reference Guide &gt; Primitive Library - iCE40UP (iCE40 UltraPlus)</code>. Here, as an example of how to infer a module with parameters in Verilog, we instantiate it with the optional parameter <code>CLKHF_DIV</code> which sets the output frequency to 24 MHz.</p>
 <div id="fig-hsosc" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hsosc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -304,10 +368,16 @@ Figure&nbsp;4: High-speed oscillator block diagram.
 </figcaption>
 </figure>
 </div>
-<section id="netlist-analyzer" class="level2">
-<h2 class="anchored" data-anchor-id="netlist-analyzer">Netlist Analyzer</h2>
-<p>After synthesizing your design, it is worth taking a look at the Netlist Analyzer. This tool provides a block diagram view of the design. This is a helpful tool to make sure that the Verilog you wrote is implying the hardware that you intend. <strong>Remember that as a digital designer you should always think about the underlying hardware and simply write the Verilog idioms to imply it.</strong> Approach HDL like a traditional programming language at your peril!</p>
-<p>If we look at the Netlist Analyzer (found under “Tools &gt; Netlist Analyzer” or the green and black icon in the toolbar), we will open a window which shows a block diagram. We see that we have implied an adder, a mux to control the value to the registers, the HSOSC module, and a 25-bit-wide register.</p>
+</section>
+<section id="synthesizing-the-design" class="level2">
+<h2 class="anchored" data-anchor-id="synthesizing-the-design">Synthesizing the Design</h2>
+<p>Synthesis turns your HDL into a programming file that can be transferred onto the FPGA. It outputs a binary file (<code>.bin</code>) in your project directory that is used to program the FPGA over JTAG using the onboard USB programmer.</p>
+<p>Be sure your SystemVerilog files are saved, then click the green “Play” triangle to start the synthesis process.</p>
+<p>To help sort the many messages that the compilation process generates, click a tab under the Message area to see only that type of message. If compilation is successful but generates warnings, check the Warning and Error tabs for errors relevant to your design. Warnings about incomplete I/O assignments may be ignored if you have in fact assigned all relevant I/O pins.</p>
+<section id="netlist-analyzer" class="level3">
+<h3 class="anchored" data-anchor-id="netlist-analyzer">Netlist Analyzer</h3>
+<p>After synthesizing your design, it is worth taking a look at the Netlist Analyzer. This tool provides a block diagram view of the design and shows the logic that was synthesized from your Verilog. This is a helpful tool to make sure that the Verilog you wrote is implying the hardware that you intend. <strong>Remember that as a digital designer you should always think about the underlying hardware and simply write the Verilog idioms to imply it.</strong> Approach HDL like a traditional programming language at your peril!</p>
+<p>Open it under <code>Tools &gt; Netlist Analyzer</code> or the green and black icon in the toolbar. For the demo design we see that we have implied an adder, a mux to control the value to the registers, the HSOSC module, and a 25-bit-wide register.</p>
 <div id="fig-netlist-analyzer" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-netlist-analyzer-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -319,9 +389,10 @@ Figure&nbsp;5: Netlist analyzer window.
 </figure>
 </div>
 </section>
-<section id="resource-usage" class="level2">
-<h2 class="anchored" data-anchor-id="resource-usage">Resource Usage</h2>
-<p>There is also some useful information in the Reports tab under Project Summary in the Resource Usage section. In particular, this section will show us the number of registers, look-up tables, IO buffers, and embedded RAM blocks (EBRs) that we have implied in our design. For this design, we have 25 registers for storing the current count. An additional 3 logic cells are needed for their LUT4s to provide the additional logic (adder, mux, inverter).</p>
+<section id="resource-usage" class="level3">
+<h3 class="anchored" data-anchor-id="resource-usage">Resource Usage</h3>
+<p>There is also useful information in the Reports tab under Project Summary in the Resource Usage section. This section shows the number of registers, look-up tables, IO buffers, and embedded RAM blocks (EBRs) implied by your design. For the demo design, we have 25 registers for storing the current count. An additional 3 logic cells are needed for their LUT4s to provide the additional logic (adder, mux, inverter).</p>
+<p>Check that the total number of registers and pins matches your expectations. Under Analysis &amp; Synthesis, you can see how the logic blocks and registers are broken down in each module. Under Fitter, the Pin-Out File should match the pin assignments you intended.</p>
 <div id="fig-resource-usage" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-resource-usage-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -332,30 +403,113 @@ Figure&nbsp;6: Resource usage report.
 </figcaption>
 </figure>
 </div>
+<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1? Return to the lab now">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Working on Lab 1? Return to the lab now
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your design is synthesized and you have a <code>.bin</code> configuration file. Go back to <a href="../../../lab/lab1/#generating-the-fpga-configuration-files">Lab 1 → Generating the FPGA Configuration Files</a>, then continue on to program your board.</p>
+</div>
+</div>
 </section>
-<section id="device-assignment-device-constraint-editor" class="level2">
-<h2 class="anchored" data-anchor-id="device-assignment-device-constraint-editor">Device Assignment: Device Constraint Editor</h2>
-<p>When you first synthesize the design, the inputs and outputs of your top-level module will be randomly assigned to I/O pins. Next, you need to set the pin assignments to route the signals to the I/O pins that you desire.</p>
-<p>Open the Device Constraint Editor and find the signal name and assign it to your desired pin. In this example, we will route the “led” output to GPIO 42. Select the table entry in the “Pin” column associated with the LED signal and enter “42”. You will notice that the currently routed pin is labeled in parentheses, 36 in this example. To update the design to route to our desired GPIO pin, we need to resynthesize the design. Click the green play button again to run the toolchain. When you do this for the first time, you will be asked to save a <code>.pdc</code> (pin device constraint) file. Name and save the file. After synthesis completes, open the Device Constraint Editor and confirm that the desired and routed pins match. In this case you should see “42(42)” in the table entry corresponding to the led output.</p>
+</section>
+<section id="pin-assignment" class="level2">
+<h2 class="anchored" data-anchor-id="pin-assignment">Pin Assignment</h2>
+<p>When you first synthesize a design, Radiant assigns the inputs and outputs of your top-level module to I/O pins arbitrarily. Before your design will work on real hardware, you need to tell Radiant which physical pin on the FPGA each signal in your Verilog should be routed to.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You need a synthesized project before the Device Constraint Editor will list your signals. If you have not synthesized yet, work through <a href="#synthesizing-the-design">Synthesizing the Design</a> first.</p>
+</div>
+</div>
+<section id="assigning-pins-in-the-device-constraint-editor" class="level3">
+<h3 class="anchored" data-anchor-id="assigning-pins-in-the-device-constraint-editor">Assigning Pins in the Device Constraint Editor</h3>
+<p>Launch <code>Tools → Device Constraint Editor</code>. A table listing all inputs and outputs for the project should appear. Under the <code>Pin</code> column, type the pin number to associate with the given signal.</p>
+<div id="fig-pin-radiant-assignment" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pin-radiant-assignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="images/radiant_pin_assignments.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pin-radiant-assignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Radiant pin assignments.
+</figcaption>
+</figure>
+</div>
+<p>The currently routed pin is shown in parentheses next to the pin you request. For example, if you request pin 42 but the design is presently routed to pin 36, you will see <code>42(36)</code>.</p>
+<p>To actually move the signal, resynthesize the design by clicking the green play button. The first time you do this, Radiant asks you to save a <code>.pdc</code> (pin device constraint) file — name and save it in your project directory. After synthesis completes, reopen the Device Constraint Editor and confirm the requested and routed pins match, e.g.&nbsp;<code>42(42)</code>.</p>
+</section>
+<section id="finding-the-right-pin-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="finding-the-right-pin-numbers">Finding the Right Pin Numbers</h3>
+<p>The FPGA pinouts are shown in the <a href="../../../assets/doc/E155 Development Board Schematic.pdf">E155 Development Board Schematic</a>. Most of the user input/output (I/O) pins are tapped out to the headers and labeled on the board silk screen. Some have special functions; for example, FPGA pin P42 is connected to LED D6.</p>
+<p>The pin numbers for the LEDs and switches are marked on the board’s silkscreen.</p>
 <div id="fig-pinout" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-pinout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/pinout.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pinout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Pinout diagram.
+Figure&nbsp;8: Pinout diagram.
 </figcaption>
 </figure>
 </div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Check for pin conflicts">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Check for pin conflicts
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Some pins are shared between the FPGA and the MCU, and some have dedicated functions on the Nucleo board. Before you commit to a pin, make sure it is not being used for other purposes by checking the <a href="../../../assets/doc/E155 Development Board Schematic.pdf">schematic</a>.</p>
+</div>
+</div>
 </section>
-<section id="device-programming" class="level2">
-<h2 class="anchored" data-anchor-id="device-programming">Device Programming</h2>
+<section id="pull-up-resistors" class="level3">
+<h3 class="anchored" data-anchor-id="pull-up-resistors">Configuring Pull-Up Resistors</h3>
+<p>The Device Constraint Editor is also where you configure the internal pull-up resistors for the I/O pins. Find the <code>PULLMODE</code> column for the pin you want to configure and set it to the desired pull-up value.</p>
+<p>Inputs driven by DIP switches need pull-ups. A switch typically connects the pin to ground when closed and leaves it floating when open, and a floating input has no defined logic level. The pull-up resistor pulls the pin to a valid logic high whenever the switch is open. The exact value is not very important — anything between 10 kΩ and 100 kΩ is generally sufficient.</p>
+<p>Note that the iCE40 provides internal pull-<em>up</em> resistors but not internal pull-<em>down</em> resistors. This is why active-low resets and switch inputs are the conventional choice on this chip.</p>
+</section>
+<section id="demo-example-routing-the-led-to-gpio-42" class="level3">
+<h3 class="anchored" data-anchor-id="demo-example-routing-the-led-to-gpio-42">Demo Example: Routing the LED to GPIO 42</h3>
+<p>For the demo design, we will route the <code>led</code> output to GPIO 42. Open the Device Constraint Editor, select the table entry in the “Pin” column associated with the <code>led</code> signal, and enter “42”. You will notice that the currently routed pin is labeled in parentheses, 36 in this example. Resynthesize the design, save the <code>.pdc</code> file when prompted, and confirm you see “42(42)” in the table entry corresponding to the <code>led</code> output.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1? Return to the lab now">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Working on Lab 1? Return to the lab now
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>That covers everything you need for pin assignment in Lab 1. Go back to <a href="../../../lab/lab1/#pin-assignment">Lab 1 → Pin Assignment</a> and continue with the Seven Segment Display Circuit.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="programming-the-device" class="level2">
+<h2 class="anchored" data-anchor-id="programming-the-device">Programming the Device</h2>
 <p>To get our design working on our board, we need to program it to the flash memory onboard the UPduino board.</p>
 <p>Each time the FPGA powers up or resets, it reconfigures itself over a serial peripheral interface (SPI) connection from a binary (<code>.bin</code>) configuration file on a flash memory chip.</p>
-<p>To program the device, we need to set up the programmer to put the <code>.bin</code> file that is generated by our synthesis tool onto the flash chip.</p>
-<p>Click the button in the toolbar to open the programmer (the icon is the chip with a blue arrow pointing downward) or using the menu Tools &gt; Programmer.</p>
+<p>To program the device, we need to set up the programmer to put the <code>.bin</code> file generated by our synthesis tool onto the flash chip.</p>
+<p>Click the button in the toolbar to open the programmer (the icon is the chip with a blue arrow pointing downward) or use the menu <code>Tools &gt; Programmer</code>.</p>
 <p>Connect your UPduino board to your computer and click the “Detect Cable” button in the “Cable Setup” sub-window on the right of the Programmer window. You should see a message noting that “INFO - Board with FTDI USB Host Chip detected.” in the output window. If the host chip is not detected, you may need to install FTDI drivers for the device. However, some devices with drivers installed will still report an FTDI error. Sometimes you need to change the dropdown menu away from “FTDI” and then hit detect cable again if your UPduino is not being recognized (try this if your device appears as “Generic JTAG Device”). Sometimes double clicking on the generic JTAG device will allow you to access drop down menus and set the device settings.</p>
-<p>Next we need to correctly configure the programming toolchain to program our device. By default, the UPduino board only enables programming of the flash chip on board and not the onboard compressed random access memory (CRAM) of the FPGA itself. To do this, highlight the device in the list view and open the “Device Properties” window either by using the icon in the toolbar (chip with pencil on top) or by right-clicking on the entry in the table and selecting the “Device Properties” option.</p>
+<p>Next we need to correctly configure the programming toolchain. By default, the UPduino board only enables programming of the flash chip on board and not the onboard compressed random access memory (CRAM) of the FPGA itself. To change this, highlight the device in the list view and open the “Device Properties” window either by using the icon in the toolbar (chip with pencil on top) or by right-clicking on the entry in the table and selecting the “Device Properties” option.</p>
 <p>Change the default entries to the following selections:</p>
 <ul>
 <li>Set Target Memory to <code>External SPI Flash Memory</code></li>
@@ -375,27 +529,49 @@ Figure&nbsp;7: Pinout diagram.
 <img src="images/programming.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-flash-programming-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: Flash programming setup.
+Figure&nbsp;9: Flash programming setup.
 </figcaption>
 </figure>
 </div>
 <p>After updating the configuration, you are ready to program the device. (Note: on your first run, you may get a firewall warning that a new program “cableserver” is being run and needs access. Allow access to the program.)</p>
 <p>You should see a series of outputs printing in the output window as the programmer cycles through the various pieces of the programming process (initialization, enabling, erasing, programming, verifying, etc.). After the programming finishes, you should see a message that the programming operation was successful.</p>
+<section id="troubleshooting" class="level3">
+<h3 class="anchored" data-anchor-id="troubleshooting">Troubleshooting</h3>
+<p>If you are seeing issues with specific pins on your FPGA there could be a few different reasons and corresponding steps to take to troubleshoot.</p>
+<ul>
+<li>You could have an electrical short which is causing some pins to be electrically connected that should not be, due to solder bridges. Double check that the pins are isolated and not connected together by checking the resistance between the pins with a multimeter.</li>
+<li>You are trying to use a pin that is shared between the FPGA and the MCU, and the MCU is not leaving that pin floating or it is driving it as an output. You can get around this by wiping the code on the MCU by uploading a file with a blank main function.</li>
+<li>You should also read through the Nucleo board documentation to see what pins have special functions that are used by default by the MCU. Hint: You likely want to stay away from using the pins that the MCU uses for serial communication by default.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1? Return to the lab now">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Working on Lab 1? Return to the lab now
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your design is now programmed onto the board. Go back to <a href="../../../lab/lab1/#program-and-test-your-design">Lab 1 → Program and Test Your Design</a> and finish the lab. The section below is an extra hardware check for the demo design and is not part of Lab 1.</p>
+</div>
+</div>
 </section>
 </section>
-<section id="testing-in-hardware" class="level1">
-<h1>Testing in Hardware</h1>
+<section id="testing-the-demo-in-hardware" class="level2">
+<h2 class="anchored" data-anchor-id="testing-the-demo-in-hardware">Testing the Demo in Hardware</h2>
 <div id="fig-led-blink" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-led-blink-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/blink_led_schematic.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:50.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-led-blink-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9: Simple circuit to blink an LED.
+Figure&nbsp;10: Simple circuit to blink an LED.
 </figcaption>
 </figure>
 </div>
-<p>If you are using the E155 development board, you should see the onboard LED connected to P42 blinking. If you would like to test the hardware separately with just the UPduino you can unplug the USB from your board and connect your UPduino board to a breadboard, wiring up an LED in series with a current limiting resistor (typically a value between 330 Ω and 1kΩ is a good choice). Then, reconnect your board to power via USB or using the +5V input on the board from a DC power supply.</p>
+<p>If you are using the E155 development board, you should see the onboard LED connected to P42 blinking. If you would like to test the hardware separately with just the UPduino, you can unplug the USB from your board and connect your UPduino board to a breadboard, wiring up an LED in series with a current limiting resistor (typically a value between 330 Ω and 1 kΩ is a good choice). Then, reconnect your board to power via USB or using the +5V input on the board from a DC power supply.</p>
+</section>
 <section id="share-your-feedback" class="level2">
 <h2 class="anchored" data-anchor-id="share-your-feedback">Share Your Feedback</h2>
 <div class="callout callout-style-default callout-note callout-titled" title="Share Your Feedback!">
@@ -413,7 +589,6 @@ Figure&nbsp;9: Simple circuit to blink an LED.
 </div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

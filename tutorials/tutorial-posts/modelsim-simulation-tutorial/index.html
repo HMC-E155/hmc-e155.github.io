@@ -45,7 +45,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-b9bebea3e3d544ce656829e36b415e27.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-0be6f067fb88b5911c0e6a259786e242.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -184,14 +184,23 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#simple-simulations-by-forcing-signals" id="toc-simple-simulations-by-forcing-signals" class="nav-link" data-scroll-target="#simple-simulations-by-forcing-signals">Simple Simulations by Forcing Signals</a></li>
+  <li><a href="#opening-modelsim-from-radiant" id="toc-opening-modelsim-from-radiant" class="nav-link" data-scroll-target="#opening-modelsim-from-radiant">Opening ModelSim from Radiant</a>
+  <ul class="collapse">
+  <li><a href="#starting-a-simulation" id="toc-starting-a-simulation" class="nav-link" data-scroll-target="#starting-a-simulation">Starting a Simulation</a></li>
+  </ul></li>
+  <li><a href="#forcing-signals" id="toc-forcing-signals" class="nav-link" data-scroll-target="#forcing-signals">Simple Simulations by Forcing Signals</a>
+  <ul class="collapse">
+  <li><a href="#full-adder-example" id="toc-full-adder-example" class="nav-link" data-scroll-target="#full-adder-example">Full Adder Example</a></li>
+  </ul></li>
   <li><a href="#testbench-simulation" id="toc-testbench-simulation" class="nav-link" data-scroll-target="#testbench-simulation">Testbench Simulation</a>
   <ul class="collapse">
+  <li><a href="#designing-a-good-testbench" id="toc-designing-a-good-testbench" class="nav-link" data-scroll-target="#designing-a-good-testbench">Designing a Good Testbench</a></li>
   <li><a href="#creating-the-testbench" id="toc-creating-the-testbench" class="nav-link" data-scroll-target="#creating-the-testbench">Creating the Testbench</a></li>
   <li><a href="#the-testvector-.tv-file" id="toc-the-testvector-.tv-file" class="nav-link" data-scroll-target="#the-testvector-.tv-file">The Testvector (.tv) File</a></li>
   <li><a href="#preventing-optimization" id="toc-preventing-optimization" class="nav-link" data-scroll-target="#preventing-optimization">Preventing Optimization</a></li>
   </ul></li>
-  <li><a href="#libraries" id="toc-libraries" class="nav-link" data-scroll-target="#libraries">Libraries</a></li>
+  <li><a href="#launching-questa" id="toc-launching-questa" class="nav-link" data-scroll-target="#launching-questa">Launching Questa from the Simulation Wizard</a></li>
+  <li><a href="#libraries" id="toc-libraries" class="nav-link" data-scroll-target="#libraries">Including the iCE40 Technology Library</a></li>
   <li><a href="#share-your-feedback" id="toc-share-your-feedback" class="nav-link" data-scroll-target="#share-your-feedback">Share Your Feedback</a></li>
   </ul>
 </nav>
@@ -232,17 +241,69 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Modelsim was renamed to Questasim as part of Mentor Graphics’ (now Siemens EDA) strategy to unify and rebrand their simulation tools under the “Questa” umbrella. Across the web and on this website you may see references to both QuestaSim and ModelSim, but both names refer to the same software tool.</p>
+<p>ModelSim was renamed to QuestaSim as part of Mentor Graphics’ (now Siemens EDA) strategy to unify and rebrand their simulation tools under the “Questa” umbrella. Across the web and on this website you may see references to both QuestaSim and ModelSim, but both names refer to the same software tool.</p>
 </div>
 </div>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>To verify that designs are working, it is useful to simulate them using ModelSim. This document will provide a quick demo of how to perform a simulation in ModelSim and how to include iCE40UP library files in the simulation.</p>
+<p>To verify that designs are working, it is useful to simulate them before putting them on hardware. This tutorial covers three ways to drive a simulation, from quickest to most rigorous:</p>
+<ol type="1">
+<li><a href="#forcing-signals">Forcing signals by hand</a> — fastest way to sanity-check a small design.</li>
+<li><a href="#testbench-simulation">Writing a testbench</a> — automatic, repeatable checking.</li>
+<li><a href="#launching-questa">Launching from the Simulation Wizard</a> — the fastest way to run a testbench you have already written.</li>
+</ol>
+<p>It also covers <a href="#libraries">including the iCE40 technology library</a>, which you need whenever your design instantiates a Lattice primitive such as <code>HSOSC</code>.</p>
 </section>
-<section id="simple-simulations-by-forcing-signals" class="level2">
-<h2 class="anchored" data-anchor-id="simple-simulations-by-forcing-signals">Simple Simulations by Forcing Signals</h2>
-<p>If you have a simple design and want to quickly test it out to see that it is working, you can use the force function in the ModelSim command window to apply test inputs and measure the outputs.</p>
-<p>We will use a full adder circuit as a demonstration.</p>
+<section id="opening-modelsim-from-radiant" class="level2">
+<h2 class="anchored" data-anchor-id="opening-modelsim-from-radiant">Opening ModelSim from Radiant</h2>
+<p>Open ModelSim from Radiant using the <code>Tools → QuestaSim Lattice Edition</code> menu or the icon in the toolbar. The ModelSim window will open.</p>
+<p>Get in the habit of watching the transcript window to look for errors and to familiarize yourself with what a good run looks like. If you see errors, close ModelSim, correct your Verilog code in Radiant, and reopen ModelSim. You can also edit the file directly in ModelSim and recompile there without going through the entire synthesis pipeline in Radiant.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Designs using the iCE40 Technology Library">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Designs using the iCE40 Technology Library
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Some of your designs may include modules from the iCE40 Technology Library (e.g., the <code>HSOSC</code> module used to generate a clock signal). If you simulate a design including one of these modules, you must include the library or ModelSim will not find the design unit. See <a href="#libraries">Including the iCE40 Technology Library</a> below before you start the simulation.</p>
+</div>
+</div>
+<section id="starting-a-simulation" class="level3">
+<h3 class="anchored" data-anchor-id="starting-a-simulation">Starting a Simulation</h3>
+<p>In QuestaSim/ModelSim, simulate your module by choosing <code>Simulate → Start Simulation...</code>. Click on the <code>+</code> symbol next to the work library and select the module you want to simulate.</p>
+<p>If the wave pane isn’t open, open it by choosing <code>View → Wave</code>. View all of the inputs and outputs of your design by selecting them in the Objects window and dragging them into the Wave window. In a more complicated design, you may wish to examine internal signals as well.</p>
+</section>
+</section>
+<section id="forcing-signals" class="level2">
+<h2 class="anchored" data-anchor-id="forcing-signals">Simple Simulations by Forcing Signals</h2>
+<p>If you have a simple design and want to quickly check that it is working, you can use the <code>force</code> command in the ModelSim transcript window to apply test inputs, then advance time with <code>run</code>.</p>
+<p>For example, to step a 4-bit input <code>s</code> through its first few values:</p>
+<pre><code>force s 0000
+run 100
+force s 0001
+run 100
+force s 0010
+run 100
+...</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled" title="Watch out for optimization">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Watch out for optimization
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you’re not seeing all the signals in your design, it’s possible that QuestaSim optimized them away. See <a href="#preventing-optimization">Preventing Optimization</a> below to fix this.</p>
+</div>
+</div>
+<section id="full-adder-example" class="level3">
+<h3 class="anchored" data-anchor-id="full-adder-example">Full Adder Example</h3>
+<p>Let’s walk through a complete example using a full adder circuit.</p>
 <div id="fig-full-adder-schematic" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-full-adder-schematic-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -253,7 +314,7 @@ Figure&nbsp;1: Full adder schematic.
 </figcaption>
 </figure>
 </div>
-<p>To code up the full adder, first, open ModelSim and create a new ModelSim project titled <code>ModelSim_Tutorial</code> and save it in a location where the path name has no spaces. Then create a new file named <code>fulladder.sv</code>, making sure the file type is SystemVerilog. You should now have a blank file. Add the Verilog code below to create a structural Verilog model of the full adder circuit show above.</p>
+<p>Open ModelSim and create a new ModelSim project titled <code>ModelSim_Tutorial</code>, saved in a location where the path name has no spaces. Then create a new file named <code>fulladder.sv</code>, making sure the file type is SystemVerilog. Add the Verilog code below to create a structural Verilog model of the full adder circuit shown above.</p>
 <div id="fig-new-project" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-new-project-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -286,8 +347,8 @@ module fulladder(
  or  g5(Cout, n2, n3);
 
 endmodule</code></pre>
-<p>Next, we will simulate the file. First, compile your file via the Compile menu. Then, start the simulation using “Simulate &gt; Start Simulation…”. You will see the GUI change and open up the Objects and Wave panes. You can always toggle windows on or off as desired using the View toolbar menu.</p>
-<p>Next, add the selected symbols by selecting them in the Objects pane and adding them to the Wave pane either by using the right-click menu or dragging them. Next, to run the simulation, we need to initialize the input values which are floating (HiZ) to begin. We can do this by typing the command <code>force &lt;Signal Name&gt; &lt;Signal Value&gt;</code> in the Transcript pane. Force <code>A</code>, <code>B</code>, and <code>Cin</code> to some desired values of your choosing and then run the simulation for 10 time units by typing <code>run 10</code>. When you run the simulation, you will see the waves window advance the appropriate number of time points, displaying the values of the signals.</p>
+<p>Compile your file via the <code>Compile</code> menu, then start the simulation using <code>Simulate → Start Simulation...</code>. You will see the GUI change and open up the Objects and Wave panes. You can always toggle windows on or off as desired using the View toolbar menu.</p>
+<p>Add the signals you care about by selecting them in the Objects pane and dragging them into the Wave pane. The inputs start floating (HiZ), so initialize them with <code>force &lt;Signal Name&gt; &lt;Signal Value&gt;</code> in the Transcript pane. Force <code>A</code>, <code>B</code>, and <code>Cin</code> to some values of your choosing and then run the simulation for 10 time units by typing <code>run 10</code>. The Wave window will advance the appropriate number of time points, displaying the values of the signals.</p>
 <div id="fig-sim-waves-force" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-sim-waves-force-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -298,26 +359,86 @@ Figure&nbsp;3: Running simulation by forcing signals.
 </figcaption>
 </figure>
 </div>
-<p>Fill out a truth table for a full adder by evaluating the circuit schematic shown above for all combinations of A, B, and Cin and verify a few values by forcing them to get the hang of it.</p>
+<p>Fill out a truth table for a full adder by evaluating the circuit schematic shown above for all combinations of <code>A</code>, <code>B</code>, and <code>Cin</code>, and verify a few values by forcing them to get the hang of it.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1? Return to the lab now">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Working on Lab 1? Return to the lab now
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You now know enough to bring up your Lab 1 design in simulation and check the <code>led</code> and <code>seg</code> outputs by hand. Go back to <a href="../../../lab/lab1/#logic-simulation-in-modelsim">Lab 1 → Logic Simulation in ModelSim</a> and continue there. Lab 1 will send you back to the <a href="#testbench-simulation">testbench</a> and <a href="#launching-questa">Simulation Wizard</a> sections below once you have written your testbench.</p>
+</div>
+</div>
+</section>
 </section>
 <section id="testbench-simulation" class="level2">
 <h2 class="anchored" data-anchor-id="testbench-simulation">Testbench Simulation</h2>
-<p>After testing about only two different inputs by manually forcing values you are probably already frustrated with the tediousness of running a simulation this way. Luckily, there is a much more efficient way to run simulations using testbenches.</p>
-<p>A testbench is a separate module which generates simulated inputs and enables the generated output signals to be traced versus time. You’ve likely seen testbenches before (e.g., in E85) but you may have never written one from scratch by yourself before. While this is a bit daunting at first, the basic architecture of a testbench is straightforward. Before you proceed, you should review the HDL testbench section in Digital Design and Computer Architecture (Section 4.9 in the ARM edition) which covers several different styles of testbenches.</p>
-<p>Note that testbenches include Verilog statements that are non-synthesizable (in other words, they cannot be mapped onto hardware). One example is the initial block, which runs only once at the start of a simulation. In this sense, testbenches use SystemVerilog a bit like a scripting language to enable designs to be easily tested and verified.</p>
-<p>In this example we will create a testbench with automatic checking against a test vector file. This is the most powerful type of testbench and will be a good foundation for all the testbenches you will write for this class.</p>
+<p>After testing only two or three different inputs by manually forcing values, you are probably already frustrated with how tedious this is. There is a much more efficient way to run simulations: testbenches.</p>
+<p>A testbench is a separate module which generates simulated inputs and enables the generated output signals to be traced versus time. You’ve likely seen testbenches before (e.g., in E85) but you may have never written one from scratch by yourself. While this is a bit daunting at first, the basic architecture of a testbench is straightforward. Before you proceed, you should review the HDL testbench section in <em>Digital Design and Computer Architecture</em> (Section 4.9 in the ARM edition), which covers several different styles of testbenches.</p>
+<p>Note that testbenches include Verilog statements that are non-synthesizable (in other words, they cannot be mapped onto hardware). One example is the <code>initial</code> block, which runs only once at the start of a simulation. In this sense, testbenches use SystemVerilog a bit like a scripting language to enable designs to be easily tested and verified.</p>
 <p>A testbench is composed of the following elements:</p>
 <ul>
 <li>Create and initialize the signals for the inputs, outputs, and internal signals of your modules.</li>
-<li>Instantiate the device under test (DUT)</li>
+<li>Instantiate the device under test (DUT).</li>
 <li>Generate a simulated clock signal. Even if your module is purely combinational, you will need this clock signal to control when the input test vectors are applied and the outputs checked.</li>
-<li>Load the test vectors and initialize the signals for the simulation (e.g., pulsing the reset line)</li>
-<li>Apply the inputs and check the resulting outputs using the test vectors. One simple way to do this is to apply the test vector on the rising edge of the clock and then check the outputs against the expect outputs on the negative edge of the clock.</li>
+<li>Load the test vectors and initialize the signals for the simulation (e.g., pulsing the reset line).</li>
+<li>Apply the inputs and check the resulting outputs using the test vectors. One simple way to do this is to apply the test vector on the rising edge of the clock and then check the outputs against the expected outputs on the falling edge of the clock.</li>
 </ul>
 <p>Every HDL module that you write should have a testbench to accompany it. While this will cost you some time up front, it will save you loads of time and potential head injuries from banging your head against the wall wondering why your circuit is not working as you expect.</p>
+<p>In this example we will create a testbench with automatic checking against a test vector file. This is the most powerful type of testbench and will be a good foundation for all the testbenches you will write for this class.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Two testbench styles">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Two testbench styles
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This tutorial demonstrates the <strong>test vector</strong> style, where inputs and expected outputs are read from a <code>.tv</code> file. Lab 1 asks you to write a <strong>stim/assert</strong> style testbench instead, where the stimulus and the expected values are written directly in the testbench using <code>assert</code> statements. Both styles run in the simulator exactly the same way — only the source of the expected values differs. The test vector style shines when you have many cases of the same shape; stim/assert shines for sequential logic like an FSM or clock divider.</p>
+</div>
+</div>
+<section id="designing-a-good-testbench" class="level3">
+<h3 class="anchored" data-anchor-id="designing-a-good-testbench">Designing a Good Testbench</h3>
+<p>Before writing any testbench code, decide what “tested” actually means for the module in front of you. <strong>A testbench should cover all of the functionality of the module it tests</strong> — every output behavior the module is responsible for should be exercised and checked. How much work that is depends on what kind of module it is.</p>
+<p><strong>Combinational modules — exercise every input combination.</strong> A purely combinational module has no memory, so its output depends only on its current inputs. That makes complete coverage achievable: drive every possible input combination and check every output. A seven-segment decoder driven by a 4-bit input has just 16 combinations, so there is no excuse for testing only a few of them. If the input space is small, test all of it.</p>
+<p><strong>Sequential modules — exercise every state transition, within reason.</strong> A sequential module’s output depends on its history, so it is not enough to try each input once; you need to check the <em>transitions</em> between states. Nominally that means covering every state transition. In practice this is often impractical — a counter that divides a 48 MHz clock down to a few Hz has millions of states, and simulating all of them is neither useful nor fast.</p>
+<p>Instead, test the <em>features</em> rather than every count value:</p>
+<ul>
+<li>Does reset return the counter to zero?</li>
+<li>Does the enable input actually start and stop counting?</li>
+<li>Does the counter wrap back to zero when it reaches its max count?</li>
+</ul>
+<p><strong>Top-level modules — only test what the module tests didn’t cover.</strong> Once each submodule is verified on its own, re-testing that logic through the top level adds nothing. A top-level testbench should target what is genuinely new at that level:</p>
+<ul>
+<li>Are the submodules wired together correctly?</li>
+<li>Does anything instantiated only at the top level work — for example, does the <code>HSOSC</code> produce a clock?</li>
+<li>Does logic written directly in the top level (such as an <code>assign</code> statement) behave correctly?</li>
+</ul>
+<p>Note that a top-level module which instantiates <code>HSOSC</code> generates its own clock internally, so its testbench should <em>not</em> drive a <code>clk</code> input. Let the oscillator run and simulate long enough to observe the behavior you care about.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1? Return to the lab now">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Working on Lab 1? Return to the lab now
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>That is everything you need to plan your Lab 1 testbenches. Go back to <a href="../../../lab/lab1/#automatic-testing-with-a-testbench">Lab 1 → Automatic Testing with a Testbench</a> and write yours.</p>
+<p>The worked example below uses the <em>test vector</em> style on a full adder. Lab 1 asks for the <code>stim/assert</code> style instead, so read it only if you want a second example of testbench structure.</p>
+</div>
+</div>
+</section>
 <section id="creating-the-testbench" class="level3">
 <h3 class="anchored" data-anchor-id="creating-the-testbench">Creating the Testbench</h3>
-<p>Next, we will create the testbench. Create a new SystemVerilog file <code>fulladder_tb.sv</code> and add it to your project. Then, type the following code into the testbench.</p>
+<p>Create a new SystemVerilog file <code>fulladder_tb.sv</code> and add it to your project. Then type the following code into the testbench.</p>
 <pre><code>`timescale 1ns/1ns
 `default_nettype none
 `define N_TV 8
@@ -338,7 +459,7 @@ module fulladder_tb();
      clk = 1; #5;
      clk = 0; #5;
    end
-  
+
  // At the start of the simulation:
  //  - Load the testvectors
  //  - Pulse the reset line (if applicable)
@@ -371,9 +492,9 @@ module fulladder_tb();
              errors = errors + 1;
            end
 
-      
+
        vectornum = vectornum + 1;
-      
+
        if (testvectors[vectornum] === 11'bx)
          begin
            $display("%d tests completed with %d errors.", vectornum, errors);
@@ -394,7 +515,7 @@ endmodule</code></pre>
 // jbrake@hmc.edu
 // 5/26/22
 //
-// 5-bit vectors in binary. 
+// 5-bit vectors in binary.
 // underscore is ignored
 // // indicates comment
 // a b cin _ s cout
@@ -430,49 +551,105 @@ Figure&nbsp;4: QuestaSim optimization settings for preserving testbench signals.
 </div>
 </section>
 </section>
+<section id="launching-questa" class="level2">
+<h2 class="anchored" data-anchor-id="launching-questa">Launching Questa from the Simulation Wizard</h2>
+<p>Once you have a testbench written and added to your Radiant project, the quickest way to run it is the Simulation Wizard, launched from the button shown below.</p>
+<div id="fig-simulation-wizard" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-simulation-wizard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/simulation_wizard.png" class="img-fluid figure-img"></p>
+<figcaption>Button to launch the Questa Simulation Wizard</figcaption>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-simulation-wizard-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Button to launch the Questa Simulation Wizard.
+</figcaption>
+</figure>
+</div>
+<p>Follow the instructions in the wizard to name and create the simulation. The default settings are good, but make sure to select <strong>your</strong> testbench module name as the <code>Simulation Top Module</code> (for Lab 1 that would be <code>lab1_tb</code>).</p>
+<p>Once you finish, Questa will automatically open and run your simulation. By default it only runs for 100 ns, so if your simulation takes longer you may need to use the <code>run</code> command described in the <a href="#forcing-signals">forcing signals</a> section. In the example below, all of the tests passed, as reported in the <code>Transcript</code> pane at the bottom.</p>
+<div id="fig-questa-sim" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-questa-sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/example_questa_simulation.png" class="img-fluid figure-img"></p>
+<figcaption>Example Questa simulation</figcaption>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-questa-sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Example Questa simulation.
+</figcaption>
+</figure>
+</div>
+<p>By default, only signals in your testbench are displayed. You can add more by selecting <code>dut</code> in the instance pane, dragging signals from <code>Objects</code> into <code>Wave</code>, and then restarting the simulation by running <code>restart -f</code> followed by <code>run 100</code>.</p>
+<p>If you edit the testbench or module code, you can update the simulator by clicking <code>Compile → Compile All</code>, or by closing and re-opening the simulation. If you aren’t changing simulation settings, you can re-open a previous simulation from Radiant by double clicking on the simulation name in the <code>Script Files</code> folder.</p>
+<div id="fig-restart-simulation" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-restart-simulation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/restart_simulation.png" class="img-fluid figure-img"></p>
+<figcaption>Restart existing simulation</figcaption>
+</figure>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-restart-simulation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Restart an existing simulation.
+</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1? Return to the lab now">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Working on Lab 1? Return to the lab now
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Your testbench is now running in Questa. Go back to <a href="../../../lab/lab1/#pin-assignment">Lab 1 → Pin Assignment</a> and continue with the rest of the lab. The section below on technology libraries is a reference you will need if your design instantiates <code>HSOSC</code>.</p>
+</div>
+</div>
+</section>
 <section id="libraries" class="level2">
-<h2 class="anchored" data-anchor-id="libraries">Libraries</h2>
-<p>In many instances we want to leverage the iCE40 Technology Library. However, when we go to simulate these designs, we need to make sure to include the appropriate libraries so that ModelSim can find the correct design units when it goes to do the simulation.</p>
-<p>When you install Lattice Radiant with ModelSim Lattice FPGA Edition, it comes with a set of installed libraries. For our purposes, we are most interested in the iCE40UP library and will need to include this in our simulation.</p>
-<p>To do this, start the simulation by clicking Simulate &gt; Start Simulation. Then navigate to the Libraries tab and add iCE40UP to the Search Libraries window using the “Add…” button.</p>
+<h2 class="anchored" data-anchor-id="libraries">Including the iCE40 Technology Library</h2>
+<p>In many instances we want to leverage the iCE40 Technology Library. However, when we simulate these designs, we need to include the appropriate libraries so that ModelSim can find the correct design units.</p>
+<p>When you install Lattice Radiant with ModelSim Lattice FPGA Edition, it comes with a set of installed libraries. For our purposes, we are most interested in the iCE40UP library.</p>
+<p>To include it, start the simulation by clicking <code>Simulate &gt; Start Simulation</code>. Then navigate to the Libraries tab and add <code>iCE40UP</code> to the Search Libraries window using the “Add…” button.</p>
 <div id="fig-ice40-tech-library" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ice40-tech-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/ice40-tech-library.png" class="img-fluid figure-img" style="width:50.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ice40-tech-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: ice40 Technology Library.
+Figure&nbsp;8: iCE40 technology library.
 </figcaption>
 </figure>
 </div>
-<div id="fig-ice40-tech-library" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div id="fig-ice40-add-library" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ice40-tech-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div aria-describedby="fig-ice40-add-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/ice40-add-library.png" class="img-fluid figure-img" style="width:50.0%">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ice40-tech-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Add ice40 Technology Library.
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ice40-add-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Add the iCE40 technology library.
 </figcaption>
 </figure>
 </div>
+<p>Then navigate to the “Design” tab, select your top-level module, and click OK. Your simulation should now start and open up the Wave window.</p>
 <div id="fig-ice40-start-sim" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ice40-start-sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="images/modelsim-start-sim-module.png" class="img-fluid figure-img" style="width:50.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ice40-start-sim-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Start sim with loaded library.
-</figcaption>
-</figure>
-</div>
-<p>Then navigate to the “Design” tab, select the <code>top</code> module and then click OK. Your simulation should now start and open up the Wave window.</p>
-<div id="fig-ice40-tech-library" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-ice40-tech-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/modelsim-start-sim-module.png" class="img-fluid figure-img" style="width:50.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ice40-tech-library-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: Start sim of <code>top</code> module.
+Figure&nbsp;10: Start simulation of the <code>top</code> module with the library loaded.
 </figcaption>
 </figure>
 </div>
