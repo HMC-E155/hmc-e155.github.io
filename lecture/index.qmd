@@ -2,4 +2,7 @@
 title: 'Lecture'
 ---
 
-Lecture slides and handouts will be posted here shortly before each class period.
+See the list below for links to lecture slides and handouts. Slides and handouts will normally be posted shortly before each class period.
+
+- Lecture 1: Introduction and Analog Behavior of Digital Systems [[slides](./slides/lecture-01-slides.pdf)] [[handout](./slides/lecture-01-handout.pdf)]
+- Lecture 2: Combinational and Sequential Logic [[slides](./slides/lecture-02-slides.pdf)] [[handout](./slides/lecture-02-handout.pdf)]
