@@ -1,323 +1,323 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-videos/publishing-your-quarto-website-to-github-pages.html</loc>
-    <lastmod>2026-09-03T20:13:55.068Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-videos/rigol-mso1104-logic-analyzer-demo.html</loc>
-    <lastmod>2026-09-03T20:13:55.068Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-videos/creating-and-initializing-your-git-repo.html</loc>
-    <lastmod>2026-09-03T20:13:55.067Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/template.html</loc>
-    <lastmod>2026-09-03T20:13:54.921Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/openfpgaloader-programmer/index.html</loc>
-    <lastmod>2026-09-03T20:13:55.029Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/background/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.922Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/printf-no-uart/index.html</loc>
-    <lastmod>2026-09-03T20:13:55.031Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/quarto-portfolio-setup/index.html</loc>
-    <lastmod>2026-09-03T20:13:55.053Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/testbench-example/index.html</loc>
-    <lastmod>2026-09-03T20:13:55.067Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/git-setup/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.978Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/segger-embedded-studio-setup/index.html</loc>
-    <lastmod>2026-09-03T20:13:55.064Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lecture/pcb-activity/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.384Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab2/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.367Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab2/specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.367Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab7/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.376Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab7/specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.376Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab1/specs.html</loc>
+    <lastmod>2026-09-03T20:21:09.608Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab1/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.365Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/specs/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.378Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/specs/block-diagram-specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.376Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/specs/lab-writeup-specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.378Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab5/ai-prototype.html</loc>
-    <lastmod>2026-09-03T20:13:54.368Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab5/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.373Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab-report-template/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.321Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab3/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.367Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab3/specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.367Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab4/ai-prototype.html</loc>
-    <lastmod>2026-09-03T20:13:54.367Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab4/lab4-specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.368Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab4/specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.368Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab6/lab6-specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.374Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab6/specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.374Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.320Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/resources/how-to-create-a-github-issue.html</loc>
-    <lastmod>2026-09-03T20:13:54.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/resources/github-issue-footer.html</loc>
-    <lastmod>2026-09-03T20:13:54.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/final-project-requirements.html</loc>
-    <lastmod>2026-09-03T20:13:54.761Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/reports/2023/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.917Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/reports/2022/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.917Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/reports/2020/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.762Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/specs/project-checkoff-specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.917Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/specs/project-final-report-specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/specs/project-midpoint-specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.762Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/specs/project-proposal-specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/specs/project-design-review-presentation-specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/reports/2021/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.811Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/reports/2025/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.917Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/reports/2024/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.917Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/storytelling-worksheet.html</loc>
-    <lastmod>2026-09-03T20:13:54.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/resources/hdl-coding-guidelines.html</loc>
-    <lastmod>2026-09-03T20:13:54.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/resources/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.920Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/resources/blog-reflection-ideas.html</loc>
-    <lastmod>2026-09-03T20:13:54.918Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/syllabus/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.920Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab6/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.374Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab6/ai-prototype.html</loc>
-    <lastmod>2026-09-03T20:13:54.373Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab4/fa24-note.html</loc>
-    <lastmod>2026-09-03T20:13:54.368Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab4/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.368Z</lastmod>
+    <lastmod>2026-09-03T20:21:09.608Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab4/speaker-safety.html</loc>
-    <lastmod>2026-09-03T20:13:54.368Z</lastmod>
+    <lastmod>2026-09-03T20:21:09.611Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab3/lab3-specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.367Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab4/specs.html</loc>
+    <lastmod>2026-09-03T20:21:09.611Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab3/ai-prototype.html</loc>
-    <lastmod>2026-09-03T20:13:54.367Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab4/index.html</loc>
+    <lastmod>2026-09-03T20:21:09.611Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab5/specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.373Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab5/lab5-specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.373Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.320Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/specs/lab-writeup-specs.html</loc>
+    <lastmod>2026-09-03T20:21:09.623Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/specs/schematic-specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.378Z</lastmod>
+    <lastmod>2026-09-03T20:21:09.623Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/specs/hdl-specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.378Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab3/lab3-specs.html</loc>
+    <lastmod>2026-09-03T20:21:09.610Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab1/specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.365Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab3/ai-prototype.html</loc>
+    <lastmod>2026-09-03T20:21:09.609Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab1/ai-prototype.html</loc>
-    <lastmod>2026-09-03T20:13:54.321Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab6/lab6-specs.html</loc>
+    <lastmod>2026-09-03T20:21:09.619Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab7/lab7-specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.376Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab6/ai-prototype.html</loc>
+    <lastmod>2026-09-03T20:21:09.618Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab7/ai-prototype.html</loc>
-    <lastmod>2026-09-03T20:13:54.374Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab-report-template/index.html</loc>
+    <lastmod>2026-09-03T20:21:09.549Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab7/specs.html</loc>
+    <lastmod>2026-09-03T20:21:09.621Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab7/index.html</loc>
+    <lastmod>2026-09-03T20:21:09.621Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab5/specs.html</loc>
+    <lastmod>2026-09-03T20:21:09.618Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab5/index.html</loc>
+    <lastmod>2026-09-03T20:21:09.618Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab2/lab2-specs.html</loc>
-    <lastmod>2026-09-03T20:13:54.367Z</lastmod>
+    <lastmod>2026-09-03T20:21:09.609Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab2/ai-prototype.html</loc>
-    <lastmod>2026-09-03T20:13:54.365Z</lastmod>
+    <lastmod>2026-09-03T20:21:09.608Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lecture/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.378Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/resources/blog-reflection-ideas.html</loc>
+    <lastmod>2026-09-03T20:21:10.293Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/lattice-radiant-installation/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.998Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/resources/hdl-coding-guidelines.html</loc>
+    <lastmod>2026-09-03T20:21:10.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/resources/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.295Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/testbench-example/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.485Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.995Z</lastmod>
-  </url>
-  <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/quarto-portfolio-setup/specs.html</loc>
-    <lastmod>2026-09-03T20:13:55.053Z</lastmod>
+    <lastmod>2026-09-03T20:21:10.389Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/dev-board-assembly/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.978Z</lastmod>
+    <lastmod>2026-09-03T20:21:10.368Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/modelsim-simulation-tutorial/index.html</loc>
-    <lastmod>2026-09-03T20:13:55.028Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/git-setup/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.368Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/keypad-testbench/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.979Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/segger-embedded-studio-setup/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.481Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/index.html</loc>
-    <lastmod>2026-09-03T20:13:54.920Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/quarto-portfolio-setup/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.467Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-videos/lattice-lse-fsm-automatically-decode-unreachable-states.html</loc>
-    <lastmod>2026-09-03T20:13:55.068Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/template.html</loc>
+    <lastmod>2026-09-03T20:21:10.297Z</lastmod>
   </url>
   <url>
-    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-videos/monitoring-memory-mapped-registers-in-segger-embedded-studio.html</loc>
-    <lastmod>2026-09-03T20:13:55.068Z</lastmod>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-videos/publishing-your-quarto-website-to-github-pages.html</loc>
+    <lastmod>2026-09-03T20:21:10.487Z</lastmod>
   </url>
   <url>
     <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-videos/esp8266-webserver.html</loc>
-    <lastmod>2026-09-03T20:13:55.068Z</lastmod>
+    <lastmod>2026-09-03T20:21:10.487Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-videos/creating-and-initializing-your-git-repo.html</loc>
+    <lastmod>2026-09-03T20:21:10.485Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/specs/project-midpoint-specs.html</loc>
+    <lastmod>2026-09-03T20:21:10.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/specs/project-design-review-presentation-specs.html</loc>
+    <lastmod>2026-09-03T20:21:10.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/specs/project-final-report-specs.html</loc>
+    <lastmod>2026-09-03T20:21:10.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/reports/2025/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.291Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/reports/2022/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.291Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/reports/2021/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.161Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.102Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/syllabus/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.295Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lecture/index.html</loc>
+    <lastmod>2026-09-03T20:21:09.623Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/index.html</loc>
+    <lastmod>2026-09-03T20:21:09.547Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lecture/pcb-activity/index.html</loc>
+    <lastmod>2026-09-03T20:21:09.631Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/final-project-requirements.html</loc>
+    <lastmod>2026-09-03T20:21:10.101Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/storytelling-worksheet.html</loc>
+    <lastmod>2026-09-03T20:21:10.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/reports/2020/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.102Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/reports/2024/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.291Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/reports/2023/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.291Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/specs/project-proposal-specs.html</loc>
+    <lastmod>2026-09-03T20:21:10.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/project/specs/project-checkoff-specs.html</loc>
+    <lastmod>2026-09-03T20:21:10.291Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.295Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-videos/monitoring-memory-mapped-registers-in-segger-embedded-studio.html</loc>
+    <lastmod>2026-09-03T20:21:10.487Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-videos/lattice-lse-fsm-automatically-decode-unreachable-states.html</loc>
+    <lastmod>2026-09-03T20:21:10.487Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-videos/rigol-mso1104-logic-analyzer-demo.html</loc>
+    <lastmod>2026-09-03T20:21:10.487Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/modelsim-simulation-tutorial/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.433Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/quarto-portfolio-setup/specs.html</loc>
+    <lastmod>2026-09-03T20:21:10.467Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/printf-no-uart/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.437Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/lattice-radiant-installation/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.393Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/background/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.298Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/openfpgaloader-programmer/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.435Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/tutorials/tutorial-posts/keypad-testbench/index.html</loc>
+    <lastmod>2026-09-03T20:21:10.369Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/resources/how-to-create-a-github-issue.html</loc>
+    <lastmod>2026-09-03T20:21:10.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/resources/github-issue-footer.html</loc>
+    <lastmod>2026-09-03T20:21:10.293Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab2/index.html</loc>
+    <lastmod>2026-09-03T20:21:09.609Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab2/specs.html</loc>
+    <lastmod>2026-09-03T20:21:09.609Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/index.html</loc>
+    <lastmod>2026-09-03T20:21:09.547Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab5/ai-prototype.html</loc>
+    <lastmod>2026-09-03T20:21:09.611Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab5/lab5-specs.html</loc>
+    <lastmod>2026-09-03T20:21:09.618Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab7/ai-prototype.html</loc>
+    <lastmod>2026-09-03T20:21:09.619Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab7/lab7-specs.html</loc>
+    <lastmod>2026-09-03T20:21:09.621Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab6/index.html</loc>
+    <lastmod>2026-09-03T20:21:09.619Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab6/specs.html</loc>
+    <lastmod>2026-09-03T20:21:09.619Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab3/index.html</loc>
+    <lastmod>2026-09-03T20:21:09.610Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab3/specs.html</loc>
+    <lastmod>2026-09-03T20:21:09.610Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/specs/index.html</loc>
+    <lastmod>2026-09-03T20:21:09.623Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/specs/hdl-specs.html</loc>
+    <lastmod>2026-09-03T20:21:09.623Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/specs/block-diagram-specs.html</loc>
+    <lastmod>2026-09-03T20:21:09.621Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab4/ai-prototype.html</loc>
+    <lastmod>2026-09-03T20:21:09.610Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab4/fa24-note.html</loc>
+    <lastmod>2026-09-03T20:21:09.611Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab4/lab4-specs.html</loc>
+    <lastmod>2026-09-03T20:21:09.611Z</lastmod>
+  </url>
+  <url>
+    <loc>https://HMC-E155.github.io/hmc-e155.github.io/lab/lab1/ai-prototype.html</loc>
+    <lastmod>2026-09-03T20:21:09.549Z</lastmod>
   </url>
 </urlset>
