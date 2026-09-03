@@ -176,7 +176,7 @@ After synthesis completes, reopen the Device Constraint Editor and confirm the r
 
 ### Finding the Right Pin Numbers
 
-The FPGA pinouts are shown in the Board Schematic. Most of the user input/output (I/O) pins are tapped out to the headers and labeled on the board silk screen. Some have special functions; for example, FPGA pin P42 is connected to LED D6.
+The FPGA pinouts are shown in the [E155 Development Board Schematic](/assets/doc/E155%20Development%20Board%20Schematic.pdf). Most of the user input/output (I/O) pins are tapped out to the headers and labeled on the board silk screen. Some have special functions; for example, FPGA pin P42 is connected to LED D6.
 
 The pin numbers for the LEDs and switches are marked on the board's silkscreen.
 
@@ -187,7 +187,7 @@ Pinout diagram.
 :::
 
 ::: {.callout-warning title="Check for pin conflicts"}
-Some pins are shared between the FPGA and the MCU, and some have dedicated functions on the Nucleo board. Before you commit to a pin, make sure it is not already being used for another purpose.
+Some pins are shared between the FPGA and the MCU, and some have dedicated functions on the Nucleo board. Before you commit to a pin, make sure it is not being used for other purposes by checking the [schematic](/assets/doc/E155%20Development%20Board%20Schematic.pdf).
 :::
 
 ### Configuring Pull-Up Resistors {#pull-up-resistors}

@@ -91,10 +91,15 @@ Now it's your turn to take the wheel and create your own design and dust off you
 
 | Signal  Name | Signal Type | Description |
 |--------------|-------------|-------------|
-| `clk`     | input| 48 MHz clock on FPGA |
 | `s[3:0]`  | input| the four DIP switches (on the board, SW6) |
 | `led[2:0]`| output| 3 LEDs (you may use the on-board LEDs) |
 | `seg[6:0]`| output| the segments of a common-anode 7-segment display |
+
+::: {.callout-important title="The clock is not a top-level port"}
+Notice that there is no `clk` input in the table above. The 48 MHz clock is generated *inside* the FPGA by the `HSOSC` primitive, which you instantiate in your top-level module. The clock is therefore an internal signal, not a pin you route in from outside.
+
+This matters when you write your testbenches: a module that takes `clk` as an input port (like your counter) can be given a generated clock by its testbench, but your top-level testbench has to let the real `HSOSC` produce the clock.
+:::
 
 The following tables define the relationship of the LEDs to the switches and clock.
 
@@ -147,7 +152,7 @@ Launch Lattice Radiant and start the New Project Wizard from the File or startup
 
 Choose `File → New` and create a SystemVerilog HDL file. Save the file as `lab1_xx.sv` in your project directory and check the box to add the file to the current project.
 
-Create modules to perform the functions described above. The 7-segment display decoder should be combinational logic. Use a reasonable amount of hierarchy and name the top-level module `lab1_xx`. The 7-segment display code, for example, will be reused in future labs, so it should be a module of its own (for the sake of reusability you may want to put this in a separate SystemVerilog file, but this is not required).
+Create modules to perform the functions described above. The seven-segment display decoder should be combinational logic, and the counter that blinks `led[2]` should be a module of its own. Name the top-level module `lab1_xx` and keep it to instantiated modules plus the switch-to-LED `assign` logic. Put each module in its own file with a descriptive name matching the module. The seven-segment decoder in particular will be reused in future labs, so keeping it self-contained will save you work later. See the [lab specifications](specs.qmd) for the full structure and style requirements.
 
 Every module should begin with a comment section that includes your name and email address, the date of creation, and a brief summary of its purpose, so that somebody else can understand what the module does and get a hold of you if they need help with it. Comment the modules as appropriate.
 
@@ -165,18 +170,28 @@ A helpful shortcut to avoid restarting ModelSim is that you can edit the module 
 
 Forcing signals by hand gets tedious quickly, and it does not leave you with anything you can rerun. Next, test your design automatically using a `stim/assert` style testbench. Rather than manually forcing inputs or using pre-defined test vectors, this means using your testbench to set inputs and check for correct outputs.
 
-Start by making a new SystemVerilog testbench file, based on the example below. This is for an LED controller module that implements the truth table for `led[0]` and `led[1]` described above. You probably structured your code differently and should modify this testbench to test your inputs and outputs!
+Start by writing a testbench for one of your submodules. Before you write it, read
+[Designing a Good Testbench](/tutorials/tutorial-posts/modelsim-simulation-tutorial/#designing-a-good-testbench)
+in the simulation tutorial — it explains how much coverage each kind of module needs, which is what the
+[specifications](specs.qmd) are graded against.
+
+The example below tests a module named `lab1_led_controller` that implements the truth tables for `led[0]` and `led[1]`
+described above. Try writing yours first, and open the example only if you get stuck or want to check your structure
+against it. You almost certainly structured your code differently, so treat this as a template for the *shape* of a
+testbench rather than something to copy verbatim.
+
+::: {.callout-note collapse="true" title="Example testbench: lab1_led_controller_tb (click to expand)"}
 
 ```
 `timescale 1 ns/1 ns
 
-module lab1_tb();
+module lab1_led_controller_tb();
   logic           clk;    // system clock
   logic           reset;  // active high reset
   logic   [3:0]   s;      // 4-bit input switches
   logic   [1:0]   led;    // 2 output leds
 
-	led_controller dut (
+	lab1_led_controller dut (
 		.clk(clk),
 		.reset(reset),
 		.s(s),
@@ -202,7 +217,7 @@ module lab1_tb();
     // example test 1
 		s = 4'b0000;                // setup inputs
 		#10;                        // wait required time
-		assert (led == 3'b00)       // check outputs
+		assert (led == 2'b00)       // check outputs
 			$display("PASSED! The led controller behaves as desired at time: %0t.", $time);
 		else 
 			$error("FAILED! The led controller behaves incorrectly at time: %0t.", $time); 
@@ -210,7 +225,7 @@ module lab1_tb();
     // test 2
 		s = 4'b0101;
 		#10;
-		assert (led == 3'b01)
+		assert (led == 2'b01)
 			$display("PASSED! The led controller behaves as desired at time: %0t.", $time);
 		else 
 			$error("FAILED! The led controller behaves incorrectly at time: %0t.", $time); 
@@ -222,19 +237,23 @@ module lab1_tb();
 endmodule
 ```
 
+:::
+
 Once your testbench is written, run it using the [Simulation Wizard](/tutorials/tutorial-posts/modelsim-simulation-tutorial/#launching-questa).
 
 ::: {.callout-tip title="Watch out for optimization"}
 If some of your testbench signals are missing from the Wave window, QuestaSim has likely optimized them away. See [Preventing Optimization](/tutorials/tutorial-posts/modelsim-simulation-tutorial/#preventing-optimization) in the simulation tutorial.
 :::
 
-The LED decoder above is combinational, so test vectors would have worked equally well. But the `stim/assert` architecture works even better for sequential logic like an FSM or clock divider. Think about (and write) a testbench to check whether `led[2]` is blinking at the right frequency. This may involve resetting the clock divider, checking that the output is zero, waiting a known time, checking that it is one, and so on.
+Write a testbench for each of your submodules. Your seven-segment decoder is combinational with only 16 input combinations, so test all of them. Your counter is sequential, so rather than simulating every count for example, verify its reset, enable, and max count behavior.
+
+Finally, write a top-level testbench that covers only what the submodule tests could not: that the modules are wired together correctly, that the `HSOSC` produces a clock, and that your `assign` logic works. Remember that the top level generates its own clock, so the testbench should not drive one.
 
 ### Pin Assignment
 
 Next, assign pins to relate the signal names in your Verilog code to physical pin numbers on the FPGA, following the [Pin Assignment](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#pin-assignment) section of the Lattice Radiant tutorial.
 
-For the 7-segment display outputs you may select any I/O pins you'd like, but make sure that these pins are not being used for other purposes. Write down which pins you choose — you will wire the display to them in the next section.
+For the 7-segment display outputs you may select any I/O pins you'd like, but make sure that these pins are not being used for other purposes by checking the [E155 Development Board Schematic](/assets/doc/E155%20Development%20Board%20Schematic.pdf). Write down which pins you choose — you will wire the display to them in the next section.
 
 The pins connected to `s[3:0]` must be configured with pull-up resistors to avoid invalid logic levels. The exact value is not very important; a value between 10 kΩ and 100 kΩ is generally sufficient. See [Configuring Pull-Up Resistors](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#pull-up-resistors) in the Lattice Radiant tutorial.
 
@@ -244,15 +263,21 @@ The 7-segment display will be used throughout the class for general output of nu
 
 Each segment of the display works as an independent LED. Therefore, the same current-limiting concern with the LEDs applies to the display as to the on-board bank of LEDs. You can limit the current into each segment of the display the same way you did for the LEDs on board, adding a suitable resistor to provide roughly 5-20 mA of current. You can find resistors and other such components in the supply cabinet or in the stockroom.
 
-Consult the data sheet for the pinout of the common anode dual seven segment display. All seven segments share the same anode, which should be connected to VCC (3.3 V). Each of the segments has its own cathode, which can be pulled to 0 to turn on the segments.
+The course datasheet is for the **`MAN6410`** — a two-digit, common anode display from the Fairchild MAN6400 series ([datasheet](/assets/doc/MAN64x0%20Series.pdf)). If you have a single-digit display instead, the common anode member of the same series is the `MAN6460`, and the pinout section of the datasheet covers both.
+
+Whatever part you have, **confirm it is common anode before wiring anything.** The series also includes common cathode models (`MAN6440`, `MAN6980`) that are wired the opposite way and will not work with the circuit described here.
+
+All seven segments of a digit share the same anode, which should be connected to 3.3 V. Each segment has its own cathode, which can be pulled to 0 to turn the segment on.
 
 ::: {.callout-warning}
 Be sure to turn power off before wiring circuits on your board.
 :::
 
-You can choose either side of the display to use in this lab. After deciding on which side to use, you will need to connect the VDD pin of that side (either VDD1 or VDD2) to 3.3 V. Then connect the input pins of the same side of the display to the header pins you chose during pin assignment. Remember to add suitable resistors between each of the inputs to the display and the header pins.
+You only need one digit for this lab. If you have a two-digit part, pick whichever digit you like and ignore the other one — each digit has its own common anode pin, so the digit you don't use simply stays unpowered.
 
-These LEDs are common anode LEDs. That is, all the anodes from the LEDs are connected to a single VDD (VDD1 or VDD2). You are driving the cathode of each LED. Given this information, you might need to modify your Verilog file. Do so in the simplest way possible.
+Connect the common anode pin for your chosen digit to 3.3 V. Then connect that digit's seven segment pins to the header pins you selected during pin assignment, with a suitable current-limiting resistor in series with each one. Consult the datasheet pinout to identify which physical pin is which segment, since the numbering is not in alphabetical order.
+
+Because the segments are common anode, you drive each segment by pulling its cathode **low**. A logic 0 turns a segment on and a logic 1 turns it off — the opposite of what you might assume. Given this, you may need to adjust your seven-segment decoder. Do so in the simplest way possible.
 
 ### Generating the FPGA Configuration Files
 

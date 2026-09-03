@@ -167,6 +167,38 @@ Both styles run in the simulator exactly the same way — only the source of the
 The test vector style shines when you have many cases of the same shape; stim/assert shines for sequential logic like an FSM or clock divider.
 :::
 
+### Designing a Good Testbench {#designing-a-good-testbench}
+
+Before writing any testbench code, decide what "tested" actually means for the module in front of you. **A testbench should cover all of the functionality of the module it tests** — every output behavior the module is responsible for should be exercised and checked. How much work that is depends on what kind of module it is.
+
+**Combinational modules — exercise every input combination.**
+A purely combinational module has no memory, so its output depends only on its current inputs. That makes complete coverage achievable: drive every possible input combination and check every output. A seven-segment decoder driven by a 4-bit input has just 16 combinations, so there is no excuse for testing only a few of them. If the input space is small, test all of it.
+
+**Sequential modules — exercise every state transition, within reason.**
+A sequential module's output depends on its history, so it is not enough to try each input once; you need to check the *transitions* between states. Nominally that means covering every state transition. In practice this is often impractical — a counter that divides a 48 MHz clock down to a few Hz has millions of states, and simulating all of them is neither useful nor fast.
+
+Instead, test the *features* rather than every count value:
+
+- Does reset return the counter to zero?
+- Does the enable input actually start and stop counting?
+- Does the counter wrap back to zero when it reaches its max count?
+
+**Top-level modules — only test what the module tests didn't cover.**
+Once each submodule is verified on its own, re-testing that logic through the top level adds nothing. A top-level testbench should target what is genuinely new at that level:
+
+- Are the submodules wired together correctly?
+- Does anything instantiated only at the top level work — for example, does the `HSOSC` produce a clock?
+- Does logic written directly in the top level (such as an `assign` statement) behave correctly?
+
+Note that a top-level module which instantiates `HSOSC` generates its own clock internally, so its testbench should *not* drive a `clk` input. Let the oscillator run and simulate long enough to observe the behavior you care about.
+
+::: {.callout-important title="Working on Lab 1? Return to the lab now"}
+That is everything you need to plan your Lab 1 testbenches.
+Go back to [Lab 1 → Automatic Testing with a Testbench](/lab/lab1/#automatic-testing-with-a-testbench) and write yours.
+
+The worked example below uses the *test vector* style on a full adder. Lab 1 asks for the `stim/assert` style instead, so read it only if you want a second example of testbench structure.
+:::
+
 ### Creating the Testbench
 
 Create a new SystemVerilog file `fulladder_tb.sv` and add it to your project.
