@@ -17,6 +17,7 @@ The focus of lab 1 specifications, in addition to proving hardware functionality
 - [ ] All digits are unique (e.g., `0x6` and `0xb` are different shapes)
 - [ ] DIP switches to control the display are arranged so that each adjacent switch controls the next bit. (e.g., the switch for bit 0 is next to the switch for bit 1, which is next to the switch for bit 2, etc.)
 - [ ] LEDs display the specified logic operations properly.
+- [ ] Resistors are in series with FPGA pins so that they correctly limit current
 
 #### Excellence
 
