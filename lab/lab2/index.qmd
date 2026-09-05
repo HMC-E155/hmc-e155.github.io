@@ -32,7 +32,7 @@ By the end of this lab you will have...
 
 Display two independent hexadecimal numbers on your dual seven-segment display. Use a DIP switch and four other input pins (possibly connected to a DIP switch on a breadboard) to provide the data for two hexadecimal numbers. You **must** use a single seven-segment decoder HDL module to drive the cathodes for both digits on the display, which therefore must be wired for multiplexed operation. The seven segment display should be oriented to display the numbers upright to the viewer.
 
-Also, build a polling circuit that has four outputs that rotate between exerting 1000, 0100, 0010, and 0001 such that each bit toggles at a rate of 2 Hz. Attach the outputs of the polling circuit to the rows of a keypad (see below), and attach the columns to input pins. Read the input pins with your Verilog module and drive them back out onto LEDs. The result of this arrangement should be that you can press a key on the keypad to cause an LED to blink. This should be tolerant of multiple key presses, so be mindful of pullup (or pulldown) resistors and logic levels.
+Also, build a scanning circuit that has four outputs that rotate between exerting 1000, 0100, 0010, and 0001 such that each bit toggles at a rate of 2 Hz. Attach the outputs of the scanning circuit to the rows of a keypad (see below), and attach the columns to input pins. Read the input pins with your Verilog module and drive them back out onto LEDs. The result of this arrangement should be that you can press a key on the keypad to cause an LED to blink. This should be tolerant of multiple key presses, so be mindful of pullup (or pulldown) resistors and logic levels.
 
 ## Discussion
 
@@ -49,9 +49,9 @@ A matrix keypad has four rows and four columns, connected to 8 pins, as shown be
 Pinout of keypads.
 :::
 
-One way to interrogate a matrix keypad is to assert signals on each row one at a time, then observe the values of the columns.  The polling module you are building is designed to carry out just such an interrogation. 
+One way to interrogate a matrix keypad is to assert signals on each row one at a time, then observe the values of the columns.  The scanning module you are building is designed to carry out just such an interrogation. 
 
-The specifications are prescriptive about the structure of this polling module: it should consist of a counter and some output logic. That means that the polling module is a kind of non-canonical state machine: the state register and state update logic are contained in the counter, and the output logic you will implement converts from the state (the count) to the four outputs.
+The specifications are prescriptive about the structure of this scanning module: it should consist of a counter and some output logic. That means that the scanning module is a kind of non-canonical state machine: the state register and state update logic are contained in the counter, and the output logic you will implement converts from the state (the count) to the four outputs.
 
 ## Hints
 
