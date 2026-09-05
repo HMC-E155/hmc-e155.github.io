@@ -14,14 +14,46 @@ The lab 2 specifications are trying to get you to focus on two new topics: const
 
 - [ ] Seven segment displays are same brightness regardless of how many segments are lit
 - [ ] Resistors are in series with FPGA pins so that they correctly limit current
+- [ ] Polling signal appears on LEDs when appropriate buttons are depressed on the keypad.
 
 #### Excellence
 
 - [ ] No noticeable bleeding of the digits between displays
 - [ ] No flickering on the individual digits
-- [ ] Current draw/sink on all FPGA pins are below the currents specified in the recommended operating conditions. Claims are backed up by calculations and reference to the appropriate items on the datasheet.
-- [ ] Digits on the seven-segment display are upright to the viewer.
 
 ### Verilog Structure and Style Specifications
 
+#### Proficiency
+
 - [ ] HDL design includes only a single seven-segment decoder module that is time multiplexed.
+- [ ] Top design includes instances of HSOSC, seven-segment module, multiplexing counter module, polling module and assign statements to implement multiplexing.
+- [ ] Polling module includes instances of a polling counter and assign statements that convert from the count to LED values.
+- [ ] No counters implemented inline, all of them are contained in modules.
+
+#### Excellence
+
+- [ ] All counter modules (polling and multiplexing) are parametrized instances of the counter module from lab 1.
+
+### Simulation Specifications
+
+#### Proficiency
+
+- [ ] No repeat simulations from lab 1. Those modules have already been verified!
+- [ ] QuestaSim simulations carried out (possibly manually) for the polling module. 
+- [ ] All simulations captured as legible waveform screenshots in report.
+- [ ] Test waves for 
+- [ ] 
+
+#### Excellence
+
+- [ ] adsf
+
+### Other Documentation
+
+#### Proficiency
+
+- [ ] Current draw/sink on all FPGA pins are below the currents specified in the recommended operating conditions. Claims are backed up by calculations and reference to the appropriate items on the datasheet.
+
+#### Excellence
+
+- [ ] No errors in the calculations (correct forward voltage read off the datasheet, proper voltages used, etc.)

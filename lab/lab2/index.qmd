@@ -25,17 +25,29 @@ By the end of this lab you will have...
 
 * Implemented a time-multiplexing scheme to drive two seven-segment displays with a single set of FPGA I/O pins.
 * Built a simple transistor circuit to drive large currents from the FPGA pins.
+* Installed a keypad and verified that logic signals can pass through it.
 * Practiced your ability to build Verilog systems in a modular way.
 
 ## Requirements
 
-Display two independent hexadecimal numbers on your dual seven-segment display. Use a DIP switch and four other input pins (possibly connected to a DIP switch on a breadboard) to provide the data for two hexadecimal numbers. You **must** use a single seven-segment decoder HDL module to drive the cathodes for both digits on the display, which therefore must be wired for multiplexed operation. Also, display the sum of the numbers on five LEDs. The seven segment display should be oriented to display the numbers upright to the viewer.
+Display two independent hexadecimal numbers on your dual seven-segment display. Use a DIP switch and four other input pins (possibly connected to a DIP switch on a breadboard) to provide the data for two hexadecimal numbers. You **must** use a single seven-segment decoder HDL module to drive the cathodes for both digits on the display, which therefore must be wired for multiplexed operation. The seven segment display should be oriented to display the numbers upright to the viewer.
+
+Also, build a polling circuit that has four outputs that rotate between exerting 1000, 0100, 0010, and 0001 such that each bit toggles at a rate of 2 Hz. Attach the outputs of the polling circuit to the rows of a keypad (see below), and attach the columns to input pins. Read the input pins with your Verilog module and drive them back out onto LEDs. The result of this arrangement should be that you can press a key on the keypad to cause an LED to blink. This should be tolerant of multiple key presses, so be mindful of pullup (or pulldown) resistors and logic levels.
 
 ## Discussion
 
 Time-multiplexing is a technique to share a common expensive hardware resource for several purposes at different times. For example, the multicycle processor in E85 multiplexed the memory for both instruction and data access and multiplexed the ALU for data processing instructions, branch calculations, and program counter increments.
 
 In this lab, you will time-multiplex your seven-segment decoder module to run both halves of a dual display. A convenient way to control which half is active is to turn ON the common anode of only one display at a time. The anode requires substantial current, more than an FPGA output pin can drive. You can use a transistor to drive the large current. The lab has a stock of 2N3906 PNP transistors suitable for this purpose. Be sure to limit the base current so that you don’t draw too much current from the FPGA pin and choose a suitable switching speed. If you switch too slowly, your eye will notice the flicker. If you switch too fast for the electronics, the two digits will bleed together.
+
+A matrix keypad has four rows and four columns, connected to 8 pins, as shown below for two different models. When you press a key, the corresponding row and column are connected. Check this with a multimeter to confirm your pinout.
+
+::: {#fig-keypad-pinout}
+
+![](images/keypad_pinout.png){width=90%}
+
+Pinout of keypads.
+:::
 
 ## Hints
 
