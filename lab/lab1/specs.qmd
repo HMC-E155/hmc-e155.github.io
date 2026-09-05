@@ -32,7 +32,7 @@ The focus of lab 1 specifications, in addition to proving hardware functionality
 - [ ] Switch-to-7-segment logic contained in a module 
 - [ ] Switch-to-7-segment logic uses a case statement to select the correct segment pattern, and doesn't imply a latch
 - [ ] Counter logic contained in a module 
-- [ ] Counter includes reset, enable and settable (possibly hardcoded) max count features. The max count feature sets the counter back to zero when the count reaches the max value.
+- [ ] Counter includes reset, enable and settable (possibly hardcoded) max count features. The enable feature causes the counter to only increment when an enable pin is asserted. The max count feature causes the counter to set its count back to zero when the count reaches the max value.
 - [ ] Counter is implemented using a single always_ff block.
 - [ ] Top level consists only of instantiated modules and switch-to-LED logic.
 - [ ] Descriptive filename that matches module name (e.g., `lab2_jb.sv`)
