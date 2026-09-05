@@ -49,6 +49,10 @@ A matrix keypad has four rows and four columns, connected to 8 pins, as shown be
 Pinout of keypads.
 :::
 
+One way to interrogate a matrix keypad is to assert signals on each row one at a time, then observe the values of the columns.  The polling module you are building is designed to carry out just such an interrogation. 
+
+The specifications are prescriptive about the structure of this polling module: it should consist of a counter and some output logic. That means that the polling module is a kind of non-canonical state machine: the state register and state update logic are contained in the counter, and the output logic you will implement converts from the state (the count) to the four outputs.
+
 ## Hints
 
 Look at your RTL schematic in your synthesis tool (`Tools -> Netlist Analyzer`). Understand why your code produces the hardware you see. Be sure your combinational logic doesn’t have any registers. Be sure your logic has no latches or tristate buffers. The oscilloscope is handy for tracking down timing problems.

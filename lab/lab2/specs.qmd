@@ -20,6 +20,7 @@ The lab 2 specifications are trying to get you to focus on two new topics: const
 
 - [ ] No noticeable bleeding of the digits between displays
 - [ ] No flickering on the individual digits
+- [ ] Polling signal continues to be displayed under different keypress conditions, including multiple touches on rows or columns (at minimum 2 simultaneous presses).
 
 ### Verilog Structure and Style Specifications
 
@@ -27,7 +28,8 @@ The lab 2 specifications are trying to get you to focus on two new topics: const
 
 - [ ] HDL design includes only a single seven-segment decoder module that is time multiplexed.
 - [ ] Top design includes instances of HSOSC, seven-segment module, multiplexing counter module, polling module and assign statements to implement multiplexing.
-- [ ] Polling module includes instances of a polling counter and assign statements that convert from the count to LED values.
+- [ ] Polling module includes instances of a polling counter and assign statements that convert from the counter output to output values. 
+- [ ] Polling module is resettable and enable-able.
 - [ ] No counters implemented inline, all of them are contained in modules.
 
 #### Excellence
@@ -39,14 +41,13 @@ The lab 2 specifications are trying to get you to focus on two new topics: const
 #### Proficiency
 
 - [ ] No repeat simulations from lab 1. Those modules have already been verified!
-- [ ] QuestaSim simulations carried out (possibly manually) for the polling module. 
+- [ ] QuestaSim simulations carried out (possibly manually) for the polling module and the top module. 
 - [ ] All simulations captured as legible waveform screenshots in report.
-- [ ] Test waves for 
-- [ ] 
 
 #### Excellence
 
-- [ ] adsf
+- [ ] Automatic testbench for the polling module that demonstrates all four output transitions, enable and reset features.
+- [ ] Automatic testbench for the top module that exercises multiplexing functionality and LED driving functionality.
 
 ### Other Documentation
 
