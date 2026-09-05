@@ -55,7 +55,7 @@ Soldering is a skill that you need to practice just like anything else. The most
 Below is a recommended soldering order.
 
 
-1. Solder the voltage regulators. Put a bit of solder on the big square pad and reflow while bringing the regulator on top in order to solder it. You can apply heat to the pad via the metal edge at the top of the regulator.
+1. Solder the voltage regulators. Put a bit of solder on the big square pad and reflow while bringing the regulator on top in order to solder it. You can apply heat to the pad via the metal edge at the top of the regulator. Be sure to check the [E155 Development Board Schematic](/assets/doc/E155%20Development%20Board%20Schematic.pdf) before you solder; swapping the 3.3V and 5V regulators is often a \textbf{board-destroying mistake}.
 
 ::: {#fig-voltage-regulators}
 ![](images/board_vregs.jpg){fig-align="center" width=50%}

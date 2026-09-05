@@ -12,9 +12,7 @@ The focus of lab 1 specifications, in addition to proving hardware functionality
 
 #### Proficiency
 
-- [ ] Development board is fully assembled (e.g., all parts soldered)
-- [ ] Verilog module to control LEDs and a 7-segment display written
-- [ ] FPGA programmed with Verilog code.
+- [ ] Development board is fully assembled (e.g., all parts soldered) and FPGA is programmed with a Verilog design.
 - [ ] 7-segment display can display all sixteen hexadecimal digits from `0x0` through `0xF`
 - [ ] All digits are unique (e.g., `0x6` and `0xb` are different shapes)
 - [ ] DIP switches to control the display are arranged so that each adjacent switch controls the next bit. (e.g., the switch for bit 0 is next to the switch for bit 1, which is next to the switch for bit 2, etc.)
@@ -23,6 +21,7 @@ The focus of lab 1 specifications, in addition to proving hardware functionality
 #### Excellence
 
 - [ ] All digits are equally bright, regardless of the number of segments illuminated.
+- [ ] LED segments are fully off when disabled (no residual glow, check by shading it with you hand).
 
 ### Verilog Structure and Style Specifications
 
@@ -56,6 +55,7 @@ The focus of lab 1 specifications, in addition to proving hardware functionality
 - [ ] QuestaSim simulation with automatic testbenches for each 7-segment module covering all input-output pairs.
 - [ ] QuestaSim simulation with automatic testbenches for the counter module. This simulation does not need to cover all possible states, but should show the reset, enable and max count features working correctly. These features may be captured in separate screenshots for legibility.
 - [ ] QuestaSim simulation with automatic testbenches for the top module showing behaviors not-covered by module-level simulations: "are the connections to submodules correct?", "does the HSOSC work?" and "does the assign 1 liner work?".
+- [ ] All testbenches in separate modules and files, mirroring structure of Verilog files.
 
 ### Schematic and Block Diagram Specifications
 
