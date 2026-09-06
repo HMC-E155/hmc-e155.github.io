@@ -75,7 +75,7 @@ The focus of lab 1 specifications, in addition to proving hardware functionality
 #### Excellence
 
 - [ ] No errors in LED current calculation (correct VON selected for current level, VON included in calculation, etc.).
-- [ ] No errors in LED frequency calculations (not off by a factor of 2, uses appripriate clock rates, etc.)
+- [ ] No errors in LED frequency calculations (not off by a factor of 2, uses appropriate clock rates, etc.)
 
 {{< include  ../specs/lab-writeup-specs.qmd >}} 
 
