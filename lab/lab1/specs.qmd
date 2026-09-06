@@ -17,12 +17,13 @@ The focus of lab 1 specifications, in addition to proving hardware functionality
 - [ ] All digits are unique (e.g., `0x6` and `0xb` are different shapes)
 - [ ] DIP switches to control the display are arranged so that each adjacent switch controls the next bit. (e.g., the switch for bit 0 is next to the switch for bit 1, which is next to the switch for bit 2, etc.)
 - [ ] LEDs display the specified logic operations properly.
-- [ ] Resistors are in series with FPGA pins so that they correctly limit current
+- [ ] Resistors are in series with FPGA pins so that they correctly limit current, not in shut to ground.
 
 #### Excellence
 
 - [ ] All digits are equally bright, regardless of the number of segments illuminated.
 - [ ] LED segments are fully off when disabled (no residual glow, check by shading it with you hand).
+- [ ] LED blink rate is close to 2.4Hz. A 1.2Hz or 4.8Hz blink rate fails this spec. This requires the 7 segment display to be powered off of 3.3V, not 5V.
 
 ### Verilog Structure and Style Specifications
 
