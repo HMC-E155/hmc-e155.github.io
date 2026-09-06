@@ -6,7 +6,7 @@ format:
 
 ## Lab 2 Specifications
 
-The lab 2 specifications are trying to get you to focus on two new topics: constructing large Verilog systems by intelligently reusing modules, and clean schematic construction. Lab 2 features a lot of bread-boarded hardware, so it will also test your breadboard construction and debugging skills.
+The lab 2 specifications are trying to get you to focus on two new topics: constructing large Verilog systems by intelligently reusing modules, and clean schematic construction. 
 
 ### Hardware Specifications
 
@@ -58,3 +58,11 @@ The lab 2 specifications are trying to get you to focus on two new topics: const
 #### Excellence
 
 - [ ] No errors in the calculations (correct forward voltage read off the datasheet, proper voltages used, etc.)
+
+{{< include  ../specs/schematic-specs.qmd >}} 
+
+{{< include  ../specs/lab-writeup-specs.qmd >}} 
+
+## FOR REFERENCE, NOT YET IN EFFECT
+
+{{< include  ../specs/block-diagram-specs.qmd >}}
