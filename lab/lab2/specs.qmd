@@ -49,6 +49,12 @@ The lab 2 specifications are trying to get you to focus on two new topics: const
 - [ ] Automatic testbench for the scanning module that demonstrates all four output transitions, enable and reset features.
 - [ ] Automatic testbench for the top module that exercises multiplexing functionality and LED driving functionality.
 
+### Block Diagram Specs
+
+#### Proficiency and Excellence
+
+- [ ] Block diagram exists and a good faith effort was made to follow the specs below.  Block diagram specs in full effect in lab 3.
+
 ### Other Documentation
 
 #### Proficiency
