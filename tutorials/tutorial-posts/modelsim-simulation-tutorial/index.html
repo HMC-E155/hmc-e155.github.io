@@ -281,11 +281,11 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="forcing-signals">Simple Simulations by Forcing Signals</h2>
 <p>If you have a simple design and want to quickly check that it is working, you can use the <code>force</code> command in the ModelSim transcript window to apply test inputs, then advance time with <code>run</code>.</p>
 <p>For example, to step a 4-bit input <code>s</code> through its first few values:</p>
-<pre><code>force s 0000
+<pre><code>force s 4'b0000
 run 100
-force s 0001
+force s 4'b0001
 run 100
-force s 0010
+force s 4'b0010
 run 100
 ...</code></pre>
 <div class="callout callout-style-default callout-tip callout-titled" title="Watch out for optimization">
@@ -348,7 +348,7 @@ module fulladder(
 
 endmodule</code></pre>
 <p>Compile your file via the <code>Compile</code> menu, then start the simulation using <code>Simulate → Start Simulation...</code>. You will see the GUI change and open up the Objects and Wave panes. You can always toggle windows on or off as desired using the View toolbar menu.</p>
-<p>Add the signals you care about by selecting them in the Objects pane and dragging them into the Wave pane. The inputs start floating (HiZ), so initialize them with <code>force &lt;Signal Name&gt; &lt;Signal Value&gt;</code> in the Transcript pane. Force <code>A</code>, <code>B</code>, and <code>Cin</code> to some values of your choosing and then run the simulation for 10 time units by typing <code>run 10</code>. The Wave window will advance the appropriate number of time points, displaying the values of the signals.</p>
+<p>Add the signals you care about by selecting them in the Objects pane and dragging them into the Wave pane. The inputs start floating (HiZ), so initialize them with <code>force &lt;Signal Name&gt; &lt;Signal Value&gt;</code> in the Transcript pane. Signal value must have its bit width specified. Force <code>A</code>, <code>B</code>, and <code>Cin</code> to some values of your choosing and then run the simulation for 10 time units by typing <code>run 10</code>. The Wave window will advance the appropriate number of time points, displaying the values of the signals.</p>
 <div id="fig-sim-waves-force" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-sim-waves-force-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
