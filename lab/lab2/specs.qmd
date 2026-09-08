@@ -27,7 +27,7 @@ The lab 2 specifications are trying to get you to focus on two new topics: const
 #### Proficiency
 
 - [ ] HDL design includes only a single seven-segment decoder module that is time multiplexed.
-- [ ] Top design only includes instances of HSOSC, seven-segment module, multiplexing counter module, scanning module and assign statements to implement multiplexing.
+- [ ] Top design only includes instances of HSOSC, seven-segment module, multiplexing counter module, scanning module and assign statements to implement multiplexing and scanning passthrough.
 - [ ] Scanning module only includes instances of a counter and assign statements that convert from the counter output to output values. 
 - [ ] Scanning module is resettable and enable-able.
 - [ ] No counters implemented inline, all of them are contained in modules.
