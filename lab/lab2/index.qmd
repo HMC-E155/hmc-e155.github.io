@@ -60,7 +60,7 @@ However, multiple touches on the keypad can result in unusual electrical conditi
 Example of a transistor converting a pin into an open-collector output.
 :::
 
-Open drain outputs _must_ be used with a pullup transistor.  If there is no pullup, then output cannot ever reach VDD: remember, when the output is deasserted the transistor is off and the output is floating.  Adding pullups to the input pins (the colums of the keypad), or even relaying on internal pullups, can suffice to pull up signals in this case.
+Open drain outputs _must_ be used with a pullup resistor.  If there is no pullup, then output cannot ever reach VDD: remember, when the output is deasserted the transistor is off and the output is floating.  Adding pullups to the input pins (the colums of the keypad), or even relaying on internal pullups, can suffice to pull up signals in this case.
 
 The specifications are prescriptive about the structure of this scanning module: it should consist of a counter and some output logic. That means that the scanning module is a kind of non-canonical state machine: the state register and state update logic are contained in the counter, and the output logic you will implement converts from the state (the count) to the four outputs.
 
