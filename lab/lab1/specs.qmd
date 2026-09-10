@@ -28,17 +28,17 @@ The focus of lab 1 specifications, in addition to proving hardware functionality
 
 #### Proficiency
 
-- [ ] assign used to implement switch-to-LED logic in the top level module. (Note that it is standard practice to avoid putting 1 liner logic in a module; doing so would add more lines of codes than it saves!)
-- [ ] Switch-to-7-segment logic contained in a module 
+- [ ] assign used to implement switch-to-LED logic in the top level module. (Note that it is standard practice to avoid putting 1 liner logic in a module; doing so would add more lines of code than it saves!)
+- [ ] Switch-to-7-segment logic contained in a module
 - [ ] Switch-to-7-segment logic uses a case statement to select the correct segment pattern, and doesn't imply a latch
-- [ ] Counter logic contained in a module 
+- [ ] Counter logic contained in a module
 - [ ] Counter includes reset, enable and settable (possibly hardcoded) max count features. The max count feature sets the counter back to zero when the count reaches the max value.
 - [ ] Counter is implemented using a single always_ff block.
 - [ ] Top level consists only of instantiated modules and switch-to-LED logic.
-- [ ] Descriptive filename that matches module name (e.g., `lab2_jb.sv`)
+- [ ] Descriptive filename that matches module name (e.g., `lab1_jb.sv`)
 - [ ] One module per file with a descriptive name
 - [ ] Descriptive variable names
-- [ ] Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase ))
+- [ ] Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase))
 
 #### Excellence
 
@@ -55,7 +55,7 @@ The focus of lab 1 specifications, in addition to proving hardware functionality
 
 - [ ] QuestaSim simulation with automatic testbenches for each 7-segment module covering all input-output pairs.
 - [ ] QuestaSim simulation with automatic testbenches for the counter module. This simulation does not need to cover all possible states, but should show the reset, enable and max count features working correctly. These features may be captured in separate screenshots for legibility.
-- [ ] QuestaSim simulation with automatic testbenches for the top module showing behaviors not-covered by module-level simulations: "are the connections to submodules correct?", "does the HSOSC work?" and "does the assign 1 liner work?".
+- [ ] QuestaSim simulation with automatic testbenches for the top module showing behaviors not covered by module-level simulations: "are the connections to submodules correct?", "does the HSOSC work?" and "does the assign 1 liner work?".
 
 ### Schematic and Block Diagram Specifications
 
@@ -73,12 +73,12 @@ The focus of lab 1 specifications, in addition to proving hardware functionality
 #### Excellence
 
 - [ ] No errors in LED current calculation (correct VON selected for current level, VON included in calculation, etc.).
-- [ ] No errors in LED frequency calculations (not off by a factor of 2, uses appripriate clock rates, etc.)
+- [ ] No errors in LED frequency calculations (not off by a factor of 2, uses appropriate clock rates, etc.)
 
-{{< include  ../specs/lab-writeup-specs.qmd >}} 
+{{< include  ../specs/lab-writeup-specs.qmd >}}
 
 ## FOR REFERENCE ONLY (NOT YET IN EFFECT)
 
-{{< include  ../specs/schematic-specs.qmd >}} 
+{{< include  ../specs/schematic-specs.qmd >}}
 
 {{< include  ../specs/block-diagram-specs.qmd >}}
