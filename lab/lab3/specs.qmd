@@ -8,80 +8,61 @@ format:
 
 Lab 3 represents the culmination of our practice with Verilog design. The specifications reflect that: the Verilog style and structure is relaxed to allow you to make more design choices, and the block diagram specs are in full force so that you effectively document your Verilog design. The specs are also strict about finite state machine format because that is a key learning goal in class.
 
+### Hardware Specifications
+
 #### Proficiency
 
-- [ ] Circuit correctly reads inputs from $4 \times 4$ keypad.
+- [ ] Circuit correctly reads inputs from $4 \times 4$ keypad when one digit is touched at a time.
 - [ ] Dual seven-segment display shows the last two hexadecimal digits pressed.
-- [ ] Most recent numeric entry is shown on the right.
-- [ ] Design does not lock up when multiple buttons are pressed at once. (i.e., it just holds the current values on the display and functions properly again when the buttons are released.)
-- [ ] Each button press registered only once (e.g., no switch bouncing)
-- [ ] Seven segment displays are same brightness regardless of how many segments are illuminated.
-- [ ] Design has no latches.
-- [ ] Design has no tristate buffers.
-- [ ] Report includes state transition diagram(s) illustrating the operation of the system.
+- [ ] Each button press registered only once.
 
 #### Excellence
 
 - [ ] Design uses synchronizers on asynchronous inputs to mitigate metastability.
 - [ ] Design only registers first button press if additional buttons are pressed down while holding down one button.
-- [ ] Keypad and seven-segment display are aligned in the same orientation (i.e., the top of the numbers on both are facing the same direction).
-- [ ] State transition diagram is completely specified (i.e., all transitions between states are specified, output conditions specified in each state)
-- [ ] Report includes state transition table to document the nextstate and output values for each state based on the current state and inputs.
-- [ ] Report explains tradeoffs between the chosen design decisions and alternatives (e.g., why did you select a certain switch debouncing strategy and what are the tradeoffs between your chosen method and others?).
-- [ ] State machines are implemented in canonical form (one state update block that controls only the machine's state, one next state block, and one output block).  
-- [ ] Other logic elements with state (like counters or synchronizers) are wrapped in appropriate modules and do not share blocks with FSMs.
-
-### Hardware Specifications
-
-#### Proficiency
-
-#### Excellence
+- [ ] Design does not lock up or otherwise misfire when multiple buttons are pressed at once. (i.e., it just holds the current values on the display, never displays a weird intermediate digit, and functions properly again when the buttons are released.)
 
 ### Verilog Structure and Style Specifications
 
 #### Proficiency
 
-- [ ] assign used to implement switch-to-LED logic in the top level module. (Note that it is standard practice to avoid putting 1 liner logic in a module; doing so would add more lines of codes than it saves!)
-- [ ] Switch-to-7-segment logic contained in a module 
-- [ ] Switch-to-7-segment logic uses a case statement to select the correct segment pattern, and doesn't imply a latch
-- [ ] Counter logic contained in a module 
-- [ ] Counter includes reset, enable and settable (possibly hardcoded) max count features. The max count feature sets the counter back to zero when the count reaches the max value.
-- [ ] Counter is implemented using a single always_ff block.
-- [ ] Top level consists only of instantiated modules and switch-to-LED logic.
-- [ ] Descriptive filename that matches module name (e.g., `lab2_jb.sv`)
-- [ ] One module per file with a descriptive name
-- [ ] Descriptive variable names
-- [ ] Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase ))
+- [ ] New finite state machines are implemented in canonical form: one state update block that controls only the machine's state, one next state block, and one output block. Counters, which you've already implemented, are excluded from this requirement even though they're technically FSMs.
+- [ ] Other logic elements with state (like counters or synchronizers) are wrapped in appropriate modules and are not instantiated or re-implemented inside of FSMs.
+- [ ] Counters are reused from previous designs.
+- [ ] Seven segment and multiplexing logic are reused from previous designs.
+- [ ] Top level module consists only of instantiated modules and trivial logic; don't introduce new state to verify at the top!
+- [ ] A debouncing strategy is implemented, you can't just count on a lucky keypad!
+- [ ] Asynchronous Inputs are synchronized.
+- [ ] Style conventions from previous labs (module names, descriptive variables, etc.) are still followed. See [HDL specs](../specs/hdl-specs.qmd)
 
 #### Excellence
 
-- [ ] Verilog parameters used to specify the width and maximum count values for the counter module
+- [ ] Design is fully synchronous, strobing enables as appropriate to manage multiple clock rates.
 
 ### Simulation Specifications
 
 #### Proficiency
 
-- [ ] QuestaSim simulations carried out (possibly manually) for the 7-segment module.
-- [ ] All simulations captured as legible waveform screenshots in report.
+- [ ] All modules, including top, are covered by an automatic testbench that fully exercises combinational behavior (for combinational modules), key state transitions (for sequential modules), or interconnections and otherwise untestable logic and signals (for the top).
+- [ ] All simulations of new modules are captured as legible waveform screenshots in report. Previously verified modules don't need to be shown again, though do provide links to previous labs in case we need to check something.
 
 #### Excellence
 
-- [ ] QuestaSim simulation with automatic testbenches for each 7-segment module covering all input-output pairs.
-- [ ] QuestaSim simulation with automatic testbenches for the counter module. This simulation does not need to cover all possible states, but should show the reset, enable and max count features working correctly. These features may be captured in separate screenshots for legibility.
-- [ ] QuestaSim simulation with automatic testbenches for the top module showing behaviors not-covered by module-level simulations: "are the connections to submodules correct?", "does the HSOSC work?" and "does the assign 1 liner work?".
+- [ ] Keypad stimulus implemented 
 
 ### Other Documentation
 
 #### Proficiency
 
-- [ ] Calculations provided to demonstrate that the current draw for each segment in the seven-segment display is within recommended operating conditions.
-- [ ] Calculations provided to demonstrate that the flashing rate of the LED is 2Hz.
-
+- [ ] Report includes state transition diagram(s) illustrating the operation of the system.
+- [ ] Report includes state transition table to document the nextstate and output values for each state based on the current state and inputs.
+- [ ] Report includes synthesizer output files showing that design has no latches and no tristate buffers.
 
 #### Excellence
 
-- [ ] No errors in LED current calculation (correct VON selected for current level, VON included in calculation, etc.).
-- [ ] No errors in LED frequency calculations (not off by a factor of 2, uses appripriate clock rates, etc.)
+- [ ] State transition diagram and table are completely specified and error free (i.e., all transitions between states are specified, output conditions specified in each state)
+- [ ] Report explains your switch debouncing strategy and discusses the tradeoffs between your chosen method and others.
+- [ ] Report explains your FSM partitioning, including decisions about what FSMs communicate, and discusses tradeoffs between your chosen method and others.
 
 {{< include  ../specs/schematic-specs.qmd >}} 
 
