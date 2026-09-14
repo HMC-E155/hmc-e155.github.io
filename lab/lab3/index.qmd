@@ -35,7 +35,7 @@ Each key press should be recorded exactly once, at the time the key is pressed, 
 
 ## Discussion
 
-Mechanical switches are prone to a phenomenon called switch bounce, where the switch makes and breaks its connection repeatedly on a time scale of microseconds to a few milliseconds. You should design your system in such a way that a single keypress registers only once even if there is some momentary bounce. You can measure switch bounce with an oscilloscope (), and that may be a worthwhile effort before committing to a design.
+Mechanical switches are prone to a phenomenon called switch bounce, where the switch makes and breaks its connection repeatedly on a time scale of microseconds to a few milliseconds. You should design your system in such a way that a single keypress registers only once even if there is some momentary bounce. You can measure switch bounce with an oscilloscope (voltage source on a row, pulldown and an oscilloscope probe on a column), and that may be a worthwhile effort before committing to a design.
 
 This is a thinking person’s lab. If you thoroughly understand the problem and design a simple scanner circuit, you can complete the lab fairly efficiently. If you go by trial and error, you may find yourself in lab indefinitely. You will need to generate rather complex stimuli to simulate your keypad scanner. Many students have been tempted to skip simulating and debug on the real hardware. Almost all have regretted it. Similarly, some students have been lured down the path of asynchronous design, at their peril.
 
