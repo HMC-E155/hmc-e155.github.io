@@ -50,11 +50,11 @@ If you have a simple design and want to quickly check that it is working, you ca
 For example, to step a 4-bit input `s` through its first few values:
 
 ```
-force s 0000
+force s 4'b0000
 run 100
-force s 0001
+force s 4'b0001
 run 100
-force s 0010
+force s 4'b0010
 run 100
 ...
 ```
@@ -114,7 +114,7 @@ You will see the GUI change and open up the Objects and Wave panes.
 You can always toggle windows on or off as desired using the View toolbar menu.
 
 Add the signals you care about by selecting them in the Objects pane and dragging them into the Wave pane.
-The inputs start floating (HiZ), so initialize them with `force <Signal Name> <Signal Value>` in the Transcript pane.
+The inputs start floating (HiZ), so initialize them with `force <Signal Name> <Signal Value>` in the Transcript pane. Signal value must have its bit width specified.
 Force `A`, `B`, and `Cin` to some values of your choosing and then run the simulation for 10 time units by typing `run 10`.
 The Wave window will advance the appropriate number of time points, displaying the values of the signals.
 

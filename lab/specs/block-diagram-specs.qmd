@@ -11,7 +11,7 @@
 - [ ] Module ports are represented by pin symbols on the boundary of the module and labeled with port names
 - [ ] All nets internal to the module are labeled, even when they share a name with a port on a module/submodule boundary.
 
- #### Excellence
+#### Excellence
 
 - [ ] Appropriate use of bus notation for multi-bit signals (e.g., `data[7:0]` for an 8-bit bus), including fan-in and fan-out when needed.
 - [ ] Appropriate use of implicit connections (i.e.: connect-by-label-name) to reduce routing connection

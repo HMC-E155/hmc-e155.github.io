@@ -6,4 +6,69 @@ format:
 
 ## Lab 2 Specifications
 
-Under construction.
+The lab 2 specifications are trying to get you to focus on two new topics: constructing large Verilog systems by intelligently reusing modules, and clean schematic construction. 
+
+### Hardware Specifications
+
+#### Proficiency
+
+- [ ] Resistors are in series with FPGA pins so that they correctly limit current
+- [ ] Scanning signal appears on LEDs when appropriate buttons are depressed on the keypad.
+
+#### Excellence
+
+- [ ] Seven segment displays are same brightness regardless of how many segments are lit
+- [ ] No noticeable bleeding of the digits between displays
+- [ ] No flickering on the individual digits
+- [ ] Scanning signal continues to be displayed under different keypress conditions, including multiple touches on rows or columns (at minimum 2 simultaneous presses).
+
+### Verilog Structure and Style Specifications
+
+#### Proficiency
+
+- [ ] HDL design includes only a single seven-segment decoder module that is time multiplexed.
+- [ ] Top design only includes instances of HSOSC, seven-segment module, multiplexing counter module, scanning module and assign statements to implement multiplexing and scanning passthrough.
+- [ ] Scanning module only includes instances of a counter and assign statements that convert from the counter output to output values. 
+- [ ] Scanning module is resettable and enable-able.
+- [ ] No counters implemented inline, all of them are contained in modules.
+
+#### Excellence
+
+- [ ] All counter modules (scanning and multiplexing) are parametrized instances of the counter module from lab 1.
+
+### Simulation Specifications
+
+#### Proficiency
+
+- [ ] No repeat simulations from lab 1. Those modules have already been verified!
+- [ ] QuestaSim simulations carried out (possibly manually) for the scanning module and the top module. 
+- [ ] All simulations captured as legible waveform screenshots in report.
+
+#### Excellence
+
+- [ ] Automatic testbench for the scanning module that demonstrates all four output transitions, enable and reset features.
+- [ ] Automatic testbench for the top module that exercises multiplexing functionality and LED driving functionality.
+
+### Block Diagram Specs
+
+#### Proficiency and Excellence
+
+- [ ] Block diagram exists and a good faith effort was made to follow the specs below.  Block diagram specs in full effect in lab 3.
+
+### Other Documentation
+
+#### Proficiency
+
+- [ ] Current draw/sink on all FPGA pins are below the currents specified in the recommended operating conditions. Claims are backed up by calculations and reference to the appropriate items on the datasheet.
+
+#### Excellence
+
+- [ ] No errors in the calculations (correct forward voltage read off the datasheet, proper voltages used, etc.)
+
+{{< include  ../specs/schematic-specs.qmd >}} 
+
+{{< include  ../specs/lab-writeup-specs.qmd >}} 
+
+## FOR REFERENCE, NOT YET IN EFFECT
+
+{{< include  ../specs/block-diagram-specs.qmd >}}
