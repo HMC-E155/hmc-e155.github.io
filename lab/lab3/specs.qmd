@@ -35,7 +35,7 @@ Lab 3 represents the culmination of our practice with Verilog design. The specif
 
 #### Excellence
 
-- [ ] Finite state machines are all implemented in an appropriate form that we discussed in lecture: canonical, non-canonical or communicating. Be especially careful to avoid embedding one state machine inside another (e.g.: counter embedded inside of canonical form instead of building communicating modules.)
+- [ ] Finite state machines are all implemented in an appropriate form that we discussed in lecture: canonical, non-canonical (e.g.: instantiated counter + output logic), or communicating. Be especially careful to avoid embedding one state machine inside another (e.g.: counter embedded inside of canonical form instead of building communicating modules.)
 - [ ] Design is fully synchronous, strobing enables as appropriate to manage multiple clock rates.
 
 ### Simulation Specifications
