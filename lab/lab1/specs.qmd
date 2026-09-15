@@ -29,8 +29,8 @@ The focus of lab 1 specifications, in addition to proving hardware functionality
 
 #### Proficiency
 
-- [ ] assign used to implement switch-to-LED logic in the top level module. (Note that it is standard practice to avoid putting 1 liner logic in a module; doing so would add more lines of codes than it saves!)
-- [ ] Switch-to-7-segment logic contained in a module 
+- [ ] assign used to implement switch-to-LED logic in the top level module. (Note that it is standard practice to avoid putting 1 liner logic in a module; doing so would add more lines of code than it saves!)
+- [ ] Switch-to-7-segment logic contained in a module
 - [ ] Switch-to-7-segment logic uses a case statement to select the correct segment pattern, and doesn't imply a latch
 - [ ] Counter logic contained in a module with inputs: `reset_b`, `enable` and `clk`, and output: `count`.
 - [ ] Counter includes reset, enable and settable (possibly hardcoded) max count features. The enable feature causes the counter to only increment when an enable pin is asserted. The max count feature causes the counter to set its count back to zero when the count reaches the max value.
@@ -38,7 +38,7 @@ The focus of lab 1 specifications, in addition to proving hardware functionality
 - [ ] Descriptive filename that matches module name (e.g., `lab2_jb.sv`)
 - [ ] One module per file with a descriptive name
 - [ ] Descriptive variable names
-- [ ] Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase ))
+- [ ] Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase))
 
 #### Excellence
 
@@ -76,10 +76,10 @@ The focus of lab 1 specifications, in addition to proving hardware functionality
 - [ ] No errors in LED current calculation (correct VON selected for current level, VON included in calculation, etc.).
 - [ ] No errors in LED frequency calculations (not off by a factor of 2, uses appropriate clock rates, etc.)
 
-{{< include  ../specs/lab-writeup-specs.qmd >}} 
+{{< include  ../specs/lab-writeup-specs.qmd >}}
 
 ## FOR REFERENCE ONLY (NOT YET IN EFFECT)
 
-{{< include  ../specs/schematic-specs.qmd >}} 
+{{< include  ../specs/schematic-specs.qmd >}}
 
 {{< include  ../specs/block-diagram-specs.qmd >}}
