@@ -258,9 +258,9 @@ The 7-segment display will be used throughout the class for general output of nu
 
 Each segment of the display works as an independent LED. Therefore, the same current-limiting concern with the LEDs applies to the display as to the on-board bank of LEDs. You can limit the current into each segment of the display the same way you did for the LEDs on board, adding a suitable resistor in series to provide roughly 5-20 mA of current. (Beware: A LED connected in parallel with your pin (from pin to ground) will not limit current!) You can find resistors and other such components in the supply cabinet or in the stockroom.
 
-The course datasheet is for the **`MAN6410`** — a two-digit, common anode display from the Fairchild MAN6400 series ([datasheet](/assets/doc/MAN64x0%20Series.pdf)). If you have a single-digit display instead, the common anode member of the same series is the `MAN6460`, and the pinout section of the datasheet covers both.
+The `MAN6410` is a two-digit, common anode display from the Fairchild MAN6400 series ([datasheet](/assets/doc/MAN64x0%20Series.pdf)). If you have a single-digit display instead, the common anode member of the same series is the `MAN6460`, and the pinout section of the datasheet covers both.  The `HDSP` series of 7-segment displays from Broadcom are also common in the lab ([datasheet](/assets/doc/AV02-2554EN_2024-07-10.pdf)). Check your part for its number, but note that the designs are mostly pin and current level compatible.
 
-Whatever part you have, **confirm it is common anode before wiring anything.** The series also includes common cathode models (`MAN6440`, `MAN6980`) that are wired the opposite way and will not work with the circuit described here.
+Whatever part you have, **confirm it is common anode before wiring anything.** Both series also include common cathode models (`MAN6440`, `MAN6980`) that are wired the opposite way and will not work with the circuit described here.
 
 All seven segments of a digit share the same anode, which should be connected to 3.3 V. Each segment has its own cathode, which can be pulled to 0 to turn the segment on.
 
