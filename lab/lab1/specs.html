@@ -214,19 +214,20 @@ ul.task-list li input[type="checkbox"] {
 <section id="proficiency" class="level4">
 <h4 class="anchored" data-anchor-id="proficiency">Proficiency</h4>
 <ul class="task-list">
-<li><label><input type="checkbox">Development board is fully assembled (e.g., all parts soldered)</label></li>
-<li><label><input type="checkbox">Verilog module to control LEDs and a 7-segment display written</label></li>
-<li><label><input type="checkbox">FPGA programmed with Verilog code.</label></li>
+<li><label><input type="checkbox">Development board is fully assembled (e.g., all parts soldered) and FPGA is programmed with a Verilog design.</label></li>
 <li><label><input type="checkbox">7-segment display can display all sixteen hexadecimal digits from <code>0x0</code> through <code>0xF</code></label></li>
 <li><label><input type="checkbox">All digits are unique (e.g., <code>0x6</code> and <code>0xb</code> are different shapes)</label></li>
 <li><label><input type="checkbox">DIP switches to control the display are arranged so that each adjacent switch controls the next bit. (e.g., the switch for bit 0 is next to the switch for bit 1, which is next to the switch for bit 2, etc.)</label></li>
 <li><label><input type="checkbox">LEDs display the specified logic operations properly.</label></li>
+<li><label><input type="checkbox">Resistors are in series with FPGA pins so that they correctly limit current, not in shut to ground.</label></li>
 </ul>
 </section>
 <section id="excellence" class="level4">
 <h4 class="anchored" data-anchor-id="excellence">Excellence</h4>
 <ul class="task-list">
 <li><label><input type="checkbox">All digits are equally bright, regardless of the number of segments illuminated.</label></li>
+<li><label><input type="checkbox">LED segments are fully off when disabled (no residual glow, check by shading it with you hand).</label></li>
+<li><label><input type="checkbox">LED blink rate is close to 2.4Hz. A 1.2Hz or 4.8Hz blink rate fails this spec. This requires the 7 segment display to be powered off of 3.3V, not 5V.</label></li>
 </ul>
 </section>
 </section>
@@ -238,10 +239,9 @@ ul.task-list li input[type="checkbox"] {
 <li><label><input type="checkbox">assign used to implement switch-to-LED logic in the top level module. (Note that it is standard practice to avoid putting 1 liner logic in a module; doing so would add more lines of codes than it saves!)</label></li>
 <li><label><input type="checkbox">Switch-to-7-segment logic contained in a module</label></li>
 <li><label><input type="checkbox">Switch-to-7-segment logic uses a case statement to select the correct segment pattern, and doesn’t imply a latch</label></li>
-<li><label><input type="checkbox">Counter logic contained in a module</label></li>
-<li><label><input type="checkbox">Counter includes reset, enable and settable (possibly hardcoded) max count features. The max count feature sets the counter back to zero when the count reaches the max value.</label></li>
-<li><label><input type="checkbox">Counter is implemented using a single always_ff block.</label></li>
-<li><label><input type="checkbox">Top level consists only of instantiated modules and switch-to-LED logic.</label></li>
+<li><label><input type="checkbox">Counter logic contained in a module with inputs: <code>reset_b</code>, <code>enable</code> and <code>clk</code>, and output: <code>count</code>.</label></li>
+<li><label><input type="checkbox">Counter includes reset, enable and settable (possibly hardcoded) max count features. The enable feature causes the counter to only increment when an enable pin is asserted. The max count feature causes the counter to set its count back to zero when the count reaches the max value.</label></li>
+<li><label><input type="checkbox">Top level consists only of instantiated modules, switch-to-LED and count-to-LED logic.</label></li>
 <li><label><input type="checkbox">Descriptive filename that matches module name (e.g., <code>lab2_jb.sv</code>)</label></li>
 <li><label><input type="checkbox">One module per file with a descriptive name</label></li>
 <li><label><input type="checkbox">Descriptive variable names</label></li>
@@ -270,6 +270,7 @@ ul.task-list li input[type="checkbox"] {
 <li><label><input type="checkbox">QuestaSim simulation with automatic testbenches for each 7-segment module covering all input-output pairs.</label></li>
 <li><label><input type="checkbox">QuestaSim simulation with automatic testbenches for the counter module. This simulation does not need to cover all possible states, but should show the reset, enable and max count features working correctly. These features may be captured in separate screenshots for legibility.</label></li>
 <li><label><input type="checkbox">QuestaSim simulation with automatic testbenches for the top module showing behaviors not-covered by module-level simulations: “are the connections to submodules correct?”, “does the HSOSC work?” and “does the assign 1 liner work?”.</label></li>
+<li><label><input type="checkbox">All testbenches in separate modules and files, mirroring structure of Verilog files.</label></li>
 </ul>
 </section>
 </section>
@@ -293,7 +294,7 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="excellence-3">Excellence</h4>
 <ul class="task-list">
 <li><label><input type="checkbox">No errors in LED current calculation (correct VON selected for current level, VON included in calculation, etc.).</label></li>
-<li><label><input type="checkbox">No errors in LED frequency calculations (not off by a factor of 2, uses appripriate clock rates, etc.)</label></li>
+<li><label><input type="checkbox">No errors in LED frequency calculations (not off by a factor of 2, uses appropriate clock rates, etc.)</label></li>
 </ul>
 </section>
 </section>
@@ -326,13 +327,15 @@ ul.task-list li input[type="checkbox"] {
 <li><label><input type="checkbox">Neat layout (e.g., clear organization and spacing)</label></li>
 <li><label><input type="checkbox">All parts labeled with part number</label></li>
 <li><label><input type="checkbox">All component values present</label></li>
+<li><label><input type="checkbox">No parts of motherboard schematic replicated. Shows only off-board components.</label></li>
+<li><label><input type="checkbox">No parts internal to the chip (e.g.&nbsp;internal pullup resistors) drawn on schematic. Indicate important pullups, capacitors, etc. with comment instead.</label></li>
 </ul>
 </section>
 <section id="excellence-4" class="level4">
 <h4 class="anchored" data-anchor-id="excellence-4">Excellence</h4>
 <ul class="task-list">
 <li><label><input type="checkbox">Standard symbols used for all components where applicable</label></li>
-<li><label><input type="checkbox">Signals “flow” from left to right where possible (e.g., inputs on left hand side, outputs on right hand side)</label></li>
+<li><label><input type="checkbox">Signals “flow” from left to right where possible (e.g., inputs on left hand side, outputs on right hand side, power on top, ground on bottom)</label></li>
 <li><label><input type="checkbox">Title block with author name, title, and date</label></li>
 </ul>
 </section>

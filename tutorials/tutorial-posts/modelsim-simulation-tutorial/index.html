@@ -246,7 +246,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>To verify that designs are working, it is useful to simulate them before putting them on hardware. This tutorial covers three ways to drive a simulation, from quickest to most rigorous:</p>
+<p>It is useful to simulate them before putting them on hardware. It is standard industrial practice to verify all Verilog before shipping it as a product, often through simulation, so this course requires simulation coverage of all Verilog features. In addition, simulation can give you visibility into design details that hardware indicators cannot, so it is a useful practice (especially for lab 3).</p>
+<p>This tutorial covers three ways to drive a simulation, from quickest to most rigorous:</p>
 <ol type="1">
 <li><a href="#forcing-signals">Forcing signals by hand</a> — fastest way to sanity-check a small design.</li>
 <li><a href="#testbench-simulation">Writing a testbench</a> — automatic, repeatable checking.</li>
@@ -407,6 +408,7 @@ Figure&nbsp;3: Running simulation by forcing signals.
 <h3 class="anchored" data-anchor-id="designing-a-good-testbench">Designing a Good Testbench</h3>
 <p>Before writing any testbench code, decide what “tested” actually means for the module in front of you. <strong>A testbench should cover all of the functionality of the module it tests</strong> — every output behavior the module is responsible for should be exercised and checked. How much work that is depends on what kind of module it is.</p>
 <p><strong>Combinational modules — exercise every input combination.</strong> A purely combinational module has no memory, so its output depends only on its current inputs. That makes complete coverage achievable: drive every possible input combination and check every output. A seven-segment decoder driven by a 4-bit input has just 16 combinations, so there is no excuse for testing only a few of them. If the input space is small, test all of it.</p>
+<p>When you capture a screenshot of the combinational simulations for your report, make sure the logical operations are clearly visible. Either break the signals out, so the full bit-by-bit waveforms are visible, or change the radix of signals (binary, hex, etc.) so they are readable at the level of zoom captured in the screenshot.</p>
 <p><strong>Sequential modules — exercise every state transition, within reason.</strong> A sequential module’s output depends on its history, so it is not enough to try each input once; you need to check the <em>transitions</em> between states. Nominally that means covering every state transition. In practice this is often impractical — a counter that divides a 48 MHz clock down to a few Hz has millions of states, and simulating all of them is neither useful nor fast.</p>
 <p>Instead, test the <em>features</em> rather than every count value:</p>
 <ul>
@@ -414,6 +416,8 @@ Figure&nbsp;3: Running simulation by forcing signals.
 <li>Does the enable input actually start and stop counting?</li>
 <li>Does the counter wrap back to zero when it reaches its max count?</li>
 </ul>
+<p>Be careful of the timing of your test signals. To show that an enable signal is needed for a clock to count, the enable must be asserted after the reset, and it must be asserted for longer than a clock cycle (otherwise it will have no effect on the count). Similarly, if you are showing reset mid-simulation, it should be on a different cycle than the max count overflow to prove that is indeed the reset signal causing count to go to zero.</p>
+<p>In addition to timing the stimulus to demonstrate features, you also need to capture outputs that show the feature at work. Be sure to show the clock and the count so readers can observe the count changing as reset and enable are toggled.</p>
 <p><strong>Top-level modules — only test what the module tests didn’t cover.</strong> Once each submodule is verified on its own, re-testing that logic through the top level adds nothing. A top-level testbench should target what is genuinely new at that level:</p>
 <ul>
 <li>Are the submodules wired together correctly?</li>
@@ -421,6 +425,7 @@ Figure&nbsp;3: Running simulation by forcing signals.
 <li>Does logic written directly in the top level (such as an <code>assign</code> statement) behave correctly?</li>
 </ul>
 <p>Note that a top-level module which instantiates <code>HSOSC</code> generates its own clock internally, so its testbench should <em>not</em> drive a <code>clk</code> input. Let the oscillator run and simulate long enough to observe the behavior you care about.</p>
+<p>Testbenches for top modules are often quite simple (other than verifying logic that is not contained in a module). If the clock is running and the outputs toggle properly, then the HSOSC and submodule connections are probably right. Make sure the HSOSC output clock signal is included in your simulation screenshot to show that you meet these criteria.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1? Return to the lab now">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
