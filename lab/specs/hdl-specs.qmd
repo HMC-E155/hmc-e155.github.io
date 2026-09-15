@@ -4,10 +4,15 @@
 
 - [ ] Top level consists only of instantiated modules and trivial logic.
 - [ ] One module per file with a descriptive name, filename matches module name (e.g., `lab2_jb.sv` contains module `lab2_jb`)
+- [ ] One testbench per module with the name `modulename_tb` (e.g.: `lab2_jb_tb`)
 - [ ] Descriptive variable names
 - [ ] Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase ))
+- [ ] Parameter names are in ALL_CAPS and are long enough to be self-explanatory.
 
 ##### Excellence
 
-- [ ] External (i.e.: not in the comments) documentation for module captures major features, describing each in text and supporting with waveforms if necessary. Special attention paid to whether modules are combinational or sequential, and whether sequential behaviors are synchronous or asynchronous.
 - [ ] Clear and organized hierarchy (e.g., delineation between top level modules and submodules)
+
+#### Optional Spec to Match Industrial Practice
+
+- [ ] External (i.e.: not in the comments) documentation for module captures major features, describing each in text and supporting with waveforms if necessary. Special attention paid to whether modules are combinational or sequential, and whether sequential behaviors are synchronous or asynchronous. It is natural to capture this documentation along with the testbench waveforms so you can explain the features being demonstrated.
