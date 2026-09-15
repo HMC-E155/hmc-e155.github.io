@@ -87,11 +87,12 @@ Hold on to the FPGA test project — you will reuse its clock generation code in
 
 ## FPGA Design
 
-Now it's your turn to take the wheel and create your own design and dust off your digital design chops! Your goal is to write some Verilog modules to further test the hardware on your board and operate a 7-segment display. The system should have the following inputs and outputs:
+Now it's your turn to write some Verilog! Design a set of Verilog modules (see the specs for a required structure) to operate a 7-segment display and some on-board LEDs. The top-level Verilog module should have the following inputs and outputs:
 
 | Signal  Name | Signal Type | Description |
 |--------------|-------------|-------------|
 | `s[3:0]`  | input| the four DIP switches (on the board, SW6) |
+| `reset_b` | input| active low input that resets all sequential state, map it to a button on the motherboard |
 | `led[2:0]`| output| 3 LEDs (you may use the on-board LEDs) |
 | `seg[6:0]`| output| the segments of a common-anode 7-segment display |
 
@@ -148,13 +149,7 @@ You can simply copy the line from the testing program and use it in your project
 
 ### Design and Synthesis in Radiant
 
-Launch Lattice Radiant and start the New Project Wizard from the File or startup menu. Set up a new project for the UP5K chip following the [Project Setup](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#project-setup) section of the Lattice Radiant tutorial.
-
-Choose `File → New` and create a SystemVerilog HDL file. Save the file as `lab1_xx.sv` in your project directory and check the box to add the file to the current project.
-
-Create modules to perform the functions described above. The seven-segment display decoder should be combinational logic, and the counter that blinks `led[2]` should be a module of its own. Name the top-level module `lab1_xx` and keep it to instantiated modules plus the switch-to-LED `assign` logic. Put each module in its own file with a descriptive name matching the module. The seven-segment decoder in particular will be reused in future labs, so keeping it self-contained will save you work later. See the [lab specifications](specs.qmd) for the full structure and style requirements.
-
-Every module should begin with a comment section that includes your name and email address, the date of creation, and a brief summary of its purpose, so that somebody else can understand what the module does and get a hold of you if they need help with it. Comment the modules as appropriate.
+Launch Lattice Radiant and start the New Project Wizard from the File or startup menu. Set up a new project for the UP5K chip following the [Project Setup](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#project-setup) section of the Lattice Radiant tutorial. Choose `File → New` and create a SystemVerilog HDL file. Save the file as `lab1_xx.sv` in your project directory and check the box to add the file to the current project. Then create modules to perform the functions described above. See the [lab specifications](specs.qmd) for the full structure and style requirements.
 
 ### Logic Simulation in ModelSim
 
@@ -261,11 +256,11 @@ The pins connected to `s[3:0]` must be configured with pull-up resistors to avoi
 
 The 7-segment display will be used throughout the class for general output of numbers. In this lab assignment, though, it will be used to output the hexadecimal number entered by the user through the DIP switches.
 
-Each segment of the display works as an independent LED. Therefore, the same current-limiting concern with the LEDs applies to the display as to the on-board bank of LEDs. You can limit the current into each segment of the display the same way you did for the LEDs on board, adding a suitable resistor to provide roughly 5-20 mA of current. You can find resistors and other such components in the supply cabinet or in the stockroom.
+Each segment of the display works as an independent LED. Therefore, the same current-limiting concern with the LEDs applies to the display as to the on-board bank of LEDs. You can limit the current into each segment of the display the same way you did for the LEDs on board, adding a suitable resistor in series to provide roughly 5-20 mA of current. (Beware: A LED connected in parallel with your pin (from pin to ground) will not limit current!) You can find resistors and other such components in the supply cabinet or in the stockroom.
 
-The course datasheet is for the **`MAN6410`** — a two-digit, common anode display from the Fairchild MAN6400 series ([datasheet](/assets/doc/MAN64x0%20Series.pdf)). If you have a single-digit display instead, the common anode member of the same series is the `MAN6460`, and the pinout section of the datasheet covers both.
+The `MAN6410` is a two-digit, common anode display from the Fairchild MAN6400 series ([datasheet](/assets/doc/MAN64x0%20Series.pdf)). If you have a single-digit display instead, the common anode member of the same series is the `MAN6460`, and the pinout section of the datasheet covers both.  The `HDSP` series of 7-segment displays from Broadcom are also common in the lab ([datasheet](/assets/doc/AV02-2554EN_2024-07-10.pdf)). Check your part for its number, but note that the designs are mostly pin and current level compatible.
 
-Whatever part you have, **confirm it is common anode before wiring anything.** The series also includes common cathode models (`MAN6440`, `MAN6980`) that are wired the opposite way and will not work with the circuit described here.
+Whatever part you have, **confirm it is common anode before wiring anything.** Both series also include common cathode models (`MAN6440`, `MAN6980`) that are wired the opposite way and will not work with the circuit described here.
 
 All seven segments of a digit share the same anode, which should be connected to 3.3 V. Each segment has its own cathode, which can be pulled to 0 to turn the segment on.
 

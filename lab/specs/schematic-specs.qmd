@@ -8,9 +8,11 @@
 - [ ] Neat layout (e.g., clear organization and spacing)
 - [ ] All parts labeled with part number
 - [ ] All component values present
+- [ ] No parts of motherboard schematic replicated. Shows only off-board components.
+- [ ] No parts internal to the chip (e.g. internal pullup resistors) drawn on schematic. Indicate important pullups, capacitors, etc. with comment instead.
 
 #### Excellence
 
 - [ ] Standard symbols used for all components where applicable
-- [ ] Signals "flow" from left to right where possible (e.g., inputs on left hand side, outputs on right hand side)
+- [ ] Signals "flow" from left to right where possible (e.g., inputs on left hand side, outputs on right hand side, power on top, ground on bottom)
 - [ ] Title block with author name, title, and date
