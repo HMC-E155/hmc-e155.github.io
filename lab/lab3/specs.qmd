@@ -18,7 +18,6 @@ Lab 3 represents the culmination of our practice with Verilog design. The specif
 
 #### Excellence
 
-- [ ] Design uses synchronizers on asynchronous inputs to mitigate metastability.
 - [ ] Design only registers first button press if additional buttons are pressed down while holding down one button.
 - [ ] Design does not lock up or otherwise misfire when multiple buttons are pressed at once. (i.e., it just holds the current values on the display, never displays a weird intermediate digit, and functions properly again when the buttons are released.)
 
@@ -28,11 +27,11 @@ Lab 3 represents the culmination of our practice with Verilog design. The specif
 
 - [ ] New finite state machines are implemented in canonical form: one state update block that controls only the machine's state, one next state block, and one output block. Counters, which you've already implemented, are excluded from this requirement even though they're technically FSMs.
 - [ ] Other logic elements with state (like counters or synchronizers) are wrapped in appropriate modules and are not instantiated or re-implemented inside of FSMs.
-- [ ] Counters are reused from previous designs.
+- [ ] Counters are reused from previous designs. (Minor adjustments, especially to respond to instructor feedback, are allowed.  But any changes to the Verilog need to be verified by re-running the testbench.)
 - [ ] Seven segment and multiplexing logic are reused from previous designs.
 - [ ] Top level module consists only of instantiated modules and trivial logic; don't introduce new state to verify at the top!
 - [ ] A debouncing strategy is implemented, you can't just count on a lucky keypad!
-- [ ] Asynchronous Inputs are synchronized.
+- [ ] Asynchronous inputs are synchronized.
 - [ ] Style conventions from previous labs (module names, descriptive variables, etc.) are still followed. See [HDL specs](../specs/hdl-specs.qmd)
 
 #### Excellence
