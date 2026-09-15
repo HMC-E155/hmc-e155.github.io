@@ -194,19 +194,26 @@ ul.task-list li input[type="checkbox"] {
 <ul class="task-list">
 <li><label><input type="checkbox">Top level consists only of instantiated modules and trivial logic.</label></li>
 <li><label><input type="checkbox">One module per file with a descriptive name, filename matches module name (e.g., <code>lab2_jb.sv</code> contains module <code>lab2_jb</code>)</label></li>
+<li><label><input type="checkbox">One testbench per module with the name <code>modulename_tb</code> (e.g.: <code>lab2_jb_tb</code>)</label></li>
 <li><label><input type="checkbox">Descriptive variable names</label></li>
 <li><label><input type="checkbox">Neat formatting (e.g., standard indentation, consistent formatting for variable names (kebab-case/snake_case/camelCase/PascalCase ))</label></li>
+<li><label><input type="checkbox">Parameter names are in ALL_CAPS and are long enough to be self-explanatory.</label></li>
 </ul>
 </section>
 <section id="excellence" class="level5">
 <h5 class="anchored" data-anchor-id="excellence">Excellence</h5>
 <ul class="task-list">
-<li><label><input type="checkbox">External (i.e.: not in the comments) documentation for module captures major features, describing each in text and supporting with waveforms if necessary. Special attention paid to whether modules are combinational or sequential, and whether sequential behaviors are synchronous or asynchronous.</label></li>
 <li><label><input type="checkbox">Clear and organized hierarchy (e.g., delineation between top level modules and submodules)</label></li>
+</ul>
+</section>
+</section>
+<section id="optional-spec-to-match-industrial-practice" class="level4">
+<h4 class="anchored" data-anchor-id="optional-spec-to-match-industrial-practice">Optional Spec to Match Industrial Practice</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">External (i.e.: not in the comments) documentation for module captures major features, describing each in text and supporting with waveforms if necessary. Special attention paid to whether modules are combinational or sequential, and whether sequential behaviors are synchronous or asynchronous. It is natural to capture this documentation along with the testbench waveforms so you can explain the features being demonstrated.</label></li>
 </ul>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
