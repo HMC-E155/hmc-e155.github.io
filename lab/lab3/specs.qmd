@@ -19,6 +19,7 @@ Lab 3 represents the culmination of our practice with Verilog design. The specif
 #### Excellence
 
 - [ ] Design only registers first button press if additional buttons are pressed down while holding down one button.
+- [ ] If multiple buttons are held down, display updates to a new value when all but one button is released. (i.e., design registers the last held button as a valid single key press when leaving a multi-press condition.)
 - [ ] Design does not lock up or otherwise misfire when multiple buttons are pressed at once. (i.e., it just holds the current values on the display, never displays a weird intermediate digit, and functions properly again when the buttons are released.)
 
 ### Verilog Structure and Style Specifications
