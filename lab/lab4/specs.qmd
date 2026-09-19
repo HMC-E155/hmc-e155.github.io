@@ -35,8 +35,6 @@ Lab 4 is the first introduction to the STM32L432KC microcontroller. The specific
 
 ### Other Documentation
 
-Note that these calculations do not all need to be done by hand (though one example should be).  Links to spreadsheets from your lab writeup are acceptable.
-
 #### Proficiency
 
 - [ ] Documentation and calculations show how the durations and pitches are related to the timer configuration. Off by one errors are acceptable, but the calculations should be correct in principle.
@@ -48,7 +46,7 @@ Note that these calculations do not all need to be done by hand (though one exam
 - [ ] Calculations show **maximum duration** supported
 - [ ] Calculations show **minimum frequency** supported
 - [ ] Calculations show **maximum frequency** supported
-- [ ] Calculations show that **all notes in Für Elise** can be replicated to within 1% accuracy.  Comment on whether or not checking at 220 Hz and 1000 Hz is sufficient to prove that all notes are within error bounds.
+- [ ] Calculations show that **all notes in Für Elise** can be replicated to within 1% accuracy.  Comment on whether or not checking at 220 Hz and 1000 Hz is sufficient to prove that all notes are within error bounds. Note that these calculations do not all need to be done by hand (though one example should be).  Links to spreadsheets from your lab writeup are acceptable.
 
 {{< include  ../specs/schematic-specs.qmd >}} 
 
