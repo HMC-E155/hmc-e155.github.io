@@ -48,7 +48,7 @@ Lab 3 represents the culmination of our practice with Verilog design. The specif
 
 #### Excellence
 
-- [ ] Keypad stimulus implemented 
+- [ ] Keypad stimulus implemented: column assertions are of appropriate polarity, arrive at different asynchronous positions relative to the system clock (including right on top of it), and include switch bounce.
 
 ### Other Documentation
 
