@@ -27,21 +27,23 @@ The lab 2 specifications are trying to get you to focus on two new topics: const
 #### Proficiency
 
 - [ ] HDL design includes only a single seven-segment decoder module that is time multiplexed.
-- [ ] Top design only includes instances of HSOSC, seven-segment module, multiplexing counter module, scanning module and assign statements to implement multiplexing and scanning passthrough.
+- [ ] Top design only includes instances of HSOSC, seven-segment module, multiplexing counter module, scanning module and assign statements to implement multiplexing and scanning passthrough.  // BLERGABLERG
 - [ ] Scanning module only includes instances of a counter and assign statements that convert from the counter output to output values. 
 - [ ] Scanning module is resettable and enable-able.
 - [ ] No counters implemented inline, all of them are contained in modules.
+- [ ] Style conventions from previous labs (module names, descriptive variables, etc.) are still followed. See [HDL specs](../specs/hdl-specs.qmd)
 
 #### Excellence
 
-- [ ] All counter modules (scanning and multiplexing) are parametrized instances of the counter module from lab 1.
+- [ ] All counter modules (scanning and multiplexing) are parametrized instances of the counter module from lab 1. (Minor adjustments, especially to respond to instructor feedback, are allowed.  But any changes to the Verilog need to be verified by re-running the testbench.)
 
 ### Simulation Specifications
 
 #### Proficiency
 
-- [ ] No repeat simulations from lab 1. Those modules have already been verified!
+- [ ] No repeat simulations from lab 1. Those modules have already been verified! (But do include links to the lab 1 simulations in your report.)
 - [ ] QuestaSim simulations carried out (possibly manually) for the scanning module and the top module. 
+- [ ] At least one simulation uses an automatic testbench.  (Lab 3 will require automatic testbenches for all modules.)
 - [ ] All simulations captured as legible waveform screenshots in report.
 
 #### Excellence
