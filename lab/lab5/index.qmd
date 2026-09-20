@@ -38,8 +38,7 @@ The MCU should use interrupts to detect pulses from the encoder and use them to 
 Ensure that the system remains functional when the motor is spinning at very high and very low speeds.
 Display the direction and angular velocity of the motor in revolutions/s with an update rate of at least 1 Hz.
 
-In addition to the standard deliverables, your report should include a flowchart (see examples [here](https://users.ece.utexas.edu/~valvano/Volume1/E-Book/C12_Interrupts.htm)) showing each interrupt and the main loop that are executed.
-Test your system with the motor provided in the lab which spins at a known speed of approximately 10 rev/s.
+Test your system with the motor provided in the lab which spins at a known speed of approximately 2.5 rev/s when 12V are applied.
 
 ::: {.callout-warning}
 ## Encoder Output Voltage Warning

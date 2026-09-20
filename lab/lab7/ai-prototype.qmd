@@ -10,6 +10,8 @@ The goal of this prototype is to experiment with using AI as a coding assistant 
 - Prompt an LLM to generate code based on a specifications document it has not seen
 - Compare this to the quality of code generated when the LLM has access to the full document
 
+The question you should be interrogating is **"does withholding a specification from my LLM of choice change the quality of the HDL it generates?""**
+
 ## Prototype
 
 Fire up your favorite LLM. ChatGPT is a good place to start, but you may consider using other LLMs as well like Claude or Gemini. Upload the [FIPS-197 AES Specification](/assets/doc/NIST.FIPS.197-upd1.pdf) specifications and enter the prompt below (if your LLM does not support PDF uploading, use [this image](./images/ai-prototype-key-expansion.png) instead).

@@ -6,4 +6,41 @@ format:
 
 ## Lab 6 Specifications
 
-Under construction.
+Lab 6 asks you to build a complete IoT device on top of the driver you write yourself against the DS1722 register map. The specifications emphasize writing that driver directly from the reference manual and implementing the ESP8266 request/response protocol correctly, since those are the two places a shortcut (a copied driver, an untested protocol assumption) will bite you.
+
+### Hardware Specifications
+
+#### Proficiency
+
+- [ ] DS1722 temperature sensor is correctly wired per its datasheet pinout.
+- [ ] ESP8266 module is correctly wired and powered at 3.3V, with TX/RX crossed between the MCU and the ESP8266.
+- [ ] FPGA is disconnected (DIP switches open) so it cannot interfere with pins shared with the MCU.
+
+### Software and Microcontroller Design Specifications
+
+#### Proficiency
+
+- [ ] SPI device driver is written using the CMSIS device templates (register structs and base addresses from `stm32l432xx.h`), not a third-party or copied driver.
+- [ ] SPI driver correctly reads the current temperature from the DS1722 sensor.
+- [ ] System correctly parses `/REQ:...` requests from the ESP8266 and responds with a well-formed HTML page.
+- [ ] Webpage displays the current temperature with units, and updates when the page is refreshed.
+- [ ] Webpage displays the current LED state and can toggle it.
+- [ ] System correctly reads temperatures across the sensor's -10&deg;C to 30&deg;C range.
+
+#### Excellence
+
+- [ ] User can select the DS1722's resolution (e.g., 8/9/10/11/12-bit) from the webpage, and the driver correctly reconfigures the sensor in response.
+
+### Other Documentation
+
+#### Proficiency
+
+- [ ] Report includes a labeled logic analyzer capture of a full SPI read transaction (CE, SCK, SDO and SDI), as required in the lab writeup.
+
+#### Excellence
+
+- [ ] Logic analyzer capture is annotated to show how the observed timing matches the datasheet's specified SPI timing.
+
+{{< include  ../specs/schematic-specs.qmd >}}
+
+{{< include  ../specs/lab-writeup-specs.qmd >}}
