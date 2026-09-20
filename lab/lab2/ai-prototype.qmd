@@ -14,7 +14,7 @@ The question you should be interrogating is **"Does changing the context for a p
 
 ## Prototype
 
-Fire up your favorite LLM. (ChatGPT, Claude, Copilot, Gemini, etc.). Enter the prompt below.
+Fire up your favorite LLM. Enter the prompt below.
 
 ::: {.callout-note title="LLM Prompt"}
 Write SystemVerilog HDL to time multiplex a single seven segment decoder (that decodes from four bits to a common anode seven segment display) to decode two sets of input bits and drive two sets of seven output bits.
