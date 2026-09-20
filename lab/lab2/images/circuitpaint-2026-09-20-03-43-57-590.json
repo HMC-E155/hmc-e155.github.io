@@ -1,0 +1,528 @@
+{
+  "version": 1,
+  "components": [
+    {
+      "id": "component-1789874722175-1eeb",
+      "toolId": "n-mosfet-alt",
+      "x": 60,
+      "y": 190,
+      "rotation": 0,
+      "flipped": false,
+      "strokeColor": "#000000"
+    },
+    {
+      "id": "component-1789874727905-b9em",
+      "toolId": "ground",
+      "x": 60,
+      "y": 220,
+      "rotation": 0,
+      "flipped": false,
+      "strokeColor": "#000000"
+    },
+    {
+      "id": "component-1789874742335-wh7l",
+      "toolId": "n-mosfet-alt",
+      "x": 120,
+      "y": 190,
+      "rotation": 0,
+      "flipped": false,
+      "strokeColor": "#000000"
+    },
+    {
+      "id": "component-1789874744233-rj2u",
+      "toolId": "n-mosfet-alt",
+      "x": 180,
+      "y": 190,
+      "rotation": 0,
+      "flipped": false,
+      "strokeColor": "#000000"
+    },
+    {
+      "id": "component-1789874745686-kbe4",
+      "toolId": "n-mosfet-alt",
+      "x": 240,
+      "y": 190,
+      "rotation": 0,
+      "flipped": false,
+      "strokeColor": "#000000"
+    },
+    {
+      "toolId": "ground",
+      "x": 120,
+      "y": 220,
+      "rotation": 0,
+      "flipped": false,
+      "strokeColor": "#000000",
+      "id": "component-1789874790401-hp4u"
+    },
+    {
+      "toolId": "ground",
+      "x": 180,
+      "y": 220,
+      "rotation": 0,
+      "flipped": false,
+      "strokeColor": "#000000",
+      "id": "component-1789874792664-w43a"
+    },
+    {
+      "toolId": "ground",
+      "x": 240,
+      "y": 220,
+      "rotation": 0,
+      "flipped": false,
+      "strokeColor": "#000000",
+      "id": "component-1789874794265-xo9f"
+    },
+    {
+      "id": "component-1789875059917-pgu1",
+      "toolId": "resistor",
+      "x": 290,
+      "y": -80,
+      "rotation": 90,
+      "flipped": false,
+      "strokeColor": "#000000"
+    },
+    {
+      "id": "component-1789875060969-s5pp",
+      "toolId": "resistor",
+      "x": 320,
+      "y": -80,
+      "rotation": 90,
+      "flipped": false,
+      "strokeColor": "#000000"
+    },
+    {
+      "id": "component-1789875061888-kg38",
+      "toolId": "resistor",
+      "x": 350,
+      "y": -80,
+      "rotation": 90,
+      "flipped": false,
+      "strokeColor": "#000000"
+    },
+    {
+      "id": "component-1789875063040-skdh",
+      "toolId": "resistor",
+      "x": 380,
+      "y": -80,
+      "rotation": 90,
+      "flipped": false,
+      "strokeColor": "#000000"
+    },
+    {
+      "id": "component-1789875071298-5qa8",
+      "toolId": "v-rail",
+      "x": 290,
+      "y": -110,
+      "rotation": 0,
+      "flipped": false,
+      "strokeColor": "#000000"
+    },
+    {
+      "id": "component-1789875071979-mwhb",
+      "toolId": "v-rail",
+      "x": 320,
+      "y": -110,
+      "rotation": 0,
+      "flipped": false,
+      "strokeColor": "#000000"
+    },
+    {
+      "id": "component-1789875072793-ya2q",
+      "toolId": "v-rail",
+      "x": 350,
+      "y": -110,
+      "rotation": 0,
+      "flipped": false,
+      "strokeColor": "#000000"
+    },
+    {
+      "id": "component-1789875073833-jxyy",
+      "toolId": "v-rail",
+      "x": 380,
+      "y": -110,
+      "rotation": 0,
+      "flipped": false,
+      "strokeColor": "#000000"
+    }
+  ],
+  "drawings": [
+    {
+      "id": "drawing-1789874903787-d9w5",
+      "toolId": "text",
+      "x": 20,
+      "y": 190,
+      "rotation": 0,
+      "text": "row[0]",
+      "strokeColor": "#000000",
+      "border": false,
+      "borderStrokeWidth": 1,
+      "borderGridSpacing": 10,
+      "fontSize": 12
+    },
+    {
+      "id": "drawing-1789874905289-aa34",
+      "toolId": "text",
+      "x": 80,
+      "y": 190,
+      "rotation": 0,
+      "text": "row[1]",
+      "strokeColor": "#000000",
+      "border": false,
+      "borderStrokeWidth": 1,
+      "borderGridSpacing": 10,
+      "fontSize": 12
+    },
+    {
+      "id": "drawing-1789874906961-om16",
+      "toolId": "text",
+      "x": 140,
+      "y": 190,
+      "rotation": 0,
+      "text": "row[2]",
+      "strokeColor": "#000000",
+      "border": false,
+      "borderStrokeWidth": 1,
+      "borderGridSpacing": 10,
+      "fontSize": 12
+    },
+    {
+      "id": "drawing-1789874908607-17ju",
+      "toolId": "text",
+      "x": 200,
+      "y": 190,
+      "rotation": 0,
+      "text": "row[3]",
+      "strokeColor": "#000000",
+      "border": false,
+      "borderStrokeWidth": 1,
+      "borderGridSpacing": 10,
+      "fontSize": 12
+    },
+    {
+      "id": "drawing-1789875115552-dhbh",
+      "toolId": "text",
+      "x": 530,
+      "y": -60,
+      "rotation": 0,
+      "text": "col[0]",
+      "strokeColor": "#000000",
+      "border": false,
+      "borderStrokeWidth": 1,
+      "borderGridSpacing": 10,
+      "fontSize": 12
+    },
+    {
+      "id": "drawing-1789875118271-1edf",
+      "toolId": "text",
+      "x": 530,
+      "y": -50,
+      "rotation": 0,
+      "text": "col[1]",
+      "strokeColor": "#000000",
+      "border": false,
+      "borderStrokeWidth": 1,
+      "borderGridSpacing": 10,
+      "fontSize": 12
+    },
+    {
+      "id": "drawing-1789875119072-sbuf",
+      "toolId": "text",
+      "x": 530,
+      "y": -40,
+      "rotation": 0,
+      "text": "col[2]",
+      "strokeColor": "#000000",
+      "border": false,
+      "borderStrokeWidth": 1,
+      "borderGridSpacing": 10,
+      "fontSize": 12
+    },
+    {
+      "id": "drawing-1789875120230-wse4",
+      "toolId": "text",
+      "x": 530,
+      "y": -30,
+      "rotation": 0,
+      "text": "col[3]",
+      "strokeColor": "#000000",
+      "border": false,
+      "borderStrokeWidth": 1,
+      "borderGridSpacing": 10,
+      "fontSize": 12
+    },
+    {
+      "id": "drawing-1789875242047-t8zd",
+      "toolId": "rectangle",
+      "x": 340,
+      "y": 55,
+      "rotation": 0,
+      "strokeColor": "#a6a6a6",
+      "border": false,
+      "borderStrokeWidth": 1,
+      "borderGridSpacing": 10,
+      "fontSize": 12,
+      "shapeWidth": 140,
+      "shapeHeight": 150
+    },
+    {
+      "id": "drawing-1789875343943-5av1",
+      "toolId": "text",
+      "x": 390,
+      "y": 140,
+      "rotation": 0,
+      "text": "keypad",
+      "strokeColor": "#000000",
+      "border": false,
+      "borderStrokeWidth": 1,
+      "borderGridSpacing": 10,
+      "fontSize": 12
+    }
+  ],
+  "wires": [
+    {
+      "id": "wire-1789874834839-iilw",
+      "x": 290,
+      "y": -60,
+      "vertices": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 0,
+          "y": 180
+        }
+      ],
+      "strokeColor": "#000000",
+      "strokeWidth": 1,
+      "dash": [],
+      "arrowEnd": false
+    },
+    {
+      "id": "wire-1789874848510-vv0d",
+      "x": 320,
+      "y": -60,
+      "vertices": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 0,
+          "y": 180
+        }
+      ],
+      "strokeColor": "#000000",
+      "strokeWidth": 1,
+      "dash": [],
+      "arrowEnd": false
+    },
+    {
+      "id": "wire-1789874853860-3svr",
+      "x": 350,
+      "y": -60,
+      "vertices": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 0,
+          "y": 180
+        }
+      ],
+      "strokeColor": "#000000",
+      "strokeWidth": 1,
+      "dash": [],
+      "arrowEnd": false
+    },
+    {
+      "id": "wire-1789874858114-s334",
+      "x": 380,
+      "y": -60,
+      "vertices": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 0,
+          "y": 180
+        }
+      ],
+      "strokeColor": "#000000",
+      "strokeWidth": 1,
+      "dash": [],
+      "arrowEnd": false
+    },
+    {
+      "id": "wire-1789874870288-8jef",
+      "x": 400,
+      "y": 10,
+      "vertices": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": -340,
+          "y": 0
+        },
+        {
+          "x": -340,
+          "y": 160
+        }
+      ],
+      "strokeColor": "#000000",
+      "strokeWidth": 1,
+      "dash": [],
+      "arrowEnd": false
+    },
+    {
+      "id": "wire-1789874969204-n3g3",
+      "x": 120,
+      "y": 170,
+      "vertices": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 0,
+          "y": -130
+        },
+        {
+          "x": 280,
+          "y": -130
+        }
+      ],
+      "strokeColor": "#000000",
+      "strokeWidth": 1,
+      "dash": [],
+      "arrowEnd": false
+    },
+    {
+      "id": "wire-1789875006251-nthc",
+      "x": 180,
+      "y": 170,
+      "vertices": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 0,
+          "y": -100
+        },
+        {
+          "x": 220,
+          "y": -100
+        }
+      ],
+      "strokeColor": "#000000",
+      "strokeWidth": 1,
+      "dash": [],
+      "arrowEnd": false
+    },
+    {
+      "id": "wire-1789875014155-7heg",
+      "x": 240,
+      "y": 170,
+      "vertices": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 0,
+          "y": -70
+        },
+        {
+          "x": 160,
+          "y": -70
+        }
+      ],
+      "strokeColor": "#000000",
+      "strokeWidth": 1,
+      "dash": [],
+      "arrowEnd": false
+    },
+    {
+      "id": "wire-1789875096827-7vu1",
+      "x": 290,
+      "y": -60,
+      "vertices": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 220,
+          "y": 0
+        }
+      ],
+      "strokeColor": "#000000",
+      "strokeWidth": 1,
+      "dash": [],
+      "arrowEnd": false
+    },
+    {
+      "id": "wire-1789875103435-iwmp",
+      "x": 320,
+      "y": -50,
+      "vertices": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 190,
+          "y": 0
+        }
+      ],
+      "strokeColor": "#000000",
+      "strokeWidth": 1,
+      "dash": [],
+      "arrowEnd": false
+    },
+    {
+      "id": "wire-1789875106779-7u5z",
+      "x": 350,
+      "y": -40,
+      "vertices": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 160,
+          "y": 0
+        }
+      ],
+      "strokeColor": "#000000",
+      "strokeWidth": 1,
+      "dash": [],
+      "arrowEnd": false
+    },
+    {
+      "id": "wire-1789875110398-zlb8",
+      "x": 380,
+      "y": -30,
+      "vertices": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 130,
+          "y": 0
+        }
+      ],
+      "strokeColor": "#000000",
+      "strokeWidth": 1,
+      "dash": [],
+      "arrowEnd": false
+    }
+  ]
+}
