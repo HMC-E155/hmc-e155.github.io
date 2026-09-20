@@ -13,9 +13,11 @@ By the end of this experiment you should be able to:
 - Document specific tips on how to use the LLM effectively.
 - Compare your experience using an LLM to search for information against using Google, Ctrl-F and other technologies.
 
+The question you should be interrogating is **"can my LLM of choice help me read datasheets?""**
+
 ## Prototype
 
-Fire up your favorite LLM. ChatGPT is a good place to start, but you may consider using other LLMs as well like Claude or Gemini. Enter the prompt below.
+Fire up your favorite LLM. Enter the prompt below.
 
 ::: {.callout-note title="LLM Prompt"}
 What timers should I use on the STM32L432KC to generate frequencies ranging from 220Hz to 1kHz? 
