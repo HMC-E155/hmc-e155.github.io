@@ -12,6 +12,7 @@ The lab 2 specifications are trying to get you to focus on two new topics: const
 
 #### Proficiency
 
+- [ ] Two seven-segment displays show two independent hexadecimal numbers.
 - [ ] Resistors are in series with FPGA pins so that they correctly limit current
 - [ ] Scanning signal appears on LEDs when appropriate buttons are depressed on the keypad.
 
