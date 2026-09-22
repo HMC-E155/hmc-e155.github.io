@@ -9,3 +9,4 @@ See the list below for links to lecture slides and handouts. Slides and handouts
 - Lecture 3: Verilog Review [[slides](./slides/lecture-03-slides.pdf)] [[handout](./slides/lecture-03-handout.pdf)]
 - Lecture 4: Synchronous Design [[slides](./slides/lecture-04-slides.pdf)] [[handout](./slides/lecture-04-handout.pdf)]
 - Lecture 5: Finite State Machines (Part 2) [[slides](./slides/lecture-05-slides.pdf)] [[handout](./slides/lecture-05-handout.pdf)]
+- Lecture 6: Reading the Documentation: FPGA and MCU [[slides](./slides/lecture-06-slides.pdf)] [[handout](./slides/lecture-06-handout.pdf)]
