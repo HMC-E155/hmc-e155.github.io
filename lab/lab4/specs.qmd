@@ -26,7 +26,7 @@ Lab 4 is the first introduction to the STM32L432KC microcontroller. The specific
 
 #### Proficiency
 
-- [ ] Design makes use of at least one timer peripheral, accessed with writes to appropriate memory-mapped SFRs.
+- [ ] Design makes use of at least one timer peripheral, accessed with writes to appropriate memory locations.
 - [ ] Code uses `#define` macros for memory-mapped registers, copying the struct and base address design format from class.
 
 #### Excellence
