@@ -1019,7 +1019,7 @@
     "href": "lecture/index.html",
     "title": "Lecture",
     "section": "",
-    "text": "See the list below for links to lecture slides and handouts. Slides and handouts will normally be posted shortly before each class period.\n\nLecture 1: Introduction and Analog Behavior of Digital Systems [slides] [handout]\nLecture 2: Combinational and Sequential Logic [slides] [handout]\nLecture 3: Verilog Review [slides] [handout]\nLecture 4 and 5: Synchronous Design [slides] [handout]\nLecture 5: Finite State Machines (Part 2) [slides] [handout]\nLecture 6: Reading the Documentation: FPGA and MCU [slides] [handout]"
+    "text": "See the list below for links to lecture slides and handouts. Slides and handouts will normally be posted shortly before each class period.\n\nLecture 1: Introduction and Analog Behavior of Digital Systems [slides] [handout]\nLecture 2: Combinational and Sequential Logic [slides] [handout]\nLecture 3: Verilog Review [slides] [handout]\nLecture 4: Synchronous Design [slides] [handout]\nLecture 5 and 6: Finite State Machines [slides] [handout]\nLecture 7: Reading the Documentation: FPGA and MCU [slides] [handout]"
   },
   {
     "objectID": "syllabus/index.html",
