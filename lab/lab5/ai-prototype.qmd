@@ -11,11 +11,11 @@ The goal of this prototype is to experiment with using AI as a coding assistant 
 - Analyze the quality of the LLM-generated code.
 - Document specific tips on how to use the LLM effectively.
 
-The question you should be interrogating is **"can my LLM of choice write correct interrupt-driven embedded C from a plain-language description of the desired peripheral behavior?""**
+The question you should be interrogating is **"can my LLM of choice write correct interrupt-driven embedded C?""**
 
 ## Prototype
 
-Fire up your favorite LLM. ChatGPT is a good place to start, but you may consider using other LLMs as well like Claude or Gemini. Enter the prompt below.
+Fire up your favorite LLM. Enter the prompt below.
 
 ::: {.callout-note title="LLM Prompt"}
 Write me interrupt handlers to interface with a quadrature encoder.

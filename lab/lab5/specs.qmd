@@ -12,7 +12,8 @@ Lab 5 is your first microcontroller lab focused on interrupts. The specification
 
 #### Proficiency
 
-- [ ] Encoder outputs are connected only to 5V-tolerant MCU pins, or are shifted to 3.3V logic with a conversion circuit, per the tolerant pin list in the datasheet.
+- [ ] Encoder 
+- [ ] Encoder outputs are connected only to 5V-tolerant MCU pins (see the tolerant pin list in the datasheet) or are shifted to 3.3V logic with a conversion circuit.
 
 ### Software and Microcontroller Design Specifications
 

@@ -19,7 +19,7 @@ The question you should be interrogating is **"is my LLM of choice better at gen
 
 ## Prototype
 
-Fire up your favorite LLM. ChatGPT is a good place to start, but you may consider using other LLMs as well like Claude or Gemini. Enter the prompt below.
+Fire up your favorite LLM. Enter the prompt below.
 
 ::: {.callout-note title="LLM Prompt"}
 I'm making a web portal to interface with a temperature sensor. 
