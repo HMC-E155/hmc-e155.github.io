@@ -10,3 +10,5 @@ See the list below for links to lecture slides and handouts. Slides and handouts
 - Lecture 4: Synchronous Design [[slides](./slides/lecture-04-slides.pdf)] [[handout](./slides/lecture-04-handout.pdf)]
 - Lecture 5 and 6: Finite State Machines [[slides](./slides/lecture-05-slides.pdf)] [[handout](./slides/lecture-05-handout.pdf)]
 - Lecture 7: Reading the Documentation: FPGA and MCU [[slides](./slides/lecture-06-slides.pdf)] [[handout](./slides/lecture-06-handout.pdf)]
+- Lecture 8: GPIO Device Driver [[slides](./slides/lecture-07-slides.pdf)] [[handout](./slides/lecture-07-handout.pdf)]
+- Lecture 9: Clock Configuration [[slides](./slides/lecture-08-slides.pdf)] [[handout](./slides/lecture-08-handout.pdf)] [[tutorial repository](https://github.com/HMC-E155/tutorial-clock-configuration)]
