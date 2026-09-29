@@ -6,7 +6,9 @@ format:
 
 ## Lab 7 Specifications
 
-Lab 7 is the capstone Verilog design of the course: a full AES-128 hardware accelerator, partitioned into a datapath and controller and driven over SPI from the MCU. Because building a working accelerator on real hardware is a significant undertaking on top of a difficult specification, most of the grading weight is on getting the design to simulate correctly against the reference test vectors in the FIPS-197 standard; getting the design running end-to-end on the FPGA is an excellence-level stretch goal.
+Lab 7 is a capstone lab that requires both microcontroller and FPGA design, which exercises most of the learning goals in the course. (Setting you up for SPI communication between the MCU and the FPGA also sets you up for your project.)Because building a working accelerator on real hardware is a significant undertaking on top of a difficult specification, most of the grading weight is on getting the design to simulate correctly against the reference test vectors in the FIPS-197 standard; getting the design running end-to-end on hardware is an excellence-level stretch goal.  
+
+Note that **no schematic is required for this lab** because the design is fully included on the motherboard.
 
 ### Hardware Specifications
 
@@ -24,7 +26,7 @@ Lab 7 is the capstone Verilog design of the course: a full AES-128 hardware acce
 #### Proficiency
 
 - [ ] AES logic is broken into modules for each major step (e.g., SubBytes, ShiftRows, MixColumns, AddRoundKey, KeyExpansion) rather than one monolithic block.
-- [ ] Rounds are performed sequentially using a counter or FSM to sequence through them, rather than unrolled as one large block of combinational logic.
+- [ ] Control logic is in a separate module from the datapath logic.
 - [ ] Style conventions from previous labs (module names, descriptive variables, etc.) are still followed. See [HDL specs](../specs/hdl-specs.qmd)
 
 #### Excellence
@@ -37,14 +39,8 @@ Lab 7 is the capstone Verilog design of the course: a full AES-128 hardware acce
 #### Proficiency
 
 - [ ] `testbench_aes_core` passes, verifying the `aes_core` module against the FIPS-197 test vector without the SPI link.
-- [ ] Full system testbench (including the SPI link) passes, verifying the same test vector end-to-end.
+- [ ] Full system testbench (including the SPI link) passes.
 - [ ] All simulations captured as legible waveform screenshots in the report.
-
-### Other Documentation
-
-#### Proficiency
-
-- [ ] Report states which test vector(s) from FIPS-197 were used to verify the design.
 
 {{< include  ../specs/block-diagram-specs.qmd >}}
 
