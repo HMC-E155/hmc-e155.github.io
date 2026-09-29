@@ -6,4 +6,45 @@ format:
 
 ## Lab 5 Specifications
 
-Under construction.
+Lab 5 is focused on interrupts. The specifications emphasize correct interrupt-driven design, which includes keeping your interrupt service routines small. We pay special attention to whether your system keeps working at the edge cases (very fast and very slow motor speeds) to emphasize this behavior.
+
+### Hardware Specifications
+
+#### Proficiency
+
+- [ ] Encoder used to interpret and display motor direction and speed.
+- [ ] System does not miss any encoder pulses at normal speed.
+- [ ] Design measures and displays speed of motor in units of rev/s with an update rate of at least 1 Hz.
+- [ ] Measured speed and direction match the true motor speed and direction (calculations should be provided in the report to verify this).
+- [ ] Motor speed is reported as zero when it is not spinning.
+- [ ] Encoder outputs are connected only to 5V-tolerant MCU pins (see the tolerant pin list in the datasheet) or are shifted to 3.3V logic with a conversion circuit.
+
+#### Excellence
+
+- [ ] MCU does not miss any pulses at high speed, and still outputs a non-zero velocity at low speeds.
+
+### Software and Microcontroller Design Specifications
+
+#### Proficiency
+
+- [ ] Code uses interrupts (rather than polling or timers) to detect encoder pulses.
+- [ ] Code adheres to most of the C-style guidelines [see here](../specs/c-style-specs.qmd).
+
+#### Excellence
+
+- [ ] Design uses both edges of both encoder channels to achieve the highest possible resolution measurement.
+
+### Other Documentation
+
+#### Proficiency
+
+- [ ] Report explains how raw encoder pulses and their timing are converted into a velocity in rev/s and a direction, with calculations to back up the update rate and resolution achieved.
+
+#### Excellence
+
+- [ ] Report includes a [flowchart](https://users.ece.utexas.edu/~valvano/Volume1/E-Book/C12_Interrupts.htm) illustrating the main loop and each interrupt handler, and how they communicate.
+- [ ] Report compares the performance of interrupt-based code to manual polling at high speeds, and quantitatively discusses the tradeoffs between the two approaches.
+
+{{< include  ../specs/schematic-specs.qmd >}}
+
+{{< include  ../specs/lab-writeup-specs.qmd >}}

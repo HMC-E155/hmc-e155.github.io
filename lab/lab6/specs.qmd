@@ -6,4 +6,42 @@ format:
 
 ## Lab 6 Specifications
 
-Under construction.
+Lab 6 asks you to build a complete IoT device on top of a driver you write yourself against the DS1722 register map. The main focus of your driver implementation is enabling SPI communication, and understanding of serial communication is a major learning goal for the lab.
+
+### Hardware Specifications
+
+#### Proficiency
+
+- [ ] DS1722 temperature sensor is correctly wired per its datasheet pinout.
+- [ ] ESP8266 module is correctly wired and powered at 3.3V, with TX/RX crossed between the MCU and the ESP8266.
+- [ ] FPGA is disconnected (DIP switches open) so it cannot interfere with pins shared with the MCU.
+- [ ] System correctly reads the current temperature from the DS1722 sensor and displays it on a webpage that updates the temperature when refreshed.
+- [ ] Webpage displays the current LED state and can toggle it.
+
+#### Excellence
+
+- [ ] User can select the DS1722's resolution (e.g., 8/9/10/11/12-bit) from the webpage, and the driver correctly reconfigures the sensor in response.
+
+### Software and Microcontroller Design Specifications
+
+#### Proficiency
+
+- [ ] SPI device driver is written using the CMSIS device templates (register structs and base addresses from `stm32l432xx.h`), not a third-party, copied driver or home-grown driver.
+
+#### Excellence
+
+- [ ] System resolution is configured such that it could correctly read temperatures across the sensor's -10&deg;C to 30&deg;C range.
+
+### Other Documentation
+
+#### Proficiency
+
+- [ ] Report includes a labeled logic analyzer capture of a full SPI read transaction (CE, SCK, SDO and SDI), as required in the lab writeup.
+
+#### Excellence
+
+- [ ] Logic analyzer capture is annotated to show how the observed timing matches the datasheet's specified SPI timing.
+
+{{< include  ../specs/schematic-specs.qmd >}}
+
+{{< include  ../specs/lab-writeup-specs.qmd >}}
