@@ -183,7 +183,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lab-6-specifications" id="toc-lab-6-specifications" class="nav-link active" data-scroll-target="#lab-6-specifications">Lab 6 Specifications</a></li>
+  <li><a href="#lab-6-specifications" id="toc-lab-6-specifications" class="nav-link active" data-scroll-target="#lab-6-specifications">Lab 6 Specifications</a>
+  <ul class="collapse">
+  <li><a href="#hardware-specifications" id="toc-hardware-specifications" class="nav-link" data-scroll-target="#hardware-specifications">Hardware Specifications</a></li>
+  <li><a href="#software-and-microcontroller-design-specifications" id="toc-software-and-microcontroller-design-specifications" class="nav-link" data-scroll-target="#software-and-microcontroller-design-specifications">Software and Microcontroller Design Specifications</a></li>
+  <li><a href="#other-documentation" id="toc-other-documentation" class="nav-link" data-scroll-target="#other-documentation">Other Documentation</a></li>
+  <li><a href="#schematic-specifications" id="toc-schematic-specifications" class="nav-link" data-scroll-target="#schematic-specifications">Schematic Specifications</a></li>
+  <li><a href="#lab-writeup" id="toc-lab-writeup" class="nav-link" data-scroll-target="#lab-writeup">Lab Writeup</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="specs.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -195,9 +202,98 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="lab-6-specifications" class="level2">
 <h2 class="anchored" data-anchor-id="lab-6-specifications">Lab 6 Specifications</h2>
-<p>Under construction.</p>
+<p>Lab 6 asks you to build a complete IoT device on top of a driver you write yourself against the DS1722 register map. The main focus of your driver implementation is enabling SPI communication, and understanding of serial communication is a major learning goal for the lab.</p>
+<section id="hardware-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="hardware-specifications">Hardware Specifications</h3>
+<section id="proficiency" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency">Proficiency</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">DS1722 temperature sensor is correctly wired per its datasheet pinout.</label></li>
+<li><label><input type="checkbox">ESP8266 module is correctly wired and powered at 3.3V, with TX/RX crossed between the MCU and the ESP8266.</label></li>
+<li><label><input type="checkbox">FPGA is disconnected (DIP switches open) so it cannot interfere with pins shared with the MCU.</label></li>
+<li><label><input type="checkbox">System correctly reads the current temperature from the DS1722 sensor and displays it on a webpage that updates the temperature when refreshed.</label></li>
+<li><label><input type="checkbox">Webpage displays the current LED state and can toggle it.</label></li>
+</ul>
+</section>
+<section id="excellence" class="level4">
+<h4 class="anchored" data-anchor-id="excellence">Excellence</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">User can select the DS1722’s resolution (e.g., 8/9/10/11/12-bit) from the webpage, and the driver correctly reconfigures the sensor in response.</label></li>
+</ul>
+</section>
+</section>
+<section id="software-and-microcontroller-design-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="software-and-microcontroller-design-specifications">Software and Microcontroller Design Specifications</h3>
+<section id="proficiency-1" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency-1">Proficiency</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">SPI device driver is written using the CMSIS device templates (register structs and base addresses from <code>stm32l432xx.h</code>), not a third-party, copied driver or home-grown driver.</label></li>
+</ul>
+</section>
+<section id="excellence-1" class="level4">
+<h4 class="anchored" data-anchor-id="excellence-1">Excellence</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">System resolution is configured such that it could correctly read temperatures across the sensor’s -10°C to 30°C range.</label></li>
+</ul>
+</section>
+</section>
+<section id="other-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="other-documentation">Other Documentation</h3>
+<section id="proficiency-2" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency-2">Proficiency</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Report includes a labeled logic analyzer capture of a full SPI read transaction (CE, SCK, SDO and SDI), as required in the lab writeup.</label></li>
+</ul>
+</section>
+<section id="excellence-2" class="level4">
+<h4 class="anchored" data-anchor-id="excellence-2">Excellence</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Logic analyzer capture is annotated to show how the observed timing matches the datasheet’s specified SPI timing.</label></li>
+</ul>
+</section>
+</section>
+<section id="schematic-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="schematic-specifications">Schematic Specifications</h3>
+<section id="proficiency-3" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency-3">Proficiency</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Schematic correctly represents the circuit that was built on the breadboard.</label></li>
+<li><label><input type="checkbox">No parts of motherboard schematic replicated. Shows only off-board components. Indicate on-board components with a brief paragraph that links the motherboard schematic (<a href="../../assets/doc/E155 FA22 Development Board Schematic.pdf">here</a>).</label></li>
+<li><label><input type="checkbox">No parts internal to the chip (e.g., internal pullup resistors) drawn on schematic. Indicate important pullups, capacitors, etc. with comments instead.</label></li>
+<li><label><input type="checkbox">All pin names labeled.</label></li>
+<li><label><input type="checkbox">All pin numbers labeled.</label></li>
+<li><label><input type="checkbox">Crossing wires clearly identified as junction or unconnected.</label></li>
+<li><label><input type="checkbox">Neat layout (e.g., clear organization and spacing).</label></li>
+<li><label><input type="checkbox">All parts labeled with part number.</label></li>
+<li><label><input type="checkbox">All component values present.</label></li>
+</ul>
+</section>
+<section id="excellence-3" class="level4">
+<h4 class="anchored" data-anchor-id="excellence-3">Excellence</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Standard symbols used for all components where applicable.</label></li>
+<li><label><input type="checkbox">Signals “flow” from left to right where possible (e.g., inputs on left hand side, outputs on right hand side, power on top, ground on bottom)</label></li>
+<li><label><input type="checkbox">Title block with author name, title, and date.</label></li>
+</ul>
+</section>
+</section>
+<section id="lab-writeup" class="level3">
+<h3 class="anchored" data-anchor-id="lab-writeup">Lab Writeup</h3>
+<section id="proficiency-and-excellence" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency-and-excellence">Proficiency and Excellence</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Documentation embedded in a well-structured, concise report with one section per major deliverable. Sections should match structure of other specs.</label></li>
+<li><label><input type="checkbox">Spoiler tags are used to hide screenshots and code. Some unspoilered entries (~1 waveform, essential code snippets) allowed if they are essential to the narrative, kept to a minimum.</label></li>
+<li><label><input type="checkbox">Writeup contains minimal spelling or grammar issues and any errors do not significantly detract from clarity of the writeup.</label></li>
+<li><label><input type="checkbox">Statement of whether the design meets all the requirements. If not, list the shortcomings.</label></li>
+<li><label><input type="checkbox">AI prototype attempted and some reflection is recorded.</label></li>
+<li><label><input type="checkbox">Number of hours spent working on the lab are included.</label></li>
+<li><label><input type="checkbox">(Optional) List comments or suggestions on what was particularly good about the assignment or what you think needs to change in future versions.</label></li>
+</ul>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->

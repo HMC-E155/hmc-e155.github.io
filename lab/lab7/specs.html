@@ -179,17 +179,118 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="specs.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lab-7-specifications" id="toc-lab-7-specifications" class="nav-link active" data-scroll-target="#lab-7-specifications">Lab 7 Specifications</a>
+  <ul class="collapse">
+  <li><a href="#hardware-specifications" id="toc-hardware-specifications" class="nav-link" data-scroll-target="#hardware-specifications">Hardware Specifications</a></li>
+  <li><a href="#verilog-structure-and-style-specifications" id="toc-verilog-structure-and-style-specifications" class="nav-link" data-scroll-target="#verilog-structure-and-style-specifications">Verilog Structure and Style Specifications</a></li>
+  <li><a href="#simulation-specifications" id="toc-simulation-specifications" class="nav-link" data-scroll-target="#simulation-specifications">Simulation Specifications</a></li>
+  <li><a href="#block-diagram-specifications" id="toc-block-diagram-specifications" class="nav-link" data-scroll-target="#block-diagram-specifications">Block Diagram Specifications</a></li>
+  <li><a href="#lab-writeup" id="toc-lab-writeup" class="nav-link" data-scroll-target="#lab-writeup">Lab Writeup</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="specs.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<p>Under construction.</p>
+<section id="lab-7-specifications" class="level2">
+<h2 class="anchored" data-anchor-id="lab-7-specifications">Lab 7 Specifications</h2>
+<p>Lab 7 is a capstone lab that requires both microcontroller and FPGA design, which exercises most of the learning goals in the course. (Setting you up for SPI communication between the MCU and the FPGA also sets you up for your project.)Because building a working accelerator on real hardware is a significant undertaking on top of a difficult specification, most of the grading weight is on getting the design to simulate correctly against the reference test vectors in the FIPS-197 standard; getting the design running end-to-end on hardware is an excellence-level stretch goal.</p>
+<p>Note that <strong>no schematic is required for this lab</strong> because the design is fully included on the motherboard.</p>
+<section id="hardware-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="hardware-specifications">Hardware Specifications</h3>
+<section id="proficiency" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency">Proficiency</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">SPI interconnect between the MCU and FPGA is wired correctly, matching the clock polarity and phase expected by the provided MCU code.</label></li>
+</ul>
+</section>
+<section id="excellence" class="level4">
+<h4 class="anchored" data-anchor-id="excellence">Excellence</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Design fits on the FPGA and completes a full SPI transaction, returning the correct ciphertext computed by the accelerator (not a value hardcoded or precomputed off-chip).</label></li>
+<li><label><input type="checkbox">SPI communication between the MCU and FPGA is displayed on the logic analyzer.</label></li>
+</ul>
+</section>
+</section>
+<section id="verilog-structure-and-style-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="verilog-structure-and-style-specifications">Verilog Structure and Style Specifications</h3>
+<section id="proficiency-1" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency-1">Proficiency</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">AES logic is broken into modules for each major step (e.g., SubBytes, ShiftRows, MixColumns, AddRoundKey, KeyExpansion) rather than one monolithic block.</label></li>
+<li><label><input type="checkbox">Control logic is in a separate module from the datapath logic.</label></li>
+<li><label><input type="checkbox">Style conventions from previous labs (module names, descriptive variables, etc.) are still followed. See <a href="../../lab/specs/hdl-specs.html">HDL specs</a></label></li>
+</ul>
+</section>
+<section id="excellence-1" class="level4">
+<h4 class="anchored" data-anchor-id="excellence-1">Excellence</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Timing is correctly managed around the one-cycle latency of the synchronous RAM used for the sbox substitution.</label></li>
+<li><label><input type="checkbox">Finite state machines are implemented in an appropriate form discussed in lecture: canonical, non-canonical, or communicating.</label></li>
+</ul>
+</section>
+</section>
+<section id="simulation-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="simulation-specifications">Simulation Specifications</h3>
+<section id="proficiency-2" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency-2">Proficiency</h4>
+<ul class="task-list">
+<li><label><input type="checkbox"><code>testbench_aes_core</code> passes, verifying the <code>aes_core</code> module against the FIPS-197 test vector without the SPI link.</label></li>
+<li><label><input type="checkbox">Full system testbench (including the SPI link) passes.</label></li>
+<li><label><input type="checkbox">All simulations captured as legible waveform screenshots in the report.</label></li>
+</ul>
+</section>
+</section>
+<section id="block-diagram-specifications" class="level3">
+<h3 class="anchored" data-anchor-id="block-diagram-specifications">Block Diagram Specifications</h3>
+<section id="proficiency-3" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency-3">Proficiency</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Each module is represented by a block diagram</label></li>
+<li><label><input type="checkbox">Bare logic in all module is represented by appropriately drawn gates.</label></li>
+<li><label><input type="checkbox">Submodules in each module are represented by blocks inside of the instantiating module.</label></li>
+<li><label><input type="checkbox">Submodules have all ports represented by pin symbols on the boundary of the submodule, each with a port name.</label></li>
+<li><label><input type="checkbox">Submodules indicate the name of the module being instantiated and the name of the instance.</label></li>
+<li><label><input type="checkbox">All connections between module ports, logic and submodules are indicated.</label></li>
+<li><label><input type="checkbox">Module ports are represented by pin symbols on the boundary of the module and labeled with port names</label></li>
+<li><label><input type="checkbox">All nets internal to the module are labeled, even when they share a name with a port on a module/submodule boundary.</label></li>
+</ul>
+</section>
+<section id="excellence-2" class="level4">
+<h4 class="anchored" data-anchor-id="excellence-2">Excellence</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Appropriate use of bus notation for multi-bit signals (e.g., <code>data[7:0]</code> for an 8-bit bus), including fan-in and fan-out when needed.</label></li>
+<li><label><input type="checkbox">Appropriate use of implicit connections (i.e.: connect-by-label-name) to reduce routing connection</label></li>
+<li><label><input type="checkbox">Block diagram is an exact, 1:1 representation of the Verilog code.</label></li>
+</ul>
+</section>
+</section>
+<section id="lab-writeup" class="level3">
+<h3 class="anchored" data-anchor-id="lab-writeup">Lab Writeup</h3>
+<section id="proficiency-and-excellence" class="level4">
+<h4 class="anchored" data-anchor-id="proficiency-and-excellence">Proficiency and Excellence</h4>
+<ul class="task-list">
+<li><label><input type="checkbox">Documentation embedded in a well-structured, concise report with one section per major deliverable. Sections should match structure of other specs.</label></li>
+<li><label><input type="checkbox">Spoiler tags are used to hide screenshots and code. Some unspoilered entries (~1 waveform, essential code snippets) allowed if they are essential to the narrative, kept to a minimum.</label></li>
+<li><label><input type="checkbox">Writeup contains minimal spelling or grammar issues and any errors do not significantly detract from clarity of the writeup.</label></li>
+<li><label><input type="checkbox">Statement of whether the design meets all the requirements. If not, list the shortcomings.</label></li>
+<li><label><input type="checkbox">AI prototype attempted and some reflection is recorded.</label></li>
+<li><label><input type="checkbox">Number of hours spent working on the lab are included.</label></li>
+<li><label><input type="checkbox">(Optional) List comments or suggestions on what was particularly good about the assignment or what you think needs to change in future versions.</label></li>
+</ul>
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
