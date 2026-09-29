@@ -60,9 +60,9 @@ Be sure to join the class Discord and check it regularly. It is be the only sour
 |:-------------:|:-------------:|:-------------:|:-------------:|:-------------:|
 | 1  | 8/31  | Intro & Analog Behavior of Digital Systems | Combinational and Sequential Logic | Git & Quarto Portfolio Setup |
 | 2  | 9/7   | Verilog Coding | Synchronous Design | [Lab 1](/lab/lab1/) |
-| 3  | 9/14  | FPGA Documentation | C Programming on an MCU | [Lab 2](/lab/lab2/) |
-| 4  | 9/21  | GPIO | Clock Configuration | [Lab 3](/lab/lab3/) |
-| 5  | 9/28  | Timers | Interrupts | [Lab 4](/lab/lab4/) |
+| 3  | 9/14  | Finite State Machines | Lab 3 Workshop | [Lab 2](/lab/lab2/) |
+| 4  | 9/21  | FPGA & MCU Documentation | GPIO Device Driver | [Lab 3](/lab/lab3/) |
+| 5  | 9/28  | Clock Configuration | Interrupts | [Lab 4](/lab/lab4/) |
 | 6  | 10/5  | Serial Interfaces Overview and SPI | UART and the IoT | [Lab 5](/lab/lab5/) |
 | 7  | 10/12 | Advanced Encryption Standard (AES) | Project Kickoff | [Lab 6](/lab/lab6/) |
 | 8  | 10/19 | **Happy Fall Break! No Class** | AES on FPGA Workshop | [Project Proposal](/project/) Reviews |
