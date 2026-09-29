@@ -1,0 +1,23 @@
+#### C Style & Code Specifications
+
+##### Proficiency
+
+- [ ] Each source file (`file.c`) has a corresponding header file (`file.h`) that declares the public functions and global variables defined in the source file.
+- [ ] Descriptive filename that matches its purpose; one driver or logical unit per file (e.g., `spi.c`/`spi.h` for the SPI driver).
+- [ ] Header files use include guards and only declare, never define, functions and global variables.
+- [ ] Memory-mapped registers are accessed through `volatile` structs or macros that match the base address and register layout given in the reference manual, not hardcoded pointer arithmetic.
+- [ ] Any variable shared between an interrupt handler and the main program (or between two interrupt handlers) is declared `volatile`.
+- [ ] Descriptive variable and function names; no unexplained magic numbers (use `#define` or `enum` constants instead).
+- [ ] Neat formatting (e.g., standard indentation, consistent brace style, consistent naming convention for variables (snake_case/camelCase) and constants (ALL_CAPS)).
+- [ ] Functions are short and do one thing; repeated logic is factored into a helper function instead of copy-pasted.
+- [ ] `main` (or the top-level loop) only calls into driver/helper functions and contains no register-level code itself.
+
+##### Excellence
+
+- [ ] Interrupt handlers are kept short and non-blocking (e.g., they set a flag or update shared state rather than doing lengthy processing), with the real work done in the main loop.
+- [ ] Driver code is separated from application logic, so the same driver file could be dropped into a different lab or project unmodified.
+- [ ] Code defends against obvious failure modes (e.g., divide by zero, off-by-one loop bounds) rather than assuming ideal inputs.
+
+#### Optional Spec to Match Industrial Practice
+
+- [ ] Each driver file begins with a comment block describing what peripheral it controls and how to use it (e.g., initialization order, assumptions about clock configuration). Public functions are documented with their parameters, return value, and any side effects (Doxygen-style comments are a good format for this).
