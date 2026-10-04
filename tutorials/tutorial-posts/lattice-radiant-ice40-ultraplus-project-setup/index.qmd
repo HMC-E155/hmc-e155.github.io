@@ -16,15 +16,6 @@ Two closely related topics live on their own pages:
 - [QuestaSim/ModelSim Simulation](/tutorials/tutorial-posts/modelsim-simulation-tutorial/) — simulating your design before you commit it to hardware.
 :::
 
-::: {.callout-tip title="Working on Lab 1?"}
-Lab 1 sends you to this page at four points. Each section ends with a callout telling you when to head back to the lab.
-
-1. [Project Setup](#project-setup) — create your Radiant project.
-2. [Pin Assignment](#pin-assignment) — map your signals to physical pins.
-3. [Synthesizing the Design](#synthesizing-the-design) — generate the configuration file.
-4. [Programming the Device](#programming-the-device) — load your design onto the board.
-:::
-
 ## Project Setup {#project-setup}
 
 Open Lattice Radiant. If you are prompted for a license file, navigate to it. See the [Lattice Radiant Installation](/tutorials/tutorial-posts/lattice-radiant-installation/) instructions if needed.
@@ -57,12 +48,6 @@ Navigate to `File > New > New File` and select `SystemVerilog Files` in the New 
 ![](images/create_file.png)
 
 Create new file.
-:::
-
-::: {.callout-important title="Working on Lab 1? Return to the lab now"}
-You now have a project set up for the UP5K.
-Go back to [Lab 1 → Design and Synthesis in Radiant](/lab/lab1/#design-and-synthesis-in-radiant) and create your own `lab1_xx.sv` source file instead of the demo below.
-Lab 1 will send you back here to assign pins, synthesize, and program.
 :::
 
 ## Implementing the Demo Design in SystemVerilog
@@ -146,11 +131,6 @@ Check that the total number of registers and pins matches your expectations. Und
 Resource usage report.
 :::
 
-::: {.callout-important title="Working on Lab 1? Return to the lab now"}
-Your design is synthesized and you have a `.bin` configuration file.
-Go back to [Lab 1 → Generating the FPGA Configuration Files](/lab/lab1/#generating-the-fpga-configuration-files), then continue on to program your board.
-:::
-
 ## Pin Assignment {#pin-assignment}
 
 When you first synthesize a design, Radiant assigns the inputs and outputs of your top-level module to I/O pins arbitrarily. Before your design will work on real hardware, you need to tell Radiant which physical pin on the FPGA each signal in your Verilog should be routed to.
@@ -205,11 +185,6 @@ For the demo design, we will route the `led` output to GPIO 42. Open the Device 
 You will notice that the currently routed pin is labeled in parentheses, 36 in this example.
 Resynthesize the design, save the `.pdc` file when prompted, and confirm you see "42(42)" in the table entry corresponding to the `led` output.
 
-::: {.callout-important title="Working on Lab 1? Return to the lab now"}
-That covers everything you need for pin assignment in Lab 1.
-Go back to [Lab 1 → Pin Assignment](/lab/lab1/#pin-assignment) and continue with the Seven Segment Display Circuit.
-:::
-
 ## Programming the Device {#programming-the-device}
 
 To get our design working on our board, we need to program it to the flash memory onboard the UPduino board.
@@ -258,12 +233,6 @@ If you are seeing issues with specific pins on your FPGA there could be a few di
 - You are trying to use a pin that is shared between the FPGA and the MCU, and the MCU is not leaving that pin floating or it is driving it as an output. You can get around this by wiping the code on the MCU by uploading a file with a blank main function.
 - You should also read through the Nucleo board documentation to see what pins have special functions that are used by default by the MCU. Hint: You likely want to stay away from using the pins that the MCU uses for serial communication by default.
 
-::: {.callout-important title="Working on Lab 1? Return to the lab now"}
-Your design is now programmed onto the board.
-Go back to [Lab 1 → Program and Test Your Design](/lab/lab1/#program-and-test-your-design) and finish the lab.
-The section below is an extra hardware check for the demo design and is not part of Lab 1.
-:::
-
 ## Testing the Demo in Hardware
 
 ![Simple circuit to blink an LED.](images/blink_led_schematic.png){#fig-led-blink fig-align="center" width="50%"}
@@ -271,5 +240,9 @@ The section below is an extra hardware check for the demo design and is not part
 If you are using the E155 development board, you should see the onboard LED connected to P42 blinking.
 If you would like to test the hardware separately with just the UPduino, you can unplug the USB from your board and connect your UPduino board to a breadboard, wiring up an LED in series with a current limiting resistor (typically a value between 330 Ω and 1 kΩ is a good choice).
 Then, reconnect your board to power via USB or using the +5V input on the board from a DC power supply.
+
+::: {.callout-important title="Working on Lab 1?"}
+You have finished this tutorial. Go back to the [Lab 1 tutorial list](/lab/lab1/#part-1-tutorials) and start the next one.
+:::
 
 {{< include /resources/github-issue-footer.qmd >}}

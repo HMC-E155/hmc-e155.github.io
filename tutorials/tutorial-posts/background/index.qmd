@@ -55,4 +55,8 @@ The FPGA is programmed using the onboard programmer via the synthesis tool Latti
 
 More details will be provided later in this lab writeup.
 
+::: {.callout-important title="Working on Lab 1?"}
+You have finished this tutorial. Go back to the [Lab 1 tutorial list](/lab/lab1/#part-1-tutorials) and start the next one.
+:::
+
 {{< include /resources/github-issue-footer.qmd >}}

@@ -142,5 +142,8 @@ After working through the tutorial, download the SES solution folder from the co
 
 Now, in addition to LED D3 (PA9/P25) blinking, you should see LED D2 (PA10/P23) and LED D7 (P38) blinking as well.
 
+::: {.callout-important title="Working on Lab 1?"}
+You have finished this tutorial. Go back to the [Lab 1 tutorial list](/lab/lab1/#part-1-tutorials) and start the next one.
+:::
 
 {{< include /resources/github-issue-footer.qmd >}}
