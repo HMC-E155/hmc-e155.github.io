@@ -15,3 +15,4 @@ See the list below for links to lecture slides and handouts. Slides and handouts
 - Lecture 9: Timers [[slides](./slides/lecture-09-slides.pdf)] [[handout](./slides/lecture-09-handout.pdf)]
 - Lecture 10: Interrupts [[slides](./slides/lecture-10-slides.pdf)] [[handout](./slides/lecture-10-handout.pdf)] [[activity worksheet](./slides/lecture-10-activity.pdf)] [[tutorial repository](https://github.com/HMC-E155/tutorial-interrupts)]
 - Lecture 11: Serial Interfaces and SPI [[slides](./slides/lecture-11-slides.pdf)] [[handout](./slides/lecture-11-handout.pdf)]
+- Lecture 12: Asynchronous Serial Interfaces and the Internet of Things [[slides](./slides/lecture-12-slides.pdf)] [[handout](./slides/lecture-12-handout.pdf)] [[tutorial repository](https://github.com/HMC-E155/tutorial-uart)]
