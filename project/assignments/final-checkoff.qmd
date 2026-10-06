@@ -13,7 +13,7 @@ Come prepared with printouts of your schematics, software, and Verilog. If your 
 
 ## Specs
 
-The specifications below lay out how you will be assessed. While these are a good reference, they are subject to change.
+The specifications below lay out how you will be assessed.
 
 ### Proficiency
 
@@ -28,5 +28,5 @@ The specifications below lay out how you will be assessed. While these are a goo
 
 - [ ] Project meets **all** the specifications as laid out in the proposal.
 - [ ] Project is polished (e.g., wires are hidden, any physical interfaces are well-designed and reliable, clean user interface)
-- [ ] Verilog code is efficient and demonstrates best coding practices (e.g., modularity, testbenches were appropriate, etc.)
+- [ ] Verilog code is efficient and demonstrates best coding practices (e.g., modularity, testbenches where appropriate, etc.)
 - [ ] C code is efficient and well organized (e.g., code encapsulated in functions and custom libraries as appropriate)

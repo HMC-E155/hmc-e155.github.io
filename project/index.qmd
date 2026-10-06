@@ -27,7 +27,7 @@ You can find examples of past final projects below. Examples include games, elec
 
 ## Deliverables
 
-Each deliverable below links to a self-contained assignment page with its full requirements and grading specs. Specs are a good reference but are subject to change.
+Each deliverable below links to a self-contained assignment page with its full requirements and grading specs.
 
 | Date | Deliverable | Assignment Page |
 |---|---|---|
