@@ -1,0 +1,43 @@
+---
+title: Midpoint Report & Demo
+format:
+  html: default
+  pdf: default
+---
+
+**Due 11/16, submitted before your scheduled checkpoint slot during class time and your lab slot.**
+
+A 4-page report (plus appendices) documenting your design at the midpoint. You must be ready to demonstrate some working hardware in the lab at your scheduled slot.
+
+## Requirements
+
+The status report should include:
+
+- Schematics of anything on a breadboard
+- Block diagrams of the logic on your FPGA
+- An outline of the routines used on the MCU
+
+Include as an appendix either your Verilog code or software that is mostly complete (you do not have to have both ready).
+
+## Specs
+
+The specifications below lay out how you will be assessed. While these are a good reference, they are subject to change.
+
+### Proficiency
+
+- [ ] Clear and concise written summary of current status
+- [ ] Schematics of all breadboarded circuits
+- [ ] Block diagram of system components and the interfaces between them
+- [ ] Hardware demo functioning (potentially with some minor bugs)
+- [ ] More than 25% of the way to the final deliverable
+- [ ] Clear description of microcontroller routines
+- [ ] All external parts ordered
+
+### Excellence
+
+- [ ] All interfaces in the block diagram defined (e.g., SPI, I2C, GPIO)
+- [ ] Hardware demo functioning well
+- [ ] Writing is well organized
+- [ ] Solid grammar or spelling issues (no more than a few minor errors which do not detract from the point).
+- [ ] Completed riskiest element of the project
+- [ ] More than 50% of the way to the final deliverable

@@ -1,0 +1,73 @@
+---
+title: Project Proposal
+format:
+  html: default
+  pdf: default
+---
+
+**Due 10/27, submitted via Canvas.**
+
+The goal of the proposal is to describe what you plan to build and how you plan to build it. It must be specific enough that we can tell when you demonstrate your project that it meets the specs of the proposal. Do not list stretch goals or wiggle words; simply state what you are committing to deliver. You may need to do some preliminary technical work to gain confidence you can deliver what you promise.
+
+The proposal should be no longer than 2 pages of text (diagrams, tables, and other technical documentation do not count against the limit). Make your description clear, direct, and concise.
+
+## Requirements
+
+Your proposal must address the following:
+
+- Project description and overview
+- Description of the main subsystems of the design, including the FPGA design details and the features of the MCU you plan to use
+- An explanation of the new piece(s) of hardware you are using, showing that both the FPGA and MCU will perform nontrivial functions appropriate to each
+- A block diagram indicating chips, connections, and protocols
+- Calculations of performance-critical parameters (bandwidths, data rates, FFT widths, frame rates, ADC bits, power levels, etc.)
+- A rough schedule and work breakdown (e.g., a Gantt chart) showing how tasks will be divided among team members
+- A bill of materials / budget — see [Purchasing Parts](./purchasing-parts.qmd) for how to handle parts not available in the stockroom
+
+If you realize partway through the project that your scope was too large, contact us as soon as possible to renegotiate your proposal. We will not accept proposal revisions after the Friday following the design review presentations.
+
+{{< pagebreak >}}
+
+## Specs
+
+The specifications below lay out how your proposal will be assessed. While these are a good reference, they are subject to change.
+
+### General
+
+#### Proficiency
+
+- [ ] Bill of materials included with list of all items needed for the project
+- [ ] Project lists specifications for design
+- [ ] Identifies the riskiest element of the project
+
+#### Excellence
+
+- [ ] Bill of materials includes part numbers, quantities, and prices for all components including shipping and taxes. Prices for components available in the stock room should be indicated as "stockroom".
+- [ ] Completely clear what the project must do to meet specs.
+- [ ] Rough timeline included which lists the tasks which need to be completed, the order in which they will be pursued, the time they are expected to take, and how the  tasks will be divided among the team members.
+- [ ] Calculation of performance critical parameters is present.
+- [ ] Writing is well organized and no grammar or spelling issues.
+
+### Technical
+
+#### Proficiency
+
+- [ ] Describes microcontroller use
+- [ ] Describes FPGA use
+- [ ] Project uses new hardware
+
+#### Excellence
+
+- [ ] Project uses functionality of microcontroller not previously covered in labs
+- [ ] Project uses functionality of FPGA not previously covered in labs
+- [ ] Project uses new non-trivial new hardware (e.g., digital chip with non-trivial interface)
+
+### Documentation
+
+#### Proficiency
+
+- [ ] Block diagram of system provided showing all elements of the design and their connections.
+
+#### Excellence
+
+- [ ] Block diagram of system clearly describes all protocols and interfaces.
+- [ ] Block diagram is computer drawn and neatly laid out.

@@ -1,0 +1,44 @@
+---
+title: Design Review Presentation
+format:
+  html: default
+  pdf: default
+---
+
+**Presented in class on 11/7 or 11/9.**
+
+Your team will sign up for a 10-minute in-class presentation shortly after your proposal debrief. The purpose of the presentation is to share the plan for your project with your classmates and solicit their feedback.
+
+Your presentation should include a 3-minute overview of your project followed by an in-depth presentation of a specific technical problem your team is working on and has not yet solved. The goal is to get useful input from other students, so you must explain the problem clearly enough for them to give meaningful suggestions.
+
+## Requirements
+
+You are free to structure your presentation however you like, but most successful presentations include the following components:
+
+- **Introduction**: introduce the problem statement and the objectives of the project. What are you trying to achieve? What inspired you to choose this project?
+- **Specifications**: What will your project do?
+- **Implementation**: Present a block diagram of your system.
+  - What is the role of the MCU and the FPGA?
+  - What new hardware are you using?
+  - What new MCU peripheral(s) are you planning to use?
+- **Feedback**: Solicit feedback from your peers. This requires some thought and intentionality to do well. The goal is to solicit feedback on a technical topic, not just a high-level implementation detail (e.g., what color to paint the box). Some ideas to consider:
+  - What technical problem would you like feedback on from your peers?
+  - How would you like them to provide that feedback?
+- **Conclusion and Q&A**: Briefly conclude the presentation and field questions from the audience (as time allows).
+
+## Specs
+
+The specifications below lay out how you will be assessed. While these are a good reference, they are subject to change.
+
+### Proficiency
+
+- [ ] Presentation gives overview of the project
+- [ ] Presentation presents a problem or question for the class
+- [ ] Input solicited from the class
+
+### Excellence
+
+- [ ] Presentation wraps up on time
+- [ ] Slides are well formatted with no spelling, grammar, or formatting issues.
+- [ ] Presentation presents an in-depth technical problem
+- [ ] Problem or question for the class is technical in nature (e.g., soliciting feedback about tradeoffs for a specific protocol for an interface).
