@@ -23,7 +23,7 @@ The website should include:
 
 ## Specs
 
-Written documentation should follow all the specifications for written documentation as laid out in the [general lab specs](../../lab/specs/lab-writeup-specs.qmd). In addition, the report should address these project-specific specifications. While these are a good reference, they are subject to change.
+Written documentation should follow all the specifications for written documentation as laid out in the [general lab specs](../../lab/specs/lab-writeup-specs.qmd). In addition, the report should address these project-specific specifications.
 
 ### Proficiency
 

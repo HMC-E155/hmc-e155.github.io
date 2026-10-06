@@ -29,7 +29,7 @@ If you realize partway through the project that your scope was too large, contac
 
 ## Specs
 
-The specifications below lay out how your proposal will be assessed. While these are a good reference, they are subject to change.
+The specifications below lay out how your proposal will be assessed.
 
 ### General
 
