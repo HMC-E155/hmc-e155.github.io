@@ -5,7 +5,7 @@ format:
   pdf: default
 ---
 
-**Due 11/16, submitted before your scheduled checkpoint slot during class time and your lab slot.**
+**Due {{< var project-midpoint-date >}}, submitted before your scheduled checkpoint slot during class time and your lab slot.**
 
 A 4-page report (plus appendices) documenting your design at the midpoint. You must be ready to demonstrate some working hardware in the lab at your scheduled slot.
 

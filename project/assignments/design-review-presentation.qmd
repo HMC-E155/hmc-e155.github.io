@@ -5,7 +5,7 @@ format:
   pdf: default
 ---
 
-**Presented in class on 11/7 or 11/9.**
+**Presented in class on {{< var project-design-review-dates >}}.**
 
 Your team will sign up for a 10-minute in-class presentation shortly after your proposal debrief. The purpose of the presentation is to share the plan for your project with your classmates and solicit their feedback.
 

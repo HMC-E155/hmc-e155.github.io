@@ -4,7 +4,7 @@ title: Project
 
 ## Final Project
 
-The E155 final project is a chance to apply your digital design skills to a moderately-sized problem as part of a two- or three-person team. Full grading policy is on the [Final Project Requirements](./final-project-requirements.qmd) page.
+The E155 final project is a chance to apply your digital design skills to a moderately-sized problem of your choosing as part of a two- or three-person team. 
 
 ## Project Scope
 
@@ -32,13 +32,13 @@ Each deliverable below links to a self-contained assignment page with its full r
 | Date | Deliverable | Assignment Page |
 |---|---|---|
 | Ongoing | Purchasing Parts | [Purchasing Parts](./assignments/purchasing-parts.qmd) |
-| 10/27 | Project Proposal | [Project Proposal](./assignments/proposal.qmd) |
-| 10/31 & 11/2 | Proposal Debrief | During lab checkoff times |
-| 11/7 & 11/9 | Design Review Presentation | [Design Review Presentation](./assignments/design-review-presentation.qmd) |
-| 11/16 | Midpoint Report & Demo | [Midpoint Report & Demo](./assignments/midpoint-report.qmd) |
-| 12/5 & 12/7 | Final Checkoff | [Final Checkoff](./assignments/final-checkoff.qmd) |
-| 12/7 | Final Report Website | [Final Report](./assignments/final-report.qmd) |
-| 12/8 @ 2 pm | Demo Day | Public event to show off projects |
+| {{< var project-proposal-date >}} | Project Proposal | [Project Proposal](./assignments/proposal.qmd) |
+| {{< var project-proposal-debrief-dates >}} | Proposal Debrief | During lab checkoff times |
+| {{< var project-design-review-dates >}} | Design Review Presentation | [Design Review Presentation](./assignments/design-review-presentation.qmd) |
+| {{< var project-midpoint-date >}} | Midpoint Report & Demo | [Midpoint Report & Demo](./assignments/midpoint-report.qmd) |
+| {{< var project-final-checkoff-dates >}} | Final Checkoff | [Final Checkoff](./assignments/final-checkoff.qmd) |
+| {{< var project-final-report-date >}} | Final Report Website | [Final Report](./assignments/final-report.qmd) |
+| {{< var project-demo-day-date >}} | Demo Day | Public event to show off projects |
 
 Working on a final report video? Use the [storytelling worksheet](./storytelling-worksheet.qmd) to help structure your pitch.
 
