@@ -5,7 +5,7 @@ format:
   pdf: default
 ---
 
-**During lab checkoff times on 12/5 or 12/7.**
+**During lab checkoff times on {{< var project-final-checkoff-dates >}}.**
 
 Demonstrate a working project to an instructor in the lab. There will be signups for demonstration periods, during which you will show that you meet your specifications and be asked technical questions about the operation of your design.
 

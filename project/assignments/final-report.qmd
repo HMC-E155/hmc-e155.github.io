@@ -5,7 +5,7 @@ format:
   pdf: default
 ---
 
-**Due 12/7, end of day.**
+**Due {{< var project-final-report-date >}}, end of day.**
 
 The final report for this project is a portfolio website hosted on GitHub Pages. The website should document your design with all source code in the linked GitHub repository. Clearly explain how your design works. If you have developed techniques that would be useful for students in the future (e.g., how to interface to an LCD display), document these features well so that future students may build on your work.
 
@@ -53,7 +53,7 @@ Written documentation should follow all the specifications for written documenta
 
 #### Technical Documentation
 
-- [ ] Schematics are neatly drawn with a CAD program (e.g., KiCad). All necessary labels present (pins names & numbers, part numbers, etc.)
+- [ ] Schematics are neatly drawn with a CAD program (e.g., CircuitPaint). All necessary labels present (pins names & numbers, part numbers, etc.)
 - [ ] Block diagram is neat and completely specified (e.g., all communication protocols labeled, bus widths indicated, etc.)
 
 #### Written Documentation

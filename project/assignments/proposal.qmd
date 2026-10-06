@@ -5,7 +5,7 @@ format:
   pdf: default
 ---
 
-**Due 10/27, submitted via Canvas.**
+**Due {{< var project-proposal-date >}}, submitted via Canvas.**
 
 The goal of the proposal is to describe what you plan to build and how you plan to build it. It must be specific enough that we can tell when you demonstrate your project that it meets the specs of the proposal. Do not list stretch goals or wiggle words; simply state what you are committing to deliver. You may need to do some preliminary technical work to gain confidence you can deliver what you promise.
 
