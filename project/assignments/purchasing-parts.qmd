@@ -1,0 +1,19 @@
+---
+title: Purchasing Parts
+format:
+  html: default
+  pdf: default
+---
+
+**UNDER CONSTRUCTION — DO NOT BUY ANYTHING UNTIL THE INSTRUCTORS CONFIRM DETAILS.**
+
+Check the stockroom before buying anything — most common parts are already available there at no cost to your team.
+
+If your team needs parts that are not available in the stockroom, you may spend up to \$50 to purchase them.
+
+## Process
+
+1. Confirm the part isn't available in the stockroom.
+2. Make your purchase and save your receipts.
+3. Fill out a reimbursement form, available from the [department website](https://www.hmc.edu/engineering/current-student-information/department-forms/).
+4. Have an instructor approve the reimbursement (list your instructor as the faculty advisor on the form).

@@ -1,11 +1,21 @@
 ---
-title: Project Final Checkoff Specs
+title: Final Checkoff
 format:
   html: default
   pdf: default
 ---
 
-## Proficiency
+**During lab checkoff times on 12/5 or 12/7.**
+
+Demonstrate a working project to an instructor in the lab. There will be signups for demonstration periods, during which you will show that you meet your specifications and be asked technical questions about the operation of your design.
+
+Come prepared with printouts of your schematics, software, and Verilog. If your project is one day late, one letter grade will be deducted. Late projects will not be accepted except in the case of unusual extenuating circumstances.
+
+## Specs
+
+The specifications below lay out how you will be assessed. While these are a good reference, they are subject to change.
+
+### Proficiency
 
 - [ ] Project meets most of of the specifications as laid out in the proposal with explanations for any specifications that weren't met.
 - [ ] System operates without any major bugs (e.g., doesn't freeze in operation)
@@ -14,7 +24,7 @@ format:
 - [ ] Verilog HDL is functional and cleanly formatted
 - [ ] MCU C code is functional and cleanly formatted
 
-## Excellence
+### Excellence
 
 - [ ] Project meets **all** the specifications as laid out in the proposal.
 - [ ] Project is polished (e.g., wires are hidden, any physical interfaces are well-designed and reliable, clean user interface)
