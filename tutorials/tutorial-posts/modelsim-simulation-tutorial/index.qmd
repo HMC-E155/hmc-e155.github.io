@@ -65,6 +65,10 @@ If you're not seeing all the signals in your design, it's possible that QuestaSi
 See [Preventing Optimization](#preventing-optimization) below to fix this.
 :::
 
+::: {.callout-tip title="Fixing code without restarting ModelSim"}
+A helpful shortcut to avoid restarting ModelSim is that you can edit the module by finding it under "work" in the library pane, right clicking, and choosing Edit. Make your fixes, then right click again and choose `Recompile`. Then type `restart -f` in the transcript window to restart simulation without having to set up the waveforms window again. When you return to Radiant, you'll find your corrected code.
+:::
+
 ### Full Adder Example
 
 Let's walk through a complete example using a full adder circuit.
@@ -127,12 +131,6 @@ Running simulation by forcing signals.
 
 Fill out a truth table for a full adder by evaluating the circuit schematic shown above for all combinations of `A`, `B`, and `Cin`, and verify a few values by forcing them to get the hang of it.
 
-::: {.callout-important title="Working on Lab 1? Return to the lab now"}
-You now know enough to bring up your Lab 1 design in simulation and check the `led` and `seg` outputs by hand.
-Go back to [Lab 1 → Logic Simulation in ModelSim](/lab/lab1/#logic-simulation-in-modelsim) and continue there.
-Lab 1 will send you back to the [testbench](#testbench-simulation) and [Simulation Wizard](#launching-questa) sections below once you have written your testbench.
-:::
-
 ## Testbench Simulation {#testbench-simulation}
 
 After testing only two or three different inputs by manually forcing values, you are probably already frustrated with how tedious this is.
@@ -163,7 +161,7 @@ This is the most powerful type of testbench and will be a good foundation for al
 
 ::: {.callout-note title="Two testbench styles"}
 This tutorial demonstrates the **test vector** style, where inputs and expected outputs are read from a `.tv` file.
-Lab 1 asks you to write a **stim/assert** style testbench instead, where the stimulus and the expected values are written directly in the testbench using `assert` statements.
+Some labs ask you to write a **stim/assert** style testbench instead, where the stimulus and the expected values are written directly in the testbench using `assert` statements.
 Both styles run in the simulator exactly the same way — only the source of the expected values differs.
 The test vector style shines when you have many cases of the same shape; stim/assert shines for sequential logic like an FSM or clock divider.
 :::
@@ -200,13 +198,6 @@ Once each submodule is verified on its own, re-testing that logic through the to
 Note that a top-level module which instantiates `HSOSC` generates its own clock internally, so its testbench should *not* drive a `clk` input. Let the oscillator run and simulate long enough to observe the behavior you care about.
 
 Testbenches for top modules are often quite simple (other than verifying logic that is not contained in a module).  If the clock is running and the outputs toggle properly, then the HSOSC and submodule connections are probably right.  Make sure the HSOSC output clock signal is included in your simulation screenshot to show that you meet these criteria.
-
-::: {.callout-important title="Working on Lab 1? Return to the lab now"}
-That is everything you need to plan your Lab 1 testbenches.
-Go back to [Lab 1 → Automatic Testing with a Testbench](/lab/lab1/#automatic-testing-with-a-testbench) and write yours.
-
-The worked example below uses the *test vector* style on a full adder. Lab 1 asks for the `stim/assert` style instead, so read it only if you want a second example of testbench structure.
-:::
 
 ### Creating the Testbench
 
@@ -339,7 +330,7 @@ Button to launch the Questa Simulation Wizard.
 :::
 
 Follow the instructions in the wizard to name and create the simulation.
-The default settings are good, but make sure to select **your** testbench module name as the `Simulation Top Module` (for Lab 1 that would be `lab1_tb`).
+The default settings are good, but make sure to select **your** testbench module name as the `Simulation Top Module`.
 
 Once you finish, Questa will automatically open and run your simulation.
 By default it only runs for 100 ns, so if your simulation takes longer you may need to use the `run` command described in the [forcing signals](#forcing-signals) section.
@@ -363,12 +354,6 @@ If you aren't changing simulation settings, you can re-open a previous simulatio
 ![Restart existing simulation](images/restart_simulation.png)
 
 Restart an existing simulation.
-:::
-
-::: {.callout-important title="Working on Lab 1? Return to the lab now"}
-Your testbench is now running in Questa.
-Go back to [Lab 1 → Pin Assignment](/lab/lab1/#pin-assignment) and continue with the rest of the lab.
-The section below on technology libraries is a reference you will need if your design instantiates `HSOSC`.
 :::
 
 ## Including the iCE40 Technology Library {#libraries}
@@ -404,5 +389,9 @@ Start simulation of the `top` module with the library loaded.
 :::
 
 Note that you can also achieve the steps above by running `vsim work.top -L iCE40UP` in the command window.
+
+::: {.callout-important title="Working on Lab 1?"}
+You have finished this tutorial. Go back to the [Lab 1 tutorial list](/lab/lab1/#part-1-tutorials) and start the next one.
+:::
 
 {{< include /resources/github-issue-footer.qmd >}}
