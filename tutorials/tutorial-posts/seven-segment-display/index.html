@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Lattice Radiant Installation Instructions – HMC E155</title>
+<title>Seven-Segment Displays – HMC E155</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -184,11 +184,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#download" id="toc-download" class="nav-link" data-scroll-target="#download">Download</a></li>
-  <li><a href="#working-with-the-upduino-v3.1-on-macos" id="toc-working-with-the-upduino-v3.1-on-macos" class="nav-link" data-scroll-target="#working-with-the-upduino-v3.1-on-macos">Working with the UPduino v3.1 on macOS</a></li>
-  <li><a href="#installing-ftdi-drivers" id="toc-installing-ftdi-drivers" class="nav-link" data-scroll-target="#installing-ftdi-drivers">Installing FTDI Drivers</a></li>
-  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
-  <li><a href="#licensing" id="toc-licensing" class="nav-link" data-scroll-target="#licensing">Licensing</a></li>
+  <li><a href="#common-anode" id="toc-common-anode" class="nav-link" data-scroll-target="#common-anode">Common Anode Displays</a></li>
+  <li><a href="#identifying-your-part" id="toc-identifying-your-part" class="nav-link" data-scroll-target="#identifying-your-part">Identifying Your Part</a></li>
+  <li><a href="#limiting-current" id="toc-limiting-current" class="nav-link" data-scroll-target="#limiting-current">Limiting Current</a></li>
+  <li><a href="#wiring-the-display" id="toc-wiring-the-display" class="nav-link" data-scroll-target="#wiring-the-display">Wiring the Display</a></li>
   <li><a href="#share-your-feedback" id="toc-share-your-feedback" class="nav-link" data-scroll-target="#share-your-feedback">Share Your Feedback</a></li>
   </ul>
 </nav>
@@ -198,9 +197,9 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lattice Radiant Installation Instructions</h1>
+<h1 class="title">Seven-Segment Displays</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">FPGA</div>
+    <div class="quarto-category">Hardware</div>
   </div>
   </div>
 
@@ -220,100 +219,40 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introduction" class="level2">
 <h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>Lattice Radiant is the synthesis tool provided by Lattice Semiconductor for targeting their FPGA devices.</p>
+<p>The 7-segment display will be used throughout the class for general output of numbers. This tutorial covers how the common anode displays in the lab work, how to identify your part, and how to wire one to the FPGA.</p>
 </section>
-<section id="download" class="level2">
-<h2 class="anchored" data-anchor-id="download">Download</h2>
-<p>Download the software installer from Lattice’s website for your operating system from this link <a href="https://www.latticesemi.com/LatticeRadiant">Lattice Radiant Software</a>. (Windows and Linux only. You will need to use virtualization to use Radiant on Mac.). You will also need to create an account to access the download.</p>
+<section id="common-anode" class="level2">
+<h2 class="anchored" data-anchor-id="common-anode">Common Anode Displays</h2>
+<p>On a common anode display, the anode (positive terminal) of all of the LEDs is tied to 3.3 V through a single (“common”) pin. Each segment’s cathode (negative terminal) is connected to a pin. Therefore, you will need 7 separate control signals.</p>
+<p>All seven segments of a digit share the same anode, which should be connected to 3.3 V. Each segment has its own cathode, which can be pulled to 0 to turn the segment on.</p>
+<p>Because the segments are common anode, you drive each segment by pulling its cathode <strong>low</strong>. A logic 0 turns a segment on and a logic 1 turns it off — the opposite of what you might assume.</p>
 </section>
-<section id="working-with-the-upduino-v3.1-on-macos" class="level2">
-<h2 class="anchored" data-anchor-id="working-with-the-upduino-v3.1-on-macos">Working with the UPduino v3.1 on macOS</h2>
-<p>I use the Windows version in a Parallels Windows 11 Virtual Machine. The synthesis and simulation works without a hitch but the programming is finicky. I suspect it has something to do with some wonkiness with the USB drivers and the Virtual Machine. To work around this, you can use the <a href="https://trabucayre.github.io/openFPGALoader/index.html">openFPGALoader</a> project which is universal utility for programming FPGAs. Instructions for installation and use can be found <a href="https://trabucayre.github.io/openFPGALoader/guide/install.html#macos">here</a>.</p>
-<p>The easiest way is to directly install it as a <a href="https://brew.sh/">Homebrew</a> formula:</p>
-<pre><code>brew install openfpgaloader</code></pre>
-<p>After installation, to program our UPduino v3.1 board, use the command:</p>
-<pre><code>openFPGALoader -b ice40_generic -c ft232  -f &lt;path_to_.bin_file&gt;</code></pre>
+<section id="identifying-your-part" class="level2">
+<h2 class="anchored" data-anchor-id="identifying-your-part">Identifying Your Part</h2>
+<p>The <code>MAN6410</code> is a two-digit, common anode display from the Fairchild MAN6400 series (<a href="../../../assets/doc/MAN64x0 Series.pdf">datasheet</a>). If you have a single-digit display instead, the common anode member of the same series is the <code>MAN6460</code>, and the pinout section of the datasheet covers both. The <code>HDSP</code> series of 7-segment displays from Broadcom are also common in the lab (<a href="../../../assets/doc/AV02-2554EN_2024-07-10.pdf">datasheet</a>). Check your part for its number, but note that the designs are mostly pin and current level compatible.</p>
+<p>Whatever part you have, <strong>confirm it is common anode before wiring anything.</strong> Both series also include common cathode models (<code>MAN6440</code>, <code>MAN6980</code>) that are wired the opposite way and will not work with the circuit described here.</p>
+<p>If you have a two-digit part, each digit has its own common anode pin, so a digit you don’t use simply stays unpowered.</p>
 </section>
-<section id="installing-ftdi-drivers" class="level2">
-<h2 class="anchored" data-anchor-id="installing-ftdi-drivers">Installing FTDI Drivers</h2>
-<p>To program the UPduino on Windows, you’ll need to install FTDI drivers if they’re not already installed. To do so, go to the <a href="https://ftdichip.com/drivers/vcp-drivers/">Virtual COM Port (VCP) drivers page</a> and download the appropriate drivers for your system.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Correct VCP Drivers for M-series Macs">
+<section id="limiting-current" class="level2">
+<h2 class="anchored" data-anchor-id="limiting-current">Limiting Current</h2>
+<p>Each segment of the display works as an independent LED. Therefore, the same current-limiting concern with the LEDs applies to the display as to the on-board bank of LEDs. You can limit the current into each segment of the display the same way you did for the LEDs on board, adding a suitable resistor in series to provide roughly 5-20 mA of current. (Beware: A LED connected in parallel with your pin (from pin to ground) will not limit current!) You can find resistors and other such components in the supply cabinet or in the stockroom.</p>
+</section>
+<section id="wiring-the-display" class="level2">
+<h2 class="anchored" data-anchor-id="wiring-the-display">Wiring the Display</h2>
+<div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Correct VCP Drivers for M-series Macs
+Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For M-series Macs virtualizing Windows, you will need to download the files for an ARM architecture since your installation of Windows is likely using the native ARM architecture instead of virtualizing an x64 instruction set.</p>
+<p>Be sure to turn power off before wiring circuits on your board.</p>
 </div>
 </div>
-</section>
-<section id="installation" class="level2">
-<h2 class="anchored" data-anchor-id="installation">Installation</h2>
-<p>As part of the installation, make sure to select the iCE40 UltraPlus family device support package along with the Programmer and Mentor QuestaSim Lattice Edition. After this menu, click through to finish the installation process.</p>
-<div id="fig-radiant-install-options" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-radiant-install-options-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/installation_components.png" class="img-fluid figure-img" style="width:75.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-radiant-install-options-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: Installation components to select.
-</figcaption>
-</figure>
-</div>
-</section>
-<section id="licensing" class="level2">
-<h2 class="anchored" data-anchor-id="licensing">Licensing</h2>
-<p>To run Radiant you will need to also request and install a license for the software. Navigate <a href="https://www.latticesemi.com/Support/Licensing/DiamondAndiCEcube2SoftwareLicensing/Radiant">here</a> and request a <strong>node-locked license</strong>. This license is designed to be run on a single computer.</p>
-<p>To download the license you will need to find your Host Network Interface Card (NIC) address. To find the NIC address, follow the steps below.</p>
-<p>For Windows, from an MS-DOS window (command prompt), use the <code>ipconfig /all</code> command</p>
-<p>For Linux, from the command prompt, use the <code>ifconfig -a</code> command</p>
-<div id="fig-nic-phyiscal-address" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-nic-phyiscal-address-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/nic_physical_address.png" class="img-fluid figure-img">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-nic-phyiscal-address-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Finding NIC physical address.
-</figcaption>
-</figure>
-</div>
-<p>Enter your Host NIC address (without dashes) and click the required checkbox. You do not need to select any of the optional Radiant Free IP. Then click the “Generate License” button.</p>
-<p>After receiving the license file (<code>license.dat</code>), follow the instructions in the email about how to install the license. You must:</p>
-<ol type="1">
-<li>Copy the <code>license.dat</code> file to the location specified in the email (<code>&lt;sw_install&gt;\license\license.dat</code> on Windows). <code>&lt;sw_install&gt;</code> is probably <code>C:\lscc\radiant\2024.1</code> or similar if you installed it in the default location). When you open Radiant for the first time, you’ll probably be prompted to select this license location in the FlexNet License Finder window.</li>
-<li>Create a new <code>LATTICE_LICENSE_FILE</code> system environment variable pointing to the path of your license file <code>&lt;sw_install&gt;\license\license.dat</code> (<a href="https://geekflare.com/system-environment-variables-in-windows/">instructions</a>).</li>
-<li>Create a new <code>LM_LICENSE_FILE</code> system environment variable pointing to the path of your license file.</li>
-</ol>
-<div class="callout callout-style-default callout-warning callout-titled" title="QuestaSim Licensing">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>QuestaSim Licensing
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Although the step to create the <code>LM_LICENSE_FILE</code> isn’t listed in the installation instructions in the email, it seems to be required to successfully license QuestaSim. The instructions to create this variable are listed in the <a href="https://www.latticesemi.com/view_document?document_id=54008">Licensing User Guide for Windows</a>.</p>
-</div>
-</div>
-<p>This should ensure that both Radiant and QuestaSim are properly licensed and the files are correctly linked.</p>
-<div id="fig-license-finder" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-license-finder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="images/license_finder.png" class="img-fluid figure-img" style="width:50.0%">
-</div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-license-finder-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: FlexNet License Finder dialog.
-</figcaption>
-</figure>
-</div>
-<p>You can also check the license paths afterwards by using the License Debug Tool under the Help menu.</p>
-<p><img src="images/radiant-license-file-during-install.png" class="img-fluid"></p>
+<p>Connect the common anode pin for your chosen digit to 3.3 V. Then connect that digit’s seven segment pins to the FPGA header pins you selected during pin assignment, with a suitable current-limiting resistor in series with each one. Consult the datasheet pinout to identify which physical pin is which segment, since the numbering is not in alphabetical order.</p>
 <div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1?">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -324,7 +263,7 @@ Figure&nbsp;3: FlexNet License Finder dialog.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You have finished this tutorial. Go back to the <a href="../../../lab/lab1/#part-1-tutorials">Lab 1 tutorial list</a> and start the next one.</p>
+<p>You have finished the last tutorial. Go back to Lab 1 and continue with <a href="../../../lab/lab1/#part-2-design">Part 2: Design</a>.</p>
 </div>
 </div>
 </section>

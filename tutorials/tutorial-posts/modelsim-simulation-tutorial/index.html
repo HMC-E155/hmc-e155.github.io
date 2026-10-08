@@ -302,6 +302,19 @@ run 100
 <p>If you’re not seeing all the signals in your design, it’s possible that QuestaSim optimized them away. See <a href="#preventing-optimization">Preventing Optimization</a> below to fix this.</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Fixing code without restarting ModelSim">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Fixing code without restarting ModelSim
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A helpful shortcut to avoid restarting ModelSim is that you can edit the module by finding it under “work” in the library pane, right clicking, and choosing Edit. Make your fixes, then right click again and choose <code>Recompile</code>. Then type <code>restart -f</code> in the transcript window to restart simulation without having to set up the waveforms window again. When you return to Radiant, you’ll find your corrected code.</p>
+</div>
+</div>
 <section id="full-adder-example" class="level3">
 <h3 class="anchored" data-anchor-id="full-adder-example">Full Adder Example</h3>
 <p>Let’s walk through a complete example using a full adder circuit.</p>
@@ -361,19 +374,6 @@ Figure&nbsp;3: Running simulation by forcing signals.
 </figure>
 </div>
 <p>Fill out a truth table for a full adder by evaluating the circuit schematic shown above for all combinations of <code>A</code>, <code>B</code>, and <code>Cin</code>, and verify a few values by forcing them to get the hang of it.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1? Return to the lab now">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Working on Lab 1? Return to the lab now
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You now know enough to bring up your Lab 1 design in simulation and check the <code>led</code> and <code>seg</code> outputs by hand. Go back to <a href="../../../lab/lab1/#logic-simulation-in-modelsim">Lab 1 → Logic Simulation in ModelSim</a> and continue there. Lab 1 will send you back to the <a href="#testbench-simulation">testbench</a> and <a href="#launching-questa">Simulation Wizard</a> sections below once you have written your testbench.</p>
-</div>
-</div>
 </section>
 </section>
 <section id="testbench-simulation" class="level2">
@@ -401,7 +401,7 @@ Figure&nbsp;3: Running simulation by forcing signals.
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This tutorial demonstrates the <strong>test vector</strong> style, where inputs and expected outputs are read from a <code>.tv</code> file. Lab 1 asks you to write a <strong>stim/assert</strong> style testbench instead, where the stimulus and the expected values are written directly in the testbench using <code>assert</code> statements. Both styles run in the simulator exactly the same way — only the source of the expected values differs. The test vector style shines when you have many cases of the same shape; stim/assert shines for sequential logic like an FSM or clock divider.</p>
+<p>This tutorial demonstrates the <strong>test vector</strong> style, where inputs and expected outputs are read from a <code>.tv</code> file. Some labs ask you to write a <strong>stim/assert</strong> style testbench instead, where the stimulus and the expected values are written directly in the testbench using <code>assert</code> statements. Both styles run in the simulator exactly the same way — only the source of the expected values differs. The test vector style shines when you have many cases of the same shape; stim/assert shines for sequential logic like an FSM or clock divider.</p>
 </div>
 </div>
 <section id="designing-a-good-testbench" class="level3">
@@ -426,20 +426,6 @@ Figure&nbsp;3: Running simulation by forcing signals.
 </ul>
 <p>Note that a top-level module which instantiates <code>HSOSC</code> generates its own clock internally, so its testbench should <em>not</em> drive a <code>clk</code> input. Let the oscillator run and simulate long enough to observe the behavior you care about.</p>
 <p>Testbenches for top modules are often quite simple (other than verifying logic that is not contained in a module). If the clock is running and the outputs toggle properly, then the HSOSC and submodule connections are probably right. Make sure the HSOSC output clock signal is included in your simulation screenshot to show that you meet these criteria.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1? Return to the lab now">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Working on Lab 1? Return to the lab now
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>That is everything you need to plan your Lab 1 testbenches. Go back to <a href="../../../lab/lab1/#automatic-testing-with-a-testbench">Lab 1 → Automatic Testing with a Testbench</a> and write yours.</p>
-<p>The worked example below uses the <em>test vector</em> style on a full adder. Lab 1 asks for the <code>stim/assert</code> style instead, so read it only if you want a second example of testbench structure.</p>
-</div>
-</div>
 </section>
 <section id="creating-the-testbench" class="level3">
 <h3 class="anchored" data-anchor-id="creating-the-testbench">Creating the Testbench</h3>
@@ -574,7 +560,7 @@ Figure&nbsp;5: Button to launch the Questa Simulation Wizard.
 </figcaption>
 </figure>
 </div>
-<p>Follow the instructions in the wizard to name and create the simulation. The default settings are good, but make sure to select <strong>your</strong> testbench module name as the <code>Simulation Top Module</code> (for Lab 1 that would be <code>lab1_tb</code>).</p>
+<p>Follow the instructions in the wizard to name and create the simulation. The default settings are good, but make sure to select <strong>your</strong> testbench module name as the <code>Simulation Top Module</code>.</p>
 <p>Once you finish, Questa will automatically open and run your simulation. By default it only runs for 100 ns, so if your simulation takes longer you may need to use the <code>run</code> command described in the <a href="#forcing-signals">forcing signals</a> section. In the example below, all of the tests passed, as reported in the <code>Transcript</code> pane at the bottom.</p>
 <div id="fig-questa-sim" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -607,19 +593,6 @@ Figure&nbsp;6: Example Questa simulation.
 Figure&nbsp;7: Restart an existing simulation.
 </figcaption>
 </figure>
-</div>
-<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1? Return to the lab now">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Working on Lab 1? Return to the lab now
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Your testbench is now running in Questa. Go back to <a href="../../../lab/lab1/#pin-assignment">Lab 1 → Pin Assignment</a> and continue with the rest of the lab. The section below on technology libraries is a reference you will need if your design instantiates <code>HSOSC</code>.</p>
-</div>
 </div>
 </section>
 <section id="libraries" class="level2">
@@ -659,6 +632,19 @@ Figure&nbsp;10: Start simulation of the <code>top</code> module with the library
 </figure>
 </div>
 <p>Note that you can also achieve the steps above by running <code>vsim work.top -L iCE40UP</code> in the command window.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Working on Lab 1?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You have finished this tutorial. Go back to the <a href="../../../lab/lab1/#part-1-tutorials">Lab 1 tutorial list</a> and start the next one.</p>
+</div>
+</div>
 </section>
 <section id="share-your-feedback" class="level2">
 <h2 class="anchored" data-anchor-id="share-your-feedback">Share Your Feedback</h2>

@@ -256,25 +256,6 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Working on Lab 1?">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>Working on Lab 1?
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Lab 1 sends you to this page at four points. Each section ends with a callout telling you when to head back to the lab.</p>
-<ol type="1">
-<li><a href="#project-setup">Project Setup</a> — create your Radiant project.</li>
-<li><a href="#pin-assignment">Pin Assignment</a> — map your signals to physical pins.</li>
-<li><a href="#synthesizing-the-design">Synthesizing the Design</a> — generate the configuration file.</li>
-<li><a href="#programming-the-device">Programming the Device</a> — load your design onto the board.</li>
-</ol>
-</div>
-</div>
 </section>
 <section id="project-setup" class="level2">
 <h2 class="anchored" data-anchor-id="project-setup">Project Setup</h2>
@@ -314,19 +295,6 @@ Figure&nbsp;2: New project summary.
 Figure&nbsp;3: Create new file.
 </figcaption>
 </figure>
-</div>
-<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1? Return to the lab now">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Working on Lab 1? Return to the lab now
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You now have a project set up for the UP5K. Go back to <a href="../../../lab/lab1/#design-and-synthesis-in-radiant">Lab 1 → Design and Synthesis in Radiant</a> and create your own <code>lab1_xx.sv</code> source file instead of the demo below. Lab 1 will send you back here to assign pins, synthesize, and program.</p>
-</div>
 </div>
 </section>
 </section>
@@ -403,19 +371,6 @@ Figure&nbsp;6: Resource usage report.
 </figcaption>
 </figure>
 </div>
-<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1? Return to the lab now">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Working on Lab 1? Return to the lab now
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Your design is synthesized and you have a <code>.bin</code> configuration file. Go back to <a href="../../../lab/lab1/#generating-the-fpga-configuration-files">Lab 1 → Generating the FPGA Configuration Files</a>, then continue on to program your board.</p>
-</div>
-</div>
 </section>
 </section>
 <section id="pin-assignment" class="level2">
@@ -487,19 +442,6 @@ Figure&nbsp;8: Pinout diagram.
 <section id="demo-example-routing-the-led-to-gpio-42" class="level3">
 <h3 class="anchored" data-anchor-id="demo-example-routing-the-led-to-gpio-42">Demo Example: Routing the LED to GPIO 42</h3>
 <p>For the demo design, we will route the <code>led</code> output to GPIO 42. Open the Device Constraint Editor, select the table entry in the “Pin” column associated with the <code>led</code> signal, and enter “42”. You will notice that the currently routed pin is labeled in parentheses, 36 in this example. Resynthesize the design, save the <code>.pdc</code> file when prompted, and confirm you see “42(42)” in the table entry corresponding to the <code>led</code> output.</p>
-<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1? Return to the lab now">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Working on Lab 1? Return to the lab now
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>That covers everything you need for pin assignment in Lab 1. Go back to <a href="../../../lab/lab1/#pin-assignment">Lab 1 → Pin Assignment</a> and continue with the Seven Segment Display Circuit.</p>
-</div>
-</div>
 </section>
 </section>
 <section id="programming-the-device" class="level2">
@@ -543,19 +485,6 @@ Figure&nbsp;9: Flash programming setup.
 <li>You are trying to use a pin that is shared between the FPGA and the MCU, and the MCU is not leaving that pin floating or it is driving it as an output. You can get around this by wiping the code on the MCU by uploading a file with a blank main function.</li>
 <li>You should also read through the Nucleo board documentation to see what pins have special functions that are used by default by the MCU. Hint: You likely want to stay away from using the pins that the MCU uses for serial communication by default.</li>
 </ul>
-<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1? Return to the lab now">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Important</span>Working on Lab 1? Return to the lab now
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Your design is now programmed onto the board. Go back to <a href="../../../lab/lab1/#program-and-test-your-design">Lab 1 → Program and Test Your Design</a> and finish the lab. The section below is an extra hardware check for the demo design and is not part of Lab 1.</p>
-</div>
-</div>
 </section>
 </section>
 <section id="testing-the-demo-in-hardware" class="level2">
@@ -571,6 +500,19 @@ Figure&nbsp;10: Simple circuit to blink an LED.
 </figure>
 </div>
 <p>If you are using the E155 development board, you should see the onboard LED connected to P42 blinking. If you would like to test the hardware separately with just the UPduino, you can unplug the USB from your board and connect your UPduino board to a breadboard, wiring up an LED in series with a current limiting resistor (typically a value between 330 Ω and 1 kΩ is a good choice). Then, reconnect your board to power via USB or using the +5V input on the board from a DC power supply.</p>
+<div class="callout callout-style-default callout-important callout-titled" title="Working on Lab 1?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Working on Lab 1?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You have finished this tutorial. Go back to the <a href="../../../lab/lab1/#part-1-tutorials">Lab 1 tutorial list</a> and start the next one.</p>
+</div>
+</div>
 </section>
 <section id="share-your-feedback" class="level2">
 <h2 class="anchored" data-anchor-id="share-your-feedback">Share Your Feedback</h2>
