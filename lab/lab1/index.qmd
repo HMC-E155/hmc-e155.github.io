@@ -21,6 +21,8 @@ format:
         href: /tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/
       - text: "QuestaSim/ModelSim Simulation Tutorial"
         href: /tutorials/tutorial-posts/modelsim-simulation-tutorial/
+      - text: "Jacquard FPGA Studio"
+        href: /tutorials/tutorial-posts/jacquard-fpga-studio/
       - text: "Seven-Segment Displays"
         href: /tutorials/tutorial-posts/seven-segment-display/
       - text: "SEGGER Embedded Studio Setup"
@@ -76,6 +78,7 @@ Work through these tutorials in order. Each one is self-contained. Read it end t
 6. **[E155 Development Board Assembly](/tutorials/tutorial-posts/dev-board-assembly/)**: assemble your development board, then work through the [Testing the Boards](/tutorials/tutorial-posts/dev-board-assembly/#testing-the-boards) section. **The majority of your time on this lab will likely be spent assembling the board, so make sure to plan ahead.**
 7. **[QuestaSim/ModelSim Simulation](/tutorials/tutorial-posts/modelsim-simulation-tutorial/)**: simulate by forcing signals, then write and run testbenches.
 8. **[Seven-Segment Displays](/tutorials/tutorial-posts/seven-segment-display/)**: how common anode displays work and how to wire one.
+9. **[Jacquard FPGA Studio](/tutorials/tutorial-posts/jacquard-fpga-studio/)**: a browser-based alternative to Radiant and QuestaSim for simulating, synthesizing, assigning pins, and programming the FPGA.
 
 ::: {.callout-note title="Checkpoint: test your boards"}
 Before writing any of your own HDL, confirm that both halves of your assembled board work using [Testing the Boards](/tutorials/tutorial-posts/dev-board-assembly/#testing-the-boards) from tutorial 6. You will program the FPGA with a provided design that toggles a pin at about 1 Hz, then program the MCU[^1] with a provided program that reads that pin and echoes it back, which verifies both devices and the communication between them.
