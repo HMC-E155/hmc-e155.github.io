@@ -28,13 +28,13 @@ You are free to structure your presentation however you like, but most successfu
 
 ## Grading Rubric
 
-The design review presentation is worth 20% of your project grade, graded according to the rubric below. Each of the four categories below is worth 5 points.
+The design review presentation is worth 20% of your project grade, graded according to the rubric below.
 
-| Category | 5 pts | 2.5 pts | 0 pts |
-|---|---|---|---|
-| Overview of Project & Status Update | Easy to understand goal of project and project architecture, and currently implemented subsystems are clear. | Goal of project is clear with some representation of architecture. Some understanding of what has been implemented. | Little communication of either goal or architecture of project. Can't tell what is done and what is not. |
-| Description of Subsystem | Subsystem described concisely, but in sufficient technical detail to ask questions. | Subsystem described in a confusing way or lacks technical depth. | Cannot understand subsystem. |
-| Meaningful Feedback from Audience | Audience asks questions or offers advice that indicates understanding and helps advance the project. | Audience asks clarifying questions and achieves understanding. | Audience asks few questions or does not reach useful conclusions about the project. |
-| Presentation | Presentation is practiced and well ordered to facilitate audience understanding. | Presentation has reasonable organization and presenters may be stiff. | Presentation is unrehearsed, organization is weak. |
+| Category | Points | What We're Looking For |
+|---|---|---|
+| Overview of Project & Status Update | 5 | Easy to understand goal of project and project architecture, and currently implemented subsystems are clear. *Partial credit example: a project with a clear goal but only some representation of architecture, or incomplete understanding of what's been implemented, earns around 2.5; little communication of either goal or architecture, where it's unclear what's done, earns 0.* |
+| Description of Subsystem | 5 | Subsystem described concisely, but in sufficient technical detail to ask questions. *Partial credit example: a subsystem described confusingly or without technical depth earns around 2.5; an unintelligible subsystem earns 0.* |
+| Meaningful Feedback from Audience | 5 | Audience asks questions or offers advice that indicates understanding and helps advance the project. *Partial credit example: an audience that only asks clarifying questions without advancing the project earns around 2.5; an audience that asks few questions or reaches no useful conclusions earns 0.* |
+| Presentation | 5 | Presentation is practiced and well ordered to facilitate audience understanding. *Partial credit example: a presentation with reasonable organization but stiff delivery earns around 2.5; an unrehearsed, weakly organized presentation earns 0.* |
 
-**Total: 20 points (5 points × 4 categories)**
+**Total: 20 points**
