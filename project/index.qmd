@@ -13,7 +13,7 @@ Your project should be bigger than a 1-week lab assignment, but small enough to 
 If in doubt, err on the side of smaller, and be careful to choose a project within a scope that you can reasonably expect to finish. Your grade can be severely impacted if you take on a project that is too big and produce no completed work.
 
 A successful project will use both the FPGA and MCU and will perform a function that is useful or interesting.
-You also must use a new piece of hardware in your final project (various sensors or displays are popular choices).
+You also must use at new hardware in your final project. This includes a new microcontroller peripheral, new FPGA IP, and a new piece of external hardware (various sensors or displays are popular choices).
 You can find examples of past final projects below. Examples include games, electromechanical systems, prototypes for a startup company, or elements of a Clinic/research project (with your advisor's permission).
 
 ## Logistics
@@ -27,18 +27,18 @@ You can find examples of past final projects below. Examples include games, elec
 
 ## Deliverables
 
-Each deliverable below links to a self-contained assignment page with its full requirements and grading specs.
+Each deliverable below links to a self-contained assignment page with its full requirements and grading rubric.
 
-| Date | Deliverable | Assignment Page |
-|---|---|---|
-| Ongoing | Purchasing Parts | [Purchasing Parts](./assignments/purchasing-parts.qmd) |
-| {{< var project-proposal-date >}} | Project Proposal | [Project Proposal](./assignments/proposal.qmd) |
-| {{< var project-proposal-debrief-dates >}} | Proposal Debrief | During lab checkoff times |
-| {{< var project-design-review-dates >}} | Design Review Presentation | [Design Review Presentation](./assignments/design-review-presentation.qmd) |
-| {{< var project-midpoint-date >}} | Midpoint Report & Demo | [Midpoint Report & Demo](./assignments/midpoint-report.qmd) |
-| {{< var project-final-checkoff-dates >}} | Final Checkoff | [Final Checkoff](./assignments/final-checkoff.qmd) |
-| {{< var project-final-report-date >}} | Final Report Website | [Final Report](./assignments/final-report.qmd) |
-| {{< var project-demo-day-date >}} | Demo Day | Public event to show off projects |
+| Date | Deliverable | Where | Assignment Page |
+|---|---|---|---|
+| Ongoing | Purchasing Parts | — | [Purchasing Parts](./assignments/purchasing-parts.qmd) |
+| {{< var project-proposal-debrief-dates >}} | Project Proposal | In Class | [Project Proposal](./assignments/proposal.qmd) |
+| {{< var project-proposal-redo-date >}} | Proposal Redo | In Lab | [Project Proposal](./assignments/proposal.qmd) |
+| {{< var project-design-review-dates >}} | Design Review Presentation | In Class | [Design Review Presentation](./assignments/design-review-presentation.qmd) |
+| {{< var project-midpoint-date >}} | Midpoint Report & Demo | In Class & In Lab | [Midpoint Report & Demo](./assignments/midpoint-report.qmd) |
+| {{< var project-final-checkoff-dates >}} | Final Checkoff | In Lab | [Final Checkoff](./assignments/final-checkoff.qmd) |
+| {{< var project-final-report-date >}} | Final Report Website | Online | [Final Report](./assignments/final-report.qmd) |
+| {{< var project-demo-day-date >}} | Demo Day | Public Event | — |
 
 Working on a final report video? Use the [storytelling worksheet](./storytelling-worksheet.qmd) to help structure your pitch.
 
