@@ -134,8 +134,8 @@ The project will be graded using traditional grading. Rubrics for each project c
 
 Your final grade will be determined by the following weights:
 
-- Labs: 40% (weighted by grade as shows above)
-- Project: 40% (each component may be weighted by rubric)
+- Labs: 45% (weighted by grade as shows above)
+- Project: 45% (each component may be weighted by rubric)
 - Completion-Graded Assignments: 5%
 - Instructor Participation Score: 5%
 
