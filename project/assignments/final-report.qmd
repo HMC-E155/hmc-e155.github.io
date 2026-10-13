@@ -21,58 +21,16 @@ The website should include:
 - A video (hosted in the provided Google Drive folder) demonstrating your project. Videos should be titled "\<LastName1\>*\<LastName2\>*\<VideoName\>" to clearly identify your videos in the folder.
   - Use the [storytelling worksheet](../storytelling-worksheet.qmd) to help plan and structure your video.
 
-## Specs
+## Grading Rubric
 
-Written documentation should follow all the specifications for written documentation as laid out in the [general lab specs](../../lab/specs/lab-writeup-specs.qmd). In addition, the report should address these project-specific specifications.
+The final report is worth 20% of your project grade, graded according to the rubric below. Written documentation should also follow the general [lab writeup specs](../../lab/specs/lab-writeup-specs.qmd); the categories below are specific to the project report.
 
-### Proficiency
+| Category | Points | What We're Looking For |
+|---|---|---|
+| Technical Design Documentation | 6 | Bill of materials, MCU design overview, FPGA design overview, schematics, and a block diagram provided in professional and easy-to-read formats. |
+| Written Report Content | 6 | Abstract, results (quantitative where applicable), description of the new hardware used, references, acknowledgements, and team bios. |
+| Code & Repository | 4 | All project code (software and HDL) is in the Git repository, cleanly commented, with a README describing the project and where to find things. It adheres to best practices from the course. |
+| Multimedia | 2 | A video demonstrating the project (the [storytelling worksheet](../storytelling-worksheet.qmd) can help you plan it) and photos of the finished design. |
+| Writing Quality & Site Organization | 2 | The website is well organized with clear separation of information, no missing placeholders or dead links, and minimal spelling/grammar issues. |
 
-#### Technical Information
-
-- [ ] Bill of materials including all relevant components with quantities, part numbers, and prices.
-- [ ] Microcontroller design overview: description of what the MCU is doing.
-- [ ] FPGA design overview: what is the FPGA doing along with main design features.
-
-#### Written Documentation
-
-- [ ] Names and short bios of team members with link to personal website or LinkedIn profile.
-- [ ] Abstract which briefly describes the main purpose and operation of the system.
-- [ ] New hardware listed in section with description
-- [ ] Results: What are the main results of your project.
-- [ ] References: Citation (and hyperlinks where relevant) to any outside resources that were referenced in the design of the project.
-- [ ] Acknowledgements
-- [ ] All project code (software and HDL) included in Git repository
-
-#### Writing and Organization
-
-- [ ] Website is well organized with clear separation of relevant information.
-- [ ] No more than a few minor spelling or grammar issues.
-- [ ] No missing placeholders (e.g., XX) or dead hyperlinks.
-
-### Excellence
-
-#### Technical Documentation
-
-- [ ] Schematics are neatly drawn with a CAD program (e.g., CircuitPaint). All necessary labels present (pins names & numbers, part numbers, etc.)
-- [ ] Block diagram is neat and completely specified (e.g., all communication protocols labeled, bus widths indicated, etc.)
-
-#### Written Documentation
-
-- [ ] New hardware described with notes about the features to be implemented and how they go beyond the previous material covered in the course.
-- [ ] Results section clearly and **quantitatively** outlines the key performance aspects of the design with commentary to explain the design decisions.
-- [ ] References are formatted with a clean and consistent format.
-- [ ] All project code is accompanied by comments throughout
-- [ ] Git repository contains a README.md file to describe the main elements of the project and where they are found.
-
-#### Writing and Organization
-
-- [ ] Excellent spelling and grammar throughout
-
-#### Multimedia Documentation
-
-- [ ] Short video showcasing a demonstration of the project
-- [ ] Photos documenting final design
-
-### Optional
-
-- [ ] Photos documenting the build process
+**Total: 20 points**

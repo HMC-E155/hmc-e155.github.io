@@ -7,6 +7,8 @@ format:
 
 **DO NOT BUY ANYTHING UNTIL THE INSTRUCTORS CONFIRM DETAILS IN CLASS.**
 
+Purchasing must be complete before the midpoint report and demo on {{< var project-midpoint-date >}}, and you probably want to complete it much sooner to de-risk hardware before the midpoint. 
+
 Check the stockroom before buying anything — most common parts are already available there at no cost to your team.
 
 If your team needs parts that are not available in the stockroom, you may spend up to \$50 to purchase them.
