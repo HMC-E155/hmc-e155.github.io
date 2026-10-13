@@ -6,7 +6,7 @@ title: Project
 
 The requirements for the final project can be found [here](./final-project-requirements.qmd).
 
-Checkoffs for the proposal debrief, midpoint demo, and final checkoff can be scheduled on the Google Sheet found [here]({{< var project-checkoff-gsheet-url >}}).
+Checkoffs for the midpoint demo and final checkoff can be scheduled on the Google Sheet found [here]({{< var project-checkoff-gsheet-url >}}).
 You should sign up for a slot as a team, not as individuals.
 
 All submissions for the project are as a team and should be submitted on Canvas as group submissions.

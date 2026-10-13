@@ -1,0 +1,56 @@
+# Course schedule: the single source of truth for class topics and weekly due
+# items. It is rendered on the syllabus by the `schedule` shortcode
+# (_extensions/schedule/schedule.lua); other pages should link to
+# /syllabus/#schedule rather than copying dates.
+#
+# List weeks in order. Each week's Monday date is computed from first-monday,
+# so only topics and deliverables live here. Values are Markdown, so links and
+# **bold** work.
+
+first-monday: 2026-08-31
+
+weeks:
+  - tue: Intro & Analog Behavior of Digital Systems
+    thu: Combinational and Sequential Logic
+    due: Git & Quarto Portfolio Setup
+  - tue: Verilog Coding
+    thu: Synchronous Design
+    due: "[Lab 1](/lab/lab1/)"
+  - tue: Finite State Machines
+    thu: Lab 3 Workshop
+    due: "[Lab 2](/lab/lab2/)"
+  - tue: GPIO
+    thu: Clock Configuration
+    due: "[Lab 3](/lab/lab3/)"
+  - tue: Timers
+    thu: Interrupts
+    due: "[Lab 4](/lab/lab4/)"
+  - tue: Serial Interfaces Overview and SPI
+    thu: UART and the IoT
+    due: "[Lab 5](/lab/lab5/)"
+  - tue: Advanced Encryption Standard (AES)
+    thu: AES on FPGA Workshop
+    due: "[Lab 6](/lab/lab6/)"
+  - tue: "**Happy Fall Break! No Class**"
+    thu: "[Project](/project/) Kickoff"
+  - tue: Project Proposal Reviews
+    thu: Project Proposal Reviews
+    due: "[Lab 7](/lab/lab7/)"
+  - tue: Project Proposal Reviews
+    thu: "Advanced Topics: FFT/DMA"
+    due: Lab redo week / proposal redos
+  - tue: Design Review Presentations
+    thu: Design Review Presentations
+    due: No labs
+  - tue: Design Review Presentations
+    thu: Advanced Topics
+    due: Status Demo
+  - tue: "Advanced Topics: Semiconductor Industry"
+    thu: "**Happy Thanksgiving! No class**"
+    due: No labs
+  - tue: "Advanced Topics: Motors"
+    thu: "Advanced Topics: Displays"
+    due: Project help / office hours
+  - tue: Advanced Topics
+    thu: Special Topic or Guest Lecture
+    due: Final Demo; Demo Day (Fri 12/11, last day of classes)
