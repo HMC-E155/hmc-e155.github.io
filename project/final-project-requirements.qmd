@@ -7,17 +7,17 @@ format:
 
 ## Overview
 
-The E155 Final Project is a chance for you to apply your new skills in digital design to a moderately-sized problem as part of a two- or three-person team. You should begin thinking about a project and teammate right away. Your project has the following deliverables. See the [course schedule](/syllabus/#schedule) for dates.
+The E155 Final Project is a chance for you to apply your new skills in digital design to a moderately-sized problem as part of a two- or three-person team. You should begin thinking about a project and teammate right away. Your project has the following deliverables.
 
-| Deliverable                 | Notes                             |
-|-----------------------------|-----------------------------------|
-| Project Proposal            | Due via Canvas                    |
-| Proposal Reviews            | During class                      |
-| Design Review Presentations | During class                      |
-| Midpoint Report & Demo      | During lab checkoff times         |
-| Final Checkoff              | During lab checkoff times         |
-| Final Report Website        | Due by end of day                 |
-| Demo Day                    | Public event to show off projects |
+| Date         | Deliverable              | Notes                                         |
+|-----------------|--------------------|-----------------------------------|
+| 10/27        | Project Proposal         | Due via Canvas                                |
+| 10/31 & 11/2 | Proposal Debriefs        | During lab checkoff times |
+| 11/7 & 11/9  | Presentations            | During class                                  |
+| 11/16        | Midpoint Report & Demo   | During class time and lab slot                |
+| 12/5 & 12/7  | Final Checkoffs        | During lab checkoff times |
+| 12/7         | Final Report Website | Due by end of day                             |
+| 12/8 @ 2 pm  | Demo Day                 | Public event to show off projects             |
 
 ## Project Scope
 
@@ -38,7 +38,7 @@ You will need to save your receipts, fill out a reimbursement form available fro
 
 ## Deliverables
 
-Your team is responsible for the following deliverables:
+Your team is responsible for the following deliverables at the dates described above:
 
 ### Project Proposal
 
@@ -51,11 +51,6 @@ Do not list stretch goals or wiggle words; simply state what you are committing 
 * Include a block diagram showing the components and the interfaces between each.
 * Include calculations of performance parameters that are important to the project (frame rates, data rates, ADC bits, Power levels, FFT sizes, etc.)
 * Include a rough schedule and work breakdown.
-
-### Proposal Review
-
-Your team will review your proposal with the instructors during class.
-Use the feedback to revise your proposal: you have two attempts at the proposal, and revisions are due during the lab redo week.
 
 ### Midpoint Report & Demo
 
@@ -72,7 +67,7 @@ You must be ready to demonstrate some working hardware in the lab.
 
 ### Presentations
 
-Your team will sign up for a 10-minute in-class presentation shortly after your proposal review. 
+Your team will sign up for a 10-minute in-class presentation shortly after your proposal debrief. 
 Your presentation should include a 3-minute overview of your project followed by an in-depth presentation of a specific technical problem your team is working on and has not yet solved. 
 The goal of the presentation is to get input from other students who might have ideas of how to solve your problem so you must explain the problem clearly enough to get meaningful suggestions back.
 
