@@ -26,19 +26,15 @@ You are free to structure your presentation however you like, but most successfu
   - How would you like them to provide that feedback?
 - **Conclusion and Q&A**: Briefly conclude the presentation and field questions from the audience (as time allows).
 
-## Specs
+## Grading Rubric
 
-The specifications below lay out how you will be assessed.
+The design review presentation is worth 20% of your project grade, graded according to the rubric below. Each of the four categories below is worth 5 points.
 
-### Proficiency
+| Category | 5 pts | 2.5 pts | 0 pts |
+|---|---|---|---|
+| Overview of Project & Status Update | Easy to understand goal of project and project architecture, and currently implemented subsystems are clear. | Goal of project is clear with some representation of architecture. Some understanding of what has been implemented. | Little communication of either goal or architecture of project. Can't tell what is done and what is not. |
+| Description of Subsystem | Subsystem described concisely, but in sufficient technical detail to ask questions. | Subsystem described in a confusing way or lacks technical depth. | Cannot understand subsystem. |
+| Meaningful Feedback from Audience | Audience asks questions or offers advice that indicates understanding and helps advance the project. | Audience asks clarifying questions and achieves understanding. | Audience asks few questions or does not reach useful conclusions about the project. |
+| Presentation | Presentation is practiced and well ordered to facilitate audience understanding. | Presentation has reasonable organization and presenters may be stiff. | Presentation is unrehearsed, organization is weak. |
 
-- [ ] Presentation gives overview of the project
-- [ ] Presentation presents a problem or question for the class
-- [ ] Input solicited from the class
-
-### Excellence
-
-- [ ] Presentation wraps up on time
-- [ ] Slides are well formatted with no spelling, grammar, or formatting issues.
-- [ ] Presentation presents an in-depth technical problem
-- [ ] Problem or question for the class is technical in nature (e.g., soliciting feedback about tradeoffs for a specific protocol for an interface).
+**Total: 20 points (5 points × 4 categories)**

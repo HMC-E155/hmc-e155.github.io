@@ -11,22 +11,17 @@ Demonstrate a working project to an instructor in the lab. There will be signups
 
 Come prepared with printouts of your schematics, software, and Verilog. If your project is one day late, one letter grade will be deducted. Late projects will not be accepted except in the case of unusual extenuating circumstances.
 
-## Specs
+## Grading Rubric
 
-The specifications below lay out how you will be assessed.
+The final checkoff is worth 30% of your project grade — the largest single component — graded according to the rubric below.
 
-### Proficiency
+| Category | Points | What We're Looking For |
+|---|---|---|
+| Meeting Proposed Specifications | 12 | The project meets the specifications laid out in the proposal, with clear explanations for any that weren't met. |
+| Reliability | 6 | The system operates without major bugs — it doesn't freeze, crash, or need a restart during normal operation. |
+| Spec Tracking Document | 3 | A document listing each spec from the proposal with a short (3-5 sentence) summary of whether it was met. |
+| Verilog Code Quality | 3 | Verilog is functional and cleanly formatted; full credit requires good practice as well (modularity, appropriate testbenches). |
+| C Code Quality | 3 | C code is functional and cleanly formatted; full credit requires efficient, well-organized code (functions, custom libraries where appropriate). |
+| Polish & Presentation | 3 | The project is polished at checkoff — wires are managed, physical interfaces are reliable and well-designed, and technical documentation is available for review. |
 
-- [ ] Project meets most of of the specifications as laid out in the proposal with explanations for any specifications that weren't met.
-- [ ] System operates without any major bugs (e.g., doesn't freeze in operation)
-- [ ] Document listing each spec from the proposal along with a short (e.g., 3-5 sentence) summary explaining whether the spec was met or not.
-- [ ] Technical documentation (e.g., schematics, code, block diagrams) available for review at checkoff.
-- [ ] Verilog HDL is functional and cleanly formatted
-- [ ] MCU C code is functional and cleanly formatted
-
-### Excellence
-
-- [ ] Project meets **all** the specifications as laid out in the proposal.
-- [ ] Project is polished (e.g., wires are hidden, any physical interfaces are well-designed and reliable, clean user interface)
-- [ ] Verilog code is efficient and demonstrates best coding practices (e.g., modularity, testbenches where appropriate, etc.)
-- [ ] C code is efficient and well organized (e.g., code encapsulated in functions and custom libraries as appropriate)
+**Total: 30 points**
