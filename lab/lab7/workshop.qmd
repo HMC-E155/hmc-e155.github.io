@@ -18,6 +18,9 @@ format:
       - text: "Workshop Starter Code"
         href: https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab07/workshop
         icon: github
+  pdf:
+    geometry:
+      - margin=1in
 ---
 
 ## Why This Workshop
@@ -26,7 +29,8 @@ The testbench that comes with Lab 7, `testbench_aes_core`, tells you exactly one
 When it fails you get a message like this, and nothing else:
 
 ```
-Error: cyphertext = 52dd86f39c93b91e8f8daafe20776c9b, expected 3925841d02dc09fbdc118597196a0b32
+Error: cyphertext = 52dd86f39c93b91e8f8daafe20776c9b,
+       expected 3925841d02dc09fbdc118597196a0b32
 ```
 
 Every one of those bytes is wrong, and nothing in that line says whether the problem is in SubBytes, ShiftRows, MixColumns, the key expansion, or the FSM sequencing them.
@@ -210,4 +214,6 @@ The tracer is a debugging tool. It does not replace `testbench_aes_core` and the
 - **Write down your hypothesis before changing code**, change one thing at a time, and re-run *all* of your tests after every fix.
 - **Remember the sbox latency.** Run `aes_sbox_tb` from the starter code and mark on the waveform when `y` becomes valid relative to `a`. Your FSM has to wait for that cycle.
 
+::: {.content-visible when-format="html"}
 {{< include /resources/github-issue-footer.qmd >}}
+:::
