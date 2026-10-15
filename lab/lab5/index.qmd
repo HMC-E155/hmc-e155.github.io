@@ -38,7 +38,7 @@ The MCU should use interrupts to detect pulses from the encoder and use them to 
 Ensure that the system remains functional when the motor is spinning at very high and very low speeds.
 Display the direction and angular velocity of the motor in revolutions/s with an update rate of at least 1 Hz.
 
-Test your system with the motor provided in the lab which spins at a known speed of approximately 2.5 rev/s when 12V are applied.
+Test your system with the motor provided in the lab. How fast it spins at 12V depends on its gear ratio, so see the note on gear ratios in the [Discussion](#discussion) below.
 
 ::: {.callout-warning}
 ## Encoder Output Voltage Warning
@@ -68,7 +68,17 @@ You should design your system to take full advantage of both signals to get the 
 In Lab 6, you will learn how to use the UART peripheral to send binary data between devices, and print to the terminal embedded in Segger.
 For this lab, you can follow [this tutorial](../../tutorials/tutorial-posts/printf-no-uart/index.qmd) on using `printf` without UART.
 
-A datasheet for the motor is linked on the side of this page, but note that ours are slightly different: they have 408 pulse per rotation, and rotate at ~2.5 rev/s at 12V.
+::: {.callout-note title="Check your motor's gear ratio"}
+There are a few different versions of the 25GA-370 motor in the lab, and they have different gear ratios.
+The number at the end of the part number tells you the gear reduction ratio: a motor ending in `-10` has a 1:10 ratio, and one ending in `-34` has a 1:34 ratio.
+Check the label on your motor before doing your calculations.
+
+The gear ratio changes the number of encoder pulses per rotation of the output shaft.
+The encoder produces 12 pulses for each rotation of the motor itself, so the pulses per rotation of the output shaft is 12 times the gear ratio: 120 for a `-10` motor and 408 for a `-34` motor.
+Motors with a higher gear ratio also spin more slowly, so the speed at 12V depends on which version you have.
+
+The datasheet linked on the side of this page is for the 1:10 version.
+:::
 
 ## Credits
 

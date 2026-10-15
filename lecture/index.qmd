@@ -17,3 +17,4 @@ See the list below for links to lecture slides and handouts. Slides and handouts
 - Lecture 11: Serial Interfaces and SPI [[slides](./slides/lecture-11-slides.pdf)] [[handout](./slides/lecture-11-handout.pdf)]
 - Lecture 12: Asynchronous Serial Interfaces and the Internet of Things [[slides](./slides/lecture-12-slides.pdf)] [[handout](./slides/lecture-12-handout.pdf)] [[tutorial repository](https://github.com/HMC-E155/tutorial-uart)]
 - Lecture 13: The Advanced Encryption Standard (AES) [[slides](./slides/lecture-13-slides.pdf)] [[handout](./slides/lecture-13-handout.pdf)] [[activity worksheet](./slides/lecture-13-activity.pdf)]
+- Lecture 14: AES on FPGA Workshop [[slides](./slides/lecture-14-slides.pdf)] [[handout](./slides/lecture-14-handout.pdf)] [[worksheet](/lab/lab7/workshop.pdf)] [[web version](/lab/lab7/workshop.qmd)] [[starter code](https://github.com/HMC-E155/hmc-e155/tree/main/lab/lab07/workshop)]
