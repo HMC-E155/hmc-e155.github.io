@@ -145,142 +145,17 @@ This module is part of the iCE40 Technology Library (see the iCE40 Technology Li
 You can simply copy the line from the testing program and use it in your project.
 :::
 
-## Part 3: Build and Test {#part-3-build-and-test}
+## Part 3: Build, Simulate, and Test {#part-3-build-and-test}
 
-Each step below says what Lab 1 requires and links to the tutorial section that shows how.
+Work through the **[Building, Simulating, and Testing an FPGA Design](/tutorials/tutorial-posts/build-simulate-test/)** tutorial end to end and follow along with your own design. A "Working on Lab 1?" box at the bottom sends you back here. It covers these steps in order:
 
-### 1. Create the Project
-
-Launch Lattice Radiant and start the New Project Wizard from the File or startup menu. Set up a new project for the UP5K chip following the [Project Setup](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#project-setup) section of the Lattice Radiant tutorial. Choose `File → New` and create a SystemVerilog HDL file. Save the file as `lab1_xx.sv` in your project directory and check the box to add the file to the current project. Then create modules to perform the functions described above. See the [lab specifications](specs.qmd) for the full structure and style requirements.
-
-### 2. Logic Simulation in ModelSim
-
-Simulate your logic in ModelSim following the [QuestaSim/ModelSim tutorial](/tutorials/tutorial-posts/modelsim-simulation-tutorial/). Start by [forcing the inputs by hand](/tutorials/tutorial-posts/modelsim-simulation-tutorial/#forcing-signals) so you can see your design respond. Because your top level instantiates `HSOSC`, you will need to [include the iCE40 technology library](/tutorials/tutorial-posts/modelsim-simulation-tutorial/#libraries).
-
-You should see the `led` and `seg` outputs displaying appropriate values. Check the outputs against your expectations. If you find any discrepancies, fix the code and resimulate.
-
-### 3. Automatic Testing with a Testbench
-
-Forcing signals by hand gets tedious quickly, and it does not leave you with anything you can rerun. Next, test your design automatically using a `stim/assert` style testbench. Rather than manually forcing inputs or using pre-defined test vectors, this means using your testbench to set inputs and check for correct outputs.
-
-Start by writing a testbench for one of your submodules. Before you write it, read
-[Designing a Good Testbench](/tutorials/tutorial-posts/modelsim-simulation-tutorial/#designing-a-good-testbench)
-in the simulation tutorial — it explains how much coverage each kind of module needs, which is what the
-[specifications](specs.qmd) are graded against.
-
-The example below tests a module named `lab1_led_controller` that implements the truth tables for `led[0]` and `led[1]`
-described above. Try writing yours first, and open the example only if you get stuck or want to check your structure
-against it. You almost certainly structured your code differently, so treat this as a template for the *shape* of a
-testbench rather than something to copy verbatim.
-
-::: {.callout-note collapse="true" title="Example testbench: lab1_led_controller_tb (click to expand)"}
-
-```
-`timescale 1 ns/1 ns
-
-module lab1_led_controller_tb();
-  logic           clk;    // system clock
-  logic           reset;  // active high reset
-  logic   [3:0]   s;      // 4-bit input switches
-  logic   [1:0]   led;    // 2 output leds
-
-	lab1_led_controller dut (
-		.clk(clk),
-		.reset(reset),
-		.s(s),
-		.led(led)
-	);
-
-  // generate clock
-  always begin
-      clk = 0; #5;
-      clk = 1; #5;
-  end
-
-  // apply stimuli and check outputs
-  initial begin
-    reset = 1;
-    #22 reset = 0;
-
-    // for each test case we setup the inputs, wait for the outputs to update,
-    // and then check that the outputs match what we expect using `assert`
-    // in this case, the leds use combinational logic, so we don't *need* to wait
-    // a full clock cycle (#10)
-
-    // example test 1
-		s = 4'b0000;                // setup inputs
-		#10;                        // wait required time
-		assert (led == 2'b00)       // check outputs
-			$display("PASSED! The led controller behaves as desired at time: %0t.", $time);
-		else 
-			$error("FAILED! The led controller behaves incorrectly at time: %0t.", $time); 
-			
-    // test 2
-		s = 4'b0101;
-		#10;
-		assert (led == 2'b01)
-			$display("PASSED! The led controller behaves as desired at time: %0t.", $time);
-		else 
-			$error("FAILED! The led controller behaves incorrectly at time: %0t.", $time); 
-		
-		// ... add the rest of the states you want to check here
-
-    #100 $stop;
-  end
-endmodule
-```
-
-:::
-
-Once your testbench is written, run it using the [Simulation Wizard](/tutorials/tutorial-posts/modelsim-simulation-tutorial/#launching-questa). Select your testbench module name (e.g., `lab1_tb`) as the `Simulation Top Module`.
-
-::: {.callout-tip title="Watch out for optimization"}
-If some of your testbench signals are missing from the Wave window, QuestaSim has likely optimized them away. See [Preventing Optimization](/tutorials/tutorial-posts/modelsim-simulation-tutorial/#preventing-optimization) in the simulation tutorial.
-:::
-
-Write a testbench for each of your submodules. Your seven-segment decoder is combinational with only 16 input combinations, so test all of them. Your counter is sequential, so rather than simulating every count for example, verify its reset, enable, and max count behavior.
-
-Finally, write a top-level testbench that covers only what the submodule tests could not: that the modules are wired together correctly, that the `HSOSC` produces a clock, and that your `assign` logic works. Remember that the top level generates its own clock, so the testbench should not drive one.
-
-### 4. Pin Assignment
-
-Next, assign pins to relate the signal names in your Verilog code to physical pin numbers on the FPGA, following the [Pin Assignment](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#pin-assignment) section of the Lattice Radiant tutorial.
-
-For the 7-segment display outputs you may select any I/O pins you'd like, but make sure that these pins are not being used for other purposes by checking the [E155 Development Board Schematic](/assets/doc/E155%20Development%20Board%20Schematic.pdf). Write down which pins you choose — you will wire the display to them in the next step.
-
-The pins connected to `s[3:0]` must be configured with pull-up resistors to avoid invalid logic levels. The exact value is not very important; a value between 10 kΩ and 100 kΩ is generally sufficient. See [Configuring Pull-Up Resistors](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#pull-up-resistors) in the Lattice Radiant tutorial.
-
-### 5. Seven Segment Display Circuit
-
-The 7-segment display will be used throughout the class for general output of numbers. In this lab assignment, though, it will be used to output the hexadecimal number entered by the user through the DIP switches.
-
-Wire your display following [Wiring the Display](/tutorials/tutorial-posts/seven-segment-display/#wiring-the-display) in the seven-segment tutorial, using a suitable current-limiting resistor in series with each segment to provide roughly 5-20 mA of current. Whatever part you have, **confirm it is common anode before wiring anything.**
-
-::: {.callout-warning}
-Be sure to turn power off before wiring circuits on your board.
-:::
-
-You only need one digit for this lab. If you have a two-digit part, pick whichever digit you like and ignore the other one. Connect the common anode pin for your chosen digit to 3.3 V. Then connect that digit's seven segment pins to the header pins you selected during pin assignment.
-
-Because the segments are common anode, a logic 0 turns a segment on and a logic 1 turns it off. Given this, you may need to adjust your seven-segment decoder. Do so in the simplest way possible.
-
-### 6. Generating the FPGA Configuration Files
-
-Now you will synthesize your HDL into a programming file to be transferred onto the FPGA, following the [Synthesizing the Design](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#synthesizing-the-design) section of the Lattice Radiant tutorial.
-
-While you are there, use the Netlist Analyzer to examine the RTL schematic of your design and confirm the synthesized hardware matches your expectations, and check the Resource Usage report for a register and pin count that matches what you intended.
-
-### 7. Program and Test Your Design
-
-Finally, program your design onto the flash memory on the UPduino following the [Programming the Device](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#programming-the-device) section of the Lattice Radiant tutorial.
-
-Once programmed, re-test the board against the specification above:
-
-- Step `s[3:0]` through all sixteen values and confirm the 7-segment display shows the correct hexadecimal digit and that every digit is distinguishable.
-- Confirm `led[0]` and `led[1]` follow the truth tables above.
-- Confirm `led[2]` blinks at roughly 2.4 Hz.
-
-If a specific pin misbehaves, the [Troubleshooting](/tutorials/tutorial-posts/lattice-radiant-ice40-ultraplus-project-setup/#troubleshooting) callout in the Radiant tutorial covers the most common causes, including solder bridges and pins shared with the MCU.
+1. **[Create the Project](/tutorials/tutorial-posts/build-simulate-test/#create-the-project)**: set up a UP5K project and add your `lab1_xx.sv` source file.
+2. **[Logic Simulation in ModelSim](/tutorials/tutorial-posts/build-simulate-test/#logic-simulation)**: force the inputs by hand and check the `led` and `seg` outputs.
+3. **[Automatic Testing with a Testbench](/tutorials/tutorial-posts/build-simulate-test/#automatic-testing)**: write `stim/assert` testbenches for each submodule and the top level.
+4. **[Pin Assignment](/tutorials/tutorial-posts/build-simulate-test/#pin-assignment)**: map your signals to FPGA pins and enable pull-ups on `s[3:0]`.
+5. **[Seven Segment Display Circuit](/tutorials/tutorial-posts/build-simulate-test/#seven-segment-display-circuit)**: wire the display with current-limiting resistors.
+6. **[Generating the FPGA Configuration Files](/tutorials/tutorial-posts/build-simulate-test/#generating-configuration-files)**: synthesize, then check the RTL schematic and resource usage.
+7. **[Program and Test Your Design](/tutorials/tutorial-posts/build-simulate-test/#program-and-test)**: program the flash and re-test the board against the design above.
 
 ## AI Prototype and Reflection
 
