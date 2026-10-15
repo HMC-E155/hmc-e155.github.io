@@ -49,7 +49,7 @@ Today you will practice that loop on small pieces of AES, so that it is a habit 
 
 By the end of this workshop you will be able to...
 
-- Convert between the 4×4 state grids in FIPS-197 and the 128-bit packing used by `aes_core`.
+- Convert between the 4×4 state grids in FIPS-197 and the 128-bit packing used by `aes_core`, first by hand and then with modules you can reuse in the rest of Lab 7.
 - Write a self-checking testbench for one AES step using test vectors from the specification.
 - Choose test vectors that make a bug easy to find, and recognize when a passing test proves very little.
 - Localize a bug systematically: read the shape of the error, find the first wrong internal signal, and work backward from there.
@@ -81,7 +81,6 @@ The packing used throughout the starter code is in the comment above `aes_core`:
 
 **Each 32-bit word is a column of the state, not a row.**
 To turn a grid into a 128-bit value, read *down* each column, left to right.
-In general, the byte in row `r` and column `c` is `s[127 - 8*(r + 4*c) -: 8]`.
 
 For example, the `input` grid at the top of Appendix B is
 
@@ -95,23 +94,81 @@ a8 8d a2 34
 Reading down the columns gives `128'h3243f6a8_885a308d_313198a2_e0370734`.
 That is exactly the `plaintext` in `testbench_aes_core`, which is a good way to check that you've got the direction right.
 
-The workshop testbenches use this same formula to print the state back out as a grid when a test fails, so you can compare it directly against the figures in the standard.
+When a test fails, the workshop testbenches print the state back out as a grid, so you can compare it directly against the figures in the standard.
 
-## Exercise 1: ShiftRows, From the Spec to a Passing Test {#exercise-1}
+## Exercise 1: The State Array, by Hand and in Hardware {#exercise-1}
 
 *About 20 minutes.*
-[**Open Exercise 1 in Jacquard**](https://jacquardfpga.com/?gh=HMC-E155/hmc-e155/tree/main/lab/lab07/workshop/ex1_shiftrows)
+
+Converting by hand once is how you learn the layout.
+Converting by hand every time is how bugs get in.
+So you'll do it on paper first, then write two small modules that do it for you, and test them.
+
+### Part A: On paper
+
+1. The Appendix B **Cipher Key** is `2b7e151628aed2a6abf7158809cf4f3c`. Write it as a 4×4 state grid.
+
+    ```
+    __ __ __ __
+    __ __ __ __
+    __ __ __ __
+    __ __ __ __
+    ```
+
+2. Find the **Start of Round** grid for Round 1 in Appendix B. Pack it into a 128-bit value: `128'h________________________________`
+
+3. Which bits of the 128-bit value hold `S[2][1]`? Which byte of the state is in bits `[39:32]`? Now write the general rule: the byte in row `r` and column `c` is in bits `[_______ : _______]`.
+
+4. In SystemVerilog, you can hold the state as a 4×4 array of bytes:
+
+    ```systemverilog
+    logic [0:3][0:3][7:0] s;   // s[r][c] is the byte in row r, column c
+    ```
+
+    The ranges are `[0:3]`, not `[3:0]`, on purpose. With `[0:3]`, `s[0][0]` is the leftmost byte, so a value written row by row, `{8'h32, 8'h88, 8'h31, 8'he0, 8'h43, ...}`, fills row 0 first and reads just like the grids in the standard.
+
+    Because `s` is packed, it is also 128 bits wide, so `s = a;` compiles. Write down the grid it would give for the Appendix B `input`. Why is it wrong?
+
+### Part B: In hardware
+
+[**Open Exercise 1 in Jacquard**](https://jacquardfpga.com/?gh=HMC-E155/hmc-e155/tree/main/lab/lab07/workshop/ex1_state_array)
 
 | File | What's in it |
 |---|---|
-| `shiftrows.sv` | An empty `shiftrows` module for you to fill in. |
+| `input_to_state.sv` | An empty `input_to_state` module: 128 bits in, state array out. |
+| `state_to_output.sv` | An empty `state_to_output` module: the reverse. |
+| `input_to_state_tb.sv` | A self-checking testbench, with two expected grids for you to fill in. |
+| `state_to_output_tb.sv` | A self-checking testbench, with one expected value for you to fill in. |
+
+1. **Run `input_to_state_tb` before you write anything.** Every test fails. A testbench should fail loudly when it's incomplete instead of quietly passing.
+2. **Fill in the two `TODO` grids** in `input_to_state_tb.sv`, row by row, the same way Test 1 is written. One is the cipher key from Part A. In the other, each byte's value is its own position in the 128-bit input.
+3. **Write `input_to_state`** and run until the testbench prints `PASSED`. If your `got` grid is the expected grid transposed, look back at Part A, question 4.
+4. **Write `state_to_output`**, fill in the `TODO` in `state_to_output_tb.sv` with your answer to Part A, question 2, and run `state_to_output_tb` until it prints `PASSED`. Its last test sends a value through both of your modules and checks that it comes back unchanged.
+
+You now have two tested modules that move between the 128-bit packing and the state array.
+You can use them in Exercise 2 and in Lab 7 whenever rows and columns are the easier way to think.
+
+## Exercise 2: ShiftRows, From the Spec to a Passing Test {#exercise-2}
+
+*About 15 minutes.*
+[**Open Exercise 2 in Jacquard**](https://jacquardfpga.com/?gh=HMC-E155/hmc-e155/tree/main/lab/lab07/workshop/ex2_shiftrows)
+
+| File | What's in it |
+|---|---|
+| `shiftrows.sv` | An empty `shiftrows` module for you to fill in. Its ports are 128 bits, like everything inside `aes_core`. |
 | `shiftrows_tb.sv` | A self-checking testbench, with three test vectors for you to fill in. |
+| `input_to_state.sv`, `state_to_output.sv` | Empty, and only needed if you use the state array. Paste in your modules from Exercise 1. |
+
+How you write `shiftrows` is up to you.
+You can move bytes around in the 128-bit vector directly.
+Or you can turn `a` into a state array with `input_to_state`, shift each row, and turn the result back with `state_to_output`.
+The testbench only sees the 128-bit ports, so it checks both the same way.
 
 1. **Run the testbench before you write anything.** Read the transcript. Every test fails, because the test vectors are still `x`. A testbench should fail loudly when it's incomplete instead of quietly passing.
 2. **Read Section 5.1.2 of FIPS-197** (ShiftRows). In your own words: which bytes move, and by how much?
 3. **Predict the "numbered bytes" test by hand.** Its input puts each byte's position in the byte itself, so `S[r][c] = 4c + r`. Draw the 4×4 grid before and after ShiftRows, then pack the "after" grid into a 128-bit hex value and fill it in as the expected output.
 4. **Fill in the two Appendix B tests**: the "After SubBytes" grid as the input and the "After ShiftRows" grid as the expected output, for Round 1 and for Round 2.
-5. **Write `shiftrows`** and run until the testbench prints `PASSED`.
+5. **Write `shiftrows`**, whichever way you chose, and run until the testbench prints `PASSED`.
 
 When a test fails, the testbench prints what you got next to what was expected, as grids, with a `*` on every wrong byte:
 
@@ -127,15 +184,15 @@ When a test fails, the testbench prints what you got next to what was expected, 
 Before you open the code, look at *which* bytes are wrong:
 
 - **One row wrong**: the shift for that row is wrong.
-- **The `got` grid is the expected grid transposed** (as above): rows and columns have been swapped somewhere, probably by treating each 32-bit word as a row.
+- **The `got` grid is the expected grid transposed** (as above): rows and columns have been swapped somewhere, probably by treating each 32-bit word as a row. If you used the state array, re-run your Exercise 1 testbenches on the modules you pasted in.
 - **Wrong bytes contain values from elsewhere in the input**: bytes landed in the wrong place. The numbered-bytes test tells you exactly which byte went where.
 :::
 
 **Check yourself.** If your `shiftrows` were broken, which of your three tests would tell you the most about *how* it was broken? Why?
 
-## Exercise 2: Find the Bug in MixColumns {#exercise-2}
+## Exercise 3: Find the Bug in MixColumns {#exercise-3}
 
-*About 25 minutes.*
+*About 20 minutes.*
 
 The `mixcolumns` module in the Lab 7 starter code is correct.
 Each of these three copies has had **one** bug planted in it, and each bug is different.
@@ -143,9 +200,9 @@ Your instructor will assign your pair a letter.
 
 | Version | Link |
 |---|---|
-| A | [**Open Exercise 2A in Jacquard**](https://jacquardfpga.com/?gh=HMC-E155/hmc-e155/tree/main/lab/lab07/workshop/ex2_mixcolumns_a) |
-| B | [**Open Exercise 2B in Jacquard**](https://jacquardfpga.com/?gh=HMC-E155/hmc-e155/tree/main/lab/lab07/workshop/ex2_mixcolumns_b) |
-| C | [**Open Exercise 2C in Jacquard**](https://jacquardfpga.com/?gh=HMC-E155/hmc-e155/tree/main/lab/lab07/workshop/ex2_mixcolumns_c) |
+| A | [**Open Exercise 3A in Jacquard**](https://jacquardfpga.com/?gh=HMC-E155/hmc-e155/tree/main/lab/lab07/workshop/ex3_mixcolumns_a) |
+| B | [**Open Exercise 3B in Jacquard**](https://jacquardfpga.com/?gh=HMC-E155/hmc-e155/tree/main/lab/lab07/workshop/ex3_mixcolumns_b) |
+| C | [**Open Exercise 3C in Jacquard**](https://jacquardfpga.com/?gh=HMC-E155/hmc-e155/tree/main/lab/lab07/workshop/ex3_mixcolumns_c) |
 
 ::: {.callout-important title="Don't diff against the starter code"}
 You could find the bug in seconds by comparing against `aes_starter.sv`.
@@ -168,10 +225,10 @@ The goal is to practice the method.
 
 **If you finish early**, try another letter. Or design a single test vector, simple enough to check by hand, that would catch all three bugs.
 
-## Stretch: Trace Your Own `aes_core` {#exercise-3}
+## Stretch: Trace Your Own `aes_core` {#stretch}
 
 If you have started your `aes_core`, this testbench applies the same method to the whole design.
-Download [`aes_core_trace_tb.sv`](https://github.com/HMC-E155/hmc-e155/blob/main/lab/lab07/workshop/ex3_round_trace/aes_core_trace_tb.sv) and add it to your Lab 7 project (**Upload** in Jacquard, or add it to your QuestaSim project).
+Download [`aes_core_trace_tb.sv`](https://github.com/HMC-E155/hmc-e155/blob/main/lab/lab07/workshop/stretch_round_trace/aes_core_trace_tb.sv) and add it to your Lab 7 project (**Upload** in Jacquard, or add it to your QuestaSim project).
 
 The tracer watches one register inside your design.
 Every time that register changes, it looks the new value up in the complete Appendix B table and tells you which step of which round it matches.
@@ -191,7 +248,7 @@ cycle  15  state = a49a7ff46899332b6d5bec43026c504f  NO MATCH
 ```
 
 The bug is somewhere between "round 1 start" and the next value that should have matched.
-So take round 1's intermediate values from Appendix B and test each step module on them, just as you did in Exercises 1 and 2.
+So take round 1's intermediate values from Appendix B and test each step module on them, just as you did in Exercises 2 and 3.
 
 The tracer also catches two problems that make `testbench_aes_core` hang without saying anything:
 
@@ -207,6 +264,7 @@ The tracer is a debugging tool. It does not replace `testbench_aes_core` and the
 
 ## Take It to Lab 7
 
+- **Work in whichever layout makes each step easiest to get right.** Rows and columns are explicit in the state array, and your tested `input_to_state` and `state_to_output` take you there and back.
 - **Test each step module on its own against Appendix B before you connect them.** A failing `aes_core` has many possible causes. A failing `shiftrows` has only a few.
 - **Choose test vectors that make a bug easy to find.** Numbered bytes show you where every byte went. Inputs where a bug cancels itself out (like a column of identical bytes in MixColumns) prove very little.
 - **Read the shape of the error before reading code.** Scattered bytes, a whole row, or a whole column each point somewhere different.
