@@ -29,7 +29,7 @@ weeks:
     thu: UART and the IoT
     due: "[Lab 5](/lab/lab5/)"
   - tue: Advanced Encryption Standard (AES)
-    thu: AES on FPGA Workshop
+    thu: "[AES on FPGA Workshop](/lab/lab7/workshop.html)"
     due: "[Lab 6](/lab/lab6/)"
   - tue: "**Happy Fall Break! No Class**"
     thu: "[Project](/project/) Kickoff"
