@@ -1,0 +1,21 @@
+---
+title: Purchasing Parts
+format:
+  html: default
+  pdf: default
+---
+
+**DO NOT BUY ANYTHING UNTIL THE INSTRUCTORS CONFIRM DETAILS IN CLASS.**
+
+Purchasing must be complete before the midpoint report and demo on {{< var project-midpoint-date >}}, and you probably want to complete it much sooner to de-risk hardware before the midpoint. 
+
+Check the stockroom before buying anything — most common parts are already available there at no cost to your team.
+
+If your team needs parts that are not available in the stockroom, you may spend up to \$50 to purchase them.
+
+## Process
+
+1. Confirm the part isn't available in the stockroom.
+2. Make your purchase and save your receipts.
+3. Fill out a reimbursement form, available from the [department website](https://www.hmc.edu/engineering/current-student-information/department-forms/).
+4. Have an instructor approve the reimbursement (list your instructor as the faculty advisor on the form). One instructor will be the faculty advisor for all reimbursements, and instructors will tell you which instructor to put on the form; .

@@ -1,0 +1,49 @@
+---
+title: Project Proposal
+format:
+  html: default
+  pdf: default
+---
+
+**Due at your scheduled proposal debrief meeting, held in class during {{< var project-proposal-debrief-dates >}}.** There's no need to submit anything ahead of time — bring it to your meeting. Sign up for a slot as a team on the [checkoff sheet]({{< var project-checkoff-gsheet-url >}}).
+
+The goal of the proposal is to describe what you plan to build and how you plan to build it. It must be specific enough that we can tell when you demonstrate your project that it meets the specs of the proposal. Do not list stretch goals or wiggle words; simply state what you are committing to deliver. You may need to do some preliminary technical work to gain confidence you can deliver what you promise.
+
+The proposal should be no longer than 2 pages of text (diagrams, tables, and other technical documentation do not count against the limit). Make your description clear, direct, and concise.
+
+Almost every team needs a second attempt. Bring your revised proposal to a lab redo slot on {{< var project-proposal-redo-date >}} — your last chance to redo it.
+
+::: {.callout-note title="Early vs. Late Debrief Slots"}
+Which debrief slot you sign up for is a real tradeoff. Signing up early (10/27) gives you the most runway to revise before the {{< var project-proposal-redo-date >}} redo deadline, but less time to scope out your project and firm up the details beforehand. Signing up late (11/3) gives you more time to prepare a stronger first draft, but leaves little or no time to revise before the redo deadline if your debrief turns up problems. Pick the slot that matches how settled your team's plan already is.
+:::
+
+## Requirements
+
+Your proposal must address the following:
+
+- Project description and overview
+- Description of the main subsystems of the design, including the FPGA design details and the features of the MCU you plan to use
+- An explanation of the new piece(s) of hardware you are using, showing that both the FPGA and MCU will perform nontrivial functions appropriate to each
+- A block diagram indicating chips, connections, and protocols
+- Calculations of performance-critical parameters (bandwidths, data rates, FFT widths, frame rates, ADC bits, power levels, etc.)
+- A rough schedule and work breakdown (e.g., a Gantt chart) showing how tasks will be divided among team members
+- A bill of materials / budget — see [Purchasing Parts](./purchasing-parts.qmd) for how to handle parts not available in the stockroom
+
+If you realize partway through the project that your scope was too large, contact us as soon as possible to renegotiate your proposal. We will not accept proposal revisions after the Friday following the design review presentations.
+
+{{< pagebreak >}}
+
+## Grading Rubric
+
+The proposal is worth 10% of your project grade, graded according to the rubric below.
+
+| Category | Points | What We're Looking For |
+|---|---|---|
+| Scope & Specifications | 3 | States specific, checkable specifications for what the project will do — not stretch goals or vague wording. |
+| MCU & FPGA Design Plan | 3 | Describes how the MCU and FPGA will be used, including the new hardware, and makes the case that both chips perform a nontrivial function appropriate to the project. Plans that go beyond material already covered in labs score highest. |
+| Bill of Materials & Schedule | 1 | A bill of materials with part numbers, quantities, and prices (or "stockroom") for every part, plus a rough schedule/work breakdown dividing tasks among teammates. *Partial credit example: a BOM that lists parts but omits prices or quantities earns around 1/2.* |
+| Performance Calculations | 1 | Includes calculations for performance-critical parameters (data rates, frame rates, power, etc.) |
+| Risk | 1 | Identifies the riskiest element of the project. |
+| Writing & Diagram Quality | 1 | Clear, well-organized writing with minimal grammar/spelling issues, and uses computer-drawn diagrams showing chips, connections, and protocols. |
+
+**Total: 10 points**
