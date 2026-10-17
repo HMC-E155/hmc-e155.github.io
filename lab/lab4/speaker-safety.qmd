@@ -49,6 +49,14 @@ To adjust current:
 
 ---
 
+### LM386 Input and Output Limits
+
+The LM386 has an input resistance of only about 50&nbsp;kΩ, so a potentiometer wired as a voltage divider in front of the input works well as a volume control.
+
+If the amplifier output clips (the tops of the waveform look flattened on the oscilloscope), use your volume control to turn the input down. The LM386 saturates in an unusual way near the top of its output range, so keep the output swing below about 4&nbsp;V peak-to-peak.
+
+---
+
 ### Step 3: Never Connect the MCU Pin Directly
 
 Remember:  

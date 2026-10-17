@@ -20,7 +20,7 @@ Lab 4 is the first introduction to the STM32L432KC microcontroller. The specific
 #### Excellence
 
 - [ ] Design contains potentiometer to control the output volume.
-- [ ] Design plays an extra composition of your choice. You need not compose the tune from scratch, it is acceptable to transpose an existing tune.
+- [ ] Design plays an extra composition of your choice after *Für Elise*. The new song is stored in the same file as *Für Elise*. You need not compose the tune from scratch, it is acceptable to transpose an existing tune.
 
 ### Software and Microcontroller Design Specifications
 
@@ -28,6 +28,7 @@ Lab 4 is the first introduction to the STM32L432KC microcontroller. The specific
 
 - [ ] Design makes use of at least one timer peripheral, accessed with writes to appropriate memory locations.
 - [ ] Code uses `#define` macros for memory-mapped registers, copying the struct and base address design format from class.
+- [ ] Code adheres to most of the C-style guidelines [see here](../specs/c-style-specs.qmd).
 
 #### Excellence
 
