@@ -1,0 +1,42 @@
+---
+title: Final Report
+format:
+  html: default
+  pdf: default
+---
+
+**Due {{< var project-final-report-date >}}, end of day.**
+
+The final report for this project is a portfolio website hosted on GitHub Pages. The website should document your design with all source code in the linked GitHub repository. Clearly explain how your design works. If you have developed techniques that would be useful for students in the future (e.g., how to interface to an LCD display), document these features well so that future students may build on your work.
+
+Late reports will not be accepted except in the case of unusual extenuating circumstances.
+
+## Requirements
+
+The website should include:
+
+- An abstract summarizing the project
+- Complete schematics and a system block diagram
+- MCU and FPGA design overviews
+- A description of the new hardware used
+- Results, quantitative where applicable
+- A bill of materials
+- Well-commented and cleanly formatted code (C and Verilog) in the linked GitHub repository, with a README describing the project and where to find things
+- Photos of your finished design
+- A video (hosted in the provided Google Drive folder) demonstrating your project. Videos should be titled `<LastName1>_<LastName2>_<VideoName>` to clearly identify your videos in the folder.
+  - Use the [storytelling worksheet](../storytelling-worksheet.qmd) to help plan and structure your video.
+- References, acknowledgements, and team bios
+
+## Grading Rubric
+
+The final report is worth 20% of your project grade, graded according to the rubric below. Written documentation should also follow the general [lab writeup specs](../../lab/specs/lab-writeup-specs.qmd); the categories below are specific to the project report.
+
+| Category | Points | What We're Looking For |
+|---|---|---|
+| Technical Design Documentation | 6 | Bill of materials, MCU design overview, FPGA design overview, schematics, and a block diagram provided in professional and easy-to-read formats. |
+| Written Report Content | 6 | Abstract, results (quantitative where applicable), description of the new hardware used, references, acknowledgements, and team bios. |
+| Code & Repository | 4 | All project code (software and HDL) is in the Git repository, cleanly commented, with a README describing the project and where to find things. It adheres to best practices from the course. |
+| Multimedia | 2 | A video demonstrating the project (the [storytelling worksheet](../storytelling-worksheet.qmd) can help you plan it) and photos of the finished design. |
+| Writing Quality & Site Organization | 2 | The website is well organized with clear separation of information, no missing placeholders or dead links, and minimal spelling/grammar issues. |
+
+**Total: 20 points**

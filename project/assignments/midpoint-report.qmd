@@ -1,0 +1,38 @@
+---
+title: Midpoint Report & Demo
+format:
+  html: default
+  pdf: default
+---
+
+**Due {{< var project-midpoint-date >}}, submitted before your scheduled midpoint checkoff slot.**
+
+The midpoint status report is a 4-page report (plus appendices) documenting your design at the midpoint. You must be ready to demonstrate some working hardware in the lab at your scheduled slot.
+
+## Requirements
+
+The midpoint status report should include:
+
+- A clear, concise summary of your current status and progress toward the final project
+- Schematics of anything on a breadboard
+- Block diagrams of the logic on your FPGA
+- A system block diagram with the interfaces between components (SPI, I2C, GPIO, etc.) clearly labeled
+- An outline of the routines used on the MCU
+- The status of the riskiest element identified in your proposal, which should be substantially addressed or completed
+- The status of your parts orders (all external parts should be ordered by the midpoint)
+
+Include as an appendix either your Verilog code or software that is mostly complete (you do not have to have both ready).
+
+## Grading Rubric
+
+The midpoint status report and demo is worth 20% of your project grade, graded according to the rubric below.
+
+| Category | Points | What We're Looking For |
+|---|---|---|
+| Progress Toward Final Deliverable | 8 | A working (if rough) hardware demo and meaningful progress toward the final project. |
+| Risk Retirement | 4 | The riskiest element of the project identified in the proposal has been substantially addressed or completed. |
+| Schematics & Block Diagrams | 4 | Schematics of all breadboarded circuits, and a block diagram of system components with interfaces (SPI, I2C, GPIO, etc.) clearly labeled. |
+| Parts Status | 2 | All external parts have been ordered. |
+| Writing Quality | 2 | A clear, concise, well-organized written summary of current status with minimal grammar/spelling issues. |
+
+**Total: 20 points**

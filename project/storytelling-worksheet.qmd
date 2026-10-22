@@ -4,15 +4,15 @@ format:
   html: default
 ---
 
-Now that you've done all the hard technical work for your project, it's time for the fun part: showing it off! As part of you final project website we'll be creating short videos which showcase your project.
+Now that you've done all the hard technical work for your project, it's time for the fun part: showing it off! As part of your final project website you'll be creating short videos which showcase your project.
 
 Think of this like an elevator pitch for your project. You'll have a minute to introduce your project and highlight the key features.
 
 ## Format
 
-We'll use the classic hero's arc storytelling framework for making your video sticky.
+We'll use the classic hero's journey storytelling framework for making your video sticky.
 
-![The User's Journey: Storymapping Projects That People Love, Lichaw, Donna, 2016. New York: Rosenfeld Media](images/25067761744_42392026ed_o-4.jpg){fig-align="center" width="521"}
+This framework is adapted from Donna Lichaw, *The User's Journey: Storymapping Products That People Love* (Rosenfeld Media, 2016).
 
 ## Designing Your Story
 
@@ -46,10 +46,14 @@ How does it solve it?
 
 <br><br><br><br><br>
 
-### Then what?
+### Then What?
 
 What should you do next?
 
 <br><br><br><br><br>
 
 ### End
+
+How does your video close? What should the viewer remember?
+
+<br><br><br><br><br>

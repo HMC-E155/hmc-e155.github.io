@@ -1,0 +1,36 @@
+---
+title: Final Checkoff
+format:
+  html: default
+  pdf: default
+---
+
+**During lab checkoff times on {{< var project-final-checkoff-dates >}}.**
+
+Demonstrate a working project to an instructor in the lab. There will be signups for demonstration periods, during which you will show that you meet your specifications and be asked technical questions about the operation of your design.
+
+Late projects will not be accepted except in the case of unusual extenuating circumstances.
+
+## Requirements
+
+Come to your checkoff prepared with:
+
+- A working system that meets the specifications from your proposal and runs reliably without freezing, crashing, or needing a restart
+- A spec tracking document listing each specification from your proposal with a short (3–5 sentence) summary of whether it was met
+- Printouts of your schematics, C code, and Verilog for review
+- A polished build, with managed wiring and reliable physical interfaces
+
+## Grading Rubric
+
+The final checkoff is worth 30% of your project grade — the largest single component — graded according to the rubric below.
+
+| Category | Points | What We're Looking For |
+|---|---|---|
+| Meeting Proposed Specifications | 12 | The project meets the specifications laid out in the proposal, with clear explanations for any that weren't met. |
+| Reliability | 6 | The system operates without major bugs — it doesn't freeze, crash, or need a restart during normal operation. |
+| Spec Tracking Document | 3 | A document listing each spec from the proposal with a short (3–5 sentence) summary of whether it was met. |
+| Verilog Code Quality | 3 | Verilog is functional and cleanly formatted; full credit requires good practice as well (modularity, appropriate testbenches). |
+| C Code Quality | 3 | C code is functional and cleanly formatted; full credit requires efficient, well-organized code (functions, custom libraries where appropriate). |
+| Polish & Presentation | 3 | The project is polished at checkoff — wires are managed, physical interfaces are reliable and well-designed, and technical documentation is available for review. |
+
+**Total: 30 points**
