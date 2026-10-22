@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project Midpoint Demo Specs – HMC E155</title>
+<title>Design Review Presentation – HMC E155</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -183,17 +183,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#proficiency" id="toc-proficiency" class="nav-link active" data-scroll-target="#proficiency">Proficiency</a></li>
-  <li><a href="#excellence" id="toc-excellence" class="nav-link" data-scroll-target="#excellence">Excellence</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements">Requirements</a></li>
+  <li><a href="#grading-rubric" id="toc-grading-rubric" class="nav-link" data-scroll-target="#grading-rubric">Grading Rubric</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="project-midpoint-specs.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="design-review-presentation.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project Midpoint Demo Specs</h1>
+<h1 class="title">Design Review Presentation</h1>
 </div>
 
 
@@ -210,28 +210,69 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="proficiency" class="level2">
-<h2 class="anchored" data-anchor-id="proficiency">Proficiency</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Clear and concise written summary of current status</label></li>
-<li><label><input type="checkbox">Schematics of all breadboarded circuits</label></li>
-<li><label><input type="checkbox">Block diagram of system components and the interfaces between them</label></li>
-<li><label><input type="checkbox">Hardware demo functioning (potentially with some minor bugs)</label></li>
-<li><label><input type="checkbox">More than 25% of the way to the final deliverable</label></li>
-<li><label><input type="checkbox">Clear description of microcontroller routines</label></li>
-<li><label><input type="checkbox">All external parts ordered</label></li>
+<p><strong>Presented in class on 11/10, 11/12 &amp; 11/17.</strong></p>
+<p>Your team will sign up for a 10-minute in-class presentation on the <a href="https://docs.google.com/spreadsheets/d/1jyhuYetRy4nk7QFi0VYhymAZ0HdkFA2JSsOSeZeTPEM/edit?gid=0#gid=0">checkoff sheet</a> shortly after your proposal debrief. The purpose of the presentation is to share the plan for your project with your classmates and solicit their feedback.</p>
+<p>Your presentation should include a 3-minute overview of your project followed by an in-depth presentation of a specific technical problem your team is working on and has not yet solved. The goal is to get useful input from other students, so you must explain the problem clearly enough for them to give meaningful suggestions.</p>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
+<p>You are free to structure your presentation however you like, but most successful presentations include the following components:</p>
+<ul>
+<li><strong>Introduction</strong>: Introduce the problem statement and the objectives of the project. What are you trying to achieve? What inspired you to choose this project?</li>
+<li><strong>Specifications</strong>: What will your project do?</li>
+<li><strong>Implementation</strong>: Present a block diagram of your system.
+<ul>
+<li>What is the role of the MCU and the FPGA?</li>
+<li>What new hardware are you using?</li>
+<li>What new MCU peripheral(s) are you planning to use?</li>
+</ul></li>
+<li><strong>Feedback</strong>: Solicit feedback from your peers. This requires some thought and intentionality to do well. The goal is to solicit feedback on a technical topic, not a cosmetic detail (e.g., what color to paint the box). Some ideas to consider:
+<ul>
+<li>What technical problem would you like feedback on from your peers?</li>
+<li>How would you like them to provide that feedback?</li>
+</ul></li>
+<li><strong>Conclusion and Q&amp;A</strong>: Briefly conclude the presentation and field questions from the audience (as time allows).</li>
 </ul>
 </section>
-<section id="excellence" class="level2">
-<h2 class="anchored" data-anchor-id="excellence">Excellence</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">All interfaces in the block diagram defined (e.g., SPI, I2C, GPIO)</label></li>
-<li><label><input type="checkbox">Hardware demo functioning well</label></li>
-<li><label><input type="checkbox">Writing is well organized</label></li>
-<li><label><input type="checkbox">Solid grammar or spelling issues (no more than a few minor errors which do not detract from the point).</label></li>
-<li><label><input type="checkbox">Completed riskiest element of the project</label></li>
-<li><label><input type="checkbox">More than 50% of the way to the final deliverable</label></li>
-</ul>
+<section id="grading-rubric" class="level2">
+<h2 class="anchored" data-anchor-id="grading-rubric">Grading Rubric</h2>
+<p>The design review presentation is worth 20% of your project grade, graded according to the rubric below.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Points</th>
+<th>What We’re Looking For</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Overview of Project &amp; Status Update</td>
+<td>5</td>
+<td>Easy to understand goal of project and project architecture, and currently implemented subsystems are clear. <em>Partial credit example: a project with a clear goal but only some representation of architecture, or incomplete understanding of what’s been implemented, earns around 2.5; little communication of either goal or architecture, where it’s unclear what’s done, earns 0.</em></td>
+</tr>
+<tr class="even">
+<td>Description of Subsystem</td>
+<td>5</td>
+<td>Subsystem described concisely, but in sufficient technical detail to ask questions. <em>Partial credit example: a subsystem described confusingly or without technical depth earns around 2.5; an unintelligible subsystem earns 0.</em></td>
+</tr>
+<tr class="odd">
+<td>Meaningful Feedback from Audience</td>
+<td>5</td>
+<td>Audience asks questions or offers advice that indicates understanding and helps advance the project. <em>Partial credit example: an audience that only asks clarifying questions without advancing the project earns around 2.5; an audience that asks few questions or reaches no useful conclusions earns 0.</em></td>
+</tr>
+<tr class="even">
+<td>Presentation</td>
+<td>5</td>
+<td>Presentation is practiced and well ordered to facilitate audience understanding. <em>Partial credit example: a presentation with reasonable organization but stiff delivery earns around 2.5; an unrehearsed, weakly organized presentation earns 0.</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total: 20 points</strong></p>
 
 
 </section>

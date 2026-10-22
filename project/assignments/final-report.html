@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project Final Portfolio Specs – HMC E155</title>
+<title>Final Report – HMC E155</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -183,29 +183,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#proficiency" id="toc-proficiency" class="nav-link active" data-scroll-target="#proficiency">Proficiency</a>
-  <ul class="collapse">
-  <li><a href="#technical-information" id="toc-technical-information" class="nav-link" data-scroll-target="#technical-information">Technical Information</a></li>
-  <li><a href="#written-documentation" id="toc-written-documentation" class="nav-link" data-scroll-target="#written-documentation">Written Documentation</a></li>
-  <li><a href="#writing-and-organization" id="toc-writing-and-organization" class="nav-link" data-scroll-target="#writing-and-organization">Writing and Organization</a></li>
-  </ul></li>
-  <li><a href="#excellence" id="toc-excellence" class="nav-link" data-scroll-target="#excellence">Excellence</a>
-  <ul class="collapse">
-  <li><a href="#technical-documentation" id="toc-technical-documentation" class="nav-link" data-scroll-target="#technical-documentation">Technical Documentation</a></li>
-  <li><a href="#written-documentation-1" id="toc-written-documentation-1" class="nav-link" data-scroll-target="#written-documentation-1">Written Documentation</a></li>
-  <li><a href="#writing-and-organization-1" id="toc-writing-and-organization-1" class="nav-link" data-scroll-target="#writing-and-organization-1">Writing and Organization</a></li>
-  <li><a href="#multimedia-documentation" id="toc-multimedia-documentation" class="nav-link" data-scroll-target="#multimedia-documentation">Multimedia Documentation</a></li>
-  </ul></li>
-  <li><a href="#optional" id="toc-optional" class="nav-link" data-scroll-target="#optional">Optional</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements">Requirements</a></li>
+  <li><a href="#grading-rubric" id="toc-grading-rubric" class="nav-link" data-scroll-target="#grading-rubric">Grading Rubric</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="project-final-report-specs.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="final-report.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project Final Portfolio Specs</h1>
+<h1 class="title">Final Report</h1>
 </div>
 
 
@@ -222,76 +210,68 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Written documentation should follow all the specifications for written documentation as laid out in the <a href="../../lab/specs/lab-writeup-specs.html">general lab specs</a>. In addition, the report should address these project-specific specifications.</p>
-<section id="proficiency" class="level2">
-<h2 class="anchored" data-anchor-id="proficiency">Proficiency</h2>
-<section id="technical-information" class="level3">
-<h3 class="anchored" data-anchor-id="technical-information">Technical Information</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Bill of materials including all relevant components with quantities, part numbers, and prices.</label></li>
-<li><label><input type="checkbox">Microcontroller design overview: description of what the MCU is doing.</label></li>
-<li><label><input type="checkbox">FPGA design overview: what is the FPGA doing along with main design features.</label></li>
+<p><strong>Due 12/10, end of day.</strong></p>
+<p>The final report for this project is a portfolio website hosted on GitHub Pages. The website should document your design with all source code in the linked GitHub repository. Clearly explain how your design works. If you have developed techniques that would be useful for students in the future (e.g., how to interface to an LCD display), document these features well so that future students may build on your work.</p>
+<p>Late reports will not be accepted except in the case of unusual extenuating circumstances.</p>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
+<p>The website should include:</p>
+<ul>
+<li>An abstract summarizing the project</li>
+<li>Complete schematics and a system block diagram</li>
+<li>MCU and FPGA design overviews</li>
+<li>A description of the new hardware used</li>
+<li>Results, quantitative where applicable</li>
+<li>A bill of materials</li>
+<li>Well-commented and cleanly formatted code (C and Verilog) in the linked GitHub repository, with a README describing the project and where to find things</li>
+<li>Photos of your finished design</li>
+<li>A video (hosted in the provided Google Drive folder) demonstrating your project. Videos should be titled <code>&lt;LastName1&gt;_&lt;LastName2&gt;_&lt;VideoName&gt;</code> to clearly identify your videos in the folder.
+<ul>
+<li>Use the <a href="../../project/storytelling-worksheet.html">storytelling worksheet</a> to help plan and structure your video.</li>
+</ul></li>
+<li>References, acknowledgements, and team bios</li>
 </ul>
 </section>
-<section id="written-documentation" class="level3">
-<h3 class="anchored" data-anchor-id="written-documentation">Written Documentation</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Names and short bios of team members with link to personal website or LinkedIn profile.</label></li>
-<li><label><input type="checkbox">Abstract which briefly describes the main purpose and operation of the system.</label></li>
-<li><label><input type="checkbox">New hardware listed in section with description</label></li>
-<li><label><input type="checkbox">Results: What are the main results of your project.</label></li>
-<li><label><input type="checkbox">References: Citation (and hyperlinks where relevant) to any outside resources that were referenced in the design of the project.</label></li>
-<li><label><input type="checkbox">Acknowledgements</label></li>
-<li><label><input type="checkbox">All project code (software and HDL) included in Git repository</label></li>
-</ul>
-</section>
-<section id="writing-and-organization" class="level3">
-<h3 class="anchored" data-anchor-id="writing-and-organization">Writing and Organization</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Website is well organized with clear separation of relevant information.</label></li>
-<li><label><input type="checkbox">No more than a few minor spelling or grammar issues.</label></li>
-<li><label><input type="checkbox">No missing placeholders (e.g., XX) or dead hyperlinks.</label></li>
-</ul>
-</section>
-</section>
-<section id="excellence" class="level2">
-<h2 class="anchored" data-anchor-id="excellence">Excellence</h2>
-<section id="technical-documentation" class="level3">
-<h3 class="anchored" data-anchor-id="technical-documentation">Technical Documentation</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Schematics are neatly drawn with a CAD program (e.g., KiCad). All necessary labels present (pins names &amp; numbers, part numbers, etc.)</label></li>
-<li><label><input type="checkbox">Block diagram is neat and completely specified (e.g., all communication protocols labeled, bus widths indicated, etc.)</label></li>
-</ul>
-</section>
-<section id="written-documentation-1" class="level3">
-<h3 class="anchored" data-anchor-id="written-documentation-1">Written Documentation</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">New hardware described with notes about the features to be implemented and how they go beyond the previous material covered in the course.</label></li>
-<li><label><input type="checkbox">Results section clearly and <strong>quantitatively</strong> outlines the key performance aspects of the design with commentary to explain the design decisions.</label></li>
-<li><label><input type="checkbox">References are formatted with a clean and consistent format.</label></li>
-<li><label><input type="checkbox">All project code is accompanied by comments throughout</label></li>
-<li><label><input type="checkbox">Git repository contains a README.md file to describe the main elements of the project and where they are found.</label></li>
-</ul>
-</section>
-<section id="writing-and-organization-1" class="level3">
-<h3 class="anchored" data-anchor-id="writing-and-organization-1">Writing and Organization</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Excellent spelling and grammar throughout</label></li>
-</ul>
-</section>
-<section id="multimedia-documentation" class="level3">
-<h3 class="anchored" data-anchor-id="multimedia-documentation">Multimedia Documentation</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Short video showcasing a demonstration of the project</label></li>
-<li><label><input type="checkbox">Photos documenting final design</label></li>
-</ul>
-</section>
-</section>
-<section id="optional" class="level2">
-<h2 class="anchored" data-anchor-id="optional">Optional</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Photos documenting the build process</label></li>
-</ul>
+<section id="grading-rubric" class="level2">
+<h2 class="anchored" data-anchor-id="grading-rubric">Grading Rubric</h2>
+<p>The final report is worth 20% of your project grade, graded according to the rubric below. Written documentation should also follow the general <a href="../../lab/specs/lab-writeup-specs.html">lab writeup specs</a>; the categories below are specific to the project report.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Points</th>
+<th>What We’re Looking For</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Technical Design Documentation</td>
+<td>6</td>
+<td>Bill of materials, MCU design overview, FPGA design overview, schematics, and a block diagram provided in professional and easy-to-read formats.</td>
+</tr>
+<tr class="even">
+<td>Written Report Content</td>
+<td>6</td>
+<td>Abstract, results (quantitative where applicable), description of the new hardware used, references, acknowledgements, and team bios.</td>
+</tr>
+<tr class="odd">
+<td>Code &amp; Repository</td>
+<td>4</td>
+<td>All project code (software and HDL) is in the Git repository, cleanly commented, with a README describing the project and where to find things. It adheres to best practices from the course.</td>
+</tr>
+<tr class="even">
+<td>Multimedia</td>
+<td>2</td>
+<td>A video demonstrating the project (the <a href="../../project/storytelling-worksheet.html">storytelling worksheet</a> can help you plan it) and photos of the finished design.</td>
+</tr>
+<tr class="odd">
+<td>Writing Quality &amp; Site Organization</td>
+<td>2</td>
+<td>The website is well organized with clear separation of information, no missing placeholders or dead links, and minimal spelling/grammar issues.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total: 20 points</strong></p>
 
 
 </section>

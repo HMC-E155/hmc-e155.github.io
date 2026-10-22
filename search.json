@@ -126,74 +126,60 @@
     "text": "See the list below for links to lecture slides and handouts. Slides and handouts will normally be posted shortly before each class period.\n\nLecture 1: Introduction and Analog Behavior of Digital Systems [slides] [handout]\nLecture 2: Combinational and Sequential Logic [slides] [handout]\nLecture 3: Verilog Review [slides] [handout]\nLecture 4: Synchronous Design [slides] [handout]\nLecture 5: Finite State Machines [slides] [handout]\nLecture 6: Reading the Documentation: FPGA and MCU [slides] [handout]\nLecture 7: GPIO Device Driver [slides] [handout]\nLecture 8: Clock Configuration [slides] [handout] [tutorial repository]\nLecture 9: Timers [slides] [handout]\nLecture 10: Interrupts [slides] [handout] [activity worksheet] [tutorial repository]\nLecture 11: Serial Interfaces and SPI [slides] [handout]\nLecture 12: Asynchronous Serial Interfaces and the Internet of Things [slides] [handout] [tutorial repository]\nLecture 13: The Advanced Encryption Standard (AES) [slides] [handout] [activity worksheet]\nLecture 14: AES on FPGA Workshop [slides] [handout] [worksheet] [web version] [starter code]"
   },
   {
-    "objectID": "project/specs/project-design-review-presentation-specs.html",
-    "href": "project/specs/project-design-review-presentation-specs.html",
-    "title": "Project Design Review Presentation Specs",
+    "objectID": "project/assignments/design-review-presentation.html",
+    "href": "project/assignments/design-review-presentation.html",
+    "title": "Design Review Presentation",
     "section": "",
-    "text": "The purpose of the design review presentation is to provide you with the opportunity to share the plan for your project with your classmates and solicit their feedback.\nYou are free to structure your presentation however you would like, but most successful presentations include the following components.\nThe specifications below lay out how you will be assessed."
+    "text": "Presented in class on 11/10, 11/12 & 11/17.\nYour team will sign up for a 10-minute in-class presentation on the checkoff sheet shortly after your proposal debrief. The purpose of the presentation is to share the plan for your project with your classmates and solicit their feedback.\nYour presentation should include a 3-minute overview of your project followed by an in-depth presentation of a specific technical problem your team is working on and has not yet solved. The goal is to get useful input from other students, so you must explain the problem clearly enough for them to give meaningful suggestions."
   },
   {
-    "objectID": "project/specs/project-design-review-presentation-specs.html#proficiency",
-    "href": "project/specs/project-design-review-presentation-specs.html#proficiency",
-    "title": "Project Design Review Presentation Specs",
-    "section": "Proficiency",
-    "text": "Proficiency\n\nPresentation gives overview of the project\nPresentation presents a problem or question for the class\nInput solicited from the class"
+    "objectID": "project/assignments/design-review-presentation.html#requirements",
+    "href": "project/assignments/design-review-presentation.html#requirements",
+    "title": "Design Review Presentation",
+    "section": "Requirements",
+    "text": "Requirements\nYou are free to structure your presentation however you like, but most successful presentations include the following components:\n\nIntroduction: Introduce the problem statement and the objectives of the project. What are you trying to achieve? What inspired you to choose this project?\nSpecifications: What will your project do?\nImplementation: Present a block diagram of your system.\n\nWhat is the role of the MCU and the FPGA?\nWhat new hardware are you using?\nWhat new MCU peripheral(s) are you planning to use?\n\nFeedback: Solicit feedback from your peers. This requires some thought and intentionality to do well. The goal is to solicit feedback on a technical topic, not a cosmetic detail (e.g., what color to paint the box). Some ideas to consider:\n\nWhat technical problem would you like feedback on from your peers?\nHow would you like them to provide that feedback?\n\nConclusion and Q&A: Briefly conclude the presentation and field questions from the audience (as time allows)."
   },
   {
-    "objectID": "project/specs/project-design-review-presentation-specs.html#excellence",
-    "href": "project/specs/project-design-review-presentation-specs.html#excellence",
-    "title": "Project Design Review Presentation Specs",
-    "section": "Excellence",
-    "text": "Excellence\n\nPresentation wraps up on time\nSlides are well formatted with no spelling, grammar, or formatting issues.\nPresentation presents an in-depth technical problem\nProblem or question for the class is technical in nature (e.g., soliciting feedback about tradeoffs for a specific protocol for an interface)."
+    "objectID": "project/assignments/design-review-presentation.html#grading-rubric",
+    "href": "project/assignments/design-review-presentation.html#grading-rubric",
+    "title": "Design Review Presentation",
+    "section": "Grading Rubric",
+    "text": "Grading Rubric\nThe design review presentation is worth 20% of your project grade, graded according to the rubric below.\n\n\n\n\n\n\n\n\nCategory\nPoints\nWhat We’re Looking For\n\n\n\n\nOverview of Project & Status Update\n5\nEasy to understand goal of project and project architecture, and currently implemented subsystems are clear. Partial credit example: a project with a clear goal but only some representation of architecture, or incomplete understanding of what’s been implemented, earns around 2.5; little communication of either goal or architecture, where it’s unclear what’s done, earns 0.\n\n\nDescription of Subsystem\n5\nSubsystem described concisely, but in sufficient technical detail to ask questions. Partial credit example: a subsystem described confusingly or without technical depth earns around 2.5; an unintelligible subsystem earns 0.\n\n\nMeaningful Feedback from Audience\n5\nAudience asks questions or offers advice that indicates understanding and helps advance the project. Partial credit example: an audience that only asks clarifying questions without advancing the project earns around 2.5; an audience that asks few questions or reaches no useful conclusions earns 0.\n\n\nPresentation\n5\nPresentation is practiced and well ordered to facilitate audience understanding. Partial credit example: a presentation with reasonable organization but stiff delivery earns around 2.5; an unrehearsed, weakly organized presentation earns 0.\n\n\n\nTotal: 20 points"
   },
   {
-    "objectID": "project/specs/project-proposal-specs.html",
-    "href": "project/specs/project-proposal-specs.html",
-    "title": "Project Proposal Specs",
+    "objectID": "project/assignments/final-checkoff.html",
+    "href": "project/assignments/final-checkoff.html",
+    "title": "Final Checkoff",
     "section": "",
-    "text": "The goal of the proposal is to describe what you plan to build and how you plan to build it. The specifications below provide the expectations for the project proposal.\nIt should be no longer than 2-pages worth of text along with any technical documentation needed (i.e., diagrams, tables, or other figures do not count against the 2-page limit). The point is for you to make your description clear, direct, and concise.\nWhile you are free to organize your proposal in the way that best suits your project, you should be sure to address the following sections:"
+    "text": "During lab checkoff times on 12/8 & 12/9.\nDemonstrate a working project to an instructor in the lab. There will be signups for demonstration periods, during which you will show that you meet your specifications and be asked technical questions about the operation of your design.\nLate projects will not be accepted except in the case of unusual extenuating circumstances."
   },
   {
-    "objectID": "project/specs/project-proposal-specs.html#general",
-    "href": "project/specs/project-proposal-specs.html#general",
-    "title": "Project Proposal Specs",
-    "section": "General",
-    "text": "General\n\nProficiency\n\nBill of materials included with list of all items needed for the project\nProject lists specifications for design\nIdentifies the riskiest element of the project\n\n\n\nExcellence\n\nBill of materials includes part numbers, quantities, and prices for all components including shipping and taxes. Prices for components available in the stock room should be indicated as “stockroom”.\nCompletely clear what the project must do to meet specs.\nRough timeline included which lists the tasks which need to be completed, the order in which they will be pursued, the time they are expected to take, and how the tasks will be divided among the team members.\nCalculation of performance critical parameters is present.\nWriting is well organized and no grammar or spelling issues."
+    "objectID": "project/assignments/final-checkoff.html#requirements",
+    "href": "project/assignments/final-checkoff.html#requirements",
+    "title": "Final Checkoff",
+    "section": "Requirements",
+    "text": "Requirements\nCome to your checkoff prepared with:\n\nA working system that meets the specifications from your proposal and runs reliably without freezing, crashing, or needing a restart\nA spec tracking document listing each specification from your proposal with a short (3–5 sentence) summary of whether it was met\nPrintouts of your schematics, C code, and Verilog for review\nA polished build, with managed wiring and reliable physical interfaces"
   },
   {
-    "objectID": "project/specs/project-proposal-specs.html#technical",
-    "href": "project/specs/project-proposal-specs.html#technical",
-    "title": "Project Proposal Specs",
-    "section": "Technical",
-    "text": "Technical\n\nProficiency\n\nDescribes microcontroller use\nDescribes FPGA use\nProject uses new hardware\n\n\n\nExcellence\n\nProject uses functionality of microcontroller not previously covered in labs\nProject uses functionality of FPGA not previously covered in labs\nProject uses new non-trivial new hardware (e.g., digital chip with non-trivial interface)"
+    "objectID": "project/assignments/final-checkoff.html#grading-rubric",
+    "href": "project/assignments/final-checkoff.html#grading-rubric",
+    "title": "Final Checkoff",
+    "section": "Grading Rubric",
+    "text": "Grading Rubric\nThe final checkoff is worth 30% of your project grade — the largest single component — graded according to the rubric below.\n\n\n\n\n\n\n\n\nCategory\nPoints\nWhat We’re Looking For\n\n\n\n\nMeeting Proposed Specifications\n12\nThe project meets the specifications laid out in the proposal, with clear explanations for any that weren’t met.\n\n\nReliability\n6\nThe system operates without major bugs — it doesn’t freeze, crash, or need a restart during normal operation.\n\n\nSpec Tracking Document\n3\nA document listing each spec from the proposal with a short (3–5 sentence) summary of whether it was met.\n\n\nVerilog Code Quality\n3\nVerilog is functional and cleanly formatted; full credit requires good practice as well (modularity, appropriate testbenches).\n\n\nC Code Quality\n3\nC code is functional and cleanly formatted; full credit requires efficient, well-organized code (functions, custom libraries where appropriate).\n\n\nPolish & Presentation\n3\nThe project is polished at checkoff — wires are managed, physical interfaces are reliable and well-designed, and technical documentation is available for review.\n\n\n\nTotal: 30 points"
   },
   {
-    "objectID": "project/specs/project-proposal-specs.html#documentation",
-    "href": "project/specs/project-proposal-specs.html#documentation",
-    "title": "Project Proposal Specs",
-    "section": "Documentation",
-    "text": "Documentation\n\nProficiency\n\nBlock diagram of system provided showing all elements of the design and their connections.\n\n\n\nExcellence\n\nBlock diagram of system clearly describes all protocols and interfaces.\nBlock diagram is computer drawn and neatly laid out."
-  },
-  {
-    "objectID": "project/specs/project-midpoint-specs.html",
-    "href": "project/specs/project-midpoint-specs.html",
-    "title": "Project Midpoint Demo Specs",
+    "objectID": "project/assignments/purchasing-parts.html",
+    "href": "project/assignments/purchasing-parts.html",
+    "title": "Purchasing Parts",
     "section": "",
-    "text": "Clear and concise written summary of current status\nSchematics of all breadboarded circuits\nBlock diagram of system components and the interfaces between them\nHardware demo functioning (potentially with some minor bugs)\nMore than 25% of the way to the final deliverable\nClear description of microcontroller routines\nAll external parts ordered"
+    "text": "DO NOT BUY ANYTHING UNTIL THE INSTRUCTORS CONFIRM DETAILS IN CLASS.\nPurchasing must be complete before the midpoint status report and demo on 11/17 & 11/18. Aim to finish much sooner so you have time to de-risk your hardware.\nCheck the stockroom before buying anything — most common parts are already available there at no cost to your team.\nIf your team needs parts that are not available in the stockroom, you may spend up to $50 to purchase them."
   },
   {
-    "objectID": "project/specs/project-midpoint-specs.html#proficiency",
-    "href": "project/specs/project-midpoint-specs.html#proficiency",
-    "title": "Project Midpoint Demo Specs",
-    "section": "",
-    "text": "Clear and concise written summary of current status\nSchematics of all breadboarded circuits\nBlock diagram of system components and the interfaces between them\nHardware demo functioning (potentially with some minor bugs)\nMore than 25% of the way to the final deliverable\nClear description of microcontroller routines\nAll external parts ordered"
-  },
-  {
-    "objectID": "project/specs/project-midpoint-specs.html#excellence",
-    "href": "project/specs/project-midpoint-specs.html#excellence",
-    "title": "Project Midpoint Demo Specs",
-    "section": "Excellence",
-    "text": "Excellence\n\nAll interfaces in the block diagram defined (e.g., SPI, I2C, GPIO)\nHardware demo functioning well\nWriting is well organized\nSolid grammar or spelling issues (no more than a few minor errors which do not detract from the point).\nCompleted riskiest element of the project\nMore than 50% of the way to the final deliverable"
+    "objectID": "project/assignments/purchasing-parts.html#process",
+    "href": "project/assignments/purchasing-parts.html#process",
+    "title": "Purchasing Parts",
+    "section": "Process",
+    "text": "Process\n\nConfirm the part isn’t available in the stockroom.\nMake your purchase and save your receipts.\nFill out a reimbursement form, available from the department website.\nHave an instructor approve the reimbursement. One instructor will serve as the faculty advisor for all project reimbursements; we’ll tell you in class whose name to list on the form."
   },
   {
     "objectID": "project/reports/2021/index.html",
@@ -221,21 +207,21 @@
     "href": "project/storytelling-worksheet.html",
     "title": "Storytelling Worksheet",
     "section": "",
-    "text": "Now that you’ve done all the hard technical work for your project, it’s time for the fun part: showing it off! As part of you final project website we’ll be creating short videos which showcase your project.\nThink of this like an elevator pitch for your project. You’ll have a minute to introduce your project and highlight the key features."
+    "text": "Now that you’ve done all the hard technical work for your project, it’s time for the fun part: showing it off! As part of your final project website you’ll be creating short videos which showcase your project.\nThink of this like an elevator pitch for your project. You’ll have a minute to introduce your project and highlight the key features."
   },
   {
     "objectID": "project/storytelling-worksheet.html#format",
     "href": "project/storytelling-worksheet.html#format",
     "title": "Storytelling Worksheet",
     "section": "Format",
-    "text": "Format\nWe’ll use the classic hero’s arc storytelling framework for making your video sticky.\n\n\n\nThe User’s Journey: Storymapping Projects That People Love, Lichaw, Donna, 2016. New York: Rosenfeld Media"
+    "text": "Format\nWe’ll use the classic hero’s journey storytelling framework for making your video sticky.\nThis framework is adapted from Donna Lichaw, The User’s Journey: Storymapping Products That People Love (Rosenfeld Media, 2016)."
   },
   {
     "objectID": "project/storytelling-worksheet.html#designing-your-story",
     "href": "project/storytelling-worksheet.html#designing-your-story",
     "title": "Storytelling Worksheet",
     "section": "Designing Your Story",
-    "text": "Designing Your Story\n\nCurrent State\nCharacter, what’s good, goals.\n\n\n\nProblem, Trigger, or Call to Action\nWhat’s the core problem your project addresses?\n\n\n\nImpediment(s)\nWhat’s the gap that your project addresses?\n\n\n\nYour Project\nWhat did you build?\n\n\n\nProblem Solved, Experience, or Delight\nHow does it solve it?\n\n\n\nThen what?\nWhat should you do next?\n\n\n\nEnd"
+    "text": "Designing Your Story\n\nCurrent State\nCharacter, what’s good, goals.\n\n\n\nProblem, Trigger, or Call to Action\nWhat’s the core problem your project addresses?\n\n\n\nImpediment(s)\nWhat’s the gap that your project addresses?\n\n\n\nYour Project\nWhat did you build?\n\n\n\nProblem Solved, Experience, or Delight\nHow does it solve it?\n\n\n\nThen What?\nWhat should you do next?\n\n\n\nEnd\nHow does your video close? What should the viewer remember?"
   },
   {
     "objectID": "tutorials/tutorial-videos/publishing-your-quarto-website-to-github-pages.html",
@@ -2027,35 +2013,42 @@
     "href": "project/index.html",
     "title": "Project",
     "section": "",
-    "text": "The requirements for the final project can be found here.\nCheckoffs for the proposal debrief, midpoint demo, and final checkoff can be scheduled on the Google Sheet found here. You should sign up for a slot as a team, not as individuals.\nAll submissions for the project are as a team and should be submitted on Canvas as group submissions."
+    "text": "The E155 final project is a chance to apply your digital design skills to a moderately sized problem of your choosing as part of a two-person team (three-person teams are allowed only in extenuating circumstances)."
   },
   {
-    "objectID": "project/index.html#final-project-information",
-    "href": "project/index.html#final-project-information",
+    "objectID": "project/index.html#final-project",
+    "href": "project/index.html#final-project",
     "title": "Project",
     "section": "",
-    "text": "The requirements for the final project can be found here.\nCheckoffs for the proposal debrief, midpoint demo, and final checkoff can be scheduled on the Google Sheet found here. You should sign up for a slot as a team, not as individuals.\nAll submissions for the project are as a team and should be submitted on Canvas as group submissions."
+    "text": "The E155 final project is a chance to apply your digital design skills to a moderately sized problem of your choosing as part of a two-person team (three-person teams are allowed only in extenuating circumstances)."
   },
   {
-    "objectID": "project/index.html#specs",
-    "href": "project/index.html#specs",
+    "objectID": "project/index.html#project-scope",
+    "href": "project/index.html#project-scope",
     "title": "Project",
-    "section": "Specs",
-    "text": "Specs\nBelow you can find general rubrics for the different project deliverables. While these rubrics are a good reference, they are subject to changes.\n\nProject Proposal Specs\nDesign Review Presentation Specs\nMidpoint Status Report Specs\nProject Checkoff Specs\nProject Final Report Specs"
+    "section": "Project Scope",
+    "text": "Project Scope\nBe creative when selecting your project. Your project should be bigger than a 1-week lab assignment, but small enough to be doable. If in doubt, err on the side of smaller, and be careful to choose a project within a scope that you can reasonably expect to finish. Your grade can be severely impacted if you take on a project that is too big and produce no completed work.\nA successful project will use both the FPGA and MCU and will perform a function that is useful or interesting. You must also use new hardware in your final project: a new microcontroller peripheral, new FPGA IP, and a new piece of external hardware (various sensors or displays are popular choices). All three are required. You can find examples of past final projects below. Examples include games, electromechanical systems, prototypes for a startup company, or elements of a Clinic/research project (with your advisor’s permission)."
   },
   {
-    "objectID": "project/index.html#final-projects-from-previous-years-of-e155",
-    "href": "project/index.html#final-projects-from-previous-years-of-e155",
+    "objectID": "project/index.html#logistics",
+    "href": "project/index.html#logistics",
     "title": "Project",
-    "section": "Final Projects from Previous Years of E155",
-    "text": "Final Projects from Previous Years of E155\n\nFall 2025 Project Reports\nFall 2024 Project Reports\nFall 2023 Project Reports\nFall 2022 Project Reports\nFall 2021 Project Reports\nFall 2020 Project Reports\nFall 2019 Project Reports\nFall 2017 Project Reports\nFall 2016 Project Reports\nFall 2009 Project Reports\nFall 2006 Project Reports\nFall 2003 Project Reports\nFall 2002 Project Reports\nFall 2000 Project Reports\nFall 1999 Project Reports"
+    "section": "Logistics",
+    "text": "Logistics\n\nAll submissions for the project are made as a team and should be submitted on Canvas as group submissions.\nTeams are two people unless there is an extenuating circumstance. Teams are self-selected and we will give you time to form them in lecture.\nSlots for the proposal debrief, design review presentation, midpoint demo, and final checkoff are scheduled on the Google Sheet found here. Sign up for a slot as a team, not as individuals.\nYour project will be graded according to the policy laid out in the syllabus. For reference, that policy can be found here. Rubrics for each deliverable are on the assignment pages linked below.\nIf you feel there has been inequality between the work you and your teammate deliver, contact an instructor personally."
   },
   {
-    "objectID": "project/index.html#vendors",
-    "href": "project/index.html#vendors",
+    "objectID": "project/index.html#deliverables",
+    "href": "project/index.html#deliverables",
     "title": "Project",
-    "section": "Vendors",
-    "text": "Vendors\n\nSparkFun\nAdafruit\nDigikey\nMouser"
+    "section": "Deliverables",
+    "text": "Deliverables\nEach deliverable below links to a self-contained assignment page with its full requirements and grading rubric.\n\n\n\nDate\nDeliverable\nWhere\nAssignment Page\n\n\n\n\nOngoing\nPurchasing Parts\n—\nPurchasing Parts\n\n\n10/27, 10/29, & 11/3\nProject Proposal\nIn Class\nProject Proposal\n\n\n11/3 & 11/4\nProposal Redo\nIn Lab\nProject Proposal\n\n\n11/10, 11/12 & 11/17\nDesign Review Presentation\nIn Class\nDesign Review Presentation\n\n\n11/17 & 11/18\nMidpoint Report & Demo\nIn Class & In Lab\nMidpoint Report & Demo\n\n\n12/8 & 12/9\nFinal Checkoff\nIn Lab\nFinal Checkoff\n\n\n12/10\nFinal Report Website\nOnline\nFinal Report\n\n\n12/11\nDemo Day\nPublic Event\n—\n\n\n\nWorking on a final report video? Use the storytelling worksheet to help structure your pitch."
+  },
+  {
+    "objectID": "project/index.html#reference-material",
+    "href": "project/index.html#reference-material",
+    "title": "Project",
+    "section": "Reference Material",
+    "text": "Reference Material\n\nFinal Projects from Previous Years of E155\n\nFall 2025 Project Reports\nFall 2024 Project Reports\nFall 2023 Project Reports\nFall 2022 Project Reports\nFall 2021 Project Reports\nFall 2020 Project Reports\nFall 2019 Project Reports\nFall 2017 Project Reports\nFall 2016 Project Reports\nFall 2009 Project Reports\nFall 2006 Project Reports\nFall 2003 Project Reports\nFall 2002 Project Reports\nFall 2000 Project Reports\nFall 1999 Project Reports\n\n\n\nVendors\n\nSparkFun\nAdafruit\nDigiKey\nMouser"
   },
   {
     "objectID": "project/reports/2023/index.html",
@@ -2079,95 +2072,67 @@
     "text": "Title\nTeam Members\nReport PDF\n\n\nUltraVisionAid\nAnuragini Arora, Sam Freisem-Kirov\nPDF\n\n\nVector Display\nBen Bracker, Varun Singh\nPDF\n\n\nMusical LEDs\nEthan Falicov, Shriya Nadgauda\nPDF\n\n\nMusic Rhythm Game: 8 Bit Hero\nJimmy Fernandez, Kathryn Chan, Anneka Noë\nPDF\n\n\nAlien Voice Filter\nDithi Ganjam, Rebecca Qin\nPDF\n\n\nA Low-Power Air Quality Data Logger\nYaqub Mahsud, Ethan Greenberg\nPDF\n\n\nBetter Barista: Brew Data Interface\nTejus Rao, Samin Zachariah\nPDF\n\n\nBop It!: MicroPs Edition\nNick Tan, Andreas Roeseler\nPDF\n\n\nIoT Plant Waterer\nNico Perez Vergel, Naiche Whyte-Aguayo\nPDF"
   },
   {
-    "objectID": "project/specs/project-checkoff-specs.html",
-    "href": "project/specs/project-checkoff-specs.html",
-    "title": "Project Final Checkoff Specs",
+    "objectID": "project/assignments/final-report.html",
+    "href": "project/assignments/final-report.html",
+    "title": "Final Report",
     "section": "",
-    "text": "Project meets most of of the specifications as laid out in the proposal with explanations for any specifications that weren’t met.\nSystem operates without any major bugs (e.g., doesn’t freeze in operation)\nDocument listing each spec from the proposal along with a short (e.g., 3-5 sentence) summary explaining whether the spec was met or not.\nTechnical documentation (e.g., schematics, code, block diagrams) available for review at checkoff.\nVerilog HDL is functional and cleanly formatted\nMCU C code is functional and cleanly formatted"
+    "text": "Due 12/10, end of day.\nThe final report for this project is a portfolio website hosted on GitHub Pages. The website should document your design with all source code in the linked GitHub repository. Clearly explain how your design works. If you have developed techniques that would be useful for students in the future (e.g., how to interface to an LCD display), document these features well so that future students may build on your work.\nLate reports will not be accepted except in the case of unusual extenuating circumstances."
   },
   {
-    "objectID": "project/specs/project-checkoff-specs.html#proficiency",
-    "href": "project/specs/project-checkoff-specs.html#proficiency",
-    "title": "Project Final Checkoff Specs",
+    "objectID": "project/assignments/final-report.html#requirements",
+    "href": "project/assignments/final-report.html#requirements",
+    "title": "Final Report",
+    "section": "Requirements",
+    "text": "Requirements\nThe website should include:\n\nAn abstract summarizing the project\nComplete schematics and a system block diagram\nMCU and FPGA design overviews\nA description of the new hardware used\nResults, quantitative where applicable\nA bill of materials\nWell-commented and cleanly formatted code (C and Verilog) in the linked GitHub repository, with a README describing the project and where to find things\nPhotos of your finished design\nA video (hosted in the provided Google Drive folder) demonstrating your project. Videos should be titled &lt;LastName1&gt;_&lt;LastName2&gt;_&lt;VideoName&gt; to clearly identify your videos in the folder.\n\nUse the storytelling worksheet to help plan and structure your video.\n\nReferences, acknowledgements, and team bios"
+  },
+  {
+    "objectID": "project/assignments/final-report.html#grading-rubric",
+    "href": "project/assignments/final-report.html#grading-rubric",
+    "title": "Final Report",
+    "section": "Grading Rubric",
+    "text": "Grading Rubric\nThe final report is worth 20% of your project grade, graded according to the rubric below. Written documentation should also follow the general lab writeup specs; the categories below are specific to the project report.\n\n\n\nCategory\nPoints\nWhat We’re Looking For\n\n\n\n\nTechnical Design Documentation\n6\nBill of materials, MCU design overview, FPGA design overview, schematics, and a block diagram provided in professional and easy-to-read formats.\n\n\nWritten Report Content\n6\nAbstract, results (quantitative where applicable), description of the new hardware used, references, acknowledgements, and team bios.\n\n\nCode & Repository\n4\nAll project code (software and HDL) is in the Git repository, cleanly commented, with a README describing the project and where to find things. It adheres to best practices from the course.\n\n\nMultimedia\n2\nA video demonstrating the project (the storytelling worksheet can help you plan it) and photos of the finished design.\n\n\nWriting Quality & Site Organization\n2\nThe website is well organized with clear separation of information, no missing placeholders or dead links, and minimal spelling/grammar issues.\n\n\n\nTotal: 20 points"
+  },
+  {
+    "objectID": "project/assignments/proposal.html",
+    "href": "project/assignments/proposal.html",
+    "title": "Project Proposal",
     "section": "",
-    "text": "Project meets most of of the specifications as laid out in the proposal with explanations for any specifications that weren’t met.\nSystem operates without any major bugs (e.g., doesn’t freeze in operation)\nDocument listing each spec from the proposal along with a short (e.g., 3-5 sentence) summary explaining whether the spec was met or not.\nTechnical documentation (e.g., schematics, code, block diagrams) available for review at checkoff.\nVerilog HDL is functional and cleanly formatted\nMCU C code is functional and cleanly formatted"
+    "text": "Due at your scheduled proposal debrief meeting, held in class during 10/27, 10/29, & 11/3. There’s no need to submit anything ahead of time — bring it to your meeting. Sign up for a slot as a team on the checkoff sheet.\nThe goal of the proposal is to describe what you plan to build and how you plan to build it. It must be specific enough that we can tell when you demonstrate your project that it meets the specs of the proposal. Do not list stretch goals or wiggle words; simply state what you are committing to deliver. You may need to do some preliminary technical work to gain confidence you can deliver what you promise.\nThe proposal should be no longer than 2 pages of text (diagrams, tables, and other technical documentation do not count against the limit). Make your description clear, direct, and concise.\nAlmost every team needs a second attempt. Bring your revised proposal to a lab redo slot on 11/3 & 11/4 — your last chance to redo it."
   },
   {
-    "objectID": "project/specs/project-checkoff-specs.html#excellence",
-    "href": "project/specs/project-checkoff-specs.html#excellence",
-    "title": "Project Final Checkoff Specs",
-    "section": "Excellence",
-    "text": "Excellence\n\nProject meets all the specifications as laid out in the proposal.\nProject is polished (e.g., wires are hidden, any physical interfaces are well-designed and reliable, clean user interface)\nVerilog code is efficient and demonstrates best coding practices (e.g., modularity, testbenches were appropriate, etc.)\nC code is efficient and well organized (e.g., code encapsulated in functions and custom libraries as appropriate)"
+    "objectID": "project/assignments/proposal.html#requirements",
+    "href": "project/assignments/proposal.html#requirements",
+    "title": "Project Proposal",
+    "section": "Requirements",
+    "text": "Requirements\nYour proposal must address the following:\n\nProject description and overview\nDescription of the main subsystems of the design, including the FPGA design details and the features of the MCU you plan to use\nAn explanation of the new hardware you are using (a new MCU peripheral, new FPGA IP, and a new piece of external hardware), showing that both the FPGA and MCU will perform nontrivial functions appropriate to each\nA block diagram indicating chips, connections, and protocols\nCalculations of performance-critical parameters (bandwidths, data rates, FFT widths, frame rates, ADC bits, power levels, etc.)\nIdentification of the riskiest element of the project\nA rough schedule and work breakdown (e.g., a Gantt chart) showing how tasks will be divided among team members\nA bill of materials / budget — see Purchasing Parts for how to handle parts not available in the stockroom\n\nIf you realize partway through the project that your scope was too large, contact us as soon as possible to renegotiate your proposal. We will not accept proposal revisions after the Friday following the design review presentations."
   },
   {
-    "objectID": "project/specs/project-final-report-specs.html",
-    "href": "project/specs/project-final-report-specs.html",
-    "title": "Project Final Portfolio Specs",
+    "objectID": "project/assignments/proposal.html#grading-rubric",
+    "href": "project/assignments/proposal.html#grading-rubric",
+    "title": "Project Proposal",
+    "section": "Grading Rubric",
+    "text": "Grading Rubric\nThe proposal is worth 10% of your project grade, graded according to the rubric below.\n\n\n\n\n\n\n\n\nCategory\nPoints\nWhat We’re Looking For\n\n\n\n\nScope & Specifications\n3\nStates specific, checkable specifications for what the project will do — not stretch goals or vague wording.\n\n\nMCU & FPGA Design Plan\n3\nDescribes how the MCU and FPGA will be used, including the new hardware, and makes the case that both chips perform a nontrivial function appropriate to the project. Plans that go beyond material already covered in labs score highest.\n\n\nBill of Materials & Schedule\n1\nA bill of materials with part numbers, quantities, and prices (or “stockroom”) for every part, plus a rough schedule/work breakdown dividing tasks among teammates. Partial credit example: a BOM that lists parts but omits prices or quantities earns around 0.5.\n\n\nPerformance Calculations\n1\nIncludes calculations for performance-critical parameters (data rates, frame rates, power, etc.).\n\n\nRisk\n1\nIdentifies the riskiest element of the project.\n\n\nWriting & Diagram Quality\n1\nClear, well-organized writing with minimal grammar/spelling issues, and uses computer-drawn diagrams showing chips, connections, and protocols.\n\n\n\nTotal: 10 points"
+  },
+  {
+    "objectID": "project/assignments/midpoint-report.html",
+    "href": "project/assignments/midpoint-report.html",
+    "title": "Midpoint Report & Demo",
     "section": "",
-    "text": "Written documentation should follow all the specifications for written documentation as laid out in the general lab specs. In addition, the report should address these project-specific specifications."
+    "text": "Due 11/17 & 11/18, submitted before your scheduled midpoint checkoff slot.\nThe midpoint status report is a 4-page report (plus appendices) documenting your design at the midpoint. You must be ready to demonstrate some working hardware in the lab at your scheduled slot."
   },
   {
-    "objectID": "project/specs/project-final-report-specs.html#proficiency",
-    "href": "project/specs/project-final-report-specs.html#proficiency",
-    "title": "Project Final Portfolio Specs",
-    "section": "Proficiency",
-    "text": "Proficiency\n\nTechnical Information\n\nBill of materials including all relevant components with quantities, part numbers, and prices.\nMicrocontroller design overview: description of what the MCU is doing.\nFPGA design overview: what is the FPGA doing along with main design features.\n\n\n\nWritten Documentation\n\nNames and short bios of team members with link to personal website or LinkedIn profile.\nAbstract which briefly describes the main purpose and operation of the system.\nNew hardware listed in section with description\nResults: What are the main results of your project.\nReferences: Citation (and hyperlinks where relevant) to any outside resources that were referenced in the design of the project.\nAcknowledgements\nAll project code (software and HDL) included in Git repository\n\n\n\nWriting and Organization\n\nWebsite is well organized with clear separation of relevant information.\nNo more than a few minor spelling or grammar issues.\nNo missing placeholders (e.g., XX) or dead hyperlinks."
+    "objectID": "project/assignments/midpoint-report.html#requirements",
+    "href": "project/assignments/midpoint-report.html#requirements",
+    "title": "Midpoint Report & Demo",
+    "section": "Requirements",
+    "text": "Requirements\nThe midpoint status report should include:\n\nA clear, concise summary of your current status and progress toward the final project\nSchematics of anything on a breadboard\nBlock diagrams of the logic on your FPGA\nA system block diagram with the interfaces between components (SPI, I2C, GPIO, etc.) clearly labeled\nAn outline of the routines used on the MCU\nThe status of the riskiest element identified in your proposal, which should be substantially addressed or completed\nThe status of your parts orders (all external parts should be ordered by the midpoint)\n\nInclude as an appendix either your Verilog code or software that is mostly complete (you do not have to have both ready)."
   },
   {
-    "objectID": "project/specs/project-final-report-specs.html#excellence",
-    "href": "project/specs/project-final-report-specs.html#excellence",
-    "title": "Project Final Portfolio Specs",
-    "section": "Excellence",
-    "text": "Excellence\n\nTechnical Documentation\n\nSchematics are neatly drawn with a CAD program (e.g., KiCad). All necessary labels present (pins names & numbers, part numbers, etc.)\nBlock diagram is neat and completely specified (e.g., all communication protocols labeled, bus widths indicated, etc.)\n\n\n\nWritten Documentation\n\nNew hardware described with notes about the features to be implemented and how they go beyond the previous material covered in the course.\nResults section clearly and quantitatively outlines the key performance aspects of the design with commentary to explain the design decisions.\nReferences are formatted with a clean and consistent format.\nAll project code is accompanied by comments throughout\nGit repository contains a README.md file to describe the main elements of the project and where they are found.\n\n\n\nWriting and Organization\n\nExcellent spelling and grammar throughout\n\n\n\nMultimedia Documentation\n\nShort video showcasing a demonstration of the project\nPhotos documenting final design"
-  },
-  {
-    "objectID": "project/specs/project-final-report-specs.html#optional",
-    "href": "project/specs/project-final-report-specs.html#optional",
-    "title": "Project Final Portfolio Specs",
-    "section": "Optional",
-    "text": "Optional\n\nPhotos documenting the build process"
-  },
-  {
-    "objectID": "project/final-project-requirements.html",
-    "href": "project/final-project-requirements.html",
-    "title": "MicroPs Final Project Requirements",
-    "section": "",
-    "text": "The E155 Final Project is a chance for you to apply your new skills in digital design to a moderately-sized problem as part of a two- or three-person team. You should begin thinking about a project and teammate right away. Your project has the following deliverables.\n\n\n\n\n\n\n\n\nDate\nDeliverable\nNotes\n\n\n\n\n10/27\nProject Proposal\nDue via Canvas\n\n\n10/31 & 11/2\nProposal Debriefs\nDuring lab checkoff times\n\n\n11/7 & 11/9\nPresentations\nDuring class\n\n\n11/16\nMidpoint Report & Demo\nDuring class time and lab slot\n\n\n12/5 & 12/7\nFinal Checkoffs\nDuring lab checkoff times\n\n\n12/7\nFinal Report Website\nDue by end of day\n\n\n12/8 @ 2 pm\nDemo Day\nPublic event to show off projects"
-  },
-  {
-    "objectID": "project/final-project-requirements.html#overview",
-    "href": "project/final-project-requirements.html#overview",
-    "title": "MicroPs Final Project Requirements",
-    "section": "",
-    "text": "The E155 Final Project is a chance for you to apply your new skills in digital design to a moderately-sized problem as part of a two- or three-person team. You should begin thinking about a project and teammate right away. Your project has the following deliverables.\n\n\n\n\n\n\n\n\nDate\nDeliverable\nNotes\n\n\n\n\n10/27\nProject Proposal\nDue via Canvas\n\n\n10/31 & 11/2\nProposal Debriefs\nDuring lab checkoff times\n\n\n11/7 & 11/9\nPresentations\nDuring class\n\n\n11/16\nMidpoint Report & Demo\nDuring class time and lab slot\n\n\n12/5 & 12/7\nFinal Checkoffs\nDuring lab checkoff times\n\n\n12/7\nFinal Report Website\nDue by end of day\n\n\n12/8 @ 2 pm\nDemo Day\nPublic event to show off projects"
-  },
-  {
-    "objectID": "project/final-project-requirements.html#project-scope",
-    "href": "project/final-project-requirements.html#project-scope",
-    "title": "MicroPs Final Project Requirements",
-    "section": "Project Scope",
-    "text": "Project Scope\nBe creative when selecting your project. Your project should be bigger than a 1-week lab assignment, but small enough to be doable. If in doubt, err on the side of smaller. You will fail the class if you undertake a project that is too big and produce no completed work.\nA successful project will use both the FPGA and MCU and will perform a function that is useful or interesting. You also must use a new piece of hardware in your final project (various sensors or displays are popular choices). You can find examples of past final projects on the class web page. Examples include games, electromechanical systems, prototypes for a startup company, or elements of a Clinic project (with your advisor’s permission)."
-  },
-  {
-    "objectID": "project/final-project-requirements.html#budget",
-    "href": "project/final-project-requirements.html#budget",
-    "title": "MicroPs Final Project Requirements",
-    "section": "Budget",
-    "text": "Budget\nUNDER CONSTRUCTION DO NOT BUY ANYTHING UNTIL THE INSTRUCTORS CONFIRM DETAILS\nIf your team needs parts that are not available in the stockroom, you may spend up to $50 to purchase them. You will need to save your receipts, fill out a reimbursement form available from the department website, and have an instructor approve the reimbursement (list your instructor as the faculty advisor on the form)."
-  },
-  {
-    "objectID": "project/final-project-requirements.html#deliverables",
-    "href": "project/final-project-requirements.html#deliverables",
-    "title": "MicroPs Final Project Requirements",
-    "section": "Deliverables",
-    "text": "Deliverables\nYour team is responsible for the following deliverables at the dates described above:\n\nProject Proposal\nA 2-page proposal describing what you plan to build. It must be specific enough that we can tell when you demonstrate your project that it meets the specs of the proposal. Do not list stretch goals or wiggle words; simply state what you are committing to deliver. You may need to do some preliminary technical work to gain confidence you can deliver what you promise. The proposal must include the following:\n\nInclude a bill of materials with the parts you expect to need along with prices for any supplies that are not available in the stock room.\nDescribe the main subsystems of the design and the features of the MCU that you plan to use.\nExplain the new piece(s) of hardware and show that both the FPGA and MCU are performing nontrivial functions appropriate to each.\nInclude a block diagram showing the components and the interfaces between each.\nInclude calculations of performance parameters that are important to the project (frame rates, data rates, ADC bits, Power levels, FFT sizes, etc.)\nInclude a rough schedule and work breakdown.\n\n\n\nMidpoint Report & Demo\nA 4-page report (plus appendices) documenting your design at the midpoint. Your report should be submitted before your scheduled checkpoint slot. The status report should include:\n\nSchematics of anything on a breadboard,\nBlock diagrams of the logic on your FPGA,\nAn outline of the routines used on the MCU.\n\nYou should include as an appendix either your Verilog code or software that is mostly complete (but do not have to have both ready). You must be ready to demonstrate some working hardware in the lab.\n\n\nPresentations\nYour team will sign up for a 10-minute in-class presentation shortly after your proposal debrief. Your presentation should include a 3-minute overview of your project followed by an in-depth presentation of a specific technical problem your team is working on and has not yet solved. The goal of the presentation is to get input from other students who might have ideas of how to solve your problem so you must explain the problem clearly enough to get meaningful suggestions back.\n\n\nProject Demonstration\nDemonstrate a working project to an instructor in the lab. There will be signups for demonstration periods, during which you will show that you meet your specifications and be asked technical questions about the operation of your design. Come prepared with printouts of your schematics, software and Verilog. If your project is one day late, one letter grade will be deducted.\n\n\nFinal Report\nThe final report for this project will be a portfolio website hosted on Github pages. The website should document your design with all source code in the linked Github repository. Clearly explain how your design works. If you have developed techniques that would be useful for students in the future (e.g., how to interface to an LCD display), document these features well so that future students may build on your work.\nThe website should include:\n\nComplete schematics and block diagrams\nWell-commented and cleanly-formatted code (C and Verilog)\nPhotos of your finished design\nA video (hosted in the provided Google Drive folder) demonstrating your project. Any videos should be titled “&lt;LastName1&gt;&lt;LastName2&gt;&lt;VideoName&gt;” to clearly identify your videos in the folder.\n\nLate projects will not be accepted except in the case of unusual extenuating circumstances. Be careful to choose a project within a scope that you can reasonably expect to finish. If you realize your project is too large, contact us as soon as possible to renegotiate your project proposal. We will not accept revisions to the proposal after the Friday following the in-class presentation."
-  },
-  {
-    "objectID": "project/final-project-requirements.html#grading",
-    "href": "project/final-project-requirements.html#grading",
-    "title": "MicroPs Final Project Requirements",
-    "section": "Grading",
-    "text": "Grading\nYour project will be graded according to the policy laid out in the syllabus. For reference, that policy can be found here.\nIf you feel there has been inequality between the work you and your teammate deliver, contact an instructor personally."
+    "objectID": "project/assignments/midpoint-report.html#grading-rubric",
+    "href": "project/assignments/midpoint-report.html#grading-rubric",
+    "title": "Midpoint Report & Demo",
+    "section": "Grading Rubric",
+    "text": "Grading Rubric\nThe midpoint status report and demo is worth 20% of your project grade, graded according to the rubric below.\n\n\n\n\n\n\n\n\nCategory\nPoints\nWhat We’re Looking For\n\n\n\n\nProgress Toward Final Deliverable\n8\nA working (if rough) hardware demo and meaningful progress toward the final project.\n\n\nRisk Retirement\n4\nThe riskiest element of the project identified in the proposal has been substantially addressed or completed.\n\n\nSchematics & Block Diagrams\n4\nSchematics of all breadboarded circuits, and a block diagram of system components with interfaces (SPI, I2C, GPIO, etc.) clearly labeled.\n\n\nParts Status\n2\nAll external parts have been ordered.\n\n\nWriting Quality\n2\nA clear, concise, well-organized written summary of current status with minimal grammar/spelling issues.\n\n\n\nTotal: 20 points"
   },
   {
     "objectID": "lecture/pcb-activity/index.html",

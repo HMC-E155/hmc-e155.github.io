@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project Proposal Specs – HMC E155</title>
+<title>Midpoint Report &amp; Demo – HMC E155</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -183,30 +183,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#general" id="toc-general" class="nav-link active" data-scroll-target="#general">General</a>
-  <ul class="collapse">
-  <li><a href="#proficiency" id="toc-proficiency" class="nav-link" data-scroll-target="#proficiency">Proficiency</a></li>
-  <li><a href="#excellence" id="toc-excellence" class="nav-link" data-scroll-target="#excellence">Excellence</a></li>
-  </ul></li>
-  <li><a href="#technical" id="toc-technical" class="nav-link" data-scroll-target="#technical">Technical</a>
-  <ul class="collapse">
-  <li><a href="#proficiency-1" id="toc-proficiency-1" class="nav-link" data-scroll-target="#proficiency-1">Proficiency</a></li>
-  <li><a href="#excellence-1" id="toc-excellence-1" class="nav-link" data-scroll-target="#excellence-1">Excellence</a></li>
-  </ul></li>
-  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a>
-  <ul class="collapse">
-  <li><a href="#proficiency-2" id="toc-proficiency-2" class="nav-link" data-scroll-target="#proficiency-2">Proficiency</a></li>
-  <li><a href="#excellence-2" id="toc-excellence-2" class="nav-link" data-scroll-target="#excellence-2">Excellence</a></li>
-  </ul></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements">Requirements</a></li>
+  <li><a href="#grading-rubric" id="toc-grading-rubric" class="nav-link" data-scroll-target="#grading-rubric">Grading Rubric</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="project-proposal-specs.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="midpoint-report.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project Proposal Specs</h1>
+<h1 class="title">Midpoint Report &amp; Demo</h1>
 </div>
 
 
@@ -223,76 +210,69 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The goal of the proposal is to describe what you plan to build and how you plan to build it. The specifications below provide the expectations for the project proposal.</p>
-<p>It should be no longer than 2-pages worth of text along with any technical documentation needed (i.e., diagrams, tables, or other figures do not count against the 2-page limit). The point is for you to make your description clear, direct, and concise.</p>
-<p>While you are free to organize your proposal in the way that best suits your project, you should be sure to address the following sections:</p>
+<p><strong>Due 11/17 &amp; 11/18, submitted before your scheduled midpoint checkoff slot.</strong></p>
+<p>The midpoint status report is a 4-page report (plus appendices) documenting your design at the midpoint. You must be ready to demonstrate some working hardware in the lab at your scheduled slot.</p>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
+<p>The midpoint status report should include:</p>
 <ul>
-<li>Project Description and Overview</li>
-<li>FPGA Design Details</li>
-<li>MCU Design Details</li>
-<li>Calculations relevant to the system’s performance - bandwidths, data rates, FFT widths, frame rates, etc.</li>
-<li>Diagram indicating chips, connection, and protocols</li>
-<li>Schedule and work breakdown (e.g., Gantt chart or similar)</li>
-<li>Bill of Materials/Budget</li>
+<li>A clear, concise summary of your current status and progress toward the final project</li>
+<li>Schematics of anything on a breadboard</li>
+<li>Block diagrams of the logic on your FPGA</li>
+<li>A system block diagram with the interfaces between components (SPI, I2C, GPIO, etc.) clearly labeled</li>
+<li>An outline of the routines used on the MCU</li>
+<li>The status of the riskiest element identified in your proposal, which should be substantially addressed or completed</li>
+<li>The status of your parts orders (all external parts should be ordered by the midpoint)</li>
 </ul>
-<div style="page-break-after: always;"></div>
-<section id="general" class="level2">
-<h2 class="anchored" data-anchor-id="general">General</h2>
-<section id="proficiency" class="level3">
-<h3 class="anchored" data-anchor-id="proficiency">Proficiency</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Bill of materials included with list of all items needed for the project</label></li>
-<li><label><input type="checkbox">Project lists specifications for design</label></li>
-<li><label><input type="checkbox">Identifies the riskiest element of the project</label></li>
-</ul>
+<p>Include as an appendix either your Verilog code or software that is mostly complete (you do not have to have both ready).</p>
 </section>
-<section id="excellence" class="level3">
-<h3 class="anchored" data-anchor-id="excellence">Excellence</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Bill of materials includes part numbers, quantities, and prices for all components including shipping and taxes. Prices for components available in the stock room should be indicated as “stockroom”.</label></li>
-<li><label><input type="checkbox">Completely clear what the project must do to meet specs.</label></li>
-<li><label><input type="checkbox">Rough timeline included which lists the tasks which need to be completed, the order in which they will be pursued, the time they are expected to take, and how the tasks will be divided among the team members.</label></li>
-<li><label><input type="checkbox">Calculation of performance critical parameters is present.</label></li>
-<li><label><input type="checkbox">Writing is well organized and no grammar or spelling issues.</label></li>
-</ul>
-</section>
-</section>
-<section id="technical" class="level2">
-<h2 class="anchored" data-anchor-id="technical">Technical</h2>
-<section id="proficiency-1" class="level3">
-<h3 class="anchored" data-anchor-id="proficiency-1">Proficiency</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Describes microcontroller use</label></li>
-<li><label><input type="checkbox">Describes FPGA use</label></li>
-<li><label><input type="checkbox">Project uses new hardware</label></li>
-</ul>
-</section>
-<section id="excellence-1" class="level3">
-<h3 class="anchored" data-anchor-id="excellence-1">Excellence</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Project uses functionality of microcontroller not previously covered in labs</label></li>
-<li><label><input type="checkbox">Project uses functionality of FPGA not previously covered in labs</label></li>
-<li><label><input type="checkbox">Project uses new non-trivial new hardware (e.g., digital chip with non-trivial interface)</label></li>
-</ul>
-</section>
-</section>
-<section id="documentation" class="level2">
-<h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
-<section id="proficiency-2" class="level3">
-<h3 class="anchored" data-anchor-id="proficiency-2">Proficiency</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Block diagram of system provided showing all elements of the design and their connections.</label></li>
-</ul>
-</section>
-<section id="excellence-2" class="level3">
-<h3 class="anchored" data-anchor-id="excellence-2">Excellence</h3>
-<ul class="task-list">
-<li><label><input type="checkbox">Block diagram of system clearly describes all protocols and interfaces.</label></li>
-<li><label><input type="checkbox">Block diagram is computer drawn and neatly laid out.</label></li>
-</ul>
+<section id="grading-rubric" class="level2">
+<h2 class="anchored" data-anchor-id="grading-rubric">Grading Rubric</h2>
+<p>The midpoint status report and demo is worth 20% of your project grade, graded according to the rubric below.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Points</th>
+<th>What We’re Looking For</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Progress Toward Final Deliverable</td>
+<td>8</td>
+<td>A working (if rough) hardware demo and meaningful progress toward the final project.</td>
+</tr>
+<tr class="even">
+<td>Risk Retirement</td>
+<td>4</td>
+<td>The riskiest element of the project identified in the proposal has been substantially addressed or completed.</td>
+</tr>
+<tr class="odd">
+<td>Schematics &amp; Block Diagrams</td>
+<td>4</td>
+<td>Schematics of all breadboarded circuits, and a block diagram of system components with interfaces (SPI, I2C, GPIO, etc.) clearly labeled.</td>
+</tr>
+<tr class="even">
+<td>Parts Status</td>
+<td>2</td>
+<td>All external parts have been ordered.</td>
+</tr>
+<tr class="odd">
+<td>Writing Quality</td>
+<td>2</td>
+<td>A clear, concise, well-organized written summary of current status with minimal grammar/spelling issues.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total: 20 points</strong></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

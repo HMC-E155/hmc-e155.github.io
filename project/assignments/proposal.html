@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project Final Checkoff Specs – HMC E155</title>
+<title>Project Proposal – HMC E155</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -183,17 +183,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#proficiency" id="toc-proficiency" class="nav-link active" data-scroll-target="#proficiency">Proficiency</a></li>
-  <li><a href="#excellence" id="toc-excellence" class="nav-link" data-scroll-target="#excellence">Excellence</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link active" data-scroll-target="#requirements">Requirements</a></li>
+  <li><a href="#grading-rubric" id="toc-grading-rubric" class="nav-link" data-scroll-target="#grading-rubric">Grading Rubric</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="project-checkoff-specs.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="proposal.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project Final Checkoff Specs</h1>
+<h1 class="title">Project Proposal</h1>
 </div>
 
 
@@ -210,25 +210,89 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="proficiency" class="level2">
-<h2 class="anchored" data-anchor-id="proficiency">Proficiency</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Project meets most of of the specifications as laid out in the proposal with explanations for any specifications that weren’t met.</label></li>
-<li><label><input type="checkbox">System operates without any major bugs (e.g., doesn’t freeze in operation)</label></li>
-<li><label><input type="checkbox">Document listing each spec from the proposal along with a short (e.g., 3-5 sentence) summary explaining whether the spec was met or not.</label></li>
-<li><label><input type="checkbox">Technical documentation (e.g., schematics, code, block diagrams) available for review at checkoff.</label></li>
-<li><label><input type="checkbox">Verilog HDL is functional and cleanly formatted</label></li>
-<li><label><input type="checkbox">MCU C code is functional and cleanly formatted</label></li>
+<p><strong>Due at your scheduled proposal debrief meeting, held in class during 10/27, 10/29, &amp; 11/3.</strong> There’s no need to submit anything ahead of time — bring it to your meeting. Sign up for a slot as a team on the <a href="https://docs.google.com/spreadsheets/d/1jyhuYetRy4nk7QFi0VYhymAZ0HdkFA2JSsOSeZeTPEM/edit?gid=0#gid=0">checkoff sheet</a>.</p>
+<p>The goal of the proposal is to describe what you plan to build and how you plan to build it. It must be specific enough that we can tell when you demonstrate your project that it meets the specs of the proposal. Do not list stretch goals or wiggle words; simply state what you are committing to deliver. You may need to do some preliminary technical work to gain confidence you can deliver what you promise.</p>
+<p>The proposal should be no longer than 2 pages of text (diagrams, tables, and other technical documentation do not count against the limit). Make your description clear, direct, and concise.</p>
+<p>Almost every team needs a second attempt. Bring your revised proposal to a lab redo slot on 11/3 &amp; 11/4 — your last chance to redo it.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Early vs. Late Debrief Slots">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Early vs.&nbsp;Late Debrief Slots
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Which debrief slot you sign up for is a real tradeoff. Signing up early gives you the most runway to revise before the 11/3 &amp; 11/4 redo deadline, but less time to scope out your project and firm up the details beforehand. Signing up late gives you more time to prepare a stronger first draft, but leaves little or no time to revise before the redo deadline if your debrief turns up problems. Pick the slot that matches how settled your team’s plan already is.</p>
+</div>
+</div>
+<section id="requirements" class="level2">
+<h2 class="anchored" data-anchor-id="requirements">Requirements</h2>
+<p>Your proposal must address the following:</p>
+<ul>
+<li>Project description and overview</li>
+<li>Description of the main subsystems of the design, including the FPGA design details and the features of the MCU you plan to use</li>
+<li>An explanation of the new hardware you are using (a new MCU peripheral, new FPGA IP, and a new piece of external hardware), showing that both the FPGA and MCU will perform nontrivial functions appropriate to each</li>
+<li>A block diagram indicating chips, connections, and protocols</li>
+<li>Calculations of performance-critical parameters (bandwidths, data rates, FFT widths, frame rates, ADC bits, power levels, etc.)</li>
+<li>Identification of the riskiest element of the project</li>
+<li>A rough schedule and work breakdown (e.g., a Gantt chart) showing how tasks will be divided among team members</li>
+<li>A bill of materials / budget — see <a href="../../project/assignments/purchasing-parts.html">Purchasing Parts</a> for how to handle parts not available in the stockroom</li>
 </ul>
+<p>If you realize partway through the project that your scope was too large, contact us as soon as possible to renegotiate your proposal. We will not accept proposal revisions after the Friday following the design review presentations.</p>
+<div style="page-break-after: always;"></div>
 </section>
-<section id="excellence" class="level2">
-<h2 class="anchored" data-anchor-id="excellence">Excellence</h2>
-<ul class="task-list">
-<li><label><input type="checkbox">Project meets <strong>all</strong> the specifications as laid out in the proposal.</label></li>
-<li><label><input type="checkbox">Project is polished (e.g., wires are hidden, any physical interfaces are well-designed and reliable, clean user interface)</label></li>
-<li><label><input type="checkbox">Verilog code is efficient and demonstrates best coding practices (e.g., modularity, testbenches were appropriate, etc.)</label></li>
-<li><label><input type="checkbox">C code is efficient and well organized (e.g., code encapsulated in functions and custom libraries as appropriate)</label></li>
-</ul>
+<section id="grading-rubric" class="level2">
+<h2 class="anchored" data-anchor-id="grading-rubric">Grading Rubric</h2>
+<p>The proposal is worth 10% of your project grade, graded according to the rubric below.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Points</th>
+<th>What We’re Looking For</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Scope &amp; Specifications</td>
+<td>3</td>
+<td>States specific, checkable specifications for what the project will do — not stretch goals or vague wording.</td>
+</tr>
+<tr class="even">
+<td>MCU &amp; FPGA Design Plan</td>
+<td>3</td>
+<td>Describes how the MCU and FPGA will be used, including the new hardware, and makes the case that both chips perform a nontrivial function appropriate to the project. Plans that go beyond material already covered in labs score highest.</td>
+</tr>
+<tr class="odd">
+<td>Bill of Materials &amp; Schedule</td>
+<td>1</td>
+<td>A bill of materials with part numbers, quantities, and prices (or “stockroom”) for every part, plus a rough schedule/work breakdown dividing tasks among teammates. <em>Partial credit example: a BOM that lists parts but omits prices or quantities earns around 0.5.</em></td>
+</tr>
+<tr class="even">
+<td>Performance Calculations</td>
+<td>1</td>
+<td>Includes calculations for performance-critical parameters (data rates, frame rates, power, etc.).</td>
+</tr>
+<tr class="odd">
+<td>Risk</td>
+<td>1</td>
+<td>Identifies the riskiest element of the project.</td>
+</tr>
+<tr class="even">
+<td>Writing &amp; Diagram Quality</td>
+<td>1</td>
+<td>Clear, well-organized writing with minimal grammar/spelling issues, and uses computer-drawn diagrams showing chips, connections, and protocols.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total: 10 points</strong></p>
 
 
 </section>
