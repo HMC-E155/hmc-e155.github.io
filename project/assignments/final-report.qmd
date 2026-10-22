@@ -15,11 +15,17 @@ Late reports will not be accepted except in the case of unusual extenuating circ
 
 The website should include:
 
-- Complete schematics and block diagrams
-- Well-commented and cleanly-formatted code (C and Verilog)
+- An abstract summarizing the project
+- Complete schematics and a system block diagram
+- MCU and FPGA design overviews
+- A description of the new hardware used
+- Results, quantitative where applicable
+- A bill of materials
+- Well-commented and cleanly formatted code (C and Verilog) in the linked GitHub repository, with a README describing the project and where to find things
 - Photos of your finished design
-- A video (hosted in the provided Google Drive folder) demonstrating your project. Videos should be titled "\<LastName1\>*\<LastName2\>*\<VideoName\>" to clearly identify your videos in the folder.
+- A video (hosted in the provided Google Drive folder) demonstrating your project. Videos should be titled `<LastName1>_<LastName2>_<VideoName>` to clearly identify your videos in the folder.
   - Use the [storytelling worksheet](../storytelling-worksheet.qmd) to help plan and structure your video.
+- References, acknowledgements, and team bios
 
 ## Grading Rubric
 
