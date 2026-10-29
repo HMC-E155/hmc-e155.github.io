@@ -12,9 +12,10 @@ The lab 2 specifications are trying to get you to focus on two new topics: const
 
 #### Proficiency
 
-- [ ] Two seven-segment displays show two independent hexadecimal numbers.
+- [ ] The dual seven-segment display shows two hexadecimal numbers at the same time: one digit set by the DIP switches and the other set by the SW0/SW1 pushbuttons. Changing one input changes only its own digit, and both digits read upright to the viewer.
 - [ ] Resistors are in series with FPGA pins so that they correctly limit current.
 - [ ] Scanning signal appears on LEDs when appropriate buttons are depressed on the keypad.
+- [ ] Each scanning output blinks at 2 Hz (asserted for 0.125 s out of every 0.5 s), and only one scanning output is asserted at a time.
 
 #### Excellence
 
@@ -43,20 +44,15 @@ The lab 2 specifications are trying to get you to focus on two new topics: const
 #### Proficiency
 
 - [ ] No repeat simulations from lab 1. Those modules have already been verified! (But do include links to the lab 1 simulations in your report. Also, as above, include sims verifying modules that you changed.)
-- [ ] QuestaSim simulations carried out (possibly manually) for the scanning module and the top module. 
-- [ ] At least one simulation uses an automatic testbench.  (Lab 3 will require automatic testbenches for all modules.)
+- [ ] QuestaSim simulations carried out for the scanning module and the top module. 
+- [ ] Scanning module simulation shows the enable signal and demonstrates that the outputs only advance when enable is asserted.
+- [ ] All new and changed modules (including the scanning module and top module) are verified with automatic testbenches that apply inputs and check outputs with `assert` statements.
 - [ ] All simulations captured as legible waveform screenshots in report.
 
 #### Excellence
 
 - [ ] Automatic testbench for the scanning module that demonstrates all four output transitions, enable and reset features.
 - [ ] Automatic testbench for the top module that exercises multiplexing functionality and LED driving functionality.
-
-### Block Diagram Specs
-
-#### Proficiency and Excellence
-
-- [ ] Block diagram exists and a good faith effort was made to follow the specs below.  Block diagram specs in full effect in lab 3.
 
 ### Other Documentation
 
@@ -70,8 +66,14 @@ The lab 2 specifications are trying to get you to focus on two new topics: const
 
 {{< include  ../specs/schematic-specs.qmd >}} 
 
-{{< include  ../specs/lab-writeup-specs.qmd >}} 
+### Block Diagram Specs
 
-## FOR REFERENCE, NOT YET IN EFFECT
+#### Proficiency and Excellence
 
+- [ ] Block diagram exists and a good faith effort was made to follow the specs below.  Block diagram specs in full effect in lab 3.
+
+::: {.callout-note collapse="true" title="Full block diagram specs (for reference, in effect starting Lab 3)"}
 {{< include  ../specs/block-diagram-specs.qmd >}}
+:::
+
+{{< include  ../specs/lab-writeup-specs.qmd >}} 

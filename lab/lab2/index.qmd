@@ -32,7 +32,7 @@ By the end of this lab you will have...
 
 Display two independent hexadecimal numbers on your dual seven-segment display. Use the DIP switch on your motherboard to provide one hexadecimal number, and use the SW0 and Sw1 pushbuttons on your motherboard to provide two more bits of input  to drive the other number. (Naturally, the digit driven by the pushbuttons will only be able to reach four numbers, that's OK). You **must** use a single seven-segment decoder HDL module to drive the cathodes for both digits on the display, which therefore must be wired for multiplexed operation. The seven segment display should be oriented to display the numbers upright to the viewer.
 
-Also, build a scanning circuit that has four outputs that rotate between exerting 1000, 0100, 0010, and 0001 such that each bit toggles at a rate of 2 Hz. Attach the outputs of the scanning circuit to the rows of a keypad (see below), and attach the columns to input pins. Read the input pins with your Verilog module and drive them back out onto LEDs. The result of this arrangement should be that you can press a key on the keypad to cause an LED to blink. This should be tolerant of multiple key presses.
+Also, build a scanning circuit that has four outputs that rotate between exerting 1000, 0100, 0010, and 0001 such that each bit blinks at a rate of 2 Hz (see the [discussion](#discussion) for what this means). Attach the outputs of the scanning circuit to the rows of a keypad (see below), and attach the columns to input pins. Read the input pins with your Verilog module and drive them back out onto LEDs. The result of this arrangement should be that you can press a key on the keypad to cause an LED to blink. This should be tolerant of multiple key presses.
 
 ## Discussion
 
@@ -67,6 +67,8 @@ Open drain outputs _must_ be used with a pullup resistor.  If there is no pullup
 (Aside: open-collector outputs are similar to open-drain outputs, but use a bipolar transistor instead of a MOSFET.  The principle is the same.)
 
 **This scanning module** should consist of just a counter and some output logic to comply with specifications. That means that the scanning module is a kind of non-canonical state machine: the state register and state update logic are contained in the counter, and the output logic you will implement converts from the state (the count) to the four outputs.
+
+**The 2 Hz scanning rate** refers to each individual output, not to the rotation. Only one output is asserted at a time, so the four outputs blink out of phase with each other: each one is on for one step and off for the next three. For each output to blink at 2 Hz (one full on/off period every 0.5 s), the pattern must advance every 0.125 s, i.e., at 8 Hz. Each output is therefore asserted for 0.125 s and deasserted for 0.375 s, and no two outputs are ever asserted at the same time. Holding down a single key makes its LED blink at 2 Hz.
 
 ## Hints
 

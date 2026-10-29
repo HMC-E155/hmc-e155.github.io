@@ -9,6 +9,7 @@ format:
 The following is a template to clarify what should be part of the writeup you post for each lab you complete.
 It is a sample report written to explain a simple FPGA blink demo.
 Each section contains a brief explanation of the purpose of the section and the information that should be included in it.
+Your report is graded against the [lab writeup specifications](/lab/specs/) and the specs for each lab, so check it against those before submitting.
 :::
 
 ## Introduction
@@ -29,12 +30,17 @@ Explain how you approached the design of this assignment from both a software an
 The on-board high-speed oscillator (`HSOSC`) from the iCE40 UltraPlus primitive library was used to generate a clock signal at 24 MHz.
 Then, a counter was used to divide the high frequency clock signal down so that the blinking frequency could be easily visualized using one of the on-board LEDs.
 
-The design was developed using a simple clock divider module which drives the external LED.
+The design was developed using a simple clock divider module which drives the on-board LED.
 
 ## Technical Documentation:
 
 ::: {.callout-note title="Technical Documentation" }
 Include a link to a Git repository with your Verilog code, a block diagram of your design, and schematics of your circuits.
+Use spoiler tags (collapsed callouts) to hide screenshots and code that are not essential to the narrative, as shown below.
+:::
+
+::: {.callout-note collapse="true" title="Example spoiler: click to expand"}
+Put code listings, extra waveform screenshots, and long transcripts inside a collapsed callout like this one so the report stays easy to read.
 :::
 
 The source code for the project can be found in the associated [Github repository](https://github.com/HMC-E155/fpga-blink-test-demo).
@@ -57,7 +63,12 @@ The top-level module `top` includes two submodules: the high-speed oscillator bl
 Schematic of the physical circuit.
 :::
 
+::: {.callout-warning title="Schematic does not yet meet current specs"}
+This example schematic predates the current [schematic specifications](/lab/specs/). In your report, draw only off-board components, do not draw parts internal to the chip (such as internal pull-up resistors), label every part with its part number, and include a title block. Your schematic must match the circuit as it is actually built on your board.
+:::
+
 @fig-schematic shows the physical layout of the design.
+The reset pushbutton and LED D7 are on the development board; see the [E155 Development Board Schematic](/assets/doc/E155%20Development%20Board%20Schematic.pdf) for their connections.
 An internal 100 k$\Omega$ pullup resistor was used to ensure the active low reset pin was not floating.
 The output LED was connected using a 1 k$\Omega$ current-limiting resistor to ensure the output current (~2.6 mA) did not exceed the maximum output current of the FPGA I/O pins.
 
@@ -76,7 +87,7 @@ Did you accomplish all of the prescribed tasks? If not, what are the shortcoming
 A screenshot of a QuestaSim simulation demonstrating the blinking output signal. Note that the timescale for the clock divider was modified to divide by 4.
 :::
 
-The design met all intended design objectives.
+The design meets all of the requirements for this demo.
 @fig-testbench shows a screenshot of the QuestaSim simulation.
 If a more precise output frequency was desired, a more sophisticated counter could be developed.
 The current design only allows for the clock to be divided by powers of two.
@@ -87,9 +98,11 @@ The current design only allows for the clock to be divided by powers of two.
 Briefly summarize what was done and how it performed. Also note how many hours you spent working on the lab.
 :::
 
-The design successfully blinked an external LED using the on-board high-speed oscillator.
+The design successfully blinked an on-board LED using the on-board high-speed oscillator.
 I spent a total of two hours working on this lab.
 
 ## AI Prototype Summary
 
-Include generated code, easy-to-read chat transcripts, and a reflection on how well it worked.
+::: {.callout-note title="AI Prototype Summary" }
+Include generated code, easy-to-read chat transcripts, and a reflection on how well it worked. Put long code and transcripts in spoiler tags.
+:::

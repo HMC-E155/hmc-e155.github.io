@@ -5,12 +5,13 @@ subtitle: "Context Engineering"
 
 ## Learning Goals
 
-The goal of this prototype is to experiment with using AI as a coding assistant to generate HDL, and to validate whether . By the end of this experiment you should be able to:
+The goal of this prototype is to experiment with using AI as a coding assistant to generate HDL, and to validate whether giving the LLM your own existing code as context improves the HDL it generates. By the end of this experiment you should be able to:
 
-- Attach a file as context to a prompt for a LLM agent.  
+- Attach a file as context to a prompt for a LLM agent.
 - Describe the effect that context has on a prompt.
+- Document specific tips on how to provide context to an LLM effectively.
 
-The question you should be interrogating is **"Does changing the context for a prompt change the accuracy or usefulness of generated HDL?""**
+The question you should be interrogating is **"Does changing the context for a prompt change the accuracy or usefulness of generated HDL?"**
 
 ## Prototype
 
