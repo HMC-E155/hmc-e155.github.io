@@ -12,9 +12,7 @@ Lab 6 asks you to build a complete IoT device on top of a driver you write yours
 
 #### Proficiency
 
-- [ ] DS1722 temperature sensor is correctly wired per its datasheet pinout.
-- [ ] ESP8266 module is correctly wired and powered at 3.3V, with TX/RX crossed between the MCU and the ESP8266.
-- [ ] FPGA is disconnected (DIP switches open) so it cannot interfere with pins shared with the MCU.
+- [ ] DS1722 temperature sensor is correctly wired per its datasheet pinout and is powered by 3.3V.
 - [ ] System correctly reads the current temperature from the DS1722 sensor and displays it on a webpage that updates the temperature when refreshed.
 - [ ] Webpage displays the current LED state and can toggle it.
 
@@ -30,13 +28,13 @@ Lab 6 asks you to build a complete IoT device on top of a driver you write yours
 
 #### Excellence
 
-- [ ] System resolution is configured such that it could correctly read temperatures across the sensor's -10&deg;C to 30&deg;C range.
+- [ ] Test exists that the system can support the -10&deg;C to 30&deg;C range.
 
 ### Other Documentation
 
 #### Proficiency
 
-- [ ] Report includes a labeled logic analyzer capture of a full SPI read transaction (CE, SCK, SDO and SDI), as required in the lab writeup.
+- [ ] Report includes a logic analyzer capture of a full SPI read transaction (CE, SCK, SDO and SDI), labeled with bit values and bit period, showing that the frequency is less than 5 Hz.
 
 #### Excellence
 
