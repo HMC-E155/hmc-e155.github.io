@@ -12,14 +12,10 @@ Note that **no schematic is required for this lab** because the design is fully 
 
 ### Hardware Specifications
 
-#### Proficiency
-
-- [ ] SPI interconnect between the MCU and FPGA is wired correctly, matching the clock polarity and phase expected by the provided MCU code.
-
 #### Excellence
 
 - [ ] Design fits on the FPGA and completes a full SPI transaction, returning the correct ciphertext computed by the accelerator (not a value hardcoded or precomputed off-chip).
-- [ ] SPI communication between the MCU and FPGA is displayed on the logic analyzer.
+- [ ] Live SPI communication between the MCU and FPGA is displayed on the logic analyzer.
 
 ### Verilog Structure and Style Specifications
 
@@ -31,7 +27,7 @@ Note that **no schematic is required for this lab** because the design is fully 
 
 #### Excellence
 
-- [ ] Timing is correctly managed around the one-cycle latency of the synchronous RAM used for the sbox substitution.
+- [ ] Control FSM explicitly accounts for the one-cycle latency of the synchronous RAM used for the sbox substitution (e.g., a wait state that holds off sampling the substituted byte until it is valid), and that accounting is identified in the block diagram or state transition diagram.
 - [ ] Finite state machines are implemented in an appropriate form discussed in lecture: canonical, non-canonical, or communicating.
 
 ### Simulation Specifications
